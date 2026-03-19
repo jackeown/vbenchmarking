@@ -1,0 +1,28 @@
+%------------------------------------------------------------------------------
+% File     : SEU583^2 : TPTP v9.2.1. Removed v4.0.0.
+% Domain   : Set Theory
+% Problem  : Preliminary Notions - Ops on Sets - Unions and Intersections
+% Version  : Especial > Reduced > Especial.
+% English  : (! x:i.! y:i.in y (setadjoin x (setadjoin y emptyset)))
+
+% Refs     : [Bro08] Brown (2008), Email to G. Sutcliffe
+% Source   : [Bro08]
+% Names    : ZFC085l [Bro08]
+
+% Status   : Theorem
+% Rating   : 0.00 v3.7.0
+% Syntax   : Number of formulae    :    8 (   3 unit;   5 type;   2 defn)
+%            Number of atoms       :   42 (   2 equality;  11 variable)
+%            Maximal formula depth :    9 (   5 average)
+%            Number of connectives :   19 (   0   ~;   0   |;   0   &;  16   @)
+%                                         (   0 <=>;   3  =>;   0  <=;   0 <~>)
+%                                         (   0  ~|;   0  ~&;   0  !!;   0  ??)
+%            Number of type conns  :    4 (   4   >;   0   *;   0   +)
+%            Number of symbols     :    7 (   5   :;   0  :=)
+%            Number of variables   :    7 (   0 sgn;   7   !;   0   ?;   0   ^)
+%                                         (   7   :;   0  :=;   0  !>;   0  ?*)
+
+% Comments : http://mathgate.info/detsetitem.php?id=159
+%          : THF0 syntax
+% Bugfixes : v4.0.0 - Removed because it's SEU533^2.
+%------------------------------------------------------------------------------

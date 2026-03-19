@@ -1,0 +1,33 @@
+%------------------------------------------------------------------------------
+% File     : SEV244^5 : TPTP v9.2.1. Released v4.0.0.
+% Domain   : Set Theory (Sets of sets)
+% Problem  : TPS problem from SETS-OF-SETS-THMS
+% Version  : Especial.
+% English  :
+
+% Refs     : [Bro09] Brown (2009), Email to Geoff Sutcliffe
+% Source   : [Bro09]
+% Names    : tps_0966 [Bro09]
+
+% Status   : Theorem
+% Rating   : 0.67 v7.3.0, 0.70 v7.2.0, 0.75 v7.1.0, 0.71 v7.0.0, 0.75 v6.4.0, 0.86 v6.3.0, 0.83 v6.0.0, 0.67 v5.5.0, 0.60 v5.4.0, 0.75 v5.2.0, 1.00 v4.0.0
+% Syntax   : Number of formulae    :    3 (   0 unit;   2 type;   0 defn)
+%            Number of atoms       :   26 (   0 equality;  21 variable)
+%            Maximal formula depth :   13 (   6 average)
+%            Number of connectives :   25 (   0   ~;   0   |;   2   &;  16   @)
+%                                         (   1 <=>;   6  =>;   0  <=;   0 <~>)
+%                                         (   0  ~|;   0  ~&)
+%            Number of type conns  :    7 (   7   >;   0   *;   0   +;   0  <<)
+%            Number of symbols     :    4 (   2   :;   0   =)
+%            Number of variables   :   10 (   0 sgn;   7   !;   2   ?;   1   ^)
+%                                         (  10   :;   0  !>;   0  ?*)
+%                                         (   0  @-;   0  @+)
+% SPC      : TH0_THM_NEQ_NAR
+
+% Comments : This problem is from the TPS library. Copyright (c) 2009 The TPS
+%            project in the Department of Mathematical Sciences at Carnegie
+%            Mellon University. Distributed under the Creative Commons copyleft
+%            license: http://creativecommons.org/licenses/by-sa/3.0/
+% Bugfixes : v7.5.0 - Removed because it's a duplicate of SEV243^5 (just with
+%            quantifies in a different order).
+%------------------------------------------------------------------------------

@@ -1,0 +1,71 @@
+%------------------------------------------------------------------------------
+% File     : SEV282^5 : TPTP v9.2.1. Bugfixed v6.2.0.
+% Domain   : Set Theory
+% Problem  : TPS problem TTTP6100
+% Version  : Especial.
+% English  : 
+
+% Refs     : [Bro09] Brown (2009), Email to Geoff Sutcliffe
+% Source   : [Bro09]
+% Names    : tps_000 [Bro09]
+%          : TTTP6100 [TPS]
+
+% Status   : Theorem
+% Rating   : 0.11 v9.1.0, 0.12 v9.0.0, 0.20 v8.2.0, 0.31 v8.1.0, 0.09 v7.5.0, 0.00 v6.2.0
+% Syntax   : Number of formulae    :    7 (   3 unt;   3 typ;   3 def)
+%            Number of atoms       :   11 (   4 equ;   0 cnn)
+%            Maximal formula atoms :    2 (   2 avg)
+%            Number of connectives :   17 (   2   ~;   0   |;   3   &;  10   @)
+%                                         (   0 <=>;   2  =>;   0  <=;   0 <~>)
+%            Maximal formula depth :    2 (   1 avg)
+%            Number of types       :    2 (   0 usr)
+%            Number of type conns  :   21 (  21   >;   0   *;   0   +;   0  <<)
+%            Number of symbols     :    4 (   3 usr;   0 con; 1-2 aty)
+%            Number of variables   :    9 (   5   ^;   2   !;   2   ?;   9   :)
+% SPC      : TH0_THM_EQU_NAR
+
+% Comments : This problem is from the TPS library. Copyright (c) 2009 The TPS
+%            project in the Department of Mathematical Sciences at Carnegie
+%            Mellon University. Distributed under the Creative Commons copyleft
+%            license: http://creativecommons.org/licenses/by-sa/3.0/
+% Bugfixes : v5.2.0 - Added missing type declarations.
+%          : v6.2.0 - Reordered definitions.
+%------------------------------------------------------------------------------
+thf(cNAT_type,type,
+    cNAT: ( ( $i > $o ) > $o ) > $o ).
+
+thf(cSUCC_type,type,
+    cSUCC: ( ( $i > $o ) > $o ) > ( $i > $o ) > $o ).
+
+thf(cZERO_type,type,
+    cZERO: ( $i > $o ) > $o ).
+
+thf(cZERO_def,definition,
+    ( cZERO
+    = ( ^ [Xp: $i > $o] :
+          ~ ? [Xx: $i] : ( Xp @ Xx ) ) ) ).
+
+thf(cSUCC_def,definition,
+    ( cSUCC
+    = ( ^ [Xn: ( $i > $o ) > $o,Xp: $i > $o] :
+        ? [Xx: $i] :
+          ( ( Xp @ Xx )
+          & ( Xn
+            @ ^ [Xt: $i] :
+                ( ( Xt != Xx )
+                & ( Xp @ Xt ) ) ) ) ) ) ).
+
+thf(cNAT_def,definition,
+    ( cNAT
+    = ( ^ [Xn: ( $i > $o ) > $o] :
+        ! [Xp: ( ( $i > $o ) > $o ) > $o] :
+          ( ( ( Xp @ cZERO )
+            & ! [Xx: ( $i > $o ) > $o] :
+                ( ( Xp @ Xx )
+               => ( Xp @ ( cSUCC @ Xx ) ) ) )
+         => ( Xp @ Xn ) ) ) ) ).
+
+thf(cTTTP6100,conjecture,
+    cNAT @ cZERO ).
+
+%------------------------------------------------------------------------------

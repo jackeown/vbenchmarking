@@ -1,0 +1,33 @@
+%------------------------------------------------------------------------------
+% File     : SYO177^5 : TPTP v9.2.1. Bugfixed v5.1.0.
+% Domain   : Syntactic
+% Problem  : TPS problem from BASIC-FO-THMS
+% Version  : Especial.
+% English  :
+
+% Refs     : [Bro09] Brown (2009), Email to Geoff Sutcliffe
+% Source   : [Bro09]
+% Names    : tps_1152 [Bro09]
+
+% Status   : Theorem
+% Rating   : 0.00 v4.1.0, 0.33 v4.0.0
+% Syntax   : Number of formulae    :   12 (  11 unit;  11 type;   0 defn)
+%            Number of atoms       :   69 (   0 equality;   0 variable)
+%            Maximal formula depth :   20 (   4 average)
+%            Number of connectives :   80 (  23   ~;   0   |;  40   &;   0   @)
+%                                         (   0 <=>;  17  =>;   0  <=;   0 <~>)
+%                                         (   0  ~|;   0  ~&;   0  !!;   0  ??)
+%            Number of type conns  :    0 (   0   >;   0   *;   0   +;   0  <<)
+%            Number of symbols     :   13 (  11   :;   0  :=)
+%            Number of variables   :    0 (   0 sgn;   0   !;   0   ?;   0   ^)
+%                                         (   0   :;   0  :=;   0  !>;   0  ?*)
+%                                         (   0  @-;   0  @+)
+% SPC      : THF_THM_NEQ
+
+% Comments : This problem is from the TPS library. Copyright (c) 2009 The TPS
+%            project in the Department of Mathematical Sciences at Carnegie
+%            Mellon University. Distributed under the Creative Commons copyleft
+%            license: http://creativecommons.org/licenses/by-sa/3.0/
+%          : THF0 syntax
+% Bugfixes : v5.1.0 - Removed - duplicate of PUZ091^5 
+%------------------------------------------------------------------------------

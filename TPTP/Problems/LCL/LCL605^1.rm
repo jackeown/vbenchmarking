@@ -1,0 +1,27 @@
+%------------------------------------------------------------------------------
+% File     : LCL605^1 : TPTP v9.2.1. Removed v4.0.0.
+% Domain   : Logical Calculi
+% Problem  : LAMBDA^mm_1 validates the K axioms
+% Version  : [BP09] axioms.
+% English  :
+
+% Refs     : [BP09]  Benzmueller & Paulson (2009), Exploring Properties of
+% Source   : [BP09]
+% Names    : NL_2 [BP09]
+
+% Status   : Theorem
+% Rating   : 0.33 v3.7.0
+% Syntax   : Number of formulae    :   36 (   2 unit;  20 type;  15 defn)
+%            Number of atoms       :  233 (  15 equality;  47 variable)
+%            Maximal formula depth :   10 (   5 average)
+%            Number of connectives :   48 (   3   ~;   1   |;   2   &;  41   @)
+%                                         (   0 <=>;   1  =>;   0  <=;   0 <~>)
+%                                         (   0  ~|;   0  ~&;   0  !!;   0  ??)
+%            Number of type conns  :   83 (  83   >;   0   *;   0   +)
+%            Number of symbols     :   21 (  20   :;   0  :=)
+%            Number of variables   :   39 (   2 sgn;   7   !;   4   ?;  28   ^)
+%                                         (  39   :;   0  :=;   0  !>;   0  ?*)
+
+% Comments : THF0 syntax
+% Bugfixes : v4.0.0 - Removed because it's LCL592^1.
+%------------------------------------------------------------------------------

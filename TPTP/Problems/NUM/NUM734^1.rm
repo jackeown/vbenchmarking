@@ -1,0 +1,32 @@
+%------------------------------------------------------------------------------
+% File     : NUM734^1 : TPTP v9.2.1. Bugfixed v5.1.0.
+% Domain   : Number Theory
+% Problem  : Landau theorem 41h
+% Version  : Especial.
+% English  : ~(~(moref x y) -> eq x y)
+
+% Refs     : [Lan30] Landau (1930), Grundlagen der Analysis
+%          : [vBJ79] van Benthem Jutting (1979), Checking Landau's "Grundla
+%          : [Bro09] Brown (2009), Email to Geoff Sutcliffe
+% Source   : [Bro09]
+% Names    : satz41h [Lan30]
+
+% Status   : Theorem
+%          : Without extensionality : Theorem
+% Rating   : 0.00 v3.7.0
+% Syntax   : Number of formulae    :   10 (   3 unit;   6 type;   0 defn)
+%            Number of atoms       :   44 (   0 equality;  14 variable)
+%            Maximal formula depth :   13 (   4 average)
+%            Number of connectives :   36 (  11   ~;   0   |;   0   &;  18   @)
+%                                         (   0 <=>;   7  =>;   0  <=;   0 <~>)
+%                                         (   0  ~|;   0  ~&;   0  !!;   0  ??)
+%            Number of type conns  :    6 (   6   >;   0   *;   0   +;   0  <<)
+%            Number of symbols     :    9 (   6   :;   0  :=)
+%            Number of variables   :    3 (   0 sgn;   3   !;   0   ?;   0   ^)
+%                                         (   3   :;   0  :=;   0  !>;   0  ?*)
+%                                         (   0  @-;   0  @+)
+% SPC      : THF_THM_NEQ
+
+% Comments : THF0 syntax
+% Bugfixes : v5.1.0 - Removed - duplicate of NUM789^1 
+%------------------------------------------------------------------------------

@@ -13,7 +13,7 @@
 
 <tasks name="tptp">
     <option name="--input_syntax">tptp</option>
-    <include>/data/benchmarks/TPTP/Problems/ARI/ARI*.p</include>
+    <include>../TPTP/Problems/ARI/ARI*.p</include>
 </tasks>
 
 <tasks name="smtlib">

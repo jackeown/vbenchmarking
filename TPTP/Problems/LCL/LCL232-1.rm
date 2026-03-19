@@ -1,0 +1,21 @@
+%--------------------------------------------------------------------------
+% File     : LCL232-1 : TPTP v9.2.1. Bugfixed v2.3.0.
+% Domain   : Logic Calculi (Propositional)
+% Problem  : Principia Mathematica 3.1
+% Version  : [WR27] axioms.
+% English  :
+
+% Refs     : [WR27]  Whitehead & Russell (1927), Principia Mathematica
+%          : [NSS63] Newell et al. (1963), Empirical Explorations with the
+%          : [ORo89] O'Rourke (1989), LT Revisited: Explanation-Based Learn
+%          : [SE94]  Segre & Elkan (1994), A High-Performance Explanation-B
+% Source   : [SE94]
+% Names    : Problem 3.1 [WR27]
+
+% Status   : Satisfiable
+% Rating   : 0.67 v2.2.1, 0.75 v2.2.0, 0.67 v2.1.0, 1.00 v2.0.0
+% Syntax   :
+
+% Comments :
+% Bugfixes : v2.3.0 - Removed. Should be an axiom.
+%--------------------------------------------------------------------------

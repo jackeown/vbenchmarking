@@ -1,0 +1,30 @@
+%------------------------------------------------------------------------------
+% File     : SEU748^2 : TPTP v9.2.1. Removed v4.0.0.
+% Domain   : Set Theory
+% Problem  : Typed Set Theory - Laws for Typed Sets - DeMorgan Laws
+% Version  : Especial > Reduced > Especial.
+% English  : (! A:i.! X:i.in X (powerset A) -> (! Y:i.in Y (powerset A) ->
+%            (! x:i.in x A -> in x (setminus A (binunion X Y)) ->
+%            in x (setminus A X))))
+
+% Refs     : [Bro08] Brown (2008), Email to G. Sutcliffe
+% Source   : [Bro08]
+% Names    : ZFC250l [Bro08]
+
+% Status   : Theorem
+% Rating   : 0.00 v3.7.0
+% Syntax   : Number of formulae    :    9 (   2 unit;   6 type;   2 defn)
+%            Number of atoms       :   85 (   2 equality;  32 variable)
+%            Maximal formula depth :   15 (   6 average)
+%            Number of connectives :   56 (   2   ~;   0   |;   0   &;  42   @)
+%                                         (   0 <=>;  12  =>;   0  <=;   0 <~>)
+%                                         (   0  ~|;   0  ~&;   0  !!;   0  ??)
+%            Number of type conns  :    7 (   7   >;   0   *;   0   +)
+%            Number of symbols     :    8 (   6   :;   0  :=)
+%            Number of variables   :   11 (   0 sgn;  11   !;   0   ?;   0   ^)
+%                                         (  11   :;   0  :=;   0  !>;   0  ?*)
+
+% Comments : http://mathgate.info/detsetitem.php?id=310
+%          : THF0 syntax
+% Bugfixes : v4.0.0 - Removed because it's SEU745^2.
+%------------------------------------------------------------------------------

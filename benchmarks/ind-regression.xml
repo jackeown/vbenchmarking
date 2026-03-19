@@ -15,7 +15,7 @@
     <option name="-ind">int</option>
     <option name="-intinddb">on</option>
     <include>/home/mhajdu/inductive_benchmarks/benchmarks/flat/int::*::smt2::*.smt2</include>
-    <includesfile>/home/mhajdu/vbenchmarking/benchmarks/oeis-rand5000.set</includesfile>
+    <includesfile>oeis-rand5000.set</includesfile>
 </tasks>
 
 <tasks name="structural">

@@ -1,0 +1,19 @@
+%--------------------------------------------------------------------------
+% File     : ROB019-1 : TPTP v9.2.1. Released v1.0.0.
+% Domain   : Robbins Algebra
+% Problem  : A complex absorbtion condition
+% Version  : [Win90] (equality) axioms.
+% English  : If -(-e + -(d + -e)) = d then e + 2(d + -(d + -e)) absorbs
+%            d + -(d + -e)
+
+% Refs     : [Win90] Winker (1990), Robbins Algebra: Conditions that make a
+% Source   : [Win90]
+% Names    : Corollary 3.9 [Win90]
+
+% Status   : Unsatisfiable
+% Rating   : 0.78 v2.7.0, 0.67 v2.6.0, 0.86 v2.5.0, 1.00 v2.0.0
+% Syntax   :
+
+% Comments : This could be done with the first part, together
+% Bugfixes : v3.0.0 - Removed as duplicate of ROB018-1
+%--------------------------------------------------------------------------

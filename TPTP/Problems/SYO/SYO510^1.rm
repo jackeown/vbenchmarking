@@ -1,0 +1,31 @@
+%------------------------------------------------------------------------------
+% File     : SYO510^1 : TPTP v9.2.1. Removed v5.2.0.
+% Domain   : Syntactic
+% Problem  : There is a choice operator at type i
+% Version  : Especial.
+% English  : 
+
+% Refs     : [Bro09] Brown E. (2009), Email to Geoff Sutcliffe
+%          : [Hoe09] Hoeschele (2009), Towards a Semi-Automatic Higher-Orde
+% Source   : [Bro09]
+% Names    : choicei [Bro09]
+
+% Status   : Theorem
+%          : Without choice : CounterSatisfiable
+% Rating   : 0.75 v4.1.0
+% Syntax   : Number of formulae    :    1 (   0 unit;   0 type;   0 defn)
+%            Number of atoms       :   11 (   0 equality;   5 variable)
+%            Maximal formula depth :    6 (   6 average)
+%            Number of connectives :    4 (   0   ~;   0   |;   0   &;   3   @)
+%                                         (   0 <=>;   1  =>;   0  <=;   0 <~>)
+%                                         (   0  ~|;   0  ~&;   0  !!;   0  ??)
+%            Number of type conns  :    3 (   3   >;   0   *;   0   +;   0  <<)
+%            Number of symbols     :    2 (   0   :;   0  :=)
+%            Number of variables   :    3 (   0 sgn;   1   !;   2   ?;   0   ^)
+%                                         (   3   :;   0  :=;   0  !>;   0  ?*)
+%                                         (   0  @-;   0  @+)
+% SPC      : THF_THM_NEQ
+
+% Comments : THF0 syntax
+% Bugfixes : v5.2.0 - Removed, duplicate of SYN997^1 
+%------------------------------------------------------------------------------

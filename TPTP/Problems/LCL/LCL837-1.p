@@ -1,0 +1,2825 @@
+%------------------------------------------------------------------------------
+% File     : LCL837-1 : TPTP v9.2.1. Released v4.1.0.
+% Domain   : Logic Calculi
+% Problem  : Strong normalization of typed lambda calculus 234_11
+% Version  : Especial.
+% English  :
+
+% Refs     : [vON99] von Oheimb & Nipkow (1999), Machine-Checking the Java
+%          : [Nip10] Nipkow (2010), Email to Geoff Sutcliffe
+%          : [BN10]  Boehme & Nipkow (2010), Sledgehammer: Judgement Day
+% Source   : [Nip10]
+% Names    : StrongNorm-234_11 [Nip10]
+
+% Status   : Unsatisfiable
+% Rating   : 0.32 v9.1.0, 0.35 v8.2.0, 0.38 v8.1.0, 0.42 v7.5.0, 0.47 v7.3.0, 0.33 v7.1.0, 0.25 v7.0.0, 0.47 v6.3.0, 0.27 v6.2.0, 0.40 v6.1.0, 0.57 v6.0.0, 0.60 v5.5.0, 0.80 v5.4.0, 0.75 v5.3.0, 0.78 v5.2.0, 0.69 v5.1.0, 0.71 v4.1.0
+% Syntax   : Number of clauses     :  657 ( 165 unt;  89 nHn; 329 RR)
+%            Number of literals    : 1484 ( 505 equ; 766 neg)
+%            Maximal clause size   :    6 (   2 avg)
+%            Maximal term depth    :   10 (   2 avg)
+%            Number of predicates  :   48 (  47 usr;   0 prp; 1-3 aty)
+%            Number of functors    :   51 (  51 usr;  16 con; 0-6 aty)
+%            Number of variables   : 1699 ( 221 sgn)
+% SPC      : CNF_UNS_RFO_SEQ_NHN
+
+% Comments :
+%------------------------------------------------------------------------------
+cnf(cls_nat__mult__eq__1__iff_0,axiom,
+    ( c_HOL_Otimes__class_Otimes(V_m,V_n,tc_nat) != c_HOL_Oone__class_Oone(tc_nat)
+    | V_m = c_HOL_Oone__class_Oone(tc_nat) ) ).
+
+cnf(cls_of__nat__1_0,axiom,
+    ( ~ class_Ring__and__Field_Osemiring__1(T_a)
+    | c_Nat_Osemiring__1__class_Oof__nat(c_HOL_Oone__class_Oone(tc_nat),T_a) = c_HOL_Oone__class_Oone(T_a) ) ).
+
+cnf(cls_nat__mult__eq__cancel1_0,axiom,
+    ( c_HOL_Otimes__class_Otimes(V_k,V_m,tc_nat) != c_HOL_Otimes__class_Otimes(V_k,V_n,tc_nat)
+    | ~ c_HOL_Oord__class_Oless(c_HOL_Ozero__class_Ozero(tc_nat),V_k,tc_nat)
+    | V_m = V_n ) ).
+
+cnf(cls_mult__less__cancel2_0,axiom,
+    ( c_HOL_Oord__class_Oless(c_HOL_Ozero__class_Ozero(tc_nat),V_k,tc_nat)
+    | ~ c_HOL_Oord__class_Oless(c_HOL_Otimes__class_Otimes(V_m,V_k,tc_nat),c_HOL_Otimes__class_Otimes(V_n,V_k,tc_nat),tc_nat) ) ).
+
+cnf(cls_mult__less__cancel1_0,axiom,
+    ( c_HOL_Oord__class_Oless(c_HOL_Ozero__class_Ozero(tc_nat),V_k,tc_nat)
+    | ~ c_HOL_Oord__class_Oless(c_HOL_Otimes__class_Otimes(V_k,V_m,tc_nat),c_HOL_Otimes__class_Otimes(V_k,V_n,tc_nat),tc_nat) ) ).
+
+cnf(cls_of__nat__Suc_0,axiom,
+    ( ~ class_Ring__and__Field_Osemiring__1(T_a)
+    | c_Nat_Osemiring__1__class_Oof__nat(c_Suc(V_m),T_a) = hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),c_HOL_Oone__class_Oone(T_a)),c_Nat_Osemiring__1__class_Oof__nat(V_m,T_a)) ) ).
+
+cnf(cls_one__less__power_0,axiom,
+    ( ~ class_Ring__and__Field_Oordered__semidom(T_a)
+    | c_HOL_Oord__class_Oless(c_HOL_Oone__class_Oone(T_a),c_Power_Opower__class_Opower(V_a,V_n,T_a),T_a)
+    | ~ c_HOL_Oord__class_Oless(c_HOL_Ozero__class_Ozero(tc_nat),V_n,tc_nat)
+    | ~ c_HOL_Oord__class_Oless(c_HOL_Oone__class_Oone(T_a),V_a,T_a) ) ).
+
+cnf(cls_left__add__mult__distrib_0,axiom,
+    hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),c_HOL_Otimes__class_Otimes(V_i,V_u,tc_nat)),hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),c_HOL_Otimes__class_Otimes(V_j,V_u,tc_nat)),V_k)) = hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),c_HOL_Otimes__class_Otimes(hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),V_i),V_j),V_u,tc_nat)),V_k) ).
+
+cnf(cls_combine__common__factor_0,axiom,
+    ( ~ class_Ring__and__Field_Osemiring(T_a)
+    | hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),c_HOL_Otimes__class_Otimes(V_a,V_e,T_a)),hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),c_HOL_Otimes__class_Otimes(V_b,V_e,T_a)),V_c)) = hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),c_HOL_Otimes__class_Otimes(hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_a),V_b),V_e,T_a)),V_c) ) ).
+
+cnf(cls_lift__subst__lt_0,axiom,
+    ( hAPP(hAPP(c_Lambda_Olift,hAPP(hAPP(hAPP(c_Lambda_Osubst,V_t),V_s),V_j)),V_i) = hAPP(hAPP(hAPP(c_Lambda_Osubst,hAPP(hAPP(c_Lambda_Olift,V_t),V_i)),hAPP(hAPP(c_Lambda_Olift,V_s),V_i)),hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),V_j),c_HOL_Oone__class_Oone(tc_nat)))
+    | ~ c_HOL_Oord__class_Oless(V_i,hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),V_j),c_HOL_Oone__class_Oone(tc_nat)),tc_nat) ) ).
+
+cnf(cls_typing_OVar_0,axiom,
+    c_Type_Otyping(V_env,c_Lambda_OdB_OVar(V_x),hAPP(V_env,V_x)) ).
+
+cnf(cls_nat__0__less__mult__iff_1,axiom,
+    ( c_HOL_Oord__class_Oless(c_HOL_Ozero__class_Ozero(tc_nat),V_n,tc_nat)
+    | ~ c_HOL_Oord__class_Oless(c_HOL_Ozero__class_Ozero(tc_nat),c_HOL_Otimes__class_Otimes(V_m,V_n,tc_nat),tc_nat) ) ).
+
+cnf(cls_nat__0__less__mult__iff_0,axiom,
+    ( c_HOL_Oord__class_Oless(c_HOL_Ozero__class_Ozero(tc_nat),V_m,tc_nat)
+    | ~ c_HOL_Oord__class_Oless(c_HOL_Ozero__class_Ozero(tc_nat),c_HOL_Otimes__class_Otimes(V_m,V_n,tc_nat),tc_nat) ) ).
+
+cnf(cls_add__neg__neg_0,axiom,
+    ( ~ class_OrderedGroup_Opordered__comm__monoid__add(T_a)
+    | c_HOL_Oord__class_Oless(hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_a),V_b),c_HOL_Ozero__class_Ozero(T_a),T_a)
+    | ~ c_HOL_Oord__class_Oless(V_b,c_HOL_Ozero__class_Ozero(T_a),T_a)
+    | ~ c_HOL_Oord__class_Oless(V_a,c_HOL_Ozero__class_Ozero(T_a),T_a) ) ).
+
+cnf(cls_dvd__imp__mod__0_0,axiom,
+    ( ~ class_Divides_Osemiring__div(T_a)
+    | c_Divides_Odiv__class_Omod(V_b,V_a,T_a) = c_HOL_Ozero__class_Ozero(T_a)
+    | ~ c_Ring__and__Field_Odvd__class_Odvd(V_a,V_b,T_a) ) ).
+
+cnf(cls_dvd__eq__mod__eq__0_1,axiom,
+    ( ~ class_Divides_Osemiring__div(T_a)
+    | c_Divides_Odiv__class_Omod(V_b,V_a,T_a) != c_HOL_Ozero__class_Ozero(T_a)
+    | c_Ring__and__Field_Odvd__class_Odvd(V_a,V_b,T_a) ) ).
+
+cnf(cls_dvd__div__mult_0,axiom,
+    ( ~ class_Divides_Osemiring__div(T_a)
+    | c_HOL_Otimes__class_Otimes(c_Divides_Odiv__class_Odiv(V_b,V_a,T_a),V_c,T_a) = c_Divides_Odiv__class_Odiv(c_HOL_Otimes__class_Otimes(V_b,V_c,T_a),V_a,T_a)
+    | ~ c_Ring__and__Field_Odvd__class_Odvd(V_a,V_b,T_a) ) ).
+
+cnf(cls_not__square__less__zero_0,axiom,
+    ( ~ class_Ring__and__Field_Oordered__ring__strict(T_a)
+    | ~ c_HOL_Oord__class_Oless(c_HOL_Otimes__class_Otimes(V_a,V_a,T_a),c_HOL_Ozero__class_Ozero(T_a),T_a) ) ).
+
+cnf(cls_Suc__mult__less__cancel1_1,axiom,
+    ( c_HOL_Oord__class_Oless(c_HOL_Otimes__class_Otimes(c_Suc(V_k),V_m,tc_nat),c_HOL_Otimes__class_Otimes(c_Suc(V_k),V_n,tc_nat),tc_nat)
+    | ~ c_HOL_Oord__class_Oless(V_m,V_n,tc_nat) ) ).
+
+cnf(cls_nat__mult__eq__1__iff_1,axiom,
+    ( c_HOL_Otimes__class_Otimes(V_m,V_n,tc_nat) != c_HOL_Oone__class_Oone(tc_nat)
+    | V_n = c_HOL_Oone__class_Oone(tc_nat) ) ).
+
+cnf(cls_mod__add__right__eq_0,axiom,
+    ( ~ class_Divides_Osemiring__div(T_a)
+    | c_Divides_Odiv__class_Omod(hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_a),V_b),V_c,T_a) = c_Divides_Odiv__class_Omod(hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_a),c_Divides_Odiv__class_Omod(V_b,V_c,T_a)),V_c,T_a) ) ).
+
+cnf(cls_mod__add__left__eq_0,axiom,
+    ( ~ class_Divides_Osemiring__div(T_a)
+    | c_Divides_Odiv__class_Omod(hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_a),V_b),V_c,T_a) = c_Divides_Odiv__class_Omod(hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),c_Divides_Odiv__class_Omod(V_a,V_c,T_a)),V_b),V_c,T_a) ) ).
+
+cnf(cls_dvd_Oless__trans_1,axiom,
+    ( ~ c_Ring__and__Field_Odvd__class_Odvd(V_z,V_x,tc_nat)
+    | c_Ring__and__Field_Odvd__class_Odvd(V_z,V_y,tc_nat)
+    | ~ c_Ring__and__Field_Odvd__class_Odvd(V_y,V_z,tc_nat)
+    | c_Ring__and__Field_Odvd__class_Odvd(V_y,V_x,tc_nat)
+    | ~ c_Ring__and__Field_Odvd__class_Odvd(V_x,V_y,tc_nat) ) ).
+
+cnf(cls_subst__Var_1,axiom,
+    ( c_HOL_Oord__class_Oless(V_x,V_x,tc_nat)
+    | hAPP(hAPP(hAPP(c_Lambda_Osubst,c_Lambda_OdB_OVar(V_x)),V_s),V_x) = V_s ) ).
+
+cnf(cls_mod__less__divisor_0,axiom,
+    ( c_HOL_Oord__class_Oless(c_Divides_Odiv__class_Omod(V_m,V_n,tc_nat),V_n,tc_nat)
+    | ~ c_HOL_Oord__class_Oless(c_HOL_Ozero__class_Ozero(tc_nat),V_n,tc_nat) ) ).
+
+cnf(cls_power__one_0,axiom,
+    ( ~ class_OrderedGroup_Omonoid__mult(T_a)
+    | c_Power_Opower__class_Opower(c_HOL_Oone__class_Oone(T_a),V_n,T_a) = c_HOL_Oone__class_Oone(T_a) ) ).
+
+cnf(cls_lift_Osimps_I1_J_1,axiom,
+    ( hAPP(hAPP(c_Lambda_Olift,c_Lambda_OdB_OVar(V_i)),V_k) = c_Lambda_OdB_OVar(hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),V_i),c_HOL_Oone__class_Oone(tc_nat)))
+    | c_HOL_Oord__class_Oless(V_i,V_k,tc_nat) ) ).
+
+cnf(cls_add__cancel__21_0,axiom,
+    ( ~ class_OrderedGroup_Oab__group__add(T_a)
+    | hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_x),hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_y),V_z)) != hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_y),V_u)
+    | hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_x),V_z) = V_u ) ).
+
+cnf(cls_power__add_0,axiom,
+    ( ~ class_OrderedGroup_Omonoid__mult(T_a)
+    | c_Power_Opower__class_Opower(V_a,hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),V_m),V_n),T_a) = c_HOL_Otimes__class_Otimes(c_Power_Opower__class_Opower(V_a,V_m,T_a),c_Power_Opower__class_Opower(V_a,V_n,T_a),T_a) ) ).
+
+cnf(cls_add__gr__0_0,axiom,
+    ( c_HOL_Oord__class_Oless(c_HOL_Ozero__class_Ozero(tc_nat),V_n,tc_nat)
+    | c_HOL_Oord__class_Oless(c_HOL_Ozero__class_Ozero(tc_nat),V_m,tc_nat)
+    | ~ c_HOL_Oord__class_Oless(c_HOL_Ozero__class_Ozero(tc_nat),hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),V_m),V_n),tc_nat) ) ).
+
+cnf(cls_class__semiring_Osemiring__rules_I21_J_0,axiom,
+    ( ~ class_Ring__and__Field_Ocomm__semiring__1(T_a)
+    | hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_a),V_b)),V_c) = hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_a),hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_b),V_c)) ) ).
+
+cnf(cls_class__semiring_Osemiring__rules_I22_J_0,axiom,
+    ( ~ class_Ring__and__Field_Ocomm__semiring__1(T_a)
+    | hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_a),hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_c),V_d)) = hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_c),hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_a),V_d)) ) ).
+
+cnf(cls_class__semiring_Osemiring__rules_I23_J_0,axiom,
+    ( ~ class_Ring__and__Field_Ocomm__semiring__1(T_a)
+    | hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_a),V_b)),V_c) = hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_a),V_c)),V_b) ) ).
+
+cnf(cls_class__semiring_Osemiring__rules_I25_J_0,axiom,
+    ( ~ class_Ring__and__Field_Ocomm__semiring__1(T_a)
+    | hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_a),hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_c),V_d)) = hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_a),V_c)),V_d) ) ).
+
+cnf(cls_ab__semigroup__add__class_Oadd__ac_I1_J_0,axiom,
+    ( ~ class_OrderedGroup_Oab__semigroup__add(T_a)
+    | hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_a),V_b)),V_c) = hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_a),hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_b),V_c)) ) ).
+
+cnf(cls_comm__monoid__add_Omult__left__commute_0,axiom,
+    ( ~ class_OrderedGroup_Ocomm__monoid__add(T_a)
+    | hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_a),hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_b),V_c)) = hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_b),hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_a),V_c)) ) ).
+
+cnf(cls_comm__monoid__add_Omult__assoc_0,axiom,
+    ( ~ class_OrderedGroup_Ocomm__monoid__add(T_a)
+    | hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_a),V_b)),V_c) = hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_a),hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_b),V_c)) ) ).
+
+cnf(cls_nat__add__assoc_0,axiom,
+    hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),V_m),V_n)),V_k) = hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),V_m),hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),V_n),V_k)) ).
+
+cnf(cls_nat__add__left__commute_0,axiom,
+    hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),V_x),hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),V_y),V_z)) = hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),V_y),hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),V_x),V_z)) ).
+
+cnf(cls_add__cancel__21_1,axiom,
+    ( ~ class_OrderedGroup_Oab__group__add(T_a)
+    | hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_x),hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_y),V_z)) = hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_y),hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_x),V_z)) ) ).
+
+cnf(cls_class__semiring_Oadd__a_0,axiom,
+    ( ~ class_Ring__and__Field_Ocomm__semiring__1(T_a)
+    | hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_x),hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_y),V_z)) = hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_x),V_y)),V_z) ) ).
+
+cnf(cls_xt1_I10_J_0,axiom,
+    ( ~ class_Orderings_Oorder(T_a)
+    | c_HOL_Oord__class_Oless(V_z,V_x,T_a)
+    | ~ c_HOL_Oord__class_Oless(V_z,V_y,T_a)
+    | ~ c_HOL_Oord__class_Oless(V_y,V_x,T_a) ) ).
+
+cnf(cls_order__less__trans_0,axiom,
+    ( ~ class_Orderings_Opreorder(T_a)
+    | c_HOL_Oord__class_Oless(V_x,V_z,T_a)
+    | ~ c_HOL_Oord__class_Oless(V_y,V_z,T_a)
+    | ~ c_HOL_Oord__class_Oless(V_x,V_y,T_a) ) ).
+
+cnf(cls_power__Suc__less__one_0,axiom,
+    ( ~ class_Ring__and__Field_Oordered__semidom(T_a)
+    | c_HOL_Oord__class_Oless(c_Power_Opower__class_Opower(V_a,c_Suc(V_n),T_a),c_HOL_Oone__class_Oone(T_a),T_a)
+    | ~ c_HOL_Oord__class_Oless(V_a,c_HOL_Oone__class_Oone(T_a),T_a)
+    | ~ c_HOL_Oord__class_Oless(c_HOL_Ozero__class_Ozero(T_a),V_a,T_a) ) ).
+
+cnf(cls_mod__add__eq_0,axiom,
+    ( ~ class_Divides_Osemiring__div(T_a)
+    | c_Divides_Odiv__class_Omod(hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_a),V_b),V_c,T_a) = c_Divides_Odiv__class_Omod(hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),c_Divides_Odiv__class_Omod(V_a,V_c,T_a)),c_Divides_Odiv__class_Omod(V_b,V_c,T_a)),V_c,T_a) ) ).
+
+cnf(cls_class__semiring_Osemiring__rules_I7_J_0,axiom,
+    ( ~ class_Ring__and__Field_Ocomm__semiring__1(T_a)
+    | c_HOL_Otimes__class_Otimes(V_a,V_b,T_a) = c_HOL_Otimes__class_Otimes(V_b,V_a,T_a) ) ).
+
+cnf(cls_nat__mult__commute_0,axiom,
+    c_HOL_Otimes__class_Otimes(V_m,V_n,tc_nat) = c_HOL_Otimes__class_Otimes(V_n,V_m,tc_nat) ).
+
+cnf(cls_class__semiring_Omul__c_0,axiom,
+    ( ~ class_Ring__and__Field_Ocomm__semiring__1(T_a)
+    | c_HOL_Otimes__class_Otimes(V_x,V_y,T_a) = c_HOL_Otimes__class_Otimes(V_y,V_x,T_a) ) ).
+
+cnf(cls_class__semiring_Osemiring__rules_I35_J_0,axiom,
+    ( ~ class_Ring__and__Field_Ocomm__semiring__1(T_a)
+    | c_Power_Opower__class_Opower(V_x,c_Suc(V_q),T_a) = c_HOL_Otimes__class_Otimes(V_x,c_Power_Opower__class_Opower(V_x,V_q,T_a),T_a) ) ).
+
+cnf(cls_class__semiring_Opwr__Suc_0,axiom,
+    ( ~ class_Ring__and__Field_Ocomm__semiring__1(T_a)
+    | c_Power_Opower__class_Opower(V_x,c_Suc(V_n),T_a) = c_HOL_Otimes__class_Otimes(V_x,c_Power_Opower__class_Opower(V_x,V_n,T_a),T_a) ) ).
+
+cnf(cls_power__Suc_0,axiom,
+    ( ~ class_Power_Opower(T_a)
+    | c_Power_Opower__class_Opower(V_a,c_Suc(V_n),T_a) = c_HOL_Otimes__class_Otimes(V_a,c_Power_Opower__class_Opower(V_a,V_n,T_a),T_a) ) ).
+
+cnf(cls_power__Suc2_0,axiom,
+    ( ~ class_OrderedGroup_Omonoid__mult(T_a)
+    | c_Power_Opower__class_Opower(V_a,c_Suc(V_n),T_a) = c_HOL_Otimes__class_Otimes(c_Power_Opower__class_Opower(V_a,V_n,T_a),V_a,T_a) ) ).
+
+cnf(cls_class__semiring_Opwr__pwr_0,axiom,
+    ( ~ class_Ring__and__Field_Ocomm__semiring__1(T_a)
+    | c_Power_Opower__class_Opower(c_Power_Opower__class_Opower(V_x,V_p,T_a),V_q,T_a) = c_Power_Opower__class_Opower(V_x,c_HOL_Otimes__class_Otimes(V_p,V_q,tc_nat),T_a) ) ).
+
+cnf(cls_subst__Var_2,axiom,
+    ( hAPP(hAPP(hAPP(c_Lambda_Osubst,c_Lambda_OdB_OVar(V_i)),V_s),V_k) = c_Lambda_OdB_OVar(V_i)
+    | V_i = V_k
+    | c_HOL_Oord__class_Oless(V_k,V_i,tc_nat) ) ).
+
+cnf(cls_dvd__mult__cancel1_1,axiom,
+    ( ~ c_HOL_Oord__class_Oless(c_HOL_Ozero__class_Ozero(tc_nat),V_m,tc_nat)
+    | c_Ring__and__Field_Odvd__class_Odvd(c_HOL_Otimes__class_Otimes(V_m,c_HOL_Oone__class_Oone(tc_nat),tc_nat),V_m,tc_nat) ) ).
+
+cnf(cls_dvd__mult__cancel2_1,axiom,
+    ( ~ c_HOL_Oord__class_Oless(c_HOL_Ozero__class_Ozero(tc_nat),V_m,tc_nat)
+    | c_Ring__and__Field_Odvd__class_Odvd(c_HOL_Otimes__class_Otimes(c_HOL_Oone__class_Oone(tc_nat),V_m,tc_nat),V_m,tc_nat) ) ).
+
+cnf(cls_class__ringb_Oadd__mul__solve_1,axiom,
+    ( ~ class_Ring__and__Field_Oidom(T_a)
+    | ~ class_Int_Onumber__ring(T_a)
+    | hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),c_HOL_Otimes__class_Otimes(V_x,V_y,T_a)),c_HOL_Otimes__class_Otimes(V_x,V_z,T_a)) = hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),c_HOL_Otimes__class_Otimes(V_x,V_z,T_a)),c_HOL_Otimes__class_Otimes(V_x,V_y,T_a)) ) ).
+
+cnf(cls_class__ringb_Onoteq__reduce_1,axiom,
+    ( ~ class_Ring__and__Field_Oidom(T_a)
+    | ~ class_Int_Onumber__ring(T_a)
+    | hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),c_HOL_Otimes__class_Otimes(V_x,V_c,T_a)),c_HOL_Otimes__class_Otimes(V_x,V_d,T_a)) = hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),c_HOL_Otimes__class_Otimes(V_x,V_d,T_a)),c_HOL_Otimes__class_Otimes(V_x,V_c,T_a)) ) ).
+
+cnf(cls_natgb_Onoteq__reduce_1,axiom,
+    hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),c_HOL_Otimes__class_Otimes(V_x,V_c,tc_nat)),c_HOL_Otimes__class_Otimes(V_x,V_d,tc_nat)) = hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),c_HOL_Otimes__class_Otimes(V_x,V_d,tc_nat)),c_HOL_Otimes__class_Otimes(V_x,V_c,tc_nat)) ).
+
+cnf(cls_natgb_Oadd__mul__solve_1,axiom,
+    hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),c_HOL_Otimes__class_Otimes(V_x,V_y,tc_nat)),c_HOL_Otimes__class_Otimes(V_x,V_z,tc_nat)) = hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),c_HOL_Otimes__class_Otimes(V_x,V_z,tc_nat)),c_HOL_Otimes__class_Otimes(V_x,V_y,tc_nat)) ).
+
+cnf(cls_Suc__eq__plus1_0,axiom,
+    c_Suc(V_n) = hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),V_n),c_HOL_Oone__class_Oone(tc_nat)) ).
+
+cnf(cls_Suc__eq__plus1__left_0,axiom,
+    c_Suc(V_n) = hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),c_HOL_Oone__class_Oone(tc_nat)),V_n) ).
+
+cnf(cls_mod__mod__trivial_0,axiom,
+    ( ~ class_Divides_Osemiring__div(T_a)
+    | c_Divides_Odiv__class_Omod(c_Divides_Odiv__class_Omod(V_a,V_b,T_a),V_b,T_a) = c_Divides_Odiv__class_Omod(V_a,V_b,T_a) ) ).
+
+cnf(cls_of__nat__power_0,axiom,
+    ( ~ class_Ring__and__Field_Osemiring__1(T_a)
+    | c_Nat_Osemiring__1__class_Oof__nat(c_Power_Opower__class_Opower(V_m,V_n,tc_nat),T_a) = c_Power_Opower__class_Opower(c_Nat_Osemiring__1__class_Oof__nat(V_m,T_a),V_n,T_a) ) ).
+
+cnf(cls_div__self_0,axiom,
+    ( ~ class_Divides_Osemiring__div(T_a)
+    | c_Divides_Odiv__class_Odiv(V_a,V_a,T_a) = c_HOL_Oone__class_Oone(T_a)
+    | V_a = c_HOL_Ozero__class_Ozero(T_a) ) ).
+
+cnf(cls_dvd__triv__right_0,axiom,
+    ( ~ class_Ring__and__Field_Ocomm__semiring__1(T_a)
+    | c_Ring__and__Field_Odvd__class_Odvd(V_a,c_HOL_Otimes__class_Otimes(V_b,V_a,T_a),T_a) ) ).
+
+cnf(cls_dvd__triv__left_0,axiom,
+    ( ~ class_Ring__and__Field_Ocomm__semiring__1(T_a)
+    | c_Ring__and__Field_Odvd__class_Odvd(V_a,c_HOL_Otimes__class_Otimes(V_a,V_b,T_a),T_a) ) ).
+
+cnf(cls_dvdI_0,axiom,
+    ( ~ class_Ring__and__Field_Odvd(T_a)
+    | c_Ring__and__Field_Odvd__class_Odvd(V_b,c_HOL_Otimes__class_Otimes(V_b,V_k,T_a),T_a) ) ).
+
+cnf(cls_class__semiring_Osemiring__rules_I11_J_0,axiom,
+    ( ~ class_Ring__and__Field_Ocomm__semiring__1(T_a)
+    | c_HOL_Otimes__class_Otimes(c_HOL_Oone__class_Oone(T_a),V_a,T_a) = V_a ) ).
+
+cnf(cls_class__semiring_Osemiring__rules_I12_J_0,axiom,
+    ( ~ class_Ring__and__Field_Ocomm__semiring__1(T_a)
+    | c_HOL_Otimes__class_Otimes(V_a,c_HOL_Oone__class_Oone(T_a),T_a) = V_a ) ).
+
+cnf(cls_mult__1__right_0,axiom,
+    ( ~ class_OrderedGroup_Omonoid__mult(T_a)
+    | c_HOL_Otimes__class_Otimes(V_a,c_HOL_Oone__class_Oone(T_a),T_a) = V_a ) ).
+
+cnf(cls_mult__1__left_0,axiom,
+    ( ~ class_OrderedGroup_Omonoid__mult(T_a)
+    | c_HOL_Otimes__class_Otimes(c_HOL_Oone__class_Oone(T_a),V_a,T_a) = V_a ) ).
+
+cnf(cls_mult__1_0,axiom,
+    ( ~ class_OrderedGroup_Ocomm__monoid__mult(T_a)
+    | c_HOL_Otimes__class_Otimes(c_HOL_Oone__class_Oone(T_a),V_a,T_a) = V_a ) ).
+
+cnf(cls_nat__mult__1_0,axiom,
+    c_HOL_Otimes__class_Otimes(c_HOL_Oone__class_Oone(tc_nat),V_n,tc_nat) = V_n ).
+
+cnf(cls_nat__mult__1__right_0,axiom,
+    c_HOL_Otimes__class_Otimes(V_n,c_HOL_Oone__class_Oone(tc_nat),tc_nat) = V_n ).
+
+cnf(cls_class__semiring_Omul__1_0,axiom,
+    ( ~ class_Ring__and__Field_Ocomm__semiring__1(T_a)
+    | c_HOL_Otimes__class_Otimes(c_HOL_Oone__class_Oone(T_a),V_x,T_a) = V_x ) ).
+
+cnf(cls_listsp_ONil_0,axiom,
+    c_List_Olistsp(V_A,c_List_Olist_ONil(T_a),T_a) ).
+
+cnf(cls_div__mult__self__is__m_0,axiom,
+    ( c_Divides_Odiv__class_Odiv(c_HOL_Otimes__class_Otimes(V_m,V_n,tc_nat),V_n,tc_nat) = V_m
+    | ~ c_HOL_Oord__class_Oless(c_HOL_Ozero__class_Ozero(tc_nat),V_n,tc_nat) ) ).
+
+cnf(cls_div__mult__self1__is__m_0,axiom,
+    ( c_Divides_Odiv__class_Odiv(c_HOL_Otimes__class_Otimes(V_n,V_m,tc_nat),V_n,tc_nat) = V_m
+    | ~ c_HOL_Oord__class_Oless(c_HOL_Ozero__class_Ozero(tc_nat),V_n,tc_nat) ) ).
+
+cnf(cls_dvd__mult__cancel__right_2,axiom,
+    ( ~ class_Ring__and__Field_Oidom(T_a)
+    | c_Ring__and__Field_Odvd__class_Odvd(c_HOL_Otimes__class_Otimes(V_a,V_c,T_a),c_HOL_Otimes__class_Otimes(V_b,V_c,T_a),T_a)
+    | ~ c_Ring__and__Field_Odvd__class_Odvd(V_a,V_b,T_a) ) ).
+
+cnf(cls_dvd__mult__cancel__left_2,axiom,
+    ( ~ class_Ring__and__Field_Oidom(T_a)
+    | c_Ring__and__Field_Odvd__class_Odvd(c_HOL_Otimes__class_Otimes(V_c,V_a,T_a),c_HOL_Otimes__class_Otimes(V_c,V_b,T_a),T_a)
+    | ~ c_Ring__and__Field_Odvd__class_Odvd(V_a,V_b,T_a) ) ).
+
+cnf(cls_nat__mult__dvd__cancel__disj_2,axiom,
+    ( c_Ring__and__Field_Odvd__class_Odvd(c_HOL_Otimes__class_Otimes(V_k,V_m,tc_nat),c_HOL_Otimes__class_Otimes(V_k,V_n,tc_nat),tc_nat)
+    | ~ c_Ring__and__Field_Odvd__class_Odvd(V_m,V_n,tc_nat) ) ).
+
+cnf(cls_zmod__simps_I4_J_0,axiom,
+    ( ~ class_Divides_Osemiring__div(T_a)
+    | c_Divides_Odiv__class_Omod(c_HOL_Otimes__class_Otimes(c_Divides_Odiv__class_Omod(V_a,V_c,T_a),V_b,T_a),V_c,T_a) = c_Divides_Odiv__class_Omod(c_HOL_Otimes__class_Otimes(V_a,V_b,T_a),V_c,T_a) ) ).
+
+cnf(cls_div__add_0,axiom,
+    ( ~ class_Divides_Osemiring__div(T_a)
+    | c_Divides_Odiv__class_Odiv(hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_x),V_y),V_z,T_a) = hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),c_Divides_Odiv__class_Odiv(V_x,V_z,T_a)),c_Divides_Odiv__class_Odiv(V_y,V_z,T_a))
+    | ~ c_Ring__and__Field_Odvd__class_Odvd(V_z,V_y,T_a)
+    | ~ c_Ring__and__Field_Odvd__class_Odvd(V_z,V_x,T_a) ) ).
+
+cnf(cls_div__mod__equality2_0,axiom,
+    ( ~ class_Divides_Osemiring__div(T_a)
+    | hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),c_HOL_Otimes__class_Otimes(V_b,c_Divides_Odiv__class_Odiv(V_a,V_b,T_a),T_a)),c_Divides_Odiv__class_Omod(V_a,V_b,T_a))),V_c) = hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_a),V_c) ) ).
+
+cnf(cls_div__mod__equality_0,axiom,
+    ( ~ class_Divides_Osemiring__div(T_a)
+    | hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),c_HOL_Otimes__class_Otimes(c_Divides_Odiv__class_Odiv(V_a,V_b,T_a),V_b,T_a)),c_Divides_Odiv__class_Omod(V_a,V_b,T_a))),V_c) = hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_a),V_c) ) ).
+
+cnf(cls_less__add__Suc1_0,axiom,
+    c_HOL_Oord__class_Oless(V_i,c_Suc(hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),V_i),V_m)),tc_nat) ).
+
+cnf(cls_less__add__Suc2_0,axiom,
+    c_HOL_Oord__class_Oless(V_i,c_Suc(hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),V_m),V_i)),tc_nat) ).
+
+cnf(cls_less__iff__Suc__add_1,axiom,
+    c_HOL_Oord__class_Oless(V_m,c_Suc(hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),V_m),V_x)),tc_nat) ).
+
+cnf(cls_dB_Osize_I1_J_0,axiom,
+    c_Lambda_OdB_OdB__size(c_Lambda_OdB_OVar(V_nat)) = c_HOL_Ozero__class_Ozero(tc_nat) ).
+
+cnf(cls_power__strict__decreasing_0,axiom,
+    ( ~ class_Ring__and__Field_Oordered__semidom(T_a)
+    | c_HOL_Oord__class_Oless(c_Power_Opower__class_Opower(V_a,V_N,T_a),c_Power_Opower__class_Opower(V_a,V_n,T_a),T_a)
+    | ~ c_HOL_Oord__class_Oless(V_a,c_HOL_Oone__class_Oone(T_a),T_a)
+    | ~ c_HOL_Oord__class_Oless(c_HOL_Ozero__class_Ozero(T_a),V_a,T_a)
+    | ~ c_HOL_Oord__class_Oless(V_n,V_N,tc_nat) ) ).
+
+cnf(cls_termination__basic__simps_I1_J_0,axiom,
+    ( c_HOL_Oord__class_Oless(V_x,hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),V_y),V_z),tc_nat)
+    | ~ c_HOL_Oord__class_Oless(V_x,V_y,tc_nat) ) ).
+
+cnf(cls_termination__basic__simps_I2_J_0,axiom,
+    ( c_HOL_Oord__class_Oless(V_x,hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),V_y),V_z),tc_nat)
+    | ~ c_HOL_Oord__class_Oless(V_x,V_z,tc_nat) ) ).
+
+cnf(cls_add__lessD1_0,axiom,
+    ( c_HOL_Oord__class_Oless(V_i,V_k,tc_nat)
+    | ~ c_HOL_Oord__class_Oless(hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),V_i),V_j),V_k,tc_nat) ) ).
+
+cnf(cls_trans__less__add1_0,axiom,
+    ( c_HOL_Oord__class_Oless(V_i,hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),V_j),V_m),tc_nat)
+    | ~ c_HOL_Oord__class_Oless(V_i,V_j,tc_nat) ) ).
+
+cnf(cls_trans__less__add2_0,axiom,
+    ( c_HOL_Oord__class_Oless(V_i,hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),V_m),V_j),tc_nat)
+    | ~ c_HOL_Oord__class_Oless(V_i,V_j,tc_nat) ) ).
+
+cnf(cls_dvd__mod__imp__dvd_0,axiom,
+    ( ~ class_Divides_Osemiring__div(T_a)
+    | c_Ring__and__Field_Odvd__class_Odvd(V_k,V_m,T_a)
+    | ~ c_Ring__and__Field_Odvd__class_Odvd(V_k,V_n,T_a)
+    | ~ c_Ring__and__Field_Odvd__class_Odvd(V_k,c_Divides_Odiv__class_Omod(V_m,V_n,T_a),T_a) ) ).
+
+cnf(cls_dvd__mod__iff_1,axiom,
+    ( ~ class_Divides_Osemiring__div(T_a)
+    | c_Ring__and__Field_Odvd__class_Odvd(V_k,c_Divides_Odiv__class_Omod(V_m,V_n,T_a),T_a)
+    | ~ c_Ring__and__Field_Odvd__class_Odvd(V_k,V_m,T_a)
+    | ~ c_Ring__and__Field_Odvd__class_Odvd(V_k,V_n,T_a) ) ).
+
+cnf(cls_dvd__mod__iff_0,axiom,
+    ( ~ class_Divides_Osemiring__div(T_a)
+    | c_Ring__and__Field_Odvd__class_Odvd(V_k,V_m,T_a)
+    | ~ c_Ring__and__Field_Odvd__class_Odvd(V_k,c_Divides_Odiv__class_Omod(V_m,V_n,T_a),T_a)
+    | ~ c_Ring__and__Field_Odvd__class_Odvd(V_k,V_n,T_a) ) ).
+
+cnf(cls_dvd__mod_0,axiom,
+    ( ~ class_Divides_Osemiring__div(T_a)
+    | c_Ring__and__Field_Odvd__class_Odvd(V_k,c_Divides_Odiv__class_Omod(V_m,V_n,T_a),T_a)
+    | ~ c_Ring__and__Field_Odvd__class_Odvd(V_k,V_n,T_a)
+    | ~ c_Ring__and__Field_Odvd__class_Odvd(V_k,V_m,T_a) ) ).
+
+cnf(cls_Suc__times__mod__eq_0,axiom,
+    ( c_Divides_Odiv__class_Omod(c_Suc(c_HOL_Otimes__class_Otimes(V_k,V_m,tc_nat)),V_k,tc_nat) = c_HOL_Oone__class_Oone(tc_nat)
+    | ~ c_HOL_Oord__class_Oless(c_HOL_Oone__class_Oone(tc_nat),V_k,tc_nat) ) ).
+
+cnf(cls_nat__1__eq__mult__iff_2,axiom,
+    c_HOL_Oone__class_Oone(tc_nat) = c_HOL_Otimes__class_Otimes(c_HOL_Oone__class_Oone(tc_nat),c_HOL_Oone__class_Oone(tc_nat),tc_nat) ).
+
+cnf(cls_substn_Osimps_I3_J_0,axiom,
+    c_Lambda_Osubstn(c_Lambda_OdB_OAbs(V_t),V_s,V_k) = c_Lambda_OdB_OAbs(c_Lambda_Osubstn(V_t,V_s,hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),V_k),c_HOL_Oone__class_Oone(tc_nat)))) ).
+
+cnf(cls_class__semiring_Osemiring__rules_I24_J_0,axiom,
+    ( ~ class_Ring__and__Field_Ocomm__semiring__1(T_a)
+    | hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_a),V_c) = hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_c),V_a) ) ).
+
+cnf(cls_comm__monoid__add_Omult__commute_0,axiom,
+    ( ~ class_OrderedGroup_Ocomm__monoid__add(T_a)
+    | hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_a),V_b) = hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_b),V_a) ) ).
+
+cnf(cls_nat__add__commute_0,axiom,
+    hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),V_m),V_n) = hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),V_n),V_m) ).
+
+cnf(cls_less__add__eq__less_0,axiom,
+    ( hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),V_m),V_l) != hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),V_k),V_n)
+    | ~ c_HOL_Oord__class_Oless(V_k,V_l,tc_nat)
+    | c_HOL_Oord__class_Oless(V_m,V_n,tc_nat) ) ).
+
+cnf(cls_class__semiring_Oadd__c_0,axiom,
+    ( ~ class_Ring__and__Field_Ocomm__semiring__1(T_a)
+    | hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_x),V_y) = hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_y),V_x) ) ).
+
+cnf(cls_dvd__power_1,axiom,
+    ( ~ class_Ring__and__Field_Ocomm__semiring__1(T_a)
+    | c_Ring__and__Field_Odvd__class_Odvd(c_HOL_Oone__class_Oone(T_a),c_Power_Opower__class_Opower(c_HOL_Oone__class_Oone(T_a),V_n,T_a),T_a) ) ).
+
+cnf(cls_of__nat__eq__iff_0,axiom,
+    ( ~ class_Nat_Osemiring__char__0(T_a)
+    | c_Nat_Osemiring__1__class_Oof__nat(V_m,T_a) != c_Nat_Osemiring__1__class_Oof__nat(V_n,T_a)
+    | V_m = V_n ) ).
+
+cnf(cls_typing__elims_I1_J_0,axiom,
+    ( hAPP(V_e,V_i) = V_T
+    | ~ c_Type_Otyping(V_e,c_Lambda_OdB_OVar(V_i),V_T) ) ).
+
+cnf(cls_mod__div__trivial_0,axiom,
+    ( ~ class_Divides_Osemiring__div(T_a)
+    | c_Divides_Odiv__class_Odiv(c_Divides_Odiv__class_Omod(V_a,V_b,T_a),V_b,T_a) = c_HOL_Ozero__class_Ozero(T_a) ) ).
+
+cnf(cls_div__if_0,axiom,
+    ( c_Divides_Odiv__class_Odiv(V_m,V_n,tc_nat) = c_HOL_Ozero__class_Ozero(tc_nat)
+    | ~ c_HOL_Oord__class_Oless(V_m,V_n,tc_nat)
+    | ~ c_HOL_Oord__class_Oless(c_HOL_Ozero__class_Ozero(tc_nat),V_n,tc_nat) ) ).
+
+cnf(cls_mod__mult__eq_0,axiom,
+    ( ~ class_Divides_Osemiring__div(T_a)
+    | c_Divides_Odiv__class_Omod(c_HOL_Otimes__class_Otimes(V_a,V_b,T_a),V_c,T_a) = c_Divides_Odiv__class_Omod(c_HOL_Otimes__class_Otimes(c_Divides_Odiv__class_Omod(V_a,V_c,T_a),c_Divides_Odiv__class_Omod(V_b,V_c,T_a),T_a),V_c,T_a) ) ).
+
+cnf(cls_power__commutes_0,axiom,
+    ( ~ class_OrderedGroup_Omonoid__mult(T_a)
+    | c_HOL_Otimes__class_Otimes(c_Power_Opower__class_Opower(V_a,V_n,T_a),V_a,T_a) = c_HOL_Otimes__class_Otimes(V_a,c_Power_Opower__class_Opower(V_a,V_n,T_a),T_a) ) ).
+
+cnf(cls_class__semiring_Omul__pwr_0,axiom,
+    ( ~ class_Ring__and__Field_Ocomm__semiring__1(T_a)
+    | c_HOL_Otimes__class_Otimes(c_Power_Opower__class_Opower(V_x,V_p,T_a),c_Power_Opower__class_Opower(V_x,V_q,T_a),T_a) = c_Power_Opower__class_Opower(V_x,hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),V_p),V_q),T_a) ) ).
+
+cnf(cls_div__mult__self2_0,axiom,
+    ( ~ class_Divides_Osemiring__div(T_a)
+    | c_Divides_Odiv__class_Odiv(hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_a),c_HOL_Otimes__class_Otimes(V_b,V_c,T_a)),V_b,T_a) = hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_c),c_Divides_Odiv__class_Odiv(V_a,V_b,T_a))
+    | V_b = c_HOL_Ozero__class_Ozero(T_a) ) ).
+
+cnf(cls_div__mult__self1_0,axiom,
+    ( ~ class_Divides_Osemiring__div(T_a)
+    | c_Divides_Odiv__class_Odiv(hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_a),c_HOL_Otimes__class_Otimes(V_c,V_b,T_a)),V_b,T_a) = hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_c),c_Divides_Odiv__class_Odiv(V_a,V_b,T_a))
+    | V_b = c_HOL_Ozero__class_Ozero(T_a) ) ).
+
+cnf(cls_class__semiring_Osemiring__rules_I4_J_0,axiom,
+    ( ~ class_Ring__and__Field_Ocomm__semiring__1(T_a)
+    | hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_m),V_m) = c_HOL_Otimes__class_Otimes(hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),c_HOL_Oone__class_Oone(T_a)),c_HOL_Oone__class_Oone(T_a)),V_m,T_a) ) ).
+
+cnf(cls_Suc__mult__less__cancel1_0,axiom,
+    ( c_HOL_Oord__class_Oless(V_m,V_n,tc_nat)
+    | ~ c_HOL_Oord__class_Oless(c_HOL_Otimes__class_Otimes(c_Suc(V_k),V_m,tc_nat),c_HOL_Otimes__class_Otimes(c_Suc(V_k),V_n,tc_nat),tc_nat) ) ).
+
+cnf(cls_nat__dvd__1__iff__1_1,axiom,
+    c_Ring__and__Field_Odvd__class_Odvd(c_HOL_Oone__class_Oone(tc_nat),c_HOL_Oone__class_Oone(tc_nat),tc_nat) ).
+
+cnf(cls_natgb_Oadd__cancel_0,axiom,
+    ( hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),V_x),V_y) != hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),V_x),V_z)
+    | V_y = V_z ) ).
+
+cnf(cls_nat__add__right__cancel_0,axiom,
+    ( hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),V_m),V_k) != hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),V_n),V_k)
+    | V_m = V_n ) ).
+
+cnf(cls_nat__add__left__cancel_0,axiom,
+    ( hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),V_k),V_m) != hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),V_k),V_n)
+    | V_m = V_n ) ).
+
+cnf(cls_class__ringb_Oadd__cancel_0,axiom,
+    ( ~ class_Ring__and__Field_Oidom(T_a)
+    | ~ class_Int_Onumber__ring(T_a)
+    | hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_x),V_y) != hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_x),V_z)
+    | V_y = V_z ) ).
+
+cnf(cls_add__imp__eq_0,axiom,
+    ( ~ class_OrderedGroup_Ocancel__ab__semigroup__add(T_a)
+    | hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_a),V_b) != hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_a),V_c)
+    | V_b = V_c ) ).
+
+cnf(cls_add__left__cancel_0,axiom,
+    ( ~ class_OrderedGroup_Ocancel__semigroup__add(T_a)
+    | hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_a),V_b) != hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_a),V_c)
+    | V_b = V_c ) ).
+
+cnf(cls_add__right__cancel_0,axiom,
+    ( ~ class_OrderedGroup_Ocancel__semigroup__add(T_a)
+    | hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_b),V_a) != hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_c),V_a)
+    | V_b = V_c ) ).
+
+cnf(cls_dvd__power__same_0,axiom,
+    ( ~ class_Ring__and__Field_Ocomm__semiring__1(T_a)
+    | c_Ring__and__Field_Odvd__class_Odvd(c_Power_Opower__class_Opower(V_x,V_n,T_a),c_Power_Opower__class_Opower(V_y,V_n,T_a),T_a)
+    | ~ c_Ring__and__Field_Odvd__class_Odvd(V_x,V_y,T_a) ) ).
+
+cnf(cls_mod__mult__left__eq_0,axiom,
+    ( ~ class_Divides_Osemiring__div(T_a)
+    | c_Divides_Odiv__class_Omod(c_HOL_Otimes__class_Otimes(V_a,V_b,T_a),V_c,T_a) = c_Divides_Odiv__class_Omod(c_HOL_Otimes__class_Otimes(c_Divides_Odiv__class_Omod(V_a,V_c,T_a),V_b,T_a),V_c,T_a) ) ).
+
+cnf(cls_mod__mult__right__eq_0,axiom,
+    ( ~ class_Divides_Osemiring__div(T_a)
+    | c_Divides_Odiv__class_Omod(c_HOL_Otimes__class_Otimes(V_a,V_b,T_a),V_c,T_a) = c_Divides_Odiv__class_Omod(c_HOL_Otimes__class_Otimes(V_a,c_Divides_Odiv__class_Omod(V_b,V_c,T_a),T_a),V_c,T_a) ) ).
+
+cnf(cls_div__dvd__div_0,axiom,
+    ( ~ class_Divides_Osemiring__div(T_a)
+    | c_Ring__and__Field_Odvd__class_Odvd(V_b,V_c,T_a)
+    | ~ c_Ring__and__Field_Odvd__class_Odvd(c_Divides_Odiv__class_Odiv(V_b,V_a,T_a),c_Divides_Odiv__class_Odiv(V_c,V_a,T_a),T_a)
+    | ~ c_Ring__and__Field_Odvd__class_Odvd(V_a,V_c,T_a)
+    | ~ c_Ring__and__Field_Odvd__class_Odvd(V_a,V_b,T_a) ) ).
+
+cnf(cls_div__dvd__div_1,axiom,
+    ( ~ class_Divides_Osemiring__div(T_a)
+    | c_Ring__and__Field_Odvd__class_Odvd(c_Divides_Odiv__class_Odiv(V_b,V_a,T_a),c_Divides_Odiv__class_Odiv(V_c,V_a,T_a),T_a)
+    | ~ c_Ring__and__Field_Odvd__class_Odvd(V_b,V_c,T_a)
+    | ~ c_Ring__and__Field_Odvd__class_Odvd(V_a,V_c,T_a)
+    | ~ c_Ring__and__Field_Odvd__class_Odvd(V_a,V_b,T_a) ) ).
+
+cnf(cls_div__less_0,axiom,
+    ( c_Divides_Odiv__class_Odiv(V_m,V_n,tc_nat) = c_HOL_Ozero__class_Ozero(tc_nat)
+    | ~ c_HOL_Oord__class_Oless(V_m,V_n,tc_nat) ) ).
+
+cnf(cls_sum__squares__gt__zero__iff_1,axiom,
+    ( ~ class_Ring__and__Field_Oordered__ring__strict(T_a)
+    | c_HOL_Oord__class_Oless(c_HOL_Ozero__class_Ozero(T_a),hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),c_HOL_Otimes__class_Otimes(V_x,V_x,T_a)),c_HOL_Otimes__class_Otimes(V_y,V_y,T_a)),T_a)
+    | V_x = c_HOL_Ozero__class_Ozero(T_a) ) ).
+
+cnf(cls_sum__squares__gt__zero__iff_2,axiom,
+    ( ~ class_Ring__and__Field_Oordered__ring__strict(T_a)
+    | c_HOL_Oord__class_Oless(c_HOL_Ozero__class_Ozero(T_a),hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),c_HOL_Otimes__class_Otimes(V_x,V_x,T_a)),c_HOL_Otimes__class_Otimes(V_y,V_y,T_a)),T_a)
+    | V_y = c_HOL_Ozero__class_Ozero(T_a) ) ).
+
+cnf(cls_class__semiring_Osemiring__rules_I20_J_0,axiom,
+    ( ~ class_Ring__and__Field_Ocomm__semiring__1(T_a)
+    | hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_a),V_b)),hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_c),V_d)) = hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_a),V_c)),hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_b),V_d)) ) ).
+
+cnf(cls_dB_Osize_I6_J_0,axiom,
+    c_Nat_Osize__class_Osize(c_Lambda_OdB_OAbs(V_dB),tc_Lambda_OdB) = hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),c_Nat_Osize__class_Osize(V_dB,tc_Lambda_OdB)),c_Suc(c_HOL_Ozero__class_Ozero(tc_nat))) ).
+
+cnf(cls_of__nat__less__0__iff_0,axiom,
+    ( ~ class_Ring__and__Field_Oordered__semidom(T_a)
+    | ~ c_HOL_Oord__class_Oless(c_Nat_Osemiring__1__class_Oof__nat(V_m,T_a),c_HOL_Ozero__class_Ozero(T_a),T_a) ) ).
+
+cnf(cls_liftn_Osimps_I1_J_0,axiom,
+    ( c_Lambda_Oliftn(V_n,c_Lambda_OdB_OVar(V_i),V_k) = c_Lambda_OdB_OVar(V_i)
+    | ~ c_HOL_Oord__class_Oless(V_i,V_k,tc_nat) ) ).
+
+cnf(cls_dvd__add_0,axiom,
+    ( ~ class_Ring__and__Field_Ocomm__semiring__1(T_a)
+    | c_Ring__and__Field_Odvd__class_Odvd(V_a,hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_b),V_c),T_a)
+    | ~ c_Ring__and__Field_Odvd__class_Odvd(V_a,V_c,T_a)
+    | ~ c_Ring__and__Field_Odvd__class_Odvd(V_a,V_b,T_a) ) ).
+
+cnf(cls_mult__less__cancel__left__disj_0,axiom,
+    ( ~ class_Ring__and__Field_Oordered__ring__strict(T_a)
+    | c_HOL_Oord__class_Oless(V_c,c_HOL_Ozero__class_Ozero(T_a),T_a)
+    | c_HOL_Oord__class_Oless(c_HOL_Ozero__class_Ozero(T_a),V_c,T_a)
+    | ~ c_HOL_Oord__class_Oless(c_HOL_Otimes__class_Otimes(V_c,V_a,T_a),c_HOL_Otimes__class_Otimes(V_c,V_b,T_a),T_a) ) ).
+
+cnf(cls_mult__less__cancel__left__disj_3,axiom,
+    ( ~ class_Ring__and__Field_Oordered__ring__strict(T_a)
+    | c_HOL_Oord__class_Oless(V_b,V_a,T_a)
+    | c_HOL_Oord__class_Oless(V_a,V_b,T_a)
+    | ~ c_HOL_Oord__class_Oless(c_HOL_Otimes__class_Otimes(V_c,V_a,T_a),c_HOL_Otimes__class_Otimes(V_c,V_b,T_a),T_a) ) ).
+
+cnf(cls_mult__less__cancel__right__disj_0,axiom,
+    ( ~ class_Ring__and__Field_Oordered__ring__strict(T_a)
+    | c_HOL_Oord__class_Oless(V_c,c_HOL_Ozero__class_Ozero(T_a),T_a)
+    | c_HOL_Oord__class_Oless(c_HOL_Ozero__class_Ozero(T_a),V_c,T_a)
+    | ~ c_HOL_Oord__class_Oless(c_HOL_Otimes__class_Otimes(V_a,V_c,T_a),c_HOL_Otimes__class_Otimes(V_b,V_c,T_a),T_a) ) ).
+
+cnf(cls_mult__less__cancel__right__disj_3,axiom,
+    ( ~ class_Ring__and__Field_Oordered__ring__strict(T_a)
+    | c_HOL_Oord__class_Oless(V_b,V_a,T_a)
+    | c_HOL_Oord__class_Oless(V_a,V_b,T_a)
+    | ~ c_HOL_Oord__class_Oless(c_HOL_Otimes__class_Otimes(V_a,V_c,T_a),c_HOL_Otimes__class_Otimes(V_b,V_c,T_a),T_a) ) ).
+
+cnf(cls_nat__mult__eq__1__iff_2,axiom,
+    c_HOL_Otimes__class_Otimes(c_HOL_Oone__class_Oone(tc_nat),c_HOL_Oone__class_Oone(tc_nat),tc_nat) = c_HOL_Oone__class_Oone(tc_nat) ).
+
+cnf(cls_dvd__div__mult__self_0,axiom,
+    ( ~ class_Divides_Osemiring__div(T_a)
+    | c_HOL_Otimes__class_Otimes(c_Divides_Odiv__class_Odiv(V_b,V_a,T_a),V_a,T_a) = V_b
+    | ~ c_Ring__and__Field_Odvd__class_Odvd(V_a,V_b,T_a) ) ).
+
+cnf(cls_dvd__mult__div__cancel_0,axiom,
+    ( ~ class_Divides_Osemiring__div(T_a)
+    | c_HOL_Otimes__class_Otimes(V_a,c_Divides_Odiv__class_Odiv(V_b,V_a,T_a),T_a) = V_b
+    | ~ c_Ring__and__Field_Odvd__class_Odvd(V_a,V_b,T_a) ) ).
+
+cnf(cls_lift_Osimps_I1_J_0,axiom,
+    ( hAPP(hAPP(c_Lambda_Olift,c_Lambda_OdB_OVar(V_i)),V_k) = c_Lambda_OdB_OVar(V_i)
+    | ~ c_HOL_Oord__class_Oless(V_i,V_k,tc_nat) ) ).
+
+cnf(cls_power__Suc__less_0,axiom,
+    ( ~ class_Ring__and__Field_Oordered__semidom(T_a)
+    | c_HOL_Oord__class_Oless(c_HOL_Otimes__class_Otimes(V_a,c_Power_Opower__class_Opower(V_a,V_n,T_a),T_a),c_Power_Opower__class_Opower(V_a,V_n,T_a),T_a)
+    | ~ c_HOL_Oord__class_Oless(V_a,c_HOL_Oone__class_Oone(T_a),T_a)
+    | ~ c_HOL_Oord__class_Oless(c_HOL_Ozero__class_Ozero(T_a),V_a,T_a) ) ).
+
+cnf(cls_substn_Osimps_I1_J_1,axiom,
+    ( c_HOL_Oord__class_Oless(V_x,V_x,tc_nat)
+    | c_Lambda_Osubstn(c_Lambda_OdB_OVar(V_x),V_s,V_x) = c_Lambda_Oliftn(V_x,V_s,c_HOL_Ozero__class_Ozero(tc_nat)) ) ).
+
+cnf(cls_lift__subst_0,axiom,
+    ( hAPP(hAPP(c_Lambda_Olift,hAPP(hAPP(hAPP(c_Lambda_Osubst,V_t),V_s),V_j)),V_i) = hAPP(hAPP(hAPP(c_Lambda_Osubst,hAPP(hAPP(c_Lambda_Olift,V_t),hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),V_i),c_HOL_Oone__class_Oone(tc_nat)))),hAPP(hAPP(c_Lambda_Olift,V_s),V_i)),V_j)
+    | ~ c_HOL_Oord__class_Oless(V_j,hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),V_i),c_HOL_Oone__class_Oone(tc_nat)),tc_nat) ) ).
+
+cnf(cls_lift__lift_0,axiom,
+    ( hAPP(hAPP(c_Lambda_Olift,hAPP(hAPP(c_Lambda_Olift,V_t),V_i)),c_Suc(V_k)) = hAPP(hAPP(c_Lambda_Olift,hAPP(hAPP(c_Lambda_Olift,V_t),V_k)),V_i)
+    | ~ c_HOL_Oord__class_Oless(V_i,hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),V_k),c_HOL_Oone__class_Oone(tc_nat)),tc_nat) ) ).
+
+cnf(cls_mod__mult__distrib2_0,axiom,
+    c_HOL_Otimes__class_Otimes(V_k,c_Divides_Odiv__class_Omod(V_m,V_n,tc_nat),tc_nat) = c_Divides_Odiv__class_Omod(c_HOL_Otimes__class_Otimes(V_k,V_m,tc_nat),c_HOL_Otimes__class_Otimes(V_k,V_n,tc_nat),tc_nat) ).
+
+cnf(cls_mod__mult__distrib_0,axiom,
+    c_HOL_Otimes__class_Otimes(c_Divides_Odiv__class_Omod(V_m,V_n,tc_nat),V_k,tc_nat) = c_Divides_Odiv__class_Omod(c_HOL_Otimes__class_Otimes(V_m,V_k,tc_nat),c_HOL_Otimes__class_Otimes(V_n,V_k,tc_nat),tc_nat) ).
+
+cnf(cls_mult__less__cancel2_2,axiom,
+    ( c_HOL_Oord__class_Oless(c_HOL_Otimes__class_Otimes(V_m,V_k,tc_nat),c_HOL_Otimes__class_Otimes(V_n,V_k,tc_nat),tc_nat)
+    | ~ c_HOL_Oord__class_Oless(V_m,V_n,tc_nat)
+    | ~ c_HOL_Oord__class_Oless(c_HOL_Ozero__class_Ozero(tc_nat),V_k,tc_nat) ) ).
+
+cnf(cls_mult__less__cancel1_2,axiom,
+    ( c_HOL_Oord__class_Oless(c_HOL_Otimes__class_Otimes(V_k,V_m,tc_nat),c_HOL_Otimes__class_Otimes(V_k,V_n,tc_nat),tc_nat)
+    | ~ c_HOL_Oord__class_Oless(V_m,V_n,tc_nat)
+    | ~ c_HOL_Oord__class_Oless(c_HOL_Ozero__class_Ozero(tc_nat),V_k,tc_nat) ) ).
+
+cnf(cls_mult__less__mono2_0,axiom,
+    ( c_HOL_Oord__class_Oless(c_HOL_Otimes__class_Otimes(V_k,V_i,tc_nat),c_HOL_Otimes__class_Otimes(V_k,V_j,tc_nat),tc_nat)
+    | ~ c_HOL_Oord__class_Oless(c_HOL_Ozero__class_Ozero(tc_nat),V_k,tc_nat)
+    | ~ c_HOL_Oord__class_Oless(V_i,V_j,tc_nat) ) ).
+
+cnf(cls_mult__less__mono1_0,axiom,
+    ( c_HOL_Oord__class_Oless(c_HOL_Otimes__class_Otimes(V_i,V_k,tc_nat),c_HOL_Otimes__class_Otimes(V_j,V_k,tc_nat),tc_nat)
+    | ~ c_HOL_Oord__class_Oless(c_HOL_Ozero__class_Ozero(tc_nat),V_k,tc_nat)
+    | ~ c_HOL_Oord__class_Oless(V_i,V_j,tc_nat) ) ).
+
+cnf(cls_nat__mult__less__cancel1_0,axiom,
+    ( c_HOL_Oord__class_Oless(V_m,V_n,tc_nat)
+    | ~ c_HOL_Oord__class_Oless(c_HOL_Otimes__class_Otimes(V_k,V_m,tc_nat),c_HOL_Otimes__class_Otimes(V_k,V_n,tc_nat),tc_nat)
+    | ~ c_HOL_Oord__class_Oless(c_HOL_Ozero__class_Ozero(tc_nat),V_k,tc_nat) ) ).
+
+cnf(cls_nat__mult__less__cancel1_1,axiom,
+    ( c_HOL_Oord__class_Oless(c_HOL_Otimes__class_Otimes(V_k,V_m,tc_nat),c_HOL_Otimes__class_Otimes(V_k,V_n,tc_nat),tc_nat)
+    | ~ c_HOL_Oord__class_Oless(V_m,V_n,tc_nat)
+    | ~ c_HOL_Oord__class_Oless(c_HOL_Ozero__class_Ozero(tc_nat),V_k,tc_nat) ) ).
+
+cnf(cls_mult__less__cancel__left__neg_0,axiom,
+    ( ~ class_Ring__and__Field_Oordered__ring__strict(T_a)
+    | c_HOL_Oord__class_Oless(V_b,V_a,T_a)
+    | ~ c_HOL_Oord__class_Oless(c_HOL_Otimes__class_Otimes(V_c,V_a,T_a),c_HOL_Otimes__class_Otimes(V_c,V_b,T_a),T_a)
+    | ~ c_HOL_Oord__class_Oless(V_c,c_HOL_Ozero__class_Ozero(T_a),T_a) ) ).
+
+cnf(cls_mult__less__cancel__left__neg_1,axiom,
+    ( ~ class_Ring__and__Field_Oordered__ring__strict(T_a)
+    | c_HOL_Oord__class_Oless(c_HOL_Otimes__class_Otimes(V_c,V_a,T_a),c_HOL_Otimes__class_Otimes(V_c,V_b,T_a),T_a)
+    | ~ c_HOL_Oord__class_Oless(V_b,V_a,T_a)
+    | ~ c_HOL_Oord__class_Oless(V_c,c_HOL_Ozero__class_Ozero(T_a),T_a) ) ).
+
+cnf(cls_mult__less__cancel__left__pos_0,axiom,
+    ( ~ class_Ring__and__Field_Oordered__ring__strict(T_a)
+    | c_HOL_Oord__class_Oless(V_a,V_b,T_a)
+    | ~ c_HOL_Oord__class_Oless(c_HOL_Otimes__class_Otimes(V_c,V_a,T_a),c_HOL_Otimes__class_Otimes(V_c,V_b,T_a),T_a)
+    | ~ c_HOL_Oord__class_Oless(c_HOL_Ozero__class_Ozero(T_a),V_c,T_a) ) ).
+
+cnf(cls_mult__less__cancel__left__pos_1,axiom,
+    ( ~ class_Ring__and__Field_Oordered__ring__strict(T_a)
+    | c_HOL_Oord__class_Oless(c_HOL_Otimes__class_Otimes(V_c,V_a,T_a),c_HOL_Otimes__class_Otimes(V_c,V_b,T_a),T_a)
+    | ~ c_HOL_Oord__class_Oless(V_a,V_b,T_a)
+    | ~ c_HOL_Oord__class_Oless(c_HOL_Ozero__class_Ozero(T_a),V_c,T_a) ) ).
+
+cnf(cls_mult__strict__left__mono__neg_0,axiom,
+    ( ~ class_Ring__and__Field_Oordered__ring__strict(T_a)
+    | c_HOL_Oord__class_Oless(c_HOL_Otimes__class_Otimes(V_c,V_a,T_a),c_HOL_Otimes__class_Otimes(V_c,V_b,T_a),T_a)
+    | ~ c_HOL_Oord__class_Oless(V_c,c_HOL_Ozero__class_Ozero(T_a),T_a)
+    | ~ c_HOL_Oord__class_Oless(V_b,V_a,T_a) ) ).
+
+cnf(cls_mult__strict__left__mono_0,axiom,
+    ( ~ class_Ring__and__Field_Oordered__semiring__strict(T_a)
+    | c_HOL_Oord__class_Oless(c_HOL_Otimes__class_Otimes(V_c,V_a,T_a),c_HOL_Otimes__class_Otimes(V_c,V_b,T_a),T_a)
+    | ~ c_HOL_Oord__class_Oless(c_HOL_Ozero__class_Ozero(T_a),V_c,T_a)
+    | ~ c_HOL_Oord__class_Oless(V_a,V_b,T_a) ) ).
+
+cnf(cls_mult__less__cancel__left__disj_4,axiom,
+    ( ~ class_Ring__and__Field_Oordered__ring__strict(T_a)
+    | c_HOL_Oord__class_Oless(c_HOL_Otimes__class_Otimes(V_c,V_a,T_a),c_HOL_Otimes__class_Otimes(V_c,V_b,T_a),T_a)
+    | ~ c_HOL_Oord__class_Oless(V_a,V_b,T_a)
+    | ~ c_HOL_Oord__class_Oless(c_HOL_Ozero__class_Ozero(T_a),V_c,T_a) ) ).
+
+cnf(cls_mult__less__cancel__left__disj_5,axiom,
+    ( ~ class_Ring__and__Field_Oordered__ring__strict(T_a)
+    | c_HOL_Oord__class_Oless(c_HOL_Otimes__class_Otimes(V_c,V_a,T_a),c_HOL_Otimes__class_Otimes(V_c,V_b,T_a),T_a)
+    | ~ c_HOL_Oord__class_Oless(V_b,V_a,T_a)
+    | ~ c_HOL_Oord__class_Oless(V_c,c_HOL_Ozero__class_Ozero(T_a),T_a) ) ).
+
+cnf(cls_mult__strict__right__mono__neg_0,axiom,
+    ( ~ class_Ring__and__Field_Oordered__ring__strict(T_a)
+    | c_HOL_Oord__class_Oless(c_HOL_Otimes__class_Otimes(V_a,V_c,T_a),c_HOL_Otimes__class_Otimes(V_b,V_c,T_a),T_a)
+    | ~ c_HOL_Oord__class_Oless(V_c,c_HOL_Ozero__class_Ozero(T_a),T_a)
+    | ~ c_HOL_Oord__class_Oless(V_b,V_a,T_a) ) ).
+
+cnf(cls_mult__strict__right__mono_0,axiom,
+    ( ~ class_Ring__and__Field_Oordered__semiring__strict(T_a)
+    | c_HOL_Oord__class_Oless(c_HOL_Otimes__class_Otimes(V_a,V_c,T_a),c_HOL_Otimes__class_Otimes(V_b,V_c,T_a),T_a)
+    | ~ c_HOL_Oord__class_Oless(c_HOL_Ozero__class_Ozero(T_a),V_c,T_a)
+    | ~ c_HOL_Oord__class_Oless(V_a,V_b,T_a) ) ).
+
+cnf(cls_mult__less__cancel__right__disj_4,axiom,
+    ( ~ class_Ring__and__Field_Oordered__ring__strict(T_a)
+    | c_HOL_Oord__class_Oless(c_HOL_Otimes__class_Otimes(V_a,V_c,T_a),c_HOL_Otimes__class_Otimes(V_b,V_c,T_a),T_a)
+    | ~ c_HOL_Oord__class_Oless(V_a,V_b,T_a)
+    | ~ c_HOL_Oord__class_Oless(c_HOL_Ozero__class_Ozero(T_a),V_c,T_a) ) ).
+
+cnf(cls_mult__less__cancel__right__disj_5,axiom,
+    ( ~ class_Ring__and__Field_Oordered__ring__strict(T_a)
+    | c_HOL_Oord__class_Oless(c_HOL_Otimes__class_Otimes(V_a,V_c,T_a),c_HOL_Otimes__class_Otimes(V_b,V_c,T_a),T_a)
+    | ~ c_HOL_Oord__class_Oless(V_b,V_a,T_a)
+    | ~ c_HOL_Oord__class_Oless(V_c,c_HOL_Ozero__class_Ozero(T_a),T_a) ) ).
+
+cnf(cls_mult__strict__left__mono__comm_0,axiom,
+    ( ~ class_Ring__and__Field_Oordered__comm__semiring__strict(T_a)
+    | c_HOL_Oord__class_Oless(c_HOL_Otimes__class_Otimes(V_c,V_a,T_a),c_HOL_Otimes__class_Otimes(V_c,V_b,T_a),T_a)
+    | ~ c_HOL_Oord__class_Oless(c_HOL_Ozero__class_Ozero(T_a),V_c,T_a)
+    | ~ c_HOL_Oord__class_Oless(V_a,V_b,T_a) ) ).
+
+cnf(cls_div__add1__eq_0,axiom,
+    c_Divides_Odiv__class_Odiv(hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),V_a),V_b),V_c,tc_nat) = hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),c_Divides_Odiv__class_Odiv(V_a,V_c,tc_nat)),c_Divides_Odiv__class_Odiv(V_b,V_c,tc_nat))),c_Divides_Odiv__class_Odiv(hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),c_Divides_Odiv__class_Omod(V_a,V_c,tc_nat)),c_Divides_Odiv__class_Omod(V_b,V_c,tc_nat)),V_c,tc_nat)) ).
+
+cnf(cls_nat__power__less__imp__less_0,axiom,
+    ( c_HOL_Oord__class_Oless(V_m,V_n,tc_nat)
+    | ~ c_HOL_Oord__class_Oless(c_Power_Opower__class_Opower(V_i,V_m,tc_nat),c_Power_Opower__class_Opower(V_i,V_n,tc_nat),tc_nat)
+    | ~ c_HOL_Oord__class_Oless(c_HOL_Ozero__class_Ozero(tc_nat),V_i,tc_nat) ) ).
+
+cnf(cls_div__mult__mult1_0,axiom,
+    ( ~ class_Divides_Osemiring__div(T_a)
+    | c_Divides_Odiv__class_Odiv(c_HOL_Otimes__class_Otimes(V_c,V_a,T_a),c_HOL_Otimes__class_Otimes(V_c,V_b,T_a),T_a) = c_Divides_Odiv__class_Odiv(V_a,V_b,T_a)
+    | V_c = c_HOL_Ozero__class_Ozero(T_a) ) ).
+
+cnf(cls_div__mult__mult2_0,axiom,
+    ( ~ class_Divides_Osemiring__div(T_a)
+    | c_Divides_Odiv__class_Odiv(c_HOL_Otimes__class_Otimes(V_a,V_c,T_a),c_HOL_Otimes__class_Otimes(V_b,V_c,T_a),T_a) = c_Divides_Odiv__class_Odiv(V_a,V_b,T_a)
+    | V_c = c_HOL_Ozero__class_Ozero(T_a) ) ).
+
+cnf(cls_nat__mult__div__cancel__disj_1,axiom,
+    ( c_Divides_Odiv__class_Odiv(c_HOL_Otimes__class_Otimes(V_k,V_m,tc_nat),c_HOL_Otimes__class_Otimes(V_k,V_n,tc_nat),tc_nat) = c_Divides_Odiv__class_Odiv(V_m,V_n,tc_nat)
+    | V_k = c_HOL_Ozero__class_Ozero(tc_nat) ) ).
+
+cnf(cls_subst__lemma_0,axiom,
+    ( ~ c_Type_Otyping(V_e_H,V_u,V_U)
+    | ~ c_Type_Otyping(c_Type_Oshift(V_e_H,V_i,V_U,tc_Type_Otype),V_t,V_T)
+    | c_Type_Otyping(V_e_H,hAPP(hAPP(hAPP(c_Lambda_Osubst,V_t),V_u),V_i),V_T) ) ).
+
+cnf(cls_zero__less__two_0,axiom,
+    ( ~ class_Ring__and__Field_Oordered__semidom(T_a)
+    | c_HOL_Oord__class_Oless(c_HOL_Ozero__class_Ozero(T_a),hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),c_HOL_Oone__class_Oone(T_a)),c_HOL_Oone__class_Oone(T_a)),T_a) ) ).
+
+cnf(cls_mod__mult__self3_0,axiom,
+    c_Divides_Odiv__class_Omod(hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),c_HOL_Otimes__class_Otimes(V_k,V_n,tc_nat)),V_m),V_n,tc_nat) = c_Divides_Odiv__class_Omod(V_m,V_n,tc_nat) ).
+
+cnf(cls_mod__mult__self1_0,axiom,
+    ( ~ class_Divides_Osemiring__div(T_a)
+    | c_Divides_Odiv__class_Omod(hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_a),c_HOL_Otimes__class_Otimes(V_c,V_b,T_a)),V_b,T_a) = c_Divides_Odiv__class_Omod(V_a,V_b,T_a) ) ).
+
+cnf(cls_mod__mult__self2_0,axiom,
+    ( ~ class_Divides_Osemiring__div(T_a)
+    | c_Divides_Odiv__class_Omod(hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_a),c_HOL_Otimes__class_Otimes(V_b,V_c,T_a)),V_b,T_a) = c_Divides_Odiv__class_Omod(V_a,V_b,T_a) ) ).
+
+cnf(cls_class__semiring_Osemiring__rules_I1_J_0,axiom,
+    ( ~ class_Ring__and__Field_Ocomm__semiring__1(T_a)
+    | hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),c_HOL_Otimes__class_Otimes(V_a,V_m,T_a)),c_HOL_Otimes__class_Otimes(V_b,V_m,T_a)) = c_HOL_Otimes__class_Otimes(hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_a),V_b),V_m,T_a) ) ).
+
+cnf(cls_split__div__lemma_2,axiom,
+    ( ~ c_HOL_Oord__class_Oless(c_HOL_Ozero__class_Ozero(tc_nat),V_n,tc_nat)
+    | c_HOL_Oord__class_Oless(V_m,c_HOL_Otimes__class_Otimes(V_n,c_Suc(c_Divides_Odiv__class_Odiv(V_m,V_n,tc_nat)),tc_nat),tc_nat) ) ).
+
+cnf(cls_nat__mult__dvd__cancel__disj_0,axiom,
+    ( c_Ring__and__Field_Odvd__class_Odvd(V_m,V_n,tc_nat)
+    | V_k = c_HOL_Ozero__class_Ozero(tc_nat)
+    | ~ c_Ring__and__Field_Odvd__class_Odvd(c_HOL_Otimes__class_Otimes(V_k,V_m,tc_nat),c_HOL_Otimes__class_Otimes(V_k,V_n,tc_nat),tc_nat) ) ).
+
+cnf(cls_dvd__mult__cancel__left_0,axiom,
+    ( ~ class_Ring__and__Field_Oidom(T_a)
+    | c_Ring__and__Field_Odvd__class_Odvd(V_a,V_b,T_a)
+    | V_c = c_HOL_Ozero__class_Ozero(T_a)
+    | ~ c_Ring__and__Field_Odvd__class_Odvd(c_HOL_Otimes__class_Otimes(V_c,V_a,T_a),c_HOL_Otimes__class_Otimes(V_c,V_b,T_a),T_a) ) ).
+
+cnf(cls_dvd__mult__cancel__right_0,axiom,
+    ( ~ class_Ring__and__Field_Oidom(T_a)
+    | c_Ring__and__Field_Odvd__class_Odvd(V_a,V_b,T_a)
+    | V_c = c_HOL_Ozero__class_Ozero(T_a)
+    | ~ c_Ring__and__Field_Odvd__class_Odvd(c_HOL_Otimes__class_Otimes(V_a,V_c,T_a),c_HOL_Otimes__class_Otimes(V_b,V_c,T_a),T_a) ) ).
+
+cnf(cls_div__add__self1_0,axiom,
+    ( ~ class_Divides_Osemiring__div(T_a)
+    | c_Divides_Odiv__class_Odiv(hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_b),V_a),V_b,T_a) = hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),c_Divides_Odiv__class_Odiv(V_a,V_b,T_a)),c_HOL_Oone__class_Oone(T_a))
+    | V_b = c_HOL_Ozero__class_Ozero(T_a) ) ).
+
+cnf(cls_div__add__self2_0,axiom,
+    ( ~ class_Divides_Osemiring__div(T_a)
+    | c_Divides_Odiv__class_Odiv(hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_a),V_b),V_b,T_a) = hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),c_Divides_Odiv__class_Odiv(V_a,V_b,T_a)),c_HOL_Oone__class_Oone(T_a))
+    | V_b = c_HOL_Ozero__class_Ozero(T_a) ) ).
+
+cnf(cls_sum__squares__gt__zero__iff_0,axiom,
+    ( ~ class_Ring__and__Field_Oordered__ring__strict(T_a)
+    | ~ c_HOL_Oord__class_Oless(c_HOL_Ozero__class_Ozero(T_a),hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),c_HOL_Otimes__class_Otimes(c_HOL_Ozero__class_Ozero(T_a),c_HOL_Ozero__class_Ozero(T_a),T_a)),c_HOL_Otimes__class_Otimes(c_HOL_Ozero__class_Ozero(T_a),c_HOL_Ozero__class_Ozero(T_a),T_a)),T_a) ) ).
+
+cnf(cls_nat__zero__less__power__iff_2,axiom,
+    c_HOL_Oord__class_Oless(c_HOL_Ozero__class_Ozero(tc_nat),c_Power_Opower__class_Opower(V_x,c_HOL_Ozero__class_Ozero(tc_nat),tc_nat),tc_nat) ).
+
+cnf(cls_abs_0,axiom,
+    ( c_Lambda_Obeta(c_Lambda_OdB_OAbs(V_s),c_Lambda_OdB_OAbs(V_t))
+    | ~ c_Lambda_Obeta(V_s,V_t) ) ).
+
+cnf(cls_less__1__mult_0,axiom,
+    ( ~ class_Ring__and__Field_Oordered__semidom(T_a)
+    | c_HOL_Oord__class_Oless(c_HOL_Oone__class_Oone(T_a),c_HOL_Otimes__class_Otimes(V_m,V_n,T_a),T_a)
+    | ~ c_HOL_Oord__class_Oless(c_HOL_Oone__class_Oone(T_a),V_n,T_a)
+    | ~ c_HOL_Oord__class_Oless(c_HOL_Oone__class_Oone(T_a),V_m,T_a) ) ).
+
+cnf(cls_div__by__1_0,axiom,
+    ( ~ class_Divides_Osemiring__div(T_a)
+    | c_Divides_Odiv__class_Odiv(V_a,c_HOL_Oone__class_Oone(T_a),T_a) = V_a ) ).
+
+cnf(cls_split__mod_1,axiom,
+    ( ~ c_HOL_Oord__class_Oless(V_j,V_k,tc_nat)
+    | V_k = c_HOL_Ozero__class_Ozero(tc_nat)
+    | ~ hBOOL(hAPP(V_P,c_Divides_Odiv__class_Omod(hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),c_HOL_Otimes__class_Otimes(V_k,V_i,tc_nat)),V_j),V_k,tc_nat)))
+    | hBOOL(hAPP(V_P,V_j)) ) ).
+
+cnf(cls_add__gr__0_2,axiom,
+    ( c_HOL_Oord__class_Oless(c_HOL_Ozero__class_Ozero(tc_nat),hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),V_m),V_n),tc_nat)
+    | ~ c_HOL_Oord__class_Oless(c_HOL_Ozero__class_Ozero(tc_nat),V_n,tc_nat) ) ).
+
+cnf(cls_add__gr__0_1,axiom,
+    ( c_HOL_Oord__class_Oless(c_HOL_Ozero__class_Ozero(tc_nat),hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),V_m),V_n),tc_nat)
+    | ~ c_HOL_Oord__class_Oless(c_HOL_Ozero__class_Ozero(tc_nat),V_m,tc_nat) ) ).
+
+cnf(cls_zero__less__double__add__iff__zero__less__single__add_0,axiom,
+    ( ~ class_OrderedGroup_Olordered__ab__group__add(T_a)
+    | c_HOL_Oord__class_Oless(c_HOL_Ozero__class_Ozero(T_a),V_a,T_a)
+    | ~ c_HOL_Oord__class_Oless(c_HOL_Ozero__class_Ozero(T_a),hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_a),V_a),T_a) ) ).
+
+cnf(cls_zero__less__double__add__iff__zero__less__single__add_1,axiom,
+    ( ~ class_OrderedGroup_Olordered__ab__group__add(T_a)
+    | c_HOL_Oord__class_Oless(c_HOL_Ozero__class_Ozero(T_a),hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_a),V_a),T_a)
+    | ~ c_HOL_Oord__class_Oless(c_HOL_Ozero__class_Ozero(T_a),V_a,T_a) ) ).
+
+cnf(cls_dvd_Oless__le__trans_1,axiom,
+    ( ~ c_Ring__and__Field_Odvd__class_Odvd(V_z,V_x,tc_nat)
+    | ~ c_Ring__and__Field_Odvd__class_Odvd(V_y,V_z,tc_nat)
+    | c_Ring__and__Field_Odvd__class_Odvd(V_y,V_x,tc_nat)
+    | ~ c_Ring__and__Field_Odvd__class_Odvd(V_x,V_y,tc_nat) ) ).
+
+cnf(cls_dvd_Ole__less__trans_1,axiom,
+    ( ~ c_Ring__and__Field_Odvd__class_Odvd(V_z,V_x,tc_nat)
+    | c_Ring__and__Field_Odvd__class_Odvd(V_z,V_y,tc_nat)
+    | ~ c_Ring__and__Field_Odvd__class_Odvd(V_y,V_z,tc_nat)
+    | ~ c_Ring__and__Field_Odvd__class_Odvd(V_x,V_y,tc_nat) ) ).
+
+cnf(cls_power__eq__0__iff_0,axiom,
+    ( ~ class_Ring__and__Field_Ozero__neq__one(T_a)
+    | ~ class_Ring__and__Field_Ono__zero__divisors(T_a)
+    | ~ class_Ring__and__Field_Omult__zero(T_a)
+    | ~ class_Power_Opower(T_a)
+    | c_Power_Opower__class_Opower(V_a,V_n,T_a) != c_HOL_Ozero__class_Ozero(T_a)
+    | V_a = c_HOL_Ozero__class_Ozero(T_a) ) ).
+
+cnf(cls_field__power__not__zero_0,axiom,
+    ( ~ class_Ring__and__Field_Oring__1__no__zero__divisors(T_a)
+    | c_Power_Opower__class_Opower(V_a,V_n,T_a) != c_HOL_Ozero__class_Ozero(T_a)
+    | V_a = c_HOL_Ozero__class_Ozero(T_a) ) ).
+
+cnf(cls_class__semiring_Omul__0_0,axiom,
+    ( ~ class_Ring__and__Field_Ocomm__semiring__1(T_a)
+    | c_HOL_Otimes__class_Otimes(c_HOL_Ozero__class_Ozero(T_a),V_x,T_a) = c_HOL_Ozero__class_Ozero(T_a) ) ).
+
+cnf(cls_mult__zero__left_0,axiom,
+    ( ~ class_Ring__and__Field_Omult__zero(T_a)
+    | c_HOL_Otimes__class_Otimes(c_HOL_Ozero__class_Ozero(T_a),V_a,T_a) = c_HOL_Ozero__class_Ozero(T_a) ) ).
+
+cnf(cls_mult__zero__right_0,axiom,
+    ( ~ class_Ring__and__Field_Omult__zero(T_a)
+    | c_HOL_Otimes__class_Otimes(V_a,c_HOL_Ozero__class_Ozero(T_a),T_a) = c_HOL_Ozero__class_Ozero(T_a) ) ).
+
+cnf(cls_mult__eq__0__iff_1,axiom,
+    ( ~ class_Ring__and__Field_Oring__no__zero__divisors(T_a)
+    | c_HOL_Otimes__class_Otimes(c_HOL_Ozero__class_Ozero(T_a),V_b,T_a) = c_HOL_Ozero__class_Ozero(T_a) ) ).
+
+cnf(cls_mult__eq__0__iff_2,axiom,
+    ( ~ class_Ring__and__Field_Oring__no__zero__divisors(T_a)
+    | c_HOL_Otimes__class_Otimes(V_a,c_HOL_Ozero__class_Ozero(T_a),T_a) = c_HOL_Ozero__class_Ozero(T_a) ) ).
+
+cnf(cls_class__semiring_Osemiring__rules_I10_J_0,axiom,
+    ( ~ class_Ring__and__Field_Ocomm__semiring__1(T_a)
+    | c_HOL_Otimes__class_Otimes(V_a,c_HOL_Ozero__class_Ozero(T_a),T_a) = c_HOL_Ozero__class_Ozero(T_a) ) ).
+
+cnf(cls_class__semiring_Osemiring__rules_I9_J_0,axiom,
+    ( ~ class_Ring__and__Field_Ocomm__semiring__1(T_a)
+    | c_HOL_Otimes__class_Otimes(c_HOL_Ozero__class_Ozero(T_a),V_a,T_a) = c_HOL_Ozero__class_Ozero(T_a) ) ).
+
+cnf(cls_dvd__0__right_0,axiom,
+    ( ~ class_Ring__and__Field_Ocomm__semiring__1(T_a)
+    | c_Ring__and__Field_Odvd__class_Odvd(V_a,c_HOL_Ozero__class_Ozero(T_a),T_a) ) ).
+
+cnf(cls_one__neq__zero_0,axiom,
+    ( ~ class_Ring__and__Field_Ozero__neq__one(T_a)
+    | c_HOL_Oone__class_Oone(T_a) != c_HOL_Ozero__class_Ozero(T_a) ) ).
+
+cnf(cls_no__zero__divirors__neq0_0,axiom,
+    ( ~ class_Ring__and__Field_Ono__zero__divisors(T_a)
+    | c_HOL_Otimes__class_Otimes(V_a,V_b,T_a) != c_HOL_Ozero__class_Ozero(T_a)
+    | V_a = c_HOL_Ozero__class_Ozero(T_a)
+    | V_b = c_HOL_Ozero__class_Ozero(T_a) ) ).
+
+cnf(cls_no__zero__divisors_0,axiom,
+    ( ~ class_Ring__and__Field_Ono__zero__divisors(T_a)
+    | c_HOL_Otimes__class_Otimes(V_a,V_b,T_a) != c_HOL_Ozero__class_Ozero(T_a)
+    | V_b = c_HOL_Ozero__class_Ozero(T_a)
+    | V_a = c_HOL_Ozero__class_Ozero(T_a) ) ).
+
+cnf(cls_mult__eq__0__iff_0,axiom,
+    ( ~ class_Ring__and__Field_Oring__no__zero__divisors(T_a)
+    | c_HOL_Otimes__class_Otimes(V_a,V_b,T_a) != c_HOL_Ozero__class_Ozero(T_a)
+    | V_b = c_HOL_Ozero__class_Ozero(T_a)
+    | V_a = c_HOL_Ozero__class_Ozero(T_a) ) ).
+
+cnf(cls_div__by__0_0,axiom,
+    ( ~ class_Divides_Osemiring__div(T_a)
+    | c_Divides_Odiv__class_Odiv(V_a,c_HOL_Ozero__class_Ozero(T_a),T_a) = c_HOL_Ozero__class_Ozero(T_a) ) ).
+
+cnf(cls_div__0_0,axiom,
+    ( ~ class_Divides_Osemiring__div(T_a)
+    | c_Divides_Odiv__class_Odiv(c_HOL_Ozero__class_Ozero(T_a),V_a,T_a) = c_HOL_Ozero__class_Ozero(T_a) ) ).
+
+cnf(cls_dB_Osimps_I6_J_0,axiom,
+    c_Lambda_OdB_OVar(V_nat) != c_Lambda_OdB_OAbs(V_dB_H) ).
+
+cnf(cls_class__semiring_Osemiring__rules_I33_J_0,axiom,
+    ( ~ class_Ring__and__Field_Ocomm__semiring__1(T_a)
+    | c_Power_Opower__class_Opower(V_x,c_HOL_Oone__class_Oone(tc_nat),T_a) = V_x ) ).
+
+cnf(cls_power__one__right_0,axiom,
+    ( ~ class_OrderedGroup_Omonoid__mult(T_a)
+    | c_Power_Opower__class_Opower(V_a,c_HOL_Oone__class_Oone(tc_nat),T_a) = V_a ) ).
+
+cnf(cls_mod__add__cong_0,axiom,
+    ( ~ class_Divides_Osemiring__div(T_a)
+    | c_Divides_Odiv__class_Omod(V_b,V_c,T_a) != c_Divides_Odiv__class_Omod(V_b_H,V_c,T_a)
+    | c_Divides_Odiv__class_Omod(V_a,V_c,T_a) != c_Divides_Odiv__class_Omod(V_a_H,V_c,T_a)
+    | c_Divides_Odiv__class_Omod(hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_a),V_b),V_c,T_a) = c_Divides_Odiv__class_Omod(hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_a_H),V_b_H),V_c,T_a) ) ).
+
+cnf(cls_double__add__less__zero__iff__single__less__zero_1,axiom,
+    ( ~ class_OrderedGroup_Olordered__ab__group__add(T_a)
+    | c_HOL_Oord__class_Oless(hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_a),V_a),c_HOL_Ozero__class_Ozero(T_a),T_a)
+    | ~ c_HOL_Oord__class_Oless(V_a,c_HOL_Ozero__class_Ozero(T_a),T_a) ) ).
+
+cnf(cls_double__add__less__zero__iff__single__less__zero_0,axiom,
+    ( ~ class_OrderedGroup_Olordered__ab__group__add(T_a)
+    | c_HOL_Oord__class_Oless(V_a,c_HOL_Ozero__class_Ozero(T_a),T_a)
+    | ~ c_HOL_Oord__class_Oless(hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_a),V_a),c_HOL_Ozero__class_Ozero(T_a),T_a) ) ).
+
+cnf(cls_even__less__0__iff_0,axiom,
+    ( ~ class_Ring__and__Field_Oordered__idom(T_a)
+    | c_HOL_Oord__class_Oless(V_a,c_HOL_Ozero__class_Ozero(T_a),T_a)
+    | ~ c_HOL_Oord__class_Oless(hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_a),V_a),c_HOL_Ozero__class_Ozero(T_a),T_a) ) ).
+
+cnf(cls_even__less__0__iff_1,axiom,
+    ( ~ class_Ring__and__Field_Oordered__idom(T_a)
+    | c_HOL_Oord__class_Oless(hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_a),V_a),c_HOL_Ozero__class_Ozero(T_a),T_a)
+    | ~ c_HOL_Oord__class_Oless(V_a,c_HOL_Ozero__class_Ozero(T_a),T_a) ) ).
+
+cnf(cls_zero__less__mult__pos2_0,axiom,
+    ( ~ class_Ring__and__Field_Oordered__semiring__strict(T_a)
+    | c_HOL_Oord__class_Oless(c_HOL_Ozero__class_Ozero(T_a),V_b,T_a)
+    | ~ c_HOL_Oord__class_Oless(c_HOL_Ozero__class_Ozero(T_a),V_a,T_a)
+    | ~ c_HOL_Oord__class_Oless(c_HOL_Ozero__class_Ozero(T_a),c_HOL_Otimes__class_Otimes(V_b,V_a,T_a),T_a) ) ).
+
+cnf(cls_zero__less__mult__pos_0,axiom,
+    ( ~ class_Ring__and__Field_Oordered__semiring__strict(T_a)
+    | c_HOL_Oord__class_Oless(c_HOL_Ozero__class_Ozero(T_a),V_b,T_a)
+    | ~ c_HOL_Oord__class_Oless(c_HOL_Ozero__class_Ozero(T_a),V_a,T_a)
+    | ~ c_HOL_Oord__class_Oless(c_HOL_Ozero__class_Ozero(T_a),c_HOL_Otimes__class_Otimes(V_a,V_b,T_a),T_a) ) ).
+
+cnf(cls_mult__pos__pos_0,axiom,
+    ( ~ class_Ring__and__Field_Oordered__semiring__strict(T_a)
+    | c_HOL_Oord__class_Oless(c_HOL_Ozero__class_Ozero(T_a),c_HOL_Otimes__class_Otimes(V_a,V_b,T_a),T_a)
+    | ~ c_HOL_Oord__class_Oless(c_HOL_Ozero__class_Ozero(T_a),V_b,T_a)
+    | ~ c_HOL_Oord__class_Oless(c_HOL_Ozero__class_Ozero(T_a),V_a,T_a) ) ).
+
+cnf(cls_mult__neg__neg_0,axiom,
+    ( ~ class_Ring__and__Field_Oordered__ring__strict(T_a)
+    | c_HOL_Oord__class_Oless(c_HOL_Ozero__class_Ozero(T_a),c_HOL_Otimes__class_Otimes(V_a,V_b,T_a),T_a)
+    | ~ c_HOL_Oord__class_Oless(V_b,c_HOL_Ozero__class_Ozero(T_a),T_a)
+    | ~ c_HOL_Oord__class_Oless(V_a,c_HOL_Ozero__class_Ozero(T_a),T_a) ) ).
+
+cnf(cls_nat__0__less__mult__iff_2,axiom,
+    ( c_HOL_Oord__class_Oless(c_HOL_Ozero__class_Ozero(tc_nat),c_HOL_Otimes__class_Otimes(V_m,V_n,tc_nat),tc_nat)
+    | ~ c_HOL_Oord__class_Oless(c_HOL_Ozero__class_Ozero(tc_nat),V_n,tc_nat)
+    | ~ c_HOL_Oord__class_Oless(c_HOL_Ozero__class_Ozero(tc_nat),V_m,tc_nat) ) ).
+
+cnf(cls_zero__less__power_0,axiom,
+    ( ~ class_Ring__and__Field_Oordered__semidom(T_a)
+    | c_HOL_Oord__class_Oless(c_HOL_Ozero__class_Ozero(T_a),c_Power_Opower__class_Opower(V_a,V_n,T_a),T_a)
+    | ~ c_HOL_Oord__class_Oless(c_HOL_Ozero__class_Ozero(T_a),V_a,T_a) ) ).
+
+cnf(cls_nat__zero__less__power__iff_1,axiom,
+    ( c_HOL_Oord__class_Oless(c_HOL_Ozero__class_Ozero(tc_nat),c_Power_Opower__class_Opower(V_x,V_n,tc_nat),tc_nat)
+    | ~ c_HOL_Oord__class_Oless(c_HOL_Ozero__class_Ozero(tc_nat),V_x,tc_nat) ) ).
+
+cnf(cls_mult__Suc__right_0,axiom,
+    c_HOL_Otimes__class_Otimes(V_m,c_Suc(V_n),tc_nat) = hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),V_m),c_HOL_Otimes__class_Otimes(V_m,V_n,tc_nat)) ).
+
+cnf(cls_mult__Suc_0,axiom,
+    c_HOL_Otimes__class_Otimes(c_Suc(V_m),V_n,tc_nat) = hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),V_n),c_HOL_Otimes__class_Otimes(V_m,V_n,tc_nat)) ).
+
+cnf(cls_split__div_1,axiom,
+    ( ~ c_HOL_Oord__class_Oless(V_j,V_k,tc_nat)
+    | V_k = c_HOL_Ozero__class_Ozero(tc_nat)
+    | ~ hBOOL(hAPP(V_P,c_Divides_Odiv__class_Odiv(hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),c_HOL_Otimes__class_Otimes(V_k,V_i,tc_nat)),V_j),V_k,tc_nat)))
+    | hBOOL(hAPP(V_P,V_i)) ) ).
+
+cnf(cls_div__power_0,axiom,
+    ( ~ class_Divides_Osemiring__div(T_a)
+    | c_Power_Opower__class_Opower(c_Divides_Odiv__class_Odiv(V_x,V_y,T_a),V_n,T_a) = c_Divides_Odiv__class_Odiv(c_Power_Opower__class_Opower(V_x,V_n,T_a),c_Power_Opower__class_Opower(V_y,V_n,T_a),T_a)
+    | ~ c_Ring__and__Field_Odvd__class_Odvd(V_y,V_x,T_a) ) ).
+
+cnf(cls_shift__eq_0,axiom,
+    hAPP(c_Type_Oshift(V_e,V_x,V_T,T_a),V_x) = V_T ).
+
+cnf(cls_substn_Osimps_I1_J_2,axiom,
+    ( c_Lambda_Osubstn(c_Lambda_OdB_OVar(V_i),V_s,V_k) = c_Lambda_OdB_OVar(V_i)
+    | V_i = V_k
+    | c_HOL_Oord__class_Oless(V_k,V_i,tc_nat) ) ).
+
+cnf(cls_not__one__less__zero_0,axiom,
+    ( ~ class_Ring__and__Field_Oordered__semidom(T_a)
+    | ~ c_HOL_Oord__class_Oless(c_HOL_Oone__class_Oone(T_a),c_HOL_Ozero__class_Ozero(T_a),T_a) ) ).
+
+cnf(cls_dB_Osimps_I3_J_0,axiom,
+    ( c_Lambda_OdB_OAbs(V_dB) != c_Lambda_OdB_OAbs(V_dB_H)
+    | V_dB = V_dB_H ) ).
+
+cnf(cls_not__sum__squares__lt__zero_0,axiom,
+    ( ~ class_Ring__and__Field_Oordered__ring__strict(T_a)
+    | ~ c_HOL_Oord__class_Oless(hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),c_HOL_Otimes__class_Otimes(V_x,V_x,T_a)),c_HOL_Otimes__class_Otimes(V_y,V_y,T_a)),c_HOL_Ozero__class_Ozero(T_a),T_a) ) ).
+
+cnf(cls_of__nat__mult_0,axiom,
+    ( ~ class_Ring__and__Field_Osemiring__1(T_a)
+    | c_Nat_Osemiring__1__class_Oof__nat(c_HOL_Otimes__class_Otimes(V_m,V_n,tc_nat),T_a) = c_HOL_Otimes__class_Otimes(c_Nat_Osemiring__1__class_Oof__nat(V_m,T_a),c_Nat_Osemiring__1__class_Oof__nat(V_n,T_a),T_a) ) ).
+
+cnf(cls_mod__mult__self4_0,axiom,
+    c_Divides_Odiv__class_Omod(c_Suc(hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),c_HOL_Otimes__class_Otimes(V_k,V_n,tc_nat)),V_m)),V_n,tc_nat) = c_Divides_Odiv__class_Omod(c_Suc(V_m),V_n,tc_nat) ).
+
+cnf(cls_class__ringb_Oadd__mul__solve_0,axiom,
+    ( ~ class_Ring__and__Field_Oidom(T_a)
+    | ~ class_Int_Onumber__ring(T_a)
+    | hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),c_HOL_Otimes__class_Otimes(V_w,V_y,T_a)),c_HOL_Otimes__class_Otimes(V_x,V_z,T_a)) != hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),c_HOL_Otimes__class_Otimes(V_w,V_z,T_a)),c_HOL_Otimes__class_Otimes(V_x,V_y,T_a))
+    | V_y = V_z
+    | V_w = V_x ) ).
+
+cnf(cls_class__ringb_Onoteq__reduce_0,axiom,
+    ( ~ class_Ring__and__Field_Oidom(T_a)
+    | ~ class_Int_Onumber__ring(T_a)
+    | hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),c_HOL_Otimes__class_Otimes(V_a,V_c,T_a)),c_HOL_Otimes__class_Otimes(V_b,V_d,T_a)) != hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),c_HOL_Otimes__class_Otimes(V_a,V_d,T_a)),c_HOL_Otimes__class_Otimes(V_b,V_c,T_a))
+    | V_c = V_d
+    | V_a = V_b ) ).
+
+cnf(cls_natgb_Onoteq__reduce_0,axiom,
+    ( hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),c_HOL_Otimes__class_Otimes(V_a,V_c,tc_nat)),c_HOL_Otimes__class_Otimes(V_b,V_d,tc_nat)) != hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),c_HOL_Otimes__class_Otimes(V_a,V_d,tc_nat)),c_HOL_Otimes__class_Otimes(V_b,V_c,tc_nat))
+    | V_c = V_d
+    | V_a = V_b ) ).
+
+cnf(cls_natgb_Oadd__mul__solve_0,axiom,
+    ( hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),c_HOL_Otimes__class_Otimes(V_w,V_y,tc_nat)),c_HOL_Otimes__class_Otimes(V_x,V_z,tc_nat)) != hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),c_HOL_Otimes__class_Otimes(V_w,V_z,tc_nat)),c_HOL_Otimes__class_Otimes(V_x,V_y,tc_nat))
+    | V_y = V_z
+    | V_w = V_x ) ).
+
+cnf(cls_div__mult__self2__is__id_0,axiom,
+    ( ~ class_Divides_Osemiring__div(T_a)
+    | c_Divides_Odiv__class_Odiv(c_HOL_Otimes__class_Otimes(V_a,V_b,T_a),V_b,T_a) = V_a
+    | V_b = c_HOL_Ozero__class_Ozero(T_a) ) ).
+
+cnf(cls_div__mult__self1__is__id_0,axiom,
+    ( ~ class_Divides_Osemiring__div(T_a)
+    | c_Divides_Odiv__class_Odiv(c_HOL_Otimes__class_Otimes(V_b,V_a,T_a),V_b,T_a) = V_a
+    | V_b = c_HOL_Ozero__class_Ozero(T_a) ) ).
+
+cnf(cls_mult__eq__self__implies__10_0,axiom,
+    ( V_m != c_HOL_Otimes__class_Otimes(V_m,V_n,tc_nat)
+    | V_m = c_HOL_Ozero__class_Ozero(tc_nat)
+    | V_n = c_HOL_Oone__class_Oone(tc_nat) ) ).
+
+cnf(cls_mod__mult__cong_0,axiom,
+    ( ~ class_Divides_Osemiring__div(T_a)
+    | c_Divides_Odiv__class_Omod(V_b,V_c,T_a) != c_Divides_Odiv__class_Omod(V_b_H,V_c,T_a)
+    | c_Divides_Odiv__class_Omod(V_a,V_c,T_a) != c_Divides_Odiv__class_Omod(V_a_H,V_c,T_a)
+    | c_Divides_Odiv__class_Omod(c_HOL_Otimes__class_Otimes(V_a,V_b,T_a),V_c,T_a) = c_Divides_Odiv__class_Omod(c_HOL_Otimes__class_Otimes(V_a_H,V_b_H,T_a),V_c,T_a) ) ).
+
+cnf(cls_class__semiring_Osemiring__rules_I13_J_0,axiom,
+    ( ~ class_Ring__and__Field_Ocomm__semiring__1(T_a)
+    | c_HOL_Otimes__class_Otimes(c_HOL_Otimes__class_Otimes(V_lx,V_ly,T_a),c_HOL_Otimes__class_Otimes(V_rx,V_ry,T_a),T_a) = c_HOL_Otimes__class_Otimes(c_HOL_Otimes__class_Otimes(V_lx,V_rx,T_a),c_HOL_Otimes__class_Otimes(V_ly,V_ry,T_a),T_a) ) ).
+
+cnf(cls_class__semiring_Osemiring__rules_I14_J_0,axiom,
+    ( ~ class_Ring__and__Field_Ocomm__semiring__1(T_a)
+    | c_HOL_Otimes__class_Otimes(c_HOL_Otimes__class_Otimes(V_lx,V_ly,T_a),c_HOL_Otimes__class_Otimes(V_rx,V_ry,T_a),T_a) = c_HOL_Otimes__class_Otimes(V_lx,c_HOL_Otimes__class_Otimes(V_ly,c_HOL_Otimes__class_Otimes(V_rx,V_ry,T_a),T_a),T_a) ) ).
+
+cnf(cls_class__semiring_Osemiring__rules_I15_J_0,axiom,
+    ( ~ class_Ring__and__Field_Ocomm__semiring__1(T_a)
+    | c_HOL_Otimes__class_Otimes(c_HOL_Otimes__class_Otimes(V_lx,V_ly,T_a),c_HOL_Otimes__class_Otimes(V_rx,V_ry,T_a),T_a) = c_HOL_Otimes__class_Otimes(V_rx,c_HOL_Otimes__class_Otimes(c_HOL_Otimes__class_Otimes(V_lx,V_ly,T_a),V_ry,T_a),T_a) ) ).
+
+cnf(cls_class__semiring_Osemiring__rules_I2_J_0,axiom,
+    ( ~ class_Ring__and__Field_Ocomm__semiring__1(T_a)
+    | hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),c_HOL_Otimes__class_Otimes(V_a,V_m,T_a)),V_m) = c_HOL_Otimes__class_Otimes(hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_a),c_HOL_Oone__class_Oone(T_a)),V_m,T_a) ) ).
+
+cnf(cls_class__semiring_Osemiring__rules_I3_J_0,axiom,
+    ( ~ class_Ring__and__Field_Ocomm__semiring__1(T_a)
+    | hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_m),c_HOL_Otimes__class_Otimes(V_a,V_m,T_a)) = c_HOL_Otimes__class_Otimes(hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_a),c_HOL_Oone__class_Oone(T_a)),V_m,T_a) ) ).
+
+cnf(cls_mod__by__1_0,axiom,
+    ( ~ class_Divides_Osemiring__div(T_a)
+    | c_Divides_Odiv__class_Omod(V_a,c_HOL_Oone__class_Oone(T_a),T_a) = c_HOL_Ozero__class_Ozero(T_a) ) ).
+
+cnf(cls_dvd__reduce_0,axiom,
+    ( c_Ring__and__Field_Odvd__class_Odvd(V_k,V_n,tc_nat)
+    | ~ c_Ring__and__Field_Odvd__class_Odvd(V_k,hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),V_n),V_k),tc_nat) ) ).
+
+cnf(cls_dvd__reduce_1,axiom,
+    ( c_Ring__and__Field_Odvd__class_Odvd(V_k,hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),V_n),V_k),tc_nat)
+    | ~ c_Ring__and__Field_Odvd__class_Odvd(V_k,V_n,tc_nat) ) ).
+
+cnf(cls_mod__if_0,axiom,
+    ( c_Divides_Odiv__class_Omod(V_m,V_n,tc_nat) = V_m
+    | ~ c_HOL_Oord__class_Oless(V_m,V_n,tc_nat) ) ).
+
+cnf(cls_nat__less__le_1,axiom,
+    ~ c_HOL_Oord__class_Oless(V_x,V_x,tc_nat) ).
+
+cnf(cls_less__not__refl_0,axiom,
+    ~ c_HOL_Oord__class_Oless(V_n,V_n,tc_nat) ).
+
+cnf(cls_order__less__le_1,axiom,
+    ( ~ class_Orderings_Oorder(T_a)
+    | ~ c_HOL_Oord__class_Oless(V_x,V_x,T_a) ) ).
+
+cnf(cls_linorder__neq__iff_1,axiom,
+    ( ~ class_Orderings_Olinorder(T_a)
+    | ~ c_HOL_Oord__class_Oless(V_x,V_x,T_a) ) ).
+
+cnf(cls_order__less__irrefl_0,axiom,
+    ( ~ class_Orderings_Opreorder(T_a)
+    | ~ c_HOL_Oord__class_Oless(V_x,V_x,T_a) ) ).
+
+cnf(cls_liftn_Osimps_I1_J_1,axiom,
+    ( c_Lambda_Oliftn(V_n,c_Lambda_OdB_OVar(V_i),V_k) = c_Lambda_OdB_OVar(hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),V_i),V_n))
+    | c_HOL_Oord__class_Oless(V_i,V_k,tc_nat) ) ).
+
+cnf(cls_add__pos__pos_0,axiom,
+    ( ~ class_OrderedGroup_Opordered__comm__monoid__add(T_a)
+    | c_HOL_Oord__class_Oless(c_HOL_Ozero__class_Ozero(T_a),hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_a),V_b),T_a)
+    | ~ c_HOL_Oord__class_Oless(c_HOL_Ozero__class_Ozero(T_a),V_b,T_a)
+    | ~ c_HOL_Oord__class_Oless(c_HOL_Ozero__class_Ozero(T_a),V_a,T_a) ) ).
+
+cnf(cls_power__gt1__lemma_0,axiom,
+    ( ~ class_Ring__and__Field_Oordered__semidom(T_a)
+    | c_HOL_Oord__class_Oless(c_HOL_Oone__class_Oone(T_a),c_HOL_Otimes__class_Otimes(V_a,c_Power_Opower__class_Opower(V_a,V_n,T_a),T_a),T_a)
+    | ~ c_HOL_Oord__class_Oless(c_HOL_Oone__class_Oone(T_a),V_a,T_a) ) ).
+
+cnf(cls_liftn_Osimps_I3_J_0,axiom,
+    c_Lambda_Oliftn(V_n,c_Lambda_OdB_OAbs(V_s),V_k) = c_Lambda_OdB_OAbs(c_Lambda_Oliftn(V_n,V_s,hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),V_k),c_HOL_Oone__class_Oone(tc_nat)))) ).
+
+cnf(cls_linorder__neqE__ordered__idom_0,axiom,
+    ( ~ class_Ring__and__Field_Oordered__idom(T_a)
+    | c_HOL_Oord__class_Oless(V_y,V_x,T_a)
+    | c_HOL_Oord__class_Oless(V_x,V_y,T_a)
+    | V_x = V_y ) ).
+
+cnf(cls_not__less__iff__gr__or__eq_0,axiom,
+    ( ~ class_Orderings_Olinorder(T_a)
+    | V_x = V_y
+    | c_HOL_Oord__class_Oless(V_y,V_x,T_a)
+    | c_HOL_Oord__class_Oless(V_x,V_y,T_a) ) ).
+
+cnf(cls_dvd_Oeq__iff_2,axiom,
+    ( V_x = V_y
+    | ~ c_Ring__and__Field_Odvd__class_Odvd(V_y,V_x,tc_nat)
+    | ~ c_Ring__and__Field_Odvd__class_Odvd(V_x,V_y,tc_nat) ) ).
+
+cnf(cls_dvd_Oantisym_0,axiom,
+    ( V_x = V_y
+    | ~ c_Ring__and__Field_Odvd__class_Odvd(V_y,V_x,tc_nat)
+    | ~ c_Ring__and__Field_Odvd__class_Odvd(V_x,V_y,tc_nat) ) ).
+
+cnf(cls_dvd_Oless__le_0,axiom,
+    ( ~ c_Ring__and__Field_Odvd__class_Odvd(V_y,V_x,tc_nat)
+    | V_x = V_y
+    | ~ c_Ring__and__Field_Odvd__class_Odvd(V_x,V_y,tc_nat) ) ).
+
+cnf(cls_dvd__antisym_0,axiom,
+    ( V_m = V_n
+    | ~ c_Ring__and__Field_Odvd__class_Odvd(V_n,V_m,tc_nat)
+    | ~ c_Ring__and__Field_Odvd__class_Odvd(V_m,V_n,tc_nat) ) ).
+
+cnf(cls_nat__neq__iff_0,axiom,
+    ( c_HOL_Oord__class_Oless(V_n,V_m,tc_nat)
+    | c_HOL_Oord__class_Oless(V_m,V_n,tc_nat)
+    | V_m = V_n ) ).
+
+cnf(cls_nat__less__cases_0,axiom,
+    ( hBOOL(hAPP(hAPP(V_P,V_n),V_m))
+    | c_HOL_Oord__class_Oless(V_n,V_m,tc_nat)
+    | V_m = V_n
+    | c_HOL_Oord__class_Oless(V_m,V_n,tc_nat) ) ).
+
+cnf(cls_dvd_Oantisym__conv_0,axiom,
+    ( V_x = V_y
+    | ~ c_Ring__and__Field_Odvd__class_Odvd(V_x,V_y,tc_nat)
+    | ~ c_Ring__and__Field_Odvd__class_Odvd(V_y,V_x,tc_nat) ) ).
+
+cnf(cls_dvd_Ole__neq__trans_0,axiom,
+    ( ~ c_Ring__and__Field_Odvd__class_Odvd(V_b,V_a,tc_nat)
+    | V_a = V_b
+    | ~ c_Ring__and__Field_Odvd__class_Odvd(V_a,V_b,tc_nat) ) ).
+
+cnf(cls_dvd_Oneq__le__trans_0,axiom,
+    ( ~ c_Ring__and__Field_Odvd__class_Odvd(V_b,V_a,tc_nat)
+    | ~ c_Ring__and__Field_Odvd__class_Odvd(V_a,V_b,tc_nat)
+    | V_a = V_b ) ).
+
+cnf(cls_linorder__neqE__nat_0,axiom,
+    ( c_HOL_Oord__class_Oless(V_y,V_x,tc_nat)
+    | c_HOL_Oord__class_Oless(V_x,V_y,tc_nat)
+    | V_x = V_y ) ).
+
+cnf(cls_linorder__neqE_0,axiom,
+    ( ~ class_Orderings_Olinorder(T_a)
+    | c_HOL_Oord__class_Oless(V_y,V_x,T_a)
+    | c_HOL_Oord__class_Oless(V_x,V_y,T_a)
+    | V_x = V_y ) ).
+
+cnf(cls_linorder__less__linear_0,axiom,
+    ( ~ class_Orderings_Olinorder(T_a)
+    | c_HOL_Oord__class_Oless(V_y,V_x,T_a)
+    | V_x = V_y
+    | c_HOL_Oord__class_Oless(V_x,V_y,T_a) ) ).
+
+cnf(cls_linorder__antisym__conv3_0,axiom,
+    ( ~ class_Orderings_Olinorder(T_a)
+    | V_x = V_y
+    | c_HOL_Oord__class_Oless(V_x,V_y,T_a)
+    | c_HOL_Oord__class_Oless(V_y,V_x,T_a) ) ).
+
+cnf(cls_nat__dvd__not__less_0,axiom,
+    ( ~ c_Ring__and__Field_Odvd__class_Odvd(V_n,V_m,tc_nat)
+    | ~ c_HOL_Oord__class_Oless(V_m,V_n,tc_nat)
+    | ~ c_HOL_Oord__class_Oless(c_HOL_Ozero__class_Ozero(tc_nat),V_m,tc_nat) ) ).
+
+cnf(cls_add__strict__mono_0,axiom,
+    ( ~ class_OrderedGroup_Opordered__cancel__ab__semigroup__add(T_a)
+    | c_HOL_Oord__class_Oless(hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_a),V_c),hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_b),V_d),T_a)
+    | ~ c_HOL_Oord__class_Oless(V_c,V_d,T_a)
+    | ~ c_HOL_Oord__class_Oless(V_a,V_b,T_a) ) ).
+
+cnf(cls_add__less__mono_0,axiom,
+    ( c_HOL_Oord__class_Oless(hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),V_i),V_k),hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),V_j),V_l),tc_nat)
+    | ~ c_HOL_Oord__class_Oless(V_k,V_l,tc_nat)
+    | ~ c_HOL_Oord__class_Oless(V_i,V_j,tc_nat) ) ).
+
+cnf(cls_dvd__trans_0,axiom,
+    ( ~ class_Ring__and__Field_Ocomm__semiring__1(T_a)
+    | c_Ring__and__Field_Odvd__class_Odvd(V_a,V_c,T_a)
+    | ~ c_Ring__and__Field_Odvd__class_Odvd(V_b,V_c,T_a)
+    | ~ c_Ring__and__Field_Odvd__class_Odvd(V_a,V_b,T_a) ) ).
+
+cnf(cls_dvd__refl_0,axiom,
+    ( ~ class_Ring__and__Field_Ocomm__semiring__1(T_a)
+    | c_Ring__and__Field_Odvd__class_Odvd(V_a,V_a,T_a) ) ).
+
+cnf(cls_dvd_Oeq__iff_0,axiom,
+    c_Ring__and__Field_Odvd__class_Odvd(V_x,V_x,tc_nat) ).
+
+cnf(cls_dvd_Oless__trans_0,axiom,
+    ( c_Ring__and__Field_Odvd__class_Odvd(V_x,V_z,tc_nat)
+    | c_Ring__and__Field_Odvd__class_Odvd(V_z,V_y,tc_nat)
+    | ~ c_Ring__and__Field_Odvd__class_Odvd(V_y,V_z,tc_nat)
+    | c_Ring__and__Field_Odvd__class_Odvd(V_y,V_x,tc_nat)
+    | ~ c_Ring__and__Field_Odvd__class_Odvd(V_x,V_y,tc_nat) ) ).
+
+cnf(cls_dvd_Oorder__trans_0,axiom,
+    ( c_Ring__and__Field_Odvd__class_Odvd(V_x,V_z,tc_nat)
+    | ~ c_Ring__and__Field_Odvd__class_Odvd(V_y,V_z,tc_nat)
+    | ~ c_Ring__and__Field_Odvd__class_Odvd(V_x,V_y,tc_nat) ) ).
+
+cnf(cls_power__gt1_0,axiom,
+    ( ~ class_Ring__and__Field_Oordered__semidom(T_a)
+    | c_HOL_Oord__class_Oless(c_HOL_Oone__class_Oone(T_a),c_Power_Opower__class_Opower(V_a,c_Suc(V_n),T_a),T_a)
+    | ~ c_HOL_Oord__class_Oless(c_HOL_Oone__class_Oone(T_a),V_a,T_a) ) ).
+
+cnf(cls_beta__cases_I1_J_0,axiom,
+    ~ c_Lambda_Obeta(c_Lambda_OdB_OVar(V_i),V_t) ).
+
+cnf(cls_of__nat__less__iff_1,axiom,
+    ( ~ class_Ring__and__Field_Oordered__semidom(T_a)
+    | c_HOL_Oord__class_Oless(c_Nat_Osemiring__1__class_Oof__nat(V_m,T_a),c_Nat_Osemiring__1__class_Oof__nat(V_n,T_a),T_a)
+    | ~ c_HOL_Oord__class_Oless(V_m,V_n,tc_nat) ) ).
+
+cnf(cls_of__nat__less__iff_0,axiom,
+    ( ~ class_Ring__and__Field_Oordered__semidom(T_a)
+    | c_HOL_Oord__class_Oless(V_m,V_n,tc_nat)
+    | ~ c_HOL_Oord__class_Oless(c_Nat_Osemiring__1__class_Oof__nat(V_m,T_a),c_Nat_Osemiring__1__class_Oof__nat(V_n,T_a),T_a) ) ).
+
+cnf(cls_dvd__mult__cancel__right_1,axiom,
+    ( ~ class_Ring__and__Field_Oidom(T_a)
+    | c_Ring__and__Field_Odvd__class_Odvd(c_HOL_Otimes__class_Otimes(V_a,c_HOL_Ozero__class_Ozero(T_a),T_a),c_HOL_Otimes__class_Otimes(V_b,c_HOL_Ozero__class_Ozero(T_a),T_a),T_a) ) ).
+
+cnf(cls_dvd__mult__cancel__left_1,axiom,
+    ( ~ class_Ring__and__Field_Oidom(T_a)
+    | c_Ring__and__Field_Odvd__class_Odvd(c_HOL_Otimes__class_Otimes(c_HOL_Ozero__class_Ozero(T_a),V_a,T_a),c_HOL_Otimes__class_Otimes(c_HOL_Ozero__class_Ozero(T_a),V_b,T_a),T_a) ) ).
+
+cnf(cls_nat__mult__dvd__cancel__disj_1,axiom,
+    c_Ring__and__Field_Odvd__class_Odvd(c_HOL_Otimes__class_Otimes(c_HOL_Ozero__class_Ozero(tc_nat),V_m,tc_nat),c_HOL_Otimes__class_Otimes(c_HOL_Ozero__class_Ozero(tc_nat),V_n,tc_nat),tc_nat) ).
+
+cnf(cls_zero__less__one_0,axiom,
+    ( ~ class_Ring__and__Field_Oordered__semidom(T_a)
+    | c_HOL_Oord__class_Oless(c_HOL_Ozero__class_Ozero(T_a),c_HOL_Oone__class_Oone(T_a),T_a) ) ).
+
+cnf(cls_div__mult1__eq_0,axiom,
+    c_Divides_Odiv__class_Odiv(c_HOL_Otimes__class_Otimes(V_a,V_b,tc_nat),V_c,tc_nat) = hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),c_HOL_Otimes__class_Otimes(V_a,c_Divides_Odiv__class_Odiv(V_b,V_c,tc_nat),tc_nat)),c_Divides_Odiv__class_Odiv(c_HOL_Otimes__class_Otimes(V_a,c_Divides_Odiv__class_Omod(V_b,V_c,tc_nat),tc_nat),V_c,tc_nat)) ).
+
+cnf(cls_mult__less__cancel1_1,axiom,
+    ( c_HOL_Oord__class_Oless(V_m,V_n,tc_nat)
+    | ~ c_HOL_Oord__class_Oless(c_HOL_Otimes__class_Otimes(V_k,V_m,tc_nat),c_HOL_Otimes__class_Otimes(V_k,V_n,tc_nat),tc_nat) ) ).
+
+cnf(cls_mult__less__cancel2_1,axiom,
+    ( c_HOL_Oord__class_Oless(V_m,V_n,tc_nat)
+    | ~ c_HOL_Oord__class_Oless(c_HOL_Otimes__class_Otimes(V_m,V_k,tc_nat),c_HOL_Otimes__class_Otimes(V_n,V_k,tc_nat),tc_nat) ) ).
+
+cnf(cls_nat__mult__dvd__cancel1_1,axiom,
+    ( c_Ring__and__Field_Odvd__class_Odvd(c_HOL_Otimes__class_Otimes(V_k,V_m,tc_nat),c_HOL_Otimes__class_Otimes(V_k,V_n,tc_nat),tc_nat)
+    | ~ c_Ring__and__Field_Odvd__class_Odvd(V_m,V_n,tc_nat)
+    | ~ c_HOL_Oord__class_Oless(c_HOL_Ozero__class_Ozero(tc_nat),V_k,tc_nat) ) ).
+
+cnf(cls_nat__mult__dvd__cancel1_0,axiom,
+    ( c_Ring__and__Field_Odvd__class_Odvd(V_m,V_n,tc_nat)
+    | ~ c_Ring__and__Field_Odvd__class_Odvd(c_HOL_Otimes__class_Otimes(V_k,V_m,tc_nat),c_HOL_Otimes__class_Otimes(V_k,V_n,tc_nat),tc_nat)
+    | ~ c_HOL_Oord__class_Oless(c_HOL_Ozero__class_Ozero(tc_nat),V_k,tc_nat) ) ).
+
+cnf(cls_dvd__mult__cancel_0,axiom,
+    ( c_Ring__and__Field_Odvd__class_Odvd(V_m,V_n,tc_nat)
+    | ~ c_HOL_Oord__class_Oless(c_HOL_Ozero__class_Ozero(tc_nat),V_k,tc_nat)
+    | ~ c_Ring__and__Field_Odvd__class_Odvd(c_HOL_Otimes__class_Otimes(V_k,V_m,tc_nat),c_HOL_Otimes__class_Otimes(V_k,V_n,tc_nat),tc_nat) ) ).
+
+cnf(cls_less__add__one_0,axiom,
+    ( ~ class_Ring__and__Field_Oordered__semidom(T_a)
+    | c_HOL_Oord__class_Oless(V_a,hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_a),c_HOL_Oone__class_Oone(T_a)),T_a) ) ).
+
+cnf(cls_div__less__dividend_0,axiom,
+    ( c_HOL_Oord__class_Oless(c_Divides_Odiv__class_Odiv(V_m,V_n,tc_nat),V_m,tc_nat)
+    | ~ c_HOL_Oord__class_Oless(c_HOL_Ozero__class_Ozero(tc_nat),V_m,tc_nat)
+    | ~ c_HOL_Oord__class_Oless(c_HOL_Oone__class_Oone(tc_nat),V_n,tc_nat) ) ).
+
+cnf(cls_mult__left__idem_0,axiom,
+    ( ~ class_OrderedGroup_Oab__semigroup__idem__mult(T_a)
+    | c_HOL_Otimes__class_Otimes(V_x,c_HOL_Otimes__class_Otimes(V_x,V_y,T_a),T_a) = c_HOL_Otimes__class_Otimes(V_x,V_y,T_a) ) ).
+
+cnf(cls_div__mult__div__if__dvd_0,axiom,
+    ( ~ class_Divides_Osemiring__div(T_a)
+    | c_HOL_Otimes__class_Otimes(c_Divides_Odiv__class_Odiv(V_x,V_y,T_a),c_Divides_Odiv__class_Odiv(V_w,V_z,T_a),T_a) = c_Divides_Odiv__class_Odiv(c_HOL_Otimes__class_Otimes(V_x,V_w,T_a),c_HOL_Otimes__class_Otimes(V_y,V_z,T_a),T_a)
+    | ~ c_Ring__and__Field_Odvd__class_Odvd(V_z,V_w,T_a)
+    | ~ c_Ring__and__Field_Odvd__class_Odvd(V_y,V_x,T_a) ) ).
+
+cnf(cls_nat__mod__eq__iff_1,axiom,
+    ( hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),V_x),c_HOL_Otimes__class_Otimes(V_n,V_xa,tc_nat)) != hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),V_y),c_HOL_Otimes__class_Otimes(V_n,V_xb,tc_nat))
+    | c_Divides_Odiv__class_Omod(V_x,V_n,tc_nat) = c_Divides_Odiv__class_Omod(V_y,V_n,tc_nat) ) ).
+
+cnf(cls_of__nat__0__less__iff_1,axiom,
+    ( ~ class_Ring__and__Field_Oordered__semidom(T_a)
+    | c_HOL_Oord__class_Oless(c_HOL_Ozero__class_Ozero(T_a),c_Nat_Osemiring__1__class_Oof__nat(V_n,T_a),T_a)
+    | ~ c_HOL_Oord__class_Oless(c_HOL_Ozero__class_Ozero(tc_nat),V_n,tc_nat) ) ).
+
+cnf(cls_of__nat__0__less__iff_0,axiom,
+    ( ~ class_Ring__and__Field_Oordered__semidom(T_a)
+    | c_HOL_Oord__class_Oless(c_HOL_Ozero__class_Ozero(tc_nat),V_n,tc_nat)
+    | ~ c_HOL_Oord__class_Oless(c_HOL_Ozero__class_Ozero(T_a),c_Nat_Osemiring__1__class_Oof__nat(V_n,T_a),T_a) ) ).
+
+cnf(cls_one__dvd_0,axiom,
+    ( ~ class_Ring__and__Field_Ocomm__semiring__1(T_a)
+    | c_Ring__and__Field_Odvd__class_Odvd(c_HOL_Oone__class_Oone(T_a),V_a,T_a) ) ).
+
+cnf(cls_power__inject__exp_0,axiom,
+    ( ~ class_Ring__and__Field_Oordered__semidom(T_a)
+    | c_Power_Opower__class_Opower(V_a,V_m,T_a) != c_Power_Opower__class_Opower(V_a,V_n,T_a)
+    | ~ c_HOL_Oord__class_Oless(c_HOL_Oone__class_Oone(T_a),V_a,T_a)
+    | V_m = V_n ) ).
+
+cnf(cls_power__eq__if_0,axiom,
+    c_Power_Opower__class_Opower(V_p,c_HOL_Ozero__class_Ozero(tc_nat),tc_nat) = c_HOL_Oone__class_Oone(tc_nat) ).
+
+cnf(cls_power__0_0,axiom,
+    ( ~ class_Power_Opower(T_a)
+    | c_Power_Opower__class_Opower(V_a,c_HOL_Ozero__class_Ozero(tc_nat),T_a) = c_HOL_Oone__class_Oone(T_a) ) ).
+
+cnf(cls_double__eq__0__iff_0,axiom,
+    ( ~ class_OrderedGroup_Olordered__ab__group__add(T_a)
+    | hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_a),V_a) != c_HOL_Ozero__class_Ozero(T_a)
+    | V_a = c_HOL_Ozero__class_Ozero(T_a) ) ).
+
+cnf(cls_class__ringb_Oadd__r0__iff_0,axiom,
+    ( ~ class_Ring__and__Field_Oidom(T_a)
+    | ~ class_Int_Onumber__ring(T_a)
+    | V_x != hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_x),V_a)
+    | V_a = c_HOL_Ozero__class_Ozero(T_a) ) ).
+
+cnf(cls_mod__self_0,axiom,
+    ( ~ class_Divides_Osemiring__div(T_a)
+    | c_Divides_Odiv__class_Omod(V_a,V_a,T_a) = c_HOL_Ozero__class_Ozero(T_a) ) ).
+
+cnf(cls_mod__by__0_0,axiom,
+    ( ~ class_Divides_Osemiring__div(T_a)
+    | c_Divides_Odiv__class_Omod(V_a,c_HOL_Ozero__class_Ozero(T_a),T_a) = V_a ) ).
+
+cnf(cls_mod__0_0,axiom,
+    ( ~ class_Divides_Osemiring__div(T_a)
+    | c_Divides_Odiv__class_Omod(c_HOL_Ozero__class_Ozero(T_a),V_a,T_a) = c_HOL_Ozero__class_Ozero(T_a) ) ).
+
+cnf(cls_double__eq__0__iff_1,axiom,
+    ( ~ class_OrderedGroup_Olordered__ab__group__add(T_a)
+    | hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),c_HOL_Ozero__class_Ozero(T_a)),c_HOL_Ozero__class_Ozero(T_a)) = c_HOL_Ozero__class_Ozero(T_a) ) ).
+
+cnf(cls_zero__neq__one_0,axiom,
+    ( ~ class_Ring__and__Field_Ozero__neq__one(T_a)
+    | c_HOL_Ozero__class_Ozero(T_a) != c_HOL_Oone__class_Oone(T_a) ) ).
+
+cnf(cls_dvd__0__left_0,axiom,
+    ( ~ class_Ring__and__Field_Ocomm__semiring__1(T_a)
+    | V_a = c_HOL_Ozero__class_Ozero(T_a)
+    | ~ c_Ring__and__Field_Odvd__class_Odvd(c_HOL_Ozero__class_Ozero(T_a),V_a,T_a) ) ).
+
+cnf(cls_class__semiring_Oadd__0_0,axiom,
+    ( ~ class_Ring__and__Field_Ocomm__semiring__1(T_a)
+    | hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),c_HOL_Ozero__class_Ozero(T_a)),V_x) = V_x ) ).
+
+cnf(cls_comm__monoid__add_Omult__1_0,axiom,
+    ( ~ class_OrderedGroup_Ocomm__monoid__add(T_a)
+    | hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),c_HOL_Ozero__class_Ozero(T_a)),V_a) = V_a ) ).
+
+cnf(cls_class__ringb_Oadd__r0__iff_1,axiom,
+    ( ~ class_Ring__and__Field_Oidom(T_a)
+    | ~ class_Int_Onumber__ring(T_a)
+    | V_x = hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_x),c_HOL_Ozero__class_Ozero(T_a)) ) ).
+
+cnf(cls_comm__monoid__add_Omult__1__right_0,axiom,
+    ( ~ class_OrderedGroup_Ocomm__monoid__add(T_a)
+    | hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_a),c_HOL_Ozero__class_Ozero(T_a)) = V_a ) ).
+
+cnf(cls_add__0__left_0,axiom,
+    ( ~ class_OrderedGroup_Omonoid__add(T_a)
+    | hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),c_HOL_Ozero__class_Ozero(T_a)),V_a) = V_a ) ).
+
+cnf(cls_monoid__add__class_Oadd__0__right_0,axiom,
+    ( ~ class_OrderedGroup_Omonoid__add(T_a)
+    | hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_a),c_HOL_Ozero__class_Ozero(T_a)) = V_a ) ).
+
+cnf(cls_class__semiring_Osemiring__rules_I6_J_0,axiom,
+    ( ~ class_Ring__and__Field_Ocomm__semiring__1(T_a)
+    | hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_a),c_HOL_Ozero__class_Ozero(T_a)) = V_a ) ).
+
+cnf(cls_class__semiring_Osemiring__rules_I5_J_0,axiom,
+    ( ~ class_Ring__and__Field_Ocomm__semiring__1(T_a)
+    | hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),c_HOL_Ozero__class_Ozero(T_a)),V_a) = V_a ) ).
+
+cnf(cls_power__0__left_0,axiom,
+    ( ~ class_Ring__and__Field_Osemiring__0(T_a)
+    | ~ class_Power_Opower(T_a)
+    | c_Power_Opower__class_Opower(c_HOL_Ozero__class_Ozero(T_a),c_HOL_Ozero__class_Ozero(tc_nat),T_a) = c_HOL_Oone__class_Oone(T_a) ) ).
+
+cnf(cls_split__mod_5,axiom,
+    ( ~ hBOOL(hAPP(V_P,V_n))
+    | hBOOL(hAPP(V_P,c_Divides_Odiv__class_Omod(V_n,c_HOL_Ozero__class_Ozero(tc_nat),tc_nat))) ) ).
+
+cnf(cls_split__mod_0,axiom,
+    ( ~ hBOOL(hAPP(V_P,c_Divides_Odiv__class_Omod(V_n,c_HOL_Ozero__class_Ozero(tc_nat),tc_nat)))
+    | hBOOL(hAPP(V_P,V_n)) ) ).
+
+cnf(cls_mult__cancel2_1,axiom,
+    c_HOL_Otimes__class_Otimes(V_m,c_HOL_Ozero__class_Ozero(tc_nat),tc_nat) = c_HOL_Otimes__class_Otimes(V_n,c_HOL_Ozero__class_Ozero(tc_nat),tc_nat) ).
+
+cnf(cls_mult__cancel1_1,axiom,
+    c_HOL_Otimes__class_Otimes(c_HOL_Ozero__class_Ozero(tc_nat),V_m,tc_nat) = c_HOL_Otimes__class_Otimes(c_HOL_Ozero__class_Ozero(tc_nat),V_n,tc_nat) ).
+
+cnf(cls_lexn_Oinduct_0,axiom,
+    ( hBOOL(hAPP(V_P,V_nat))
+    | hBOOL(hAPP(V_P,v_sko__List__Xlexn__Xinduct__1(V_P)))
+    | ~ hBOOL(hAPP(V_P,c_HOL_Ozero__class_Ozero(tc_nat))) ) ).
+
+cnf(cls_zero__induct_1,axiom,
+    ( hBOOL(hAPP(V_P,c_HOL_Ozero__class_Ozero(tc_nat)))
+    | ~ hBOOL(hAPP(V_P,c_ATP__Linkup_Osko__Nat__Xzero__induct__1__1(V_P)))
+    | ~ hBOOL(hAPP(V_P,V_k)) ) ).
+
+cnf(cls_neq0__conv_1,axiom,
+    ~ c_HOL_Oord__class_Oless(c_HOL_Ozero__class_Ozero(tc_nat),c_HOL_Ozero__class_Ozero(tc_nat),tc_nat) ).
+
+cnf(cls_liftn__0_0,axiom,
+    c_Lambda_Oliftn(c_HOL_Ozero__class_Ozero(tc_nat),V_t,V_k) = V_t ).
+
+cnf(cls_split__div_H_6,axiom,
+    ( hBOOL(hAPP(V_P,c_Divides_Odiv__class_Odiv(V_m,c_HOL_Ozero__class_Ozero(tc_nat),tc_nat)))
+    | ~ hBOOL(hAPP(V_P,c_HOL_Ozero__class_Ozero(tc_nat))) ) ).
+
+cnf(cls_split__div_5,axiom,
+    ( ~ hBOOL(hAPP(V_P,c_HOL_Ozero__class_Ozero(tc_nat)))
+    | hBOOL(hAPP(V_P,c_Divides_Odiv__class_Odiv(V_n,c_HOL_Ozero__class_Ozero(tc_nat),tc_nat))) ) ).
+
+cnf(cls_split__div_0,axiom,
+    ( ~ hBOOL(hAPP(V_P,c_Divides_Odiv__class_Odiv(V_n,c_HOL_Ozero__class_Ozero(tc_nat),tc_nat)))
+    | hBOOL(hAPP(V_P,c_HOL_Ozero__class_Ozero(tc_nat))) ) ).
+
+cnf(cls_gr0I_0,axiom,
+    ( c_HOL_Oord__class_Oless(c_HOL_Ozero__class_Ozero(tc_nat),V_n,tc_nat)
+    | V_n = c_HOL_Ozero__class_Ozero(tc_nat) ) ).
+
+cnf(cls_nat__induct_0,axiom,
+    ( hBOOL(hAPP(V_P,V_n))
+    | hBOOL(hAPP(V_P,c_ATP__Linkup_Osko__Nat__Xnat__induct__1__1(V_P)))
+    | ~ hBOOL(hAPP(V_P,c_HOL_Ozero__class_Ozero(tc_nat))) ) ).
+
+cnf(cls_mult__is__0_2,axiom,
+    c_HOL_Otimes__class_Otimes(V_m,c_HOL_Ozero__class_Ozero(tc_nat),tc_nat) = c_HOL_Ozero__class_Ozero(tc_nat) ).
+
+cnf(cls_mult__is__0_1,axiom,
+    c_HOL_Otimes__class_Otimes(c_HOL_Ozero__class_Ozero(tc_nat),V_n,tc_nat) = c_HOL_Ozero__class_Ozero(tc_nat) ).
+
+cnf(cls_mult__is__0_0,axiom,
+    ( c_HOL_Otimes__class_Otimes(V_m,V_n,tc_nat) != c_HOL_Ozero__class_Ozero(tc_nat)
+    | V_n = c_HOL_Ozero__class_Ozero(tc_nat)
+    | V_m = c_HOL_Ozero__class_Ozero(tc_nat) ) ).
+
+cnf(cls_add__is__0_1,axiom,
+    ( hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),V_m),V_n) != c_HOL_Ozero__class_Ozero(tc_nat)
+    | V_n = c_HOL_Ozero__class_Ozero(tc_nat) ) ).
+
+cnf(cls_add__is__0_0,axiom,
+    ( hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),V_m),V_n) != c_HOL_Ozero__class_Ozero(tc_nat)
+    | V_m = c_HOL_Ozero__class_Ozero(tc_nat) ) ).
+
+cnf(cls_mult__cancel2_0,axiom,
+    ( c_HOL_Otimes__class_Otimes(V_m,V_k,tc_nat) != c_HOL_Otimes__class_Otimes(V_n,V_k,tc_nat)
+    | V_k = c_HOL_Ozero__class_Ozero(tc_nat)
+    | V_m = V_n ) ).
+
+cnf(cls_mult__cancel1_0,axiom,
+    ( c_HOL_Otimes__class_Otimes(V_k,V_m,tc_nat) != c_HOL_Otimes__class_Otimes(V_k,V_n,tc_nat)
+    | V_k = c_HOL_Ozero__class_Ozero(tc_nat)
+    | V_m = V_n ) ).
+
+cnf(cls_nat__mult__eq__cancel__disj_0,axiom,
+    ( c_HOL_Otimes__class_Otimes(V_k,V_m,tc_nat) != c_HOL_Otimes__class_Otimes(V_k,V_n,tc_nat)
+    | V_m = V_n
+    | V_k = c_HOL_Ozero__class_Ozero(tc_nat) ) ).
+
+cnf(cls_natgb_Oadd__r0__iff_0,axiom,
+    ( V_x != hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),V_x),V_a)
+    | V_a = c_HOL_Ozero__class_Ozero(tc_nat) ) ).
+
+cnf(cls_add__eq__self__zero_0,axiom,
+    ( hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),V_m),V_n) != V_m
+    | V_n = c_HOL_Ozero__class_Ozero(tc_nat) ) ).
+
+cnf(cls_replicate_Oinduct_0,axiom,
+    ( hBOOL(hAPP(V_P,V_nat))
+    | hBOOL(hAPP(V_P,v_sko__List__Xreplicate__Xinduct__1(V_P)))
+    | ~ hBOOL(hAPP(V_P,c_HOL_Ozero__class_Ozero(tc_nat))) ) ).
+
+cnf(cls_nat_Oinducts_0,axiom,
+    ( hBOOL(hAPP(V_P,V_nat))
+    | hBOOL(hAPP(V_P,v_sko__Nat__Xnat__Xinducts__1(V_P)))
+    | ~ hBOOL(hAPP(V_P,c_HOL_Ozero__class_Ozero(tc_nat))) ) ).
+
+cnf(cls_add__is__0_2,axiom,
+    hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),c_HOL_Ozero__class_Ozero(tc_nat)),c_HOL_Ozero__class_Ozero(tc_nat)) = c_HOL_Ozero__class_Ozero(tc_nat) ).
+
+cnf(cls_nat_Oinduct_0,axiom,
+    ( hBOOL(hAPP(V_P,V_nat))
+    | hBOOL(hAPP(V_P,v_sko__Nat__Xnat__Xinduct__1(V_P)))
+    | ~ hBOOL(hAPP(V_P,c_HOL_Ozero__class_Ozero(tc_nat))) ) ).
+
+cnf(cls_gr__implies__not0_0,axiom,
+    ~ c_HOL_Oord__class_Oless(V_m,c_HOL_Ozero__class_Ozero(tc_nat),tc_nat) ).
+
+cnf(cls_not__less0_0,axiom,
+    ~ c_HOL_Oord__class_Oless(V_n,c_HOL_Ozero__class_Ozero(tc_nat),tc_nat) ).
+
+cnf(cls_upt_Oinduct_0,axiom,
+    ( hBOOL(hAPP(V_P,V_nat))
+    | hBOOL(hAPP(V_P,v_sko__List__Xupt__Xinduct__1(V_P)))
+    | ~ hBOOL(hAPP(V_P,c_HOL_Ozero__class_Ozero(tc_nat))) ) ).
+
+cnf(cls_natgb_Oadd__r0__iff_1,axiom,
+    V_x = hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),V_x),c_HOL_Ozero__class_Ozero(tc_nat)) ).
+
+cnf(cls_plus__nat_Oadd__0_0,axiom,
+    hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),c_HOL_Ozero__class_Ozero(tc_nat)),V_n) = V_n ).
+
+cnf(cls_Nat_Oadd__0__right_0,axiom,
+    hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),V_m),c_HOL_Ozero__class_Ozero(tc_nat)) = V_m ).
+
+cnf(cls_n__less__n__mult__m_0,axiom,
+    ( c_HOL_Oord__class_Oless(V_n,c_HOL_Otimes__class_Otimes(V_n,V_m,tc_nat),tc_nat)
+    | ~ c_HOL_Oord__class_Oless(c_Suc(c_HOL_Ozero__class_Ozero(tc_nat)),V_m,tc_nat)
+    | ~ c_HOL_Oord__class_Oless(c_Suc(c_HOL_Ozero__class_Ozero(tc_nat)),V_n,tc_nat) ) ).
+
+cnf(cls_n__less__m__mult__n_0,axiom,
+    ( c_HOL_Oord__class_Oless(V_n,c_HOL_Otimes__class_Otimes(V_m,V_n,tc_nat),tc_nat)
+    | ~ c_HOL_Oord__class_Oless(c_Suc(c_HOL_Ozero__class_Ozero(tc_nat)),V_m,tc_nat)
+    | ~ c_HOL_Oord__class_Oless(c_Suc(c_HOL_Ozero__class_Ozero(tc_nat)),V_n,tc_nat) ) ).
+
+cnf(cls_one__less__mult_0,axiom,
+    ( c_HOL_Oord__class_Oless(c_Suc(c_HOL_Ozero__class_Ozero(tc_nat)),c_HOL_Otimes__class_Otimes(V_m,V_n,tc_nat),tc_nat)
+    | ~ c_HOL_Oord__class_Oless(c_Suc(c_HOL_Ozero__class_Ozero(tc_nat)),V_m,tc_nat)
+    | ~ c_HOL_Oord__class_Oless(c_Suc(c_HOL_Ozero__class_Ozero(tc_nat)),V_n,tc_nat) ) ).
+
+cnf(cls_Suc__mult__cancel1_0,axiom,
+    ( c_HOL_Otimes__class_Otimes(c_Suc(V_k),V_m,tc_nat) != c_HOL_Otimes__class_Otimes(c_Suc(V_k),V_n,tc_nat)
+    | V_m = V_n ) ).
+
+cnf(cls_less__SucI_0,axiom,
+    ( c_HOL_Oord__class_Oless(V_m,c_Suc(V_n),tc_nat)
+    | ~ c_HOL_Oord__class_Oless(V_m,V_n,tc_nat) ) ).
+
+cnf(cls_Suc__lessD_0,axiom,
+    ( c_HOL_Oord__class_Oless(V_m,V_n,tc_nat)
+    | ~ c_HOL_Oord__class_Oless(c_Suc(V_m),V_n,tc_nat) ) ).
+
+cnf(cls_mod__Suc__eq__Suc__mod_0,axiom,
+    c_Divides_Odiv__class_Omod(c_Suc(V_m),V_n,tc_nat) = c_Divides_Odiv__class_Omod(c_Suc(c_Divides_Odiv__class_Omod(V_m,V_n,tc_nat)),V_n,tc_nat) ).
+
+cnf(cls_less__trans__Suc_0,axiom,
+    ( c_HOL_Oord__class_Oless(c_Suc(V_i),V_k,tc_nat)
+    | ~ c_HOL_Oord__class_Oless(V_j,V_k,tc_nat)
+    | ~ c_HOL_Oord__class_Oless(V_i,V_j,tc_nat) ) ).
+
+cnf(cls_less__Suc__eq_2,axiom,
+    c_HOL_Oord__class_Oless(V_x,c_Suc(V_x),tc_nat) ).
+
+cnf(cls_lessI_0,axiom,
+    c_HOL_Oord__class_Oless(V_n,c_Suc(V_n),tc_nat) ).
+
+cnf(cls_not__less__less__Suc__eq_0,axiom,
+    ( V_n = V_m
+    | ~ c_HOL_Oord__class_Oless(V_n,c_Suc(V_m),tc_nat)
+    | c_HOL_Oord__class_Oless(V_n,V_m,tc_nat) ) ).
+
+cnf(cls_less__antisym_0,axiom,
+    ( V_m = V_n
+    | ~ c_HOL_Oord__class_Oless(V_n,c_Suc(V_m),tc_nat)
+    | c_HOL_Oord__class_Oless(V_n,V_m,tc_nat) ) ).
+
+cnf(cls_less__SucE_0,axiom,
+    ( V_m = V_n
+    | c_HOL_Oord__class_Oless(V_m,V_n,tc_nat)
+    | ~ c_HOL_Oord__class_Oless(V_m,c_Suc(V_n),tc_nat) ) ).
+
+cnf(cls_add__Suc_0,axiom,
+    hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),c_Suc(V_m)),V_n) = c_Suc(hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),V_m),V_n)) ).
+
+cnf(cls_add__Suc__right_0,axiom,
+    hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),V_m),c_Suc(V_n)) = c_Suc(hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),V_m),V_n)) ).
+
+cnf(cls_mod__Suc_1,axiom,
+    ( c_Divides_Odiv__class_Omod(c_Suc(V_m),V_n,tc_nat) = c_Suc(c_Divides_Odiv__class_Omod(V_m,V_n,tc_nat))
+    | c_Suc(c_Divides_Odiv__class_Omod(V_m,V_n,tc_nat)) = V_n ) ).
+
+cnf(cls_add__Suc__shift_0,axiom,
+    hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),c_Suc(V_m)),V_n) = hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),V_m),c_Suc(V_n)) ).
+
+cnf(cls_Suc__lessI_0,axiom,
+    ( c_HOL_Oord__class_Oless(c_Suc(V_m),V_n,tc_nat)
+    | c_Suc(V_m) = V_n
+    | ~ c_HOL_Oord__class_Oless(V_m,V_n,tc_nat) ) ).
+
+cnf(cls_not__less__less__Suc__eq_1,axiom,
+    ( c_HOL_Oord__class_Oless(V_x,V_x,tc_nat)
+    | c_HOL_Oord__class_Oless(V_x,c_Suc(V_x),tc_nat) ) ).
+
+cnf(cls_not__less__eq_1,axiom,
+    ( ~ c_HOL_Oord__class_Oless(V_m,V_n,tc_nat)
+    | ~ c_HOL_Oord__class_Oless(V_n,c_Suc(V_m),tc_nat) ) ).
+
+cnf(cls_not__less__eq_0,axiom,
+    ( c_HOL_Oord__class_Oless(V_n,c_Suc(V_m),tc_nat)
+    | c_HOL_Oord__class_Oless(V_m,V_n,tc_nat) ) ).
+
+cnf(cls_less__Suc__eq__0__disj_3,axiom,
+    ( c_HOL_Oord__class_Oless(c_Suc(V_x),c_Suc(V_n),tc_nat)
+    | ~ c_HOL_Oord__class_Oless(V_x,V_n,tc_nat) ) ).
+
+cnf(cls_Suc__less__eq_0,axiom,
+    ( c_HOL_Oord__class_Oless(V_m,V_n,tc_nat)
+    | ~ c_HOL_Oord__class_Oless(c_Suc(V_m),c_Suc(V_n),tc_nat) ) ).
+
+cnf(cls_Suc__mono_0,axiom,
+    ( c_HOL_Oord__class_Oless(c_Suc(V_m),c_Suc(V_n),tc_nat)
+    | ~ c_HOL_Oord__class_Oless(V_m,V_n,tc_nat) ) ).
+
+cnf(cls_dB_Osimps_I8_J_0,axiom,
+    hAPP(hAPP(c_Lambda_OdB_OApp,V_dB1),V_dB2) != c_Lambda_OdB_OAbs(V_dB_H) ).
+
+cnf(cls_dB_Osimps_I9_J_0,axiom,
+    c_Lambda_OdB_OAbs(V_dB_H) != hAPP(hAPP(c_Lambda_OdB_OApp,V_dB1),V_dB2) ).
+
+cnf(cls_dB_Osimps_I4_J_0,axiom,
+    c_Lambda_OdB_OVar(V_nat) != hAPP(hAPP(c_Lambda_OdB_OApp,V_dB1_H),V_dB2_H) ).
+
+cnf(cls_appR_0,axiom,
+    ( c_Lambda_Obeta(hAPP(hAPP(c_Lambda_OdB_OApp,V_u),V_s),hAPP(hAPP(c_Lambda_OdB_OApp,V_u),V_t))
+    | ~ c_Lambda_Obeta(V_s,V_t) ) ).
+
+cnf(cls_appL_0,axiom,
+    ( c_Lambda_Obeta(hAPP(hAPP(c_Lambda_OdB_OApp,V_s),V_u),hAPP(hAPP(c_Lambda_OdB_OApp,V_t),V_u))
+    | ~ c_Lambda_Obeta(V_s,V_t) ) ).
+
+cnf(cls_liftn_Osimps_I2_J_0,axiom,
+    c_Lambda_Oliftn(V_n,hAPP(hAPP(c_Lambda_OdB_OApp,V_s),V_t),V_k) = hAPP(hAPP(c_Lambda_OdB_OApp,c_Lambda_Oliftn(V_n,V_s,V_k)),c_Lambda_Oliftn(V_n,V_t,V_k)) ).
+
+cnf(cls_substn_Osimps_I2_J_0,axiom,
+    c_Lambda_Osubstn(hAPP(hAPP(c_Lambda_OdB_OApp,V_t),V_u),V_s,V_k) = hAPP(hAPP(c_Lambda_OdB_OApp,c_Lambda_Osubstn(V_t,V_s,V_k)),c_Lambda_Osubstn(V_u,V_s,V_k)) ).
+
+cnf(cls_dB_Osimps_I5_J_0,axiom,
+    hAPP(hAPP(c_Lambda_OdB_OApp,V_dB1_H),V_dB2_H) != c_Lambda_OdB_OVar(V_nat) ).
+
+cnf(cls_substn__subst__n_0,axiom,
+    c_Lambda_Osubstn(V_t,V_s,V_n) = hAPP(hAPP(hAPP(c_Lambda_Osubst,V_t),c_Lambda_Oliftn(V_n,V_s,c_HOL_Ozero__class_Ozero(tc_nat))),V_n) ).
+
+cnf(cls_map__is__Nil__conv_0,axiom,
+    ( c_List_Omap(V_f,V_xs,T_b,T_a) != c_List_Olist_ONil(T_a)
+    | V_xs = c_List_Olist_ONil(T_b) ) ).
+
+cnf(cls_Nil__is__map__conv_0,axiom,
+    ( c_List_Olist_ONil(T_a) != c_List_Omap(V_f,V_xs,T_b,T_a)
+    | V_xs = c_List_Olist_ONil(T_b) ) ).
+
+cnf(cls_map__is__Nil__conv_1,axiom,
+    c_List_Omap(V_f,c_List_Olist_ONil(T_b),T_b,T_a) = c_List_Olist_ONil(T_a) ).
+
+cnf(cls_Nil__is__map__conv_1,axiom,
+    c_List_Olist_ONil(T_a) = c_List_Omap(V_f,c_List_Olist_ONil(T_b),T_b,T_a) ).
+
+cnf(cls_var__app__type__eq_0,axiom,
+    ( V_T = V_U
+    | ~ c_Type_Otyping(V_e,c_List_Ofoldl(c_Lambda_OdB_OApp,c_Lambda_OdB_OVar(V_i),V_ts,tc_Lambda_OdB,tc_Lambda_OdB),V_U)
+    | ~ c_Type_Otyping(V_e,c_List_Ofoldl(c_Lambda_OdB_OApp,c_Lambda_OdB_OVar(V_i),V_ts,tc_Lambda_OdB,tc_Lambda_OdB),V_T) ) ).
+
+cnf(cls_Abs__eq__apps__conv_1,axiom,
+    ( c_Lambda_OdB_OAbs(V_r) != c_List_Ofoldl(c_Lambda_OdB_OApp,V_s,V_ss,tc_Lambda_OdB,tc_Lambda_OdB)
+    | V_ss = c_List_Olist_ONil(tc_Lambda_OdB) ) ).
+
+cnf(cls_Var__apps__neq__Abs__apps_0,axiom,
+    c_List_Ofoldl(c_Lambda_OdB_OApp,c_Lambda_OdB_OVar(V_n),V_ts,tc_Lambda_OdB,tc_Lambda_OdB) != c_List_Ofoldl(c_Lambda_OdB_OApp,c_Lambda_OdB_OAbs(V_r),V_ss,tc_Lambda_OdB,tc_Lambda_OdB) ).
+
+cnf(cls_Var__eq__apps__conv_2,axiom,
+    c_Lambda_OdB_OVar(V_m) = c_List_Ofoldl(c_Lambda_OdB_OApp,c_Lambda_OdB_OVar(V_m),c_List_Olist_ONil(tc_Lambda_OdB),tc_Lambda_OdB,tc_Lambda_OdB) ).
+
+cnf(cls_Abs__eq__apps__conv_2,axiom,
+    c_Lambda_OdB_OAbs(V_r) = c_List_Ofoldl(c_Lambda_OdB_OApp,c_Lambda_OdB_OAbs(V_r),c_List_Olist_ONil(tc_Lambda_OdB),tc_Lambda_OdB,tc_Lambda_OdB) ).
+
+cnf(cls_apps__eq__Abs__conv_1,axiom,
+    ( c_List_Ofoldl(c_Lambda_OdB_OApp,V_s,V_ss,tc_Lambda_OdB,tc_Lambda_OdB) != c_Lambda_OdB_OAbs(V_r)
+    | V_ss = c_List_Olist_ONil(tc_Lambda_OdB) ) ).
+
+cnf(cls_apps__eq__Abs__conv_2,axiom,
+    c_List_Ofoldl(c_Lambda_OdB_OApp,c_Lambda_OdB_OAbs(V_r),c_List_Olist_ONil(tc_Lambda_OdB),tc_Lambda_OdB,tc_Lambda_OdB) = c_Lambda_OdB_OAbs(V_r) ).
+
+cnf(cls_Var__eq__apps__conv_1,axiom,
+    ( c_Lambda_OdB_OVar(V_m) != c_List_Ofoldl(c_Lambda_OdB_OApp,V_s,V_ss,tc_Lambda_OdB,tc_Lambda_OdB)
+    | V_ss = c_List_Olist_ONil(tc_Lambda_OdB) ) ).
+
+cnf(cls_Abs__App__neq__Var__apps_0,axiom,
+    hAPP(hAPP(c_Lambda_OdB_OApp,c_Lambda_OdB_OAbs(V_s)),V_t) != c_List_Ofoldl(c_Lambda_OdB_OApp,c_Lambda_OdB_OVar(V_n),V_ss,tc_Lambda_OdB,tc_Lambda_OdB) ).
+
+cnf(cls_foldl__Nil_0,axiom,
+    c_List_Ofoldl(V_f,V_a,c_List_Olist_ONil(T_b),T_a,T_b) = V_a ).
+
+cnf(cls_foldl__assoc_0,axiom,
+    ( ~ class_OrderedGroup_Osemigroup__add(T_a)
+    | c_List_Ofoldl(c_HOL_Oplus__class_Oplus(T_a),hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_x),V_y),V_zs,T_a,T_a) = hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_x),c_List_Ofoldl(c_HOL_Oplus__class_Oplus(T_a),V_y,V_zs,T_a,T_a)) ) ).
+
+cnf(cls_subst__eq_0,axiom,
+    hAPP(hAPP(hAPP(c_Lambda_Osubst,c_Lambda_OdB_OVar(V_k)),V_u),V_k) = V_u ).
+
+cnf(cls_subst__preserves__beta_0,axiom,
+    ( c_Lambda_Obeta(hAPP(hAPP(hAPP(c_Lambda_Osubst,V_r),V_t),V_i),hAPP(hAPP(hAPP(c_Lambda_Osubst,V_s),V_t),V_i))
+    | ~ c_Lambda_Obeta(V_r,V_s) ) ).
+
+cnf(cls_class__semiring_Opwr__0_0,axiom,
+    ( ~ class_Ring__and__Field_Ocomm__semiring__1(T_a)
+    | c_Power_Opower__class_Opower(V_x,c_HOL_Ozero__class_Ozero(tc_nat),T_a) = c_HOL_Oone__class_Oone(T_a) ) ).
+
+cnf(cls_nat__mult__div__cancel1_0,axiom,
+    ( c_Divides_Odiv__class_Odiv(c_HOL_Otimes__class_Otimes(V_k,V_m,tc_nat),c_HOL_Otimes__class_Otimes(V_k,V_n,tc_nat),tc_nat) = c_Divides_Odiv__class_Odiv(V_m,V_n,tc_nat)
+    | ~ c_HOL_Oord__class_Oless(c_HOL_Ozero__class_Ozero(tc_nat),V_k,tc_nat) ) ).
+
+cnf(cls_div__mult__mult1__if_0,axiom,
+    ( ~ class_Divides_Osemiring__div(T_a)
+    | c_Divides_Odiv__class_Odiv(c_HOL_Otimes__class_Otimes(c_HOL_Ozero__class_Ozero(T_a),V_a,T_a),c_HOL_Otimes__class_Otimes(c_HOL_Ozero__class_Ozero(T_a),V_b,T_a),T_a) = c_HOL_Ozero__class_Ozero(T_a) ) ).
+
+cnf(cls_nat__mult__div__cancel__disj_0,axiom,
+    c_Divides_Odiv__class_Odiv(c_HOL_Otimes__class_Otimes(c_HOL_Ozero__class_Ozero(tc_nat),V_m,tc_nat),c_HOL_Otimes__class_Otimes(c_HOL_Ozero__class_Ozero(tc_nat),V_n,tc_nat),tc_nat) = c_HOL_Ozero__class_Ozero(tc_nat) ).
+
+cnf(cls_class__semiring_Osemiring__rules_I27_J_0,axiom,
+    ( ~ class_Ring__and__Field_Ocomm__semiring__1(T_a)
+    | c_HOL_Otimes__class_Otimes(V_x,c_Power_Opower__class_Opower(V_x,V_q,T_a),T_a) = c_Power_Opower__class_Opower(V_x,c_Suc(V_q),T_a) ) ).
+
+cnf(cls_class__semiring_Osemiring__rules_I28_J_0,axiom,
+    ( ~ class_Ring__and__Field_Ocomm__semiring__1(T_a)
+    | c_HOL_Otimes__class_Otimes(c_Power_Opower__class_Opower(V_x,V_q,T_a),V_x,T_a) = c_Power_Opower__class_Opower(V_x,c_Suc(V_q),T_a) ) ).
+
+cnf(cls_mod__add__self2_0,axiom,
+    ( ~ class_Divides_Osemiring__div(T_a)
+    | c_Divides_Odiv__class_Omod(hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_a),V_b),V_b,T_a) = c_Divides_Odiv__class_Omod(V_a,V_b,T_a) ) ).
+
+cnf(cls_mod__add__self1_0,axiom,
+    ( ~ class_Divides_Osemiring__div(T_a)
+    | c_Divides_Odiv__class_Omod(hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_b),V_a),V_b,T_a) = c_Divides_Odiv__class_Omod(V_a,V_b,T_a) ) ).
+
+cnf(cls_shift__gt_0,axiom,
+    ( hAPP(c_Type_Oshift(V_e,V_i,V_T,T_a),V_j) = hAPP(V_e,V_j)
+    | ~ c_HOL_Oord__class_Oless(V_j,V_i,tc_nat) ) ).
+
+cnf(cls_mult__pos__neg2_0,axiom,
+    ( ~ class_Ring__and__Field_Oordered__semiring__strict(T_a)
+    | c_HOL_Oord__class_Oless(c_HOL_Otimes__class_Otimes(V_b,V_a,T_a),c_HOL_Ozero__class_Ozero(T_a),T_a)
+    | ~ c_HOL_Oord__class_Oless(V_b,c_HOL_Ozero__class_Ozero(T_a),T_a)
+    | ~ c_HOL_Oord__class_Oless(c_HOL_Ozero__class_Ozero(T_a),V_a,T_a) ) ).
+
+cnf(cls_mult__pos__neg_0,axiom,
+    ( ~ class_Ring__and__Field_Oordered__semiring__strict(T_a)
+    | c_HOL_Oord__class_Oless(c_HOL_Otimes__class_Otimes(V_a,V_b,T_a),c_HOL_Ozero__class_Ozero(T_a),T_a)
+    | ~ c_HOL_Oord__class_Oless(V_b,c_HOL_Ozero__class_Ozero(T_a),T_a)
+    | ~ c_HOL_Oord__class_Oless(c_HOL_Ozero__class_Ozero(T_a),V_a,T_a) ) ).
+
+cnf(cls_mult__neg__pos_0,axiom,
+    ( ~ class_Ring__and__Field_Oordered__semiring__strict(T_a)
+    | c_HOL_Oord__class_Oless(c_HOL_Otimes__class_Otimes(V_a,V_b,T_a),c_HOL_Ozero__class_Ozero(T_a),T_a)
+    | ~ c_HOL_Oord__class_Oless(c_HOL_Ozero__class_Ozero(T_a),V_b,T_a)
+    | ~ c_HOL_Oord__class_Oless(V_a,c_HOL_Ozero__class_Ozero(T_a),T_a) ) ).
+
+cnf(cls_dvd__mult__right_0,axiom,
+    ( ~ class_Ring__and__Field_Ocomm__semiring__1(T_a)
+    | c_Ring__and__Field_Odvd__class_Odvd(V_b,V_c,T_a)
+    | ~ c_Ring__and__Field_Odvd__class_Odvd(c_HOL_Otimes__class_Otimes(V_a,V_b,T_a),V_c,T_a) ) ).
+
+cnf(cls_dvd__mult__left_0,axiom,
+    ( ~ class_Ring__and__Field_Ocomm__semiring__1(T_a)
+    | c_Ring__and__Field_Odvd__class_Odvd(V_a,V_c,T_a)
+    | ~ c_Ring__and__Field_Odvd__class_Odvd(c_HOL_Otimes__class_Otimes(V_a,V_b,T_a),V_c,T_a) ) ).
+
+cnf(cls_dvd__mult2_0,axiom,
+    ( ~ class_Ring__and__Field_Ocomm__semiring__1(T_a)
+    | c_Ring__and__Field_Odvd__class_Odvd(V_a,c_HOL_Otimes__class_Otimes(V_b,V_c,T_a),T_a)
+    | ~ c_Ring__and__Field_Odvd__class_Odvd(V_a,V_b,T_a) ) ).
+
+cnf(cls_dvd__mult_0,axiom,
+    ( ~ class_Ring__and__Field_Ocomm__semiring__1(T_a)
+    | c_Ring__and__Field_Odvd__class_Odvd(V_a,c_HOL_Otimes__class_Otimes(V_b,V_c,T_a),T_a)
+    | ~ c_Ring__and__Field_Odvd__class_Odvd(V_a,V_c,T_a) ) ).
+
+cnf(cls_setsum__op__ivl__Suc_0,axiom,
+    ( ~ class_OrderedGroup_Ocomm__monoid__add(T_a)
+    | c_Finite__Set_Osetsum(V_f,c_SetInterval_Oord__class_OatLeastLessThan(V_m,c_Suc(V_n),tc_nat),tc_nat,T_a) = c_HOL_Ozero__class_Ozero(T_a)
+    | ~ c_HOL_Oord__class_Oless(V_n,V_m,tc_nat) ) ).
+
+cnf(cls_pos__add__strict_0,axiom,
+    ( ~ class_Ring__and__Field_Oordered__semidom(T_a)
+    | c_HOL_Oord__class_Oless(V_b,hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_a),V_c),T_a)
+    | ~ c_HOL_Oord__class_Oless(V_b,V_c,T_a)
+    | ~ c_HOL_Oord__class_Oless(c_HOL_Ozero__class_Ozero(T_a),V_a,T_a) ) ).
+
+cnf(cls_mod__mult2__eq_0,axiom,
+    c_Divides_Odiv__class_Omod(V_a,c_HOL_Otimes__class_Otimes(V_b,V_c,tc_nat),tc_nat) = hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),c_HOL_Otimes__class_Otimes(V_b,c_Divides_Odiv__class_Omod(c_Divides_Odiv__class_Odiv(V_a,V_b,tc_nat),V_c,tc_nat),tc_nat)),c_Divides_Odiv__class_Omod(V_a,V_b,tc_nat)) ).
+
+cnf(cls_subst__lt_0,axiom,
+    ( hAPP(hAPP(hAPP(c_Lambda_Osubst,c_Lambda_OdB_OVar(V_j)),V_u),V_i) = c_Lambda_OdB_OVar(V_j)
+    | ~ c_HOL_Oord__class_Oless(V_j,V_i,tc_nat) ) ).
+
+cnf(cls_mod__mod__cancel_0,axiom,
+    ( ~ class_Divides_Osemiring__div(T_a)
+    | c_Divides_Odiv__class_Omod(c_Divides_Odiv__class_Omod(V_a,V_b,T_a),V_c,T_a) = c_Divides_Odiv__class_Omod(V_a,V_c,T_a)
+    | ~ c_Ring__and__Field_Odvd__class_Odvd(V_c,V_b,T_a) ) ).
+
+cnf(cls_power__strict__increasing__iff_1,axiom,
+    ( ~ class_Ring__and__Field_Oordered__semidom(T_a)
+    | c_HOL_Oord__class_Oless(c_Power_Opower__class_Opower(V_b,V_x,T_a),c_Power_Opower__class_Opower(V_b,V_y,T_a),T_a)
+    | ~ c_HOL_Oord__class_Oless(V_x,V_y,tc_nat)
+    | ~ c_HOL_Oord__class_Oless(c_HOL_Oone__class_Oone(T_a),V_b,T_a) ) ).
+
+cnf(cls_power__strict__increasing__iff_0,axiom,
+    ( ~ class_Ring__and__Field_Oordered__semidom(T_a)
+    | c_HOL_Oord__class_Oless(V_x,V_y,tc_nat)
+    | ~ c_HOL_Oord__class_Oless(c_Power_Opower__class_Opower(V_b,V_x,T_a),c_Power_Opower__class_Opower(V_b,V_y,T_a),T_a)
+    | ~ c_HOL_Oord__class_Oless(c_HOL_Oone__class_Oone(T_a),V_b,T_a) ) ).
+
+cnf(cls_power__strict__increasing_0,axiom,
+    ( ~ class_Ring__and__Field_Oordered__semidom(T_a)
+    | c_HOL_Oord__class_Oless(c_Power_Opower__class_Opower(V_a,V_n,T_a),c_Power_Opower__class_Opower(V_a,V_N,T_a),T_a)
+    | ~ c_HOL_Oord__class_Oless(c_HOL_Oone__class_Oone(T_a),V_a,T_a)
+    | ~ c_HOL_Oord__class_Oless(V_n,V_N,tc_nat) ) ).
+
+cnf(cls_power__less__imp__less__exp_0,axiom,
+    ( ~ class_Ring__and__Field_Oordered__semidom(T_a)
+    | c_HOL_Oord__class_Oless(V_m,V_n,tc_nat)
+    | ~ c_HOL_Oord__class_Oless(c_Power_Opower__class_Opower(V_a,V_m,T_a),c_Power_Opower__class_Opower(V_a,V_n,T_a),T_a)
+    | ~ c_HOL_Oord__class_Oless(c_HOL_Oone__class_Oone(T_a),V_a,T_a) ) ).
+
+cnf(cls_not__add__less1_0,axiom,
+    ~ c_HOL_Oord__class_Oless(hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),V_i),V_j),V_i,tc_nat) ).
+
+cnf(cls_not__add__less2_0,axiom,
+    ~ c_HOL_Oord__class_Oless(hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),V_j),V_i),V_i,tc_nat) ).
+
+cnf(cls_power__less__power__Suc_0,axiom,
+    ( ~ class_Ring__and__Field_Oordered__semidom(T_a)
+    | c_HOL_Oord__class_Oless(c_Power_Opower__class_Opower(V_a,V_n,T_a),c_HOL_Otimes__class_Otimes(V_a,c_Power_Opower__class_Opower(V_a,V_n,T_a),T_a),T_a)
+    | ~ c_HOL_Oord__class_Oless(c_HOL_Oone__class_Oone(T_a),V_a,T_a) ) ).
+
+cnf(cls_div__mult2__eq_0,axiom,
+    c_Divides_Odiv__class_Odiv(V_a,c_HOL_Otimes__class_Otimes(V_b,V_c,tc_nat),tc_nat) = c_Divides_Odiv__class_Odiv(c_Divides_Odiv__class_Odiv(V_a,V_b,tc_nat),V_c,tc_nat) ).
+
+cnf(cls_mult__dvd__mono_0,axiom,
+    ( ~ class_Ring__and__Field_Ocomm__semiring__1(T_a)
+    | c_Ring__and__Field_Odvd__class_Odvd(c_HOL_Otimes__class_Otimes(V_a,V_c,T_a),c_HOL_Otimes__class_Otimes(V_b,V_d,T_a),T_a)
+    | ~ c_Ring__and__Field_Odvd__class_Odvd(V_c,V_d,T_a)
+    | ~ c_Ring__and__Field_Odvd__class_Odvd(V_a,V_b,T_a) ) ).
+
+cnf(cls_mod__lemma_0,axiom,
+    ( c_HOL_Oord__class_Oless(hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),c_HOL_Otimes__class_Otimes(V_b,c_Divides_Odiv__class_Omod(V_q,V_c,tc_nat),tc_nat)),V_r),c_HOL_Otimes__class_Otimes(V_b,V_c,tc_nat),tc_nat)
+    | ~ c_HOL_Oord__class_Oless(V_r,V_b,tc_nat)
+    | ~ c_HOL_Oord__class_Oless(c_HOL_Ozero__class_Ozero(tc_nat),V_c,tc_nat) ) ).
+
+cnf(cls_class__ringb_Oadd__scale__eq__noteq_0,axiom,
+    ( ~ class_Ring__and__Field_Oidom(T_a)
+    | ~ class_Int_Onumber__ring(T_a)
+    | hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_x),c_HOL_Otimes__class_Otimes(V_r,V_c,T_a)) != hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_x),c_HOL_Otimes__class_Otimes(V_r,V_d,T_a))
+    | V_c = V_d
+    | V_r = c_HOL_Ozero__class_Ozero(T_a) ) ).
+
+cnf(cls_natgb_Oadd__scale__eq__noteq_0,axiom,
+    ( hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),V_x),c_HOL_Otimes__class_Otimes(V_r,V_c,tc_nat)) != hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),V_x),c_HOL_Otimes__class_Otimes(V_r,V_d,tc_nat))
+    | V_c = V_d
+    | V_r = c_HOL_Ozero__class_Ozero(tc_nat) ) ).
+
+cnf(cls_sum__squares__eq__zero__iff_1,axiom,
+    ( ~ class_Ring__and__Field_Oordered__ring__strict(T_a)
+    | hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),c_HOL_Otimes__class_Otimes(V_x,V_x,T_a)),c_HOL_Otimes__class_Otimes(V_y,V_y,T_a)) != c_HOL_Ozero__class_Ozero(T_a)
+    | V_y = c_HOL_Ozero__class_Ozero(T_a) ) ).
+
+cnf(cls_sum__squares__eq__zero__iff_0,axiom,
+    ( ~ class_Ring__and__Field_Oordered__ring__strict(T_a)
+    | hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),c_HOL_Otimes__class_Otimes(V_x,V_x,T_a)),c_HOL_Otimes__class_Otimes(V_y,V_y,T_a)) != c_HOL_Ozero__class_Ozero(T_a)
+    | V_x = c_HOL_Ozero__class_Ozero(T_a) ) ).
+
+cnf(cls_dvd__power_0,axiom,
+    ( ~ class_Ring__and__Field_Ocomm__semiring__1(T_a)
+    | c_Ring__and__Field_Odvd__class_Odvd(V_x,c_Power_Opower__class_Opower(V_x,V_n,T_a),T_a)
+    | ~ c_HOL_Oord__class_Oless(c_HOL_Ozero__class_Ozero(tc_nat),V_n,tc_nat) ) ).
+
+cnf(cls_add__strict__right__mono_0,axiom,
+    ( ~ class_OrderedGroup_Opordered__cancel__ab__semigroup__add(T_a)
+    | c_HOL_Oord__class_Oless(hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_a),V_c),hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_b),V_c),T_a)
+    | ~ c_HOL_Oord__class_Oless(V_a,V_b,T_a) ) ).
+
+cnf(cls_add__less__cancel__right_1,axiom,
+    ( ~ class_OrderedGroup_Opordered__ab__semigroup__add__imp__le(T_a)
+    | c_HOL_Oord__class_Oless(hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_a),V_c),hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_b),V_c),T_a)
+    | ~ c_HOL_Oord__class_Oless(V_a,V_b,T_a) ) ).
+
+cnf(cls_add__less__cancel__right_0,axiom,
+    ( ~ class_OrderedGroup_Opordered__ab__semigroup__add__imp__le(T_a)
+    | c_HOL_Oord__class_Oless(V_a,V_b,T_a)
+    | ~ c_HOL_Oord__class_Oless(hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_a),V_c),hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_b),V_c),T_a) ) ).
+
+cnf(cls_add__strict__left__mono_0,axiom,
+    ( ~ class_OrderedGroup_Opordered__cancel__ab__semigroup__add(T_a)
+    | c_HOL_Oord__class_Oless(hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_c),V_a),hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_c),V_b),T_a)
+    | ~ c_HOL_Oord__class_Oless(V_a,V_b,T_a) ) ).
+
+cnf(cls_add__less__cancel__left_1,axiom,
+    ( ~ class_OrderedGroup_Opordered__ab__semigroup__add__imp__le(T_a)
+    | c_HOL_Oord__class_Oless(hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_c),V_a),hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_c),V_b),T_a)
+    | ~ c_HOL_Oord__class_Oless(V_a,V_b,T_a) ) ).
+
+cnf(cls_add__less__cancel__left_0,axiom,
+    ( ~ class_OrderedGroup_Opordered__ab__semigroup__add__imp__le(T_a)
+    | c_HOL_Oord__class_Oless(V_a,V_b,T_a)
+    | ~ c_HOL_Oord__class_Oless(hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_c),V_a),hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_c),V_b),T_a) ) ).
+
+cnf(cls_add__less__mono1_0,axiom,
+    ( c_HOL_Oord__class_Oless(hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),V_i),V_k),hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),V_j),V_k),tc_nat)
+    | ~ c_HOL_Oord__class_Oless(V_i,V_j,tc_nat) ) ).
+
+cnf(cls_nat__add__left__cancel__less_0,axiom,
+    ( c_HOL_Oord__class_Oless(V_m,V_n,tc_nat)
+    | ~ c_HOL_Oord__class_Oless(hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),V_k),V_m),hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),V_k),V_n),tc_nat) ) ).
+
+cnf(cls_nat__add__left__cancel__less_1,axiom,
+    ( c_HOL_Oord__class_Oless(hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),V_k),V_m),hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),V_k),V_n),tc_nat)
+    | ~ c_HOL_Oord__class_Oless(V_m,V_n,tc_nat) ) ).
+
+cnf(cls_subject__reduction_0,axiom,
+    ( c_Type_Otyping(V_e,V_t_H,V_T)
+    | ~ c_Lambda_Obeta(V_t,V_t_H)
+    | ~ c_Type_Otyping(V_e,V_t,V_T) ) ).
+
+cnf(cls_setsum__op__ivl__Suc_1,axiom,
+    ( ~ class_OrderedGroup_Ocomm__monoid__add(T_a)
+    | c_Finite__Set_Osetsum(V_f,c_SetInterval_Oord__class_OatLeastLessThan(V_m,c_Suc(V_n),tc_nat),tc_nat,T_a) = hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),c_Finite__Set_Osetsum(V_f,c_SetInterval_Oord__class_OatLeastLessThan(V_m,V_n,tc_nat),tc_nat,T_a)),hAPP(V_f,V_n))
+    | c_HOL_Oord__class_Oless(V_n,V_m,tc_nat) ) ).
+
+cnf(cls_dvd__mult__cancel1_0,axiom,
+    ( V_n = c_HOL_Oone__class_Oone(tc_nat)
+    | ~ c_Ring__and__Field_Odvd__class_Odvd(c_HOL_Otimes__class_Otimes(V_m,V_n,tc_nat),V_m,tc_nat)
+    | ~ c_HOL_Oord__class_Oless(c_HOL_Ozero__class_Ozero(tc_nat),V_m,tc_nat) ) ).
+
+cnf(cls_dvd__mult__cancel2_0,axiom,
+    ( V_n = c_HOL_Oone__class_Oone(tc_nat)
+    | ~ c_Ring__and__Field_Odvd__class_Odvd(c_HOL_Otimes__class_Otimes(V_n,V_m,tc_nat),V_m,tc_nat)
+    | ~ c_HOL_Oord__class_Oless(c_HOL_Ozero__class_Ozero(tc_nat),V_m,tc_nat) ) ).
+
+cnf(cls_mult__idem_0,axiom,
+    ( ~ class_OrderedGroup_Oab__semigroup__idem__mult(T_a)
+    | c_HOL_Otimes__class_Otimes(V_x,V_x,T_a) = V_x ) ).
+
+cnf(cls_mod__mult__self2__is__0_0,axiom,
+    ( ~ class_Divides_Osemiring__div(T_a)
+    | c_Divides_Odiv__class_Omod(c_HOL_Otimes__class_Otimes(V_a,V_b,T_a),V_b,T_a) = c_HOL_Ozero__class_Ozero(T_a) ) ).
+
+cnf(cls_mod__mult__self1__is__0_0,axiom,
+    ( ~ class_Divides_Osemiring__div(T_a)
+    | c_Divides_Odiv__class_Omod(c_HOL_Otimes__class_Otimes(V_b,V_a,T_a),V_b,T_a) = c_HOL_Ozero__class_Ozero(T_a) ) ).
+
+cnf(cls_mod__eq__0__iff_1,axiom,
+    c_Divides_Odiv__class_Omod(c_HOL_Otimes__class_Otimes(V_d,V_x,tc_nat),V_d,tc_nat) = c_HOL_Ozero__class_Ozero(tc_nat) ).
+
+cnf(cls_dB_Osimps_I1_J_0,axiom,
+    ( c_Lambda_OdB_OVar(V_nat) != c_Lambda_OdB_OVar(V_nat_H)
+    | V_nat = V_nat_H ) ).
+
+cnf(cls_nat__dvd__1__iff__1_0,axiom,
+    ( V_m = c_HOL_Oone__class_Oone(tc_nat)
+    | ~ c_Ring__and__Field_Odvd__class_Odvd(V_m,c_HOL_Oone__class_Oone(tc_nat),tc_nat) ) ).
+
+cnf(cls_dB_Osimps_I7_J_0,axiom,
+    c_Lambda_OdB_OAbs(V_dB_H) != c_Lambda_OdB_OVar(V_nat) ).
+
+cnf(cls_semiring__div__class_Omod__div__equality_H_0,axiom,
+    ( ~ class_Divides_Osemiring__div(T_a)
+    | hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),c_Divides_Odiv__class_Omod(V_a,V_b,T_a)),c_HOL_Otimes__class_Otimes(c_Divides_Odiv__class_Odiv(V_a,V_b,T_a),V_b,T_a)) = V_a ) ).
+
+cnf(cls_sum__squares__eq__zero__iff_2,axiom,
+    ( ~ class_Ring__and__Field_Oordered__ring__strict(T_a)
+    | hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),c_HOL_Otimes__class_Otimes(c_HOL_Ozero__class_Ozero(T_a),c_HOL_Ozero__class_Ozero(T_a),T_a)),c_HOL_Otimes__class_Otimes(c_HOL_Ozero__class_Ozero(T_a),c_HOL_Ozero__class_Ozero(T_a),T_a)) = c_HOL_Ozero__class_Ozero(T_a) ) ).
+
+cnf(cls_mult__less__cancel__right__disj_2,axiom,
+    ( ~ class_Ring__and__Field_Oordered__ring__strict(T_a)
+    | c_HOL_Oord__class_Oless(V_c,c_HOL_Ozero__class_Ozero(T_a),T_a)
+    | c_HOL_Oord__class_Oless(V_a,V_b,T_a)
+    | ~ c_HOL_Oord__class_Oless(c_HOL_Otimes__class_Otimes(V_a,V_c,T_a),c_HOL_Otimes__class_Otimes(V_b,V_c,T_a),T_a) ) ).
+
+cnf(cls_mult__less__cancel__right__disj_1,axiom,
+    ( ~ class_Ring__and__Field_Oordered__ring__strict(T_a)
+    | c_HOL_Oord__class_Oless(V_b,V_a,T_a)
+    | c_HOL_Oord__class_Oless(c_HOL_Ozero__class_Ozero(T_a),V_c,T_a)
+    | ~ c_HOL_Oord__class_Oless(c_HOL_Otimes__class_Otimes(V_a,V_c,T_a),c_HOL_Otimes__class_Otimes(V_b,V_c,T_a),T_a) ) ).
+
+cnf(cls_mult__less__cancel__left__disj_2,axiom,
+    ( ~ class_Ring__and__Field_Oordered__ring__strict(T_a)
+    | c_HOL_Oord__class_Oless(V_c,c_HOL_Ozero__class_Ozero(T_a),T_a)
+    | c_HOL_Oord__class_Oless(V_a,V_b,T_a)
+    | ~ c_HOL_Oord__class_Oless(c_HOL_Otimes__class_Otimes(V_c,V_a,T_a),c_HOL_Otimes__class_Otimes(V_c,V_b,T_a),T_a) ) ).
+
+cnf(cls_mult__less__cancel__left__disj_1,axiom,
+    ( ~ class_Ring__and__Field_Oordered__ring__strict(T_a)
+    | c_HOL_Oord__class_Oless(V_b,V_a,T_a)
+    | c_HOL_Oord__class_Oless(c_HOL_Ozero__class_Ozero(T_a),V_c,T_a)
+    | ~ c_HOL_Oord__class_Oless(c_HOL_Otimes__class_Otimes(V_c,V_a,T_a),c_HOL_Otimes__class_Otimes(V_c,V_b,T_a),T_a) ) ).
+
+cnf(cls_nat__zero__less__power__iff_0,axiom,
+    ( V_n = c_HOL_Ozero__class_Ozero(tc_nat)
+    | c_HOL_Oord__class_Oless(c_HOL_Ozero__class_Ozero(tc_nat),V_x,tc_nat)
+    | ~ c_HOL_Oord__class_Oless(c_HOL_Ozero__class_Ozero(tc_nat),c_Power_Opower__class_Opower(V_x,V_n,tc_nat),tc_nat) ) ).
+
+cnf(cls_of__nat__add_0,axiom,
+    ( ~ class_Ring__and__Field_Osemiring__1(T_a)
+    | c_Nat_Osemiring__1__class_Oof__nat(hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),V_m),V_n),T_a) = hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),c_Nat_Osemiring__1__class_Oof__nat(V_m,T_a)),c_Nat_Osemiring__1__class_Oof__nat(V_n,T_a)) ) ).
+
+cnf(cls_dB_Osize_I4_J_0,axiom,
+    c_Nat_Osize__class_Osize(c_Lambda_OdB_OVar(V_nat),tc_Lambda_OdB) = c_HOL_Ozero__class_Ozero(tc_nat) ).
+
+cnf(cls_power__mult__distrib_0,axiom,
+    ( ~ class_OrderedGroup_Ocomm__monoid__mult(T_a)
+    | c_Power_Opower__class_Opower(c_HOL_Otimes__class_Otimes(V_a,V_b,T_a),V_n,T_a) = c_HOL_Otimes__class_Otimes(c_Power_Opower__class_Opower(V_a,V_n,T_a),c_Power_Opower__class_Opower(V_b,V_n,T_a),T_a) ) ).
+
+cnf(cls_class__semiring_Opwr__mul_0,axiom,
+    ( ~ class_Ring__and__Field_Ocomm__semiring__1(T_a)
+    | c_Power_Opower__class_Opower(c_HOL_Otimes__class_Otimes(V_x,V_y,T_a),V_q,T_a) = c_HOL_Otimes__class_Otimes(c_Power_Opower__class_Opower(V_x,V_q,T_a),c_Power_Opower__class_Opower(V_y,V_q,T_a),T_a) ) ).
+
+cnf(cls_zmod__simps_I1_J_0,axiom,
+    ( ~ class_Divides_Osemiring__div(T_a)
+    | c_Divides_Odiv__class_Omod(hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),c_Divides_Odiv__class_Omod(V_a,V_c,T_a)),V_b),V_c,T_a) = c_Divides_Odiv__class_Omod(hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_a),V_b),V_c,T_a) ) ).
+
+cnf(cls_zmod__simps_I2_J_0,axiom,
+    ( ~ class_Divides_Osemiring__div(T_a)
+    | c_Divides_Odiv__class_Omod(hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_a),c_Divides_Odiv__class_Omod(V_b,V_c,T_a)),V_c,T_a) = c_Divides_Odiv__class_Omod(hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_a),V_b),V_c,T_a) ) ).
+
+cnf(cls_setsum__head__upt__Suc_0,axiom,
+    ( ~ class_OrderedGroup_Ocomm__monoid__add(T_a)
+    | c_Finite__Set_Osetsum(V_f,c_SetInterval_Oord__class_OatLeastLessThan(V_m,V_n,tc_nat),tc_nat,T_a) = hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),hAPP(V_f,V_m)),c_Finite__Set_Osetsum(V_f,c_SetInterval_Oord__class_OatLeastLessThan(c_Suc(V_m),V_n,tc_nat),tc_nat,T_a))
+    | ~ c_HOL_Oord__class_Oless(V_m,V_n,tc_nat) ) ).
+
+cnf(cls_power__mult_0,axiom,
+    ( ~ class_OrderedGroup_Omonoid__mult(T_a)
+    | c_Power_Opower__class_Opower(V_a,c_HOL_Otimes__class_Otimes(V_m,V_n,tc_nat),T_a) = c_Power_Opower__class_Opower(c_Power_Opower__class_Opower(V_a,V_m,T_a),V_n,T_a) ) ).
+
+cnf(cls_uT_0,axiom,
+    c_Type_Otyping(v_e____,v_u____,v_T____) ).
+
+cnf(cls_mod__div__equality2_0,axiom,
+    ( ~ class_Divides_Osemiring__div(T_a)
+    | hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),c_HOL_Otimes__class_Otimes(V_b,c_Divides_Odiv__class_Odiv(V_a,V_b,T_a),T_a)),c_Divides_Odiv__class_Omod(V_a,V_b,T_a)) = V_a ) ).
+
+cnf(cls_mod__div__equality_0,axiom,
+    ( ~ class_Divides_Osemiring__div(T_a)
+    | hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),c_HOL_Otimes__class_Otimes(c_Divides_Odiv__class_Odiv(V_a,V_b,T_a),V_b,T_a)),c_Divides_Odiv__class_Omod(V_a,V_b,T_a)) = V_a ) ).
+
+cnf(cls_mod__div__decomp_0,axiom,
+    ( ~ class_Divides_Osemiring__div(T_a)
+    | V_a = hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),c_HOL_Otimes__class_Otimes(c_Divides_Odiv__class_Odiv(V_a,V_b,T_a),V_b,T_a)),c_Divides_Odiv__class_Omod(V_a,V_b,T_a)) ) ).
+
+cnf(cls_mod__mult__mult2_0,axiom,
+    ( ~ class_Divides_Osemiring__div(T_a)
+    | c_Divides_Odiv__class_Omod(c_HOL_Otimes__class_Otimes(V_a,V_c,T_a),c_HOL_Otimes__class_Otimes(V_b,V_c,T_a),T_a) = c_HOL_Otimes__class_Otimes(c_Divides_Odiv__class_Omod(V_a,V_b,T_a),V_c,T_a) ) ).
+
+cnf(cls_mod__mult__mult1_0,axiom,
+    ( ~ class_Divides_Osemiring__div(T_a)
+    | c_Divides_Odiv__class_Omod(c_HOL_Otimes__class_Otimes(V_c,V_a,T_a),c_HOL_Otimes__class_Otimes(V_c,V_b,T_a),T_a) = c_HOL_Otimes__class_Otimes(V_c,c_Divides_Odiv__class_Omod(V_a,V_b,T_a),T_a) ) ).
+
+cnf(cls_lift_Osimps_I3_J_0,axiom,
+    hAPP(hAPP(c_Lambda_Olift,c_Lambda_OdB_OAbs(V_s)),V_k) = c_Lambda_OdB_OAbs(hAPP(hAPP(c_Lambda_Olift,V_s),hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),V_k),c_HOL_Oone__class_Oone(tc_nat)))) ).
+
+cnf(cls_dB_Osize_I3_J_0,axiom,
+    c_Lambda_OdB_OdB__size(c_Lambda_OdB_OAbs(V_dB)) = hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),c_Lambda_OdB_OdB__size(V_dB)),c_Suc(c_HOL_Ozero__class_Ozero(tc_nat))) ).
+
+cnf(cls_nat__1__eq__mult__iff_0,axiom,
+    ( c_HOL_Oone__class_Oone(tc_nat) != c_HOL_Otimes__class_Otimes(V_m,V_n,tc_nat)
+    | V_m = c_HOL_Oone__class_Oone(tc_nat) ) ).
+
+cnf(cls_nat__1__eq__mult__iff_1,axiom,
+    ( c_HOL_Oone__class_Oone(tc_nat) != c_HOL_Otimes__class_Otimes(V_m,V_n,tc_nat)
+    | V_n = c_HOL_Oone__class_Oone(tc_nat) ) ).
+
+cnf(cls_ab__semigroup__mult__class_Omult__ac_I1_J_0,axiom,
+    ( ~ class_OrderedGroup_Oab__semigroup__mult(T_a)
+    | c_HOL_Otimes__class_Otimes(c_HOL_Otimes__class_Otimes(V_a,V_b,T_a),V_c,T_a) = c_HOL_Otimes__class_Otimes(V_a,c_HOL_Otimes__class_Otimes(V_b,V_c,T_a),T_a) ) ).
+
+cnf(cls_class__semiring_Osemiring__rules_I16_J_0,axiom,
+    ( ~ class_Ring__and__Field_Ocomm__semiring__1(T_a)
+    | c_HOL_Otimes__class_Otimes(c_HOL_Otimes__class_Otimes(V_lx,V_ly,T_a),V_rx,T_a) = c_HOL_Otimes__class_Otimes(c_HOL_Otimes__class_Otimes(V_lx,V_rx,T_a),V_ly,T_a) ) ).
+
+cnf(cls_class__semiring_Osemiring__rules_I17_J_0,axiom,
+    ( ~ class_Ring__and__Field_Ocomm__semiring__1(T_a)
+    | c_HOL_Otimes__class_Otimes(c_HOL_Otimes__class_Otimes(V_lx,V_ly,T_a),V_rx,T_a) = c_HOL_Otimes__class_Otimes(V_lx,c_HOL_Otimes__class_Otimes(V_ly,V_rx,T_a),T_a) ) ).
+
+cnf(cls_class__semiring_Osemiring__rules_I18_J_0,axiom,
+    ( ~ class_Ring__and__Field_Ocomm__semiring__1(T_a)
+    | c_HOL_Otimes__class_Otimes(V_lx,c_HOL_Otimes__class_Otimes(V_rx,V_ry,T_a),T_a) = c_HOL_Otimes__class_Otimes(c_HOL_Otimes__class_Otimes(V_lx,V_rx,T_a),V_ry,T_a) ) ).
+
+cnf(cls_class__semiring_Osemiring__rules_I19_J_0,axiom,
+    ( ~ class_Ring__and__Field_Ocomm__semiring__1(T_a)
+    | c_HOL_Otimes__class_Otimes(V_lx,c_HOL_Otimes__class_Otimes(V_rx,V_ry,T_a),T_a) = c_HOL_Otimes__class_Otimes(V_rx,c_HOL_Otimes__class_Otimes(V_lx,V_ry,T_a),T_a) ) ).
+
+cnf(cls_nat__mult__assoc_0,axiom,
+    c_HOL_Otimes__class_Otimes(c_HOL_Otimes__class_Otimes(V_m,V_n,tc_nat),V_k,tc_nat) = c_HOL_Otimes__class_Otimes(V_m,c_HOL_Otimes__class_Otimes(V_n,V_k,tc_nat),tc_nat) ).
+
+cnf(cls_class__semiring_Omul__a_0,axiom,
+    ( ~ class_Ring__and__Field_Ocomm__semiring__1(T_a)
+    | c_HOL_Otimes__class_Otimes(V_x,c_HOL_Otimes__class_Otimes(V_y,V_z,T_a),T_a) = c_HOL_Otimes__class_Otimes(c_HOL_Otimes__class_Otimes(V_x,V_y,T_a),V_z,T_a) ) ).
+
+cnf(cls_class__semiring_Osemiring__rules_I8_J_0,axiom,
+    ( ~ class_Ring__and__Field_Ocomm__semiring__1(T_a)
+    | c_HOL_Otimes__class_Otimes(hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_a),V_b),V_c,T_a) = hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),c_HOL_Otimes__class_Otimes(V_a,V_c,T_a)),c_HOL_Otimes__class_Otimes(V_b,V_c,T_a)) ) ).
+
+cnf(cls_comm__semiring__class_Odistrib_0,axiom,
+    ( ~ class_Ring__and__Field_Ocomm__semiring(T_a)
+    | c_HOL_Otimes__class_Otimes(hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_a),V_b),V_c,T_a) = hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),c_HOL_Otimes__class_Otimes(V_a,V_c,T_a)),c_HOL_Otimes__class_Otimes(V_b,V_c,T_a)) ) ).
+
+cnf(cls_add__mult__distrib_0,axiom,
+    c_HOL_Otimes__class_Otimes(hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),V_m),V_n),V_k,tc_nat) = hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),c_HOL_Otimes__class_Otimes(V_m,V_k,tc_nat)),c_HOL_Otimes__class_Otimes(V_n,V_k,tc_nat)) ).
+
+cnf(cls_add__mult__distrib2_0,axiom,
+    c_HOL_Otimes__class_Otimes(V_k,hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),V_m),V_n),tc_nat) = hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),c_HOL_Otimes__class_Otimes(V_k,V_m,tc_nat)),c_HOL_Otimes__class_Otimes(V_k,V_n,tc_nat)) ).
+
+cnf(cls_class__semiring_Omul__d_0,axiom,
+    ( ~ class_Ring__and__Field_Ocomm__semiring__1(T_a)
+    | c_HOL_Otimes__class_Otimes(V_x,hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_y),V_z),T_a) = hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),c_HOL_Otimes__class_Otimes(V_x,V_y,T_a)),c_HOL_Otimes__class_Otimes(V_x,V_z,T_a)) ) ).
+
+cnf(cls_lift__type_0,axiom,
+    ( c_Type_Otyping(c_Type_Oshift(V_e,V_i,V_U,tc_Type_Otype),hAPP(hAPP(c_Lambda_Olift,V_t),V_i),V_T)
+    | ~ c_Type_Otyping(V_e,V_t,V_T) ) ).
+
+cnf(cls_xt1_I9_J_0,axiom,
+    ( ~ class_Orderings_Oorder(T_a)
+    | ~ c_HOL_Oord__class_Oless(V_a,V_b,T_a)
+    | ~ c_HOL_Oord__class_Oless(V_b,V_a,T_a) ) ).
+
+cnf(cls_not__less__iff__gr__or__eq_1,axiom,
+    ( ~ class_Orderings_Olinorder(T_a)
+    | ~ c_HOL_Oord__class_Oless(V_x,V_y,T_a)
+    | ~ c_HOL_Oord__class_Oless(V_y,V_x,T_a) ) ).
+
+cnf(cls_dvd_Ole__less__trans_0,axiom,
+    ( c_Ring__and__Field_Odvd__class_Odvd(V_x,V_z,tc_nat)
+    | c_Ring__and__Field_Odvd__class_Odvd(V_z,V_y,tc_nat)
+    | ~ c_Ring__and__Field_Odvd__class_Odvd(V_y,V_z,tc_nat)
+    | ~ c_Ring__and__Field_Odvd__class_Odvd(V_x,V_y,tc_nat) ) ).
+
+cnf(cls_dvd_Oless__le__trans_0,axiom,
+    ( c_Ring__and__Field_Odvd__class_Odvd(V_x,V_z,tc_nat)
+    | ~ c_Ring__and__Field_Odvd__class_Odvd(V_y,V_z,tc_nat)
+    | c_Ring__and__Field_Odvd__class_Odvd(V_y,V_x,tc_nat)
+    | ~ c_Ring__and__Field_Odvd__class_Odvd(V_x,V_y,tc_nat) ) ).
+
+cnf(cls_order__less__asym_0,axiom,
+    ( ~ class_Orderings_Opreorder(T_a)
+    | ~ c_HOL_Oord__class_Oless(V_y,V_x,T_a)
+    | ~ c_HOL_Oord__class_Oless(V_x,V_y,T_a) ) ).
+
+cnf(cls_order__less__asym_H_0,axiom,
+    ( ~ class_Orderings_Opreorder(T_a)
+    | ~ c_HOL_Oord__class_Oless(V_b,V_a,T_a)
+    | ~ c_HOL_Oord__class_Oless(V_a,V_b,T_a) ) ).
+
+cnf(cls_subst__Abs_0,axiom,
+    hAPP(hAPP(hAPP(c_Lambda_Osubst,c_Lambda_OdB_OAbs(V_t)),V_s),V_k) = c_Lambda_OdB_OAbs(hAPP(hAPP(hAPP(c_Lambda_Osubst,V_t),hAPP(hAPP(c_Lambda_Olift,V_s),c_HOL_Ozero__class_Ozero(tc_nat))),hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),V_k),c_HOL_Oone__class_Oone(tc_nat)))) ).
+
+cnf(cls_subst__subst_0,axiom,
+    ( hAPP(hAPP(hAPP(c_Lambda_Osubst,hAPP(hAPP(hAPP(c_Lambda_Osubst,V_t),hAPP(hAPP(c_Lambda_Olift,V_v),V_i)),c_Suc(V_j))),hAPP(hAPP(hAPP(c_Lambda_Osubst,V_u),V_v),V_j)),V_i) = hAPP(hAPP(hAPP(c_Lambda_Osubst,hAPP(hAPP(hAPP(c_Lambda_Osubst,V_t),V_u),V_i)),V_v),V_j)
+    | ~ c_HOL_Oord__class_Oless(V_i,hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),V_j),c_HOL_Oone__class_Oone(tc_nat)),tc_nat) ) ).
+
+cnf(cls_Var__IT_0,axiom,
+    hBOOL(hAPP(c_InductTermi_OIT,c_Lambda_OdB_OVar(V_n))) ).
+
+cnf(cls_Beta_I6_J_0,axiom,
+    hBOOL(hAPP(c_InductTermi_OIT,v_ua______)) ).
+
+cnf(cls_Lambda_0,axiom,
+    ( hBOOL(hAPP(c_InductTermi_OIT,c_Lambda_OdB_OAbs(V_r)))
+    | ~ hBOOL(hAPP(c_InductTermi_OIT,V_r)) ) ).
+
+cnf(cls_lift__preserves__beta_0,axiom,
+    ( c_Lambda_Obeta(hAPP(hAPP(c_Lambda_Olift,V_r),V_i),hAPP(hAPP(c_Lambda_Olift,V_s),V_i))
+    | ~ c_Lambda_Obeta(V_r,V_s) ) ).
+
+cnf(cls_SI2_0,axiom,
+    ( hBOOL(hAPP(c_InductTermi_OIT,hAPP(hAPP(hAPP(c_Lambda_Osubst,v_a____),V_u),V_i)))
+    | ~ c_Type_Otyping(V_e,V_u,v_T____)
+    | ~ hBOOL(hAPP(c_InductTermi_OIT,V_u))
+    | ~ c_Type_Otyping(c_Type_Oshift(V_e,V_i,v_T____,tc_Type_Otype),v_a____,V_T_H) ) ).
+
+cnf(cls_setsum__shift__lb__Suc0__0__upt_0,axiom,
+    ( ~ class_OrderedGroup_Ocomm__monoid__add(T_a)
+    | hAPP(V_f,c_HOL_Ozero__class_Ozero(tc_nat)) != c_HOL_Ozero__class_Ozero(T_a)
+    | c_Finite__Set_Osetsum(V_f,c_SetInterval_Oord__class_OatLeastLessThan(c_Suc(c_HOL_Ozero__class_Ozero(tc_nat)),V_k,tc_nat),tc_nat,T_a) = c_Finite__Set_Osetsum(V_f,c_SetInterval_Oord__class_OatLeastLessThan(c_HOL_Ozero__class_Ozero(tc_nat),V_k,tc_nat),tc_nat,T_a) ) ).
+
+cnf(cls_dB_Osize_I2_J_0,axiom,
+    c_Lambda_OdB_OdB__size(hAPP(hAPP(c_Lambda_OdB_OApp,V_dB1),V_dB2)) = hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),c_Lambda_OdB_OdB__size(V_dB1)),c_Lambda_OdB_OdB__size(V_dB2))),c_Suc(c_HOL_Ozero__class_Ozero(tc_nat))) ).
+
+cnf(cls_dB_Osize_I5_J_0,axiom,
+    c_Nat_Osize__class_Osize(hAPP(hAPP(c_Lambda_OdB_OApp,V_dB1),V_dB2),tc_Lambda_OdB) = hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),c_Nat_Osize__class_Osize(V_dB1,tc_Lambda_OdB)),c_Nat_Osize__class_Osize(V_dB2,tc_Lambda_OdB))),c_Suc(c_HOL_Ozero__class_Ozero(tc_nat))) ).
+
+cnf(cls_beta_0,axiom,
+    c_Lambda_Obeta(hAPP(hAPP(c_Lambda_OdB_OApp,c_Lambda_OdB_OAbs(V_s)),V_t),hAPP(hAPP(hAPP(c_Lambda_Osubst,V_s),V_t),c_HOL_Ozero__class_Ozero(tc_nat))) ).
+
+cnf(cls_IT_OVar_0,axiom,
+    ( hBOOL(hAPP(c_InductTermi_OIT,c_List_Ofoldl(c_Lambda_OdB_OApp,c_Lambda_OdB_OVar(V_n),V_rs,tc_Lambda_OdB,tc_Lambda_OdB)))
+    | ~ c_List_Olistsp(c_InductTermi_OIT,V_rs,tc_Lambda_OdB) ) ).
+
+cnf(cls_T_0,axiom,
+    c_Type_Otyping(c_Type_Oshift(v_e____,v_i____,v_T____,tc_Type_Otype),c_List_Ofoldl(c_Lambda_OdB_OApp,hAPP(hAPP(c_Lambda_OdB_OApp,c_Lambda_OdB_OAbs(v_r____)),v_a____),v_as____,tc_Lambda_OdB,tc_Lambda_OdB),v_T_H____) ).
+
+cnf(cls_power__eq__0__iff_2,axiom,
+    ( ~ class_Ring__and__Field_Ozero__neq__one(T_a)
+    | ~ class_Ring__and__Field_Ono__zero__divisors(T_a)
+    | ~ class_Ring__and__Field_Omult__zero(T_a)
+    | ~ class_Power_Opower(T_a)
+    | c_Power_Opower__class_Opower(c_HOL_Ozero__class_Ozero(T_a),V_n,T_a) = c_HOL_Ozero__class_Ozero(T_a)
+    | V_n = c_HOL_Ozero__class_Ozero(tc_nat) ) ).
+
+cnf(cls_power__0__left_1,axiom,
+    ( ~ class_Ring__and__Field_Osemiring__0(T_a)
+    | ~ class_Power_Opower(T_a)
+    | c_Power_Opower__class_Opower(c_HOL_Ozero__class_Ozero(T_a),V_n,T_a) = c_HOL_Ozero__class_Ozero(T_a)
+    | V_n = c_HOL_Ozero__class_Ozero(tc_nat) ) ).
+
+cnf(cls_power__eq__0__iff_1,axiom,
+    ( ~ class_Ring__and__Field_Ozero__neq__one(T_a)
+    | ~ class_Ring__and__Field_Ono__zero__divisors(T_a)
+    | ~ class_Ring__and__Field_Omult__zero(T_a)
+    | ~ class_Power_Opower(T_a)
+    | c_Power_Opower__class_Opower(V_a,c_HOL_Ozero__class_Ozero(tc_nat),T_a) != c_HOL_Ozero__class_Ozero(T_a) ) ).
+
+cnf(cls_of__nat__0_0,axiom,
+    ( ~ class_Ring__and__Field_Osemiring__1(T_a)
+    | c_Nat_Osemiring__1__class_Oof__nat(c_HOL_Ozero__class_Ozero(tc_nat),T_a) = c_HOL_Ozero__class_Ozero(T_a) ) ).
+
+cnf(cls_power__0__Suc_0,axiom,
+    ( ~ class_Ring__and__Field_Osemiring__0(T_a)
+    | ~ class_Power_Opower(T_a)
+    | c_Power_Opower__class_Opower(c_HOL_Ozero__class_Ozero(T_a),c_Suc(V_n),T_a) = c_HOL_Ozero__class_Ozero(T_a) ) ).
+
+cnf(cls_nat_Oexhaust_0,axiom,
+    ( V_y = c_Suc(c_ATP__Linkup_Osko__Nat__Xnat__Xexhaust__1__1(V_y))
+    | V_y = c_HOL_Ozero__class_Ozero(tc_nat) ) ).
+
+cnf(cls_add__is__1_2,axiom,
+    ( hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),V_m),V_n) != c_Suc(c_HOL_Ozero__class_Ozero(tc_nat))
+    | V_m = c_HOL_Ozero__class_Ozero(tc_nat)
+    | V_n = c_HOL_Ozero__class_Ozero(tc_nat) ) ).
+
+cnf(cls_add__is__1_1,axiom,
+    ( hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),V_m),V_n) != c_Suc(c_HOL_Ozero__class_Ozero(tc_nat))
+    | V_n = c_Suc(c_HOL_Ozero__class_Ozero(tc_nat))
+    | V_m = c_Suc(c_HOL_Ozero__class_Ozero(tc_nat)) ) ).
+
+cnf(cls_add__is__1_5,axiom,
+    hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),c_HOL_Ozero__class_Ozero(tc_nat)),c_Suc(c_HOL_Ozero__class_Ozero(tc_nat))) = c_Suc(c_HOL_Ozero__class_Ozero(tc_nat)) ).
+
+cnf(cls_zero__induct_0,axiom,
+    ( hBOOL(hAPP(V_P,c_HOL_Ozero__class_Ozero(tc_nat)))
+    | hBOOL(hAPP(V_P,c_Suc(c_ATP__Linkup_Osko__Nat__Xzero__induct__1__1(V_P))))
+    | ~ hBOOL(hAPP(V_P,V_k)) ) ).
+
+cnf(cls_nat__power__eq__Suc__0__iff_0,axiom,
+    ( c_Power_Opower__class_Opower(V_x,V_m,tc_nat) != c_Suc(c_HOL_Ozero__class_Ozero(tc_nat))
+    | V_x = c_Suc(c_HOL_Ozero__class_Ozero(tc_nat))
+    | V_m = c_HOL_Ozero__class_Ozero(tc_nat) ) ).
+
+cnf(cls_one__is__add_4,axiom,
+    c_Suc(c_HOL_Ozero__class_Ozero(tc_nat)) = hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),c_Suc(c_HOL_Ozero__class_Ozero(tc_nat))),c_HOL_Ozero__class_Ozero(tc_nat)) ).
+
+cnf(cls_lexn_Oinduct_1,axiom,
+    ( hBOOL(hAPP(V_P,V_nat))
+    | ~ hBOOL(hAPP(V_P,c_Suc(v_sko__List__Xlexn__Xinduct__1(V_P))))
+    | ~ hBOOL(hAPP(V_P,c_HOL_Ozero__class_Ozero(tc_nat))) ) ).
+
+cnf(cls_mod__1_0,axiom,
+    c_Divides_Odiv__class_Omod(V_m,c_Suc(c_HOL_Ozero__class_Ozero(tc_nat)),tc_nat) = c_HOL_Ozero__class_Ozero(tc_nat) ).
+
+cnf(cls_mult__eq__1__iff_2,axiom,
+    c_HOL_Otimes__class_Otimes(c_Suc(c_HOL_Ozero__class_Ozero(tc_nat)),c_Suc(c_HOL_Ozero__class_Ozero(tc_nat)),tc_nat) = c_Suc(c_HOL_Ozero__class_Ozero(tc_nat)) ).
+
+cnf(cls_dvd__1__iff__1_1,axiom,
+    c_Ring__and__Field_Odvd__class_Odvd(c_Suc(c_HOL_Ozero__class_Ozero(tc_nat)),c_Suc(c_HOL_Ozero__class_Ozero(tc_nat)),tc_nat) ).
+
+cnf(cls_one__is__add_2,axiom,
+    ( c_Suc(c_HOL_Ozero__class_Ozero(tc_nat)) != hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),V_m),V_n)
+    | V_m = c_HOL_Ozero__class_Ozero(tc_nat)
+    | V_n = c_HOL_Ozero__class_Ozero(tc_nat) ) ).
+
+cnf(cls_one__is__add_1,axiom,
+    ( c_Suc(c_HOL_Ozero__class_Ozero(tc_nat)) != hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),V_m),V_n)
+    | V_n = c_Suc(c_HOL_Ozero__class_Ozero(tc_nat))
+    | V_m = c_Suc(c_HOL_Ozero__class_Ozero(tc_nat)) ) ).
+
+cnf(cls_less__Suc0_1,axiom,
+    c_HOL_Oord__class_Oless(c_HOL_Ozero__class_Ozero(tc_nat),c_Suc(c_HOL_Ozero__class_Ozero(tc_nat)),tc_nat) ).
+
+cnf(cls_One__nat__def_0,axiom,
+    c_HOL_Oone__class_Oone(tc_nat) = c_Suc(c_HOL_Ozero__class_Ozero(tc_nat)) ).
+
+cnf(cls_shift__commute_0,axiom,
+    c_Type_Oshift(c_Type_Oshift(V_e,V_i,V_U,T_a),c_HOL_Ozero__class_Ozero(tc_nat),V_T,T_a) = c_Type_Oshift(c_Type_Oshift(V_e,c_HOL_Ozero__class_Ozero(tc_nat),V_T,T_a),c_Suc(V_i),V_U,T_a) ).
+
+cnf(cls_nat__induct_1,axiom,
+    ( hBOOL(hAPP(V_P,V_n))
+    | ~ hBOOL(hAPP(V_P,c_Suc(c_ATP__Linkup_Osko__Nat__Xnat__induct__1__1(V_P))))
+    | ~ hBOOL(hAPP(V_P,c_HOL_Ozero__class_Ozero(tc_nat))) ) ).
+
+cnf(cls_mult__eq__1__iff_1,axiom,
+    ( c_HOL_Otimes__class_Otimes(V_m,V_n,tc_nat) != c_Suc(c_HOL_Ozero__class_Ozero(tc_nat))
+    | V_n = c_Suc(c_HOL_Ozero__class_Ozero(tc_nat)) ) ).
+
+cnf(cls_mult__eq__1__iff_0,axiom,
+    ( c_HOL_Otimes__class_Otimes(V_m,V_n,tc_nat) != c_Suc(c_HOL_Ozero__class_Ozero(tc_nat))
+    | V_m = c_Suc(c_HOL_Ozero__class_Ozero(tc_nat)) ) ).
+
+cnf(cls_replicate_Oinduct_1,axiom,
+    ( hBOOL(hAPP(V_P,V_nat))
+    | ~ hBOOL(hAPP(V_P,c_Suc(v_sko__List__Xreplicate__Xinduct__1(V_P))))
+    | ~ hBOOL(hAPP(V_P,c_HOL_Ozero__class_Ozero(tc_nat))) ) ).
+
+cnf(cls_upt_Oinduct_1,axiom,
+    ( hBOOL(hAPP(V_P,V_nat))
+    | ~ hBOOL(hAPP(V_P,c_Suc(v_sko__List__Xupt__Xinduct__1(V_P))))
+    | ~ hBOOL(hAPP(V_P,c_HOL_Ozero__class_Ozero(tc_nat))) ) ).
+
+cnf(cls_nat_Onchotomy_0,axiom,
+    ( V_v = c_Suc(c_ATP__Linkup_Osko__Nat__Xnat__Xnchotomy__1__1(V_v))
+    | V_v = c_HOL_Ozero__class_Ozero(tc_nat) ) ).
+
+cnf(cls_nat__power__eq__Suc__0__iff_1,axiom,
+    c_Power_Opower__class_Opower(V_x,c_HOL_Ozero__class_Ozero(tc_nat),tc_nat) = c_Suc(c_HOL_Ozero__class_Ozero(tc_nat)) ).
+
+cnf(cls_nat_Oinduct_1,axiom,
+    ( hBOOL(hAPP(V_P,V_nat))
+    | ~ hBOOL(hAPP(V_P,c_Suc(v_sko__Nat__Xnat__Xinduct__1(V_P))))
+    | ~ hBOOL(hAPP(V_P,c_HOL_Ozero__class_Ozero(tc_nat))) ) ).
+
+cnf(cls_add__is__1_4,axiom,
+    hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),c_Suc(c_HOL_Ozero__class_Ozero(tc_nat))),c_HOL_Ozero__class_Ozero(tc_nat)) = c_Suc(c_HOL_Ozero__class_Ozero(tc_nat)) ).
+
+cnf(cls_less__Suc0_0,axiom,
+    ( V_n = c_HOL_Ozero__class_Ozero(tc_nat)
+    | ~ c_HOL_Oord__class_Oless(V_n,c_Suc(c_HOL_Ozero__class_Ozero(tc_nat)),tc_nat) ) ).
+
+cnf(cls_nat_Oinducts_1,axiom,
+    ( hBOOL(hAPP(V_P,V_nat))
+    | ~ hBOOL(hAPP(V_P,c_Suc(v_sko__Nat__Xnat__Xinducts__1(V_P))))
+    | ~ hBOOL(hAPP(V_P,c_HOL_Ozero__class_Ozero(tc_nat))) ) ).
+
+cnf(cls_not0__implies__Suc_0,axiom,
+    ( V_n = c_Suc(c_ATP__Linkup_Osko__Nat__Xnot0__implies__Suc__1__1(V_n))
+    | V_n = c_HOL_Ozero__class_Ozero(tc_nat) ) ).
+
+cnf(cls_dvd__1__left_0,axiom,
+    c_Ring__and__Field_Odvd__class_Odvd(c_Suc(c_HOL_Ozero__class_Ozero(tc_nat)),V_k,tc_nat) ).
+
+cnf(cls_one__is__add_5,axiom,
+    c_Suc(c_HOL_Ozero__class_Ozero(tc_nat)) = hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),c_HOL_Ozero__class_Ozero(tc_nat)),c_Suc(c_HOL_Ozero__class_Ozero(tc_nat))) ).
+
+cnf(cls_one__is__add_3,axiom,
+    ( c_Suc(c_HOL_Ozero__class_Ozero(tc_nat)) != hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),V_m),V_n)
+    | V_n = c_Suc(c_HOL_Ozero__class_Ozero(tc_nat))
+    | V_n = c_HOL_Ozero__class_Ozero(tc_nat) ) ).
+
+cnf(cls_one__is__add_0,axiom,
+    ( c_Suc(c_HOL_Ozero__class_Ozero(tc_nat)) != hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),V_m),V_n)
+    | V_m = c_HOL_Ozero__class_Ozero(tc_nat)
+    | V_m = c_Suc(c_HOL_Ozero__class_Ozero(tc_nat)) ) ).
+
+cnf(cls_zero__less__Suc_0,axiom,
+    c_HOL_Oord__class_Oless(c_HOL_Ozero__class_Ozero(tc_nat),c_Suc(V_n),tc_nat) ).
+
+cnf(cls_gr0__conv__Suc_1,axiom,
+    c_HOL_Oord__class_Oless(c_HOL_Ozero__class_Ozero(tc_nat),c_Suc(V_x),tc_nat) ).
+
+cnf(cls_mod__Suc_0,axiom,
+    ( c_Suc(c_Divides_Odiv__class_Omod(V_m,V_n,tc_nat)) != V_n
+    | c_Divides_Odiv__class_Omod(c_Suc(V_m),V_n,tc_nat) = c_HOL_Ozero__class_Ozero(tc_nat) ) ).
+
+cnf(cls_add__is__1_3,axiom,
+    ( hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),V_m),V_n) != c_Suc(c_HOL_Ozero__class_Ozero(tc_nat))
+    | V_n = c_Suc(c_HOL_Ozero__class_Ozero(tc_nat))
+    | V_n = c_HOL_Ozero__class_Ozero(tc_nat) ) ).
+
+cnf(cls_add__is__1_0,axiom,
+    ( hAPP(hAPP(c_HOL_Oplus__class_Oplus(tc_nat),V_m),V_n) != c_Suc(c_HOL_Ozero__class_Ozero(tc_nat))
+    | V_m = c_HOL_Ozero__class_Ozero(tc_nat)
+    | V_m = c_Suc(c_HOL_Ozero__class_Ozero(tc_nat)) ) ).
+
+cnf(cls_nat__power__eq__Suc__0__iff_2,axiom,
+    c_Power_Opower__class_Opower(c_Suc(c_HOL_Ozero__class_Ozero(tc_nat)),V_m,tc_nat) = c_Suc(c_HOL_Ozero__class_Ozero(tc_nat)) ).
+
+cnf(cls_power__Suc__0_0,axiom,
+    c_Power_Opower__class_Opower(c_Suc(c_HOL_Ozero__class_Ozero(tc_nat)),V_n,tc_nat) = c_Suc(c_HOL_Ozero__class_Ozero(tc_nat)) ).
+
+cnf(cls_dvd__1__iff__1_0,axiom,
+    ( V_m = c_Suc(c_HOL_Ozero__class_Ozero(tc_nat))
+    | ~ c_Ring__and__Field_Odvd__class_Odvd(V_m,c_Suc(c_HOL_Ozero__class_Ozero(tc_nat)),tc_nat) ) ).
+
+cnf(cls_div__1_0,axiom,
+    c_Divides_Odiv__class_Odiv(V_m,c_Suc(c_HOL_Ozero__class_Ozero(tc_nat)),tc_nat) = V_m ).
+
+cnf(cls_foldl__absorb0_0,axiom,
+    ( ~ class_OrderedGroup_Omonoid__add(T_a)
+    | hAPP(hAPP(c_HOL_Oplus__class_Oplus(T_a),V_x),c_List_Ofoldl(c_HOL_Oplus__class_Oplus(T_a),c_HOL_Ozero__class_Ozero(T_a),V_zs,T_a,T_a)) = c_List_Ofoldl(c_HOL_Oplus__class_Oplus(T_a),V_x,V_zs,T_a,T_a) ) ).
+
+cnf(cls_substn__subst__0_0,axiom,
+    c_Lambda_Osubstn(V_t,V_s,c_HOL_Ozero__class_Ozero(tc_nat)) = hAPP(hAPP(hAPP(c_Lambda_Osubst,V_t),V_s),c_HOL_Ozero__class_Ozero(tc_nat)) ).
+
+cnf(cls_App__eq__foldl__conv_4,axiom,
+    hAPP(hAPP(c_Lambda_OdB_OApp,V_r),V_s) = c_List_Ofoldl(c_Lambda_OdB_OApp,hAPP(hAPP(c_Lambda_OdB_OApp,V_r),V_s),c_List_Olist_ONil(tc_Lambda_OdB),tc_Lambda_OdB,tc_Lambda_OdB) ).
+
+cnf(cls_Var__apps__eq__Var__apps__conv_0,axiom,
+    ( c_List_Ofoldl(c_Lambda_OdB_OApp,c_Lambda_OdB_OVar(V_m),V_rs,tc_Lambda_OdB,tc_Lambda_OdB) != c_List_Ofoldl(c_Lambda_OdB_OApp,c_Lambda_OdB_OVar(V_n),V_ss,tc_Lambda_OdB,tc_Lambda_OdB)
+    | V_m = V_n ) ).
+
+cnf(cls_Var__apps__eq__Var__apps__conv_1,axiom,
+    ( c_List_Ofoldl(c_Lambda_OdB_OApp,c_Lambda_OdB_OVar(V_m),V_rs,tc_Lambda_OdB,tc_Lambda_OdB) != c_List_Ofoldl(c_Lambda_OdB_OApp,c_Lambda_OdB_OVar(V_n),V_ss,tc_Lambda_OdB,tc_Lambda_OdB)
+    | V_rs = V_ss ) ).
+
+cnf(cls_App__eq__foldl__conv_0,axiom,
+    ( hAPP(hAPP(c_Lambda_OdB_OApp,V_r),V_s) != c_List_Ofoldl(c_Lambda_OdB_OApp,V_t,c_List_Olist_ONil(tc_Lambda_OdB),tc_Lambda_OdB,tc_Lambda_OdB)
+    | hAPP(hAPP(c_Lambda_OdB_OApp,V_r),V_s) = V_t ) ).
+
+cnf(cls_apps__eq__Abs__conv_0,axiom,
+    ( c_List_Ofoldl(c_Lambda_OdB_OApp,V_s,V_ss,tc_Lambda_OdB,tc_Lambda_OdB) != c_Lambda_OdB_OAbs(V_r)
+    | V_s = c_Lambda_OdB_OAbs(V_r) ) ).
+
+cnf(cls_Abs__apps__eq__Abs__apps__conv_0,axiom,
+    ( c_List_Ofoldl(c_Lambda_OdB_OApp,c_Lambda_OdB_OAbs(V_r),V_rs,tc_Lambda_OdB,tc_Lambda_OdB) != c_List_Ofoldl(c_Lambda_OdB_OApp,c_Lambda_OdB_OAbs(V_s),V_ss,tc_Lambda_OdB,tc_Lambda_OdB)
+    | V_r = V_s ) ).
+
+cnf(cls_Abs__apps__eq__Abs__apps__conv_1,axiom,
+    ( c_List_Ofoldl(c_Lambda_OdB_OApp,c_Lambda_OdB_OAbs(V_r),V_rs,tc_Lambda_OdB,tc_Lambda_OdB) != c_List_Ofoldl(c_Lambda_OdB_OApp,c_Lambda_OdB_OAbs(V_s),V_ss,tc_Lambda_OdB,tc_Lambda_OdB)
+    | V_rs = V_ss ) ).
+
+cnf(cls_apps__preserves__beta_0,axiom,
+    ( c_Lambda_Obeta(c_List_Ofoldl(c_Lambda_OdB_OApp,V_r,V_ss,tc_Lambda_OdB,tc_Lambda_OdB),c_List_Ofoldl(c_Lambda_OdB_OApp,V_s,V_ss,tc_Lambda_OdB,tc_Lambda_OdB))
+    | ~ c_Lambda_Obeta(V_r,V_s) ) ).
+
+cnf(cls_Var__eq__apps__conv_0,axiom,
+    ( c_Lambda_OdB_OVar(V_m) != c_List_Ofoldl(c_Lambda_OdB_OApp,V_s,V_ss,tc_Lambda_OdB,tc_Lambda_OdB)
+    | c_Lambda_OdB_OVar(V_m) = V_s ) ).
+
+cnf(cls_Abs__eq__apps__conv_0,axiom,
+    ( c_Lambda_OdB_OAbs(V_r) != c_List_Ofoldl(c_Lambda_OdB_OApp,V_s,V_ss,tc_Lambda_OdB,tc_Lambda_OdB)
+    | c_Lambda_OdB_OAbs(V_r) = V_s ) ).
+
+cnf(cls_app__Var__IT_0,axiom,
+    ( hBOOL(hAPP(c_InductTermi_OIT,hAPP(hAPP(c_Lambda_OdB_OApp,V_t),c_Lambda_OdB_OVar(V_i))))
+    | ~ hBOOL(hAPP(c_InductTermi_OIT,V_t)) ) ).
+
+cnf(cls_substs__lemma_0,axiom,
+    ( c_Type_Otypings(V_e,c_List_Omap(c_COMBC(c_COMBC(c_Lambda_Osubst,V_u,tc_Lambda_OdB,tc_Lambda_OdB,tc_fun(tc_nat,tc_Lambda_OdB)),V_i,tc_Lambda_OdB,tc_nat,tc_Lambda_OdB),V_ts,tc_Lambda_OdB,tc_Lambda_OdB),V_Ts)
+    | ~ c_Type_Otypings(c_Type_Oshift(V_e,V_i,V_T,tc_Type_Otype),V_ts,V_Ts)
+    | ~ c_Type_Otyping(V_e,V_u,V_T) ) ).
+
+cnf(cls_liftn__lift_0,axiom,
+    c_Lambda_Oliftn(c_Suc(V_n),V_t,V_k) = hAPP(hAPP(c_Lambda_Olift,c_Lambda_Oliftn(V_n,V_t,V_k)),V_k) ).
+
+cnf(cls_subst__Var__IT_0,axiom,
+    ( hBOOL(hAPP(c_InductTermi_OIT,hAPP(hAPP(hAPP(c_Lambda_Osubst,V_r),c_Lambda_OdB_OVar(V_i)),V_j)))
+    | ~ hBOOL(hAPP(c_InductTermi_OIT,V_r)) ) ).
+
+cnf(cls_lift__types_0,axiom,
+    ( c_Type_Otypings(c_Type_Oshift(V_e,V_i,V_U,tc_Type_Otype),c_List_Omap(c_COMBC(c_Lambda_Olift,V_i,tc_Lambda_OdB,tc_nat,tc_Lambda_OdB),V_ts,tc_Lambda_OdB,tc_Lambda_OdB),V_Ts)
+    | ~ c_Type_Otypings(V_e,V_ts,V_Ts) ) ).
+
+cnf(cls_SI1_0,axiom,
+    ( hBOOL(hAPP(c_InductTermi_OIT,hAPP(hAPP(hAPP(c_Lambda_Osubst,c_List_Ofoldl(c_Lambda_OdB_OApp,hAPP(hAPP(hAPP(c_Lambda_Osubst,v_r____),v_a____),c_HOL_Ozero__class_Ozero(tc_nat)),v_as____,tc_Lambda_OdB,tc_Lambda_OdB)),V_u),V_i)))
+    | ~ c_Type_Otyping(V_e,V_u,v_T____)
+    | ~ hBOOL(hAPP(c_InductTermi_OIT,V_u))
+    | ~ c_Type_Otyping(c_Type_Oshift(V_e,V_i,v_T____,tc_Type_Otype),c_List_Ofoldl(c_Lambda_OdB_OApp,hAPP(hAPP(hAPP(c_Lambda_Osubst,v_r____),v_a____),c_HOL_Ozero__class_Ozero(tc_nat)),v_as____,tc_Lambda_OdB,tc_Lambda_OdB),V_T_H) ) ).
+
+cnf(cls_IT_OBeta_0,axiom,
+    ( hBOOL(hAPP(c_InductTermi_OIT,c_List_Ofoldl(c_Lambda_OdB_OApp,hAPP(hAPP(c_Lambda_OdB_OApp,c_Lambda_OdB_OAbs(V_r)),V_s),V_ss,tc_Lambda_OdB,tc_Lambda_OdB)))
+    | ~ hBOOL(hAPP(c_InductTermi_OIT,V_s))
+    | ~ hBOOL(hAPP(c_InductTermi_OIT,c_List_Ofoldl(c_Lambda_OdB_OApp,hAPP(hAPP(hAPP(c_Lambda_Osubst,V_r),V_s),c_HOL_Ozero__class_Ozero(tc_nat)),V_ss,tc_Lambda_OdB,tc_Lambda_OdB))) ) ).
+
+cnf(cls_lifts__IT_0,axiom,
+    ( c_List_Olistsp(c_InductTermi_OIT,c_List_Omap(c_COMBC(c_Lambda_Olift,c_HOL_Ozero__class_Ozero(tc_nat),tc_Lambda_OdB,tc_nat,tc_Lambda_OdB),V_ts,tc_Lambda_OdB,tc_Lambda_OdB),tc_Lambda_OdB)
+    | ~ c_List_Olistsp(c_InductTermi_OIT,V_ts,tc_Lambda_OdB) ) ).
+
+cnf(cls_Beta_I3_J_0,axiom,
+    hBOOL(hAPP(c_InductTermi_OIT,v_a____)) ).
+
+cnf(cls_subst__App_0,axiom,
+    hAPP(hAPP(hAPP(c_Lambda_Osubst,hAPP(hAPP(c_Lambda_OdB_OApp,V_t),V_u)),V_s),V_k) = hAPP(hAPP(c_Lambda_OdB_OApp,hAPP(hAPP(hAPP(c_Lambda_Osubst,V_t),V_s),V_k)),hAPP(hAPP(hAPP(c_Lambda_Osubst,V_u),V_s),V_k)) ).
+
+cnf(cls_Beta_I1_J_0,axiom,
+    hBOOL(hAPP(c_InductTermi_OIT,c_List_Ofoldl(c_Lambda_OdB_OApp,hAPP(hAPP(hAPP(c_Lambda_Osubst,v_r____),v_a____),c_HOL_Ozero__class_Ozero(tc_nat)),v_as____,tc_Lambda_OdB,tc_Lambda_OdB))) ).
+
+cnf(cls_n__not__Suc__n_0,axiom,
+    V_n != c_Suc(V_n) ).
+
+cnf(cls_Suc__n__not__n_0,axiom,
+    c_Suc(V_n) != V_n ).
+
+cnf(cls_lift__map_0,axiom,
+    hAPP(hAPP(c_Lambda_Olift,c_List_Ofoldl(c_Lambda_OdB_OApp,V_t,V_ts,tc_Lambda_OdB,tc_Lambda_OdB)),V_i) = c_List_Ofoldl(c_Lambda_OdB_OApp,hAPP(hAPP(c_Lambda_Olift,V_t),V_i),c_List_Omap(c_COMBC(c_Lambda_Olift,V_i,tc_Lambda_OdB,tc_nat,tc_Lambda_OdB),V_ts,tc_Lambda_OdB,tc_Lambda_OdB),tc_Lambda_OdB,tc_Lambda_OdB) ).
+
+cnf(cls_Suc__neq__Zero_0,axiom,
+    c_Suc(V_m) != c_HOL_Ozero__class_Ozero(tc_nat) ).
+
+cnf(cls_nat_Osimps_I3_J_0,axiom,
+    c_Suc(V_nat_H) != c_HOL_Ozero__class_Ozero(tc_nat) ).
+
+cnf(cls_dB_Osimps_I2_J_0,axiom,
+    ( hAPP(hAPP(c_Lambda_OdB_OApp,V_dB1),V_dB2) != hAPP(hAPP(c_Lambda_OdB_OApp,V_dB1_H),V_dB2_H)
+    | V_dB1 = V_dB1_H ) ).
+
+cnf(cls_dB_Osimps_I2_J_1,axiom,
+    ( hAPP(hAPP(c_Lambda_OdB_OApp,V_dB1),V_dB2) != hAPP(hAPP(c_Lambda_OdB_OApp,V_dB1_H),V_dB2_H)
+    | V_dB2 = V_dB2_H ) ).
+
+cnf(cls_lift__IT_0,axiom,
+    ( hBOOL(hAPP(c_InductTermi_OIT,hAPP(hAPP(c_Lambda_Olift,V_t),V_i)))
+    | ~ hBOOL(hAPP(c_InductTermi_OIT,V_t)) ) ).
+
+cnf(cls_nat_Oinject_0,axiom,
+    ( c_Suc(V_nat) != c_Suc(V_nat_H)
+    | V_nat = V_nat_H ) ).
+
+cnf(cls_Suc__inject_0,axiom,
+    ( c_Suc(V_x) != c_Suc(V_y)
+    | V_x = V_y ) ).
+
+cnf(cls_lift_Osimps_I2_J_0,axiom,
+    hAPP(hAPP(c_Lambda_Olift,hAPP(hAPP(c_Lambda_OdB_OApp,V_s),V_t)),V_k) = hAPP(hAPP(c_Lambda_OdB_OApp,hAPP(hAPP(c_Lambda_Olift,V_s),V_k)),hAPP(hAPP(c_Lambda_Olift,V_t),V_k)) ).
+
+cnf(cls_subst__map_0,axiom,
+    hAPP(hAPP(hAPP(c_Lambda_Osubst,c_List_Ofoldl(c_Lambda_OdB_OApp,V_t,V_ts,tc_Lambda_OdB,tc_Lambda_OdB)),V_u),V_i) = c_List_Ofoldl(c_Lambda_OdB_OApp,hAPP(hAPP(hAPP(c_Lambda_Osubst,V_t),V_u),V_i),c_List_Omap(c_COMBC(c_COMBC(c_Lambda_Osubst,V_u,tc_Lambda_OdB,tc_Lambda_OdB,tc_fun(tc_nat,tc_Lambda_OdB)),V_i,tc_Lambda_OdB,tc_nat,tc_Lambda_OdB),V_ts,tc_Lambda_OdB,tc_Lambda_OdB),tc_Lambda_OdB,tc_Lambda_OdB) ).
+
+cnf(cls_Zero__neq__Suc_0,axiom,
+    c_HOL_Ozero__class_Ozero(tc_nat) != c_Suc(V_m) ).
+
+cnf(cls_nat_Osimps_I2_J_0,axiom,
+    c_HOL_Ozero__class_Ozero(tc_nat) != c_Suc(V_nat_H) ).
+
+cnf(cls_COMBC__def_0,axiom,
+    hAPP(c_COMBC(V_P,V_Q,T_b,T_c,T_a),V_R) = hAPP(hAPP(V_P,V_R),V_Q) ).
+
+cnf(cls_apps__eq__tail__conv_0,axiom,
+    ( c_List_Ofoldl(c_Lambda_OdB_OApp,V_r,V_ts,tc_Lambda_OdB,tc_Lambda_OdB) != c_List_Ofoldl(c_Lambda_OdB_OApp,V_s,V_ts,tc_Lambda_OdB,tc_Lambda_OdB)
+    | V_r = V_s ) ).
+
+cnf(cls_uIT_0,axiom,
+    hBOOL(hAPP(c_InductTermi_OIT,v_u____)) ).
+
+cnf(cls_subst__lift_0,axiom,
+    hAPP(hAPP(hAPP(c_Lambda_Osubst,hAPP(hAPP(c_Lambda_Olift,V_t),V_k)),V_s),V_k) = V_t ).
+
+cnf(cls_CHAINED_0,axiom,
+    hBOOL(hAPP(c_InductTermi_OIT,hAPP(hAPP(hAPP(c_Lambda_Osubst,c_List_Ofoldl(c_Lambda_OdB_OApp,hAPP(hAPP(hAPP(c_Lambda_Osubst,v_r____),v_a____),c_HOL_Ozero__class_Ozero(tc_nat)),v_as____,tc_Lambda_OdB,tc_Lambda_OdB)),v_u____),v_i____))) ).
+
+cnf(cls_conjecture_0,negated_conjecture,
+    ~ hBOOL(hAPP(c_InductTermi_OIT,c_List_Ofoldl(c_Lambda_OdB_OApp,hAPP(hAPP(hAPP(c_Lambda_Osubst,hAPP(hAPP(hAPP(c_Lambda_Osubst,v_r____),hAPP(hAPP(c_Lambda_Olift,v_u____),c_HOL_Ozero__class_Ozero(tc_nat))),c_Suc(v_i____))),hAPP(hAPP(hAPP(c_Lambda_Osubst,v_a____),v_u____),v_i____)),c_HOL_Ozero__class_Ozero(tc_nat)),c_List_Omap(c_COMBC(c_COMBC(c_Lambda_Osubst,v_u____,tc_Lambda_OdB,tc_Lambda_OdB,tc_fun(tc_nat,tc_Lambda_OdB)),v_i____,tc_Lambda_OdB,tc_nat,tc_Lambda_OdB),v_as____,tc_Lambda_OdB,tc_Lambda_OdB),tc_Lambda_OdB,tc_Lambda_OdB))) ).
+
+cnf(clsarity_fun__Orderings_Opreorder,axiom,
+    ( class_Orderings_Opreorder(tc_fun(T_2,T_1))
+    | ~ class_Orderings_Opreorder(T_1) ) ).
+
+cnf(clsarity_fun__Orderings_Oorder,axiom,
+    ( class_Orderings_Oorder(tc_fun(T_2,T_1))
+    | ~ class_Orderings_Oorder(T_1) ) ).
+
+cnf(clsarity_nat__OrderedGroup_Opordered__cancel__ab__semigroup__add,axiom,
+    class_OrderedGroup_Opordered__cancel__ab__semigroup__add(tc_nat) ).
+
+cnf(clsarity_nat__OrderedGroup_Opordered__ab__semigroup__add__imp__le,axiom,
+    class_OrderedGroup_Opordered__ab__semigroup__add__imp__le(tc_nat) ).
+
+cnf(clsarity_nat__Ring__and__Field_Oordered__comm__semiring__strict,axiom,
+    class_Ring__and__Field_Oordered__comm__semiring__strict(tc_nat) ).
+
+cnf(clsarity_nat__Ring__and__Field_Oordered__semiring__strict,axiom,
+    class_Ring__and__Field_Oordered__semiring__strict(tc_nat) ).
+
+cnf(clsarity_nat__OrderedGroup_Opordered__comm__monoid__add,axiom,
+    class_OrderedGroup_Opordered__comm__monoid__add(tc_nat) ).
+
+cnf(clsarity_nat__OrderedGroup_Ocancel__ab__semigroup__add,axiom,
+    class_OrderedGroup_Ocancel__ab__semigroup__add(tc_nat) ).
+
+cnf(clsarity_nat__OrderedGroup_Ocancel__semigroup__add,axiom,
+    class_OrderedGroup_Ocancel__semigroup__add(tc_nat) ).
+
+cnf(clsarity_nat__Ring__and__Field_Ono__zero__divisors,axiom,
+    class_Ring__and__Field_Ono__zero__divisors(tc_nat) ).
+
+cnf(clsarity_nat__Ring__and__Field_Oordered__semidom,axiom,
+    class_Ring__and__Field_Oordered__semidom(tc_nat) ).
+
+cnf(clsarity_nat__Ring__and__Field_Ocomm__semiring__1,axiom,
+    class_Ring__and__Field_Ocomm__semiring__1(tc_nat) ).
+
+cnf(clsarity_nat__OrderedGroup_Oab__semigroup__mult,axiom,
+    class_OrderedGroup_Oab__semigroup__mult(tc_nat) ).
+
+cnf(clsarity_nat__OrderedGroup_Ocomm__monoid__mult,axiom,
+    class_OrderedGroup_Ocomm__monoid__mult(tc_nat) ).
+
+cnf(clsarity_nat__OrderedGroup_Oab__semigroup__add,axiom,
+    class_OrderedGroup_Oab__semigroup__add(tc_nat) ).
+
+cnf(clsarity_nat__Ring__and__Field_Ocomm__semiring,axiom,
+    class_Ring__and__Field_Ocomm__semiring(tc_nat) ).
+
+cnf(clsarity_nat__OrderedGroup_Ocomm__monoid__add,axiom,
+    class_OrderedGroup_Ocomm__monoid__add(tc_nat) ).
+
+cnf(clsarity_nat__Ring__and__Field_Ozero__neq__one,axiom,
+    class_Ring__and__Field_Ozero__neq__one(tc_nat) ).
+
+cnf(clsarity_nat__OrderedGroup_Osemigroup__add,axiom,
+    class_OrderedGroup_Osemigroup__add(tc_nat) ).
+
+cnf(clsarity_nat__Ring__and__Field_Osemiring__1,axiom,
+    class_Ring__and__Field_Osemiring__1(tc_nat) ).
+
+cnf(clsarity_nat__Ring__and__Field_Osemiring__0,axiom,
+    class_Ring__and__Field_Osemiring__0(tc_nat) ).
+
+cnf(clsarity_nat__Ring__and__Field_Omult__zero,axiom,
+    class_Ring__and__Field_Omult__zero(tc_nat) ).
+
+cnf(clsarity_nat__OrderedGroup_Omonoid__mult,axiom,
+    class_OrderedGroup_Omonoid__mult(tc_nat) ).
+
+cnf(clsarity_nat__Ring__and__Field_Osemiring,axiom,
+    class_Ring__and__Field_Osemiring(tc_nat) ).
+
+cnf(clsarity_nat__OrderedGroup_Omonoid__add,axiom,
+    class_OrderedGroup_Omonoid__add(tc_nat) ).
+
+cnf(clsarity_nat__Divides_Osemiring__div,axiom,
+    class_Divides_Osemiring__div(tc_nat) ).
+
+cnf(clsarity_nat__Nat_Osemiring__char__0,axiom,
+    class_Nat_Osemiring__char__0(tc_nat) ).
+
+cnf(clsarity_nat__Ring__and__Field_Odvd,axiom,
+    class_Ring__and__Field_Odvd(tc_nat) ).
+
+cnf(clsarity_nat__Orderings_Opreorder,axiom,
+    class_Orderings_Opreorder(tc_nat) ).
+
+cnf(clsarity_nat__Orderings_Olinorder,axiom,
+    class_Orderings_Olinorder(tc_nat) ).
+
+cnf(clsarity_nat__Orderings_Oorder,axiom,
+    class_Orderings_Oorder(tc_nat) ).
+
+cnf(clsarity_nat__Power_Opower,axiom,
+    class_Power_Opower(tc_nat) ).
+
+cnf(cls_ATP__Linkup_OCOMBC__def_0,axiom,
+    hAPP(c_COMBC(V_P,V_Q,T_b,T_c,T_a),V_R) = hAPP(hAPP(V_P,V_R),V_Q) ).
+
+cnf(cls_ATP__Linkup_OCOMBB__def_0,axiom,
+    c_COMBB(V_P,V_Q,V_R,T_b,T_a,T_c) = hAPP(V_P,hAPP(V_Q,V_R)) ).
+
+cnf(cls_ATP__Linkup_Oequal__imp__fequal_0,axiom,
+    c_fequal(V_x,V_x,T_a) ).
+
+cnf(cls_ATP__Linkup_Ofequal__imp__equal_0,axiom,
+    ( V_X = V_Y
+    | ~ c_fequal(V_X,V_Y,T_a) ) ).
+
+%------------------------------------------------------------------------------

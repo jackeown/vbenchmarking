@@ -1,0 +1,117 @@
+%------------------------------------------------------------------------------
+% File     : SWV348-2 : TPTP v9.2.1. Released v3.2.0.
+% Domain   : Software Verification (Security)
+% Problem  : Cryptographic protocol problem for Yahalom
+% Version  : [Pau06] axioms : Reduced > Especial.
+% English  :
+
+% Refs     : [Pau06] Paulson (2006), Email to G. Sutcliffe
+% Source   : [Pau06]
+% Names    :
+
+% Status   : Unsatisfiable
+% Rating   : 0.18 v9.1.0, 0.20 v9.0.0, 0.25 v8.2.0, 0.24 v8.1.0, 0.11 v7.5.0, 0.21 v7.4.0, 0.18 v7.3.0, 0.08 v7.2.0, 0.17 v7.1.0, 0.08 v7.0.0, 0.20 v6.3.0, 0.00 v6.2.0, 0.30 v6.1.0, 0.29 v6.0.0, 0.10 v5.5.0, 0.45 v5.3.0, 0.44 v5.2.0, 0.38 v5.1.0, 0.35 v5.0.0, 0.43 v4.1.0, 0.31 v4.0.1, 0.36 v3.7.0, 0.30 v3.5.0, 0.36 v3.4.0, 0.42 v3.3.0, 0.29 v3.2.0
+% Syntax   : Number of clauses     :   20 (   8 unt;   4 nHn;  19 RR)
+%            Number of literals    :   48 (   3 equ;  26 neg)
+%            Maximal clause size   :    6 (   2 avg)
+%            Maximal term depth    :    8 (   2 avg)
+%            Number of predicates  :    2 (   1 usr;   0 prp; 2-3 aty)
+%            Number of functors    :   31 (  31 usr;  17 con; 0-3 aty)
+%            Number of variables   :   66 (  25 sgn)
+% SPC      : CNF_UNS_RFO_SEQ_NHN
+
+% Comments : The problems in the [Pau06] collection each have very many axioms,
+%            of which only a small selection are required for the refutation.
+%            The mission is to find those few axioms, after which a refutation
+%            can be quite easily found. This version has only the necessary
+%            axioms.
+%------------------------------------------------------------------------------
+cnf(cls_Message_OMPair__parts_1,axiom,
+    ( ~ c_in(c_Message_Omsg_OMPair(V_X,V_Y),c_Message_Oparts(V_H),tc_Message_Omsg)
+    | c_in(V_X,c_Message_Oparts(V_H),tc_Message_Omsg) ) ).
+
+cnf(cls_Message_Oparts_OInj_0,axiom,
+    ( ~ c_in(V_X,V_H,tc_Message_Omsg)
+    | c_in(V_X,c_Message_Oparts(V_H),tc_Message_Omsg) ) ).
+
+cnf(cls_Message_Oparts__analz_0,axiom,
+    c_Message_Oparts(c_Message_Oanalz(V_H)) = c_Message_Oparts(V_H) ).
+
+cnf(cls_Message_OMPair__analz_0,axiom,
+    ( ~ c_in(c_Message_Omsg_OMPair(V_X,V_Y),c_Message_Oanalz(V_H),tc_Message_Omsg)
+    | c_in(V_Y,c_Message_Oanalz(V_H),tc_Message_Omsg) ) ).
+
+cnf(cls_Message_OMPair__analz_1,axiom,
+    ( ~ c_in(c_Message_Omsg_OMPair(V_X,V_Y),c_Message_Oanalz(V_H),tc_Message_Omsg)
+    | c_in(V_X,c_Message_Oanalz(V_H),tc_Message_Omsg) ) ).
+
+cnf(cls_Yahalom_OSpy__analz__shrK_1,axiom,
+    ( ~ c_in(V_A,c_Event_Obad,tc_Message_Oagent)
+    | ~ c_in(V_evs,c_Yahalom_Oyahalom,tc_List_Olist(tc_Event_Oevent))
+    | c_in(c_Message_Omsg_OKey(c_Public_OshrK(V_A)),c_Message_Oanalz(c_Event_Oknows(c_Message_Oagent_OSpy,V_evs)),tc_Message_Omsg) ) ).
+
+cnf(cls_Yahalom_OGets__imp__analz__Spy__dest_0,axiom,
+    ( ~ c_in(V_evs,c_Yahalom_Oyahalom,tc_List_Olist(tc_Event_Oevent))
+    | ~ c_in(c_Event_Oevent_OGets(V_B,V_X),c_List_Oset(V_evs,tc_Event_Oevent),tc_Event_Oevent)
+    | c_in(V_X,c_Message_Oanalz(c_Event_Oknows(c_Message_Oagent_OSpy,V_evs)),tc_Message_Omsg) ) ).
+
+cnf(cls_Yahalom_OSays__Server__imp__YM2_0,axiom,
+    ( ~ c_in(V_evs,c_Yahalom_Oyahalom,tc_List_Olist(tc_Event_Oevent))
+    | ~ c_in(c_Event_Oevent_OSays(c_Message_Oagent_OServer,V_A,c_Message_Omsg_OMPair(c_Message_Omsg_OCrypt(c_Public_OshrK(V_A),c_Message_Omsg_OMPair(c_Message_Omsg_OAgent(V_B),c_Message_Omsg_OMPair(V_k,c_Message_Omsg_OMPair(V_na,V_nb)))),V_X)),c_List_Oset(V_evs,tc_Event_Oevent),tc_Event_Oevent)
+    | c_in(c_Event_Oevent_OGets(c_Message_Oagent_OServer,c_Message_Omsg_OMPair(c_Message_Omsg_OAgent(V_B),c_Message_Omsg_OCrypt(c_Public_OshrK(V_B),c_Message_Omsg_OMPair(c_Message_Omsg_OAgent(V_A),c_Message_Omsg_OMPair(V_na,V_nb))))),c_List_Oset(V_evs,tc_Event_Oevent),tc_Event_Oevent) ) ).
+
+cnf(cls_Public_Oanalz__shrK__Decrypt_0,axiom,
+    ( ~ c_in(c_Message_Omsg_OCrypt(c_Public_OshrK(V_A),V_X),c_Message_Oanalz(V_H),tc_Message_Omsg)
+    | ~ c_in(c_Message_Omsg_OKey(c_Public_OshrK(V_A)),c_Message_Oanalz(V_H),tc_Message_Omsg)
+    | c_in(V_X,c_Message_Oanalz(V_H),tc_Message_Omsg) ) ).
+
+cnf(cls_Yahalom_OA__trusts__YM3_0,axiom,
+    ( ~ c_in(V_evs,c_Yahalom_Oyahalom,tc_List_Olist(tc_Event_Oevent))
+    | ~ c_in(c_Message_Omsg_OCrypt(c_Public_OshrK(V_A),c_Message_Omsg_OMPair(c_Message_Omsg_OAgent(V_B),c_Message_Omsg_OMPair(c_Message_Omsg_OKey(V_K),c_Message_Omsg_OMPair(V_na,V_nb)))),c_Message_Oparts(c_Event_Oknows(c_Message_Oagent_OSpy,V_evs)),tc_Message_Omsg)
+    | c_in(V_A,c_Event_Obad,tc_Message_Oagent)
+    | c_in(c_Event_Oevent_OSays(c_Message_Oagent_OServer,V_A,c_Message_Omsg_OMPair(c_Message_Omsg_OCrypt(c_Public_OshrK(V_A),c_Message_Omsg_OMPair(c_Message_Omsg_OAgent(V_B),c_Message_Omsg_OMPair(c_Message_Omsg_OKey(V_K),c_Message_Omsg_OMPair(V_na,V_nb)))),c_Message_Omsg_OCrypt(c_Public_OshrK(V_B),c_Message_Omsg_OMPair(c_Message_Omsg_OAgent(V_A),c_Message_Omsg_OKey(V_K))))),c_List_Oset(V_evs,tc_Event_Oevent),tc_Event_Oevent) ) ).
+
+cnf(cls_Yahalom_OSays__unique__NB_0,axiom,
+    ( ~ c_in(V_evs,c_Yahalom_Oyahalom,tc_List_Olist(tc_Event_Oevent))
+    | ~ c_in(c_Event_Oevent_OGets(V_S_H,c_Message_Omsg_OMPair(V_X_H,c_Message_Omsg_OCrypt(c_Public_OshrK(V_B_H),c_Message_Omsg_OMPair(c_Message_Omsg_OAgent(V_A_H),c_Message_Omsg_OMPair(c_Message_Omsg_ONonce(V_NA_H),V_nb))))),c_List_Oset(V_evs,tc_Event_Oevent),tc_Event_Oevent)
+    | ~ c_in(c_Event_Oevent_OSays(V_C,V_S,c_Message_Omsg_OMPair(V_X,c_Message_Omsg_OCrypt(c_Public_OshrK(V_B),c_Message_Omsg_OMPair(c_Message_Omsg_OAgent(V_A),c_Message_Omsg_OMPair(c_Message_Omsg_ONonce(V_NA),V_nb))))),c_List_Oset(V_evs,tc_Event_Oevent),tc_Event_Oevent)
+    | c_in(V_nb,c_Message_Oanalz(c_Event_Oknows(c_Message_Oagent_OSpy,V_evs)),tc_Message_Omsg)
+    | V_NA_H = V_NA ) ).
+
+cnf(cls_Yahalom_OSays__unique__NB_2,axiom,
+    ( ~ c_in(V_evs,c_Yahalom_Oyahalom,tc_List_Olist(tc_Event_Oevent))
+    | ~ c_in(c_Event_Oevent_OGets(V_S_H,c_Message_Omsg_OMPair(V_X_H,c_Message_Omsg_OCrypt(c_Public_OshrK(V_B_H),c_Message_Omsg_OMPair(c_Message_Omsg_OAgent(V_A_H),c_Message_Omsg_OMPair(c_Message_Omsg_ONonce(V_NA_H),V_nb))))),c_List_Oset(V_evs,tc_Event_Oevent),tc_Event_Oevent)
+    | ~ c_in(c_Event_Oevent_OSays(V_C,V_S,c_Message_Omsg_OMPair(V_X,c_Message_Omsg_OCrypt(c_Public_OshrK(V_B),c_Message_Omsg_OMPair(c_Message_Omsg_OAgent(V_A),c_Message_Omsg_OMPair(c_Message_Omsg_ONonce(V_NA),V_nb))))),c_List_Oset(V_evs,tc_Event_Oevent),tc_Event_Oevent)
+    | c_in(V_nb,c_Message_Oanalz(c_Event_Oknows(c_Message_Oagent_OSpy,V_evs)),tc_Message_Omsg)
+    | V_B_H = V_B ) ).
+
+cnf(cls_Yahalom_OSpy__not__see__encrypted__key_0,axiom,
+    ( ~ c_in(V_evs,c_Yahalom_Oyahalom,tc_List_Olist(tc_Event_Oevent))
+    | ~ c_in(c_Event_Oevent_OSays(c_Message_Oagent_OServer,V_A,c_Message_Omsg_OMPair(c_Message_Omsg_OCrypt(c_Public_OshrK(V_A),c_Message_Omsg_OMPair(c_Message_Omsg_OAgent(V_B),c_Message_Omsg_OMPair(c_Message_Omsg_OKey(V_K),c_Message_Omsg_OMPair(V_na,V_nb)))),c_Message_Omsg_OCrypt(c_Public_OshrK(V_B),c_Message_Omsg_OMPair(c_Message_Omsg_OAgent(V_A),c_Message_Omsg_OKey(V_K))))),c_List_Oset(V_evs,tc_Event_Oevent),tc_Event_Oevent)
+    | ~ c_in(c_Message_Omsg_OKey(V_K),c_Message_Oanalz(c_Event_Oknows(c_Message_Oagent_OSpy,V_evs)),tc_Message_Omsg)
+    | c_in(V_B,c_Event_Obad,tc_Message_Oagent)
+    | c_in(V_A,c_Event_Obad,tc_Message_Oagent)
+    | c_in(c_Event_Oevent_ONotes(c_Message_Oagent_OSpy,c_Message_Omsg_OMPair(V_na,c_Message_Omsg_OMPair(V_nb,c_Message_Omsg_OKey(V_K)))),c_List_Oset(V_evs,tc_Event_Oevent),tc_Event_Oevent) ) ).
+
+cnf(cls_conjecture_1,negated_conjecture,
+    ~ c_in(v_B,c_Event_Obad,tc_Message_Oagent) ).
+
+cnf(cls_conjecture_2,negated_conjecture,
+    c_in(v_evs4,c_Yahalom_Oyahalom,tc_List_Olist(tc_Event_Oevent)) ).
+
+cnf(cls_conjecture_5,negated_conjecture,
+    c_in(c_Event_Oevent_OGets(v_Aa,c_Message_Omsg_OMPair(c_Message_Omsg_OCrypt(c_Public_OshrK(v_Aa),c_Message_Omsg_OMPair(c_Message_Omsg_OAgent(v_Ba),c_Message_Omsg_OMPair(c_Message_Omsg_OKey(v_K),c_Message_Omsg_OMPair(c_Message_Omsg_ONonce(v_NAa),c_Message_Omsg_ONonce(v_NB))))),v_X)),c_List_Oset(v_evs4,tc_Event_Oevent),tc_Event_Oevent) ).
+
+cnf(cls_conjecture_8,negated_conjecture,
+    ~ c_in(c_Event_Oevent_ONotes(c_Message_Oagent_OSpy,c_Message_Omsg_OMPair(c_Message_Omsg_ONonce(v_NA),c_Message_Omsg_OMPair(c_Message_Omsg_ONonce(v_NB),V_U))),c_List_Oset(v_evs4,tc_Event_Oevent),tc_Event_Oevent) ).
+
+cnf(cls_conjecture_9,negated_conjecture,
+    c_in(c_Event_Oevent_OSays(v_B,c_Message_Oagent_OServer,c_Message_Omsg_OMPair(c_Message_Omsg_OAgent(v_B),c_Message_Omsg_OCrypt(c_Public_OshrK(v_B),c_Message_Omsg_OMPair(c_Message_Omsg_OAgent(v_A),c_Message_Omsg_OMPair(c_Message_Omsg_ONonce(v_NA),c_Message_Omsg_ONonce(v_NB)))))),c_List_Oset(v_evs4,tc_Event_Oevent),tc_Event_Oevent) ).
+
+cnf(cls_conjecture_10,negated_conjecture,
+    ~ c_in(c_Message_Omsg_ONonce(v_NB),c_Message_Oanalz(c_Event_Oknows(c_Message_Oagent_OSpy,v_evs4)),tc_Message_Omsg) ).
+
+cnf(cls_conjecture_11,negated_conjecture,
+    c_in(c_Message_Omsg_OKey(v_K),c_Message_Oanalz(c_Event_Oknows(c_Message_Oagent_OSpy,v_evs4)),tc_Message_Omsg) ).
+
+%------------------------------------------------------------------------------

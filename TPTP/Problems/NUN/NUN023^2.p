@@ -1,0 +1,59 @@
+%------------------------------------------------------------------------------
+% File     : NUN023^2 : TPTP v9.2.1. Released v6.4.0.
+% Domain   : Number Theory
+% Problem  : Function h s.t. h(0) = 1, h(1) = 0, with witness
+% Version  : Especial.
+% English  : Using an axiomatiztion of if-then-else, find the if-then-else
+%            term that expresses the function H.
+
+% Refs     : [Rie16] Riener (2016), Email to Geoff Sutcliffe
+% Source   : [TPTP]
+% Names    : ntape6-0-with-witness.tptp [Rie16]
+
+% Status   : Theorem
+% Rating   : 0.22 v9.1.0, 0.25 v9.0.0, 0.30 v8.2.0, 0.31 v8.1.0, 0.18 v7.5.0, 0.14 v7.4.0, 0.11 v7.2.0, 0.00 v7.1.0, 0.25 v7.0.0, 0.14 v6.4.0
+% Syntax   : Number of formulae    :    5 (   0 unt;   4 typ;   0 def)
+%            Number of atoms       :    6 (   6 equ;   0 cnn)
+%            Maximal formula atoms :    5 (   6 avg)
+%            Number of connectives :   22 (   1   ~;   0   |;   3   &;  15   @)
+%                                         (   0 <=>;   3  =>;   0  <=;   0 <~>)
+%            Maximal formula depth :    9 (   9 avg)
+%            Number of types       :    2 (   0 usr)
+%            Number of type conns  :    6 (   6   >;   0   *;   0   +;   0  <<)
+%            Number of symbols     :    5 (   4 usr;   1 con; 0-3 aty)
+%            Number of variables   :    8 (   0   ^;   7   !;   1   ?;   8   :)
+% SPC      : TH0_THM_EQU_NAR
+
+% Comments :
+%------------------------------------------------------------------------------
+thf(n6,type,
+    zero: $i ).
+
+thf(n7,type,
+    s: $i > $i ).
+
+thf(n8,type,
+    ite: $o > $i > $i > $i ).
+
+thf(n9,type,
+    h: $i > $i ).
+
+thf(n10,conjecture,
+    ( ( ! [X100: $o,U: $i,V: $i] :
+          ( X100
+         => ( ( ite @ X100 @ U @ V )
+            = U ) )
+      & ! [X100: $o,U: $i,V: $i] :
+          ( ~ X100
+         => ( ( ite @ X100 @ U @ V )
+            = V ) )
+      & ! [X: $i] :
+          ( ( h @ X )
+          = ( ite @ ( X = zero ) @ ( s @ zero ) @ zero ) ) )
+   => ? [H: $i > $i] :
+        ( ( ( H @ zero )
+          = ( s @ zero ) )
+        & ( ( H @ ( s @ zero ) )
+          = zero ) ) ) ).
+
+%------------------------------------------------------------------------------

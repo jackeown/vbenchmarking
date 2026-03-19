@@ -1,0 +1,29 @@
+%------------------------------------------------------------------------------
+% File     : NUM408+1 : TPTP v9.2.1. Released v3.2.0.
+% Domain   : Number Theory (Ordinals)
+% Problem  : Ordinal numbers, theorem 42
+% Version  : [Urb06] axioms : Especial.
+% English  :
+
+% Refs     : [Ban90] Bancerek (1990), The Ordinal Numbers
+%            [Urb06] Urban (2006), Email to G. Sutcliffe
+% Source   : [Urb06]
+% Names    : ordinal1__t42_ordinal1 [Urb06]
+
+% Status   : Theorem
+% Rating   : 0.58 v3.3.0, 0.64 v3.2.0
+% Syntax   : Number of formulae    :   54 (  12 unit)
+%            Number of atoms       :  149 (   9 equality)
+%            Maximal formula depth :    9 (   4 average)
+%            Number of connectives :  116 (  21 ~  ;   2  |;  59  &)
+%                                         (   5 <=>;  29 =>;   0 <=)
+%                                         (   0 <~>;   0 ~|;   0 ~&)
+%            Number of predicates  :   16 (   0 propositional; 1-2 arity)
+%            Number of functors    :    5 (   1 constant; 0-2 arity)
+%            Number of variables   :   78 (   3 singleton;  63 !;  15 ?)
+%            Maximal term depth    :    3 (   1 average)
+
+% Comments : Translated by MPTP 0.2 from the original problem in the Mizar
+%            library, www.mizar.org
+% Bugfixes : v3.4.0 - Renamed to SEU238+3
+%------------------------------------------------------------------------------

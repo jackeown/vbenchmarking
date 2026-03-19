@@ -1,0 +1,30 @@
+%------------------------------------------------------------------------------
+% File     : SYO014^1 : TPTP v9.2.1. Removed v4.0.0.
+% Domain   : Syntactic
+% Problem  : A theorem of MBb
+% Version  : Especial.
+% English  :
+
+% Refs     : [Ben99] Benzmueller (1999), Equality and Extensionality in Hig
+%          : [BB05]  Benzmueller & Brown (2005), A Structured Set of Higher
+%          : [Ben09] Benzmueller (2009), Email to Geoff Sutcliffe
+% Source   : [Ben09]
+% Names    : Example 16 [BB05]
+
+% Status   : Theorem
+%          : Without Boolean extensionality : CounterSatisfiable
+% Rating   : 0.33 v3.7.0
+% Syntax   : Number of formulae    :    4 (   2 unit;   3 type;   0 defn)
+%            Number of atoms       :   11 (   0 equality;   0 variable)
+%            Maximal formula depth :    4 (   3 average)
+%            Number of connectives :    6 (   0   ~;   0   |;   2   &;   3   @)
+%                                         (   0 <=>;   1  =>;   0  <=;   0 <~>)
+%                                         (   0  ~|;   0  ~&;   0  !!;   0  ??)
+%            Number of type conns  :    1 (   1   >;   0   *;   0   +)
+%            Number of symbols     :    4 (   3   :;   0  :=)
+%            Number of variables   :    0 (   0 sgn;   0   !;   0   ?;   0   ^)
+%                                         (   0   :;   0  :=;   0  !>;   0  ?*)
+
+% Comments : THF0 syntax
+% Bugfixes : v4.0.0 - Removed because it's SYN983^1.
+%------------------------------------------------------------------------------

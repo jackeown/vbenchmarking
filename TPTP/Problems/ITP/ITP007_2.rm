@@ -1,0 +1,33 @@
+%------------------------------------------------------------------------------
+% File     : ITP007_2 : TPTP v9.2.1. Removed v8.0.0.
+% Domain   : Interactive Theorem Proving
+% Problem  : HOL4 set theory export of thm_2EpatternMatches_2EPMATCH__FLATTEN__FUN__PMATCH__ROW.p, bushy mode
+% Version  : [BG+19] axioms.
+% English  :
+
+% Refs     : [BG+19] Brown et al. (2019), GRUNGE: A Grand Unified ATP Chall
+%          : [Gau19] Gauthier (2019), Email to Geoff Sutcliffe
+% Source   : [BG+19]
+% Names    : thm_2EpatternMatches_2EPMATCH__FLATTEN__FUN__PMATCH__ROW.p [Gau19]
+%          : HL403001_2.p [TPAP]
+
+% Status   : Theorem
+% Rating   : 1.00 v7.5.0
+% Syntax   : Number of formulae    :  129 (  30 unit;  38 type)
+%            Number of atoms       :  393 (  45 equality)
+%            Maximal formula depth :   16 (   5 average)
+%            Number of connectives :  355 (  53   ~;  45   |;  57   &)
+%                                         (  79 <=>; 121  =>;   0  <=;   0 <~>)
+%                                         (   0  ~|;   0  ~&)
+%            Number of type conns  :   40 (  26   >;  14   *;   0   +;   0  <<)
+%            Number of predicates  :   13 (  10 propositional; 0-2 arity)
+%            Number of functors    :   42 (   9 constant; 0-6 arity)
+%            Number of variables   :  206 (   0 sgn; 201   !;   5   ?)
+%                                         ( 206   :;   0  !>;   0  ?*)
+%            Maximal term depth    :    7 (   2 average)
+% SPC      : TF0_THM_EQU_NAR
+
+% Comments :
+% Bugfixes : v7.5.0 - Bugfixes in axioms and export.
+%          : v8.0.0 - Removed due to type errors.
+%------------------------------------------------------------------------------

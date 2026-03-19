@@ -17,8 +17,8 @@
 </rundefinition>
 
 <tasks>
-    <includesfile>/home/mhajdu/vbenchmarking/benchmarks/tptp_TH0.set</includesfile>
-    <includesfile>/home/mhajdu/vbenchmarking/benchmarks/tptp_TH1.set</includesfile>
+    <includesfile>tptp_TH0.set</includesfile>
+    <includesfile>tptp_TH1.set</includesfile>
 </tasks>
 
 <columns>

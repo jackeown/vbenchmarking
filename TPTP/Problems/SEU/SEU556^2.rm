@@ -1,0 +1,29 @@
+%------------------------------------------------------------------------------
+% File     : SEU556^2 : TPTP v9.2.1. Removed v4.0.0.
+% Domain   : Set Theory
+% Problem  : Preliminary Notions - Equality Laws
+% Version  : Especial > Reduced > Especial.
+% English  : (! phi:i>o.exu (^ x:i.phi x) -> (! x:i.! y:i.phi x -> phi y ->
+%            x = y))
+
+% Refs     : [Bro08] Brown (2008), Email to G. Sutcliffe
+% Source   : [Bro08]
+% Names    : ZFC058l [Bro08]
+
+% Status   : Theorem
+% Rating   : 0.00 v3.7.0
+% Syntax   : Number of formulae    :    3 (   0 unit;   1 type;   1 defn)
+%            Number of atoms       :   31 (   3 equality;  14 variable)
+%            Maximal formula depth :    8 (   7 average)
+%            Number of connectives :   11 (   0   ~;   0   |;   1   &;   6   @)
+%                                         (   0 <=>;   4  =>;   0  <=;   0 <~>)
+%                                         (   0  ~|;   0  ~&;   0  !!;   0  ??)
+%            Number of type conns  :    4 (   4   >;   0   *;   0   +)
+%            Number of symbols     :    3 (   1   :;   0  :=)
+%            Number of variables   :    7 (   0 sgn;   4   !;   1   ?;   2   ^)
+%                                         (   7   :;   0  :=;   0  !>;   0  ?*)
+
+% Comments : http://mathgate.info/detsetitem.php?id=146
+%          : THF0 syntax
+% Bugfixes : v4.0.0 - Removed because it's SEU549^2.
+%------------------------------------------------------------------------------

@@ -1,0 +1,46 @@
+%------------------------------------------------------------------------------
+% File     : SYO043^1 : TPTP v9.2.1. Released v4.0.0.
+% Domain   : Syntactic
+% Problem  : Unsatisfiable basic formula 5
+% Version  : Especial.
+% English  : 
+
+% Refs     : [BS09a] Brown E. & Smolka (2009), Terminating Tableaux for the
+%          : [BS09b] Brown E. & Smolka (2009), Extended First-Order Logic
+% Source   : [BS09a]
+% Names    : 
+
+% Status   : Unsatisfiable
+% Rating   : 0.00 v5.3.0, 0.33 v5.2.0, 0.67 v5.0.0, 0.33 v4.1.0, 0.67 v4.0.1, 1.00 v4.0.0
+% Syntax   : Number of formulae    :    4 (   0 unt;   3 typ;   0 def)
+%            Number of atoms       :   13 (   1 equ;   0 cnn)
+%            Maximal formula atoms :    7 (  13 avg)
+%            Number of connectives :   11 (   1   ~;   0   |;   2   &;   8   @)
+%                                         (   0 <=>;   0  =>;   0  <=;   0 <~>)
+%            Maximal formula depth :    5 (   5 avg)
+%            Number of types       :    1 (   0 usr)
+%            Number of type conns  :    4 (   4   >;   0   *;   0   +;   0  <<)
+%            Number of symbols     :    4 (   3 usr;   1 con; 0-2 aty)
+%            Number of variables   :    0 (   0   ^;   0   !;   0   ?;   0   :)
+% SPC      : TH0_UNS_EQU_NAR
+
+% Comments : The fragment of simple type theory that restricts equations to 
+%            base types and disallows lambda abstraction and quantification is
+%            decidable. This is an example.
+%------------------------------------------------------------------------------
+thf(f,type,
+    f: $o > $o ).
+
+thf(q,type,
+    q: ( $o > $o ) > $o > $o ).
+
+thf(x,type,
+    x: $o ).
+
+thf(5,axiom,
+    ( ( q @ f @ x )
+    & ( f @ ( f @ x ) )
+    & ( ( f @ ( q @ f @ x ) )
+     != ( f @ x ) ) ) ).
+
+%------------------------------------------------------------------------------

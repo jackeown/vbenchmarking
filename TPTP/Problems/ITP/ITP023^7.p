@@ -1,0 +1,6413 @@
+%------------------------------------------------------------------------------
+% File     : ITP023^7 : TPTP v9.2.1. Bugfixed v7.5.0.
+% Domain   : Interactive Theorem Proving
+% Problem  : HOL4 syntactic export of thm_2Ereal__topology_2EBOUNDED__BALL.p, chainy mode
+% Version  : [BG+19] axioms.
+% English  :
+
+% Refs     : [BG+19] Brown et al. (2019), GRUNGE: A Grand Unified ATP Chall
+%          : [Gau20] Gauthier (2020), Email to Geoff Sutcliffe
+% Source   : [BG+19]
+% Names    : thm_2Ereal__topology_2EBOUNDED__BALL.p [Gau20]
+%          : HL411001^7.p [TPAP]
+
+% Status   : Theorem
+% Rating   : 0.67 v8.2.0, 0.33 v8.1.0, 0.50 v7.5.0
+% Syntax   : Number of formulae    : 24301 (5975 unt;8777 typ;   0 def)
+%            Number of atoms       : 61447 (19987 equ;2864 cnn)
+%            Maximal formula atoms :  912 (   3 avg)
+%            Number of connectives : 406978 (2864   ~;1226   |;14369   &;374078   @)
+%                                         (5741 <=>;8700  =>;   0  <=;   0 <~>)
+%            Maximal formula depth :  364 (   8 avg)
+%            Number of types       :   24 (  23 usr)
+%            Number of type conns  : 42529 (42529   >;   0   *;   0   +;   0  <<)
+%            Number of symbols     : 2444 (2442 usr;  94 con; 0-11 aty)
+%            Number of variables   : 82787 (5073   ^;57301   !;14279   ?;82787   :)
+%                                         (6134  !>;   0  ?*;   0  @-;   0  @+)
+% SPC      : TH1_THM_EQU_NAR
+
+% Comments :
+% Bugfixes : v7.5.0 - Bugfixes in axioms and export.
+%------------------------------------------------------------------------------
+include('Axioms/ITP001/ITP002^7.ax').
+include('Axioms/ITP001/ITP003^7.ax').
+include('Axioms/ITP001/ITP004^7.ax').
+include('Axioms/ITP001/ITP005^7.ax').
+include('Axioms/ITP001/ITP006^7.ax').
+include('Axioms/ITP001/ITP007^7.ax').
+include('Axioms/ITP001/ITP008^7.ax').
+include('Axioms/ITP001/ITP009^7.ax').
+include('Axioms/ITP001/ITP010^7.ax').
+include('Axioms/ITP001/ITP011^7.ax').
+include('Axioms/ITP001/ITP012^7.ax').
+include('Axioms/ITP001/ITP013^7.ax').
+include('Axioms/ITP001/ITP014^7.ax').
+include('Axioms/ITP001/ITP015^7.ax').
+include('Axioms/ITP001/ITP016^7.ax').
+include('Axioms/ITP001/ITP017^7.ax').
+include('Axioms/ITP001/ITP018^7.ax').
+include('Axioms/ITP001/ITP019^7.ax').
+include('Axioms/ITP001/ITP020^7.ax').
+include('Axioms/ITP001/ITP021^7.ax').
+include('Axioms/ITP001/ITP022^7.ax').
+include('Axioms/ITP001/ITP023^7.ax').
+include('Axioms/ITP001/ITP024^7.ax').
+include('Axioms/ITP001/ITP025^7.ax').
+include('Axioms/ITP001/ITP026^7.ax').
+include('Axioms/ITP001/ITP027^7.ax').
+include('Axioms/ITP001/ITP028^7.ax').
+include('Axioms/ITP001/ITP029^7.ax').
+include('Axioms/ITP001/ITP030^7.ax').
+include('Axioms/ITP001/ITP031^7.ax').
+include('Axioms/ITP001/ITP032^7.ax').
+include('Axioms/ITP001/ITP033^7.ax').
+include('Axioms/ITP001/ITP034^7.ax').
+include('Axioms/ITP001/ITP035^7.ax').
+include('Axioms/ITP001/ITP036^7.ax').
+include('Axioms/ITP001/ITP037^7.ax').
+include('Axioms/ITP001/ITP038^7.ax').
+include('Axioms/ITP001/ITP039^7.ax').
+include('Axioms/ITP001/ITP040^7.ax').
+include('Axioms/ITP001/ITP041^7.ax').
+include('Axioms/ITP001/ITP042^7.ax').
+include('Axioms/ITP001/ITP043^7.ax').
+include('Axioms/ITP001/ITP044^7.ax').
+include('Axioms/ITP001/ITP045^7.ax').
+include('Axioms/ITP001/ITP046^7.ax').
+include('Axioms/ITP001/ITP047^7.ax').
+include('Axioms/ITP001/ITP048^7.ax').
+include('Axioms/ITP001/ITP049^7.ax').
+include('Axioms/ITP001/ITP050^7.ax').
+include('Axioms/ITP001/ITP051^7.ax').
+include('Axioms/ITP001/ITP052^7.ax').
+include('Axioms/ITP001/ITP053^7.ax').
+include('Axioms/ITP001/ITP054^7.ax').
+include('Axioms/ITP001/ITP055^7.ax').
+include('Axioms/ITP001/ITP056^7.ax').
+include('Axioms/ITP001/ITP057^7.ax').
+include('Axioms/ITP001/ITP058^7.ax').
+include('Axioms/ITP001/ITP059^7.ax').
+include('Axioms/ITP001/ITP060^7.ax').
+include('Axioms/ITP001/ITP061^7.ax').
+include('Axioms/ITP001/ITP062^7.ax').
+include('Axioms/ITP001/ITP063^7.ax').
+include('Axioms/ITP001/ITP064^7.ax').
+include('Axioms/ITP001/ITP065^7.ax').
+include('Axioms/ITP001/ITP066^7.ax').
+include('Axioms/ITP001/ITP067^7.ax').
+include('Axioms/ITP001/ITP068^7.ax').
+include('Axioms/ITP001/ITP069^7.ax').
+include('Axioms/ITP001/ITP070^7.ax').
+include('Axioms/ITP001/ITP071^7.ax').
+include('Axioms/ITP001/ITP072^7.ax').
+include('Axioms/ITP001/ITP073^7.ax').
+include('Axioms/ITP001/ITP074^7.ax').
+include('Axioms/ITP001/ITP075^7.ax').
+include('Axioms/ITP001/ITP076^7.ax').
+include('Axioms/ITP001/ITP077^7.ax').
+include('Axioms/ITP001/ITP078^7.ax').
+include('Axioms/ITP001/ITP079^7.ax').
+include('Axioms/ITP001/ITP080^7.ax').
+include('Axioms/ITP001/ITP081^7.ax').
+include('Axioms/ITP001/ITP082^7.ax').
+include('Axioms/ITP001/ITP083^7.ax').
+include('Axioms/ITP001/ITP084^7.ax').
+include('Axioms/ITP001/ITP085^7.ax').
+include('Axioms/ITP001/ITP086^7.ax').
+include('Axioms/ITP001/ITP087^7.ax').
+include('Axioms/ITP001/ITP088^7.ax').
+include('Axioms/ITP001/ITP089^7.ax').
+include('Axioms/ITP001/ITP090^7.ax').
+include('Axioms/ITP001/ITP091^7.ax').
+include('Axioms/ITP001/ITP092^7.ax').
+include('Axioms/ITP001/ITP093^7.ax').
+include('Axioms/ITP001/ITP094^7.ax').
+include('Axioms/ITP001/ITP095^7.ax').
+include('Axioms/ITP001/ITP096^7.ax').
+include('Axioms/ITP001/ITP097^7.ax').
+include('Axioms/ITP001/ITP098^7.ax').
+include('Axioms/ITP001/ITP099^7.ax').
+include('Axioms/ITP001/ITP100^7.ax').
+include('Axioms/ITP001/ITP101^7.ax').
+include('Axioms/ITP001/ITP102^7.ax').
+include('Axioms/ITP001/ITP103^7.ax').
+include('Axioms/ITP001/ITP104^7.ax').
+include('Axioms/ITP001/ITP105^7.ax').
+include('Axioms/ITP001/ITP106^7.ax').
+include('Axioms/ITP001/ITP107^7.ax').
+include('Axioms/ITP001/ITP108^7.ax').
+include('Axioms/ITP001/ITP109^7.ax').
+include('Axioms/ITP001/ITP110^7.ax').
+include('Axioms/ITP001/ITP111^7.ax').
+include('Axioms/ITP001/ITP112^7.ax').
+include('Axioms/ITP001/ITP113^7.ax').
+include('Axioms/ITP001/ITP114^7.ax').
+include('Axioms/ITP001/ITP116^7.ax').
+include('Axioms/ITP001/ITP117^7.ax').
+include('Axioms/ITP001/ITP118^7.ax').
+include('Axioms/ITP001/ITP119^7.ax').
+include('Axioms/ITP001/ITP120^7.ax').
+include('Axioms/ITP001/ITP121^7.ax').
+include('Axioms/ITP001/ITP123^7.ax').
+include('Axioms/ITP001/ITP124^7.ax').
+include('Axioms/ITP001/ITP126^7.ax').
+include('Axioms/ITP001/ITP127^7.ax').
+include('Axioms/ITP001/ITP128^7.ax').
+include('Axioms/ITP001/ITP129^7.ax').
+include('Axioms/ITP001/ITP130^7.ax').
+include('Axioms/ITP001/ITP131^7.ax').
+include('Axioms/ITP001/ITP132^7.ax').
+include('Axioms/ITP001/ITP133^7.ax').
+include('Axioms/ITP001/ITP134^7.ax').
+include('Axioms/ITP001/ITP135^7.ax').
+include('Axioms/ITP001/ITP136^7.ax').
+include('Axioms/ITP001/ITP137^7.ax').
+include('Axioms/ITP001/ITP138^7.ax').
+include('Axioms/ITP001/ITP139^7.ax').
+include('Axioms/ITP001/ITP140^7.ax').
+include('Axioms/ITP001/ITP141^7.ax').
+include('Axioms/ITP001/ITP142^7.ax').
+include('Axioms/ITP001/ITP143^7.ax').
+include('Axioms/ITP001/ITP144^7.ax').
+include('Axioms/ITP001/ITP145^7.ax').
+include('Axioms/ITP001/ITP146^7.ax').
+include('Axioms/ITP001/ITP147^7.ax').
+include('Axioms/ITP001/ITP148^7.ax').
+%------------------------------------------------------------------------------
+thf(tyop_2Elist_2Elist,type,
+    tyop_2Elist_2Elist: $tType > $tType ).
+
+thf(tyop_2Emin_2Ebool,type,
+    tyop_2Emin_2Ebool: $tType ).
+
+thf(tyop_2Emin_2Efun,type,
+    tyop_2Emin_2Efun: $tType > $tType > $tType ).
+
+thf(tyop_2Enum_2Enum,type,
+    tyop_2Enum_2Enum: $tType ).
+
+thf(tyop_2Epair_2Eprod,type,
+    tyop_2Epair_2Eprod: $tType > $tType > $tType ).
+
+thf(tyop_2Ereal__topology_2Enet,type,
+    tyop_2Ereal__topology_2Enet: $tType > $tType ).
+
+thf(tyop_2Erealax_2Ereal,type,
+    tyop_2Erealax_2Ereal: $tType ).
+
+thf(tyop_2Etopology_2Etopology,type,
+    tyop_2Etopology_2Etopology: $tType > $tType ).
+
+thf(c_2Ebool_2E_21,type,
+    c_2Ebool_2E_21: 
+      !>[A_27a: $tType] : ( ( A_27a > $o ) > $o ) ).
+
+thf(c_2Earithmetic_2E_2A,type,
+    c_2Earithmetic_2E_2A: tyop_2Enum_2Enum > tyop_2Enum_2Enum > tyop_2Enum_2Enum ).
+
+thf(c_2Earithmetic_2E_2B,type,
+    c_2Earithmetic_2E_2B: tyop_2Enum_2Enum > tyop_2Enum_2Enum > tyop_2Enum_2Enum ).
+
+thf(c_2Epair_2E_2C,type,
+    c_2Epair_2E_2C: 
+      !>[A_27a: $tType,A_27b: $tType] : ( A_27a > A_27b > ( tyop_2Epair_2Eprod @ A_27a @ A_27b ) ) ).
+
+thf(c_2Earithmetic_2E_2D,type,
+    c_2Earithmetic_2E_2D: tyop_2Enum_2Enum > tyop_2Enum_2Enum > tyop_2Enum_2Enum ).
+
+thf(c_2Ereal__topology_2E_2D_2D_3E,type,
+    c_2Ereal__topology_2E_2D_2D_3E: 
+      !>[A_27a: $tType] : ( ( A_27a > tyop_2Erealax_2Ereal ) > tyop_2Erealax_2Ereal > ( tyop_2Ereal__topology_2Enet @ A_27a ) > $o ) ).
+
+thf(c_2Eiterate_2E_2E_2E,type,
+    c_2Eiterate_2E_2E_2E: tyop_2Enum_2Enum > tyop_2Enum_2Enum > tyop_2Enum_2Enum > $o ).
+
+thf(c_2Ereal_2E_2F,type,
+    c_2Ereal_2E_2F: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal ).
+
+thf(c_2Ebool_2E_2F_5C,type,
+    c_2Ebool_2E_2F_5C: $o > $o > $o ).
+
+thf(c_2Enum_2E0,type,
+    c_2Enum_2E0: tyop_2Enum_2Enum ).
+
+thf(c_2Eprim__rec_2E_3C,type,
+    c_2Eprim__rec_2E_3C: tyop_2Enum_2Enum > tyop_2Enum_2Enum > $o ).
+
+thf(c_2Earithmetic_2E_3C_3D,type,
+    c_2Earithmetic_2E_3C_3D: tyop_2Enum_2Enum > tyop_2Enum_2Enum > $o ).
+
+thf(c_2Emin_2E_3D,type,
+    c_2Emin_2E_3D: 
+      !>[A_27a: $tType] : ( A_27a > A_27a > $o ) ).
+
+thf(c_2Emin_2E_3D_3D_3E,type,
+    c_2Emin_2E_3D_3D_3E: $o > $o > $o ).
+
+thf(c_2Earithmetic_2E_3E_3D,type,
+    c_2Earithmetic_2E_3E_3D: tyop_2Enum_2Enum > tyop_2Enum_2Enum > $o ).
+
+thf(c_2Ebool_2E_3F,type,
+    c_2Ebool_2E_3F: 
+      !>[A_27a: $tType] : ( ( A_27a > $o ) > $o ) ).
+
+thf(c_2Ebool_2E_3F_21,type,
+    c_2Ebool_2E_3F_21: 
+      !>[A_27a: $tType] : ( ( A_27a > $o ) > $o ) ).
+
+thf(c_2Emin_2E_40,type,
+    c_2Emin_2E_40: 
+      !>[A_27a: $tType] : ( ( A_27a > $o ) > A_27a ) ).
+
+thf(c_2Epred__set_2EBIGINTER,type,
+    c_2Epred__set_2EBIGINTER: 
+      !>[A_27a: $tType] : ( ( ( A_27a > $o ) > $o ) > A_27a > $o ) ).
+
+thf(c_2Epred__set_2EBIGUNION,type,
+    c_2Epred__set_2EBIGUNION: 
+      !>[A_27a: $tType] : ( ( ( A_27a > $o ) > $o ) > A_27a > $o ) ).
+
+thf(c_2Earithmetic_2EBIT1,type,
+    c_2Earithmetic_2EBIT1: tyop_2Enum_2Enum > tyop_2Enum_2Enum ).
+
+thf(c_2Earithmetic_2EBIT2,type,
+    c_2Earithmetic_2EBIT2: tyop_2Enum_2Enum > tyop_2Enum_2Enum ).
+
+thf(c_2Epred__set_2ECARD,type,
+    c_2Epred__set_2ECARD: 
+      !>[A_27a: $tType] : ( ( A_27a > $o ) > tyop_2Enum_2Enum ) ).
+
+thf(c_2Ebool_2ECOND,type,
+    c_2Ebool_2ECOND: 
+      !>[A_27a: $tType] : ( $o > A_27a > A_27a > A_27a ) ).
+
+thf(c_2Elist_2ECONS,type,
+    c_2Elist_2ECONS: 
+      !>[A_27a: $tType] : ( A_27a > ( tyop_2Elist_2Elist @ A_27a ) > ( tyop_2Elist_2Elist @ A_27a ) ) ).
+
+thf(c_2Epred__set_2ECROSS,type,
+    c_2Epred__set_2ECROSS: 
+      !>[A_27a: $tType,A_27b: $tType] : ( ( A_27a > $o ) > ( A_27b > $o ) > ( tyop_2Epair_2Eprod @ A_27a @ A_27b ) > $o ) ).
+
+thf(c_2Ereal__topology_2EClosed,type,
+    c_2Ereal__topology_2EClosed: ( tyop_2Erealax_2Ereal > $o ) > $o ).
+
+thf(c_2Epred__set_2EDELETE,type,
+    c_2Epred__set_2EDELETE: 
+      !>[A_27a: $tType] : ( ( A_27a > $o ) > A_27a > A_27a > $o ) ).
+
+thf(c_2Epred__set_2EDIFF,type,
+    c_2Epred__set_2EDIFF: 
+      !>[A_27a: $tType] : ( ( A_27a > $o ) > ( A_27a > $o ) > A_27a > $o ) ).
+
+thf(c_2Epred__set_2EDISJOINT,type,
+    c_2Epred__set_2EDISJOINT: 
+      !>[A_27a: $tType] : ( ( A_27a > $o ) > ( A_27a > $o ) > $o ) ).
+
+thf(c_2Ereal__topology_2EDist,type,
+    c_2Ereal__topology_2EDist: ( tyop_2Epair_2Eprod @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal ) > tyop_2Erealax_2Ereal ).
+
+thf(c_2Epred__set_2EEMPTY,type,
+    c_2Epred__set_2EEMPTY: 
+      !>[A_27a: $tType] : ( A_27a > $o ) ).
+
+thf(c_2Ebool_2EF,type,
+    c_2Ebool_2EF: $o ).
+
+thf(c_2Epred__set_2EFINITE,type,
+    c_2Epred__set_2EFINITE: 
+      !>[A_27a: $tType] : ( ( A_27a > $o ) > $o ) ).
+
+thf(c_2Epair_2EFST,type,
+    c_2Epair_2EFST: 
+      !>[A_27a: $tType,A_27b: $tType] : ( ( tyop_2Epair_2Eprod @ A_27a @ A_27b ) > A_27a ) ).
+
+thf(c_2Epred__set_2EGSPEC,type,
+    c_2Epred__set_2EGSPEC: 
+      !>[A_27a: $tType,A_27b: $tType] : ( ( A_27b > ( tyop_2Epair_2Eprod @ A_27a @ $o ) ) > A_27a > $o ) ).
+
+thf(c_2Ecardinal_2EHAS__SIZE,type,
+    c_2Ecardinal_2EHAS__SIZE: 
+      !>[A_27a: $tType] : ( ( A_27a > $o ) > tyop_2Enum_2Enum > $o ) ).
+
+thf(c_2Elist_2EHD,type,
+    c_2Elist_2EHD: 
+      !>[A_27a: $tType] : ( ( tyop_2Elist_2Elist @ A_27a ) > A_27a ) ).
+
+thf(c_2Ecombin_2EI,type,
+    c_2Ecombin_2EI: 
+      !>[A_27a: $tType] : ( A_27a > A_27a ) ).
+
+thf(c_2Epred__set_2EIMAGE,type,
+    c_2Epred__set_2EIMAGE: 
+      !>[A_27a: $tType,A_27b: $tType] : ( ( A_27a > A_27b ) > ( A_27a > $o ) > A_27b > $o ) ).
+
+thf(c_2Ebool_2EIN,type,
+    c_2Ebool_2EIN: 
+      !>[A_27a: $tType] : ( A_27a > ( A_27a > $o ) > $o ) ).
+
+thf(c_2Epred__set_2EINSERT,type,
+    c_2Epred__set_2EINSERT: 
+      !>[A_27a: $tType] : ( A_27a > ( A_27a > $o ) > A_27a > $o ) ).
+
+thf(c_2Epred__set_2EINTER,type,
+    c_2Epred__set_2EINTER: 
+      !>[A_27a: $tType] : ( ( A_27a > $o ) > ( A_27a > $o ) > A_27a > $o ) ).
+
+thf(c_2Earithmetic_2EMAX,type,
+    c_2Earithmetic_2EMAX: tyop_2Enum_2Enum > tyop_2Enum_2Enum > tyop_2Enum_2Enum ).
+
+thf(c_2Elist_2ENIL,type,
+    c_2Elist_2ENIL: 
+      !>[A_27a: $tType] : ( tyop_2Elist_2Elist @ A_27a ) ).
+
+thf(c_2Earithmetic_2ENUMERAL,type,
+    c_2Earithmetic_2ENUMERAL: tyop_2Enum_2Enum > tyop_2Enum_2Enum ).
+
+thf(c_2Ereal__topology_2EOpen,type,
+    c_2Ereal__topology_2EOpen: ( tyop_2Erealax_2Ereal > $o ) > $o ).
+
+thf(c_2Epair_2ESND,type,
+    c_2Epair_2ESND: 
+      !>[A_27a: $tType,A_27b: $tType] : ( ( tyop_2Epair_2Eprod @ A_27a @ A_27b ) > A_27b ) ).
+
+thf(c_2Epred__set_2ESUBSET,type,
+    c_2Epred__set_2ESUBSET: 
+      !>[A_27a: $tType] : ( ( A_27a > $o ) > ( A_27a > $o ) > $o ) ).
+
+thf(c_2Enum_2ESUC,type,
+    c_2Enum_2ESUC: tyop_2Enum_2Enum > tyop_2Enum_2Enum ).
+
+thf(c_2Eiterate_2ESum,type,
+    c_2Eiterate_2ESum: 
+      !>[A_27a: $tType] : ( ( A_27a > $o ) > ( A_27a > tyop_2Erealax_2Ereal ) > tyop_2Erealax_2Ereal ) ).
+
+thf(c_2Ebool_2ET,type,
+    c_2Ebool_2ET: $o ).
+
+thf(c_2Ebool_2ETYPE__DEFINITION,type,
+    c_2Ebool_2ETYPE__DEFINITION: 
+      !>[A_27a: $tType,A_27b: $tType] : ( ( A_27a > $o ) > ( A_27b > A_27a ) > $o ) ).
+
+thf(c_2Epair_2EUNCURRY,type,
+    c_2Epair_2EUNCURRY: 
+      !>[A_27a: $tType,A_27b: $tType,A_27c: $tType] : ( ( A_27a > A_27b > A_27c ) > ( tyop_2Epair_2Eprod @ A_27a @ A_27b ) > A_27c ) ).
+
+thf(c_2Epred__set_2EUNION,type,
+    c_2Epred__set_2EUNION: 
+      !>[A_27a: $tType] : ( ( A_27a > $o ) > ( A_27a > $o ) > A_27a > $o ) ).
+
+thf(c_2Epred__set_2EUNIV,type,
+    c_2Epred__set_2EUNIV: 
+      !>[A_27a: $tType] : ( A_27a > $o ) ).
+
+thf(c_2Earithmetic_2EZERO,type,
+    c_2Earithmetic_2EZERO: tyop_2Enum_2Enum ).
+
+thf(c_2Ebool_2E_5C_2F,type,
+    c_2Ebool_2E_5C_2F: $o > $o > $o ).
+
+thf(c_2Ereal_2Eabs,type,
+    c_2Ereal_2Eabs: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal ).
+
+thf(c_2Ereal__topology_2Eat,type,
+    c_2Ereal__topology_2Eat: tyop_2Erealax_2Ereal > ( tyop_2Ereal__topology_2Enet @ tyop_2Erealax_2Ereal ) ).
+
+thf(c_2Ereal__topology_2Eat__infinity,type,
+    c_2Ereal__topology_2Eat__infinity: tyop_2Ereal__topology_2Enet @ tyop_2Erealax_2Ereal ).
+
+thf(c_2Ereal__topology_2Eat__neginfinity,type,
+    c_2Ereal__topology_2Eat__neginfinity: tyop_2Ereal__topology_2Enet @ tyop_2Erealax_2Ereal ).
+
+thf(c_2Ereal__topology_2Eat__posinfinity,type,
+    c_2Ereal__topology_2Eat__posinfinity: tyop_2Ereal__topology_2Enet @ tyop_2Erealax_2Ereal ).
+
+thf(c_2Ereal__topology_2Eball,type,
+    c_2Ereal__topology_2Eball: ( tyop_2Epair_2Eprod @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal ) > tyop_2Erealax_2Ereal > $o ).
+
+thf(c_2Ereal__topology_2Ebetween,type,
+    c_2Ereal__topology_2Ebetween: tyop_2Erealax_2Ereal > ( tyop_2Epair_2Eprod @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal ) > $o ).
+
+thf(c_2Ereal__topology_2Ebilinear,type,
+    c_2Ereal__topology_2Ebilinear: ( tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal ) > $o ).
+
+thf(c_2Ereal__topology_2Ebounded__def,type,
+    c_2Ereal__topology_2Ebounded__def: ( tyop_2Erealax_2Ereal > $o ) > $o ).
+
+thf(c_2Ereal__topology_2Ecball,type,
+    c_2Ereal__topology_2Ecball: ( tyop_2Epair_2Eprod @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal ) > tyop_2Erealax_2Ereal > $o ).
+
+thf(c_2Etopology_2Eclosed__in,type,
+    c_2Etopology_2Eclosed__in: 
+      !>[A_27a: $tType] : ( ( tyop_2Etopology_2Etopology @ A_27a ) > ( A_27a > $o ) > $o ) ).
+
+thf(c_2Ereal__topology_2Eclosed__segment,type,
+    c_2Ereal__topology_2Eclosed__segment: ( tyop_2Elist_2Elist @ ( tyop_2Epair_2Eprod @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal ) ) > tyop_2Erealax_2Ereal > $o ).
+
+thf(c_2Ereal__topology_2Eclosure,type,
+    c_2Ereal__topology_2Eclosure: ( tyop_2Erealax_2Ereal > $o ) > tyop_2Erealax_2Ereal > $o ).
+
+thf(c_2Ereal__topology_2Ecollinear,type,
+    c_2Ereal__topology_2Ecollinear: ( tyop_2Erealax_2Ereal > $o ) > $o ).
+
+thf(c_2Ereal__topology_2Econdensation__point__of,type,
+    c_2Ereal__topology_2Econdensation__point__of: tyop_2Erealax_2Ereal > ( tyop_2Erealax_2Ereal > $o ) > $o ).
+
+thf(c_2Ereal__topology_2Econnected,type,
+    c_2Ereal__topology_2Econnected: ( tyop_2Erealax_2Ereal > $o ) > $o ).
+
+thf(c_2Epred__set_2Ecountable,type,
+    c_2Epred__set_2Ecountable: 
+      !>[A_27a: $tType] : ( ( A_27a > $o ) > $o ) ).
+
+thf(c_2Ereal__topology_2Edependent,type,
+    c_2Ereal__topology_2Edependent: ( tyop_2Erealax_2Ereal > $o ) > $o ).
+
+thf(c_2Ereal__topology_2Edim,type,
+    c_2Ereal__topology_2Edim: ( tyop_2Erealax_2Ereal > $o ) > tyop_2Enum_2Enum ).
+
+thf(c_2Ereal__topology_2Eeuclidean,type,
+    c_2Ereal__topology_2Eeuclidean: tyop_2Etopology_2Etopology @ tyop_2Erealax_2Ereal ).
+
+thf(c_2Ereal__topology_2Eeventually,type,
+    c_2Ereal__topology_2Eeventually: 
+      !>[A_27a: $tType] : ( ( A_27a > $o ) > ( tyop_2Ereal__topology_2Enet @ A_27a ) > $o ) ).
+
+thf(c_2Ereal__topology_2Efrom,type,
+    c_2Ereal__topology_2Efrom: tyop_2Enum_2Enum > tyop_2Enum_2Enum > $o ).
+
+thf(c_2Ereal__topology_2Efrontier,type,
+    c_2Ereal__topology_2Efrontier: ( tyop_2Erealax_2Ereal > $o ) > tyop_2Erealax_2Ereal > $o ).
+
+thf(c_2Etopology_2Ehull,type,
+    c_2Etopology_2Ehull: 
+      !>[A_27a: $tType] : ( ( ( A_27a > $o ) > $o ) > ( A_27a > $o ) > A_27a > $o ) ).
+
+thf(c_2Ereal__topology_2Ein__direction,type,
+    c_2Ereal__topology_2Ein__direction: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal > ( tyop_2Ereal__topology_2Enet @ tyop_2Erealax_2Ereal ) ).
+
+thf(c_2Ereal__topology_2Eindependent,type,
+    c_2Ereal__topology_2Eindependent: ( tyop_2Erealax_2Ereal > $o ) > $o ).
+
+thf(c_2Ereal__topology_2Einterior,type,
+    c_2Ereal__topology_2Einterior: ( tyop_2Erealax_2Ereal > $o ) > tyop_2Erealax_2Ereal > $o ).
+
+thf(c_2Erealax_2Einv,type,
+    c_2Erealax_2Einv: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal ).
+
+thf(c_2Ereal__topology_2Eisnet,type,
+    c_2Ereal__topology_2Eisnet: 
+      !>[A_27a: $tType,A_27b: $tType] : ( ( A_27a > A_27b > $o ) > $o ) ).
+
+thf(c_2Etopology_2Eistopology,type,
+    c_2Etopology_2Eistopology: 
+      !>[A_27a: $tType] : ( ( ( A_27a > $o ) > $o ) > $o ) ).
+
+thf(c_2Ereal__topology_2Elim__def,type,
+    c_2Ereal__topology_2Elim__def: 
+      !>[A_27a: $tType] : ( ( tyop_2Ereal__topology_2Enet @ A_27a ) > ( A_27a > tyop_2Erealax_2Ereal ) > tyop_2Erealax_2Ereal ) ).
+
+thf(c_2Ereal__topology_2Elimit__point__of,type,
+    c_2Ereal__topology_2Elimit__point__of: tyop_2Erealax_2Ereal > ( tyop_2Erealax_2Ereal > $o ) > $o ).
+
+thf(c_2Ereal__topology_2Elinear,type,
+    c_2Ereal__topology_2Elinear: ( tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal ) > $o ).
+
+thf(c_2Ereal_2Emax,type,
+    c_2Ereal_2Emax: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal ).
+
+thf(c_2Ereal__topology_2Emidpoint,type,
+    c_2Ereal__topology_2Emidpoint: ( tyop_2Epair_2Eprod @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal ) > tyop_2Erealax_2Ereal ).
+
+thf(c_2Ereal_2Emin,type,
+    c_2Ereal_2Emin: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal ).
+
+thf(c_2Ereal__topology_2Emk__net,type,
+    c_2Ereal__topology_2Emk__net: 
+      !>[A_27a: $tType] : ( ( A_27a > A_27a > $o ) > ( tyop_2Ereal__topology_2Enet @ A_27a ) ) ).
+
+thf(c_2Ereal__topology_2Enetlimit,type,
+    c_2Ereal__topology_2Enetlimit: 
+      !>[A_27a: $tType] : ( ( tyop_2Ereal__topology_2Enet @ A_27a ) > A_27a ) ).
+
+thf(c_2Ereal__topology_2Enetord,type,
+    c_2Ereal__topology_2Enetord: 
+      !>[A_27a: $tType] : ( ( tyop_2Ereal__topology_2Enet @ A_27a ) > A_27a > A_27a > $o ) ).
+
+thf(c_2Ecombin_2Eo,type,
+    c_2Ecombin_2Eo: 
+      !>[A_27a: $tType,A_27b: $tType,A_27c: $tType] : ( ( A_27c > A_27b ) > ( A_27a > A_27c ) > A_27a > A_27b ) ).
+
+thf(c_2Etopology_2Eopen__in,type,
+    c_2Etopology_2Eopen__in: 
+      !>[A_27a: $tType] : ( ( tyop_2Etopology_2Etopology @ A_27a ) > ( A_27a > $o ) > $o ) ).
+
+thf(c_2Ereal__topology_2Eopen__segment,type,
+    c_2Ereal__topology_2Eopen__segment: ( tyop_2Epair_2Eprod @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal ) > tyop_2Erealax_2Ereal > $o ).
+
+thf(c_2Ereal__topology_2Epairwise,type,
+    c_2Ereal__topology_2Epairwise: 
+      !>[A_27a: $tType] : ( ( A_27a > A_27a > $o ) > ( A_27a > $o ) > $o ) ).
+
+thf(c_2Ereal__topology_2Epermutes,type,
+    c_2Ereal__topology_2Epermutes: 
+      !>[A_27a: $tType] : ( ( A_27a > A_27a ) > ( A_27a > $o ) > $o ) ).
+
+thf(c_2Ereal_2Epow,type,
+    c_2Ereal_2Epow: tyop_2Erealax_2Ereal > tyop_2Enum_2Enum > tyop_2Erealax_2Ereal ).
+
+thf(c_2Erealax_2Ereal__add,type,
+    c_2Erealax_2Ereal__add: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal ).
+
+thf(c_2Ereal_2Ereal__ge,type,
+    c_2Ereal_2Ereal__ge: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal > $o ).
+
+thf(c_2Erealax_2Ereal__lt,type,
+    c_2Erealax_2Ereal__lt: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal > $o ).
+
+thf(c_2Ereal_2Ereal__lte,type,
+    c_2Ereal_2Ereal__lte: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal > $o ).
+
+thf(c_2Erealax_2Ereal__mul,type,
+    c_2Erealax_2Ereal__mul: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal ).
+
+thf(c_2Erealax_2Ereal__neg,type,
+    c_2Erealax_2Ereal__neg: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal ).
+
+thf(c_2Ereal_2Ereal__of__num,type,
+    c_2Ereal_2Ereal__of__num: tyop_2Enum_2Enum > tyop_2Erealax_2Ereal ).
+
+thf(c_2Ereal_2Ereal__sub,type,
+    c_2Ereal_2Ereal__sub: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal ).
+
+thf(c_2Ereal__topology_2Esequentially,type,
+    c_2Ereal__topology_2Esequentially: tyop_2Ereal__topology_2Enet @ tyop_2Enum_2Enum ).
+
+thf(c_2Ereal__topology_2Espan,type,
+    c_2Ereal__topology_2Espan: ( tyop_2Erealax_2Ereal > $o ) > tyop_2Erealax_2Ereal > $o ).
+
+thf(c_2Ereal__topology_2Esphere,type,
+    c_2Ereal__topology_2Esphere: ( tyop_2Epair_2Eprod @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal ) > tyop_2Erealax_2Ereal > $o ).
+
+thf(c_2Ereal__topology_2Esubspace,type,
+    c_2Ereal__topology_2Esubspace: ( tyop_2Erealax_2Ereal > $o ) > $o ).
+
+thf(c_2Ereal__topology_2Esubtopology,type,
+    c_2Ereal__topology_2Esubtopology: 
+      !>[A_27a: $tType] : ( ( tyop_2Etopology_2Etopology @ A_27a ) > ( A_27a > $o ) > ( tyop_2Etopology_2Etopology @ A_27a ) ) ).
+
+thf(c_2Etopology_2Etopology,type,
+    c_2Etopology_2Etopology: 
+      !>[A_27a: $tType] : ( ( ( A_27a > $o ) > $o ) > ( tyop_2Etopology_2Etopology @ A_27a ) ) ).
+
+thf(c_2Etopology_2Etopspace,type,
+    c_2Etopology_2Etopspace: 
+      !>[A_27a: $tType] : ( ( tyop_2Etopology_2Etopology @ A_27a ) > A_27a > $o ) ).
+
+thf(c_2Ereal__topology_2Etrivial__limit,type,
+    c_2Ereal__topology_2Etrivial__limit: 
+      !>[A_27a: $tType] : ( ( tyop_2Ereal__topology_2Enet @ A_27a ) > $o ) ).
+
+thf(c_2Ereal__topology_2Ewithin,type,
+    c_2Ereal__topology_2Ewithin: 
+      !>[A_27a: $tType] : ( ( tyop_2Ereal__topology_2Enet @ A_27a ) > ( A_27a > $o ) > ( tyop_2Ereal__topology_2Enet @ A_27a ) ) ).
+
+thf(c_2Ebool_2E_7E,type,
+    c_2Ebool_2E_7E: $o > $o ).
+
+thf(logicdef_2E_2F_5C,axiom,
+    ! [V0: $o,V1: $o] :
+      ( ( c_2Ebool_2E_2F_5C @ V0 @ V1 )
+    <=> ( V0
+        & V1 ) ) ).
+
+thf(logicdef_2E_5C_2F,axiom,
+    ! [V0: $o,V1: $o] :
+      ( ( c_2Ebool_2E_5C_2F @ V0 @ V1 )
+    <=> ( V0
+        | V1 ) ) ).
+
+thf(logicdef_2E_7E,axiom,
+    ! [V0: $o] :
+      ( ( c_2Ebool_2E_7E @ V0 )
+    <=> ( (~) @ V0 ) ) ).
+
+thf(logicdef_2E_3D_3D_3E,axiom,
+    ! [V0: $o,V1: $o] :
+      ( ( c_2Emin_2E_3D_3D_3E @ V0 @ V1 )
+    <=> ( V0
+       => V1 ) ) ).
+
+thf(logicdef_2E_3D,axiom,
+    ! [A_27a: $tType,V0: A_27a,V1: A_27a] :
+      ( ( c_2Emin_2E_3D @ A_27a @ V0 @ V1 )
+    <=> ( V0 = V1 ) ) ).
+
+thf(quantdef_2E_21,axiom,
+    ! [A_27a: $tType,V0f: A_27a > $o] :
+      ( ( c_2Ebool_2E_21 @ A_27a @ V0f )
+    <=> ! [V1x: A_27a] : ( V0f @ V1x ) ) ).
+
+thf(quantdef_2E_3F,axiom,
+    ! [A_27a: $tType,V0f: A_27a > $o] :
+      ( ( c_2Ebool_2E_3F @ A_27a @ V0f )
+    <=> ? [V1x: A_27a] : ( V0f @ V1x ) ) ).
+
+thf(thm_2Ereal__topology_2Emidpoint,axiom,
+    ! [V0a: tyop_2Erealax_2Ereal,V1b: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2Emidpoint @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ V1b ) )
+      = ( c_2Erealax_2Ereal__mul @ ( c_2Erealax_2Einv @ ( c_2Ereal_2Ereal__of__num @ ( c_2Earithmetic_2ENUMERAL @ ( c_2Earithmetic_2EBIT2 @ c_2Earithmetic_2EZERO ) ) ) ) @ ( c_2Erealax_2Ereal__add @ V0a @ V1b ) ) ) ).
+
+thf(thm_2Ereal__topology_2Ebetween,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal,V1a: tyop_2Erealax_2Ereal,V2b: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2Ebetween @ V0x @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V1a @ V2b ) )
+    <=> ( ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V1a @ V2b ) )
+        = ( c_2Erealax_2Ereal__add @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V1a @ V0x ) ) @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0x @ V2b ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2Ecollinear,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ereal__topology_2Ecollinear @ V0s )
+    <=> ? [V1u: tyop_2Erealax_2Ereal] :
+        ! [V2x: tyop_2Erealax_2Ereal,V3y: tyop_2Erealax_2Ereal] :
+          ( ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V2x @ V0s )
+            & ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V3y @ V0s ) )
+         => ? [V4c: tyop_2Erealax_2Ereal] :
+              ( ( c_2Ereal_2Ereal__sub @ V2x @ V3y )
+              = ( c_2Erealax_2Ereal__mul @ V4c @ V1u ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2Econdensation__point__of,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal,V1s: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ereal__topology_2Econdensation__point__of @ V0x @ V1s )
+    <=> ! [V2t: tyop_2Erealax_2Ereal > $o] :
+          ( ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V0x @ V2t )
+            & ( c_2Ereal__topology_2EOpen @ V2t ) )
+         => ( (~) @ ( c_2Epred__set_2Ecountable @ tyop_2Erealax_2Ereal @ ( c_2Epred__set_2EINTER @ tyop_2Erealax_2Ereal @ V1s @ V2t ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2Enetlimit,axiom,
+    ! [A_27a: $tType,V0net: tyop_2Ereal__topology_2Enet @ A_27a] :
+      ( ( c_2Ereal__topology_2Enetlimit @ A_27a @ V0net )
+      = ( c_2Emin_2E_40 @ A_27a
+        @ ^ [V1a: A_27a] :
+            ( c_2Ebool_2E_21 @ A_27a
+            @ ^ [V2x: A_27a] : ( c_2Ebool_2E_7E @ ( c_2Ereal__topology_2Enetord @ A_27a @ V0net @ V2x @ V1a ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2Ebounded__def,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ereal__topology_2Ebounded__def @ V0s )
+    <=> ? [V1a: tyop_2Erealax_2Ereal] :
+        ! [V2x: tyop_2Erealax_2Ereal] :
+          ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V2x @ V0s )
+         => ( c_2Ereal_2Ereal__lte @ ( c_2Ereal_2Eabs @ V2x ) @ V1a ) ) ) ).
+
+thf(thm_2Ereal__topology_2Eball,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal,V1e: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2Eball @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0x @ V1e ) )
+      = ( c_2Epred__set_2EGSPEC @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal
+        @ ^ [V2y: tyop_2Erealax_2Ereal] : ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ $o @ V2y @ ( c_2Erealax_2Ereal__lt @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0x @ V2y ) ) @ V1e ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2Ecball,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal,V1e: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2Ecball @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0x @ V1e ) )
+      = ( c_2Epred__set_2EGSPEC @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal
+        @ ^ [V2y: tyop_2Erealax_2Ereal] : ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ $o @ V2y @ ( c_2Ereal_2Ereal__lte @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0x @ V2y ) ) @ V1e ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2Esphere,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal,V1e: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2Esphere @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0x @ V1e ) )
+      = ( c_2Epred__set_2EGSPEC @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal
+        @ ^ [V2y: tyop_2Erealax_2Ereal] : ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ $o @ V2y @ ( c_2Emin_2E_3D @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0x @ V2y ) ) @ V1e ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2Eclosed__segment,axiom,
+    ! [V0l: tyop_2Elist_2Elist @ ( tyop_2Epair_2Eprod @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal )] :
+      ( ( c_2Ereal__topology_2Eclosed__segment @ V0l )
+      = ( c_2Epred__set_2EGSPEC @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal
+        @ ^ [V1u: tyop_2Erealax_2Ereal] : ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ $o @ ( c_2Erealax_2Ereal__add @ ( c_2Erealax_2Ereal__mul @ ( c_2Ereal_2Ereal__sub @ ( c_2Ereal_2Ereal__of__num @ ( c_2Earithmetic_2ENUMERAL @ ( c_2Earithmetic_2EBIT1 @ c_2Earithmetic_2EZERO ) ) ) @ V1u ) @ ( c_2Epair_2EFST @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ ( c_2Elist_2EHD @ ( tyop_2Epair_2Eprod @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal ) @ V0l ) ) ) @ ( c_2Erealax_2Ereal__mul @ V1u @ ( c_2Epair_2ESND @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ ( c_2Elist_2EHD @ ( tyop_2Epair_2Eprod @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal ) @ V0l ) ) ) ) @ ( c_2Ebool_2E_2F_5C @ ( c_2Ereal_2Ereal__lte @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V1u ) @ ( c_2Ereal_2Ereal__lte @ V1u @ ( c_2Ereal_2Ereal__of__num @ ( c_2Earithmetic_2ENUMERAL @ ( c_2Earithmetic_2EBIT1 @ c_2Earithmetic_2EZERO ) ) ) ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2Eopen__segment,axiom,
+    ! [V0a: tyop_2Erealax_2Ereal,V1b: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2Eopen__segment @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ V1b ) )
+      = ( c_2Epred__set_2EDIFF @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Eclosed__segment @ ( c_2Elist_2ECONS @ ( tyop_2Epair_2Eprod @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal ) @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ V1b ) @ ( c_2Elist_2ENIL @ ( tyop_2Epair_2Eprod @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal ) ) ) ) @ ( c_2Epred__set_2EINSERT @ tyop_2Erealax_2Ereal @ V0a @ ( c_2Epred__set_2EINSERT @ tyop_2Erealax_2Ereal @ V1b @ ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2Econnected,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ereal__topology_2Econnected @ V0s )
+    <=> ( (~)
+        @ ? [V1e1: tyop_2Erealax_2Ereal > $o,V2e2: tyop_2Erealax_2Ereal > $o] :
+            ( ( c_2Ereal__topology_2EOpen @ V1e1 )
+            & ( c_2Ereal__topology_2EOpen @ V2e2 )
+            & ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ V0s @ ( c_2Epred__set_2EUNION @ tyop_2Erealax_2Ereal @ V1e1 @ V2e2 ) )
+            & ( ( c_2Epred__set_2EINTER @ tyop_2Erealax_2Ereal @ ( c_2Epred__set_2EINTER @ tyop_2Erealax_2Ereal @ V1e1 @ V2e2 ) @ V0s )
+              = ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) )
+            & ( (~)
+              @ ( ( c_2Epred__set_2EINTER @ tyop_2Erealax_2Ereal @ V1e1 @ V0s )
+                = ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) ) )
+            & ( (~)
+              @ ( ( c_2Epred__set_2EINTER @ tyop_2Erealax_2Ereal @ V2e2 @ V0s )
+                = ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2Elimit__point__of,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal,V1s: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ereal__topology_2Elimit__point__of @ V0x @ V1s )
+    <=> ! [V2t: tyop_2Erealax_2Ereal > $o] :
+          ( ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V0x @ V2t )
+            & ( c_2Ereal__topology_2EOpen @ V2t ) )
+         => ? [V3y: tyop_2Erealax_2Ereal] :
+              ( ( (~) @ ( V3y = V0x ) )
+              & ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V3y @ V1s )
+              & ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V3y @ V2t ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2Einterior,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ereal__topology_2Einterior @ V0s )
+      = ( c_2Epred__set_2EGSPEC @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal
+        @ ^ [V1x: tyop_2Erealax_2Ereal] :
+            ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ $o @ V1x
+            @ ( c_2Ebool_2E_3F @ ( tyop_2Erealax_2Ereal > $o )
+              @ ^ [V2t: tyop_2Erealax_2Ereal > $o] : ( c_2Ebool_2E_2F_5C @ ( c_2Ereal__topology_2EOpen @ V2t ) @ ( c_2Ebool_2E_2F_5C @ ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V1x @ V2t ) @ ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ V2t @ V0s ) ) ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2Eclosure,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ereal__topology_2Eclosure @ V0s )
+      = ( c_2Epred__set_2EUNION @ tyop_2Erealax_2Ereal @ V0s
+        @ ( c_2Epred__set_2EGSPEC @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal
+          @ ^ [V1x: tyop_2Erealax_2Ereal] : ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ $o @ V1x @ ( c_2Ereal__topology_2Elimit__point__of @ V1x @ V0s ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2Efrontier,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ereal__topology_2Efrontier @ V0s )
+      = ( c_2Epred__set_2EDIFF @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Eclosure @ V0s ) @ ( c_2Ereal__topology_2Einterior @ V0s ) ) ) ).
+
+thf(thm_2Ereal__topology_2Eisnet,axiom,
+    ! [A_27a: $tType,A_27b: $tType,V0g: A_27a > A_27b > $o] :
+      ( ( c_2Ereal__topology_2Eisnet @ A_27a @ A_27b @ V0g )
+    <=> ! [V1x: A_27b,V2y: A_27b] :
+          ( ! [V3z: A_27a] :
+              ( ( V0g @ V3z @ V1x )
+             => ( V0g @ V3z @ V2y ) )
+          | ! [V4z: A_27a] :
+              ( ( V0g @ V4z @ V2y )
+             => ( V0g @ V4z @ V1x ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2Enet__TY__DEF,axiom,
+    ! [A_27a: $tType] :
+    ? [V0rep: ( tyop_2Ereal__topology_2Enet @ A_27a ) > A_27a > A_27a > $o] : ( c_2Ebool_2ETYPE__DEFINITION @ ( A_27a > A_27a > $o ) @ ( tyop_2Ereal__topology_2Enet @ A_27a ) @ ( c_2Ereal__topology_2Eisnet @ A_27a @ A_27a ) @ V0rep ) ).
+
+thf(thm_2Ereal__topology_2Eat,axiom,
+    ! [V0a: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2Eat @ V0a )
+      = ( c_2Ereal__topology_2Emk__net @ tyop_2Erealax_2Ereal
+        @ ^ [V1x: tyop_2Erealax_2Ereal,V2y: tyop_2Erealax_2Ereal] : ( c_2Ebool_2E_2F_5C @ ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V1x @ V0a ) ) ) @ ( c_2Ereal_2Ereal__lte @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V1x @ V0a ) ) @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V2y @ V0a ) ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2Eat__infinity,axiom,
+    ( c_2Ereal__topology_2Eat__infinity
+    = ( c_2Ereal__topology_2Emk__net @ tyop_2Erealax_2Ereal
+      @ ^ [V0x: tyop_2Erealax_2Ereal,V1y: tyop_2Erealax_2Ereal] : ( c_2Ereal_2Ereal__ge @ ( c_2Ereal_2Eabs @ V0x ) @ ( c_2Ereal_2Eabs @ V1y ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2Eat__posinfinity,axiom,
+    ( c_2Ereal__topology_2Eat__posinfinity
+    = ( c_2Ereal__topology_2Emk__net @ tyop_2Erealax_2Ereal
+      @ ^ [V0x: tyop_2Erealax_2Ereal,V1y: tyop_2Erealax_2Ereal] : ( c_2Ereal_2Ereal__ge @ V0x @ V1y ) ) ) ).
+
+thf(thm_2Ereal__topology_2Eat__neginfinity,axiom,
+    ( c_2Ereal__topology_2Eat__neginfinity
+    = ( c_2Ereal__topology_2Emk__net @ tyop_2Erealax_2Ereal
+      @ ^ [V0x: tyop_2Erealax_2Ereal,V1y: tyop_2Erealax_2Ereal] : ( c_2Ereal_2Ereal__lte @ V0x @ V1y ) ) ) ).
+
+thf(thm_2Ereal__topology_2Esequentially,axiom,
+    ( c_2Ereal__topology_2Esequentially
+    = ( c_2Ereal__topology_2Emk__net @ tyop_2Enum_2Enum
+      @ ^ [V0m: tyop_2Enum_2Enum,V1n: tyop_2Enum_2Enum] : ( c_2Earithmetic_2E_3E_3D @ V0m @ V1n ) ) ) ).
+
+thf(thm_2Ereal__topology_2Ewithin,axiom,
+    ! [A_27a: $tType,V0net: tyop_2Ereal__topology_2Enet @ A_27a,V1s: A_27a > $o] :
+      ( ( c_2Ereal__topology_2Ewithin @ A_27a @ V0net @ V1s )
+      = ( c_2Ereal__topology_2Emk__net @ A_27a
+        @ ^ [V2x: A_27a,V3y: A_27a] : ( c_2Ebool_2E_2F_5C @ ( c_2Ereal__topology_2Enetord @ A_27a @ V0net @ V2x @ V3y ) @ ( c_2Ebool_2EIN @ A_27a @ V2x @ V1s ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2Ein__direction,axiom,
+    ! [V0a: tyop_2Erealax_2Ereal,V1v: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2Ein__direction @ V0a @ V1v )
+      = ( c_2Ereal__topology_2Ewithin @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Eat @ V0a )
+        @ ( c_2Epred__set_2EGSPEC @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal
+          @ ^ [V2b: tyop_2Erealax_2Ereal] :
+              ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ $o @ V2b
+              @ ( c_2Ebool_2E_3F @ tyop_2Erealax_2Ereal
+                @ ^ [V3c: tyop_2Erealax_2Ereal] : ( c_2Ebool_2E_2F_5C @ ( c_2Ereal_2Ereal__lte @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V3c ) @ ( c_2Emin_2E_3D @ tyop_2Erealax_2Ereal @ ( c_2Ereal_2Ereal__sub @ V2b @ V0a ) @ ( c_2Erealax_2Ereal__mul @ V3c @ V1v ) ) ) ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2Etrivial__limit,axiom,
+    ! [A_27a: $tType,V0net: tyop_2Ereal__topology_2Enet @ A_27a] :
+      ( ( c_2Ereal__topology_2Etrivial__limit @ A_27a @ V0net )
+    <=> ( ! [V1a: A_27a,V2b: A_27a] : ( V1a = V2b )
+        | ? [V3a: A_27a,V4b: A_27a] :
+            ( ( (~) @ ( V3a = V4b ) )
+            & ! [V5x: A_27a] :
+                ( ( (~) @ ( c_2Ereal__topology_2Enetord @ A_27a @ V0net @ V5x @ V3a ) )
+                & ( (~) @ ( c_2Ereal__topology_2Enetord @ A_27a @ V0net @ V5x @ V4b ) ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2Eeventually,axiom,
+    ! [A_27a: $tType,V0p: A_27a > $o,V1net: tyop_2Ereal__topology_2Enet @ A_27a] :
+      ( ( c_2Ereal__topology_2Eeventually @ A_27a @ V0p @ V1net )
+    <=> ( ( c_2Ereal__topology_2Etrivial__limit @ A_27a @ V1net )
+        | ? [V2y: A_27a] :
+            ( ? [V3x: A_27a] : ( c_2Ereal__topology_2Enetord @ A_27a @ V1net @ V3x @ V2y )
+            & ! [V4x: A_27a] :
+                ( ( c_2Ereal__topology_2Enetord @ A_27a @ V1net @ V4x @ V2y )
+               => ( V0p @ V4x ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2Etendsto,axiom,
+    ! [A_27a: $tType,V0f: A_27a > tyop_2Erealax_2Ereal,V1l: tyop_2Erealax_2Ereal,V2net: tyop_2Ereal__topology_2Enet @ A_27a] :
+      ( ( c_2Ereal__topology_2E_2D_2D_3E @ A_27a @ V0f @ V1l @ V2net )
+    <=> ! [V3e: tyop_2Erealax_2Ereal] :
+          ( ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V3e )
+         => ( c_2Ereal__topology_2Eeventually @ A_27a
+            @ ^ [V4x: A_27a] : ( c_2Erealax_2Ereal__lt @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ ( V0f @ V4x ) @ V1l ) ) @ V3e )
+            @ V2net ) ) ) ).
+
+thf(thm_2Ereal__topology_2Elim__def,axiom,
+    ! [A_27a: $tType,V0net: tyop_2Ereal__topology_2Enet @ A_27a,V1f: A_27a > tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2Elim__def @ A_27a @ V0net @ V1f )
+      = ( c_2Emin_2E_40 @ tyop_2Erealax_2Ereal
+        @ ^ [V2l: tyop_2Erealax_2Ereal] : ( c_2Ereal__topology_2E_2D_2D_3E @ A_27a @ V1f @ V2l @ V0net ) ) ) ).
+
+thf(thm_2Ereal__topology_2Efrom,axiom,
+    ! [V0n: tyop_2Enum_2Enum] :
+      ( ( c_2Ereal__topology_2Efrom @ V0n )
+      = ( c_2Epred__set_2EGSPEC @ tyop_2Enum_2Enum @ tyop_2Enum_2Enum
+        @ ^ [V1m: tyop_2Enum_2Enum] : ( c_2Epair_2E_2C @ tyop_2Enum_2Enum @ $o @ V1m @ ( c_2Earithmetic_2E_3C_3D @ V0n @ V1m ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2Eeuclidean,axiom,
+    ( c_2Ereal__topology_2Eeuclidean
+    = ( c_2Etopology_2Etopology @ tyop_2Erealax_2Ereal @ c_2Ereal__topology_2EOpen ) ) ).
+
+thf(thm_2Ereal__topology_2Eclosed__def,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ereal__topology_2EClosed @ V0s )
+      = ( c_2Ereal__topology_2EOpen @ ( c_2Epred__set_2EDIFF @ tyop_2Erealax_2Ereal @ ( c_2Epred__set_2EUNIV @ tyop_2Erealax_2Ereal ) @ V0s ) ) ) ).
+
+thf(thm_2Ereal__topology_2Eopen__def,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ereal__topology_2EOpen @ V0s )
+    <=> ! [V1x: tyop_2Erealax_2Ereal] :
+          ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V1x @ V0s )
+         => ? [V2e: tyop_2Erealax_2Ereal] :
+              ( ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V2e )
+              & ! [V3x_27: tyop_2Erealax_2Ereal] :
+                  ( ( c_2Erealax_2Ereal__lt @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V3x_27 @ V1x ) ) @ V2e )
+                 => ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V3x_27 @ V0s ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2Esubtopology,axiom,
+    ! [A_27a: $tType,V0top: tyop_2Etopology_2Etopology @ A_27a,V1u: A_27a > $o] :
+      ( ( c_2Ereal__topology_2Esubtopology @ A_27a @ V0top @ V1u )
+      = ( c_2Etopology_2Etopology @ A_27a
+        @ ( c_2Epred__set_2EGSPEC @ ( A_27a > $o ) @ ( A_27a > $o )
+          @ ^ [V2s: A_27a > $o] : ( c_2Epair_2E_2C @ ( A_27a > $o ) @ $o @ ( c_2Epred__set_2EINTER @ A_27a @ V2s @ V1u ) @ ( c_2Etopology_2Eopen__in @ A_27a @ V0top @ V2s ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2Edim,axiom,
+    ! [V0v: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ereal__topology_2Edim @ V0v )
+      = ( c_2Emin_2E_40 @ tyop_2Enum_2Enum
+        @ ^ [V1n: tyop_2Enum_2Enum] :
+            ( c_2Ebool_2E_3F @ ( tyop_2Erealax_2Ereal > $o )
+            @ ^ [V2b: tyop_2Erealax_2Ereal > $o] : ( c_2Ebool_2E_2F_5C @ ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ V2b @ V0v ) @ ( c_2Ebool_2E_2F_5C @ ( c_2Ereal__topology_2Eindependent @ V2b ) @ ( c_2Ebool_2E_2F_5C @ ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ V0v @ ( c_2Ereal__topology_2Espan @ V2b ) ) @ ( c_2Ecardinal_2EHAS__SIZE @ tyop_2Erealax_2Ereal @ V2b @ V1n ) ) ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2Eindependent,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ereal__topology_2Eindependent @ V0s )
+    <=> ( (~) @ ( c_2Ereal__topology_2Edependent @ V0s ) ) ) ).
+
+thf(thm_2Ereal__topology_2Edependent,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ereal__topology_2Edependent @ V0s )
+    <=> ? [V1a: tyop_2Erealax_2Ereal] :
+          ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V1a @ V0s )
+          & ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V1a @ ( c_2Ereal__topology_2Espan @ ( c_2Epred__set_2EDELETE @ tyop_2Erealax_2Ereal @ V0s @ V1a ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2Espan,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ereal__topology_2Espan @ V0s )
+      = ( c_2Etopology_2Ehull @ tyop_2Erealax_2Ereal @ c_2Ereal__topology_2Esubspace @ V0s ) ) ).
+
+thf(thm_2Ereal__topology_2Esubspace,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ereal__topology_2Esubspace @ V0s )
+    <=> ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V0s )
+        & ! [V1x: tyop_2Erealax_2Ereal,V2y: tyop_2Erealax_2Ereal] :
+            ( ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V1x @ V0s )
+              & ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V2y @ V0s ) )
+           => ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ ( c_2Erealax_2Ereal__add @ V1x @ V2y ) @ V0s ) )
+        & ! [V3c: tyop_2Erealax_2Ereal,V4x: tyop_2Erealax_2Ereal] :
+            ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V4x @ V0s )
+           => ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ ( c_2Erealax_2Ereal__mul @ V3c @ V4x ) @ V0s ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2Ebilinear,axiom,
+    ! [V0f: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2Ebilinear @ V0f )
+    <=> ( ! [V1x: tyop_2Erealax_2Ereal] :
+            ( c_2Ereal__topology_2Elinear
+            @ ^ [V2y: tyop_2Erealax_2Ereal] : ( V0f @ V1x @ V2y ) )
+        & ! [V3y: tyop_2Erealax_2Ereal] :
+            ( c_2Ereal__topology_2Elinear
+            @ ^ [V4x: tyop_2Erealax_2Ereal] : ( V0f @ V4x @ V3y ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2Elinear,axiom,
+    ! [V0f: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2Elinear @ V0f )
+    <=> ( ! [V1x: tyop_2Erealax_2Ereal,V2y: tyop_2Erealax_2Ereal] :
+            ( ( V0f @ ( c_2Erealax_2Ereal__add @ V1x @ V2y ) )
+            = ( c_2Erealax_2Ereal__add @ ( V0f @ V1x ) @ ( V0f @ V2y ) ) )
+        & ! [V3c: tyop_2Erealax_2Ereal,V4x: tyop_2Erealax_2Ereal] :
+            ( ( V0f @ ( c_2Erealax_2Ereal__mul @ V3c @ V4x ) )
+            = ( c_2Erealax_2Ereal__mul @ V3c @ ( V0f @ V4x ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2Edist,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal,V1y: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0x @ V1y ) )
+      = ( c_2Ereal_2Eabs @ ( c_2Ereal_2Ereal__sub @ V0x @ V1y ) ) ) ).
+
+thf(thm_2Ereal__topology_2Epermutes,axiom,
+    ! [A_27a: $tType,V0p: A_27a > A_27a,V1s: A_27a > $o] :
+      ( ( c_2Ereal__topology_2Epermutes @ A_27a @ V0p @ V1s )
+    <=> ( ! [V2x: A_27a] :
+            ( ( (~) @ ( c_2Ebool_2EIN @ A_27a @ V2x @ V1s ) )
+           => ( ( V0p @ V2x )
+              = V2x ) )
+        & ! [V3y: A_27a] :
+            ( c_2Ebool_2E_3F_21 @ A_27a
+            @ ^ [V4x: A_27a] : ( c_2Emin_2E_3D @ A_27a @ ( V0p @ V4x ) @ V3y ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2Epairwise,axiom,
+    ! [A_27a: $tType,V0r: A_27a > A_27a > $o,V1s: A_27a > $o] :
+      ( ( c_2Ereal__topology_2Epairwise @ A_27a @ V0r @ V1s )
+    <=> ! [V2x: A_27a,V3y: A_27a] :
+          ( ( ( c_2Ebool_2EIN @ A_27a @ V2x @ V1s )
+            & ( c_2Ebool_2EIN @ A_27a @ V3y @ V1s )
+            & ( (~) @ ( V2x = V3y ) ) )
+         => ( V0r @ V2x @ V3y ) ) ) ).
+
+thf(thm_2Ereal__topology_2EREAL__LT__INV2,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal,V1y: tyop_2Erealax_2Ereal] :
+      ( ( ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V0x )
+        & ( c_2Erealax_2Ereal__lt @ V0x @ V1y ) )
+     => ( c_2Erealax_2Ereal__lt @ ( c_2Erealax_2Einv @ V1y ) @ ( c_2Erealax_2Einv @ V0x ) ) ) ).
+
+thf(thm_2Ereal__topology_2EREAL__POW__LE__1,axiom,
+    ! [V0n: tyop_2Enum_2Enum,V1x: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal_2Ereal__lte @ ( c_2Ereal_2Ereal__of__num @ ( c_2Earithmetic_2ENUMERAL @ ( c_2Earithmetic_2EBIT1 @ c_2Earithmetic_2EZERO ) ) ) @ V1x )
+     => ( c_2Ereal_2Ereal__lte @ ( c_2Ereal_2Ereal__of__num @ ( c_2Earithmetic_2ENUMERAL @ ( c_2Earithmetic_2EBIT1 @ c_2Earithmetic_2EZERO ) ) ) @ ( c_2Ereal_2Epow @ V1x @ V0n ) ) ) ).
+
+thf(thm_2Ereal__topology_2EREAL__POW__1__LE,axiom,
+    ! [V0n: tyop_2Enum_2Enum,V1x: tyop_2Erealax_2Ereal] :
+      ( ( ( c_2Ereal_2Ereal__lte @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V1x )
+        & ( c_2Ereal_2Ereal__lte @ V1x @ ( c_2Ereal_2Ereal__of__num @ ( c_2Earithmetic_2ENUMERAL @ ( c_2Earithmetic_2EBIT1 @ c_2Earithmetic_2EZERO ) ) ) ) )
+     => ( c_2Ereal_2Ereal__lte @ ( c_2Ereal_2Epow @ V1x @ V0n ) @ ( c_2Ereal_2Ereal__of__num @ ( c_2Earithmetic_2ENUMERAL @ ( c_2Earithmetic_2EBIT1 @ c_2Earithmetic_2EZERO ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EBIGUNION__BIGINTER,axiom,
+    ! [A_27a: $tType,V0s: ( A_27a > $o ) > $o] :
+      ( ( c_2Epred__set_2EBIGUNION @ A_27a @ V0s )
+      = ( c_2Epred__set_2EDIFF @ A_27a @ ( c_2Epred__set_2EUNIV @ A_27a )
+        @ ( c_2Epred__set_2EBIGINTER @ A_27a
+          @ ( c_2Epred__set_2EGSPEC @ ( A_27a > $o ) @ ( A_27a > $o )
+            @ ^ [V1t: A_27a > $o] : ( c_2Epair_2E_2C @ ( A_27a > $o ) @ $o @ ( c_2Epred__set_2EDIFF @ A_27a @ ( c_2Epred__set_2EUNIV @ A_27a ) @ V1t ) @ ( c_2Ebool_2EIN @ ( A_27a > $o ) @ V1t @ V0s ) ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EBIGINTER__BIGUNION,axiom,
+    ! [A_27a: $tType,V0s: ( A_27a > $o ) > $o] :
+      ( ( c_2Epred__set_2EBIGINTER @ A_27a @ V0s )
+      = ( c_2Epred__set_2EDIFF @ A_27a @ ( c_2Epred__set_2EUNIV @ A_27a )
+        @ ( c_2Epred__set_2EBIGUNION @ A_27a
+          @ ( c_2Epred__set_2EGSPEC @ ( A_27a > $o ) @ ( A_27a > $o )
+            @ ^ [V1t: A_27a > $o] : ( c_2Epair_2E_2C @ ( A_27a > $o ) @ $o @ ( c_2Epred__set_2EDIFF @ A_27a @ ( c_2Epred__set_2EUNIV @ A_27a ) @ V1t ) @ ( c_2Ebool_2EIN @ ( A_27a > $o ) @ V1t @ V0s ) ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EDIFF__BIGINTER,axiom,
+    ! [A_27a: $tType,V0u: A_27a > $o,V1s: ( A_27a > $o ) > $o] :
+      ( ( c_2Epred__set_2EDIFF @ A_27a @ V0u @ ( c_2Epred__set_2EBIGINTER @ A_27a @ V1s ) )
+      = ( c_2Epred__set_2EBIGUNION @ A_27a
+        @ ( c_2Epred__set_2EGSPEC @ ( A_27a > $o ) @ ( A_27a > $o )
+          @ ^ [V2t: A_27a > $o] : ( c_2Epair_2E_2C @ ( A_27a > $o ) @ $o @ ( c_2Epred__set_2EDIFF @ A_27a @ V0u @ V2t ) @ ( c_2Ebool_2EIN @ ( A_27a > $o ) @ V2t @ V1s ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ESUBSET__ANTISYM__EQ,axiom,
+    ! [A_27a: $tType,V0s: A_27a > $o,V1t: A_27a > $o] :
+      ( ( ( c_2Epred__set_2ESUBSET @ A_27a @ V0s @ V1t )
+        & ( c_2Epred__set_2ESUBSET @ A_27a @ V1t @ V0s ) )
+    <=> ( V0s = V1t ) ) ).
+
+thf(thm_2Ereal__topology_2EFUN__IN__IMAGE,axiom,
+    ! [A_27a: $tType,A_27b: $tType,V0f: A_27a > A_27b,V1s: A_27a > $o,V2x: A_27a] :
+      ( ( c_2Ebool_2EIN @ A_27a @ V2x @ V1s )
+     => ( c_2Ebool_2EIN @ A_27b @ ( V0f @ V2x ) @ ( c_2Epred__set_2EIMAGE @ A_27a @ A_27b @ V0f @ V1s ) ) ) ).
+
+thf(thm_2Ereal__topology_2EREAL__LT__POW2,axiom,
+    ! [V0n: tyop_2Enum_2Enum] : ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ ( c_2Ereal_2Epow @ ( c_2Ereal_2Ereal__of__num @ ( c_2Earithmetic_2ENUMERAL @ ( c_2Earithmetic_2EBIT2 @ c_2Earithmetic_2EZERO ) ) ) @ V0n ) ) ).
+
+thf(thm_2Ereal__topology_2ESUBSET__BIGUNION,axiom,
+    ! [A_27a: $tType,V0f: ( A_27a > $o ) > $o,V1g: ( A_27a > $o ) > $o] :
+      ( ( c_2Epred__set_2ESUBSET @ ( A_27a > $o ) @ V0f @ V1g )
+     => ( c_2Epred__set_2ESUBSET @ A_27a @ ( c_2Epred__set_2EBIGUNION @ A_27a @ V0f ) @ ( c_2Epred__set_2EBIGUNION @ A_27a @ V1g ) ) ) ).
+
+thf(thm_2Ereal__topology_2ESIMPLE__IMAGE__GEN,axiom,
+    ! [A_27a: $tType,A_27b: $tType,V0f: A_27a > A_27b,V1P: A_27a > $o] :
+      ( ( c_2Epred__set_2EGSPEC @ A_27b @ A_27a
+        @ ^ [V2x: A_27a] : ( c_2Epair_2E_2C @ A_27b @ $o @ ( V0f @ V2x ) @ ( V1P @ V2x ) ) )
+      = ( c_2Epred__set_2EIMAGE @ A_27a @ A_27b @ V0f
+        @ ( c_2Epred__set_2EGSPEC @ A_27a @ A_27a
+          @ ^ [V3x: A_27a] : ( c_2Epair_2E_2C @ A_27a @ $o @ V3x @ ( V1P @ V3x ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EREAL__LT__LCANCEL__IMP,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal,V1y: tyop_2Erealax_2Ereal,V2z: tyop_2Erealax_2Ereal] :
+      ( ( ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V0x )
+        & ( c_2Erealax_2Ereal__lt @ ( c_2Erealax_2Ereal__mul @ V0x @ V1y ) @ ( c_2Erealax_2Ereal__mul @ V0x @ V2z ) ) )
+     => ( c_2Erealax_2Ereal__lt @ V1y @ V2z ) ) ).
+
+thf(thm_2Ereal__topology_2EPOWERSET__CLAUSES,axiom,
+    ! [A_27a: $tType,A_27b: $tType] :
+      ( ( ( c_2Epred__set_2EGSPEC @ ( A_27b > $o ) @ ( A_27b > $o )
+          @ ^ [V0s: A_27b > $o] : ( c_2Epair_2E_2C @ ( A_27b > $o ) @ $o @ V0s @ ( c_2Epred__set_2ESUBSET @ A_27b @ V0s @ ( c_2Epred__set_2EEMPTY @ A_27b ) ) ) )
+        = ( c_2Epred__set_2EINSERT @ ( A_27b > $o ) @ ( c_2Epred__set_2EEMPTY @ A_27b ) @ ( c_2Epred__set_2EEMPTY @ ( A_27b > $o ) ) ) )
+      & ! [V1a: A_27a,V2t: A_27a > $o] :
+          ( ( c_2Epred__set_2EGSPEC @ ( A_27a > $o ) @ ( A_27a > $o )
+            @ ^ [V3s: A_27a > $o] : ( c_2Epair_2E_2C @ ( A_27a > $o ) @ $o @ V3s @ ( c_2Epred__set_2ESUBSET @ A_27a @ V3s @ ( c_2Epred__set_2EINSERT @ A_27a @ V1a @ V2t ) ) ) )
+          = ( c_2Epred__set_2EUNION @ ( A_27a > $o )
+            @ ( c_2Epred__set_2EGSPEC @ ( A_27a > $o ) @ ( A_27a > $o )
+              @ ^ [V4s: A_27a > $o] : ( c_2Epair_2E_2C @ ( A_27a > $o ) @ $o @ V4s @ ( c_2Epred__set_2ESUBSET @ A_27a @ V4s @ V2t ) ) )
+            @ ( c_2Epred__set_2EIMAGE @ ( A_27a > $o ) @ ( A_27a > $o )
+              @ ^ [V5s: A_27a > $o] : ( c_2Epred__set_2EINSERT @ A_27a @ V1a @ V5s )
+              @ ( c_2Epred__set_2EGSPEC @ ( A_27a > $o ) @ ( A_27a > $o )
+                @ ^ [V6s: A_27a > $o] : ( c_2Epair_2E_2C @ ( A_27a > $o ) @ $o @ V6s @ ( c_2Epred__set_2ESUBSET @ A_27a @ V6s @ V2t ) ) ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EREAL__OF__NUM__GE,axiom,
+    ! [V0m: tyop_2Enum_2Enum,V1n: tyop_2Enum_2Enum] :
+      ( ( c_2Ereal_2Ereal__ge @ ( c_2Ereal_2Ereal__of__num @ V0m ) @ ( c_2Ereal_2Ereal__of__num @ V1n ) )
+      = ( c_2Earithmetic_2E_3E_3D @ V0m @ V1n ) ) ).
+
+thf(thm_2Ereal__topology_2EABS__LE__0,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal_2Ereal__lte @ ( c_2Ereal_2Eabs @ V0x ) @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) )
+    <=> ( V0x
+        = ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) ) ) ).
+
+thf(thm_2Ereal__topology_2ENOT__EQ,axiom,
+    ! [A_27a: $tType,V0a: A_27a,V1b: A_27a] :
+      ( ( (~) @ ( V0a = V1b ) )
+    <=> ( (~) @ ( V0a = V1b ) ) ) ).
+
+thf(thm_2Ereal__topology_2ELAMBDA__PAIR,axiom,
+    ! [A_27a: $tType,A_27b: $tType,A_27c: $tType,V0P: A_27a > A_27b > A_27c] :
+      ( ( c_2Epair_2EUNCURRY @ A_27a @ A_27b @ A_27c
+        @ ^ [V1x: A_27a,V2y: A_27b] : ( V0P @ V1x @ V2y ) )
+      = ( ^ [V3p: tyop_2Epair_2Eprod @ A_27a @ A_27b] : ( V0P @ ( c_2Epair_2EFST @ A_27a @ A_27b @ V3p ) @ ( c_2Epair_2ESND @ A_27a @ A_27b @ V3p ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ETRANSITIVE__STEPWISE__LE,axiom,
+    ! [V0R: tyop_2Enum_2Enum > tyop_2Enum_2Enum > $o] :
+      ( ( ! [V1x: tyop_2Enum_2Enum] : ( V0R @ V1x @ V1x )
+        & ! [V2x: tyop_2Enum_2Enum,V3y: tyop_2Enum_2Enum,V4z: tyop_2Enum_2Enum] :
+            ( ( ( V0R @ V2x @ V3y )
+              & ( V0R @ V3y @ V4z ) )
+           => ( V0R @ V2x @ V4z ) )
+        & ! [V5n: tyop_2Enum_2Enum] : ( V0R @ V5n @ ( c_2Enum_2ESUC @ V5n ) ) )
+     => ! [V6m: tyop_2Enum_2Enum,V7n: tyop_2Enum_2Enum] :
+          ( ( c_2Earithmetic_2E_3C_3D @ V6m @ V7n )
+         => ( V0R @ V6m @ V7n ) ) ) ).
+
+thf(thm_2Ereal__topology_2ETRANSITIVE__STEPWISE__LE__EQ,axiom,
+    ! [V0R: tyop_2Enum_2Enum > tyop_2Enum_2Enum > $o] :
+      ( ( ! [V1x: tyop_2Enum_2Enum] : ( V0R @ V1x @ V1x )
+        & ! [V2x: tyop_2Enum_2Enum,V3y: tyop_2Enum_2Enum,V4z: tyop_2Enum_2Enum] :
+            ( ( ( V0R @ V2x @ V3y )
+              & ( V0R @ V3y @ V4z ) )
+           => ( V0R @ V2x @ V4z ) ) )
+     => ( ! [V5m: tyop_2Enum_2Enum,V6n: tyop_2Enum_2Enum] :
+            ( ( c_2Earithmetic_2E_3C_3D @ V5m @ V6n )
+           => ( V0R @ V5m @ V6n ) )
+      <=> ! [V7n: tyop_2Enum_2Enum] : ( V0R @ V7n @ ( c_2Enum_2ESUC @ V7n ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EADD__SUBR,axiom,
+    ! [V0m: tyop_2Enum_2Enum,V1n: tyop_2Enum_2Enum] :
+      ( ( c_2Earithmetic_2E_2D @ V1n @ ( c_2Earithmetic_2E_2B @ V0m @ V1n ) )
+      = c_2Enum_2E0 ) ).
+
+thf(thm_2Ereal__topology_2EADD__SUBR2,axiom,
+    ! [V0m: tyop_2Enum_2Enum,V1n: tyop_2Enum_2Enum] :
+      ( ( c_2Earithmetic_2E_2D @ V0m @ ( c_2Earithmetic_2E_2B @ V0m @ V1n ) )
+      = c_2Enum_2E0 ) ).
+
+thf(thm_2Ereal__topology_2EADD__SUB2,axiom,
+    ! [V0m: tyop_2Enum_2Enum,V1n: tyop_2Enum_2Enum] :
+      ( ( c_2Earithmetic_2E_2D @ ( c_2Earithmetic_2E_2B @ V0m @ V1n ) @ V0m )
+      = V1n ) ).
+
+thf(thm_2Ereal__topology_2ELE__ADDR,axiom,
+    ! [V0m: tyop_2Enum_2Enum,V1n: tyop_2Enum_2Enum] : ( c_2Earithmetic_2E_3C_3D @ V1n @ ( c_2Earithmetic_2E_2B @ V0m @ V1n ) ) ).
+
+thf(thm_2Ereal__topology_2ELE__ADD,axiom,
+    ! [V0m: tyop_2Enum_2Enum,V1n: tyop_2Enum_2Enum] : ( c_2Earithmetic_2E_3C_3D @ V0m @ ( c_2Earithmetic_2E_2B @ V0m @ V1n ) ) ).
+
+thf(thm_2Ereal__topology_2EFINITE__POWERSET,axiom,
+    ! [A_27a: $tType,V0s: A_27a > $o] :
+      ( ( c_2Epred__set_2EFINITE @ A_27a @ V0s )
+     => ( c_2Epred__set_2EFINITE @ ( A_27a > $o )
+        @ ( c_2Epred__set_2EGSPEC @ ( A_27a > $o ) @ ( A_27a > $o )
+          @ ^ [V1t: A_27a > $o] : ( c_2Epair_2E_2C @ ( A_27a > $o ) @ $o @ V1t @ ( c_2Epred__set_2ESUBSET @ A_27a @ V1t @ V0s ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ELINEAR__INJECTIVE__BOUNDED__BELOW__POS,axiom,
+    ! [V0f: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal] :
+      ( ( ( c_2Ereal__topology_2Elinear @ V0f )
+        & ! [V1x: tyop_2Erealax_2Ereal,V2y: tyop_2Erealax_2Ereal] :
+            ( ( ( V0f @ V1x )
+              = ( V0f @ V2y ) )
+           => ( V1x = V2y ) ) )
+     => ? [V3B: tyop_2Erealax_2Ereal] :
+          ( ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V3B )
+          & ! [V4x: tyop_2Erealax_2Ereal] : ( c_2Ereal_2Ereal__lte @ ( c_2Erealax_2Ereal__mul @ ( c_2Ereal_2Eabs @ V4x ) @ V3B ) @ ( c_2Ereal_2Eabs @ ( V0f @ V4x ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ELINEAR__INVERTIBLE__BOUNDED__BELOW,axiom,
+    ! [V0f: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal,V1g: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal] :
+      ( ( ( c_2Ereal__topology_2Elinear @ V0f )
+        & ( c_2Ereal__topology_2Elinear @ V1g )
+        & ( ( c_2Ecombin_2Eo @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V1g @ V0f )
+          = ( c_2Ecombin_2EI @ tyop_2Erealax_2Ereal ) ) )
+     => ? [V2B: tyop_2Erealax_2Ereal] :
+        ! [V3x: tyop_2Erealax_2Ereal] : ( c_2Ereal_2Ereal__lte @ ( c_2Erealax_2Ereal__mul @ V2B @ ( c_2Ereal_2Eabs @ V3x ) ) @ ( c_2Ereal_2Eabs @ ( V0f @ V3x ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ELINEAR__INVERTIBLE__BOUNDED__BELOW__POS,axiom,
+    ! [V0f: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal,V1g: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal] :
+      ( ( ( c_2Ereal__topology_2Elinear @ V0f )
+        & ( c_2Ereal__topology_2Elinear @ V1g )
+        & ( ( c_2Ecombin_2Eo @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V1g @ V0f )
+          = ( c_2Ecombin_2EI @ tyop_2Erealax_2Ereal ) ) )
+     => ? [V2B: tyop_2Erealax_2Ereal] :
+          ( ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V2B )
+          & ! [V3x: tyop_2Erealax_2Ereal] : ( c_2Ereal_2Ereal__lte @ ( c_2Erealax_2Ereal__mul @ V2B @ ( c_2Ereal_2Eabs @ V3x ) ) @ ( c_2Ereal_2Eabs @ ( V0f @ V3x ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ELINEAR__INJECTIVE__IMP__SURJECTIVE,axiom,
+    ! [V0f: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal] :
+      ( ( ( c_2Ereal__topology_2Elinear @ V0f )
+        & ! [V1x: tyop_2Erealax_2Ereal,V2y: tyop_2Erealax_2Ereal] :
+            ( ( ( V0f @ V1x )
+              = ( V0f @ V2y ) )
+           => ( V1x = V2y ) ) )
+     => ! [V3y: tyop_2Erealax_2Ereal] :
+        ? [V4x: tyop_2Erealax_2Ereal] :
+          ( ( V0f @ V4x )
+          = V3y ) ) ).
+
+thf(thm_2Ereal__topology_2ESPAN__LINEAR__IMAGE,axiom,
+    ! [V0f: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal,V1s: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ereal__topology_2Elinear @ V0f )
+     => ( ( c_2Ereal__topology_2Espan @ ( c_2Epred__set_2EIMAGE @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0f @ V1s ) )
+        = ( c_2Epred__set_2EIMAGE @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0f @ ( c_2Ereal__topology_2Espan @ V1s ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EINDEPENDENT__INJECTIVE__IMAGE,axiom,
+    ! [V0f: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal,V1s: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( c_2Ereal__topology_2Eindependent @ V1s )
+        & ( c_2Ereal__topology_2Elinear @ V0f )
+        & ! [V2x: tyop_2Erealax_2Ereal,V3y: tyop_2Erealax_2Ereal] :
+            ( ( ( V0f @ V2x )
+              = ( V0f @ V3y ) )
+           => ( V2x = V3y ) ) )
+     => ( c_2Ereal__topology_2Eindependent @ ( c_2Epred__set_2EIMAGE @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0f @ V1s ) ) ) ).
+
+thf(thm_2Ereal__topology_2EINDEPENDENT__INJECTIVE__IMAGE__GEN,axiom,
+    ! [V0f: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal,V1s: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( c_2Ereal__topology_2Eindependent @ V1s )
+        & ( c_2Ereal__topology_2Elinear @ V0f )
+        & ! [V2x: tyop_2Erealax_2Ereal,V3y: tyop_2Erealax_2Ereal] :
+            ( ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V2x @ ( c_2Ereal__topology_2Espan @ V1s ) )
+              & ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V3y @ ( c_2Ereal__topology_2Espan @ V1s ) )
+              & ( ( V0f @ V2x )
+                = ( V0f @ V3y ) ) )
+           => ( V2x = V3y ) ) )
+     => ( c_2Ereal__topology_2Eindependent @ ( c_2Epred__set_2EIMAGE @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0f @ V1s ) ) ) ).
+
+thf(thm_2Ereal__topology_2EDEPENDENT__EXPLICIT,axiom,
+    ! [V0p: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ereal__topology_2Edependent @ V0p )
+    <=> ? [V1s: tyop_2Erealax_2Ereal > $o,V2u: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal] :
+          ( ( c_2Epred__set_2EFINITE @ tyop_2Erealax_2Ereal @ V1s )
+          & ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ V1s @ V0p )
+          & ? [V3v: tyop_2Erealax_2Ereal] :
+              ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V3v @ V1s )
+              & ( (~)
+                @ ( ( V2u @ V3v )
+                  = ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) ) ) )
+          & ( ( c_2Eiterate_2ESum @ tyop_2Erealax_2Ereal @ V1s
+              @ ^ [V4v: tyop_2Erealax_2Ereal] : ( c_2Erealax_2Ereal__mul @ ( V2u @ V4v ) @ V4v ) )
+            = ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ESPAN__EXPLICIT,axiom,
+    ! [V0p: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ereal__topology_2Espan @ V0p )
+      = ( c_2Epred__set_2EGSPEC @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal
+        @ ^ [V1y: tyop_2Erealax_2Ereal] :
+            ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ $o @ V1y
+            @ ( c_2Ebool_2E_3F @ ( tyop_2Erealax_2Ereal > $o )
+              @ ^ [V2s: tyop_2Erealax_2Ereal > $o] :
+                  ( c_2Ebool_2E_3F @ ( tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal )
+                  @ ^ [V3u: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal] :
+                      ( c_2Ebool_2E_2F_5C @ ( c_2Epred__set_2EFINITE @ tyop_2Erealax_2Ereal @ V2s )
+                      @ ( c_2Ebool_2E_2F_5C @ ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ V2s @ V0p )
+                        @ ( c_2Emin_2E_3D @ tyop_2Erealax_2Ereal
+                          @ ( c_2Eiterate_2ESum @ tyop_2Erealax_2Ereal @ V2s
+                            @ ^ [V4v: tyop_2Erealax_2Ereal] : ( c_2Erealax_2Ereal__mul @ ( V3u @ V4v ) @ V4v ) )
+                          @ V1y ) ) ) ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ECARD__GE__DIM__INDEPENDENT,axiom,
+    ! [V0v: tyop_2Erealax_2Ereal > $o,V1b: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ V1b @ V0v )
+        & ( c_2Ereal__topology_2Eindependent @ V1b )
+        & ( c_2Earithmetic_2E_3C_3D @ ( c_2Ereal__topology_2Edim @ V0v ) @ ( c_2Epred__set_2ECARD @ tyop_2Erealax_2Ereal @ V1b ) ) )
+     => ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ V0v @ ( c_2Ereal__topology_2Espan @ V1b ) ) ) ).
+
+thf(thm_2Ereal__topology_2EINDEPENDENT__INSERT,axiom,
+    ! [V0a: tyop_2Erealax_2Ereal,V1s: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ereal__topology_2Eindependent @ ( c_2Epred__set_2EINSERT @ tyop_2Erealax_2Ereal @ V0a @ V1s ) )
+      = ( c_2Ebool_2ECOND @ $o @ ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V0a @ V1s ) @ ( c_2Ereal__topology_2Eindependent @ V1s ) @ ( c_2Ebool_2E_2F_5C @ ( c_2Ereal__topology_2Eindependent @ V1s ) @ ( c_2Ebool_2E_7E @ ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V0a @ ( c_2Ereal__topology_2Espan @ V1s ) ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EIN__SPAN__INSERT,axiom,
+    ! [V0a: tyop_2Erealax_2Ereal,V1b: tyop_2Erealax_2Ereal,V2s: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V0a @ ( c_2Ereal__topology_2Espan @ ( c_2Epred__set_2EINSERT @ tyop_2Erealax_2Ereal @ V1b @ V2s ) ) )
+        & ( (~) @ ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V0a @ ( c_2Ereal__topology_2Espan @ V2s ) ) ) )
+     => ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V1b @ ( c_2Ereal__topology_2Espan @ ( c_2Epred__set_2EINSERT @ tyop_2Erealax_2Ereal @ V0a @ V2s ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ESPAN__BREAKDOWN,axiom,
+    ! [V0b: tyop_2Erealax_2Ereal,V1s: tyop_2Erealax_2Ereal > $o,V2a: tyop_2Erealax_2Ereal] :
+      ( ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V0b @ V1s )
+        & ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V2a @ ( c_2Ereal__topology_2Espan @ V1s ) ) )
+     => ? [V3k: tyop_2Erealax_2Ereal] : ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ ( c_2Ereal_2Ereal__sub @ V2a @ ( c_2Erealax_2Ereal__mul @ V3k @ V0b ) ) @ ( c_2Ereal__topology_2Espan @ ( c_2Epred__set_2EDELETE @ tyop_2Erealax_2Ereal @ V1s @ V0b ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EINDEPENDENT__MONO,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1t: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( c_2Ereal__topology_2Eindependent @ V1t )
+        & ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ V0s @ V1t ) )
+     => ( c_2Ereal__topology_2Eindependent @ V0s ) ) ).
+
+thf(thm_2Ereal__topology_2EINDEPENDENT__NONZERO,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ereal__topology_2Eindependent @ V0s )
+     => ( (~) @ ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V0s ) ) ) ).
+
+thf(thm_2Ereal__topology_2EMIDPOINT__COLLINEAR,axiom,
+    ! [V0a: tyop_2Erealax_2Ereal,V1b: tyop_2Erealax_2Ereal,V2c: tyop_2Erealax_2Ereal] :
+      ( ( (~) @ ( V0a = V2c ) )
+     => ( ( V1b
+          = ( c_2Ereal__topology_2Emidpoint @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ V2c ) ) )
+      <=> ( ( c_2Ereal__topology_2Ecollinear @ ( c_2Epred__set_2EINSERT @ tyop_2Erealax_2Ereal @ V0a @ ( c_2Epred__set_2EINSERT @ tyop_2Erealax_2Ereal @ V1b @ ( c_2Epred__set_2EINSERT @ tyop_2Erealax_2Ereal @ V2c @ ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) ) ) ) )
+          & ( ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ V1b ) )
+            = ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V1b @ V2c ) ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ECOLLINEAR__MIDPOINT,axiom,
+    ! [V0a: tyop_2Erealax_2Ereal,V1b: tyop_2Erealax_2Ereal] : ( c_2Ereal__topology_2Ecollinear @ ( c_2Epred__set_2EINSERT @ tyop_2Erealax_2Ereal @ V0a @ ( c_2Epred__set_2EINSERT @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Emidpoint @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ V1b ) ) @ ( c_2Epred__set_2EINSERT @ tyop_2Erealax_2Ereal @ V1b @ ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EMIDPOINT__LINEAR__IMAGE,axiom,
+    ! [V0f: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal,V1a: tyop_2Erealax_2Ereal,V2b: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2Elinear @ V0f )
+     => ( ( c_2Ereal__topology_2Emidpoint @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ ( V0f @ V1a ) @ ( V0f @ V2b ) ) )
+        = ( V0f @ ( c_2Ereal__topology_2Emidpoint @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V1a @ V2b ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EBETWEEN__MIDPOINT,axiom,
+    ! [V0a: tyop_2Erealax_2Ereal,V1b: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2Ebetween @ ( c_2Ereal__topology_2Emidpoint @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ V1b ) ) @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ V1b ) )
+      & ( c_2Ereal__topology_2Ebetween @ ( c_2Ereal__topology_2Emidpoint @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ V1b ) ) @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V1b @ V0a ) ) ) ).
+
+thf(thm_2Ereal__topology_2EMIDPOINT__EQ__ENDPOINT,axiom,
+    ! [V0a: tyop_2Erealax_2Ereal,V1b: tyop_2Erealax_2Ereal] :
+      ( ( ( ( c_2Ereal__topology_2Emidpoint @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ V1b ) )
+          = V0a )
+      <=> ( V0a = V1b ) )
+      & ( ( ( c_2Ereal__topology_2Emidpoint @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ V1b ) )
+          = V1b )
+      <=> ( V0a = V1b ) )
+      & ( ( V0a
+          = ( c_2Ereal__topology_2Emidpoint @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ V1b ) ) )
+      <=> ( V0a = V1b ) )
+      & ( ( V1b
+          = ( c_2Ereal__topology_2Emidpoint @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ V1b ) ) )
+      <=> ( V0a = V1b ) ) ) ).
+
+thf(thm_2Ereal__topology_2EDIST__MIDPOINT,axiom,
+    ! [V0a: tyop_2Erealax_2Ereal,V1b: tyop_2Erealax_2Ereal] :
+      ( ( ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ ( c_2Ereal__topology_2Emidpoint @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ V1b ) ) ) )
+        = ( c_2Ereal_2E_2F @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ V1b ) ) @ ( c_2Ereal_2Ereal__of__num @ ( c_2Earithmetic_2ENUMERAL @ ( c_2Earithmetic_2EBIT2 @ c_2Earithmetic_2EZERO ) ) ) ) )
+      & ( ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V1b @ ( c_2Ereal__topology_2Emidpoint @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ V1b ) ) ) )
+        = ( c_2Ereal_2E_2F @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ V1b ) ) @ ( c_2Ereal_2Ereal__of__num @ ( c_2Earithmetic_2ENUMERAL @ ( c_2Earithmetic_2EBIT2 @ c_2Earithmetic_2EZERO ) ) ) ) )
+      & ( ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Emidpoint @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ V1b ) ) @ V0a ) )
+        = ( c_2Ereal_2E_2F @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ V1b ) ) @ ( c_2Ereal_2Ereal__of__num @ ( c_2Earithmetic_2ENUMERAL @ ( c_2Earithmetic_2EBIT2 @ c_2Earithmetic_2EZERO ) ) ) ) )
+      & ( ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Emidpoint @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ V1b ) ) @ V1b ) )
+        = ( c_2Ereal_2E_2F @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ V1b ) ) @ ( c_2Ereal_2Ereal__of__num @ ( c_2Earithmetic_2ENUMERAL @ ( c_2Earithmetic_2EBIT2 @ c_2Earithmetic_2EZERO ) ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EMIDPOINT__SYM,axiom,
+    ! [V0a: tyop_2Erealax_2Ereal,V1b: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2Emidpoint @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ V1b ) )
+      = ( c_2Ereal__topology_2Emidpoint @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V1b @ V0a ) ) ) ).
+
+thf(thm_2Ereal__topology_2EMIDPOINT__REFL,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2Emidpoint @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0x @ V0x ) )
+      = V0x ) ).
+
+thf(thm_2Ereal__topology_2ECOLLINEAR__1,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o] : ( c_2Ereal__topology_2Ecollinear @ V0s ) ).
+
+thf(thm_2Ereal__topology_2ECOLLINEAR__DIST__BETWEEN,axiom,
+    ! [V0a: tyop_2Erealax_2Ereal,V1b: tyop_2Erealax_2Ereal,V2x: tyop_2Erealax_2Ereal] :
+      ( ( ( c_2Ereal__topology_2Ecollinear @ ( c_2Epred__set_2EINSERT @ tyop_2Erealax_2Ereal @ V2x @ ( c_2Epred__set_2EINSERT @ tyop_2Erealax_2Ereal @ V0a @ ( c_2Epred__set_2EINSERT @ tyop_2Erealax_2Ereal @ V1b @ ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) ) ) ) )
+        & ( c_2Ereal_2Ereal__lte @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V2x @ V0a ) ) @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ V1b ) ) )
+        & ( c_2Ereal_2Ereal__lte @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V2x @ V1b ) ) @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ V1b ) ) ) )
+     => ( c_2Ereal__topology_2Ebetween @ V2x @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ V1b ) ) ) ).
+
+thf(thm_2Ereal__topology_2ECOLLINEAR__BETWEEN__CASES,axiom,
+    ! [V0a: tyop_2Erealax_2Ereal,V1b: tyop_2Erealax_2Ereal,V2c: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2Ecollinear @ ( c_2Epred__set_2EINSERT @ tyop_2Erealax_2Ereal @ V0a @ ( c_2Epred__set_2EINSERT @ tyop_2Erealax_2Ereal @ V1b @ ( c_2Epred__set_2EINSERT @ tyop_2Erealax_2Ereal @ V2c @ ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) ) ) ) )
+    <=> ( ( c_2Ereal__topology_2Ebetween @ V0a @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V1b @ V2c ) )
+        | ( c_2Ereal__topology_2Ebetween @ V1b @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V2c @ V0a ) )
+        | ( c_2Ereal__topology_2Ebetween @ V2c @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ V1b ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EBETWEEN__IMP__COLLINEAR,axiom,
+    ! [V0a: tyop_2Erealax_2Ereal,V1b: tyop_2Erealax_2Ereal,V2x: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2Ebetween @ V2x @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ V1b ) )
+     => ( c_2Ereal__topology_2Ecollinear @ ( c_2Epred__set_2EINSERT @ tyop_2Erealax_2Ereal @ V0a @ ( c_2Epred__set_2EINSERT @ tyop_2Erealax_2Ereal @ V2x @ ( c_2Epred__set_2EINSERT @ tyop_2Erealax_2Ereal @ V1b @ ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EBETWEEN__ABS,axiom,
+    ! [V0a: tyop_2Erealax_2Ereal,V1b: tyop_2Erealax_2Ereal,V2x: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2Ebetween @ V2x @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ V1b ) )
+    <=> ( ( c_2Erealax_2Ereal__mul @ ( c_2Ereal_2Eabs @ ( c_2Ereal_2Ereal__sub @ V2x @ V0a ) ) @ ( c_2Ereal_2Ereal__sub @ V1b @ V2x ) )
+        = ( c_2Erealax_2Ereal__mul @ ( c_2Ereal_2Eabs @ ( c_2Ereal_2Ereal__sub @ V1b @ V2x ) ) @ ( c_2Ereal_2Ereal__sub @ V2x @ V0a ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EBETWEEN__TRANS__2,axiom,
+    ! [V0a: tyop_2Erealax_2Ereal,V1b: tyop_2Erealax_2Ereal,V2c: tyop_2Erealax_2Ereal,V3d: tyop_2Erealax_2Ereal] :
+      ( ( ( c_2Ereal__topology_2Ebetween @ V0a @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V1b @ V2c ) )
+        & ( c_2Ereal__topology_2Ebetween @ V3d @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ V1b ) ) )
+     => ( c_2Ereal__topology_2Ebetween @ V0a @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V2c @ V3d ) ) ) ).
+
+thf(thm_2Ereal__topology_2EBETWEEN__TRANS,axiom,
+    ! [V0a: tyop_2Erealax_2Ereal,V1b: tyop_2Erealax_2Ereal,V2c: tyop_2Erealax_2Ereal,V3d: tyop_2Erealax_2Ereal] :
+      ( ( ( c_2Ereal__topology_2Ebetween @ V0a @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V1b @ V2c ) )
+        & ( c_2Ereal__topology_2Ebetween @ V3d @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ V2c ) ) )
+     => ( c_2Ereal__topology_2Ebetween @ V3d @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V1b @ V2c ) ) ) ).
+
+thf(thm_2Ereal__topology_2EBETWEEN__ANTISYM,axiom,
+    ! [V0a: tyop_2Erealax_2Ereal,V1b: tyop_2Erealax_2Ereal,V2c: tyop_2Erealax_2Ereal] :
+      ( ( ( c_2Ereal__topology_2Ebetween @ V0a @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V1b @ V2c ) )
+        & ( c_2Ereal__topology_2Ebetween @ V1b @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ V2c ) ) )
+     => ( V0a = V1b ) ) ).
+
+thf(thm_2Ereal__topology_2EBETWEEN__SYM,axiom,
+    ! [V0a: tyop_2Erealax_2Ereal,V1b: tyop_2Erealax_2Ereal,V2x: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2Ebetween @ V2x @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ V1b ) )
+      = ( c_2Ereal__topology_2Ebetween @ V2x @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V1b @ V0a ) ) ) ).
+
+thf(thm_2Ereal__topology_2EBETWEEN__REFL__EQ,axiom,
+    ! [V0a: tyop_2Erealax_2Ereal,V1x: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2Ebetween @ V1x @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ V0a ) )
+    <=> ( V1x = V0a ) ) ).
+
+thf(thm_2Ereal__topology_2EBETWEEN__REFL,axiom,
+    ! [V0a: tyop_2Erealax_2Ereal,V1b: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2Ebetween @ V0a @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ V1b ) )
+      & ( c_2Ereal__topology_2Ebetween @ V1b @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ V1b ) )
+      & ( c_2Ereal__topology_2Ebetween @ V0a @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ V0a ) ) ) ).
+
+thf(thm_2Ereal__topology_2ECOLLINEAR__3__TRANS,axiom,
+    ! [V0a: tyop_2Erealax_2Ereal,V1b: tyop_2Erealax_2Ereal,V2c: tyop_2Erealax_2Ereal,V3d: tyop_2Erealax_2Ereal] :
+      ( ( ( c_2Ereal__topology_2Ecollinear @ ( c_2Epred__set_2EINSERT @ tyop_2Erealax_2Ereal @ V0a @ ( c_2Epred__set_2EINSERT @ tyop_2Erealax_2Ereal @ V1b @ ( c_2Epred__set_2EINSERT @ tyop_2Erealax_2Ereal @ V2c @ ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) ) ) ) )
+        & ( c_2Ereal__topology_2Ecollinear @ ( c_2Epred__set_2EINSERT @ tyop_2Erealax_2Ereal @ V1b @ ( c_2Epred__set_2EINSERT @ tyop_2Erealax_2Ereal @ V2c @ ( c_2Epred__set_2EINSERT @ tyop_2Erealax_2Ereal @ V3d @ ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) ) ) ) )
+        & ( (~) @ ( V1b = V2c ) ) )
+     => ( c_2Ereal__topology_2Ecollinear @ ( c_2Epred__set_2EINSERT @ tyop_2Erealax_2Ereal @ V0a @ ( c_2Epred__set_2EINSERT @ tyop_2Erealax_2Ereal @ V1b @ ( c_2Epred__set_2EINSERT @ tyop_2Erealax_2Ereal @ V3d @ ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ECOLLINEAR__4__3,axiom,
+    ! [V0a: tyop_2Erealax_2Ereal,V1b: tyop_2Erealax_2Ereal,V2c: tyop_2Erealax_2Ereal,V3d: tyop_2Erealax_2Ereal] :
+      ( ( (~) @ ( V0a = V1b ) )
+     => ( ( c_2Ereal__topology_2Ecollinear @ ( c_2Epred__set_2EINSERT @ tyop_2Erealax_2Ereal @ V0a @ ( c_2Epred__set_2EINSERT @ tyop_2Erealax_2Ereal @ V1b @ ( c_2Epred__set_2EINSERT @ tyop_2Erealax_2Ereal @ V2c @ ( c_2Epred__set_2EINSERT @ tyop_2Erealax_2Ereal @ V3d @ ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) ) ) ) ) )
+      <=> ( ( c_2Ereal__topology_2Ecollinear @ ( c_2Epred__set_2EINSERT @ tyop_2Erealax_2Ereal @ V0a @ ( c_2Epred__set_2EINSERT @ tyop_2Erealax_2Ereal @ V1b @ ( c_2Epred__set_2EINSERT @ tyop_2Erealax_2Ereal @ V2c @ ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) ) ) ) )
+          & ( c_2Ereal__topology_2Ecollinear @ ( c_2Epred__set_2EINSERT @ tyop_2Erealax_2Ereal @ V0a @ ( c_2Epred__set_2EINSERT @ tyop_2Erealax_2Ereal @ V1b @ ( c_2Epred__set_2EINSERT @ tyop_2Erealax_2Ereal @ V3d @ ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) ) ) ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ECOLLINEAR__TRIPLES,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1a: tyop_2Erealax_2Ereal,V2b: tyop_2Erealax_2Ereal] :
+      ( ( (~) @ ( V1a = V2b ) )
+     => ( ( c_2Ereal__topology_2Ecollinear @ ( c_2Epred__set_2EINSERT @ tyop_2Erealax_2Ereal @ V1a @ ( c_2Epred__set_2EINSERT @ tyop_2Erealax_2Ereal @ V2b @ V0s ) ) )
+      <=> ! [V3x: tyop_2Erealax_2Ereal] :
+            ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V3x @ V0s )
+           => ( c_2Ereal__topology_2Ecollinear @ ( c_2Epred__set_2EINSERT @ tyop_2Erealax_2Ereal @ V1a @ ( c_2Epred__set_2EINSERT @ tyop_2Erealax_2Ereal @ V2b @ ( c_2Epred__set_2EINSERT @ tyop_2Erealax_2Ereal @ V3x @ ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) ) ) ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ECOLLINEAR__3__EXPAND,axiom,
+    ! [V0a: tyop_2Erealax_2Ereal,V1b: tyop_2Erealax_2Ereal,V2c: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2Ecollinear @ ( c_2Epred__set_2EINSERT @ tyop_2Erealax_2Ereal @ V0a @ ( c_2Epred__set_2EINSERT @ tyop_2Erealax_2Ereal @ V1b @ ( c_2Epred__set_2EINSERT @ tyop_2Erealax_2Ereal @ V2c @ ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) ) ) ) )
+    <=> ( ( V0a = V2c )
+        | ? [V3u: tyop_2Erealax_2Ereal] :
+            ( V1b
+            = ( c_2Erealax_2Ereal__add @ ( c_2Erealax_2Ereal__mul @ V3u @ V0a ) @ ( c_2Erealax_2Ereal__mul @ ( c_2Ereal_2Ereal__sub @ ( c_2Ereal_2Ereal__of__num @ ( c_2Earithmetic_2ENUMERAL @ ( c_2Earithmetic_2EBIT1 @ c_2Earithmetic_2EZERO ) ) ) @ V3u ) @ V2c ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EMUL__CAUCHY__SCHWARZ__EQUAL,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal,V1y: tyop_2Erealax_2Ereal] :
+      ( ( ( c_2Ereal_2Epow @ ( c_2Erealax_2Ereal__mul @ V0x @ V1y ) @ ( c_2Earithmetic_2ENUMERAL @ ( c_2Earithmetic_2EBIT2 @ c_2Earithmetic_2EZERO ) ) )
+        = ( c_2Erealax_2Ereal__mul @ ( c_2Erealax_2Ereal__mul @ V0x @ V0x ) @ ( c_2Erealax_2Ereal__mul @ V1y @ V1y ) ) )
+    <=> ( c_2Ereal__topology_2Ecollinear @ ( c_2Epred__set_2EINSERT @ tyop_2Erealax_2Ereal @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ ( c_2Epred__set_2EINSERT @ tyop_2Erealax_2Ereal @ V0x @ ( c_2Epred__set_2EINSERT @ tyop_2Erealax_2Ereal @ V1y @ ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EABS__CAUCHY__SCHWARZ__EQUAL,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal,V1y: tyop_2Erealax_2Ereal] :
+      ( ( ( c_2Ereal_2Eabs @ ( c_2Erealax_2Ereal__mul @ V0x @ V1y ) )
+        = ( c_2Erealax_2Ereal__mul @ ( c_2Ereal_2Eabs @ V0x ) @ ( c_2Ereal_2Eabs @ V1y ) ) )
+    <=> ( c_2Ereal__topology_2Ecollinear @ ( c_2Epred__set_2EINSERT @ tyop_2Erealax_2Ereal @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ ( c_2Epred__set_2EINSERT @ tyop_2Erealax_2Ereal @ V0x @ ( c_2Epred__set_2EINSERT @ tyop_2Erealax_2Ereal @ V1y @ ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ECOLLINEAR__LEMMA__ALT,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal,V1y: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2Ecollinear @ ( c_2Epred__set_2EINSERT @ tyop_2Erealax_2Ereal @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ ( c_2Epred__set_2EINSERT @ tyop_2Erealax_2Ereal @ V0x @ ( c_2Epred__set_2EINSERT @ tyop_2Erealax_2Ereal @ V1y @ ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) ) ) ) )
+    <=> ( ( V0x
+          = ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) )
+        | ? [V2c: tyop_2Erealax_2Ereal] :
+            ( V1y
+            = ( c_2Erealax_2Ereal__mul @ V2c @ V0x ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ECOLLINEAR__LEMMA,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal,V1y: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2Ecollinear @ ( c_2Epred__set_2EINSERT @ tyop_2Erealax_2Ereal @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ ( c_2Epred__set_2EINSERT @ tyop_2Erealax_2Ereal @ V0x @ ( c_2Epred__set_2EINSERT @ tyop_2Erealax_2Ereal @ V1y @ ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) ) ) ) )
+    <=> ( ( V0x
+          = ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) )
+        | ( V1y
+          = ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) )
+        | ? [V2c: tyop_2Erealax_2Ereal] :
+            ( V1y
+            = ( c_2Erealax_2Ereal__mul @ V2c @ V0x ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ECOLLINEAR__3,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal,V1y: tyop_2Erealax_2Ereal,V2z: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2Ecollinear @ ( c_2Epred__set_2EINSERT @ tyop_2Erealax_2Ereal @ V0x @ ( c_2Epred__set_2EINSERT @ tyop_2Erealax_2Ereal @ V1y @ ( c_2Epred__set_2EINSERT @ tyop_2Erealax_2Ereal @ V2z @ ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) ) ) ) )
+      = ( c_2Ereal__topology_2Ecollinear @ ( c_2Epred__set_2EINSERT @ tyop_2Erealax_2Ereal @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ ( c_2Epred__set_2EINSERT @ tyop_2Erealax_2Ereal @ ( c_2Ereal_2Ereal__sub @ V0x @ V1y ) @ ( c_2Epred__set_2EINSERT @ tyop_2Erealax_2Ereal @ ( c_2Ereal_2Ereal__sub @ V2z @ V1y ) @ ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ECOLLINEAR__SMALL,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( c_2Epred__set_2EFINITE @ tyop_2Erealax_2Ereal @ V0s )
+        & ( c_2Earithmetic_2E_3C_3D @ ( c_2Epred__set_2ECARD @ tyop_2Erealax_2Ereal @ V0s ) @ ( c_2Earithmetic_2ENUMERAL @ ( c_2Earithmetic_2EBIT2 @ c_2Earithmetic_2EZERO ) ) ) )
+     => ( c_2Ereal__topology_2Ecollinear @ V0s ) ) ).
+
+thf(thm_2Ereal__topology_2ECOLLINEAR__2,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal,V1y: tyop_2Erealax_2Ereal] : ( c_2Ereal__topology_2Ecollinear @ ( c_2Epred__set_2EINSERT @ tyop_2Erealax_2Ereal @ V0x @ ( c_2Epred__set_2EINSERT @ tyop_2Erealax_2Ereal @ V1y @ ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ECOLLINEAR__SING,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal] : ( c_2Ereal__topology_2Ecollinear @ ( c_2Epred__set_2EINSERT @ tyop_2Erealax_2Ereal @ V0x @ ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) ) ) ).
+
+thf(thm_2Ereal__topology_2ECOLLINEAR__EMPTY,axiom,
+    c_2Ereal__topology_2Ecollinear @ ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) ).
+
+thf(thm_2Ereal__topology_2ECOLLINEAR__SUBSET,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1t: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( c_2Ereal__topology_2Ecollinear @ V1t )
+        & ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ V0s @ V1t ) )
+     => ( c_2Ereal__topology_2Ecollinear @ V0s ) ) ).
+
+thf(thm_2Ereal__topology_2EDIST__TRIANGLE__EQ,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal,V1y: tyop_2Erealax_2Ereal,V2z: tyop_2Erealax_2Ereal] :
+      ( ( ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0x @ V2z ) )
+        = ( c_2Erealax_2Ereal__add @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0x @ V1y ) ) @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V1y @ V2z ) ) ) )
+    <=> ( ( c_2Erealax_2Ereal__mul @ ( c_2Ereal_2Eabs @ ( c_2Ereal_2Ereal__sub @ V0x @ V1y ) ) @ ( c_2Ereal_2Ereal__sub @ V1y @ V2z ) )
+        = ( c_2Erealax_2Ereal__mul @ ( c_2Ereal_2Eabs @ ( c_2Ereal_2Ereal__sub @ V1y @ V2z ) ) @ ( c_2Ereal_2Ereal__sub @ V0x @ V1y ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EABS__TRIANGLE__EQ,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal,V1y: tyop_2Erealax_2Ereal] :
+      ( ( ( c_2Ereal_2Eabs @ ( c_2Erealax_2Ereal__add @ V0x @ V1y ) )
+        = ( c_2Erealax_2Ereal__add @ ( c_2Ereal_2Eabs @ V0x ) @ ( c_2Ereal_2Eabs @ V1y ) ) )
+    <=> ( ( c_2Erealax_2Ereal__mul @ ( c_2Ereal_2Eabs @ V0x ) @ V1y )
+        = ( c_2Erealax_2Ereal__mul @ ( c_2Ereal_2Eabs @ V1y ) @ V0x ) ) ) ).
+
+thf(thm_2Ereal__topology_2EREAL__EQ__RINV,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal] :
+      ( ( V0x
+        = ( c_2Erealax_2Ereal__neg @ V0x ) )
+    <=> ( V0x
+        = ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) ) ) ).
+
+thf(thm_2Ereal__topology_2EREAL__EQ__LINV,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal] :
+      ( ( ( c_2Erealax_2Ereal__neg @ V0x )
+        = V0x )
+    <=> ( V0x
+        = ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) ) ) ).
+
+thf(thm_2Ereal__topology_2EABS__CAUCHY__SCHWARZ__ABS__EQ,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal,V1y: tyop_2Erealax_2Ereal] :
+      ( ( ( c_2Ereal_2Eabs @ ( c_2Erealax_2Ereal__mul @ V0x @ V1y ) )
+        = ( c_2Erealax_2Ereal__mul @ ( c_2Ereal_2Eabs @ V0x ) @ ( c_2Ereal_2Eabs @ V1y ) ) )
+    <=> ( ( ( c_2Erealax_2Ereal__mul @ ( c_2Ereal_2Eabs @ V0x ) @ V1y )
+          = ( c_2Erealax_2Ereal__mul @ ( c_2Ereal_2Eabs @ V1y ) @ V0x ) )
+        | ( ( c_2Erealax_2Ereal__mul @ ( c_2Ereal_2Eabs @ V0x ) @ V1y )
+          = ( c_2Erealax_2Ereal__mul @ ( c_2Erealax_2Ereal__neg @ ( c_2Ereal_2Eabs @ V1y ) ) @ V0x ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EABS__CAUCHY__SCHWARZ__EQ,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal,V1y: tyop_2Erealax_2Ereal] :
+      ( ( ( c_2Erealax_2Ereal__mul @ V0x @ V1y )
+        = ( c_2Erealax_2Ereal__mul @ ( c_2Ereal_2Eabs @ V0x ) @ ( c_2Ereal_2Eabs @ V1y ) ) )
+    <=> ( ( c_2Erealax_2Ereal__mul @ ( c_2Ereal_2Eabs @ V0x ) @ V1y )
+        = ( c_2Erealax_2Ereal__mul @ ( c_2Ereal_2Eabs @ V1y ) @ V0x ) ) ) ).
+
+thf(thm_2Ereal__topology_2ESPAN__UNION,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1t: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ereal__topology_2Espan @ ( c_2Epred__set_2EUNION @ tyop_2Erealax_2Ereal @ V0s @ V1t ) )
+      = ( c_2Epred__set_2EGSPEC @ tyop_2Erealax_2Ereal @ ( tyop_2Epair_2Eprod @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal )
+        @ ( c_2Epair_2EUNCURRY @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ ( tyop_2Epair_2Eprod @ tyop_2Erealax_2Ereal @ $o )
+          @ ^ [V2x: tyop_2Erealax_2Ereal,V3y: tyop_2Erealax_2Ereal] : ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ $o @ ( c_2Erealax_2Ereal__add @ V2x @ V3y ) @ ( c_2Ebool_2E_2F_5C @ ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V2x @ ( c_2Ereal__topology_2Espan @ V0s ) ) @ ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V3y @ ( c_2Ereal__topology_2Espan @ V1t ) ) ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ESUBSPACE__SUMS,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1t: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( c_2Ereal__topology_2Esubspace @ V0s )
+        & ( c_2Ereal__topology_2Esubspace @ V1t ) )
+     => ( c_2Ereal__topology_2Esubspace
+        @ ( c_2Epred__set_2EGSPEC @ tyop_2Erealax_2Ereal @ ( tyop_2Epair_2Eprod @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal )
+          @ ( c_2Epair_2EUNCURRY @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ ( tyop_2Epair_2Eprod @ tyop_2Erealax_2Ereal @ $o )
+            @ ^ [V2x: tyop_2Erealax_2Ereal,V3y: tyop_2Erealax_2Ereal] : ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ $o @ ( c_2Erealax_2Ereal__add @ V2x @ V3y ) @ ( c_2Ebool_2E_2F_5C @ ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V2x @ V0s ) @ ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V3y @ V1t ) ) ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ESUBSPACE__TRANSLATION__SELF__EQ,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1a: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2Esubspace @ V0s )
+     => ( ( ( c_2Epred__set_2EIMAGE @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal
+            @ ^ [V2x: tyop_2Erealax_2Ereal] : ( c_2Erealax_2Ereal__add @ V1a @ V2x )
+            @ V0s )
+          = V0s )
+      <=> ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V1a @ V0s ) ) ) ).
+
+thf(thm_2Ereal__topology_2ESUBSPACE__TRANSLATION__SELF,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1a: tyop_2Erealax_2Ereal] :
+      ( ( ( c_2Ereal__topology_2Esubspace @ V0s )
+        & ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V1a @ V0s ) )
+     => ( ( c_2Epred__set_2EIMAGE @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal
+          @ ^ [V2x: tyop_2Erealax_2Ereal] : ( c_2Erealax_2Ereal__add @ V1a @ V2x )
+          @ V0s )
+        = V0s ) ) ).
+
+thf(thm_2Ereal__topology_2ESURJECTIVE__IMAGE__EQ,axiom,
+    ! [A_27a: $tType,A_27b: $tType,V0f: A_27a > A_27b,V1s: A_27a > $o,V2t: A_27b > $o] :
+      ( ( ! [V3y: A_27b] :
+            ( ( c_2Ebool_2EIN @ A_27b @ V3y @ V2t )
+           => ? [V4x: A_27a] :
+                ( ( V0f @ V4x )
+                = V3y ) )
+        & ! [V5x: A_27a] :
+            ( ( c_2Ebool_2EIN @ A_27b @ ( V0f @ V5x ) @ V2t )
+            = ( c_2Ebool_2EIN @ A_27a @ V5x @ V1s ) ) )
+     => ( ( c_2Epred__set_2EIMAGE @ A_27a @ A_27b @ V0f @ V1s )
+        = V2t ) ) ).
+
+thf(thm_2Ereal__topology_2ESPAN__SUBSET__SUBSPACE,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1t: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ V0s @ V1t )
+        & ( c_2Ereal__topology_2Esubspace @ V1t ) )
+     => ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Espan @ V0s ) @ V1t ) ) ).
+
+thf(thm_2Ereal__topology_2ESPAN__EQ__SELF,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( c_2Ereal__topology_2Espan @ V0s )
+        = V0s )
+    <=> ( c_2Ereal__topology_2Esubspace @ V0s ) ) ).
+
+thf(thm_2Ereal__topology_2ESPAN__ADD__EQ,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1x: tyop_2Erealax_2Ereal,V2y: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V1x @ ( c_2Ereal__topology_2Espan @ V0s ) )
+     => ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ ( c_2Erealax_2Ereal__add @ V1x @ V2y ) @ ( c_2Ereal__topology_2Espan @ V0s ) )
+        = ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V2y @ ( c_2Ereal__topology_2Espan @ V0s ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ESPAN__SUM,axiom,
+    ! [A_27a: $tType,V0s: tyop_2Erealax_2Ereal > $o,V1f: A_27a > tyop_2Erealax_2Ereal,V2t: A_27a > $o] :
+      ( ( ( c_2Epred__set_2EFINITE @ A_27a @ V2t )
+        & ! [V3x: A_27a] :
+            ( ( c_2Ebool_2EIN @ A_27a @ V3x @ V2t )
+           => ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ ( V1f @ V3x ) @ ( c_2Ereal__topology_2Espan @ V0s ) ) ) )
+     => ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ ( c_2Eiterate_2ESum @ A_27a @ V2t @ V1f ) @ ( c_2Ereal__topology_2Espan @ V0s ) ) ) ).
+
+thf(thm_2Ereal__topology_2ESPAN__SUB,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal,V1y: tyop_2Erealax_2Ereal,V2s: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V0x @ ( c_2Ereal__topology_2Espan @ V2s ) )
+        & ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V1y @ ( c_2Ereal__topology_2Espan @ V2s ) ) )
+     => ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ ( c_2Ereal_2Ereal__sub @ V0x @ V1y ) @ ( c_2Ereal__topology_2Espan @ V2s ) ) ) ).
+
+thf(thm_2Ereal__topology_2ESPAN__NEG__EQ,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal,V1s: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ ( c_2Erealax_2Ereal__neg @ V0x ) @ ( c_2Ereal__topology_2Espan @ V1s ) )
+      = ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V0x @ ( c_2Ereal__topology_2Espan @ V1s ) ) ) ).
+
+thf(thm_2Ereal__topology_2ESPAN__NEG,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal,V1s: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V0x @ ( c_2Ereal__topology_2Espan @ V1s ) )
+     => ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ ( c_2Erealax_2Ereal__neg @ V0x ) @ ( c_2Ereal__topology_2Espan @ V1s ) ) ) ).
+
+thf(thm_2Ereal__topology_2ESPAN__MUL__EQ,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal,V1c: tyop_2Erealax_2Ereal,V2s: tyop_2Erealax_2Ereal > $o] :
+      ( ( (~)
+        @ ( V1c
+          = ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) ) )
+     => ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ ( c_2Erealax_2Ereal__mul @ V1c @ V0x ) @ ( c_2Ereal__topology_2Espan @ V2s ) )
+        = ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V0x @ ( c_2Ereal__topology_2Espan @ V2s ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ESPAN__MUL,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal,V1c: tyop_2Erealax_2Ereal,V2s: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V0x @ ( c_2Ereal__topology_2Espan @ V2s ) )
+     => ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ ( c_2Erealax_2Ereal__mul @ V1c @ V0x ) @ ( c_2Ereal__topology_2Espan @ V2s ) ) ) ).
+
+thf(thm_2Ereal__topology_2ESPAN__ADD,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal,V1y: tyop_2Erealax_2Ereal,V2s: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V0x @ ( c_2Ereal__topology_2Espan @ V2s ) )
+        & ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V1y @ ( c_2Ereal__topology_2Espan @ V2s ) ) )
+     => ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ ( c_2Erealax_2Ereal__add @ V0x @ V1y ) @ ( c_2Ereal__topology_2Espan @ V2s ) ) ) ).
+
+thf(thm_2Ereal__topology_2ESPAN__0,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o] : ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ ( c_2Ereal__topology_2Espan @ V0s ) ) ).
+
+thf(thm_2Ereal__topology_2ESPAN__UNIV,axiom,
+    ( ( c_2Ereal__topology_2Espan @ ( c_2Epred__set_2EUNIV @ tyop_2Erealax_2Ereal ) )
+    = ( c_2Epred__set_2EUNIV @ tyop_2Erealax_2Ereal ) ) ).
+
+thf(thm_2Ereal__topology_2ESPAN__UNION__SUBSET,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1t: tyop_2Erealax_2Ereal > $o] : ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ ( c_2Epred__set_2EUNION @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Espan @ V0s ) @ ( c_2Ereal__topology_2Espan @ V1t ) ) @ ( c_2Ereal__topology_2Espan @ ( c_2Epred__set_2EUNION @ tyop_2Erealax_2Ereal @ V0s @ V1t ) ) ) ).
+
+thf(thm_2Ereal__topology_2ESPAN__INC,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o] : ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ V0s @ ( c_2Ereal__topology_2Espan @ V0s ) ) ).
+
+thf(thm_2Ereal__topology_2ESPAN__SUPERSET,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1x: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V1x @ V0s )
+     => ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V1x @ ( c_2Ereal__topology_2Espan @ V0s ) ) ) ).
+
+thf(thm_2Ereal__topology_2ESPAN__INDUCT__ALT,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1h: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( V1h @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) )
+        & ! [V2c: tyop_2Erealax_2Ereal,V3x: tyop_2Erealax_2Ereal,V4y: tyop_2Erealax_2Ereal] :
+            ( ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V3x @ V0s )
+              & ( V1h @ V4y ) )
+           => ( V1h @ ( c_2Erealax_2Ereal__add @ ( c_2Erealax_2Ereal__mul @ V2c @ V3x ) @ V4y ) ) ) )
+     => ! [V5x: tyop_2Erealax_2Ereal] :
+          ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V5x @ ( c_2Ereal__topology_2Espan @ V0s ) )
+         => ( V1h @ V5x ) ) ) ).
+
+thf(thm_2Ereal__topology_2ESPAN__SUBSPACE,axiom,
+    ! [V0b: tyop_2Erealax_2Ereal > $o,V1s: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ V0b @ V1s )
+        & ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ V1s @ ( c_2Ereal__topology_2Espan @ V0b ) )
+        & ( c_2Ereal__topology_2Esubspace @ V1s ) )
+     => ( ( c_2Ereal__topology_2Espan @ V0b )
+        = V1s ) ) ).
+
+thf(thm_2Ereal__topology_2EDEPENDENT__MONO,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1t: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( c_2Ereal__topology_2Edependent @ V0s )
+        & ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ V0s @ V1t ) )
+     => ( c_2Ereal__topology_2Edependent @ V1t ) ) ).
+
+thf(thm_2Ereal__topology_2EREAL__LE__SQUARE__ABS,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal,V1y: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal_2Ereal__lte @ ( c_2Ereal_2Eabs @ V0x ) @ ( c_2Ereal_2Eabs @ V1y ) )
+      = ( c_2Ereal_2Ereal__lte @ ( c_2Ereal_2Epow @ V0x @ ( c_2Earithmetic_2ENUMERAL @ ( c_2Earithmetic_2EBIT2 @ c_2Earithmetic_2EZERO ) ) ) @ ( c_2Ereal_2Epow @ V1y @ ( c_2Earithmetic_2ENUMERAL @ ( c_2Earithmetic_2EBIT2 @ c_2Earithmetic_2EZERO ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EREAL__EQ__SQUARE__ABS,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal,V1y: tyop_2Erealax_2Ereal] :
+      ( ( ( c_2Ereal_2Eabs @ V0x )
+        = ( c_2Ereal_2Eabs @ V1y ) )
+    <=> ( ( c_2Ereal_2Epow @ V0x @ ( c_2Earithmetic_2ENUMERAL @ ( c_2Earithmetic_2EBIT2 @ c_2Earithmetic_2EZERO ) ) )
+        = ( c_2Ereal_2Epow @ V1y @ ( c_2Earithmetic_2ENUMERAL @ ( c_2Earithmetic_2EBIT2 @ c_2Earithmetic_2EZERO ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EREAL__HALF,axiom,
+    ( ! [V0e: tyop_2Erealax_2Ereal] :
+        ( ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ ( c_2Ereal_2E_2F @ V0e @ ( c_2Ereal_2Ereal__of__num @ ( c_2Earithmetic_2ENUMERAL @ ( c_2Earithmetic_2EBIT2 @ c_2Earithmetic_2EZERO ) ) ) ) )
+        = ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V0e ) )
+    & ! [V1e: tyop_2Erealax_2Ereal] :
+        ( ( c_2Erealax_2Ereal__add @ ( c_2Ereal_2E_2F @ V1e @ ( c_2Ereal_2Ereal__of__num @ ( c_2Earithmetic_2ENUMERAL @ ( c_2Earithmetic_2EBIT2 @ c_2Earithmetic_2EZERO ) ) ) ) @ ( c_2Ereal_2E_2F @ V1e @ ( c_2Ereal_2Ereal__of__num @ ( c_2Earithmetic_2ENUMERAL @ ( c_2Earithmetic_2EBIT2 @ c_2Earithmetic_2EZERO ) ) ) ) )
+        = V1e )
+    & ! [V2e: tyop_2Erealax_2Ereal] :
+        ( ( c_2Erealax_2Ereal__mul @ ( c_2Ereal_2Ereal__of__num @ ( c_2Earithmetic_2ENUMERAL @ ( c_2Earithmetic_2EBIT2 @ c_2Earithmetic_2EZERO ) ) ) @ ( c_2Ereal_2E_2F @ V2e @ ( c_2Ereal_2Ereal__of__num @ ( c_2Earithmetic_2ENUMERAL @ ( c_2Earithmetic_2EBIT2 @ c_2Earithmetic_2EZERO ) ) ) ) )
+        = V2e ) ) ).
+
+thf(thm_2Ereal__topology_2EFINITE__SUBSET__IMAGE,axiom,
+    ! [A_27a: $tType,A_27b: $tType,V0f: A_27a > A_27b,V1s: A_27a > $o,V2t: A_27b > $o] :
+      ( ( ( c_2Epred__set_2EFINITE @ A_27b @ V2t )
+        & ( c_2Epred__set_2ESUBSET @ A_27b @ V2t @ ( c_2Epred__set_2EIMAGE @ A_27a @ A_27b @ V0f @ V1s ) ) )
+    <=> ? [V3s_27: A_27a > $o] :
+          ( ( c_2Epred__set_2EFINITE @ A_27a @ V3s_27 )
+          & ( c_2Epred__set_2ESUBSET @ A_27a @ V3s_27 @ V1s )
+          & ( V2t
+            = ( c_2Epred__set_2EIMAGE @ A_27a @ A_27b @ V0f @ V3s_27 ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EEXISTS__FINITE__SUBSET__IMAGE,axiom,
+    ! [A_27a: $tType,A_27b: $tType,V0P: ( A_27a > $o ) > $o,V1f: A_27b > A_27a,V2s: A_27b > $o] :
+      ( ? [V3t: A_27a > $o] :
+          ( ( c_2Epred__set_2EFINITE @ A_27a @ V3t )
+          & ( c_2Epred__set_2ESUBSET @ A_27a @ V3t @ ( c_2Epred__set_2EIMAGE @ A_27b @ A_27a @ V1f @ V2s ) )
+          & ( V0P @ V3t ) )
+    <=> ? [V4t: A_27b > $o] :
+          ( ( c_2Epred__set_2EFINITE @ A_27b @ V4t )
+          & ( c_2Epred__set_2ESUBSET @ A_27b @ V4t @ V2s )
+          & ( V0P @ ( c_2Epred__set_2EIMAGE @ A_27b @ A_27a @ V1f @ V4t ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EFORALL__FINITE__SUBSET__IMAGE,axiom,
+    ! [A_27a: $tType,A_27b: $tType,V0P: ( A_27a > $o ) > $o,V1f: A_27b > A_27a,V2s: A_27b > $o] :
+      ( ! [V3t: A_27a > $o] :
+          ( ( ( c_2Epred__set_2EFINITE @ A_27a @ V3t )
+            & ( c_2Epred__set_2ESUBSET @ A_27a @ V3t @ ( c_2Epred__set_2EIMAGE @ A_27b @ A_27a @ V1f @ V2s ) ) )
+         => ( V0P @ V3t ) )
+    <=> ! [V4t: A_27b > $o] :
+          ( ( ( c_2Epred__set_2EFINITE @ A_27b @ V4t )
+            & ( c_2Epred__set_2ESUBSET @ A_27b @ V4t @ V2s ) )
+         => ( V0P @ ( c_2Epred__set_2EIMAGE @ A_27b @ A_27a @ V1f @ V4t ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EFORALL__IN__GSPEC,axiom,
+    ! [A_27a: $tType,A_27b: $tType,A_27c: $tType,A_27d: $tType,A_27e: $tType,A_27f: $tType,A_27g: $tType,V0Q: A_27b > $o] :
+      ( ! [V1P: A_27a > $o,V2f: A_27a > A_27b] :
+          ( ! [V3z: A_27b] :
+              ( ( c_2Ebool_2EIN @ A_27b @ V3z
+                @ ( c_2Epred__set_2EGSPEC @ A_27b @ A_27a
+                  @ ^ [V4x: A_27a] : ( c_2Epair_2E_2C @ A_27b @ $o @ ( V2f @ V4x ) @ ( V1P @ V4x ) ) ) )
+             => ( V0Q @ V3z ) )
+        <=> ! [V5x: A_27a] :
+              ( ( V1P @ V5x )
+             => ( V0Q @ ( V2f @ V5x ) ) ) )
+      & ! [V6P: A_27c > A_27d > $o,V7f: A_27c > A_27d > A_27b] :
+          ( ! [V8z: A_27b] :
+              ( ( c_2Ebool_2EIN @ A_27b @ V8z
+                @ ( c_2Epred__set_2EGSPEC @ A_27b @ ( tyop_2Epair_2Eprod @ A_27c @ A_27d )
+                  @ ( c_2Epair_2EUNCURRY @ A_27c @ A_27d @ ( tyop_2Epair_2Eprod @ A_27b @ $o )
+                    @ ^ [V9x: A_27c,V10y: A_27d] : ( c_2Epair_2E_2C @ A_27b @ $o @ ( V7f @ V9x @ V10y ) @ ( V6P @ V9x @ V10y ) ) ) ) )
+             => ( V0Q @ V8z ) )
+        <=> ! [V11x: A_27c,V12y: A_27d] :
+              ( ( V6P @ V11x @ V12y )
+             => ( V0Q @ ( V7f @ V11x @ V12y ) ) ) )
+      & ! [V13P: A_27e > A_27f > A_27g > $o,V14f: A_27e > A_27f > A_27g > A_27b] :
+          ( ! [V15z: A_27b] :
+              ( ( c_2Ebool_2EIN @ A_27b @ V15z
+                @ ( c_2Epred__set_2EGSPEC @ A_27b @ ( tyop_2Epair_2Eprod @ A_27e @ ( tyop_2Epair_2Eprod @ A_27f @ A_27g ) )
+                  @ ( c_2Epair_2EUNCURRY @ A_27e @ ( tyop_2Epair_2Eprod @ A_27f @ A_27g ) @ ( tyop_2Epair_2Eprod @ A_27b @ $o )
+                    @ ^ [V16w: A_27e] :
+                        ( c_2Epair_2EUNCURRY @ A_27f @ A_27g @ ( tyop_2Epair_2Eprod @ A_27b @ $o )
+                        @ ^ [V17x: A_27f,V18y: A_27g] : ( c_2Epair_2E_2C @ A_27b @ $o @ ( V14f @ V16w @ V17x @ V18y ) @ ( V13P @ V16w @ V17x @ V18y ) ) ) ) ) )
+             => ( V0Q @ V15z ) )
+        <=> ! [V19w: A_27e,V20x: A_27f,V21y: A_27g] :
+              ( ( V13P @ V19w @ V20x @ V21y )
+             => ( V0Q @ ( V14f @ V19w @ V20x @ V21y ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EEXISTS__IN__GSPEC,axiom,
+    ! [A_27a: $tType,A_27b: $tType,A_27c: $tType,A_27d: $tType,A_27e: $tType,A_27f: $tType,A_27g: $tType,V0Q: A_27b > $o] :
+      ( ! [V1P: A_27a > $o,V2f: A_27a > A_27b] :
+          ( ? [V3z: A_27b] :
+              ( ( c_2Ebool_2EIN @ A_27b @ V3z
+                @ ( c_2Epred__set_2EGSPEC @ A_27b @ A_27a
+                  @ ^ [V4x: A_27a] : ( c_2Epair_2E_2C @ A_27b @ $o @ ( V2f @ V4x ) @ ( V1P @ V4x ) ) ) )
+              & ( V0Q @ V3z ) )
+        <=> ? [V5x: A_27a] :
+              ( ( V1P @ V5x )
+              & ( V0Q @ ( V2f @ V5x ) ) ) )
+      & ! [V6P: A_27c > A_27d > $o,V7f: A_27c > A_27d > A_27b] :
+          ( ? [V8z: A_27b] :
+              ( ( c_2Ebool_2EIN @ A_27b @ V8z
+                @ ( c_2Epred__set_2EGSPEC @ A_27b @ ( tyop_2Epair_2Eprod @ A_27c @ A_27d )
+                  @ ( c_2Epair_2EUNCURRY @ A_27c @ A_27d @ ( tyop_2Epair_2Eprod @ A_27b @ $o )
+                    @ ^ [V9x: A_27c,V10y: A_27d] : ( c_2Epair_2E_2C @ A_27b @ $o @ ( V7f @ V9x @ V10y ) @ ( V6P @ V9x @ V10y ) ) ) ) )
+              & ( V0Q @ V8z ) )
+        <=> ? [V11x: A_27c,V12y: A_27d] :
+              ( ( V6P @ V11x @ V12y )
+              & ( V0Q @ ( V7f @ V11x @ V12y ) ) ) )
+      & ! [V13P: A_27e > A_27f > A_27g > $o,V14f: A_27e > A_27f > A_27g > A_27b] :
+          ( ? [V15z: A_27b] :
+              ( ( c_2Ebool_2EIN @ A_27b @ V15z
+                @ ( c_2Epred__set_2EGSPEC @ A_27b @ ( tyop_2Epair_2Eprod @ A_27e @ ( tyop_2Epair_2Eprod @ A_27f @ A_27g ) )
+                  @ ( c_2Epair_2EUNCURRY @ A_27e @ ( tyop_2Epair_2Eprod @ A_27f @ A_27g ) @ ( tyop_2Epair_2Eprod @ A_27b @ $o )
+                    @ ^ [V16w: A_27e] :
+                        ( c_2Epair_2EUNCURRY @ A_27f @ A_27g @ ( tyop_2Epair_2Eprod @ A_27b @ $o )
+                        @ ^ [V17x: A_27f,V18y: A_27g] : ( c_2Epair_2E_2C @ A_27b @ $o @ ( V14f @ V16w @ V17x @ V18y ) @ ( V13P @ V16w @ V17x @ V18y ) ) ) ) ) )
+              & ( V0Q @ V15z ) )
+        <=> ? [V19w: A_27e,V20x: A_27f,V21y: A_27g] :
+              ( ( V13P @ V19w @ V20x @ V21y )
+              & ( V0Q @ ( V14f @ V19w @ V20x @ V21y ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EEMPTY__BIGUNION,axiom,
+    ! [A_27a: $tType,V0s: ( A_27a > $o ) > $o] :
+      ( ( ( c_2Epred__set_2EBIGUNION @ A_27a @ V0s )
+        = ( c_2Epred__set_2EEMPTY @ A_27a ) )
+    <=> ! [V1t: A_27a > $o] :
+          ( ( c_2Ebool_2EIN @ ( A_27a > $o ) @ V1t @ V0s )
+         => ( V1t
+            = ( c_2Epred__set_2EEMPTY @ A_27a ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EREAL__LT__RNEG,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal,V1y: tyop_2Erealax_2Ereal] :
+      ( ( c_2Erealax_2Ereal__lt @ V0x @ ( c_2Erealax_2Ereal__neg @ V1y ) )
+      = ( c_2Erealax_2Ereal__lt @ ( c_2Erealax_2Ereal__add @ V0x @ V1y ) @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) ) ) ).
+
+thf(thm_2Ereal__topology_2EUPPER__BOUND__FINITE__SET,axiom,
+    ! [A_27a: $tType,V0f: A_27a > tyop_2Enum_2Enum,V1s: A_27a > $o] :
+      ( ( c_2Epred__set_2EFINITE @ A_27a @ V1s )
+     => ? [V2a: tyop_2Enum_2Enum] :
+        ! [V3x: A_27a] :
+          ( ( c_2Ebool_2EIN @ A_27a @ V3x @ V1s )
+         => ( c_2Earithmetic_2E_3C_3D @ ( V0f @ V3x ) @ V2a ) ) ) ).
+
+thf(thm_2Ereal__topology_2EREAL__BOUNDS__LT,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal,V1k: tyop_2Erealax_2Ereal] :
+      ( ( ( c_2Erealax_2Ereal__lt @ ( c_2Erealax_2Ereal__neg @ V1k ) @ V0x )
+        & ( c_2Erealax_2Ereal__lt @ V0x @ V1k ) )
+    <=> ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Eabs @ V0x ) @ V1k ) ) ).
+
+thf(thm_2Ereal__topology_2EBIGUNION__IMAGE,axiom,
+    ! [A_27a: $tType,A_27b: $tType,V0f: A_27a > A_27b > $o,V1s: A_27a > $o] :
+      ( ( c_2Epred__set_2EBIGUNION @ A_27b @ ( c_2Epred__set_2EIMAGE @ A_27a @ ( A_27b > $o ) @ V0f @ V1s ) )
+      = ( c_2Epred__set_2EGSPEC @ A_27b @ A_27b
+        @ ^ [V2y: A_27b] :
+            ( c_2Epair_2E_2C @ A_27b @ $o @ V2y
+            @ ( c_2Ebool_2E_3F @ A_27a
+              @ ^ [V3x: A_27a] : ( c_2Ebool_2E_2F_5C @ ( c_2Ebool_2EIN @ A_27a @ V3x @ V1s ) @ ( c_2Ebool_2EIN @ A_27b @ V2y @ ( V0f @ V3x ) ) ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EBIGINTER__IMAGE,axiom,
+    ! [A_27a: $tType,A_27b: $tType,V0f: A_27a > A_27b > $o,V1s: A_27a > $o] :
+      ( ( c_2Epred__set_2EBIGINTER @ A_27b @ ( c_2Epred__set_2EIMAGE @ A_27a @ ( A_27b > $o ) @ V0f @ V1s ) )
+      = ( c_2Epred__set_2EGSPEC @ A_27b @ A_27b
+        @ ^ [V2y: A_27b] :
+            ( c_2Epair_2E_2C @ A_27b @ $o @ V2y
+            @ ( c_2Ebool_2E_21 @ A_27a
+              @ ^ [V3x: A_27a] : ( c_2Emin_2E_3D_3D_3E @ ( c_2Ebool_2EIN @ A_27a @ V3x @ V1s ) @ ( c_2Ebool_2EIN @ A_27b @ V2y @ ( V0f @ V3x ) ) ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EREAL__LE__LMUL1,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal,V1y: tyop_2Erealax_2Ereal,V2z: tyop_2Erealax_2Ereal] :
+      ( ( ( c_2Ereal_2Ereal__lte @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V0x )
+        & ( c_2Ereal_2Ereal__lte @ V1y @ V2z ) )
+     => ( c_2Ereal_2Ereal__lte @ ( c_2Erealax_2Ereal__mul @ V0x @ V1y ) @ ( c_2Erealax_2Ereal__mul @ V0x @ V2z ) ) ) ).
+
+thf(thm_2Ereal__topology_2ELE__EXISTS,axiom,
+    ! [V0m: tyop_2Enum_2Enum,V1n: tyop_2Enum_2Enum] :
+      ( ( c_2Earithmetic_2E_3C_3D @ V0m @ V1n )
+    <=> ? [V2d: tyop_2Enum_2Enum] :
+          ( V1n
+          = ( c_2Earithmetic_2E_2B @ V0m @ V2d ) ) ) ).
+
+thf(thm_2Ereal__topology_2ELT__EXISTS,axiom,
+    ! [V0m: tyop_2Enum_2Enum,V1n: tyop_2Enum_2Enum] :
+      ( ( c_2Eprim__rec_2E_3C @ V0m @ V1n )
+    <=> ? [V2d: tyop_2Enum_2Enum] :
+          ( V1n
+          = ( c_2Earithmetic_2E_2B @ V0m @ ( c_2Enum_2ESUC @ V2d ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ETRANSITIVE__STEPWISE__LT__EQ,axiom,
+    ! [V0R: tyop_2Enum_2Enum > tyop_2Enum_2Enum > $o] :
+      ( ! [V1x: tyop_2Enum_2Enum,V2y: tyop_2Enum_2Enum,V3z: tyop_2Enum_2Enum] :
+          ( ( ( V0R @ V1x @ V2y )
+            & ( V0R @ V2y @ V3z ) )
+         => ( V0R @ V1x @ V3z ) )
+     => ( ! [V4m: tyop_2Enum_2Enum,V5n: tyop_2Enum_2Enum] :
+            ( ( c_2Eprim__rec_2E_3C @ V4m @ V5n )
+           => ( V0R @ V4m @ V5n ) )
+      <=> ! [V6n: tyop_2Enum_2Enum] : ( V0R @ V6n @ ( c_2Enum_2ESUC @ V6n ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ETRANSITIVE__STEPWISE__LT,axiom,
+    ! [V0R: tyop_2Enum_2Enum > tyop_2Enum_2Enum > $o] :
+      ( ( ! [V1x: tyop_2Enum_2Enum,V2y: tyop_2Enum_2Enum,V3z: tyop_2Enum_2Enum] :
+            ( ( ( V0R @ V1x @ V2y )
+              & ( V0R @ V2y @ V3z ) )
+           => ( V0R @ V1x @ V3z ) )
+        & ! [V4n: tyop_2Enum_2Enum] : ( V0R @ V4n @ ( c_2Enum_2ESUC @ V4n ) ) )
+     => ! [V5m: tyop_2Enum_2Enum,V6n: tyop_2Enum_2Enum] :
+          ( ( c_2Eprim__rec_2E_3C @ V5m @ V6n )
+         => ( V0R @ V5m @ V6n ) ) ) ).
+
+thf(thm_2Ereal__topology_2ELIMPT__SEQUENTIAL__INJ,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal,V1s: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ereal__topology_2Elimit__point__of @ V0x @ V1s )
+    <=> ? [V2f: tyop_2Enum_2Enum > tyop_2Erealax_2Ereal] :
+          ( ! [V3n: tyop_2Enum_2Enum] : ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ ( V2f @ V3n ) @ ( c_2Epred__set_2EDELETE @ tyop_2Erealax_2Ereal @ V1s @ V0x ) )
+          & ! [V4m: tyop_2Enum_2Enum,V5n: tyop_2Enum_2Enum] :
+              ( ( ( V2f @ V4m )
+                = ( V2f @ V5n ) )
+            <=> ( V4m = V5n ) )
+          & ( c_2Ereal__topology_2E_2D_2D_3E @ tyop_2Enum_2Enum @ V2f @ V0x @ c_2Ereal__topology_2Esequentially ) ) ) ).
+
+thf(thm_2Ereal__topology_2ELIMPT__SEQUENTIAL,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal,V1s: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ereal__topology_2Elimit__point__of @ V0x @ V1s )
+    <=> ? [V2f: tyop_2Enum_2Enum > tyop_2Erealax_2Ereal] :
+          ( ! [V3n: tyop_2Enum_2Enum] : ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ ( V2f @ V3n ) @ ( c_2Epred__set_2EDELETE @ tyop_2Erealax_2Ereal @ V1s @ V0x ) )
+          & ( c_2Ereal__topology_2E_2D_2D_3E @ tyop_2Enum_2Enum @ V2f @ V0x @ c_2Ereal__topology_2Esequentially ) ) ) ).
+
+thf(thm_2Ereal__topology_2EINFINITE__SUPERSET,axiom,
+    ! [A_27a: $tType,V0s: A_27a > $o,V1t: A_27a > $o] :
+      ( ( ( (~) @ ( c_2Epred__set_2EFINITE @ A_27a @ V0s ) )
+        & ( c_2Epred__set_2ESUBSET @ A_27a @ V0s @ V1t ) )
+     => ( (~) @ ( c_2Epred__set_2EFINITE @ A_27a @ V1t ) ) ) ).
+
+thf(thm_2Ereal__topology_2ELIMPT__INFINITE__OPEN__BALL__CBALL,axiom,
+    ( ! [V0s: tyop_2Erealax_2Ereal > $o,V1x: tyop_2Erealax_2Ereal] :
+        ( ( c_2Ereal__topology_2Elimit__point__of @ V1x @ V0s )
+      <=> ! [V2t: tyop_2Erealax_2Ereal > $o] :
+            ( ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V1x @ V2t )
+              & ( c_2Ereal__topology_2EOpen @ V2t ) )
+           => ( (~) @ ( c_2Epred__set_2EFINITE @ tyop_2Erealax_2Ereal @ ( c_2Epred__set_2EINTER @ tyop_2Erealax_2Ereal @ V0s @ V2t ) ) ) ) )
+    & ! [V3s: tyop_2Erealax_2Ereal > $o,V4x: tyop_2Erealax_2Ereal] :
+        ( ( c_2Ereal__topology_2Elimit__point__of @ V4x @ V3s )
+      <=> ! [V5e: tyop_2Erealax_2Ereal] :
+            ( ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V5e )
+           => ( (~) @ ( c_2Epred__set_2EFINITE @ tyop_2Erealax_2Ereal @ ( c_2Epred__set_2EINTER @ tyop_2Erealax_2Ereal @ V3s @ ( c_2Ereal__topology_2Eball @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V4x @ V5e ) ) ) ) ) ) )
+    & ! [V6s: tyop_2Erealax_2Ereal > $o,V7x: tyop_2Erealax_2Ereal] :
+        ( ( c_2Ereal__topology_2Elimit__point__of @ V7x @ V6s )
+      <=> ! [V8e: tyop_2Erealax_2Ereal] :
+            ( ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V8e )
+           => ( (~) @ ( c_2Epred__set_2EFINITE @ tyop_2Erealax_2Ereal @ ( c_2Epred__set_2EINTER @ tyop_2Erealax_2Ereal @ V6s @ ( c_2Ereal__topology_2Ecball @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V7x @ V8e ) ) ) ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ELIMPT__INFINITE__OPEN,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1x: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2Elimit__point__of @ V1x @ V0s )
+    <=> ! [V2t: tyop_2Erealax_2Ereal > $o] :
+          ( ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V1x @ V2t )
+            & ( c_2Ereal__topology_2EOpen @ V2t ) )
+         => ( (~) @ ( c_2Epred__set_2EFINITE @ tyop_2Erealax_2Ereal @ ( c_2Epred__set_2EINTER @ tyop_2Erealax_2Ereal @ V0s @ V2t ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ELIMPT__INFINITE__BALL,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1x: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2Elimit__point__of @ V1x @ V0s )
+    <=> ! [V2e: tyop_2Erealax_2Ereal] :
+          ( ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V2e )
+         => ( (~) @ ( c_2Epred__set_2EFINITE @ tyop_2Erealax_2Ereal @ ( c_2Epred__set_2EINTER @ tyop_2Erealax_2Ereal @ V0s @ ( c_2Ereal__topology_2Eball @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V1x @ V2e ) ) ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ELIMPT__INFINITE__CBALL,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1x: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2Elimit__point__of @ V1x @ V0s )
+    <=> ! [V2e: tyop_2Erealax_2Ereal] :
+          ( ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V2e )
+         => ( (~) @ ( c_2Epred__set_2EFINITE @ tyop_2Erealax_2Ereal @ ( c_2Epred__set_2EINTER @ tyop_2Erealax_2Ereal @ V0s @ ( c_2Ereal__topology_2Ecball @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V1x @ V2e ) ) ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EINFINITE__OPEN__IN,axiom,
+    ! [V0u: tyop_2Erealax_2Ereal > $o,V1s: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( c_2Etopology_2Eopen__in @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Esubtopology @ tyop_2Erealax_2Ereal @ c_2Ereal__topology_2Eeuclidean @ V0u ) @ V1s )
+        & ? [V2x: tyop_2Erealax_2Ereal] :
+            ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V2x @ V1s )
+            & ( c_2Ereal__topology_2Elimit__point__of @ V2x @ V0u ) ) )
+     => ( (~) @ ( c_2Epred__set_2EFINITE @ tyop_2Erealax_2Ereal @ V1s ) ) ) ).
+
+thf(thm_2Ereal__topology_2ECONDENSATION__POINT__OF__SUBSET,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal,V1s: tyop_2Erealax_2Ereal > $o,V2t: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( c_2Ereal__topology_2Econdensation__point__of @ V0x @ V1s )
+        & ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ V1s @ V2t ) )
+     => ( c_2Ereal__topology_2Econdensation__point__of @ V0x @ V2t ) ) ).
+
+thf(thm_2Ereal__topology_2ECONDENSATION__POINT__IMP__LIMPT,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal,V1s: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ereal__topology_2Econdensation__point__of @ V0x @ V1s )
+     => ( c_2Ereal__topology_2Elimit__point__of @ V0x @ V1s ) ) ).
+
+thf(thm_2Ereal__topology_2ECONDENSATION__POINT__INFINITE__BALL__CBALL,axiom,
+    ( ! [V0s: tyop_2Erealax_2Ereal > $o,V1x: tyop_2Erealax_2Ereal] :
+        ( ( c_2Ereal__topology_2Econdensation__point__of @ V1x @ V0s )
+      <=> ! [V2e: tyop_2Erealax_2Ereal] :
+            ( ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V2e )
+           => ( (~) @ ( c_2Epred__set_2Ecountable @ tyop_2Erealax_2Ereal @ ( c_2Epred__set_2EINTER @ tyop_2Erealax_2Ereal @ V0s @ ( c_2Ereal__topology_2Eball @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V1x @ V2e ) ) ) ) ) ) )
+    & ! [V3s: tyop_2Erealax_2Ereal > $o,V4x: tyop_2Erealax_2Ereal] :
+        ( ( c_2Ereal__topology_2Econdensation__point__of @ V4x @ V3s )
+      <=> ! [V5e: tyop_2Erealax_2Ereal] :
+            ( ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V5e )
+           => ( (~) @ ( c_2Epred__set_2Ecountable @ tyop_2Erealax_2Ereal @ ( c_2Epred__set_2EINTER @ tyop_2Erealax_2Ereal @ V3s @ ( c_2Ereal__topology_2Ecball @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V4x @ V5e ) ) ) ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ECONDENSATION__POINT__INFINITE__BALL,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1x: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2Econdensation__point__of @ V1x @ V0s )
+    <=> ! [V2e: tyop_2Erealax_2Ereal] :
+          ( ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V2e )
+         => ( (~) @ ( c_2Epred__set_2Ecountable @ tyop_2Erealax_2Ereal @ ( c_2Epred__set_2EINTER @ tyop_2Erealax_2Ereal @ V0s @ ( c_2Ereal__topology_2Eball @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V1x @ V2e ) ) ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ECONDENSATION__POINT__INFINITE__CBALL,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1x: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2Econdensation__point__of @ V1x @ V0s )
+    <=> ! [V2e: tyop_2Erealax_2Ereal] :
+          ( ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V2e )
+         => ( (~) @ ( c_2Epred__set_2Ecountable @ tyop_2Erealax_2Ereal @ ( c_2Epred__set_2EINTER @ tyop_2Erealax_2Ereal @ V0s @ ( c_2Ereal__topology_2Ecball @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V1x @ V2e ) ) ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ELIM__LINEAR,axiom,
+    ! [A_27a: $tType,V0net: tyop_2Ereal__topology_2Enet @ A_27a,V1h: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal,V2f: A_27a > tyop_2Erealax_2Ereal,V3l: tyop_2Erealax_2Ereal] :
+      ( ( ( c_2Ereal__topology_2E_2D_2D_3E @ A_27a @ V2f @ V3l @ V0net )
+        & ( c_2Ereal__topology_2Elinear @ V1h ) )
+     => ( c_2Ereal__topology_2E_2D_2D_3E @ A_27a
+        @ ^ [V4x: A_27a] : ( V1h @ ( V2f @ V4x ) )
+        @ ( V1h @ V3l )
+        @ V0net ) ) ).
+
+thf(thm_2Ereal__topology_2ELIM__CONST,axiom,
+    ! [A_27a: $tType,V0net: tyop_2Ereal__topology_2Enet @ A_27a,V1a: tyop_2Erealax_2Ereal] :
+      ( c_2Ereal__topology_2E_2D_2D_3E @ A_27a
+      @ ^ [V2x: A_27a] : V1a
+      @ V1a
+      @ V0net ) ).
+
+thf(thm_2Ereal__topology_2ELIM__CMUL,axiom,
+    ! [A_27a: $tType,V0net: tyop_2Ereal__topology_2Enet @ A_27a,V1f: A_27a > tyop_2Erealax_2Ereal,V2l: tyop_2Erealax_2Ereal,V3c: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2E_2D_2D_3E @ A_27a @ V1f @ V2l @ V0net )
+     => ( c_2Ereal__topology_2E_2D_2D_3E @ A_27a
+        @ ^ [V4x: A_27a] : ( c_2Erealax_2Ereal__mul @ V3c @ ( V1f @ V4x ) )
+        @ ( c_2Erealax_2Ereal__mul @ V3c @ V2l )
+        @ V0net ) ) ).
+
+thf(thm_2Ereal__topology_2ELIM__CMUL__EQ,axiom,
+    ! [A_27a: $tType,V0net: tyop_2Ereal__topology_2Enet @ A_27a,V1f: A_27a > tyop_2Erealax_2Ereal,V2l: tyop_2Erealax_2Ereal,V3c: tyop_2Erealax_2Ereal] :
+      ( ( (~)
+        @ ( V3c
+          = ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) ) )
+     => ( ( c_2Ereal__topology_2E_2D_2D_3E @ A_27a
+          @ ^ [V4x: A_27a] : ( c_2Erealax_2Ereal__mul @ V3c @ ( V1f @ V4x ) )
+          @ ( c_2Erealax_2Ereal__mul @ V3c @ V2l )
+          @ V0net )
+        = ( c_2Ereal__topology_2E_2D_2D_3E @ A_27a @ V1f @ V2l @ V0net ) ) ) ).
+
+thf(thm_2Ereal__topology_2ELIM__NEG,axiom,
+    ! [A_27a: $tType,V0net: tyop_2Ereal__topology_2Enet @ A_27a,V1f: A_27a > tyop_2Erealax_2Ereal,V2l: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2E_2D_2D_3E @ A_27a @ V1f @ V2l @ V0net )
+     => ( c_2Ereal__topology_2E_2D_2D_3E @ A_27a
+        @ ^ [V3x: A_27a] : ( c_2Erealax_2Ereal__neg @ ( V1f @ V3x ) )
+        @ ( c_2Erealax_2Ereal__neg @ V2l )
+        @ V0net ) ) ).
+
+thf(thm_2Ereal__topology_2ELIM__NEG__EQ,axiom,
+    ! [A_27a: $tType,V0net: tyop_2Ereal__topology_2Enet @ A_27a,V1f: A_27a > tyop_2Erealax_2Ereal,V2l: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2E_2D_2D_3E @ A_27a
+        @ ^ [V3x: A_27a] : ( c_2Erealax_2Ereal__neg @ ( V1f @ V3x ) )
+        @ ( c_2Erealax_2Ereal__neg @ V2l )
+        @ V0net )
+      = ( c_2Ereal__topology_2E_2D_2D_3E @ A_27a @ V1f @ V2l @ V0net ) ) ).
+
+thf(thm_2Ereal__topology_2ELIM__ADD,axiom,
+    ! [A_27a: $tType,V0net: tyop_2Ereal__topology_2Enet @ A_27a,V1f: A_27a > tyop_2Erealax_2Ereal,V2g: A_27a > tyop_2Erealax_2Ereal,V3l: tyop_2Erealax_2Ereal,V4m: tyop_2Erealax_2Ereal] :
+      ( ( ( c_2Ereal__topology_2E_2D_2D_3E @ A_27a @ V1f @ V3l @ V0net )
+        & ( c_2Ereal__topology_2E_2D_2D_3E @ A_27a @ V2g @ V4m @ V0net ) )
+     => ( c_2Ereal__topology_2E_2D_2D_3E @ A_27a
+        @ ^ [V5x: A_27a] : ( c_2Erealax_2Ereal__add @ ( V1f @ V5x ) @ ( V2g @ V5x ) )
+        @ ( c_2Erealax_2Ereal__add @ V3l @ V4m )
+        @ V0net ) ) ).
+
+thf(thm_2Ereal__topology_2ELIM__ABS,axiom,
+    ! [A_27a: $tType,V0net: tyop_2Ereal__topology_2Enet @ A_27a,V1f: A_27a > tyop_2Erealax_2Ereal,V2l: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2E_2D_2D_3E @ A_27a @ V1f @ V2l @ V0net )
+     => ( c_2Ereal__topology_2E_2D_2D_3E @ A_27a
+        @ ^ [V3x: A_27a] : ( c_2Ereal_2Eabs @ ( V1f @ V3x ) )
+        @ ( c_2Ereal_2Eabs @ V2l )
+        @ V0net ) ) ).
+
+thf(thm_2Ereal__topology_2ELIM__SUB,axiom,
+    ! [A_27a: $tType,V0net: tyop_2Ereal__topology_2Enet @ A_27a,V1f: A_27a > tyop_2Erealax_2Ereal,V2g: A_27a > tyop_2Erealax_2Ereal,V3l: tyop_2Erealax_2Ereal,V4m: tyop_2Erealax_2Ereal] :
+      ( ( ( c_2Ereal__topology_2E_2D_2D_3E @ A_27a @ V1f @ V3l @ V0net )
+        & ( c_2Ereal__topology_2E_2D_2D_3E @ A_27a @ V2g @ V4m @ V0net ) )
+     => ( c_2Ereal__topology_2E_2D_2D_3E @ A_27a
+        @ ^ [V5x: A_27a] : ( c_2Ereal_2Ereal__sub @ ( V1f @ V5x ) @ ( V2g @ V5x ) )
+        @ ( c_2Ereal_2Ereal__sub @ V3l @ V4m )
+        @ V0net ) ) ).
+
+thf(thm_2Ereal__topology_2ELIM__MAX,axiom,
+    ! [A_27a: $tType,V0net: tyop_2Ereal__topology_2Enet @ A_27a,V1f: A_27a > tyop_2Erealax_2Ereal,V2g: A_27a > tyop_2Erealax_2Ereal,V3l: tyop_2Erealax_2Ereal,V4m: tyop_2Erealax_2Ereal] :
+      ( ( ( c_2Ereal__topology_2E_2D_2D_3E @ A_27a @ V1f @ V3l @ V0net )
+        & ( c_2Ereal__topology_2E_2D_2D_3E @ A_27a @ V2g @ V4m @ V0net ) )
+     => ( c_2Ereal__topology_2E_2D_2D_3E @ A_27a
+        @ ^ [V5x: A_27a] : ( c_2Ereal_2Emax @ ( V1f @ V5x ) @ ( V2g @ V5x ) )
+        @ ( c_2Ereal_2Emax @ V3l @ V4m )
+        @ V0net ) ) ).
+
+thf(thm_2Ereal__topology_2ELIM__MIN,axiom,
+    ! [A_27a: $tType,V0net: tyop_2Ereal__topology_2Enet @ A_27a,V1f: A_27a > tyop_2Erealax_2Ereal,V2g: A_27a > tyop_2Erealax_2Ereal,V3l: tyop_2Erealax_2Ereal,V4m: tyop_2Erealax_2Ereal] :
+      ( ( ( c_2Ereal__topology_2E_2D_2D_3E @ A_27a @ V1f @ V3l @ V0net )
+        & ( c_2Ereal__topology_2E_2D_2D_3E @ A_27a @ V2g @ V4m @ V0net ) )
+     => ( c_2Ereal__topology_2E_2D_2D_3E @ A_27a
+        @ ^ [V5x: A_27a] : ( c_2Ereal_2Emin @ ( V1f @ V5x ) @ ( V2g @ V5x ) )
+        @ ( c_2Ereal_2Emin @ V3l @ V4m )
+        @ V0net ) ) ).
+
+thf(thm_2Ereal__topology_2ELIM__NULL,axiom,
+    ! [A_27a: $tType,V0net: tyop_2Ereal__topology_2Enet @ A_27a,V1f: A_27a > tyop_2Erealax_2Ereal,V2l: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2E_2D_2D_3E @ A_27a @ V1f @ V2l @ V0net )
+      = ( c_2Ereal__topology_2E_2D_2D_3E @ A_27a
+        @ ^ [V3x: A_27a] : ( c_2Ereal_2Ereal__sub @ ( V1f @ V3x ) @ V2l )
+        @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 )
+        @ V0net ) ) ).
+
+thf(thm_2Ereal__topology_2ELIM__NULL__ABS,axiom,
+    ! [A_27a: $tType,V0net: tyop_2Ereal__topology_2Enet @ A_27a,V1f: A_27a > tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2E_2D_2D_3E @ A_27a @ V1f @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V0net )
+      = ( c_2Ereal__topology_2E_2D_2D_3E @ A_27a
+        @ ^ [V2x: A_27a] : ( c_2Ereal_2Eabs @ ( V1f @ V2x ) )
+        @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 )
+        @ V0net ) ) ).
+
+thf(thm_2Ereal__topology_2ELIM__NULL__CMUL__EQ,axiom,
+    ! [A_27a: $tType,V0net: tyop_2Ereal__topology_2Enet @ A_27a,V1f: A_27a > tyop_2Erealax_2Ereal,V2c: tyop_2Erealax_2Ereal] :
+      ( ( (~)
+        @ ( V2c
+          = ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) ) )
+     => ( ( c_2Ereal__topology_2E_2D_2D_3E @ A_27a
+          @ ^ [V3x: A_27a] : ( c_2Erealax_2Ereal__mul @ V2c @ ( V1f @ V3x ) )
+          @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 )
+          @ V0net )
+        = ( c_2Ereal__topology_2E_2D_2D_3E @ A_27a @ V1f @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V0net ) ) ) ).
+
+thf(thm_2Ereal__topology_2ELIM__NULL__CMUL,axiom,
+    ! [A_27a: $tType,V0net: tyop_2Ereal__topology_2Enet @ A_27a,V1f: A_27a > tyop_2Erealax_2Ereal,V2c: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2E_2D_2D_3E @ A_27a @ V1f @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V0net )
+     => ( c_2Ereal__topology_2E_2D_2D_3E @ A_27a
+        @ ^ [V3x: A_27a] : ( c_2Erealax_2Ereal__mul @ V2c @ ( V1f @ V3x ) )
+        @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 )
+        @ V0net ) ) ).
+
+thf(thm_2Ereal__topology_2ELIM__NULL__ADD,axiom,
+    ! [A_27a: $tType,V0net: tyop_2Ereal__topology_2Enet @ A_27a,V1f: A_27a > tyop_2Erealax_2Ereal,V2g: A_27a > tyop_2Erealax_2Ereal] :
+      ( ( ( c_2Ereal__topology_2E_2D_2D_3E @ A_27a @ V1f @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V0net )
+        & ( c_2Ereal__topology_2E_2D_2D_3E @ A_27a @ V2g @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V0net ) )
+     => ( c_2Ereal__topology_2E_2D_2D_3E @ A_27a
+        @ ^ [V3x: A_27a] : ( c_2Erealax_2Ereal__add @ ( V1f @ V3x ) @ ( V2g @ V3x ) )
+        @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 )
+        @ V0net ) ) ).
+
+thf(thm_2Ereal__topology_2ELIM__NULL__SUB,axiom,
+    ! [A_27a: $tType,V0net: tyop_2Ereal__topology_2Enet @ A_27a,V1f: A_27a > tyop_2Erealax_2Ereal,V2g: A_27a > tyop_2Erealax_2Ereal] :
+      ( ( ( c_2Ereal__topology_2E_2D_2D_3E @ A_27a @ V1f @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V0net )
+        & ( c_2Ereal__topology_2E_2D_2D_3E @ A_27a @ V2g @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V0net ) )
+     => ( c_2Ereal__topology_2E_2D_2D_3E @ A_27a
+        @ ^ [V3x: A_27a] : ( c_2Ereal_2Ereal__sub @ ( V1f @ V3x ) @ ( V2g @ V3x ) )
+        @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 )
+        @ V0net ) ) ).
+
+thf(thm_2Ereal__topology_2ELIM__NULL__COMPARISON,axiom,
+    ! [A_27a: $tType,V0net: tyop_2Ereal__topology_2Enet @ A_27a,V1f: A_27a > tyop_2Erealax_2Ereal,V2g: A_27a > tyop_2Erealax_2Ereal] :
+      ( ( ( c_2Ereal__topology_2Eeventually @ A_27a
+          @ ^ [V3x: A_27a] : ( c_2Ereal_2Ereal__lte @ ( c_2Ereal_2Eabs @ ( V1f @ V3x ) ) @ ( V2g @ V3x ) )
+          @ V0net )
+        & ( c_2Ereal__topology_2E_2D_2D_3E @ A_27a
+          @ ^ [V4x: A_27a] : ( V2g @ V4x )
+          @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 )
+          @ V0net ) )
+     => ( c_2Ereal__topology_2E_2D_2D_3E @ A_27a @ V1f @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V0net ) ) ).
+
+thf(thm_2Ereal__topology_2ELIM__COMPONENT,axiom,
+    ! [A_27a: $tType,A_27b: $tType,V0net: tyop_2Ereal__topology_2Enet @ A_27a,V1f: A_27a > tyop_2Erealax_2Ereal,V2i: A_27b,V3l: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2E_2D_2D_3E @ A_27a @ V1f @ V3l @ V0net )
+     => ( c_2Ereal__topology_2E_2D_2D_3E @ A_27a
+        @ ^ [V4a: A_27a] : ( V1f @ V4a )
+        @ V3l
+        @ V0net ) ) ).
+
+thf(thm_2Ereal__topology_2ELIM__TRANSFORM__BOUND,axiom,
+    ! [A_27a: $tType,V0net: tyop_2Ereal__topology_2Enet @ A_27a,V1f: A_27a > tyop_2Erealax_2Ereal,V2g: A_27a > tyop_2Erealax_2Ereal] :
+      ( ( ( c_2Ereal__topology_2Eeventually @ A_27a
+          @ ^ [V3n: A_27a] : ( c_2Ereal_2Ereal__lte @ ( c_2Ereal_2Eabs @ ( V1f @ V3n ) ) @ ( c_2Ereal_2Eabs @ ( V2g @ V3n ) ) )
+          @ V0net )
+        & ( c_2Ereal__topology_2E_2D_2D_3E @ A_27a @ V2g @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V0net ) )
+     => ( c_2Ereal__topology_2E_2D_2D_3E @ A_27a @ V1f @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V0net ) ) ).
+
+thf(thm_2Ereal__topology_2ELIM__NULL__CMUL__BOUNDED,axiom,
+    ! [A_27a: $tType,V0net: tyop_2Ereal__topology_2Enet @ A_27a,V1f: A_27a > tyop_2Erealax_2Ereal,V2g: A_27a > tyop_2Erealax_2Ereal,V3B: tyop_2Erealax_2Ereal] :
+      ( ( ( c_2Ereal__topology_2Eeventually @ A_27a
+          @ ^ [V4a: A_27a] : ( c_2Ebool_2E_5C_2F @ ( c_2Emin_2E_3D @ tyop_2Erealax_2Ereal @ ( V2g @ V4a ) @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) ) @ ( c_2Ereal_2Ereal__lte @ ( c_2Ereal_2Eabs @ ( V1f @ V4a ) ) @ V3B ) )
+          @ V0net )
+        & ( c_2Ereal__topology_2E_2D_2D_3E @ A_27a @ V2g @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V0net ) )
+     => ( c_2Ereal__topology_2E_2D_2D_3E @ A_27a
+        @ ^ [V5n: A_27a] : ( c_2Erealax_2Ereal__mul @ ( V1f @ V5n ) @ ( V2g @ V5n ) )
+        @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 )
+        @ V0net ) ) ).
+
+thf(thm_2Ereal__topology_2ELIM__SUM,axiom,
+    ! [A_27a: $tType,A_27b: $tType,V0net: tyop_2Ereal__topology_2Enet @ A_27b,V1f: A_27a > A_27b > tyop_2Erealax_2Ereal,V2l: A_27a > tyop_2Erealax_2Ereal,V3s: A_27a > $o] :
+      ( ( ( c_2Epred__set_2EFINITE @ A_27a @ V3s )
+        & ! [V4i: A_27a] :
+            ( ( c_2Ebool_2EIN @ A_27a @ V4i @ V3s )
+           => ( c_2Ereal__topology_2E_2D_2D_3E @ A_27b @ ( V1f @ V4i ) @ ( V2l @ V4i ) @ V0net ) ) )
+     => ( c_2Ereal__topology_2E_2D_2D_3E @ A_27b
+        @ ^ [V5x: A_27b] :
+            ( c_2Eiterate_2ESum @ A_27a @ V3s
+            @ ^ [V6i: A_27a] : ( V1f @ V6i @ V5x ) )
+        @ ( c_2Eiterate_2ESum @ A_27a @ V3s @ V2l )
+        @ V0net ) ) ).
+
+thf(thm_2Ereal__topology_2ELIM__NULL__SUM,axiom,
+    ! [A_27a: $tType,A_27b: $tType,V0net: tyop_2Ereal__topology_2Enet @ A_27a,V1f: A_27a > A_27b > tyop_2Erealax_2Ereal,V2s: A_27b > $o] :
+      ( ( ( c_2Epred__set_2EFINITE @ A_27b @ V2s )
+        & ! [V3a: A_27b] :
+            ( ( c_2Ebool_2EIN @ A_27b @ V3a @ V2s )
+           => ( c_2Ereal__topology_2E_2D_2D_3E @ A_27a
+              @ ^ [V4x: A_27a] : ( V1f @ V4x @ V3a )
+              @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 )
+              @ V0net ) ) )
+     => ( c_2Ereal__topology_2E_2D_2D_3E @ A_27a
+        @ ^ [V5x: A_27a] : ( c_2Eiterate_2ESum @ A_27b @ V2s @ ( V1f @ V5x ) )
+        @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 )
+        @ V0net ) ) ).
+
+thf(thm_2Ereal__topology_2ELIM__IN__CLOSED__SET,axiom,
+    ! [A_27a: $tType,V0net: tyop_2Ereal__topology_2Enet @ A_27a,V1f: A_27a > tyop_2Erealax_2Ereal,V2s: tyop_2Erealax_2Ereal > $o,V3l: tyop_2Erealax_2Ereal] :
+      ( ( ( c_2Ereal__topology_2EClosed @ V2s )
+        & ( c_2Ereal__topology_2Eeventually @ A_27a
+          @ ^ [V4x: A_27a] : ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ ( V1f @ V4x ) @ V2s )
+          @ V0net )
+        & ( (~) @ ( c_2Ereal__topology_2Etrivial__limit @ A_27a @ V0net ) )
+        & ( c_2Ereal__topology_2E_2D_2D_3E @ A_27a @ V1f @ V3l @ V0net ) )
+     => ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V3l @ V2s ) ) ).
+
+thf(thm_2Ereal__topology_2ELIM__ABS__UBOUND,axiom,
+    ! [A_27a: $tType,V0net: tyop_2Ereal__topology_2Enet @ A_27a,V1f: A_27a > tyop_2Erealax_2Ereal,V2l: tyop_2Erealax_2Ereal,V3b: tyop_2Erealax_2Ereal] :
+      ( ( ( (~) @ ( c_2Ereal__topology_2Etrivial__limit @ A_27a @ V0net ) )
+        & ( c_2Ereal__topology_2E_2D_2D_3E @ A_27a @ V1f @ V2l @ V0net )
+        & ( c_2Ereal__topology_2Eeventually @ A_27a
+          @ ^ [V4x: A_27a] : ( c_2Ereal_2Ereal__lte @ ( c_2Ereal_2Eabs @ ( V1f @ V4x ) ) @ V3b )
+          @ V0net ) )
+     => ( c_2Ereal_2Ereal__lte @ ( c_2Ereal_2Eabs @ V2l ) @ V3b ) ) ).
+
+thf(thm_2Ereal__topology_2ELIM__ABS__LBOUND,axiom,
+    ! [A_27a: $tType,V0net: tyop_2Ereal__topology_2Enet @ A_27a,V1f: A_27a > tyop_2Erealax_2Ereal,V2l: tyop_2Erealax_2Ereal,V3b: tyop_2Erealax_2Ereal] :
+      ( ( ( (~) @ ( c_2Ereal__topology_2Etrivial__limit @ A_27a @ V0net ) )
+        & ( c_2Ereal__topology_2E_2D_2D_3E @ A_27a @ V1f @ V2l @ V0net )
+        & ( c_2Ereal__topology_2Eeventually @ A_27a
+          @ ^ [V4x: A_27a] : ( c_2Ereal_2Ereal__lte @ V3b @ ( c_2Ereal_2Eabs @ ( V1f @ V4x ) ) )
+          @ V0net ) )
+     => ( c_2Ereal_2Ereal__lte @ V3b @ ( c_2Ereal_2Eabs @ V2l ) ) ) ).
+
+thf(thm_2Ereal__topology_2ELIM__UNIQUE,axiom,
+    ! [A_27a: $tType,V0net: tyop_2Ereal__topology_2Enet @ A_27a,V1f: A_27a > tyop_2Erealax_2Ereal,V2l: tyop_2Erealax_2Ereal,V3l_27: tyop_2Erealax_2Ereal] :
+      ( ( ( (~) @ ( c_2Ereal__topology_2Etrivial__limit @ A_27a @ V0net ) )
+        & ( c_2Ereal__topology_2E_2D_2D_3E @ A_27a @ V1f @ V2l @ V0net )
+        & ( c_2Ereal__topology_2E_2D_2D_3E @ A_27a @ V1f @ V3l_27 @ V0net ) )
+     => ( V2l = V3l_27 ) ) ).
+
+thf(thm_2Ereal__topology_2ETENDSTO__LIM,axiom,
+    ! [A_27a: $tType,V0net: tyop_2Ereal__topology_2Enet @ A_27a,V1f: A_27a > tyop_2Erealax_2Ereal,V2l: tyop_2Erealax_2Ereal] :
+      ( ( ( (~) @ ( c_2Ereal__topology_2Etrivial__limit @ A_27a @ V0net ) )
+        & ( c_2Ereal__topology_2E_2D_2D_3E @ A_27a @ V1f @ V2l @ V0net ) )
+     => ( ( c_2Ereal__topology_2Elim__def @ A_27a @ V0net @ V1f )
+        = V2l ) ) ).
+
+thf(thm_2Ereal__topology_2ELIM__CONST__EQ,axiom,
+    ! [A_27a: $tType,V0net: tyop_2Ereal__topology_2Enet @ A_27a,V1c: tyop_2Erealax_2Ereal,V2d: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2E_2D_2D_3E @ A_27a
+        @ ^ [V3x: A_27a] : V1c
+        @ V2d
+        @ V0net )
+    <=> ( ( c_2Ereal__topology_2Etrivial__limit @ A_27a @ V0net )
+        | ( V1c = V2d ) ) ) ).
+
+thf(thm_2Ereal__topology_2EUNIFORM__LIM__ADD,axiom,
+    ! [A_27a: $tType,A_27b: $tType,V0net: tyop_2Ereal__topology_2Enet @ A_27a,V1P: A_27b > $o,V2f: A_27b > A_27a > tyop_2Erealax_2Ereal,V3g: A_27b > A_27a > tyop_2Erealax_2Ereal,V4l: A_27b > tyop_2Erealax_2Ereal,V5m: A_27b > tyop_2Erealax_2Ereal] :
+      ( ( ! [V6e: tyop_2Erealax_2Ereal] :
+            ( ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V6e )
+           => ( c_2Ereal__topology_2Eeventually @ A_27a
+              @ ^ [V7x: A_27a] :
+                  ( c_2Ebool_2E_21 @ A_27b
+                  @ ^ [V8n: A_27b] : ( c_2Emin_2E_3D_3D_3E @ ( V1P @ V8n ) @ ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Eabs @ ( c_2Ereal_2Ereal__sub @ ( V2f @ V8n @ V7x ) @ ( V4l @ V8n ) ) ) @ V6e ) ) )
+              @ V0net ) )
+        & ! [V9e: tyop_2Erealax_2Ereal] :
+            ( ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V9e )
+           => ( c_2Ereal__topology_2Eeventually @ A_27a
+              @ ^ [V10x: A_27a] :
+                  ( c_2Ebool_2E_21 @ A_27b
+                  @ ^ [V11n: A_27b] : ( c_2Emin_2E_3D_3D_3E @ ( V1P @ V11n ) @ ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Eabs @ ( c_2Ereal_2Ereal__sub @ ( V3g @ V11n @ V10x ) @ ( V5m @ V11n ) ) ) @ V9e ) ) )
+              @ V0net ) ) )
+     => ! [V12e: tyop_2Erealax_2Ereal] :
+          ( ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V12e )
+         => ( c_2Ereal__topology_2Eeventually @ A_27a
+            @ ^ [V13x: A_27a] :
+                ( c_2Ebool_2E_21 @ A_27b
+                @ ^ [V14n: A_27b] : ( c_2Emin_2E_3D_3D_3E @ ( V1P @ V14n ) @ ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Eabs @ ( c_2Ereal_2Ereal__sub @ ( c_2Erealax_2Ereal__add @ ( V2f @ V14n @ V13x ) @ ( V3g @ V14n @ V13x ) ) @ ( c_2Erealax_2Ereal__add @ ( V4l @ V14n ) @ ( V5m @ V14n ) ) ) ) @ V12e ) ) )
+            @ V0net ) ) ) ).
+
+thf(thm_2Ereal__topology_2EUNIFORM__LIM__SUB,axiom,
+    ! [A_27a: $tType,A_27b: $tType,V0net: tyop_2Ereal__topology_2Enet @ A_27a,V1P: A_27b > $o,V2f: A_27b > A_27a > tyop_2Erealax_2Ereal,V3g: A_27b > A_27a > tyop_2Erealax_2Ereal,V4l: A_27b > tyop_2Erealax_2Ereal,V5m: A_27b > tyop_2Erealax_2Ereal] :
+      ( ( ! [V6e: tyop_2Erealax_2Ereal] :
+            ( ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V6e )
+           => ( c_2Ereal__topology_2Eeventually @ A_27a
+              @ ^ [V7x: A_27a] :
+                  ( c_2Ebool_2E_21 @ A_27b
+                  @ ^ [V8n: A_27b] : ( c_2Emin_2E_3D_3D_3E @ ( V1P @ V8n ) @ ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Eabs @ ( c_2Ereal_2Ereal__sub @ ( V2f @ V8n @ V7x ) @ ( V4l @ V8n ) ) ) @ V6e ) ) )
+              @ V0net ) )
+        & ! [V9e: tyop_2Erealax_2Ereal] :
+            ( ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V9e )
+           => ( c_2Ereal__topology_2Eeventually @ A_27a
+              @ ^ [V10x: A_27a] :
+                  ( c_2Ebool_2E_21 @ A_27b
+                  @ ^ [V11n: A_27b] : ( c_2Emin_2E_3D_3D_3E @ ( V1P @ V11n ) @ ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Eabs @ ( c_2Ereal_2Ereal__sub @ ( V3g @ V11n @ V10x ) @ ( V5m @ V11n ) ) ) @ V9e ) ) )
+              @ V0net ) ) )
+     => ! [V12e: tyop_2Erealax_2Ereal] :
+          ( ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V12e )
+         => ( c_2Ereal__topology_2Eeventually @ A_27a
+            @ ^ [V13x: A_27a] :
+                ( c_2Ebool_2E_21 @ A_27b
+                @ ^ [V14n: A_27b] : ( c_2Emin_2E_3D_3D_3E @ ( V1P @ V14n ) @ ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Eabs @ ( c_2Ereal_2Ereal__sub @ ( c_2Ereal_2Ereal__sub @ ( V2f @ V14n @ V13x ) @ ( V3g @ V14n @ V13x ) ) @ ( c_2Ereal_2Ereal__sub @ ( V4l @ V14n ) @ ( V5m @ V14n ) ) ) ) @ V12e ) ) )
+            @ V0net ) ) ) ).
+
+thf(thm_2Ereal__topology_2EUNIFORM__LIM__BILINEAR,axiom,
+    ! [A_27a: $tType,A_27b: $tType,V0net: tyop_2Ereal__topology_2Enet @ A_27a,V1P: A_27b > $o,V2h: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal,V3f: A_27b > A_27a > tyop_2Erealax_2Ereal,V4g: A_27b > A_27a > tyop_2Erealax_2Ereal,V5l: A_27b > tyop_2Erealax_2Ereal,V6m: A_27b > tyop_2Erealax_2Ereal,V7b1: tyop_2Erealax_2Ereal,V8b2: tyop_2Erealax_2Ereal] :
+      ( ( ( c_2Ereal__topology_2Ebilinear @ V2h )
+        & ( c_2Ereal__topology_2Eeventually @ A_27a
+          @ ^ [V9x: A_27a] :
+              ( c_2Ebool_2E_21 @ A_27b
+              @ ^ [V10n: A_27b] : ( c_2Emin_2E_3D_3D_3E @ ( V1P @ V10n ) @ ( c_2Ereal_2Ereal__lte @ ( c_2Ereal_2Eabs @ ( V5l @ V10n ) ) @ V7b1 ) ) )
+          @ V0net )
+        & ( c_2Ereal__topology_2Eeventually @ A_27a
+          @ ^ [V11x: A_27a] :
+              ( c_2Ebool_2E_21 @ A_27b
+              @ ^ [V12n: A_27b] : ( c_2Emin_2E_3D_3D_3E @ ( V1P @ V12n ) @ ( c_2Ereal_2Ereal__lte @ ( c_2Ereal_2Eabs @ ( V6m @ V12n ) ) @ V8b2 ) ) )
+          @ V0net )
+        & ! [V13e: tyop_2Erealax_2Ereal] :
+            ( ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V13e )
+           => ( c_2Ereal__topology_2Eeventually @ A_27a
+              @ ^ [V14x: A_27a] :
+                  ( c_2Ebool_2E_21 @ A_27b
+                  @ ^ [V15n: A_27b] : ( c_2Emin_2E_3D_3D_3E @ ( V1P @ V15n ) @ ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Eabs @ ( c_2Ereal_2Ereal__sub @ ( V3f @ V15n @ V14x ) @ ( V5l @ V15n ) ) ) @ V13e ) ) )
+              @ V0net ) )
+        & ! [V16e: tyop_2Erealax_2Ereal] :
+            ( ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V16e )
+           => ( c_2Ereal__topology_2Eeventually @ A_27a
+              @ ^ [V17x: A_27a] :
+                  ( c_2Ebool_2E_21 @ A_27b
+                  @ ^ [V18n: A_27b] : ( c_2Emin_2E_3D_3D_3E @ ( V1P @ V18n ) @ ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Eabs @ ( c_2Ereal_2Ereal__sub @ ( V4g @ V18n @ V17x ) @ ( V6m @ V18n ) ) ) @ V16e ) ) )
+              @ V0net ) ) )
+     => ! [V19e: tyop_2Erealax_2Ereal] :
+          ( ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V19e )
+         => ( c_2Ereal__topology_2Eeventually @ A_27a
+            @ ^ [V20x: A_27a] :
+                ( c_2Ebool_2E_21 @ A_27b
+                @ ^ [V21n: A_27b] : ( c_2Emin_2E_3D_3D_3E @ ( V1P @ V21n ) @ ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Eabs @ ( c_2Ereal_2Ereal__sub @ ( V2h @ ( V3f @ V21n @ V20x ) @ ( V4g @ V21n @ V20x ) ) @ ( V2h @ ( V5l @ V21n ) @ ( V6m @ V21n ) ) ) ) @ V19e ) ) )
+            @ V0net ) ) ) ).
+
+thf(thm_2Ereal__topology_2ELIM__BILINEAR,axiom,
+    ! [A_27a: $tType,V0net: tyop_2Ereal__topology_2Enet @ A_27a,V1h: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal,V2f: A_27a > tyop_2Erealax_2Ereal,V3g: A_27a > tyop_2Erealax_2Ereal,V4l: tyop_2Erealax_2Ereal,V5m: tyop_2Erealax_2Ereal] :
+      ( ( ( c_2Ereal__topology_2E_2D_2D_3E @ A_27a @ V2f @ V4l @ V0net )
+        & ( c_2Ereal__topology_2E_2D_2D_3E @ A_27a @ V3g @ V5m @ V0net )
+        & ( c_2Ereal__topology_2Ebilinear @ V1h ) )
+     => ( c_2Ereal__topology_2E_2D_2D_3E @ A_27a
+        @ ^ [V6x: A_27a] : ( V1h @ ( V2f @ V6x ) @ ( V3g @ V6x ) )
+        @ ( V1h @ V4l @ V5m )
+        @ V0net ) ) ).
+
+thf(thm_2Ereal__topology_2ELIM__WITHIN__ID,axiom,
+    ! [V0a: tyop_2Erealax_2Ereal,V1s: tyop_2Erealax_2Ereal > $o] :
+      ( c_2Ereal__topology_2E_2D_2D_3E @ tyop_2Erealax_2Ereal
+      @ ^ [V2x: tyop_2Erealax_2Ereal] : V2x
+      @ V0a
+      @ ( c_2Ereal__topology_2Ewithin @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Eat @ V0a ) @ V1s ) ) ).
+
+thf(thm_2Ereal__topology_2ELIM__AT__ID,axiom,
+    ! [V0a: tyop_2Erealax_2Ereal] :
+      ( c_2Ereal__topology_2E_2D_2D_3E @ tyop_2Erealax_2Ereal
+      @ ^ [V1x: tyop_2Erealax_2Ereal] : V1x
+      @ V0a
+      @ ( c_2Ereal__topology_2Eat @ V0a ) ) ).
+
+thf(thm_2Ereal__topology_2ELIM__AT__ZERO,axiom,
+    ! [V0f: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal,V1l: tyop_2Erealax_2Ereal,V2a: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2E_2D_2D_3E @ tyop_2Erealax_2Ereal @ V0f @ V1l @ ( c_2Ereal__topology_2Eat @ V2a ) )
+      = ( c_2Ereal__topology_2E_2D_2D_3E @ tyop_2Erealax_2Ereal
+        @ ^ [V3x: tyop_2Erealax_2Ereal] : ( V0f @ ( c_2Erealax_2Ereal__add @ V2a @ V3x ) )
+        @ V1l
+        @ ( c_2Ereal__topology_2Eat @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ENETLIMIT__WITHIN,axiom,
+    ! [V0a: tyop_2Erealax_2Ereal,V1s: tyop_2Erealax_2Ereal > $o] :
+      ( ( (~) @ ( c_2Ereal__topology_2Etrivial__limit @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Ewithin @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Eat @ V0a ) @ V1s ) ) )
+     => ( ( c_2Ereal__topology_2Enetlimit @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Ewithin @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Eat @ V0a ) @ V1s ) )
+        = V0a ) ) ).
+
+thf(thm_2Ereal__topology_2ENETLIMIT__AT,axiom,
+    ! [V0a: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2Enetlimit @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Eat @ V0a ) )
+      = V0a ) ).
+
+thf(thm_2Ereal__topology_2ELIM__TRANSFORM,axiom,
+    ! [A_27a: $tType,V0net: tyop_2Ereal__topology_2Enet @ A_27a,V1f: A_27a > tyop_2Erealax_2Ereal,V2g: A_27a > tyop_2Erealax_2Ereal,V3l: tyop_2Erealax_2Ereal] :
+      ( ( ( c_2Ereal__topology_2E_2D_2D_3E @ A_27a
+          @ ^ [V4x: A_27a] : ( c_2Ereal_2Ereal__sub @ ( V1f @ V4x ) @ ( V2g @ V4x ) )
+          @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 )
+          @ V0net )
+        & ( c_2Ereal__topology_2E_2D_2D_3E @ A_27a @ V1f @ V3l @ V0net ) )
+     => ( c_2Ereal__topology_2E_2D_2D_3E @ A_27a @ V2g @ V3l @ V0net ) ) ).
+
+thf(thm_2Ereal__topology_2ELIM__TRANSFORM__EVENTUALLY,axiom,
+    ! [A_27a: $tType,V0net: tyop_2Ereal__topology_2Enet @ A_27a,V1f: A_27a > tyop_2Erealax_2Ereal,V2g: A_27a > tyop_2Erealax_2Ereal,V3l: tyop_2Erealax_2Ereal] :
+      ( ( ( c_2Ereal__topology_2Eeventually @ A_27a
+          @ ^ [V4x: A_27a] : ( c_2Emin_2E_3D @ tyop_2Erealax_2Ereal @ ( V1f @ V4x ) @ ( V2g @ V4x ) )
+          @ V0net )
+        & ( c_2Ereal__topology_2E_2D_2D_3E @ A_27a @ V1f @ V3l @ V0net ) )
+     => ( c_2Ereal__topology_2E_2D_2D_3E @ A_27a @ V2g @ V3l @ V0net ) ) ).
+
+thf(thm_2Ereal__topology_2ELIM__TRANSFORM__WITHIN,axiom,
+    ! [V0l: tyop_2Erealax_2Ereal,V1f: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal,V2g: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal,V3x: tyop_2Erealax_2Ereal,V4s: tyop_2Erealax_2Ereal > $o,V5d: tyop_2Erealax_2Ereal] :
+      ( ( ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V5d )
+        & ! [V6x_27: tyop_2Erealax_2Ereal] :
+            ( ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V6x_27 @ V4s )
+              & ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V6x_27 @ V3x ) ) )
+              & ( c_2Erealax_2Ereal__lt @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V6x_27 @ V3x ) ) @ V5d ) )
+           => ( ( V1f @ V6x_27 )
+              = ( V2g @ V6x_27 ) ) )
+        & ( c_2Ereal__topology_2E_2D_2D_3E @ tyop_2Erealax_2Ereal @ V1f @ V0l @ ( c_2Ereal__topology_2Ewithin @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Eat @ V3x ) @ V4s ) ) )
+     => ( c_2Ereal__topology_2E_2D_2D_3E @ tyop_2Erealax_2Ereal @ V2g @ V0l @ ( c_2Ereal__topology_2Ewithin @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Eat @ V3x ) @ V4s ) ) ) ).
+
+thf(thm_2Ereal__topology_2ELIM__TRANSFORM__AT,axiom,
+    ! [V0l: tyop_2Erealax_2Ereal,V1f: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal,V2g: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal,V3x: tyop_2Erealax_2Ereal,V4d: tyop_2Erealax_2Ereal] :
+      ( ( ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V4d )
+        & ! [V5x_27: tyop_2Erealax_2Ereal] :
+            ( ( ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V5x_27 @ V3x ) ) )
+              & ( c_2Erealax_2Ereal__lt @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V5x_27 @ V3x ) ) @ V4d ) )
+           => ( ( V1f @ V5x_27 )
+              = ( V2g @ V5x_27 ) ) )
+        & ( c_2Ereal__topology_2E_2D_2D_3E @ tyop_2Erealax_2Ereal @ V1f @ V0l @ ( c_2Ereal__topology_2Eat @ V3x ) ) )
+     => ( c_2Ereal__topology_2E_2D_2D_3E @ tyop_2Erealax_2Ereal @ V2g @ V0l @ ( c_2Ereal__topology_2Eat @ V3x ) ) ) ).
+
+thf(thm_2Ereal__topology_2ELIM__TRANSFORM__EQ,axiom,
+    ! [A_27a: $tType,V0net: tyop_2Ereal__topology_2Enet @ A_27a,V1f: A_27a > tyop_2Erealax_2Ereal,V2g: A_27a > tyop_2Erealax_2Ereal,V3l: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2E_2D_2D_3E @ A_27a
+        @ ^ [V4x: A_27a] : ( c_2Ereal_2Ereal__sub @ ( V1f @ V4x ) @ ( V2g @ V4x ) )
+        @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 )
+        @ V0net )
+     => ( ( c_2Ereal__topology_2E_2D_2D_3E @ A_27a @ V1f @ V3l @ V0net )
+        = ( c_2Ereal__topology_2E_2D_2D_3E @ A_27a @ V2g @ V3l @ V0net ) ) ) ).
+
+thf(thm_2Ereal__topology_2ELIM__TRANSFORM__WITHIN__SET,axiom,
+    ! [V0l: tyop_2Erealax_2Ereal,V1f: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal,V2a: tyop_2Erealax_2Ereal,V3s: tyop_2Erealax_2Ereal > $o,V4t: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ereal__topology_2Eeventually @ tyop_2Erealax_2Ereal
+        @ ^ [V5x: tyop_2Erealax_2Ereal] : ( c_2Emin_2E_3D @ $o @ ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V5x @ V3s ) @ ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V5x @ V4t ) )
+        @ ( c_2Ereal__topology_2Eat @ V2a ) )
+     => ( ( c_2Ereal__topology_2E_2D_2D_3E @ tyop_2Erealax_2Ereal @ V1f @ V0l @ ( c_2Ereal__topology_2Ewithin @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Eat @ V2a ) @ V3s ) )
+        = ( c_2Ereal__topology_2E_2D_2D_3E @ tyop_2Erealax_2Ereal @ V1f @ V0l @ ( c_2Ereal__topology_2Ewithin @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Eat @ V2a ) @ V4t ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ELIM__TRANSFORM__WITHIN__SET__IMP,axiom,
+    ! [V0f: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal,V1l: tyop_2Erealax_2Ereal,V2a: tyop_2Erealax_2Ereal,V3s: tyop_2Erealax_2Ereal > $o,V4t: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( c_2Ereal__topology_2Eeventually @ tyop_2Erealax_2Ereal
+          @ ^ [V5x: tyop_2Erealax_2Ereal] : ( c_2Emin_2E_3D_3D_3E @ ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V5x @ V4t ) @ ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V5x @ V3s ) )
+          @ ( c_2Ereal__topology_2Eat @ V2a ) )
+        & ( c_2Ereal__topology_2E_2D_2D_3E @ tyop_2Erealax_2Ereal @ V0f @ V1l @ ( c_2Ereal__topology_2Ewithin @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Eat @ V2a ) @ V3s ) ) )
+     => ( c_2Ereal__topology_2E_2D_2D_3E @ tyop_2Erealax_2Ereal @ V0f @ V1l @ ( c_2Ereal__topology_2Ewithin @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Eat @ V2a ) @ V4t ) ) ) ).
+
+thf(thm_2Ereal__topology_2ELIM__TRANSFORM__AWAY__WITHIN,axiom,
+    ! [V0l: tyop_2Erealax_2Ereal,V1f: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal,V2g: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal,V3a: tyop_2Erealax_2Ereal,V4b: tyop_2Erealax_2Ereal,V5s: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( (~) @ ( V3a = V4b ) )
+        & ! [V6x: tyop_2Erealax_2Ereal] :
+            ( ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V6x @ V5s )
+              & ( (~) @ ( V6x = V3a ) )
+              & ( (~) @ ( V6x = V4b ) ) )
+           => ( ( V1f @ V6x )
+              = ( V2g @ V6x ) ) )
+        & ( c_2Ereal__topology_2E_2D_2D_3E @ tyop_2Erealax_2Ereal @ V1f @ V0l @ ( c_2Ereal__topology_2Ewithin @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Eat @ V3a ) @ V5s ) ) )
+     => ( c_2Ereal__topology_2E_2D_2D_3E @ tyop_2Erealax_2Ereal @ V2g @ V0l @ ( c_2Ereal__topology_2Ewithin @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Eat @ V3a ) @ V5s ) ) ) ).
+
+thf(thm_2Ereal__topology_2ELIM__TRANSFORM__AWAY__AT,axiom,
+    ! [V0l: tyop_2Erealax_2Ereal,V1f: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal,V2g: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal,V3a: tyop_2Erealax_2Ereal,V4b: tyop_2Erealax_2Ereal] :
+      ( ( ( (~) @ ( V3a = V4b ) )
+        & ! [V5x: tyop_2Erealax_2Ereal] :
+            ( ( ( (~) @ ( V5x = V3a ) )
+              & ( (~) @ ( V5x = V4b ) ) )
+           => ( ( V1f @ V5x )
+              = ( V2g @ V5x ) ) )
+        & ( c_2Ereal__topology_2E_2D_2D_3E @ tyop_2Erealax_2Ereal @ V1f @ V0l @ ( c_2Ereal__topology_2Eat @ V3a ) ) )
+     => ( c_2Ereal__topology_2E_2D_2D_3E @ tyop_2Erealax_2Ereal @ V2g @ V0l @ ( c_2Ereal__topology_2Eat @ V3a ) ) ) ).
+
+thf(thm_2Ereal__topology_2ELIM__TRANSFORM__WITHIN__OPEN,axiom,
+    ! [V0f: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal,V1g: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal,V2s: tyop_2Erealax_2Ereal > $o,V3a: tyop_2Erealax_2Ereal,V4l: tyop_2Erealax_2Ereal] :
+      ( ( ( c_2Ereal__topology_2EOpen @ V2s )
+        & ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V3a @ V2s )
+        & ! [V5x: tyop_2Erealax_2Ereal] :
+            ( ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V5x @ V2s )
+              & ( (~) @ ( V5x = V3a ) ) )
+           => ( ( V0f @ V5x )
+              = ( V1g @ V5x ) ) )
+        & ( c_2Ereal__topology_2E_2D_2D_3E @ tyop_2Erealax_2Ereal @ V0f @ V4l @ ( c_2Ereal__topology_2Eat @ V3a ) ) )
+     => ( c_2Ereal__topology_2E_2D_2D_3E @ tyop_2Erealax_2Ereal @ V1g @ V4l @ ( c_2Ereal__topology_2Eat @ V3a ) ) ) ).
+
+thf(thm_2Ereal__topology_2ELIM__TRANSFORM__WITHIN__OPEN__IN,axiom,
+    ! [V0f: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal,V1g: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal,V2s: tyop_2Erealax_2Ereal > $o,V3t: tyop_2Erealax_2Ereal > $o,V4a: tyop_2Erealax_2Ereal,V5l: tyop_2Erealax_2Ereal] :
+      ( ( ( c_2Etopology_2Eopen__in @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Esubtopology @ tyop_2Erealax_2Ereal @ c_2Ereal__topology_2Eeuclidean @ V3t ) @ V2s )
+        & ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V4a @ V2s )
+        & ! [V6x: tyop_2Erealax_2Ereal] :
+            ( ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V6x @ V2s )
+              & ( (~) @ ( V6x = V4a ) ) )
+           => ( ( V0f @ V6x )
+              = ( V1g @ V6x ) ) )
+        & ( c_2Ereal__topology_2E_2D_2D_3E @ tyop_2Erealax_2Ereal @ V0f @ V5l @ ( c_2Ereal__topology_2Ewithin @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Eat @ V4a ) @ V3t ) ) )
+     => ( c_2Ereal__topology_2E_2D_2D_3E @ tyop_2Erealax_2Ereal @ V1g @ V5l @ ( c_2Ereal__topology_2Ewithin @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Eat @ V4a ) @ V3t ) ) ) ).
+
+thf(thm_2Ereal__topology_2ELIM__CASES__FINITE__SEQUENTIALLY,axiom,
+    ! [V0P: tyop_2Enum_2Enum > $o,V1f: tyop_2Enum_2Enum > tyop_2Erealax_2Ereal,V2g: tyop_2Enum_2Enum > tyop_2Erealax_2Ereal,V3l: tyop_2Erealax_2Ereal] :
+      ( ( c_2Epred__set_2EFINITE @ tyop_2Enum_2Enum
+        @ ( c_2Epred__set_2EGSPEC @ tyop_2Enum_2Enum @ tyop_2Enum_2Enum
+          @ ^ [V4n: tyop_2Enum_2Enum] : ( c_2Epair_2E_2C @ tyop_2Enum_2Enum @ $o @ V4n @ ( V0P @ V4n ) ) ) )
+     => ( ( c_2Ereal__topology_2E_2D_2D_3E @ tyop_2Enum_2Enum
+          @ ^ [V5n: tyop_2Enum_2Enum] : ( c_2Ebool_2ECOND @ tyop_2Erealax_2Ereal @ ( V0P @ V5n ) @ ( V1f @ V5n ) @ ( V2g @ V5n ) )
+          @ V3l
+          @ c_2Ereal__topology_2Esequentially )
+        = ( c_2Ereal__topology_2E_2D_2D_3E @ tyop_2Enum_2Enum @ V2g @ V3l @ c_2Ereal__topology_2Esequentially ) ) ) ).
+
+thf(thm_2Ereal__topology_2ELIM__CASES__COFINITE__SEQUENTIALLY,axiom,
+    ! [V0P: tyop_2Enum_2Enum > $o,V1f: tyop_2Enum_2Enum > tyop_2Erealax_2Ereal,V2g: tyop_2Enum_2Enum > tyop_2Erealax_2Ereal,V3l: tyop_2Erealax_2Ereal] :
+      ( ( c_2Epred__set_2EFINITE @ tyop_2Enum_2Enum
+        @ ( c_2Epred__set_2EGSPEC @ tyop_2Enum_2Enum @ tyop_2Enum_2Enum
+          @ ^ [V4n: tyop_2Enum_2Enum] : ( c_2Epair_2E_2C @ tyop_2Enum_2Enum @ $o @ V4n @ ( c_2Ebool_2E_7E @ ( V0P @ V4n ) ) ) ) )
+     => ( ( c_2Ereal__topology_2E_2D_2D_3E @ tyop_2Enum_2Enum
+          @ ^ [V5n: tyop_2Enum_2Enum] : ( c_2Ebool_2ECOND @ tyop_2Erealax_2Ereal @ ( V0P @ V5n ) @ ( V1f @ V5n ) @ ( V2g @ V5n ) )
+          @ V3l
+          @ c_2Ereal__topology_2Esequentially )
+        = ( c_2Ereal__topology_2E_2D_2D_3E @ tyop_2Enum_2Enum @ V1f @ V3l @ c_2Ereal__topology_2Esequentially ) ) ) ).
+
+thf(thm_2Ereal__topology_2ELIM__CASES__SEQUENTIALLY,axiom,
+    ! [V0f: tyop_2Enum_2Enum > tyop_2Erealax_2Ereal,V1g: tyop_2Enum_2Enum > tyop_2Erealax_2Ereal,V2l: tyop_2Erealax_2Ereal,V3m: tyop_2Enum_2Enum] :
+      ( ( ( c_2Ereal__topology_2E_2D_2D_3E @ tyop_2Enum_2Enum
+          @ ^ [V4n: tyop_2Enum_2Enum] : ( c_2Ebool_2ECOND @ tyop_2Erealax_2Ereal @ ( c_2Earithmetic_2E_3C_3D @ V3m @ V4n ) @ ( V0f @ V4n ) @ ( V1g @ V4n ) )
+          @ V2l
+          @ c_2Ereal__topology_2Esequentially )
+        = ( c_2Ereal__topology_2E_2D_2D_3E @ tyop_2Enum_2Enum @ V0f @ V2l @ c_2Ereal__topology_2Esequentially ) )
+      & ( ( c_2Ereal__topology_2E_2D_2D_3E @ tyop_2Enum_2Enum
+          @ ^ [V5n: tyop_2Enum_2Enum] : ( c_2Ebool_2ECOND @ tyop_2Erealax_2Ereal @ ( c_2Eprim__rec_2E_3C @ V3m @ V5n ) @ ( V0f @ V5n ) @ ( V1g @ V5n ) )
+          @ V2l
+          @ c_2Ereal__topology_2Esequentially )
+        = ( c_2Ereal__topology_2E_2D_2D_3E @ tyop_2Enum_2Enum @ V0f @ V2l @ c_2Ereal__topology_2Esequentially ) )
+      & ( ( c_2Ereal__topology_2E_2D_2D_3E @ tyop_2Enum_2Enum
+          @ ^ [V6n: tyop_2Enum_2Enum] : ( c_2Ebool_2ECOND @ tyop_2Erealax_2Ereal @ ( c_2Earithmetic_2E_3C_3D @ V6n @ V3m ) @ ( V0f @ V6n ) @ ( V1g @ V6n ) )
+          @ V2l
+          @ c_2Ereal__topology_2Esequentially )
+        = ( c_2Ereal__topology_2E_2D_2D_3E @ tyop_2Enum_2Enum @ V1g @ V2l @ c_2Ereal__topology_2Esequentially ) )
+      & ( ( c_2Ereal__topology_2E_2D_2D_3E @ tyop_2Enum_2Enum
+          @ ^ [V7n: tyop_2Enum_2Enum] : ( c_2Ebool_2ECOND @ tyop_2Erealax_2Ereal @ ( c_2Eprim__rec_2E_3C @ V7n @ V3m ) @ ( V0f @ V7n ) @ ( V1g @ V7n ) )
+          @ V2l
+          @ c_2Ereal__topology_2Esequentially )
+        = ( c_2Ereal__topology_2E_2D_2D_3E @ tyop_2Enum_2Enum @ V1g @ V2l @ c_2Ereal__topology_2Esequentially ) ) ) ).
+
+thf(thm_2Ereal__topology_2ELIM__CONG__WITHIN,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1l: tyop_2Erealax_2Ereal,V2g: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal,V3f: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal,V4a: tyop_2Erealax_2Ereal] :
+      ( ! [V5x: tyop_2Erealax_2Ereal] :
+          ( ( (~) @ ( V5x = V4a ) )
+         => ( ( V3f @ V5x )
+            = ( V2g @ V5x ) ) )
+     => ( ( c_2Ereal__topology_2E_2D_2D_3E @ tyop_2Erealax_2Ereal
+          @ ^ [V6x: tyop_2Erealax_2Ereal] : ( V3f @ V6x )
+          @ V1l
+          @ ( c_2Ereal__topology_2Ewithin @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Eat @ V4a ) @ V0s ) )
+        = ( c_2Ereal__topology_2E_2D_2D_3E @ tyop_2Erealax_2Ereal @ V2g @ V1l @ ( c_2Ereal__topology_2Ewithin @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Eat @ V4a ) @ V0s ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ELIM__CONG__AT,axiom,
+    ! [V0l: tyop_2Erealax_2Ereal,V1g: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal,V2f: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal,V3a: tyop_2Erealax_2Ereal] :
+      ( ! [V4x: tyop_2Erealax_2Ereal] :
+          ( ( (~) @ ( V4x = V3a ) )
+         => ( ( V2f @ V4x )
+            = ( V1g @ V4x ) ) )
+     => ( ( c_2Ereal__topology_2E_2D_2D_3E @ tyop_2Erealax_2Ereal
+          @ ^ [V5x: tyop_2Erealax_2Ereal] : ( V2f @ V5x )
+          @ V0l
+          @ ( c_2Ereal__topology_2Eat @ V3a ) )
+        = ( c_2Ereal__topology_2E_2D_2D_3E @ tyop_2Erealax_2Ereal @ V1g @ V0l @ ( c_2Ereal__topology_2Eat @ V3a ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ECLOSURE__SEQUENTIAL,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1l: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V1l @ ( c_2Ereal__topology_2Eclosure @ V0s ) )
+    <=> ? [V2x: tyop_2Enum_2Enum > tyop_2Erealax_2Ereal] :
+          ( ! [V3n: tyop_2Enum_2Enum] : ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ ( V2x @ V3n ) @ V0s )
+          & ( c_2Ereal__topology_2E_2D_2D_3E @ tyop_2Enum_2Enum @ V2x @ V1l @ c_2Ereal__topology_2Esequentially ) ) ) ).
+
+thf(thm_2Ereal__topology_2ECLOSED__CONTAINS__SEQUENTIAL__LIMIT,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1x: tyop_2Enum_2Enum > tyop_2Erealax_2Ereal,V2l: tyop_2Erealax_2Ereal] :
+      ( ( ( c_2Ereal__topology_2EClosed @ V0s )
+        & ! [V3n: tyop_2Enum_2Enum] : ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ ( V1x @ V3n ) @ V0s )
+        & ( c_2Ereal__topology_2E_2D_2D_3E @ tyop_2Enum_2Enum @ V1x @ V2l @ c_2Ereal__topology_2Esequentially ) )
+     => ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V2l @ V0s ) ) ).
+
+thf(thm_2Ereal__topology_2ECLOSED__SEQUENTIAL__LIMITS,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ereal__topology_2EClosed @ V0s )
+    <=> ! [V1x: tyop_2Enum_2Enum > tyop_2Erealax_2Ereal,V2l: tyop_2Erealax_2Ereal] :
+          ( ( ! [V3n: tyop_2Enum_2Enum] : ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ ( V1x @ V3n ) @ V0s )
+            & ( c_2Ereal__topology_2E_2D_2D_3E @ tyop_2Enum_2Enum @ V1x @ V2l @ c_2Ereal__topology_2Esequentially ) )
+         => ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V2l @ V0s ) ) ) ).
+
+thf(thm_2Ereal__topology_2ECLOSED__APPROACHABLE,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal,V1s: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ereal__topology_2EClosed @ V1s )
+     => ( ! [V2e: tyop_2Erealax_2Ereal] :
+            ( ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V2e )
+           => ? [V3y: tyop_2Erealax_2Ereal] :
+                ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V3y @ V1s )
+                & ( c_2Erealax_2Ereal__lt @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V3y @ V0x ) ) @ V2e ) ) )
+      <=> ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V0x @ V1s ) ) ) ).
+
+thf(thm_2Ereal__topology_2EIN__CLOSURE__DELETE,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1x: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V1x @ ( c_2Ereal__topology_2Eclosure @ ( c_2Epred__set_2EDELETE @ tyop_2Erealax_2Ereal @ V0s @ V1x ) ) )
+      = ( c_2Ereal__topology_2Elimit__point__of @ V1x @ V0s ) ) ).
+
+thf(thm_2Ereal__topology_2EDENSE__IMP__PERFECT,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( c_2Ereal__topology_2Eclosure @ V0s )
+        = ( c_2Epred__set_2EUNIV @ tyop_2Erealax_2Ereal ) )
+     => ! [V1x: tyop_2Erealax_2Ereal] :
+          ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V1x @ V0s )
+         => ( c_2Ereal__topology_2Elimit__point__of @ V1x @ V0s ) ) ) ).
+
+thf(thm_2Ereal__topology_2EDENSE__LIMIT__POINTS,axiom,
+    ! [A_27a: $tType,V0s: tyop_2Erealax_2Ereal > $o,V1x: A_27a] :
+      ( ( ( c_2Epred__set_2EGSPEC @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal
+          @ ^ [V2x: tyop_2Erealax_2Ereal] : ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ $o @ V2x @ ( c_2Ereal__topology_2Elimit__point__of @ V2x @ V0s ) ) )
+        = ( c_2Epred__set_2EUNIV @ tyop_2Erealax_2Ereal ) )
+    <=> ( ( c_2Ereal__topology_2Eclosure @ V0s )
+        = ( c_2Epred__set_2EUNIV @ tyop_2Erealax_2Ereal ) ) ) ).
+
+thf(thm_2Ereal__topology_2ESEQ__OFFSET,axiom,
+    ! [V0f: tyop_2Enum_2Enum > tyop_2Erealax_2Ereal,V1l: tyop_2Erealax_2Ereal,V2k: tyop_2Enum_2Enum] :
+      ( ( c_2Ereal__topology_2E_2D_2D_3E @ tyop_2Enum_2Enum @ V0f @ V1l @ c_2Ereal__topology_2Esequentially )
+     => ( c_2Ereal__topology_2E_2D_2D_3E @ tyop_2Enum_2Enum
+        @ ^ [V3i: tyop_2Enum_2Enum] : ( V0f @ ( c_2Earithmetic_2E_2B @ V3i @ V2k ) )
+        @ V1l
+        @ c_2Ereal__topology_2Esequentially ) ) ).
+
+thf(thm_2Ereal__topology_2ESEQ__OFFSET__NEG,axiom,
+    ! [V0f: tyop_2Enum_2Enum > tyop_2Erealax_2Ereal,V1l: tyop_2Erealax_2Ereal,V2k: tyop_2Enum_2Enum] :
+      ( ( c_2Ereal__topology_2E_2D_2D_3E @ tyop_2Enum_2Enum @ V0f @ V1l @ c_2Ereal__topology_2Esequentially )
+     => ( c_2Ereal__topology_2E_2D_2D_3E @ tyop_2Enum_2Enum
+        @ ^ [V3i: tyop_2Enum_2Enum] : ( V0f @ ( c_2Earithmetic_2E_2D @ V3i @ V2k ) )
+        @ V1l
+        @ c_2Ereal__topology_2Esequentially ) ) ).
+
+thf(thm_2Ereal__topology_2ESEQ__OFFSET__REV,axiom,
+    ! [V0f: tyop_2Enum_2Enum > tyop_2Erealax_2Ereal,V1l: tyop_2Erealax_2Ereal,V2k: tyop_2Enum_2Enum] :
+      ( ( c_2Ereal__topology_2E_2D_2D_3E @ tyop_2Enum_2Enum
+        @ ^ [V3i: tyop_2Enum_2Enum] : ( V0f @ ( c_2Earithmetic_2E_2B @ V3i @ V2k ) )
+        @ V1l
+        @ c_2Ereal__topology_2Esequentially )
+     => ( c_2Ereal__topology_2E_2D_2D_3E @ tyop_2Enum_2Enum @ V0f @ V1l @ c_2Ereal__topology_2Esequentially ) ) ).
+
+thf(thm_2Ereal__topology_2ESEQ__HARMONIC__OFFSET,axiom,
+    ! [V0a: tyop_2Erealax_2Ereal] :
+      ( c_2Ereal__topology_2E_2D_2D_3E @ tyop_2Enum_2Enum
+      @ ^ [V1n: tyop_2Enum_2Enum] : ( c_2Erealax_2Einv @ ( c_2Erealax_2Ereal__add @ ( c_2Ereal_2Ereal__of__num @ V1n ) @ V0a ) )
+      @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 )
+      @ c_2Ereal__topology_2Esequentially ) ).
+
+thf(thm_2Ereal__topology_2ESEQ__HARMONIC,axiom,
+    ( c_2Ereal__topology_2E_2D_2D_3E @ tyop_2Enum_2Enum
+    @ ^ [V0n: tyop_2Enum_2Enum] : ( c_2Erealax_2Einv @ ( c_2Ereal_2Ereal__of__num @ V0n ) )
+    @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 )
+    @ c_2Ereal__topology_2Esequentially ) ).
+
+thf(thm_2Ereal__topology_2ECLOSED__CBALL,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal,V1e: tyop_2Erealax_2Ereal] : ( c_2Ereal__topology_2EClosed @ ( c_2Ereal__topology_2Ecball @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0x @ V1e ) ) ) ).
+
+thf(thm_2Ereal__topology_2EIN__INTERIOR__CBALL,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal,V1s: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V0x @ ( c_2Ereal__topology_2Einterior @ V1s ) )
+    <=> ? [V2e: tyop_2Erealax_2Ereal] :
+          ( ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V2e )
+          & ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Ecball @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0x @ V2e ) ) @ V1s ) ) ) ).
+
+thf(thm_2Ereal__topology_2ELIMPT__BALL,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal,V1y: tyop_2Erealax_2Ereal,V2e: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2Elimit__point__of @ V1y @ ( c_2Ereal__topology_2Eball @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0x @ V2e ) ) )
+    <=> ( ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V2e )
+        & ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V1y @ ( c_2Ereal__topology_2Ecball @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0x @ V2e ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ECLOSURE__BALL,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal,V1e: tyop_2Erealax_2Ereal] :
+      ( ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V1e )
+     => ( ( c_2Ereal__topology_2Eclosure @ ( c_2Ereal__topology_2Eball @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0x @ V1e ) ) )
+        = ( c_2Ereal__topology_2Ecball @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0x @ V1e ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EINTERIOR__BALL,axiom,
+    ! [V0a: tyop_2Erealax_2Ereal,V1r: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2Einterior @ ( c_2Ereal__topology_2Eball @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ V1r ) ) )
+      = ( c_2Ereal__topology_2Eball @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ V1r ) ) ) ).
+
+thf(thm_2Ereal__topology_2EINTERIOR__CBALL,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal,V1e: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2Einterior @ ( c_2Ereal__topology_2Ecball @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0x @ V1e ) ) )
+      = ( c_2Ereal__topology_2Eball @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0x @ V1e ) ) ) ).
+
+thf(thm_2Ereal__topology_2EFRONTIER__BALL,axiom,
+    ! [V0a: tyop_2Erealax_2Ereal,V1e: tyop_2Erealax_2Ereal] :
+      ( ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V1e )
+     => ( ( c_2Ereal__topology_2Efrontier @ ( c_2Ereal__topology_2Eball @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ V1e ) ) )
+        = ( c_2Ereal__topology_2Esphere @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ V1e ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EFRONTIER__CBALL,axiom,
+    ! [V0a: tyop_2Erealax_2Ereal,V1e: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2Efrontier @ ( c_2Ereal__topology_2Ecball @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ V1e ) ) )
+      = ( c_2Ereal__topology_2Esphere @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ V1e ) ) ) ).
+
+thf(thm_2Ereal__topology_2ECBALL__EQ__EMPTY,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal,V1e: tyop_2Erealax_2Ereal] :
+      ( ( ( c_2Ereal__topology_2Ecball @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0x @ V1e ) )
+        = ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) )
+    <=> ( c_2Erealax_2Ereal__lt @ V1e @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) ) ) ).
+
+thf(thm_2Ereal__topology_2ECBALL__EMPTY,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal,V1e: tyop_2Erealax_2Ereal] :
+      ( ( c_2Erealax_2Ereal__lt @ V1e @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) )
+     => ( ( c_2Ereal__topology_2Ecball @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0x @ V1e ) )
+        = ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) ) ) ).
+
+thf(thm_2Ereal__topology_2ECBALL__EQ__SING,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal,V1e: tyop_2Erealax_2Ereal] :
+      ( ( ( c_2Ereal__topology_2Ecball @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0x @ V1e ) )
+        = ( c_2Epred__set_2EINSERT @ tyop_2Erealax_2Ereal @ V0x @ ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) ) )
+    <=> ( V1e
+        = ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) ) ) ).
+
+thf(thm_2Ereal__topology_2ECBALL__SING,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal,V1e: tyop_2Erealax_2Ereal] :
+      ( ( V1e
+        = ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) )
+     => ( ( c_2Ereal__topology_2Ecball @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0x @ V1e ) )
+        = ( c_2Epred__set_2EINSERT @ tyop_2Erealax_2Ereal @ V0x @ ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ESPHERE__SING,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal,V1e: tyop_2Erealax_2Ereal] :
+      ( ( V1e
+        = ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) )
+     => ( ( c_2Ereal__topology_2Esphere @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0x @ V1e ) )
+        = ( c_2Epred__set_2EINSERT @ tyop_2Erealax_2Ereal @ V0x @ ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ESPHERE__EQ__SING,axiom,
+    ! [V0a: tyop_2Erealax_2Ereal,V1r: tyop_2Erealax_2Ereal,V2x: tyop_2Erealax_2Ereal] :
+      ( ( ( c_2Ereal__topology_2Esphere @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ V1r ) )
+        = ( c_2Epred__set_2EINSERT @ tyop_2Erealax_2Ereal @ V2x @ ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) ) )
+    <=> ( ( V2x = V0a )
+        & ( V1r
+          = ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EEVENTUALLY__WITHIN__INTERIOR,axiom,
+    ! [V0p: tyop_2Erealax_2Ereal > $o,V1s: tyop_2Erealax_2Ereal > $o,V2x: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V2x @ ( c_2Ereal__topology_2Einterior @ V1s ) )
+     => ( ( c_2Ereal__topology_2Eeventually @ tyop_2Erealax_2Ereal @ V0p @ ( c_2Ereal__topology_2Ewithin @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Eat @ V2x ) @ V1s ) )
+        = ( c_2Ereal__topology_2Eeventually @ tyop_2Erealax_2Ereal @ V0p @ ( c_2Ereal__topology_2Eat @ V2x ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ELIM__WITHIN__INTERIOR,axiom,
+    ! [V0f: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal,V1l: tyop_2Erealax_2Ereal,V2s: tyop_2Erealax_2Ereal > $o,V3x: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V3x @ ( c_2Ereal__topology_2Einterior @ V2s ) )
+     => ( ( c_2Ereal__topology_2E_2D_2D_3E @ tyop_2Erealax_2Ereal @ V0f @ V1l @ ( c_2Ereal__topology_2Ewithin @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Eat @ V3x ) @ V2s ) )
+        = ( c_2Ereal__topology_2E_2D_2D_3E @ tyop_2Erealax_2Ereal @ V0f @ V1l @ ( c_2Ereal__topology_2Eat @ V3x ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ENETLIMIT__WITHIN__INTERIOR,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1x: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V1x @ ( c_2Ereal__topology_2Einterior @ V0s ) )
+     => ( ( c_2Ereal__topology_2Enetlimit @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Ewithin @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Eat @ V1x ) @ V0s ) )
+        = V1x ) ) ).
+
+thf(thm_2Ereal__topology_2ECONNECTED__IMP__PERFECT,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1x: tyop_2Erealax_2Ereal] :
+      ( ( ( c_2Ereal__topology_2Econnected @ V0s )
+        & ( (~)
+          @ ? [V2a: tyop_2Erealax_2Ereal] :
+              ( V0s
+              = ( c_2Epred__set_2EINSERT @ tyop_2Erealax_2Ereal @ V2a @ ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) ) ) )
+        & ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V1x @ V0s ) )
+     => ( c_2Ereal__topology_2Elimit__point__of @ V1x @ V0s ) ) ).
+
+thf(thm_2Ereal__topology_2ECONNECTED__IMP__PERFECT__CLOSED,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1x: tyop_2Erealax_2Ereal] :
+      ( ( ( c_2Ereal__topology_2Econnected @ V0s )
+        & ( c_2Ereal__topology_2EClosed @ V0s )
+        & ( (~)
+          @ ? [V2a: tyop_2Erealax_2Ereal] :
+              ( V0s
+              = ( c_2Epred__set_2EINSERT @ tyop_2Erealax_2Ereal @ V2a @ ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) ) ) ) )
+     => ( ( c_2Ereal__topology_2Elimit__point__of @ V1x @ V0s )
+        = ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V1x @ V0s ) ) ) ).
+
+thf(thm_2Ereal__topology_2EBOUNDED__EMPTY,axiom,
+    c_2Ereal__topology_2Ebounded__def @ ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) ).
+
+thf(thm_2Ereal__topology_2EBOUNDED__SUBSET,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1t: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( c_2Ereal__topology_2Ebounded__def @ V1t )
+        & ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ V0s @ V1t ) )
+     => ( c_2Ereal__topology_2Ebounded__def @ V0s ) ) ).
+
+thf(thm_2Ereal__topology_2EBOUNDED__INTERIOR,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ereal__topology_2Ebounded__def @ V0s )
+     => ( c_2Ereal__topology_2Ebounded__def @ ( c_2Ereal__topology_2Einterior @ V0s ) ) ) ).
+
+thf(thm_2Ereal__topology_2EBOUNDED__CLOSURE,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ereal__topology_2Ebounded__def @ V0s )
+     => ( c_2Ereal__topology_2Ebounded__def @ ( c_2Ereal__topology_2Eclosure @ V0s ) ) ) ).
+
+thf(thm_2Ereal__topology_2EBOUNDED__CLOSURE__EQ,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ereal__topology_2Ebounded__def @ ( c_2Ereal__topology_2Eclosure @ V0s ) )
+      = ( c_2Ereal__topology_2Ebounded__def @ V0s ) ) ).
+
+thf(thm_2Ereal__topology_2EBOUNDED__CBALL,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal,V1e: tyop_2Erealax_2Ereal] : ( c_2Ereal__topology_2Ebounded__def @ ( c_2Ereal__topology_2Ecball @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0x @ V1e ) ) ) ).
+
+thf(thm_2Ereal__topology_2EBIGINTER__GSPEC,axiom,
+    ! [A_27a: $tType,A_27b: $tType,A_27c: $tType,A_27d: $tType,A_27e: $tType,A_27f: $tType,A_27g: $tType,A_27h: $tType,A_27i: $tType] :
+      ( ! [V0P: A_27a > $o,V1f: A_27a > A_27b > $o] :
+          ( ( c_2Epred__set_2EBIGINTER @ A_27b
+            @ ( c_2Epred__set_2EGSPEC @ ( A_27b > $o ) @ A_27a
+              @ ^ [V2x: A_27a] : ( c_2Epair_2E_2C @ ( A_27b > $o ) @ $o @ ( V1f @ V2x ) @ ( V0P @ V2x ) ) ) )
+          = ( c_2Epred__set_2EGSPEC @ A_27b @ A_27b
+            @ ^ [V3a: A_27b] :
+                ( c_2Epair_2E_2C @ A_27b @ $o @ V3a
+                @ ( c_2Ebool_2E_21 @ A_27a
+                  @ ^ [V4x: A_27a] : ( c_2Emin_2E_3D_3D_3E @ ( V0P @ V4x ) @ ( c_2Ebool_2EIN @ A_27b @ V3a @ ( V1f @ V4x ) ) ) ) ) ) )
+      & ! [V5P: A_27c > A_27d > $o,V6f: A_27c > A_27d > A_27e > $o] :
+          ( ( c_2Epred__set_2EBIGINTER @ A_27e
+            @ ( c_2Epred__set_2EGSPEC @ ( A_27e > $o ) @ ( tyop_2Epair_2Eprod @ A_27c @ A_27d )
+              @ ( c_2Epair_2EUNCURRY @ A_27c @ A_27d @ ( tyop_2Epair_2Eprod @ ( A_27e > $o ) @ $o )
+                @ ^ [V7x: A_27c,V8y: A_27d] : ( c_2Epair_2E_2C @ ( A_27e > $o ) @ $o @ ( V6f @ V7x @ V8y ) @ ( V5P @ V7x @ V8y ) ) ) ) )
+          = ( c_2Epred__set_2EGSPEC @ A_27e @ A_27e
+            @ ^ [V9a: A_27e] :
+                ( c_2Epair_2E_2C @ A_27e @ $o @ V9a
+                @ ( c_2Ebool_2E_21 @ A_27c
+                  @ ^ [V10x: A_27c] :
+                      ( c_2Ebool_2E_21 @ A_27d
+                      @ ^ [V11y: A_27d] : ( c_2Emin_2E_3D_3D_3E @ ( V5P @ V10x @ V11y ) @ ( c_2Ebool_2EIN @ A_27e @ V9a @ ( V6f @ V10x @ V11y ) ) ) ) ) ) ) )
+      & ! [V12P: A_27f > A_27g > A_27h > $o,V13f: A_27f > A_27g > A_27h > A_27i > $o] :
+          ( ( c_2Epred__set_2EBIGINTER @ A_27i
+            @ ( c_2Epred__set_2EGSPEC @ ( A_27i > $o ) @ ( tyop_2Epair_2Eprod @ A_27f @ ( tyop_2Epair_2Eprod @ A_27g @ A_27h ) )
+              @ ( c_2Epair_2EUNCURRY @ A_27f @ ( tyop_2Epair_2Eprod @ A_27g @ A_27h ) @ ( tyop_2Epair_2Eprod @ ( A_27i > $o ) @ $o )
+                @ ^ [V14x: A_27f] :
+                    ( c_2Epair_2EUNCURRY @ A_27g @ A_27h @ ( tyop_2Epair_2Eprod @ ( A_27i > $o ) @ $o )
+                    @ ^ [V15y: A_27g,V16z: A_27h] : ( c_2Epair_2E_2C @ ( A_27i > $o ) @ $o @ ( V13f @ V14x @ V15y @ V16z ) @ ( V12P @ V14x @ V15y @ V16z ) ) ) ) ) )
+          = ( c_2Epred__set_2EGSPEC @ A_27i @ A_27i
+            @ ^ [V17a: A_27i] :
+                ( c_2Epair_2E_2C @ A_27i @ $o @ V17a
+                @ ( c_2Ebool_2E_21 @ A_27f
+                  @ ^ [V18x: A_27f] :
+                      ( c_2Ebool_2E_21 @ A_27g
+                      @ ^ [V19y: A_27g] :
+                          ( c_2Ebool_2E_21 @ A_27h
+                          @ ^ [V20z: A_27h] : ( c_2Emin_2E_3D_3D_3E @ ( V12P @ V18x @ V19y @ V20z ) @ ( c_2Ebool_2EIN @ A_27i @ V17a @ ( V13f @ V18x @ V19y @ V20z ) ) ) ) ) ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ECLOSED__FORALL__IN,axiom,
+    ! [A_27a: $tType,V0P: A_27a > $o,V1Q: A_27a > tyop_2Erealax_2Ereal > $o] :
+      ( ! [V2a: A_27a] :
+          ( ( V0P @ V2a )
+         => ( c_2Ereal__topology_2EClosed
+            @ ( c_2Epred__set_2EGSPEC @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal
+              @ ^ [V3x: tyop_2Erealax_2Ereal] : ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ $o @ V3x @ ( V1Q @ V2a @ V3x ) ) ) ) )
+     => ( c_2Ereal__topology_2EClosed
+        @ ( c_2Epred__set_2EGSPEC @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal
+          @ ^ [V4x: tyop_2Erealax_2Ereal] :
+              ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ $o @ V4x
+              @ ( c_2Ebool_2E_21 @ A_27a
+                @ ^ [V5a: A_27a] : ( c_2Emin_2E_3D_3D_3E @ ( V0P @ V5a ) @ ( V1Q @ V5a @ V4x ) ) ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ECLOSED__FORALL,axiom,
+    ! [A_27a: $tType,V0Q: A_27a > tyop_2Erealax_2Ereal > $o] :
+      ( ! [V1a: A_27a] :
+          ( c_2Ereal__topology_2EClosed
+          @ ( c_2Epred__set_2EGSPEC @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal
+            @ ^ [V2x: tyop_2Erealax_2Ereal] : ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ $o @ V2x @ ( V0Q @ V1a @ V2x ) ) ) )
+     => ( c_2Ereal__topology_2EClosed
+        @ ( c_2Epred__set_2EGSPEC @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal
+          @ ^ [V3x: tyop_2Erealax_2Ereal] :
+              ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ $o @ V3x
+              @ ( c_2Ebool_2E_21 @ A_27a
+                @ ^ [V4a: A_27a] : ( V0Q @ V4a @ V3x ) ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EOPEN__CLOSED,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ereal__topology_2EOpen @ V0s )
+      = ( c_2Ereal__topology_2EClosed @ ( c_2Epred__set_2EDIFF @ tyop_2Erealax_2Ereal @ ( c_2Epred__set_2EUNIV @ tyop_2Erealax_2Ereal ) @ V0s ) ) ) ).
+
+thf(thm_2Ereal__topology_2EOPEN__DIFF,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1t: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( c_2Ereal__topology_2EOpen @ V0s )
+        & ( c_2Ereal__topology_2EClosed @ V1t ) )
+     => ( c_2Ereal__topology_2EOpen @ ( c_2Epred__set_2EDIFF @ tyop_2Erealax_2Ereal @ V0s @ V1t ) ) ) ).
+
+thf(thm_2Ereal__topology_2ECLOSED__DIFF,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1t: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( c_2Ereal__topology_2EClosed @ V0s )
+        & ( c_2Ereal__topology_2EOpen @ V1t ) )
+     => ( c_2Ereal__topology_2EClosed @ ( c_2Epred__set_2EDIFF @ tyop_2Erealax_2Ereal @ V0s @ V1t ) ) ) ).
+
+thf(thm_2Ereal__topology_2EOPEN__BIGINTER,axiom,
+    ! [V0s: ( tyop_2Erealax_2Ereal > $o ) > $o] :
+      ( ( ( c_2Epred__set_2EFINITE @ ( tyop_2Erealax_2Ereal > $o ) @ V0s )
+        & ! [V1t: tyop_2Erealax_2Ereal > $o] :
+            ( ( c_2Ebool_2EIN @ ( tyop_2Erealax_2Ereal > $o ) @ V1t @ V0s )
+           => ( c_2Ereal__topology_2EOpen @ V1t ) ) )
+     => ( c_2Ereal__topology_2EOpen @ ( c_2Epred__set_2EBIGINTER @ tyop_2Erealax_2Ereal @ V0s ) ) ) ).
+
+thf(thm_2Ereal__topology_2ECLOSED__BIGUNION,axiom,
+    ! [V0s: ( tyop_2Erealax_2Ereal > $o ) > $o] :
+      ( ( ( c_2Epred__set_2EFINITE @ ( tyop_2Erealax_2Ereal > $o ) @ V0s )
+        & ! [V1t: tyop_2Erealax_2Ereal > $o] :
+            ( ( c_2Ebool_2EIN @ ( tyop_2Erealax_2Ereal > $o ) @ V1t @ V0s )
+           => ( c_2Ereal__topology_2EClosed @ V1t ) ) )
+     => ( c_2Ereal__topology_2EClosed @ ( c_2Epred__set_2EBIGUNION @ tyop_2Erealax_2Ereal @ V0s ) ) ) ).
+
+thf(thm_2Ereal__topology_2EIN__BALL,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal,V1y: tyop_2Erealax_2Ereal,V2e: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V1y @ ( c_2Ereal__topology_2Eball @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0x @ V2e ) ) )
+      = ( c_2Erealax_2Ereal__lt @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0x @ V1y ) ) @ V2e ) ) ).
+
+thf(thm_2Ereal__topology_2EIN__CBALL,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal,V1y: tyop_2Erealax_2Ereal,V2e: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V1y @ ( c_2Ereal__topology_2Ecball @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0x @ V2e ) ) )
+      = ( c_2Ereal_2Ereal__lte @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0x @ V1y ) ) @ V2e ) ) ).
+
+thf(thm_2Ereal__topology_2EIN__SPHERE,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal,V1y: tyop_2Erealax_2Ereal,V2e: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V1y @ ( c_2Ereal__topology_2Esphere @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0x @ V2e ) ) )
+    <=> ( ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0x @ V1y ) )
+        = V2e ) ) ).
+
+thf(thm_2Ereal__topology_2EIN__BALL__0,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal,V1e: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V0x @ ( c_2Ereal__topology_2Eball @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V1e ) ) )
+      = ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Eabs @ V0x ) @ V1e ) ) ).
+
+thf(thm_2Ereal__topology_2EIN__CBALL__0,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal,V1e: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V0x @ ( c_2Ereal__topology_2Ecball @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V1e ) ) )
+      = ( c_2Ereal_2Ereal__lte @ ( c_2Ereal_2Eabs @ V0x ) @ V1e ) ) ).
+
+thf(thm_2Ereal__topology_2EIN__SPHERE__0,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal,V1e: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V0x @ ( c_2Ereal__topology_2Esphere @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V1e ) ) )
+    <=> ( ( c_2Ereal_2Eabs @ V0x )
+        = V1e ) ) ).
+
+thf(thm_2Ereal__topology_2EBALL__TRIVIAL,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2Eball @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0x @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) ) )
+      = ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) ) ).
+
+thf(thm_2Ereal__topology_2ECBALL__TRIVIAL,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2Ecball @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0x @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) ) )
+      = ( c_2Epred__set_2EINSERT @ tyop_2Erealax_2Ereal @ V0x @ ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) ) ) ).
+
+thf(thm_2Ereal__topology_2ECENTRE__IN__CBALL,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal,V1e: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V0x @ ( c_2Ereal__topology_2Ecball @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0x @ V1e ) ) )
+      = ( c_2Ereal_2Ereal__lte @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V1e ) ) ).
+
+thf(thm_2Ereal__topology_2EBALL__SUBSET__CBALL,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal,V1e: tyop_2Erealax_2Ereal] : ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Eball @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0x @ V1e ) ) @ ( c_2Ereal__topology_2Ecball @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0x @ V1e ) ) ) ).
+
+thf(thm_2Ereal__topology_2ESPHERE__SUBSET__CBALL,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal,V1e: tyop_2Erealax_2Ereal] : ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Esphere @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0x @ V1e ) ) @ ( c_2Ereal__topology_2Ecball @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0x @ V1e ) ) ) ).
+
+thf(thm_2Ereal__topology_2ESUBSET__BALL,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal,V1d: tyop_2Erealax_2Ereal,V2e: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal_2Ereal__lte @ V1d @ V2e )
+     => ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Eball @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0x @ V1d ) ) @ ( c_2Ereal__topology_2Eball @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0x @ V2e ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ESUBSET__CBALL,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal,V1d: tyop_2Erealax_2Ereal,V2e: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal_2Ereal__lte @ V1d @ V2e )
+     => ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Ecball @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0x @ V1d ) ) @ ( c_2Ereal__topology_2Ecball @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0x @ V2e ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EBALL__MAX__UNION,axiom,
+    ! [V0a: tyop_2Erealax_2Ereal,V1r: tyop_2Erealax_2Ereal,V2s: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2Eball @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ ( c_2Ereal_2Emax @ V1r @ V2s ) ) )
+      = ( c_2Epred__set_2EUNION @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Eball @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ V1r ) ) @ ( c_2Ereal__topology_2Eball @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ V2s ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EBALL__MIN__INTER,axiom,
+    ! [V0a: tyop_2Erealax_2Ereal,V1r: tyop_2Erealax_2Ereal,V2s: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2Eball @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ ( c_2Ereal_2Emin @ V1r @ V2s ) ) )
+      = ( c_2Epred__set_2EINTER @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Eball @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ V1r ) ) @ ( c_2Ereal__topology_2Eball @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ V2s ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ECBALL__MAX__UNION,axiom,
+    ! [V0a: tyop_2Erealax_2Ereal,V1r: tyop_2Erealax_2Ereal,V2s: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2Ecball @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ ( c_2Ereal_2Emax @ V1r @ V2s ) ) )
+      = ( c_2Epred__set_2EUNION @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Ecball @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ V1r ) ) @ ( c_2Ereal__topology_2Ecball @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ V2s ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ECBALL__MIN__INTER,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal,V1d: tyop_2Erealax_2Ereal,V2e: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2Ecball @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0x @ ( c_2Ereal_2Emin @ V1d @ V2e ) ) )
+      = ( c_2Epred__set_2EINTER @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Ecball @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0x @ V1d ) ) @ ( c_2Ereal__topology_2Ecball @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0x @ V2e ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EBALL__TRANSLATION,axiom,
+    ! [V0a: tyop_2Erealax_2Ereal,V1x: tyop_2Erealax_2Ereal,V2r: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2Eball @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ ( c_2Erealax_2Ereal__add @ V0a @ V1x ) @ V2r ) )
+      = ( c_2Epred__set_2EIMAGE @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal
+        @ ^ [V3y: tyop_2Erealax_2Ereal] : ( c_2Erealax_2Ereal__add @ V0a @ V3y )
+        @ ( c_2Ereal__topology_2Eball @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V1x @ V2r ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ECBALL__TRANSLATION,axiom,
+    ! [V0a: tyop_2Erealax_2Ereal,V1x: tyop_2Erealax_2Ereal,V2r: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2Ecball @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ ( c_2Erealax_2Ereal__add @ V0a @ V1x ) @ V2r ) )
+      = ( c_2Epred__set_2EIMAGE @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal
+        @ ^ [V3y: tyop_2Erealax_2Ereal] : ( c_2Erealax_2Ereal__add @ V0a @ V3y )
+        @ ( c_2Ereal__topology_2Ecball @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V1x @ V2r ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ESPHERE__TRANSLATION,axiom,
+    ! [V0a: tyop_2Erealax_2Ereal,V1x: tyop_2Erealax_2Ereal,V2r: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2Esphere @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ ( c_2Erealax_2Ereal__add @ V0a @ V1x ) @ V2r ) )
+      = ( c_2Epred__set_2EIMAGE @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal
+        @ ^ [V3y: tyop_2Erealax_2Ereal] : ( c_2Erealax_2Ereal__add @ V0a @ V3y )
+        @ ( c_2Ereal__topology_2Esphere @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V1x @ V2r ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EBALL__LINEAR__IMAGE,axiom,
+    ! [V0f: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal,V1x: tyop_2Erealax_2Ereal,V2r: tyop_2Erealax_2Ereal] :
+      ( ( ( c_2Ereal__topology_2Elinear @ V0f )
+        & ! [V3y: tyop_2Erealax_2Ereal] :
+          ? [V4x: tyop_2Erealax_2Ereal] :
+            ( ( V0f @ V4x )
+            = V3y )
+        & ! [V5x: tyop_2Erealax_2Ereal] :
+            ( ( c_2Ereal_2Eabs @ ( V0f @ V5x ) )
+            = ( c_2Ereal_2Eabs @ V5x ) ) )
+     => ( ( c_2Ereal__topology_2Eball @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ ( V0f @ V1x ) @ V2r ) )
+        = ( c_2Epred__set_2EIMAGE @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0f @ ( c_2Ereal__topology_2Eball @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V1x @ V2r ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ECBALL__LINEAR__IMAGE,axiom,
+    ! [V0f: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal,V1x: tyop_2Erealax_2Ereal,V2r: tyop_2Erealax_2Ereal] :
+      ( ( ( c_2Ereal__topology_2Elinear @ V0f )
+        & ! [V3y: tyop_2Erealax_2Ereal] :
+          ? [V4x: tyop_2Erealax_2Ereal] :
+            ( ( V0f @ V4x )
+            = V3y )
+        & ! [V5x: tyop_2Erealax_2Ereal] :
+            ( ( c_2Ereal_2Eabs @ ( V0f @ V5x ) )
+            = ( c_2Ereal_2Eabs @ V5x ) ) )
+     => ( ( c_2Ereal__topology_2Ecball @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ ( V0f @ V1x ) @ V2r ) )
+        = ( c_2Epred__set_2EIMAGE @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0f @ ( c_2Ereal__topology_2Ecball @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V1x @ V2r ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ESPHERE__LINEAR__IMAGE,axiom,
+    ! [V0f: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal,V1x: tyop_2Erealax_2Ereal,V2r: tyop_2Erealax_2Ereal] :
+      ( ( ( c_2Ereal__topology_2Elinear @ V0f )
+        & ! [V3y: tyop_2Erealax_2Ereal] :
+          ? [V4x: tyop_2Erealax_2Ereal] :
+            ( ( V0f @ V4x )
+            = V3y )
+        & ! [V5x: tyop_2Erealax_2Ereal] :
+            ( ( c_2Ereal_2Eabs @ ( V0f @ V5x ) )
+            = ( c_2Ereal_2Eabs @ V5x ) ) )
+     => ( ( c_2Ereal__topology_2Esphere @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ ( V0f @ V1x ) @ V2r ) )
+        = ( c_2Epred__set_2EIMAGE @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0f @ ( c_2Ereal__topology_2Esphere @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V1x @ V2r ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EBALL__SCALING,axiom,
+    ! [V0c: tyop_2Erealax_2Ereal] :
+      ( ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V0c )
+     => ! [V1x: tyop_2Erealax_2Ereal,V2r: tyop_2Erealax_2Ereal] :
+          ( ( c_2Ereal__topology_2Eball @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ ( c_2Erealax_2Ereal__mul @ V0c @ V1x ) @ ( c_2Erealax_2Ereal__mul @ V0c @ V2r ) ) )
+          = ( c_2Epred__set_2EIMAGE @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal
+            @ ^ [V3x: tyop_2Erealax_2Ereal] : ( c_2Erealax_2Ereal__mul @ V0c @ V3x )
+            @ ( c_2Ereal__topology_2Eball @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V1x @ V2r ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ECBALL__SCALING,axiom,
+    ! [V0c: tyop_2Erealax_2Ereal] :
+      ( ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V0c )
+     => ! [V1x: tyop_2Erealax_2Ereal,V2r: tyop_2Erealax_2Ereal] :
+          ( ( c_2Ereal__topology_2Ecball @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ ( c_2Erealax_2Ereal__mul @ V0c @ V1x ) @ ( c_2Erealax_2Ereal__mul @ V0c @ V2r ) ) )
+          = ( c_2Epred__set_2EIMAGE @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal
+            @ ^ [V3x: tyop_2Erealax_2Ereal] : ( c_2Erealax_2Ereal__mul @ V0c @ V3x )
+            @ ( c_2Ereal__topology_2Ecball @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V1x @ V2r ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ECBALL__DIFF__BALL,axiom,
+    ! [V0a: tyop_2Erealax_2Ereal,V1r: tyop_2Erealax_2Ereal] :
+      ( ( c_2Epred__set_2EDIFF @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Ecball @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ V1r ) ) @ ( c_2Ereal__topology_2Eball @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ V1r ) ) )
+      = ( c_2Ereal__topology_2Esphere @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ V1r ) ) ) ).
+
+thf(thm_2Ereal__topology_2EBALL__UNION__SPHERE,axiom,
+    ! [V0a: tyop_2Erealax_2Ereal,V1r: tyop_2Erealax_2Ereal] :
+      ( ( c_2Epred__set_2EUNION @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Eball @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ V1r ) ) @ ( c_2Ereal__topology_2Esphere @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ V1r ) ) )
+      = ( c_2Ereal__topology_2Ecball @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ V1r ) ) ) ).
+
+thf(thm_2Ereal__topology_2ESPHERE__UNION__BALL,axiom,
+    ! [V0a: tyop_2Erealax_2Ereal,V1r: tyop_2Erealax_2Ereal] :
+      ( ( c_2Epred__set_2EUNION @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Esphere @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ V1r ) ) @ ( c_2Ereal__topology_2Eball @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ V1r ) ) )
+      = ( c_2Ereal__topology_2Ecball @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ V1r ) ) ) ).
+
+thf(thm_2Ereal__topology_2ECBALL__DIFF__SPHERE,axiom,
+    ! [V0a: tyop_2Erealax_2Ereal,V1r: tyop_2Erealax_2Ereal] :
+      ( ( c_2Epred__set_2EDIFF @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Ecball @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ V1r ) ) @ ( c_2Ereal__topology_2Esphere @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ V1r ) ) )
+      = ( c_2Ereal__topology_2Eball @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ V1r ) ) ) ).
+
+thf(thm_2Ereal__topology_2EOPEN__BALL,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal,V1e: tyop_2Erealax_2Ereal] : ( c_2Ereal__topology_2EOpen @ ( c_2Ereal__topology_2Eball @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0x @ V1e ) ) ) ).
+
+thf(thm_2Ereal__topology_2ECENTRE__IN__BALL,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal,V1e: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V0x @ ( c_2Ereal__topology_2Eball @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0x @ V1e ) ) )
+      = ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V1e ) ) ).
+
+thf(thm_2Ereal__topology_2EOPEN__CONTAINS__BALL,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ereal__topology_2EOpen @ V0s )
+    <=> ! [V1x: tyop_2Erealax_2Ereal] :
+          ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V1x @ V0s )
+         => ? [V2e: tyop_2Erealax_2Ereal] :
+              ( ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V2e )
+              & ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Eball @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V1x @ V2e ) ) @ V0s ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EOPEN__CONTAINS__BALL__EQ,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ereal__topology_2EOpen @ V0s )
+     => ! [V1x: tyop_2Erealax_2Ereal] :
+          ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V1x @ V0s )
+        <=> ? [V2e: tyop_2Erealax_2Ereal] :
+              ( ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V2e )
+              & ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Eball @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V1x @ V2e ) ) @ V0s ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EBALL__EQ__EMPTY,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal,V1e: tyop_2Erealax_2Ereal] :
+      ( ( ( c_2Ereal__topology_2Eball @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0x @ V1e ) )
+        = ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) )
+    <=> ( c_2Ereal_2Ereal__lte @ V1e @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) ) ) ).
+
+thf(thm_2Ereal__topology_2EBALL__EMPTY,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal,V1e: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal_2Ereal__lte @ V1e @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) )
+     => ( ( c_2Ereal__topology_2Eball @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0x @ V1e ) )
+        = ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) ) ) ).
+
+thf(thm_2Ereal__topology_2EOPEN__CONTAINS__CBALL,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ereal__topology_2EOpen @ V0s )
+    <=> ! [V1x: tyop_2Erealax_2Ereal] :
+          ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V1x @ V0s )
+         => ? [V2e: tyop_2Erealax_2Ereal] :
+              ( ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V2e )
+              & ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Ecball @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V1x @ V2e ) ) @ V0s ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EOPEN__CONTAINS__CBALL__EQ,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ereal__topology_2EOpen @ V0s )
+     => ! [V1x: tyop_2Erealax_2Ereal] :
+          ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V1x @ V0s )
+        <=> ? [V2e: tyop_2Erealax_2Ereal] :
+              ( ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V2e )
+              & ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Ecball @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V1x @ V2e ) ) @ V0s ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ESPHERE__EQ__EMPTY,axiom,
+    ! [V0a: tyop_2Erealax_2Ereal,V1r: tyop_2Erealax_2Ereal] :
+      ( ( ( c_2Ereal__topology_2Esphere @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ V1r ) )
+        = ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) )
+    <=> ( c_2Erealax_2Ereal__lt @ V1r @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) ) ) ).
+
+thf(thm_2Ereal__topology_2ESPHERE__EMPTY,axiom,
+    ! [V0a: tyop_2Erealax_2Ereal,V1r: tyop_2Erealax_2Ereal] :
+      ( ( c_2Erealax_2Ereal__lt @ V1r @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) )
+     => ( ( c_2Ereal__topology_2Esphere @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ V1r ) )
+        = ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) ) ) ).
+
+thf(thm_2Ereal__topology_2ENEGATIONS__BALL,axiom,
+    ! [V0r: tyop_2Erealax_2Ereal] :
+      ( ( c_2Epred__set_2EIMAGE @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal
+        @ ^ [V1x: tyop_2Erealax_2Ereal] : ( c_2Erealax_2Ereal__neg @ V1x )
+        @ ( c_2Ereal__topology_2Eball @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V0r ) ) )
+      = ( c_2Ereal__topology_2Eball @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V0r ) ) ) ).
+
+thf(thm_2Ereal__topology_2ENEGATIONS__CBALL,axiom,
+    ! [V0r: tyop_2Erealax_2Ereal] :
+      ( ( c_2Epred__set_2EIMAGE @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal
+        @ ^ [V1x: tyop_2Erealax_2Ereal] : ( c_2Erealax_2Ereal__neg @ V1x )
+        @ ( c_2Ereal__topology_2Ecball @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V0r ) ) )
+      = ( c_2Ereal__topology_2Ecball @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V0r ) ) ) ).
+
+thf(thm_2Ereal__topology_2ENEGATIONS__SPHERE,axiom,
+    ! [V0r: tyop_2Erealax_2Ereal] :
+      ( ( c_2Epred__set_2EIMAGE @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal
+        @ ^ [V1x: tyop_2Erealax_2Ereal] : ( c_2Erealax_2Ereal__neg @ V1x )
+        @ ( c_2Ereal__topology_2Esphere @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V0r ) ) )
+      = ( c_2Ereal__topology_2Esphere @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V0r ) ) ) ).
+
+thf(thm_2Ereal__topology_2EOPEN__IN__OPEN,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1u: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Etopology_2Eopen__in @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Esubtopology @ tyop_2Erealax_2Ereal @ c_2Ereal__topology_2Eeuclidean @ V1u ) @ V0s )
+    <=> ? [V2t: tyop_2Erealax_2Ereal > $o] :
+          ( ( c_2Ereal__topology_2EOpen @ V2t )
+          & ( V0s
+            = ( c_2Epred__set_2EINTER @ tyop_2Erealax_2Ereal @ V1u @ V2t ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EOPEN__IN__INTER__OPEN,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1t: tyop_2Erealax_2Ereal > $o,V2u: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( c_2Etopology_2Eopen__in @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Esubtopology @ tyop_2Erealax_2Ereal @ c_2Ereal__topology_2Eeuclidean @ V2u ) @ V0s )
+        & ( c_2Ereal__topology_2EOpen @ V1t ) )
+     => ( c_2Etopology_2Eopen__in @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Esubtopology @ tyop_2Erealax_2Ereal @ c_2Ereal__topology_2Eeuclidean @ V2u ) @ ( c_2Epred__set_2EINTER @ tyop_2Erealax_2Ereal @ V0s @ V1t ) ) ) ).
+
+thf(thm_2Ereal__topology_2EOPEN__IN__OPEN__INTER,axiom,
+    ! [V0u: tyop_2Erealax_2Ereal > $o,V1s: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ereal__topology_2EOpen @ V1s )
+     => ( c_2Etopology_2Eopen__in @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Esubtopology @ tyop_2Erealax_2Ereal @ c_2Ereal__topology_2Eeuclidean @ V0u ) @ ( c_2Epred__set_2EINTER @ tyop_2Erealax_2Ereal @ V0u @ V1s ) ) ) ).
+
+thf(thm_2Ereal__topology_2EOPEN__OPEN__IN__TRANS,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1t: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( c_2Ereal__topology_2EOpen @ V0s )
+        & ( c_2Ereal__topology_2EOpen @ V1t )
+        & ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ V1t @ V0s ) )
+     => ( c_2Etopology_2Eopen__in @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Esubtopology @ tyop_2Erealax_2Ereal @ c_2Ereal__topology_2Eeuclidean @ V0s ) @ V1t ) ) ).
+
+thf(thm_2Ereal__topology_2EOPEN__SUBSET,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1t: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ V0s @ V1t )
+        & ( c_2Ereal__topology_2EOpen @ V0s ) )
+     => ( c_2Etopology_2Eopen__in @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Esubtopology @ tyop_2Erealax_2Ereal @ c_2Ereal__topology_2Eeuclidean @ V1t ) @ V0s ) ) ).
+
+thf(thm_2Ereal__topology_2ECLOSED__IN__CLOSED,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1u: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Etopology_2Eclosed__in @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Esubtopology @ tyop_2Erealax_2Ereal @ c_2Ereal__topology_2Eeuclidean @ V1u ) @ V0s )
+    <=> ? [V2t: tyop_2Erealax_2Ereal > $o] :
+          ( ( c_2Ereal__topology_2EClosed @ V2t )
+          & ( V0s
+            = ( c_2Epred__set_2EINTER @ tyop_2Erealax_2Ereal @ V1u @ V2t ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ECLOSED__SUBSET__EQ,axiom,
+    ! [V0u: tyop_2Erealax_2Ereal > $o,V1s: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ereal__topology_2EClosed @ V1s )
+     => ( ( c_2Etopology_2Eclosed__in @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Esubtopology @ tyop_2Erealax_2Ereal @ c_2Ereal__topology_2Eeuclidean @ V0u ) @ V1s )
+        = ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ V1s @ V0u ) ) ) ).
+
+thf(thm_2Ereal__topology_2ECLOSED__IN__INTER__CLOSED,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1t: tyop_2Erealax_2Ereal > $o,V2u: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( c_2Etopology_2Eclosed__in @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Esubtopology @ tyop_2Erealax_2Ereal @ c_2Ereal__topology_2Eeuclidean @ V2u ) @ V0s )
+        & ( c_2Ereal__topology_2EClosed @ V1t ) )
+     => ( c_2Etopology_2Eclosed__in @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Esubtopology @ tyop_2Erealax_2Ereal @ c_2Ereal__topology_2Eeuclidean @ V2u ) @ ( c_2Epred__set_2EINTER @ tyop_2Erealax_2Ereal @ V0s @ V1t ) ) ) ).
+
+thf(thm_2Ereal__topology_2ECLOSED__IN__CLOSED__INTER,axiom,
+    ! [V0u: tyop_2Erealax_2Ereal > $o,V1s: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ereal__topology_2EClosed @ V1s )
+     => ( c_2Etopology_2Eclosed__in @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Esubtopology @ tyop_2Erealax_2Ereal @ c_2Ereal__topology_2Eeuclidean @ V0u ) @ ( c_2Epred__set_2EINTER @ tyop_2Erealax_2Ereal @ V0u @ V1s ) ) ) ).
+
+thf(thm_2Ereal__topology_2ECLOSED__SUBSET,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1t: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ V0s @ V1t )
+        & ( c_2Ereal__topology_2EClosed @ V0s ) )
+     => ( c_2Etopology_2Eclosed__in @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Esubtopology @ tyop_2Erealax_2Ereal @ c_2Ereal__topology_2Eeuclidean @ V1t ) @ V0s ) ) ).
+
+thf(thm_2Ereal__topology_2EOPEN__IN__SUBSET__TRANS,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1t: tyop_2Erealax_2Ereal > $o,V2u: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( c_2Etopology_2Eopen__in @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Esubtopology @ tyop_2Erealax_2Ereal @ c_2Ereal__topology_2Eeuclidean @ V2u ) @ V0s )
+        & ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ V0s @ V1t )
+        & ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ V1t @ V2u ) )
+     => ( c_2Etopology_2Eopen__in @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Esubtopology @ tyop_2Erealax_2Ereal @ c_2Ereal__topology_2Eeuclidean @ V1t ) @ V0s ) ) ).
+
+thf(thm_2Ereal__topology_2ECLOSED__IN__SUBSET__TRANS,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1t: tyop_2Erealax_2Ereal > $o,V2u: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( c_2Etopology_2Eclosed__in @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Esubtopology @ tyop_2Erealax_2Ereal @ c_2Ereal__topology_2Eeuclidean @ V2u ) @ V0s )
+        & ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ V0s @ V1t )
+        & ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ V1t @ V2u ) )
+     => ( c_2Etopology_2Eclosed__in @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Esubtopology @ tyop_2Erealax_2Ereal @ c_2Ereal__topology_2Eeuclidean @ V1t ) @ V0s ) ) ).
+
+thf(thm_2Ereal__topology_2Eopen__in,axiom,
+    ! [V0u: tyop_2Erealax_2Ereal > $o,V1s: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Etopology_2Eopen__in @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Esubtopology @ tyop_2Erealax_2Ereal @ c_2Ereal__topology_2Eeuclidean @ V0u ) @ V1s )
+    <=> ( ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ V1s @ V0u )
+        & ! [V2x: tyop_2Erealax_2Ereal] :
+            ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V2x @ V1s )
+           => ? [V3e: tyop_2Erealax_2Ereal] :
+                ( ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V3e )
+                & ! [V4x_27: tyop_2Erealax_2Ereal] :
+                    ( ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V4x_27 @ V0u )
+                      & ( c_2Erealax_2Ereal__lt @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V4x_27 @ V2x ) ) @ V3e ) )
+                   => ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V4x_27 @ V1s ) ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EOPEN__IN__CONTAINS__BALL,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1t: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Etopology_2Eopen__in @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Esubtopology @ tyop_2Erealax_2Ereal @ c_2Ereal__topology_2Eeuclidean @ V1t ) @ V0s )
+    <=> ( ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ V0s @ V1t )
+        & ! [V2x: tyop_2Erealax_2Ereal] :
+            ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V2x @ V0s )
+           => ? [V3e: tyop_2Erealax_2Ereal] :
+                ( ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V3e )
+                & ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ ( c_2Epred__set_2EINTER @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Eball @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V2x @ V3e ) ) @ V1t ) @ V0s ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EOPEN__IN__CONTAINS__CBALL,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1t: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Etopology_2Eopen__in @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Esubtopology @ tyop_2Erealax_2Ereal @ c_2Ereal__topology_2Eeuclidean @ V1t ) @ V0s )
+    <=> ( ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ V0s @ V1t )
+        & ! [V2x: tyop_2Erealax_2Ereal] :
+            ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V2x @ V0s )
+           => ? [V3e: tyop_2Erealax_2Ereal] :
+                ( ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V3e )
+                & ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ ( c_2Epred__set_2EINTER @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Ecball @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V2x @ V3e ) ) @ V1t ) @ V0s ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EOPEN__IN__TRANS,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1t: tyop_2Erealax_2Ereal > $o,V2u: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( c_2Etopology_2Eopen__in @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Esubtopology @ tyop_2Erealax_2Ereal @ c_2Ereal__topology_2Eeuclidean @ V1t ) @ V0s )
+        & ( c_2Etopology_2Eopen__in @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Esubtopology @ tyop_2Erealax_2Ereal @ c_2Ereal__topology_2Eeuclidean @ V2u ) @ V1t ) )
+     => ( c_2Etopology_2Eopen__in @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Esubtopology @ tyop_2Erealax_2Ereal @ c_2Ereal__topology_2Eeuclidean @ V2u ) @ V0s ) ) ).
+
+thf(thm_2Ereal__topology_2EOPEN__IN__TRANS__EQ,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1t: tyop_2Erealax_2Ereal > $o] :
+      ( ! [V2u: tyop_2Erealax_2Ereal > $o] :
+          ( ( c_2Etopology_2Eopen__in @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Esubtopology @ tyop_2Erealax_2Ereal @ c_2Ereal__topology_2Eeuclidean @ V1t ) @ V2u )
+         => ( c_2Etopology_2Eopen__in @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Esubtopology @ tyop_2Erealax_2Ereal @ c_2Ereal__topology_2Eeuclidean @ V0s ) @ V1t ) )
+    <=> ( c_2Etopology_2Eopen__in @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Esubtopology @ tyop_2Erealax_2Ereal @ c_2Ereal__topology_2Eeuclidean @ V0s ) @ V1t ) ) ).
+
+thf(thm_2Ereal__topology_2EOPEN__IN__OPEN__TRANS,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1t: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( c_2Etopology_2Eopen__in @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Esubtopology @ tyop_2Erealax_2Ereal @ c_2Ereal__topology_2Eeuclidean @ V1t ) @ V0s )
+        & ( c_2Ereal__topology_2EOpen @ V1t ) )
+     => ( c_2Ereal__topology_2EOpen @ V0s ) ) ).
+
+thf(thm_2Ereal__topology_2ECLOSED__IN__TRANS,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1t: tyop_2Erealax_2Ereal > $o,V2u: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( c_2Etopology_2Eclosed__in @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Esubtopology @ tyop_2Erealax_2Ereal @ c_2Ereal__topology_2Eeuclidean @ V1t ) @ V0s )
+        & ( c_2Etopology_2Eclosed__in @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Esubtopology @ tyop_2Erealax_2Ereal @ c_2Ereal__topology_2Eeuclidean @ V2u ) @ V1t ) )
+     => ( c_2Etopology_2Eclosed__in @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Esubtopology @ tyop_2Erealax_2Ereal @ c_2Ereal__topology_2Eeuclidean @ V2u ) @ V0s ) ) ).
+
+thf(thm_2Ereal__topology_2ECLOSED__IN__TRANS__EQ,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1t: tyop_2Erealax_2Ereal > $o] :
+      ( ! [V2u: tyop_2Erealax_2Ereal > $o] :
+          ( ( c_2Etopology_2Eclosed__in @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Esubtopology @ tyop_2Erealax_2Ereal @ c_2Ereal__topology_2Eeuclidean @ V1t ) @ V2u )
+         => ( c_2Etopology_2Eclosed__in @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Esubtopology @ tyop_2Erealax_2Ereal @ c_2Ereal__topology_2Eeuclidean @ V0s ) @ V1t ) )
+    <=> ( c_2Etopology_2Eclosed__in @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Esubtopology @ tyop_2Erealax_2Ereal @ c_2Ereal__topology_2Eeuclidean @ V0s ) @ V1t ) ) ).
+
+thf(thm_2Ereal__topology_2ECLOSED__IN__CLOSED__TRANS,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1t: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( c_2Etopology_2Eclosed__in @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Esubtopology @ tyop_2Erealax_2Ereal @ c_2Ereal__topology_2Eeuclidean @ V1t ) @ V0s )
+        & ( c_2Ereal__topology_2EClosed @ V1t ) )
+     => ( c_2Ereal__topology_2EClosed @ V0s ) ) ).
+
+thf(thm_2Ereal__topology_2EOPEN__IN__SUBTOPOLOGY__INTER__SUBSET,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1u: tyop_2Erealax_2Ereal > $o,V2v: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( c_2Etopology_2Eopen__in @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Esubtopology @ tyop_2Erealax_2Ereal @ c_2Ereal__topology_2Eeuclidean @ V1u ) @ ( c_2Epred__set_2EINTER @ tyop_2Erealax_2Ereal @ V1u @ V0s ) )
+        & ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ V2v @ V1u ) )
+     => ( c_2Etopology_2Eopen__in @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Esubtopology @ tyop_2Erealax_2Ereal @ c_2Ereal__topology_2Eeuclidean @ V2v ) @ ( c_2Epred__set_2EINTER @ tyop_2Erealax_2Ereal @ V2v @ V0s ) ) ) ).
+
+thf(thm_2Ereal__topology_2EOPEN__IN__OPEN__EQ,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1t: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ereal__topology_2EOpen @ V0s )
+     => ( ( c_2Etopology_2Eopen__in @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Esubtopology @ tyop_2Erealax_2Ereal @ c_2Ereal__topology_2Eeuclidean @ V0s ) @ V1t )
+      <=> ( ( c_2Ereal__topology_2EOpen @ V1t )
+          & ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ V1t @ V0s ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ECLOSED__IN__CLOSED__EQ,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1t: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ereal__topology_2EClosed @ V0s )
+     => ( ( c_2Etopology_2Eclosed__in @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Esubtopology @ tyop_2Erealax_2Ereal @ c_2Ereal__topology_2Eeuclidean @ V0s ) @ V1t )
+      <=> ( ( c_2Ereal__topology_2EClosed @ V1t )
+          & ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ V1t @ V0s ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EOPEN__SEGMENT__ALT,axiom,
+    ! [V0a: tyop_2Erealax_2Ereal,V1b: tyop_2Erealax_2Ereal] :
+      ( ( (~) @ ( V0a = V1b ) )
+     => ( ( c_2Ereal__topology_2Eopen__segment @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ V1b ) )
+        = ( c_2Epred__set_2EGSPEC @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal
+          @ ^ [V2u: tyop_2Erealax_2Ereal] : ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ $o @ ( c_2Erealax_2Ereal__add @ ( c_2Erealax_2Ereal__mul @ ( c_2Ereal_2Ereal__sub @ ( c_2Ereal_2Ereal__of__num @ ( c_2Earithmetic_2ENUMERAL @ ( c_2Earithmetic_2EBIT1 @ c_2Earithmetic_2EZERO ) ) ) @ V2u ) @ V0a ) @ ( c_2Erealax_2Ereal__mul @ V2u @ V1b ) ) @ ( c_2Ebool_2E_2F_5C @ ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V2u ) @ ( c_2Erealax_2Ereal__lt @ V2u @ ( c_2Ereal_2Ereal__of__num @ ( c_2Earithmetic_2ENUMERAL @ ( c_2Earithmetic_2EBIT1 @ c_2Earithmetic_2EZERO ) ) ) ) ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2Esegment,axiom,
+    ! [V0b: tyop_2Erealax_2Ereal,V1a: tyop_2Erealax_2Ereal] :
+      ( ( ( c_2Ereal__topology_2Eclosed__segment @ ( c_2Elist_2ECONS @ ( tyop_2Epair_2Eprod @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal ) @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V1a @ V0b ) @ ( c_2Elist_2ENIL @ ( tyop_2Epair_2Eprod @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal ) ) ) )
+        = ( c_2Epred__set_2EGSPEC @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal
+          @ ^ [V2u: tyop_2Erealax_2Ereal] : ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ $o @ ( c_2Erealax_2Ereal__add @ ( c_2Erealax_2Ereal__mul @ ( c_2Ereal_2Ereal__sub @ ( c_2Ereal_2Ereal__of__num @ ( c_2Earithmetic_2ENUMERAL @ ( c_2Earithmetic_2EBIT1 @ c_2Earithmetic_2EZERO ) ) ) @ V2u ) @ V1a ) @ ( c_2Erealax_2Ereal__mul @ V2u @ V0b ) ) @ ( c_2Ebool_2E_2F_5C @ ( c_2Ereal_2Ereal__lte @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V2u ) @ ( c_2Ereal_2Ereal__lte @ V2u @ ( c_2Ereal_2Ereal__of__num @ ( c_2Earithmetic_2ENUMERAL @ ( c_2Earithmetic_2EBIT1 @ c_2Earithmetic_2EZERO ) ) ) ) ) ) ) )
+      & ( ( c_2Ereal__topology_2Eopen__segment @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V1a @ V0b ) )
+        = ( c_2Epred__set_2EDIFF @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Eclosed__segment @ ( c_2Elist_2ECONS @ ( tyop_2Epair_2Eprod @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal ) @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V1a @ V0b ) @ ( c_2Elist_2ENIL @ ( tyop_2Epair_2Eprod @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal ) ) ) ) @ ( c_2Epred__set_2EINSERT @ tyop_2Erealax_2Ereal @ V1a @ ( c_2Epred__set_2EINSERT @ tyop_2Erealax_2Ereal @ V0b @ ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ESEGMENT__REFL,axiom,
+    ( ! [V0a: tyop_2Erealax_2Ereal] :
+        ( ( c_2Ereal__topology_2Eclosed__segment @ ( c_2Elist_2ECONS @ ( tyop_2Epair_2Eprod @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal ) @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ V0a ) @ ( c_2Elist_2ENIL @ ( tyop_2Epair_2Eprod @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal ) ) ) )
+        = ( c_2Epred__set_2EINSERT @ tyop_2Erealax_2Ereal @ V0a @ ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) ) )
+    & ! [V1a: tyop_2Erealax_2Ereal] :
+        ( ( c_2Ereal__topology_2Eopen__segment @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V1a @ V1a ) )
+        = ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) ) ) ).
+
+thf(thm_2Ereal__topology_2EIN__SEGMENT,axiom,
+    ! [V0a: tyop_2Erealax_2Ereal,V1b: tyop_2Erealax_2Ereal,V2x: tyop_2Erealax_2Ereal] :
+      ( ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V2x @ ( c_2Ereal__topology_2Eclosed__segment @ ( c_2Elist_2ECONS @ ( tyop_2Epair_2Eprod @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal ) @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ V1b ) @ ( c_2Elist_2ENIL @ ( tyop_2Epair_2Eprod @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal ) ) ) ) )
+      <=> ? [V3u: tyop_2Erealax_2Ereal] :
+            ( ( c_2Ereal_2Ereal__lte @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V3u )
+            & ( c_2Ereal_2Ereal__lte @ V3u @ ( c_2Ereal_2Ereal__of__num @ ( c_2Earithmetic_2ENUMERAL @ ( c_2Earithmetic_2EBIT1 @ c_2Earithmetic_2EZERO ) ) ) )
+            & ( V2x
+              = ( c_2Erealax_2Ereal__add @ ( c_2Erealax_2Ereal__mul @ ( c_2Ereal_2Ereal__sub @ ( c_2Ereal_2Ereal__of__num @ ( c_2Earithmetic_2ENUMERAL @ ( c_2Earithmetic_2EBIT1 @ c_2Earithmetic_2EZERO ) ) ) @ V3u ) @ V0a ) @ ( c_2Erealax_2Ereal__mul @ V3u @ V1b ) ) ) ) )
+      & ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V2x @ ( c_2Ereal__topology_2Eopen__segment @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ V1b ) ) )
+      <=> ( ( (~) @ ( V0a = V1b ) )
+          & ? [V4u: tyop_2Erealax_2Ereal] :
+              ( ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V4u )
+              & ( c_2Erealax_2Ereal__lt @ V4u @ ( c_2Ereal_2Ereal__of__num @ ( c_2Earithmetic_2ENUMERAL @ ( c_2Earithmetic_2EBIT1 @ c_2Earithmetic_2EZERO ) ) ) )
+              & ( V2x
+                = ( c_2Erealax_2Ereal__add @ ( c_2Erealax_2Ereal__mul @ ( c_2Ereal_2Ereal__sub @ ( c_2Ereal_2Ereal__of__num @ ( c_2Earithmetic_2ENUMERAL @ ( c_2Earithmetic_2EBIT1 @ c_2Earithmetic_2EZERO ) ) ) @ V4u ) @ V0a ) @ ( c_2Erealax_2Ereal__mul @ V4u @ V1b ) ) ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ESEGMENT__SYM,axiom,
+    ( ! [V0a: tyop_2Erealax_2Ereal,V1b: tyop_2Erealax_2Ereal] :
+        ( ( c_2Ereal__topology_2Eclosed__segment @ ( c_2Elist_2ECONS @ ( tyop_2Epair_2Eprod @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal ) @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ V1b ) @ ( c_2Elist_2ENIL @ ( tyop_2Epair_2Eprod @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal ) ) ) )
+        = ( c_2Ereal__topology_2Eclosed__segment @ ( c_2Elist_2ECONS @ ( tyop_2Epair_2Eprod @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal ) @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V1b @ V0a ) @ ( c_2Elist_2ENIL @ ( tyop_2Epair_2Eprod @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal ) ) ) ) )
+    & ! [V2a: tyop_2Erealax_2Ereal,V3b: tyop_2Erealax_2Ereal] :
+        ( ( c_2Ereal__topology_2Eopen__segment @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V2a @ V3b ) )
+        = ( c_2Ereal__topology_2Eopen__segment @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V3b @ V2a ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EENDS__IN__SEGMENT,axiom,
+    ! [V0a: tyop_2Erealax_2Ereal,V1b: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V0a @ ( c_2Ereal__topology_2Eclosed__segment @ ( c_2Elist_2ECONS @ ( tyop_2Epair_2Eprod @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal ) @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ V1b ) @ ( c_2Elist_2ENIL @ ( tyop_2Epair_2Eprod @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal ) ) ) ) )
+      & ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V1b @ ( c_2Ereal__topology_2Eclosed__segment @ ( c_2Elist_2ECONS @ ( tyop_2Epair_2Eprod @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal ) @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ V1b ) @ ( c_2Elist_2ENIL @ ( tyop_2Epair_2Eprod @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal ) ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EENDS__NOT__IN__SEGMENT,axiom,
+    ! [V0a: tyop_2Erealax_2Ereal,V1b: tyop_2Erealax_2Ereal] :
+      ( ( (~) @ ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V0a @ ( c_2Ereal__topology_2Eopen__segment @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ V1b ) ) ) )
+      & ( (~) @ ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V1b @ ( c_2Ereal__topology_2Eopen__segment @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ V1b ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ESEGMENT__CLOSED__OPEN,axiom,
+    ! [V0a: tyop_2Erealax_2Ereal,V1b: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2Eclosed__segment @ ( c_2Elist_2ECONS @ ( tyop_2Epair_2Eprod @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal ) @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ V1b ) @ ( c_2Elist_2ENIL @ ( tyop_2Epair_2Eprod @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal ) ) ) )
+      = ( c_2Epred__set_2EUNION @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Eopen__segment @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ V1b ) ) @ ( c_2Epred__set_2EINSERT @ tyop_2Erealax_2Ereal @ V0a @ ( c_2Epred__set_2EINSERT @ tyop_2Erealax_2Ereal @ V1b @ ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ESEGMENT__OPEN__SUBSET__CLOSED,axiom,
+    ! [V0a: tyop_2Erealax_2Ereal,V1b: tyop_2Erealax_2Ereal] : ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Eopen__segment @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ V1b ) ) @ ( c_2Ereal__topology_2Eclosed__segment @ ( c_2Elist_2ECONS @ ( tyop_2Epair_2Eprod @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal ) @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ V1b ) @ ( c_2Elist_2ENIL @ ( tyop_2Epair_2Eprod @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EMIDPOINT__IN__SEGMENT,axiom,
+    ( ! [V0a: tyop_2Erealax_2Ereal,V1b: tyop_2Erealax_2Ereal] : ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Emidpoint @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ V1b ) ) @ ( c_2Ereal__topology_2Eclosed__segment @ ( c_2Elist_2ECONS @ ( tyop_2Epair_2Eprod @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal ) @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ V1b ) @ ( c_2Elist_2ENIL @ ( tyop_2Epair_2Eprod @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal ) ) ) ) )
+    & ! [V2a: tyop_2Erealax_2Ereal,V3b: tyop_2Erealax_2Ereal] :
+        ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Emidpoint @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V2a @ V3b ) ) @ ( c_2Ereal__topology_2Eopen__segment @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V2a @ V3b ) ) )
+      <=> ( (~) @ ( V2a = V3b ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EBETWEEN__IN__SEGMENT,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal,V1a: tyop_2Erealax_2Ereal,V2b: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2Ebetween @ V0x @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V1a @ V2b ) )
+      = ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V0x @ ( c_2Ereal__topology_2Eclosed__segment @ ( c_2Elist_2ECONS @ ( tyop_2Epair_2Eprod @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal ) @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V1a @ V2b ) @ ( c_2Elist_2ENIL @ ( tyop_2Epair_2Eprod @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal ) ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EREAL__CONVEX__BOUND__LE,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal,V1y: tyop_2Erealax_2Ereal,V2a: tyop_2Erealax_2Ereal,V3u: tyop_2Erealax_2Ereal,V4v: tyop_2Erealax_2Ereal] :
+      ( ( ( c_2Ereal_2Ereal__lte @ V0x @ V2a )
+        & ( c_2Ereal_2Ereal__lte @ V1y @ V2a )
+        & ( c_2Ereal_2Ereal__lte @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V3u )
+        & ( c_2Ereal_2Ereal__lte @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V4v )
+        & ( ( c_2Erealax_2Ereal__add @ V3u @ V4v )
+          = ( c_2Ereal_2Ereal__of__num @ ( c_2Earithmetic_2ENUMERAL @ ( c_2Earithmetic_2EBIT1 @ c_2Earithmetic_2EZERO ) ) ) ) )
+     => ( c_2Ereal_2Ereal__lte @ ( c_2Erealax_2Ereal__add @ ( c_2Erealax_2Ereal__mul @ V3u @ V0x ) @ ( c_2Erealax_2Ereal__mul @ V4v @ V1y ) ) @ V2a ) ) ).
+
+thf(thm_2Ereal__topology_2EIN__SEGMENT__COMPONENT,axiom,
+    ! [A_27a: $tType,V0a: tyop_2Erealax_2Ereal,V1b: tyop_2Erealax_2Ereal,V2x: tyop_2Erealax_2Ereal,V3i: A_27a] :
+      ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V2x @ ( c_2Ereal__topology_2Eclosed__segment @ ( c_2Elist_2ECONS @ ( tyop_2Epair_2Eprod @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal ) @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ V1b ) @ ( c_2Elist_2ENIL @ ( tyop_2Epair_2Eprod @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal ) ) ) ) )
+     => ( ( c_2Ereal_2Ereal__lte @ ( c_2Ereal_2Emin @ V0a @ V1b ) @ V2x )
+        & ( c_2Ereal_2Ereal__lte @ V2x @ ( c_2Ereal_2Emax @ V0a @ V1b ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ESEGMENT__TRANSLATION,axiom,
+    ( ! [V0c: tyop_2Erealax_2Ereal,V1a: tyop_2Erealax_2Ereal,V2b: tyop_2Erealax_2Ereal] :
+        ( ( c_2Ereal__topology_2Eclosed__segment @ ( c_2Elist_2ECONS @ ( tyop_2Epair_2Eprod @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal ) @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ ( c_2Erealax_2Ereal__add @ V0c @ V1a ) @ ( c_2Erealax_2Ereal__add @ V0c @ V2b ) ) @ ( c_2Elist_2ENIL @ ( tyop_2Epair_2Eprod @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal ) ) ) )
+        = ( c_2Epred__set_2EIMAGE @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal
+          @ ^ [V3x: tyop_2Erealax_2Ereal] : ( c_2Erealax_2Ereal__add @ V0c @ V3x )
+          @ ( c_2Ereal__topology_2Eclosed__segment @ ( c_2Elist_2ECONS @ ( tyop_2Epair_2Eprod @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal ) @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V1a @ V2b ) @ ( c_2Elist_2ENIL @ ( tyop_2Epair_2Eprod @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal ) ) ) ) ) )
+    & ! [V4c: tyop_2Erealax_2Ereal,V5a: tyop_2Erealax_2Ereal,V6b: tyop_2Erealax_2Ereal] :
+        ( ( c_2Ereal__topology_2Eopen__segment @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ ( c_2Erealax_2Ereal__add @ V4c @ V5a ) @ ( c_2Erealax_2Ereal__add @ V4c @ V6b ) ) )
+        = ( c_2Epred__set_2EIMAGE @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal
+          @ ^ [V7x: tyop_2Erealax_2Ereal] : ( c_2Erealax_2Ereal__add @ V4c @ V7x )
+          @ ( c_2Ereal__topology_2Eopen__segment @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V5a @ V6b ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ECLOSED__SEGMENT__LINEAR__IMAGE,axiom,
+    ! [V0f: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal,V1a: tyop_2Erealax_2Ereal,V2b: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2Elinear @ V0f )
+     => ( ( c_2Ereal__topology_2Eclosed__segment @ ( c_2Elist_2ECONS @ ( tyop_2Epair_2Eprod @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal ) @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ ( V0f @ V1a ) @ ( V0f @ V2b ) ) @ ( c_2Elist_2ENIL @ ( tyop_2Epair_2Eprod @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal ) ) ) )
+        = ( c_2Epred__set_2EIMAGE @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0f @ ( c_2Ereal__topology_2Eclosed__segment @ ( c_2Elist_2ECONS @ ( tyop_2Epair_2Eprod @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal ) @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V1a @ V2b ) @ ( c_2Elist_2ENIL @ ( tyop_2Epair_2Eprod @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal ) ) ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EOPEN__SEGMENT__LINEAR__IMAGE,axiom,
+    ! [V0f: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal,V1a: tyop_2Erealax_2Ereal,V2b: tyop_2Erealax_2Ereal] :
+      ( ( ( c_2Ereal__topology_2Elinear @ V0f )
+        & ! [V3x: tyop_2Erealax_2Ereal,V4y: tyop_2Erealax_2Ereal] :
+            ( ( ( V0f @ V3x )
+              = ( V0f @ V4y ) )
+           => ( V3x = V4y ) ) )
+     => ( ( c_2Ereal__topology_2Eopen__segment @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ ( V0f @ V1a ) @ ( V0f @ V2b ) ) )
+        = ( c_2Epred__set_2EIMAGE @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0f @ ( c_2Ereal__topology_2Eopen__segment @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V1a @ V2b ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EIN__OPEN__SEGMENT,axiom,
+    ! [V0a: tyop_2Erealax_2Ereal,V1b: tyop_2Erealax_2Ereal,V2x: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V2x @ ( c_2Ereal__topology_2Eopen__segment @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ V1b ) ) )
+    <=> ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V2x @ ( c_2Ereal__topology_2Eclosed__segment @ ( c_2Elist_2ECONS @ ( tyop_2Epair_2Eprod @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal ) @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ V1b ) @ ( c_2Elist_2ENIL @ ( tyop_2Epair_2Eprod @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal ) ) ) ) )
+        & ( (~) @ ( V2x = V0a ) )
+        & ( (~) @ ( V2x = V1b ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EIN__OPEN__SEGMENT__ALT,axiom,
+    ! [V0a: tyop_2Erealax_2Ereal,V1b: tyop_2Erealax_2Ereal,V2x: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V2x @ ( c_2Ereal__topology_2Eopen__segment @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ V1b ) ) )
+    <=> ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V2x @ ( c_2Ereal__topology_2Eclosed__segment @ ( c_2Elist_2ECONS @ ( tyop_2Epair_2Eprod @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal ) @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ V1b ) @ ( c_2Elist_2ENIL @ ( tyop_2Epair_2Eprod @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal ) ) ) ) )
+        & ( (~) @ ( V2x = V0a ) )
+        & ( (~) @ ( V2x = V1b ) )
+        & ( (~) @ ( V0a = V1b ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ECOLLINEAR__DIST__IN__CLOSED__SEGMENT,axiom,
+    ! [V0a: tyop_2Erealax_2Ereal,V1b: tyop_2Erealax_2Ereal,V2x: tyop_2Erealax_2Ereal] :
+      ( ( ( c_2Ereal__topology_2Ecollinear @ ( c_2Epred__set_2EINSERT @ tyop_2Erealax_2Ereal @ V2x @ ( c_2Epred__set_2EINSERT @ tyop_2Erealax_2Ereal @ V0a @ ( c_2Epred__set_2EINSERT @ tyop_2Erealax_2Ereal @ V1b @ ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) ) ) ) )
+        & ( c_2Ereal_2Ereal__lte @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V2x @ V0a ) ) @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ V1b ) ) )
+        & ( c_2Ereal_2Ereal__lte @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V2x @ V1b ) ) @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ V1b ) ) ) )
+     => ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V2x @ ( c_2Ereal__topology_2Eclosed__segment @ ( c_2Elist_2ECONS @ ( tyop_2Epair_2Eprod @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal ) @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ V1b ) @ ( c_2Elist_2ENIL @ ( tyop_2Epair_2Eprod @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal ) ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ECOLLINEAR__DIST__IN__OPEN__SEGMENT,axiom,
+    ! [V0a: tyop_2Erealax_2Ereal,V1b: tyop_2Erealax_2Ereal,V2x: tyop_2Erealax_2Ereal] :
+      ( ( ( c_2Ereal__topology_2Ecollinear @ ( c_2Epred__set_2EINSERT @ tyop_2Erealax_2Ereal @ V2x @ ( c_2Epred__set_2EINSERT @ tyop_2Erealax_2Ereal @ V0a @ ( c_2Epred__set_2EINSERT @ tyop_2Erealax_2Ereal @ V1b @ ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) ) ) ) )
+        & ( c_2Erealax_2Ereal__lt @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V2x @ V0a ) ) @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ V1b ) ) )
+        & ( c_2Erealax_2Ereal__lt @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V2x @ V1b ) ) @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ V1b ) ) ) )
+     => ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V2x @ ( c_2Ereal__topology_2Eopen__segment @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ V1b ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EDIST__IN__OPEN__CLOSED__SEGMENT,axiom,
+    ( ! [V0a: tyop_2Erealax_2Ereal,V1b: tyop_2Erealax_2Ereal,V2x: tyop_2Erealax_2Ereal] :
+        ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V2x @ ( c_2Ereal__topology_2Eclosed__segment @ ( c_2Elist_2ECONS @ ( tyop_2Epair_2Eprod @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal ) @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ V1b ) @ ( c_2Elist_2ENIL @ ( tyop_2Epair_2Eprod @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal ) ) ) ) )
+       => ( ( c_2Ereal_2Ereal__lte @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V2x @ V0a ) ) @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ V1b ) ) )
+          & ( c_2Ereal_2Ereal__lte @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V2x @ V1b ) ) @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ V1b ) ) ) ) )
+    & ! [V3a: tyop_2Erealax_2Ereal,V4b: tyop_2Erealax_2Ereal,V5x: tyop_2Erealax_2Ereal] :
+        ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V5x @ ( c_2Ereal__topology_2Eopen__segment @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V3a @ V4b ) ) )
+       => ( ( c_2Erealax_2Ereal__lt @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V5x @ V3a ) ) @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V3a @ V4b ) ) )
+          & ( c_2Erealax_2Ereal__lt @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V5x @ V4b ) ) @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V3a @ V4b ) ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EDIST__IN__CLOSED__SEGMENT,axiom,
+    ! [V0a: tyop_2Erealax_2Ereal,V1b: tyop_2Erealax_2Ereal,V2x: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V2x @ ( c_2Ereal__topology_2Eclosed__segment @ ( c_2Elist_2ECONS @ ( tyop_2Epair_2Eprod @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal ) @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ V1b ) @ ( c_2Elist_2ENIL @ ( tyop_2Epair_2Eprod @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal ) ) ) ) )
+     => ( ( c_2Ereal_2Ereal__lte @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V2x @ V0a ) ) @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ V1b ) ) )
+        & ( c_2Ereal_2Ereal__lte @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V2x @ V1b ) ) @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ V1b ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EDIST__IN__OPEN__SEGMENT,axiom,
+    ! [V0a: tyop_2Erealax_2Ereal,V1b: tyop_2Erealax_2Ereal,V2x: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V2x @ ( c_2Ereal__topology_2Eopen__segment @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ V1b ) ) )
+     => ( ( c_2Erealax_2Ereal__lt @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V2x @ V0a ) ) @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ V1b ) ) )
+        & ( c_2Erealax_2Ereal__lt @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V2x @ V1b ) ) @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ V1b ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ECONNECTED__CLOSED,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ereal__topology_2Econnected @ V0s )
+    <=> ( (~)
+        @ ? [V1e1: tyop_2Erealax_2Ereal > $o,V2e2: tyop_2Erealax_2Ereal > $o] :
+            ( ( c_2Ereal__topology_2EClosed @ V1e1 )
+            & ( c_2Ereal__topology_2EClosed @ V2e2 )
+            & ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ V0s @ ( c_2Epred__set_2EUNION @ tyop_2Erealax_2Ereal @ V1e1 @ V2e2 ) )
+            & ( ( c_2Epred__set_2EINTER @ tyop_2Erealax_2Ereal @ ( c_2Epred__set_2EINTER @ tyop_2Erealax_2Ereal @ V1e1 @ V2e2 ) @ V0s )
+              = ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) )
+            & ( (~)
+              @ ( ( c_2Epred__set_2EINTER @ tyop_2Erealax_2Ereal @ V1e1 @ V0s )
+                = ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) ) )
+            & ( (~)
+              @ ( ( c_2Epred__set_2EINTER @ tyop_2Erealax_2Ereal @ V2e2 @ V0s )
+                = ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ECONNECTED__OPEN__IN,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ereal__topology_2Econnected @ V0s )
+    <=> ( (~)
+        @ ? [V1e1: tyop_2Erealax_2Ereal > $o,V2e2: tyop_2Erealax_2Ereal > $o] :
+            ( ( c_2Etopology_2Eopen__in @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Esubtopology @ tyop_2Erealax_2Ereal @ c_2Ereal__topology_2Eeuclidean @ V0s ) @ V1e1 )
+            & ( c_2Etopology_2Eopen__in @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Esubtopology @ tyop_2Erealax_2Ereal @ c_2Ereal__topology_2Eeuclidean @ V0s ) @ V2e2 )
+            & ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ V0s @ ( c_2Epred__set_2EUNION @ tyop_2Erealax_2Ereal @ V1e1 @ V2e2 ) )
+            & ( ( c_2Epred__set_2EINTER @ tyop_2Erealax_2Ereal @ V1e1 @ V2e2 )
+              = ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) )
+            & ( (~)
+              @ ( V1e1
+                = ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) ) )
+            & ( (~)
+              @ ( V2e2
+                = ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ECONNECTED__OPEN__IN__EQ,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ereal__topology_2Econnected @ V0s )
+    <=> ( (~)
+        @ ? [V1e1: tyop_2Erealax_2Ereal > $o,V2e2: tyop_2Erealax_2Ereal > $o] :
+            ( ( c_2Etopology_2Eopen__in @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Esubtopology @ tyop_2Erealax_2Ereal @ c_2Ereal__topology_2Eeuclidean @ V0s ) @ V1e1 )
+            & ( c_2Etopology_2Eopen__in @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Esubtopology @ tyop_2Erealax_2Ereal @ c_2Ereal__topology_2Eeuclidean @ V0s ) @ V2e2 )
+            & ( ( c_2Epred__set_2EUNION @ tyop_2Erealax_2Ereal @ V1e1 @ V2e2 )
+              = V0s )
+            & ( ( c_2Epred__set_2EINTER @ tyop_2Erealax_2Ereal @ V1e1 @ V2e2 )
+              = ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) )
+            & ( (~)
+              @ ( V1e1
+                = ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) ) )
+            & ( (~)
+              @ ( V2e2
+                = ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ECONNECTED__CLOSED__IN,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ereal__topology_2Econnected @ V0s )
+    <=> ( (~)
+        @ ? [V1e1: tyop_2Erealax_2Ereal > $o,V2e2: tyop_2Erealax_2Ereal > $o] :
+            ( ( c_2Etopology_2Eclosed__in @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Esubtopology @ tyop_2Erealax_2Ereal @ c_2Ereal__topology_2Eeuclidean @ V0s ) @ V1e1 )
+            & ( c_2Etopology_2Eclosed__in @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Esubtopology @ tyop_2Erealax_2Ereal @ c_2Ereal__topology_2Eeuclidean @ V0s ) @ V2e2 )
+            & ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ V0s @ ( c_2Epred__set_2EUNION @ tyop_2Erealax_2Ereal @ V1e1 @ V2e2 ) )
+            & ( ( c_2Epred__set_2EINTER @ tyop_2Erealax_2Ereal @ V1e1 @ V2e2 )
+              = ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) )
+            & ( (~)
+              @ ( V1e1
+                = ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) ) )
+            & ( (~)
+              @ ( V2e2
+                = ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ECONNECTED__CLOSED__IN__EQ,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ereal__topology_2Econnected @ V0s )
+    <=> ( (~)
+        @ ? [V1e1: tyop_2Erealax_2Ereal > $o,V2e2: tyop_2Erealax_2Ereal > $o] :
+            ( ( c_2Etopology_2Eclosed__in @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Esubtopology @ tyop_2Erealax_2Ereal @ c_2Ereal__topology_2Eeuclidean @ V0s ) @ V1e1 )
+            & ( c_2Etopology_2Eclosed__in @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Esubtopology @ tyop_2Erealax_2Ereal @ c_2Ereal__topology_2Eeuclidean @ V0s ) @ V2e2 )
+            & ( ( c_2Epred__set_2EUNION @ tyop_2Erealax_2Ereal @ V1e1 @ V2e2 )
+              = V0s )
+            & ( ( c_2Epred__set_2EINTER @ tyop_2Erealax_2Ereal @ V1e1 @ V2e2 )
+              = ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) )
+            & ( (~)
+              @ ( V1e1
+                = ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) ) )
+            & ( (~)
+              @ ( V2e2
+                = ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EEXISTS__DIFF,axiom,
+    ! [A_27a: $tType,V0P: ( A_27a > $o ) > $o] :
+      ( ? [V1s: A_27a > $o] : ( V0P @ ( c_2Epred__set_2EDIFF @ A_27a @ ( c_2Epred__set_2EUNIV @ A_27a ) @ V1s ) )
+    <=> ? [V2s: A_27a > $o] : ( V0P @ V2s ) ) ).
+
+thf(thm_2Ereal__topology_2ECONNECTED__CLOPEN,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ereal__topology_2Econnected @ V0s )
+    <=> ! [V1t: tyop_2Erealax_2Ereal > $o] :
+          ( ( ( c_2Etopology_2Eopen__in @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Esubtopology @ tyop_2Erealax_2Ereal @ c_2Ereal__topology_2Eeuclidean @ V0s ) @ V1t )
+            & ( c_2Etopology_2Eclosed__in @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Esubtopology @ tyop_2Erealax_2Ereal @ c_2Ereal__topology_2Eeuclidean @ V0s ) @ V1t ) )
+         => ( ( V1t
+              = ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) )
+            | ( V1t = V0s ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ECONNECTED__CLOSED__SET,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ereal__topology_2EClosed @ V0s )
+     => ( ( c_2Ereal__topology_2Econnected @ V0s )
+      <=> ( (~)
+          @ ? [V1e1: tyop_2Erealax_2Ereal > $o,V2e2: tyop_2Erealax_2Ereal > $o] :
+              ( ( c_2Ereal__topology_2EClosed @ V1e1 )
+              & ( c_2Ereal__topology_2EClosed @ V2e2 )
+              & ( (~)
+                @ ( V1e1
+                  = ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) ) )
+              & ( (~)
+                @ ( V2e2
+                  = ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) ) )
+              & ( ( c_2Epred__set_2EUNION @ tyop_2Erealax_2Ereal @ V1e1 @ V2e2 )
+                = V0s )
+              & ( ( c_2Epred__set_2EINTER @ tyop_2Erealax_2Ereal @ V1e1 @ V2e2 )
+                = ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ECONNECTED__OPEN__SET,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ereal__topology_2EOpen @ V0s )
+     => ( ( c_2Ereal__topology_2Econnected @ V0s )
+      <=> ( (~)
+          @ ? [V1e1: tyop_2Erealax_2Ereal > $o,V2e2: tyop_2Erealax_2Ereal > $o] :
+              ( ( c_2Ereal__topology_2EOpen @ V1e1 )
+              & ( c_2Ereal__topology_2EOpen @ V2e2 )
+              & ( (~)
+                @ ( V1e1
+                  = ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) ) )
+              & ( (~)
+                @ ( V2e2
+                  = ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) ) )
+              & ( ( c_2Epred__set_2EUNION @ tyop_2Erealax_2Ereal @ V1e1 @ V2e2 )
+                = V0s )
+              & ( ( c_2Epred__set_2EINTER @ tyop_2Erealax_2Ereal @ V1e1 @ V2e2 )
+                = ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ECONNECTED__IFF__CONNECTABLE__POINTS,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ereal__topology_2Econnected @ V0s )
+    <=> ! [V1a: tyop_2Erealax_2Ereal,V2b: tyop_2Erealax_2Ereal] :
+          ( ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V1a @ V0s )
+            & ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V2b @ V0s ) )
+         => ? [V3t: tyop_2Erealax_2Ereal > $o] :
+              ( ( c_2Ereal__topology_2Econnected @ V3t )
+              & ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ V3t @ V0s )
+              & ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V1a @ V3t )
+              & ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V2b @ V3t ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ECONNECTED__EMPTY,axiom,
+    c_2Ereal__topology_2Econnected @ ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) ).
+
+thf(thm_2Ereal__topology_2ECONNECTED__SING,axiom,
+    ! [V0a: tyop_2Erealax_2Ereal] : ( c_2Ereal__topology_2Econnected @ ( c_2Epred__set_2EINSERT @ tyop_2Erealax_2Ereal @ V0a @ ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) ) ) ).
+
+thf(thm_2Ereal__topology_2ECONNECTED__REAL__LEMMA,axiom,
+    ! [V0f: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal,V1a: tyop_2Erealax_2Ereal,V2b: tyop_2Erealax_2Ereal,V3e1: tyop_2Erealax_2Ereal > $o,V4e2: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( c_2Ereal_2Ereal__lte @ V1a @ V2b )
+        & ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ ( V0f @ V1a ) @ V3e1 )
+        & ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ ( V0f @ V2b ) @ V4e2 )
+        & ! [V5e: tyop_2Erealax_2Ereal,V6x: tyop_2Erealax_2Ereal] :
+            ( ( ( c_2Ereal_2Ereal__lte @ V1a @ V6x )
+              & ( c_2Ereal_2Ereal__lte @ V6x @ V2b )
+              & ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V5e ) )
+           => ? [V7d: tyop_2Erealax_2Ereal] :
+                ( ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V7d )
+                & ! [V8y: tyop_2Erealax_2Ereal] :
+                    ( ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Eabs @ ( c_2Ereal_2Ereal__sub @ V8y @ V6x ) ) @ V7d )
+                   => ( c_2Erealax_2Ereal__lt @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ ( V0f @ V8y ) @ ( V0f @ V6x ) ) ) @ V5e ) ) ) )
+        & ! [V9y: tyop_2Erealax_2Ereal] :
+            ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V9y @ V3e1 )
+           => ? [V10e: tyop_2Erealax_2Ereal] :
+                ( ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V10e )
+                & ! [V11y_27: tyop_2Erealax_2Ereal] :
+                    ( ( c_2Erealax_2Ereal__lt @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V11y_27 @ V9y ) ) @ V10e )
+                   => ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V11y_27 @ V3e1 ) ) ) )
+        & ! [V12y: tyop_2Erealax_2Ereal] :
+            ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V12y @ V4e2 )
+           => ? [V13e: tyop_2Erealax_2Ereal] :
+                ( ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V13e )
+                & ! [V14y_27: tyop_2Erealax_2Ereal] :
+                    ( ( c_2Erealax_2Ereal__lt @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V14y_27 @ V12y ) ) @ V13e )
+                   => ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V14y_27 @ V4e2 ) ) ) )
+        & ( (~)
+          @ ? [V15x: tyop_2Erealax_2Ereal] :
+              ( ( c_2Ereal_2Ereal__lte @ V1a @ V15x )
+              & ( c_2Ereal_2Ereal__lte @ V15x @ V2b )
+              & ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ ( V0f @ V15x ) @ V3e1 )
+              & ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ ( V0f @ V15x ) @ V4e2 ) ) ) )
+     => ? [V16x: tyop_2Erealax_2Ereal] :
+          ( ( c_2Ereal_2Ereal__lte @ V1a @ V16x )
+          & ( c_2Ereal_2Ereal__lte @ V16x @ V2b )
+          & ( (~) @ ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ ( V0f @ V16x ) @ V3e1 ) )
+          & ( (~) @ ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ ( V0f @ V16x ) @ V4e2 ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ECONNECTED__SEGMENT,axiom,
+    ( ! [V0a: tyop_2Erealax_2Ereal,V1b: tyop_2Erealax_2Ereal] : ( c_2Ereal__topology_2Econnected @ ( c_2Ereal__topology_2Eclosed__segment @ ( c_2Elist_2ECONS @ ( tyop_2Epair_2Eprod @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal ) @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ V1b ) @ ( c_2Elist_2ENIL @ ( tyop_2Epair_2Eprod @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal ) ) ) ) )
+    & ! [V2a: tyop_2Erealax_2Ereal,V3b: tyop_2Erealax_2Ereal] : ( c_2Ereal__topology_2Econnected @ ( c_2Ereal__topology_2Eopen__segment @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V2a @ V3b ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ECONNECTED__UNIV,axiom,
+    c_2Ereal__topology_2Econnected @ ( c_2Epred__set_2EUNIV @ tyop_2Erealax_2Ereal ) ).
+
+thf(thm_2Ereal__topology_2ECLOPEN,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( c_2Ereal__topology_2EClosed @ V0s )
+        & ( c_2Ereal__topology_2EOpen @ V0s ) )
+    <=> ( ( V0s
+          = ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) )
+        | ( V0s
+          = ( c_2Epred__set_2EUNIV @ tyop_2Erealax_2Ereal ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ECONNECTED__BIGUNION,axiom,
+    ! [V0P: ( tyop_2Erealax_2Ereal > $o ) > $o] :
+      ( ( ! [V1s: tyop_2Erealax_2Ereal > $o] :
+            ( ( c_2Ebool_2EIN @ ( tyop_2Erealax_2Ereal > $o ) @ V1s @ V0P )
+           => ( c_2Ereal__topology_2Econnected @ V1s ) )
+        & ( (~)
+          @ ( ( c_2Epred__set_2EBIGINTER @ tyop_2Erealax_2Ereal @ V0P )
+            = ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) ) ) )
+     => ( c_2Ereal__topology_2Econnected @ ( c_2Epred__set_2EBIGUNION @ tyop_2Erealax_2Ereal @ V0P ) ) ) ).
+
+thf(thm_2Ereal__topology_2ECONNECTED__UNION,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1t: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( c_2Ereal__topology_2Econnected @ V0s )
+        & ( c_2Ereal__topology_2Econnected @ V1t )
+        & ( (~)
+          @ ( ( c_2Epred__set_2EINTER @ tyop_2Erealax_2Ereal @ V0s @ V1t )
+            = ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) ) ) )
+     => ( c_2Ereal__topology_2Econnected @ ( c_2Epred__set_2EUNION @ tyop_2Erealax_2Ereal @ V0s @ V1t ) ) ) ).
+
+thf(thm_2Ereal__topology_2ECONNECTED__DIFF__OPEN__FROM__CLOSED,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1t: tyop_2Erealax_2Ereal > $o,V2u: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ V0s @ V1t )
+        & ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ V1t @ V2u )
+        & ( c_2Ereal__topology_2EOpen @ V0s )
+        & ( c_2Ereal__topology_2EClosed @ V1t )
+        & ( c_2Ereal__topology_2Econnected @ V2u )
+        & ( c_2Ereal__topology_2Econnected @ ( c_2Epred__set_2EDIFF @ tyop_2Erealax_2Ereal @ V1t @ V0s ) ) )
+     => ( c_2Ereal__topology_2Econnected @ ( c_2Epred__set_2EDIFF @ tyop_2Erealax_2Ereal @ V2u @ V0s ) ) ) ).
+
+thf(thm_2Ereal__topology_2ECONNECTED__DISJOINT__BIGUNION__OPEN__UNIQUE,axiom,
+    ! [V0f: ( tyop_2Erealax_2Ereal > $o ) > $o,V1f_27: ( tyop_2Erealax_2Ereal > $o ) > $o] :
+      ( ( ( c_2Ereal__topology_2Epairwise @ ( tyop_2Erealax_2Ereal > $o ) @ ( c_2Epred__set_2EDISJOINT @ tyop_2Erealax_2Ereal ) @ V0f )
+        & ( c_2Ereal__topology_2Epairwise @ ( tyop_2Erealax_2Ereal > $o ) @ ( c_2Epred__set_2EDISJOINT @ tyop_2Erealax_2Ereal ) @ V1f_27 )
+        & ! [V2s: tyop_2Erealax_2Ereal > $o] :
+            ( ( c_2Ebool_2EIN @ ( tyop_2Erealax_2Ereal > $o ) @ V2s @ V0f )
+           => ( ( c_2Ereal__topology_2EOpen @ V2s )
+              & ( c_2Ereal__topology_2Econnected @ V2s )
+              & ( (~)
+                @ ( V2s
+                  = ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) ) ) ) )
+        & ! [V3s: tyop_2Erealax_2Ereal > $o] :
+            ( ( c_2Ebool_2EIN @ ( tyop_2Erealax_2Ereal > $o ) @ V3s @ V1f_27 )
+           => ( ( c_2Ereal__topology_2EOpen @ V3s )
+              & ( c_2Ereal__topology_2Econnected @ V3s )
+              & ( (~)
+                @ ( V3s
+                  = ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) ) ) ) )
+        & ( ( c_2Epred__set_2EBIGUNION @ tyop_2Erealax_2Ereal @ V0f )
+          = ( c_2Epred__set_2EBIGUNION @ tyop_2Erealax_2Ereal @ V1f_27 ) ) )
+     => ( V0f = V1f_27 ) ) ).
+
+thf(thm_2Ereal__topology_2ECONNECTED__FROM__CLOSED__UNION__AND__INTER,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1t: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( c_2Ereal__topology_2EClosed @ V0s )
+        & ( c_2Ereal__topology_2EClosed @ V1t )
+        & ( c_2Ereal__topology_2Econnected @ ( c_2Epred__set_2EUNION @ tyop_2Erealax_2Ereal @ V0s @ V1t ) )
+        & ( c_2Ereal__topology_2Econnected @ ( c_2Epred__set_2EINTER @ tyop_2Erealax_2Ereal @ V0s @ V1t ) ) )
+     => ( ( c_2Ereal__topology_2Econnected @ V0s )
+        & ( c_2Ereal__topology_2Econnected @ V1t ) ) ) ).
+
+thf(thm_2Ereal__topology_2ECONNECTED__FROM__OPEN__UNION__AND__INTER,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1t: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( c_2Ereal__topology_2EOpen @ V0s )
+        & ( c_2Ereal__topology_2EOpen @ V1t )
+        & ( c_2Ereal__topology_2Econnected @ ( c_2Epred__set_2EUNION @ tyop_2Erealax_2Ereal @ V0s @ V1t ) )
+        & ( c_2Ereal__topology_2Econnected @ ( c_2Epred__set_2EINTER @ tyop_2Erealax_2Ereal @ V0s @ V1t ) ) )
+     => ( ( c_2Ereal__topology_2Econnected @ V0s )
+        & ( c_2Ereal__topology_2Econnected @ V1t ) ) ) ).
+
+thf(thm_2Ereal__topology_2ECONNECTED__INDUCTION,axiom,
+    ! [V0P: tyop_2Erealax_2Ereal > $o,V1Q: tyop_2Erealax_2Ereal > $o,V2s: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( c_2Ereal__topology_2Econnected @ V2s )
+        & ! [V3t: tyop_2Erealax_2Ereal > $o,V4a: tyop_2Erealax_2Ereal] :
+            ( ( ( c_2Etopology_2Eopen__in @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Esubtopology @ tyop_2Erealax_2Ereal @ c_2Ereal__topology_2Eeuclidean @ V2s ) @ V3t )
+              & ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V4a @ V3t ) )
+           => ? [V5z: tyop_2Erealax_2Ereal] :
+                ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V5z @ V3t )
+                & ( V0P @ V5z ) ) )
+        & ! [V6a: tyop_2Erealax_2Ereal] :
+            ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V6a @ V2s )
+           => ? [V7t: tyop_2Erealax_2Ereal > $o] :
+                ( ( c_2Etopology_2Eopen__in @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Esubtopology @ tyop_2Erealax_2Ereal @ c_2Ereal__topology_2Eeuclidean @ V2s ) @ V7t )
+                & ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V6a @ V7t )
+                & ! [V8x: tyop_2Erealax_2Ereal,V9y: tyop_2Erealax_2Ereal] :
+                    ( ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V8x @ V7t )
+                      & ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V9y @ V7t )
+                      & ( V0P @ V8x )
+                      & ( V0P @ V9y )
+                      & ( V1Q @ V8x ) )
+                   => ( V1Q @ V9y ) ) ) ) )
+     => ! [V10a: tyop_2Erealax_2Ereal,V11b: tyop_2Erealax_2Ereal] :
+          ( ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V10a @ V2s )
+            & ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V11b @ V2s )
+            & ( V0P @ V10a )
+            & ( V0P @ V11b )
+            & ( V1Q @ V10a ) )
+         => ( V1Q @ V11b ) ) ) ).
+
+thf(thm_2Ereal__topology_2ECONNECTED__EQUIVALENCE__RELATION__GEN,axiom,
+    ! [V0P: tyop_2Erealax_2Ereal > $o,V1R: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal > $o,V2s: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( c_2Ereal__topology_2Econnected @ V2s )
+        & ! [V3x: tyop_2Erealax_2Ereal,V4y: tyop_2Erealax_2Ereal] :
+            ( ( V1R @ V3x @ V4y )
+           => ( V1R @ V4y @ V3x ) )
+        & ! [V5x: tyop_2Erealax_2Ereal,V6y: tyop_2Erealax_2Ereal,V7z: tyop_2Erealax_2Ereal] :
+            ( ( ( V1R @ V5x @ V6y )
+              & ( V1R @ V6y @ V7z ) )
+           => ( V1R @ V5x @ V7z ) )
+        & ! [V8t: tyop_2Erealax_2Ereal > $o,V9a: tyop_2Erealax_2Ereal] :
+            ( ( ( c_2Etopology_2Eopen__in @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Esubtopology @ tyop_2Erealax_2Ereal @ c_2Ereal__topology_2Eeuclidean @ V2s ) @ V8t )
+              & ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V9a @ V8t ) )
+           => ? [V10z: tyop_2Erealax_2Ereal] :
+                ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V10z @ V8t )
+                & ( V0P @ V10z ) ) )
+        & ! [V11a: tyop_2Erealax_2Ereal] :
+            ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V11a @ V2s )
+           => ? [V12t: tyop_2Erealax_2Ereal > $o] :
+                ( ( c_2Etopology_2Eopen__in @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Esubtopology @ tyop_2Erealax_2Ereal @ c_2Ereal__topology_2Eeuclidean @ V2s ) @ V12t )
+                & ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V11a @ V12t )
+                & ! [V13x: tyop_2Erealax_2Ereal,V14y: tyop_2Erealax_2Ereal] :
+                    ( ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V13x @ V12t )
+                      & ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V14y @ V12t )
+                      & ( V0P @ V13x )
+                      & ( V0P @ V14y ) )
+                   => ( V1R @ V13x @ V14y ) ) ) ) )
+     => ! [V15a: tyop_2Erealax_2Ereal,V16b: tyop_2Erealax_2Ereal] :
+          ( ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V15a @ V2s )
+            & ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V16b @ V2s )
+            & ( V0P @ V15a )
+            & ( V0P @ V16b ) )
+         => ( V1R @ V15a @ V16b ) ) ) ).
+
+thf(thm_2Ereal__topology_2ECONNECTED__INDUCTION__SIMPLE,axiom,
+    ! [V0P: tyop_2Erealax_2Ereal > $o,V1s: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( c_2Ereal__topology_2Econnected @ V1s )
+        & ! [V2a: tyop_2Erealax_2Ereal] :
+            ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V2a @ V1s )
+           => ? [V3t: tyop_2Erealax_2Ereal > $o] :
+                ( ( c_2Etopology_2Eopen__in @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Esubtopology @ tyop_2Erealax_2Ereal @ c_2Ereal__topology_2Eeuclidean @ V1s ) @ V3t )
+                & ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V2a @ V3t )
+                & ! [V4x: tyop_2Erealax_2Ereal,V5y: tyop_2Erealax_2Ereal] :
+                    ( ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V4x @ V3t )
+                      & ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V5y @ V3t )
+                      & ( V0P @ V4x ) )
+                   => ( V0P @ V5y ) ) ) ) )
+     => ! [V6a: tyop_2Erealax_2Ereal,V7b: tyop_2Erealax_2Ereal] :
+          ( ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V6a @ V1s )
+            & ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V7b @ V1s )
+            & ( V0P @ V6a ) )
+         => ( V0P @ V7b ) ) ) ).
+
+thf(thm_2Ereal__topology_2ECONNECTED__EQUIVALENCE__RELATION,axiom,
+    ! [V0R: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal > $o,V1s: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( c_2Ereal__topology_2Econnected @ V1s )
+        & ! [V2x: tyop_2Erealax_2Ereal,V3y: tyop_2Erealax_2Ereal] :
+            ( ( V0R @ V2x @ V3y )
+           => ( V0R @ V3y @ V2x ) )
+        & ! [V4x: tyop_2Erealax_2Ereal,V5y: tyop_2Erealax_2Ereal,V6z: tyop_2Erealax_2Ereal] :
+            ( ( ( V0R @ V4x @ V5y )
+              & ( V0R @ V5y @ V6z ) )
+           => ( V0R @ V4x @ V6z ) )
+        & ! [V7a: tyop_2Erealax_2Ereal] :
+            ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V7a @ V1s )
+           => ? [V8t: tyop_2Erealax_2Ereal > $o] :
+                ( ( c_2Etopology_2Eopen__in @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Esubtopology @ tyop_2Erealax_2Ereal @ c_2Ereal__topology_2Eeuclidean @ V1s ) @ V8t )
+                & ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V7a @ V8t )
+                & ! [V9x: tyop_2Erealax_2Ereal] :
+                    ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V9x @ V8t )
+                   => ( V0R @ V7a @ V9x ) ) ) ) )
+     => ! [V10a: tyop_2Erealax_2Ereal,V11b: tyop_2Erealax_2Ereal] :
+          ( ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V10a @ V1s )
+            & ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V11b @ V1s ) )
+         => ( V0R @ V10a @ V11b ) ) ) ).
+
+thf(thm_2Ereal__topology_2ELIMPT__SUBSET,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal,V1s: tyop_2Erealax_2Ereal > $o,V2t: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( c_2Ereal__topology_2Elimit__point__of @ V0x @ V1s )
+        & ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ V1s @ V2t ) )
+     => ( c_2Ereal__topology_2Elimit__point__of @ V0x @ V2t ) ) ).
+
+thf(thm_2Ereal__topology_2ELIMPT__APPROACHABLE,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal,V1s: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ereal__topology_2Elimit__point__of @ V0x @ V1s )
+    <=> ! [V2e: tyop_2Erealax_2Ereal] :
+          ( ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V2e )
+         => ? [V3x_27: tyop_2Erealax_2Ereal] :
+              ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V3x_27 @ V1s )
+              & ( (~) @ ( V3x_27 = V0x ) )
+              & ( c_2Erealax_2Ereal__lt @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V3x_27 @ V0x ) ) @ V2e ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EAPPROACHABLE__LT__LE,axiom,
+    ! [A_27a: $tType,V0P: A_27a > $o,V1f: A_27a > tyop_2Erealax_2Ereal] :
+      ( ? [V2d: tyop_2Erealax_2Ereal] :
+          ( ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V2d )
+          & ! [V3x: A_27a] :
+              ( ( c_2Erealax_2Ereal__lt @ ( V1f @ V3x ) @ V2d )
+             => ( V0P @ V3x ) ) )
+    <=> ? [V4d: tyop_2Erealax_2Ereal] :
+          ( ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V4d )
+          & ! [V5x: A_27a] :
+              ( ( c_2Ereal_2Ereal__lte @ ( V1f @ V5x ) @ V4d )
+             => ( V0P @ V5x ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ELIMPT__APPROACHABLE__LE,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal,V1s: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ereal__topology_2Elimit__point__of @ V0x @ V1s )
+    <=> ! [V2e: tyop_2Erealax_2Ereal] :
+          ( ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V2e )
+         => ? [V3x_27: tyop_2Erealax_2Ereal] :
+              ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V3x_27 @ V1s )
+              & ( (~) @ ( V3x_27 = V0x ) )
+              & ( c_2Ereal_2Ereal__lte @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V3x_27 @ V0x ) ) @ V2e ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EREAL__CHOOSE__SIZE,axiom,
+    ! [V0c: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal_2Ereal__lte @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V0c )
+     => ? [V1x: tyop_2Erealax_2Ereal] :
+          ( ( c_2Ereal_2Eabs @ V1x )
+          = V0c ) ) ).
+
+thf(thm_2Ereal__topology_2ELIMPT__UNIV,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal] : ( c_2Ereal__topology_2Elimit__point__of @ V0x @ ( c_2Epred__set_2EUNIV @ tyop_2Erealax_2Ereal ) ) ).
+
+thf(thm_2Ereal__topology_2ECLOSED__LIMPT,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ereal__topology_2EClosed @ V0s )
+    <=> ! [V1x: tyop_2Erealax_2Ereal] :
+          ( ( c_2Ereal__topology_2Elimit__point__of @ V1x @ V0s )
+         => ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V1x @ V0s ) ) ) ).
+
+thf(thm_2Ereal__topology_2ELIMPT__EMPTY,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal] : ( (~) @ ( c_2Ereal__topology_2Elimit__point__of @ V0x @ ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) ) ) ).
+
+thf(thm_2Ereal__topology_2ENO__LIMIT__POINT__IMP__CLOSED,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o] :
+      ( ( (~)
+        @ ? [V1x: tyop_2Erealax_2Ereal] : ( c_2Ereal__topology_2Elimit__point__of @ V1x @ V0s ) )
+     => ( c_2Ereal__topology_2EClosed @ V0s ) ) ).
+
+thf(thm_2Ereal__topology_2ECLOSED__POSITIVE__ORTHANT,axiom,
+    ( c_2Ereal__topology_2EClosed
+    @ ( c_2Epred__set_2EGSPEC @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal
+      @ ^ [V0x: tyop_2Erealax_2Ereal] : ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ $o @ V0x @ ( c_2Ereal_2Ereal__lte @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V0x ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EFINITE__SET__AVOID,axiom,
+    ! [V0a: tyop_2Erealax_2Ereal,V1s: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Epred__set_2EFINITE @ tyop_2Erealax_2Ereal @ V1s )
+     => ? [V2d: tyop_2Erealax_2Ereal] :
+          ( ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V2d )
+          & ! [V3x: tyop_2Erealax_2Ereal] :
+              ( ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V3x @ V1s )
+                & ( (~) @ ( V3x = V0a ) ) )
+             => ( c_2Ereal_2Ereal__lte @ V2d @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ V3x ) ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ELIMIT__POINT__FINITE,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1a: tyop_2Erealax_2Ereal] :
+      ( ( c_2Epred__set_2EFINITE @ tyop_2Erealax_2Ereal @ V0s )
+     => ( (~) @ ( c_2Ereal__topology_2Elimit__point__of @ V1a @ V0s ) ) ) ).
+
+thf(thm_2Ereal__topology_2ELIMPT__SING,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal,V1y: tyop_2Erealax_2Ereal] : ( (~) @ ( c_2Ereal__topology_2Elimit__point__of @ V0x @ ( c_2Epred__set_2EINSERT @ tyop_2Erealax_2Ereal @ V1y @ ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ELIMIT__POINT__UNION,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1t: tyop_2Erealax_2Ereal > $o,V2x: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2Elimit__point__of @ V2x @ ( c_2Epred__set_2EUNION @ tyop_2Erealax_2Ereal @ V0s @ V1t ) )
+    <=> ( ( c_2Ereal__topology_2Elimit__point__of @ V2x @ V0s )
+        | ( c_2Ereal__topology_2Elimit__point__of @ V2x @ V1t ) ) ) ).
+
+thf(thm_2Ereal__topology_2ELIMPT__INSERT,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1x: tyop_2Erealax_2Ereal,V2y: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2Elimit__point__of @ V1x @ ( c_2Epred__set_2EINSERT @ tyop_2Erealax_2Ereal @ V2y @ V0s ) )
+      = ( c_2Ereal__topology_2Elimit__point__of @ V1x @ V0s ) ) ).
+
+thf(thm_2Ereal__topology_2ELIMPT__OF__LIMPTS,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal,V1s: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ereal__topology_2Elimit__point__of @ V0x
+        @ ( c_2Epred__set_2EGSPEC @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal
+          @ ^ [V2y: tyop_2Erealax_2Ereal] : ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ $o @ V2y @ ( c_2Ereal__topology_2Elimit__point__of @ V2y @ V1s ) ) ) )
+     => ( c_2Ereal__topology_2Elimit__point__of @ V0x @ V1s ) ) ).
+
+thf(thm_2Ereal__topology_2ECLOSED__LIMPTS,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o] :
+      ( c_2Ereal__topology_2EClosed
+      @ ( c_2Epred__set_2EGSPEC @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal
+        @ ^ [V1x: tyop_2Erealax_2Ereal] : ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ $o @ V1x @ ( c_2Ereal__topology_2Elimit__point__of @ V1x @ V0s ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EDISCRETE__IMP__CLOSED,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1e: tyop_2Erealax_2Ereal] :
+      ( ( ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V1e )
+        & ! [V2x: tyop_2Erealax_2Ereal,V3y: tyop_2Erealax_2Ereal] :
+            ( ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V2x @ V0s )
+              & ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V3y @ V0s )
+              & ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Eabs @ ( c_2Ereal_2Ereal__sub @ V3y @ V2x ) ) @ V1e ) )
+           => ( V3y = V2x ) ) )
+     => ( c_2Ereal__topology_2EClosed @ V0s ) ) ).
+
+thf(thm_2Ereal__topology_2ELIMPT__OF__UNIV,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal] : ( c_2Ereal__topology_2Elimit__point__of @ V0x @ ( c_2Epred__set_2EUNIV @ tyop_2Erealax_2Ereal ) ) ).
+
+thf(thm_2Ereal__topology_2ELIMPT__OF__OPEN__IN,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1t: tyop_2Erealax_2Ereal > $o,V2x: tyop_2Erealax_2Ereal] :
+      ( ( ( c_2Etopology_2Eopen__in @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Esubtopology @ tyop_2Erealax_2Ereal @ c_2Ereal__topology_2Eeuclidean @ V0s ) @ V1t )
+        & ( c_2Ereal__topology_2Elimit__point__of @ V2x @ V0s )
+        & ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V2x @ V1t ) )
+     => ( c_2Ereal__topology_2Elimit__point__of @ V2x @ V1t ) ) ).
+
+thf(thm_2Ereal__topology_2ELIMPT__OF__OPEN,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1x: tyop_2Erealax_2Ereal] :
+      ( ( ( c_2Ereal__topology_2EOpen @ V0s )
+        & ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V1x @ V0s ) )
+     => ( c_2Ereal__topology_2Elimit__point__of @ V1x @ V0s ) ) ).
+
+thf(thm_2Ereal__topology_2EOPEN__IN__SING,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1a: tyop_2Erealax_2Ereal] :
+      ( ( c_2Etopology_2Eopen__in @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Esubtopology @ tyop_2Erealax_2Ereal @ c_2Ereal__topology_2Eeuclidean @ V0s ) @ ( c_2Epred__set_2EINSERT @ tyop_2Erealax_2Ereal @ V1a @ ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) ) )
+    <=> ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V1a @ V0s )
+        & ( (~) @ ( c_2Ereal__topology_2Elimit__point__of @ V1a @ V0s ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EINTERIOR__EQ,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( c_2Ereal__topology_2Einterior @ V0s )
+        = V0s )
+    <=> ( c_2Ereal__topology_2EOpen @ V0s ) ) ).
+
+thf(thm_2Ereal__topology_2EINTERIOR__OPEN,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ereal__topology_2EOpen @ V0s )
+     => ( ( c_2Ereal__topology_2Einterior @ V0s )
+        = V0s ) ) ).
+
+thf(thm_2Ereal__topology_2EINTERIOR__EMPTY,axiom,
+    ( ( c_2Ereal__topology_2Einterior @ ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) )
+    = ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) ) ).
+
+thf(thm_2Ereal__topology_2EINTERIOR__UNIV,axiom,
+    ( ( c_2Ereal__topology_2Einterior @ ( c_2Epred__set_2EUNIV @ tyop_2Erealax_2Ereal ) )
+    = ( c_2Epred__set_2EUNIV @ tyop_2Erealax_2Ereal ) ) ).
+
+thf(thm_2Ereal__topology_2EOPEN__INTERIOR,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o] : ( c_2Ereal__topology_2EOpen @ ( c_2Ereal__topology_2Einterior @ V0s ) ) ).
+
+thf(thm_2Ereal__topology_2EINTERIOR__INTERIOR,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ereal__topology_2Einterior @ ( c_2Ereal__topology_2Einterior @ V0s ) )
+      = ( c_2Ereal__topology_2Einterior @ V0s ) ) ).
+
+thf(thm_2Ereal__topology_2EINTERIOR__SUBSET,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o] : ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Einterior @ V0s ) @ V0s ) ).
+
+thf(thm_2Ereal__topology_2ESUBSET__INTERIOR__EQ,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ V0s @ ( c_2Ereal__topology_2Einterior @ V0s ) )
+      = ( c_2Ereal__topology_2EOpen @ V0s ) ) ).
+
+thf(thm_2Ereal__topology_2ESUBSET__INTERIOR,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1t: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ V0s @ V1t )
+     => ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Einterior @ V0s ) @ ( c_2Ereal__topology_2Einterior @ V1t ) ) ) ).
+
+thf(thm_2Ereal__topology_2EINTERIOR__MAXIMAL,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1t: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ V1t @ V0s )
+        & ( c_2Ereal__topology_2EOpen @ V1t ) )
+     => ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ V1t @ ( c_2Ereal__topology_2Einterior @ V0s ) ) ) ).
+
+thf(thm_2Ereal__topology_2EINTERIOR__MAXIMAL__EQ,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1t: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ereal__topology_2EOpen @ V0s )
+     => ( ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ V0s @ ( c_2Ereal__topology_2Einterior @ V1t ) )
+        = ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ V0s @ V1t ) ) ) ).
+
+thf(thm_2Ereal__topology_2EINTERIOR__UNIQUE,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1t: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ V1t @ V0s )
+        & ( c_2Ereal__topology_2EOpen @ V1t )
+        & ! [V2t_27: tyop_2Erealax_2Ereal > $o] :
+            ( ( ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ V2t_27 @ V0s )
+              & ( c_2Ereal__topology_2EOpen @ V2t_27 ) )
+           => ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ V2t_27 @ V1t ) ) )
+     => ( ( c_2Ereal__topology_2Einterior @ V0s )
+        = V1t ) ) ).
+
+thf(thm_2Ereal__topology_2EIN__INTERIOR,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal,V1s: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V0x @ ( c_2Ereal__topology_2Einterior @ V1s ) )
+    <=> ? [V2e: tyop_2Erealax_2Ereal] :
+          ( ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V2e )
+          & ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Eball @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0x @ V2e ) ) @ V1s ) ) ) ).
+
+thf(thm_2Ereal__topology_2EOPEN__SUBSET__INTERIOR,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1t: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ereal__topology_2EOpen @ V0s )
+     => ( ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ V0s @ ( c_2Ereal__topology_2Einterior @ V1t ) )
+        = ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ V0s @ V1t ) ) ) ).
+
+thf(thm_2Ereal__topology_2EINTERIOR__INTER,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1t: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ereal__topology_2Einterior @ ( c_2Epred__set_2EINTER @ tyop_2Erealax_2Ereal @ V0s @ V1t ) )
+      = ( c_2Epred__set_2EINTER @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Einterior @ V0s ) @ ( c_2Ereal__topology_2Einterior @ V1t ) ) ) ).
+
+thf(thm_2Ereal__topology_2EINTERIOR__FINITE__BIGINTER,axiom,
+    ! [V0s: ( tyop_2Erealax_2Ereal > $o ) > $o] :
+      ( ( c_2Epred__set_2EFINITE @ ( tyop_2Erealax_2Ereal > $o ) @ V0s )
+     => ( ( c_2Ereal__topology_2Einterior @ ( c_2Epred__set_2EBIGINTER @ tyop_2Erealax_2Ereal @ V0s ) )
+        = ( c_2Epred__set_2EBIGINTER @ tyop_2Erealax_2Ereal @ ( c_2Epred__set_2EIMAGE @ ( tyop_2Erealax_2Ereal > $o ) @ ( tyop_2Erealax_2Ereal > $o ) @ c_2Ereal__topology_2Einterior @ V0s ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EINTERIOR__BIGINTER__SUBSET,axiom,
+    ! [V0f: ( tyop_2Erealax_2Ereal > $o ) > $o] : ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Einterior @ ( c_2Epred__set_2EBIGINTER @ tyop_2Erealax_2Ereal @ V0f ) ) @ ( c_2Epred__set_2EBIGINTER @ tyop_2Erealax_2Ereal @ ( c_2Epred__set_2EIMAGE @ ( tyop_2Erealax_2Ereal > $o ) @ ( tyop_2Erealax_2Ereal > $o ) @ c_2Ereal__topology_2Einterior @ V0f ) ) ) ).
+
+thf(thm_2Ereal__topology_2EUNION__INTERIOR__SUBSET,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1t: tyop_2Erealax_2Ereal > $o] : ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ ( c_2Epred__set_2EUNION @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Einterior @ V0s ) @ ( c_2Ereal__topology_2Einterior @ V1t ) ) @ ( c_2Ereal__topology_2Einterior @ ( c_2Epred__set_2EUNION @ tyop_2Erealax_2Ereal @ V0s @ V1t ) ) ) ).
+
+thf(thm_2Ereal__topology_2EINTERIOR__EQ__EMPTY,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( c_2Ereal__topology_2Einterior @ V0s )
+        = ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) )
+    <=> ! [V1t: tyop_2Erealax_2Ereal > $o] :
+          ( ( ( c_2Ereal__topology_2EOpen @ V1t )
+            & ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ V1t @ V0s ) )
+         => ( V1t
+            = ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EINTERIOR__EQ__EMPTY__ALT,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( c_2Ereal__topology_2Einterior @ V0s )
+        = ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) )
+    <=> ! [V1t: tyop_2Erealax_2Ereal > $o] :
+          ( ( ( c_2Ereal__topology_2EOpen @ V1t )
+            & ( (~)
+              @ ( V1t
+                = ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) ) ) )
+         => ( (~)
+            @ ( ( c_2Epred__set_2EDIFF @ tyop_2Erealax_2Ereal @ V1t @ V0s )
+              = ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EINTERIOR__LIMIT__POINT,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1x: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V1x @ ( c_2Ereal__topology_2Einterior @ V0s ) )
+     => ( c_2Ereal__topology_2Elimit__point__of @ V1x @ V0s ) ) ).
+
+thf(thm_2Ereal__topology_2EINTERIOR__SING,axiom,
+    ! [V0a: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2Einterior @ ( c_2Epred__set_2EINSERT @ tyop_2Erealax_2Ereal @ V0a @ ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) ) )
+      = ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) ) ).
+
+thf(thm_2Ereal__topology_2EINTERIOR__CLOSED__UNION__EMPTY__INTERIOR,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1t: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( c_2Ereal__topology_2EClosed @ V0s )
+        & ( ( c_2Ereal__topology_2Einterior @ V1t )
+          = ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) ) )
+     => ( ( c_2Ereal__topology_2Einterior @ ( c_2Epred__set_2EUNION @ tyop_2Erealax_2Ereal @ V0s @ V1t ) )
+        = ( c_2Ereal__topology_2Einterior @ V0s ) ) ) ).
+
+thf(thm_2Ereal__topology_2EINTERIOR__UNION__EQ__EMPTY,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1t: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( c_2Ereal__topology_2EClosed @ V0s )
+        | ( c_2Ereal__topology_2EClosed @ V1t ) )
+     => ( ( ( c_2Ereal__topology_2Einterior @ ( c_2Epred__set_2EUNION @ tyop_2Erealax_2Ereal @ V0s @ V1t ) )
+          = ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) )
+      <=> ( ( ( c_2Ereal__topology_2Einterior @ V0s )
+            = ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) )
+          & ( ( c_2Ereal__topology_2Einterior @ V1t )
+            = ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EINTERIOR__UNIONS__OPEN__SUBSETS,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Epred__set_2EBIGUNION @ tyop_2Erealax_2Ereal
+        @ ( c_2Epred__set_2EGSPEC @ ( tyop_2Erealax_2Ereal > $o ) @ ( tyop_2Erealax_2Ereal > $o )
+          @ ^ [V1t: tyop_2Erealax_2Ereal > $o] : ( c_2Epair_2E_2C @ ( tyop_2Erealax_2Ereal > $o ) @ $o @ V1t @ ( c_2Ebool_2E_2F_5C @ ( c_2Ereal__topology_2EOpen @ V1t ) @ ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ V1t @ V0s ) ) ) ) )
+      = ( c_2Ereal__topology_2Einterior @ V0s ) ) ).
+
+thf(thm_2Ereal__topology_2EREAL__ARCH__INV,axiom,
+    ! [V0e: tyop_2Erealax_2Ereal] :
+      ( ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V0e )
+    <=> ? [V1n: tyop_2Enum_2Enum] :
+          ( ( (~) @ ( V1n = c_2Enum_2E0 ) )
+          & ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ ( c_2Erealax_2Einv @ ( c_2Ereal_2Ereal__of__num @ V1n ) ) )
+          & ( c_2Erealax_2Ereal__lt @ ( c_2Erealax_2Einv @ ( c_2Ereal_2Ereal__of__num @ V1n ) ) @ V0e ) ) ) ).
+
+thf(thm_2Ereal__topology_2EREAL__POW__LBOUND,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal,V1n: tyop_2Enum_2Enum] :
+      ( ( c_2Ereal_2Ereal__lte @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V0x )
+     => ( c_2Ereal_2Ereal__lte @ ( c_2Erealax_2Ereal__add @ ( c_2Ereal_2Ereal__of__num @ ( c_2Earithmetic_2ENUMERAL @ ( c_2Earithmetic_2EBIT1 @ c_2Earithmetic_2EZERO ) ) ) @ ( c_2Erealax_2Ereal__mul @ ( c_2Ereal_2Ereal__of__num @ V1n ) @ V0x ) ) @ ( c_2Ereal_2Epow @ ( c_2Erealax_2Ereal__add @ ( c_2Ereal_2Ereal__of__num @ ( c_2Earithmetic_2ENUMERAL @ ( c_2Earithmetic_2EBIT1 @ c_2Earithmetic_2EZERO ) ) ) @ V0x ) @ V1n ) ) ) ).
+
+thf(thm_2Ereal__topology_2EREAL__ARCH__POW,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal,V1y: tyop_2Erealax_2Ereal] :
+      ( ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Ereal__of__num @ ( c_2Earithmetic_2ENUMERAL @ ( c_2Earithmetic_2EBIT1 @ c_2Earithmetic_2EZERO ) ) ) @ V0x )
+     => ? [V2n: tyop_2Enum_2Enum] : ( c_2Erealax_2Ereal__lt @ V1y @ ( c_2Ereal_2Epow @ V0x @ V2n ) ) ) ).
+
+thf(thm_2Ereal__topology_2EREAL__ARCH__POW2,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal] :
+    ? [V1n: tyop_2Enum_2Enum] : ( c_2Erealax_2Ereal__lt @ V0x @ ( c_2Ereal_2Epow @ ( c_2Ereal_2Ereal__of__num @ ( c_2Earithmetic_2ENUMERAL @ ( c_2Earithmetic_2EBIT2 @ c_2Earithmetic_2EZERO ) ) ) @ V1n ) ) ).
+
+thf(thm_2Ereal__topology_2EREAL__ARCH__POW__INV,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal,V1y: tyop_2Erealax_2Ereal] :
+      ( ( ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V1y )
+        & ( c_2Erealax_2Ereal__lt @ V0x @ ( c_2Ereal_2Ereal__of__num @ ( c_2Earithmetic_2ENUMERAL @ ( c_2Earithmetic_2EBIT1 @ c_2Earithmetic_2EZERO ) ) ) ) )
+     => ? [V2n: tyop_2Enum_2Enum] : ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Epow @ V0x @ V2n ) @ V1y ) ) ).
+
+thf(thm_2Ereal__topology_2EFORALL__POS__MONO,axiom,
+    ! [V0P: tyop_2Erealax_2Ereal > $o] :
+      ( ( ! [V1d: tyop_2Erealax_2Ereal,V2e: tyop_2Erealax_2Ereal] :
+            ( ( ( c_2Erealax_2Ereal__lt @ V1d @ V2e )
+              & ( V0P @ V1d ) )
+           => ( V0P @ V2e ) )
+        & ! [V3n: tyop_2Enum_2Enum] :
+            ( ( (~) @ ( V3n = c_2Enum_2E0 ) )
+           => ( V0P @ ( c_2Erealax_2Einv @ ( c_2Ereal_2Ereal__of__num @ V3n ) ) ) ) )
+     => ! [V4e: tyop_2Erealax_2Ereal] :
+          ( ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V4e )
+         => ( V0P @ V4e ) ) ) ).
+
+thf(thm_2Ereal__topology_2EFORALL__SUC,axiom,
+    ! [V0P: tyop_2Enum_2Enum > $o] :
+      ( ! [V1n: tyop_2Enum_2Enum] :
+          ( ( (~) @ ( V1n = c_2Enum_2E0 ) )
+         => ( V0P @ V1n ) )
+    <=> ! [V2n: tyop_2Enum_2Enum] : ( V0P @ ( c_2Enum_2ESUC @ V2n ) ) ) ).
+
+thf(thm_2Ereal__topology_2ELT__NZ,axiom,
+    ! [V0n: tyop_2Enum_2Enum] :
+      ( ( c_2Eprim__rec_2E_3C @ c_2Enum_2E0 @ V0n )
+    <=> ( (~) @ ( V0n = c_2Enum_2E0 ) ) ) ).
+
+thf(thm_2Ereal__topology_2EREAL__ARCH__RDIV__EQ__0,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal,V1c: tyop_2Erealax_2Ereal] :
+      ( ( ( c_2Ereal_2Ereal__lte @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V0x )
+        & ( c_2Ereal_2Ereal__lte @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V1c )
+        & ! [V2m: tyop_2Enum_2Enum] :
+            ( ( c_2Eprim__rec_2E_3C @ c_2Enum_2E0 @ V2m )
+           => ( c_2Ereal_2Ereal__lte @ ( c_2Erealax_2Ereal__mul @ ( c_2Ereal_2Ereal__of__num @ V2m ) @ V0x ) @ V1c ) ) )
+     => ( V0x
+        = ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) ) ) ).
+
+thf(thm_2Ereal__topology_2ECLOSURE__APPROACHABLE,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal,V1s: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V0x @ ( c_2Ereal__topology_2Eclosure @ V1s ) )
+    <=> ! [V2e: tyop_2Erealax_2Ereal] :
+          ( ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V2e )
+         => ? [V3y: tyop_2Erealax_2Ereal] :
+              ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V3y @ V1s )
+              & ( c_2Erealax_2Ereal__lt @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V3y @ V0x ) ) @ V2e ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ECLOSURE__NONEMPTY__OPEN__INTER,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1x: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V1x @ ( c_2Ereal__topology_2Eclosure @ V0s ) )
+    <=> ! [V2t: tyop_2Erealax_2Ereal > $o] :
+          ( ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V1x @ V2t )
+            & ( c_2Ereal__topology_2EOpen @ V2t ) )
+         => ( (~)
+            @ ( ( c_2Epred__set_2EINTER @ tyop_2Erealax_2Ereal @ V0s @ V2t )
+              = ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ECLOSURE__INTERIOR,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ereal__topology_2Eclosure @ V0s )
+      = ( c_2Epred__set_2EDIFF @ tyop_2Erealax_2Ereal @ ( c_2Epred__set_2EUNIV @ tyop_2Erealax_2Ereal ) @ ( c_2Ereal__topology_2Einterior @ ( c_2Epred__set_2EDIFF @ tyop_2Erealax_2Ereal @ ( c_2Epred__set_2EUNIV @ tyop_2Erealax_2Ereal ) @ V0s ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EINTERIOR__CLOSURE,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ereal__topology_2Einterior @ V0s )
+      = ( c_2Epred__set_2EDIFF @ tyop_2Erealax_2Ereal @ ( c_2Epred__set_2EUNIV @ tyop_2Erealax_2Ereal ) @ ( c_2Ereal__topology_2Eclosure @ ( c_2Epred__set_2EDIFF @ tyop_2Erealax_2Ereal @ ( c_2Epred__set_2EUNIV @ tyop_2Erealax_2Ereal ) @ V0s ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ECLOSED__CLOSURE,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o] : ( c_2Ereal__topology_2EClosed @ ( c_2Ereal__topology_2Eclosure @ V0s ) ) ).
+
+thf(thm_2Ereal__topology_2ECLOSURE__HULL,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ereal__topology_2Eclosure @ V0s )
+      = ( c_2Etopology_2Ehull @ tyop_2Erealax_2Ereal @ c_2Ereal__topology_2EClosed @ V0s ) ) ).
+
+thf(thm_2Ereal__topology_2ECLOSURE__EQ,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( c_2Ereal__topology_2Eclosure @ V0s )
+        = V0s )
+    <=> ( c_2Ereal__topology_2EClosed @ V0s ) ) ).
+
+thf(thm_2Ereal__topology_2ECLOSURE__CLOSED,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ereal__topology_2EClosed @ V0s )
+     => ( ( c_2Ereal__topology_2Eclosure @ V0s )
+        = V0s ) ) ).
+
+thf(thm_2Ereal__topology_2ECLOSURE__CLOSURE,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ereal__topology_2Eclosure @ ( c_2Ereal__topology_2Eclosure @ V0s ) )
+      = ( c_2Ereal__topology_2Eclosure @ V0s ) ) ).
+
+thf(thm_2Ereal__topology_2ECLOSURE__SUBSET,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o] : ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ V0s @ ( c_2Ereal__topology_2Eclosure @ V0s ) ) ).
+
+thf(thm_2Ereal__topology_2ESUBSET__CLOSURE,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1t: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ V0s @ V1t )
+     => ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Eclosure @ V0s ) @ ( c_2Ereal__topology_2Eclosure @ V1t ) ) ) ).
+
+thf(thm_2Ereal__topology_2ECLOSURE__UNION,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1t: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ereal__topology_2Eclosure @ ( c_2Epred__set_2EUNION @ tyop_2Erealax_2Ereal @ V0s @ V1t ) )
+      = ( c_2Epred__set_2EUNION @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Eclosure @ V0s ) @ ( c_2Ereal__topology_2Eclosure @ V1t ) ) ) ).
+
+thf(thm_2Ereal__topology_2ECLOSURE__INTER__SUBSET,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1t: tyop_2Erealax_2Ereal > $o] : ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Eclosure @ ( c_2Epred__set_2EINTER @ tyop_2Erealax_2Ereal @ V0s @ V1t ) ) @ ( c_2Epred__set_2EINTER @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Eclosure @ V0s ) @ ( c_2Ereal__topology_2Eclosure @ V1t ) ) ) ).
+
+thf(thm_2Ereal__topology_2ECLOSURE__BIGINTER__SUBSET,axiom,
+    ! [V0f: ( tyop_2Erealax_2Ereal > $o ) > $o] : ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Eclosure @ ( c_2Epred__set_2EBIGINTER @ tyop_2Erealax_2Ereal @ V0f ) ) @ ( c_2Epred__set_2EBIGINTER @ tyop_2Erealax_2Ereal @ ( c_2Epred__set_2EIMAGE @ ( tyop_2Erealax_2Ereal > $o ) @ ( tyop_2Erealax_2Ereal > $o ) @ c_2Ereal__topology_2Eclosure @ V0f ) ) ) ).
+
+thf(thm_2Ereal__topology_2ECLOSURE__MINIMAL,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1t: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ V0s @ V1t )
+        & ( c_2Ereal__topology_2EClosed @ V1t ) )
+     => ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Eclosure @ V0s ) @ V1t ) ) ).
+
+thf(thm_2Ereal__topology_2ECLOSURE__MINIMAL__EQ,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1t: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ereal__topology_2EClosed @ V1t )
+     => ( ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Eclosure @ V0s ) @ V1t )
+        = ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ V0s @ V1t ) ) ) ).
+
+thf(thm_2Ereal__topology_2ECLOSURE__UNIQUE,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1t: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ V0s @ V1t )
+        & ( c_2Ereal__topology_2EClosed @ V1t )
+        & ! [V2t_27: tyop_2Erealax_2Ereal > $o] :
+            ( ( ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ V0s @ V2t_27 )
+              & ( c_2Ereal__topology_2EClosed @ V2t_27 ) )
+           => ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ V1t @ V2t_27 ) ) )
+     => ( ( c_2Ereal__topology_2Eclosure @ V0s )
+        = V1t ) ) ).
+
+thf(thm_2Ereal__topology_2ECLOSURE__EMPTY,axiom,
+    ( ( c_2Ereal__topology_2Eclosure @ ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) )
+    = ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) ) ).
+
+thf(thm_2Ereal__topology_2ECLOSURE__UNIV,axiom,
+    ( ( c_2Ereal__topology_2Eclosure @ ( c_2Epred__set_2EUNIV @ tyop_2Erealax_2Ereal ) )
+    = ( c_2Epred__set_2EUNIV @ tyop_2Erealax_2Ereal ) ) ).
+
+thf(thm_2Ereal__topology_2ECLOSURE__BIGUNION,axiom,
+    ! [V0f: ( tyop_2Erealax_2Ereal > $o ) > $o] :
+      ( ( c_2Epred__set_2EFINITE @ ( tyop_2Erealax_2Ereal > $o ) @ V0f )
+     => ( ( c_2Ereal__topology_2Eclosure @ ( c_2Epred__set_2EBIGUNION @ tyop_2Erealax_2Ereal @ V0f ) )
+        = ( c_2Epred__set_2EBIGUNION @ tyop_2Erealax_2Ereal
+          @ ( c_2Epred__set_2EGSPEC @ ( tyop_2Erealax_2Ereal > $o ) @ ( tyop_2Erealax_2Ereal > $o )
+            @ ^ [V1s: tyop_2Erealax_2Ereal > $o] : ( c_2Epair_2E_2C @ ( tyop_2Erealax_2Ereal > $o ) @ $o @ ( c_2Ereal__topology_2Eclosure @ V1s ) @ ( c_2Ebool_2EIN @ ( tyop_2Erealax_2Ereal > $o ) @ V1s @ V0f ) ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ECLOSURE__EQ__EMPTY,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( c_2Ereal__topology_2Eclosure @ V0s )
+        = ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) )
+    <=> ( V0s
+        = ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) ) ) ).
+
+thf(thm_2Ereal__topology_2ECLOSURE__SUBSET__EQ,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Eclosure @ V0s ) @ V0s )
+      = ( c_2Ereal__topology_2EClosed @ V0s ) ) ).
+
+thf(thm_2Ereal__topology_2EOPEN__INTER__CLOSURE__EQ__EMPTY,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1t: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ereal__topology_2EOpen @ V0s )
+     => ( ( ( c_2Epred__set_2EINTER @ tyop_2Erealax_2Ereal @ V0s @ ( c_2Ereal__topology_2Eclosure @ V1t ) )
+          = ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) )
+      <=> ( ( c_2Epred__set_2EINTER @ tyop_2Erealax_2Ereal @ V0s @ V1t )
+          = ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ECLOSURE__OPEN__IN__INTER__CLOSURE,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1t: tyop_2Erealax_2Ereal > $o,V2u: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( c_2Etopology_2Eopen__in @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Esubtopology @ tyop_2Erealax_2Ereal @ c_2Ereal__topology_2Eeuclidean @ V2u ) @ V0s )
+        & ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ V1t @ V2u ) )
+     => ( ( c_2Ereal__topology_2Eclosure @ ( c_2Epred__set_2EINTER @ tyop_2Erealax_2Ereal @ V0s @ ( c_2Ereal__topology_2Eclosure @ V1t ) ) )
+        = ( c_2Ereal__topology_2Eclosure @ ( c_2Epred__set_2EINTER @ tyop_2Erealax_2Ereal @ V0s @ V1t ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ECLOSURE__OPEN__INTER__CLOSURE,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1t: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ereal__topology_2EOpen @ V0s )
+     => ( ( c_2Ereal__topology_2Eclosure @ ( c_2Epred__set_2EINTER @ tyop_2Erealax_2Ereal @ V0s @ ( c_2Ereal__topology_2Eclosure @ V1t ) ) )
+        = ( c_2Ereal__topology_2Eclosure @ ( c_2Epred__set_2EINTER @ tyop_2Erealax_2Ereal @ V0s @ V1t ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EOPEN__INTER__CLOSURE__SUBSET,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1t: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ereal__topology_2EOpen @ V0s )
+     => ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ ( c_2Epred__set_2EINTER @ tyop_2Erealax_2Ereal @ V0s @ ( c_2Ereal__topology_2Eclosure @ V1t ) ) @ ( c_2Ereal__topology_2Eclosure @ ( c_2Epred__set_2EINTER @ tyop_2Erealax_2Ereal @ V0s @ V1t ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ECLOSURE__OPEN__INTER__SUPERSET,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1t: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( c_2Ereal__topology_2EOpen @ V0s )
+        & ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ V0s @ ( c_2Ereal__topology_2Eclosure @ V1t ) ) )
+     => ( ( c_2Ereal__topology_2Eclosure @ ( c_2Epred__set_2EINTER @ tyop_2Erealax_2Ereal @ V0s @ V1t ) )
+        = ( c_2Ereal__topology_2Eclosure @ V0s ) ) ) ).
+
+thf(thm_2Ereal__topology_2ECLOSURE__COMPLEMENT,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ereal__topology_2Eclosure @ ( c_2Epred__set_2EDIFF @ tyop_2Erealax_2Ereal @ ( c_2Epred__set_2EUNIV @ tyop_2Erealax_2Ereal ) @ V0s ) )
+      = ( c_2Epred__set_2EDIFF @ tyop_2Erealax_2Ereal @ ( c_2Epred__set_2EUNIV @ tyop_2Erealax_2Ereal ) @ ( c_2Ereal__topology_2Einterior @ V0s ) ) ) ).
+
+thf(thm_2Ereal__topology_2EINTERIOR__COMPLEMENT,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ereal__topology_2Einterior @ ( c_2Epred__set_2EDIFF @ tyop_2Erealax_2Ereal @ ( c_2Epred__set_2EUNIV @ tyop_2Erealax_2Ereal ) @ V0s ) )
+      = ( c_2Epred__set_2EDIFF @ tyop_2Erealax_2Ereal @ ( c_2Epred__set_2EUNIV @ tyop_2Erealax_2Ereal ) @ ( c_2Ereal__topology_2Eclosure @ V0s ) ) ) ).
+
+thf(thm_2Ereal__topology_2ECONNECTED__INTERMEDIATE__CLOSURE,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1t: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( c_2Ereal__topology_2Econnected @ V0s )
+        & ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ V0s @ V1t )
+        & ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ V1t @ ( c_2Ereal__topology_2Eclosure @ V0s ) ) )
+     => ( c_2Ereal__topology_2Econnected @ V1t ) ) ).
+
+thf(thm_2Ereal__topology_2ECONNECTED__CLOSURE,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ereal__topology_2Econnected @ V0s )
+     => ( c_2Ereal__topology_2Econnected @ ( c_2Ereal__topology_2Eclosure @ V0s ) ) ) ).
+
+thf(thm_2Ereal__topology_2ECONNECTED__UNION__STRONG,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1t: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( c_2Ereal__topology_2Econnected @ V0s )
+        & ( c_2Ereal__topology_2Econnected @ V1t )
+        & ( (~)
+          @ ( ( c_2Epred__set_2EINTER @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Eclosure @ V0s ) @ V1t )
+            = ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) ) ) )
+     => ( c_2Ereal__topology_2Econnected @ ( c_2Epred__set_2EUNION @ tyop_2Erealax_2Ereal @ V0s @ V1t ) ) ) ).
+
+thf(thm_2Ereal__topology_2EINTERIOR__DIFF,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1t: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ereal__topology_2Einterior @ ( c_2Epred__set_2EDIFF @ tyop_2Erealax_2Ereal @ V0s @ V1t ) )
+      = ( c_2Epred__set_2EDIFF @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Einterior @ V0s ) @ ( c_2Ereal__topology_2Eclosure @ V1t ) ) ) ).
+
+thf(thm_2Ereal__topology_2ELIMPT__OF__CLOSURE,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal,V1s: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ereal__topology_2Elimit__point__of @ V0x @ ( c_2Ereal__topology_2Eclosure @ V1s ) )
+      = ( c_2Ereal__topology_2Elimit__point__of @ V0x @ V1s ) ) ).
+
+thf(thm_2Ereal__topology_2ECLOSED__IN__LIMPT,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1t: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Etopology_2Eclosed__in @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Esubtopology @ tyop_2Erealax_2Ereal @ c_2Ereal__topology_2Eeuclidean @ V1t ) @ V0s )
+    <=> ( ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ V0s @ V1t )
+        & ! [V2x: tyop_2Erealax_2Ereal] :
+            ( ( ( c_2Ereal__topology_2Elimit__point__of @ V2x @ V0s )
+              & ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V2x @ V1t ) )
+           => ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V2x @ V0s ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ECLOSED__IN__INTER__CLOSURE,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1t: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Etopology_2Eclosed__in @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Esubtopology @ tyop_2Erealax_2Ereal @ c_2Ereal__topology_2Eeuclidean @ V0s ) @ V1t )
+    <=> ( ( c_2Epred__set_2EINTER @ tyop_2Erealax_2Ereal @ V0s @ ( c_2Ereal__topology_2Eclosure @ V1t ) )
+        = V1t ) ) ).
+
+thf(thm_2Ereal__topology_2EINTERIOR__CLOSURE__IDEMP,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ereal__topology_2Einterior @ ( c_2Ereal__topology_2Eclosure @ ( c_2Ereal__topology_2Einterior @ ( c_2Ereal__topology_2Eclosure @ V0s ) ) ) )
+      = ( c_2Ereal__topology_2Einterior @ ( c_2Ereal__topology_2Eclosure @ V0s ) ) ) ).
+
+thf(thm_2Ereal__topology_2ECLOSURE__INTERIOR__IDEMP,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ereal__topology_2Eclosure @ ( c_2Ereal__topology_2Einterior @ ( c_2Ereal__topology_2Eclosure @ ( c_2Ereal__topology_2Einterior @ V0s ) ) ) )
+      = ( c_2Ereal__topology_2Eclosure @ ( c_2Ereal__topology_2Einterior @ V0s ) ) ) ).
+
+thf(thm_2Ereal__topology_2ENOWHERE__DENSE__UNION,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1t: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( c_2Ereal__topology_2Einterior @ ( c_2Ereal__topology_2Eclosure @ ( c_2Epred__set_2EUNION @ tyop_2Erealax_2Ereal @ V0s @ V1t ) ) )
+        = ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) )
+    <=> ( ( ( c_2Ereal__topology_2Einterior @ ( c_2Ereal__topology_2Eclosure @ V0s ) )
+          = ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) )
+        & ( ( c_2Ereal__topology_2Einterior @ ( c_2Ereal__topology_2Eclosure @ V1t ) )
+          = ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ENOWHERE__DENSE,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( c_2Ereal__topology_2Einterior @ ( c_2Ereal__topology_2Eclosure @ V0s ) )
+        = ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) )
+    <=> ! [V1t: tyop_2Erealax_2Ereal > $o] :
+          ( ( ( c_2Ereal__topology_2EOpen @ V1t )
+            & ( (~)
+              @ ( V1t
+                = ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) ) ) )
+         => ? [V2u: tyop_2Erealax_2Ereal > $o] :
+              ( ( c_2Ereal__topology_2EOpen @ V2u )
+              & ( (~)
+                @ ( V2u
+                  = ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) ) )
+              & ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ V2u @ V1t )
+              & ( ( c_2Epred__set_2EINTER @ tyop_2Erealax_2Ereal @ V2u @ V0s )
+                = ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EINTERIOR__CLOSURE__INTER__OPEN,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1t: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( c_2Ereal__topology_2EOpen @ V0s )
+        & ( c_2Ereal__topology_2EOpen @ V1t ) )
+     => ( ( c_2Ereal__topology_2Einterior @ ( c_2Ereal__topology_2Eclosure @ ( c_2Epred__set_2EINTER @ tyop_2Erealax_2Ereal @ V0s @ V1t ) ) )
+        = ( c_2Epred__set_2EINTER @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Einterior @ ( c_2Ereal__topology_2Eclosure @ V0s ) ) @ ( c_2Ereal__topology_2Einterior @ ( c_2Ereal__topology_2Eclosure @ V1t ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ECLOSURE__INTERIOR__UNION__CLOSED,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1t: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( c_2Ereal__topology_2EClosed @ V0s )
+        & ( c_2Ereal__topology_2EClosed @ V1t ) )
+     => ( ( c_2Ereal__topology_2Eclosure @ ( c_2Ereal__topology_2Einterior @ ( c_2Epred__set_2EUNION @ tyop_2Erealax_2Ereal @ V0s @ V1t ) ) )
+        = ( c_2Epred__set_2EUNION @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Eclosure @ ( c_2Ereal__topology_2Einterior @ V0s ) ) @ ( c_2Ereal__topology_2Eclosure @ ( c_2Ereal__topology_2Einterior @ V1t ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EREGULAR__OPEN__INTER,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1t: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( ( c_2Ereal__topology_2Einterior @ ( c_2Ereal__topology_2Eclosure @ V0s ) )
+          = V0s )
+        & ( ( c_2Ereal__topology_2Einterior @ ( c_2Ereal__topology_2Eclosure @ V1t ) )
+          = V1t ) )
+     => ( ( c_2Ereal__topology_2Einterior @ ( c_2Ereal__topology_2Eclosure @ ( c_2Epred__set_2EINTER @ tyop_2Erealax_2Ereal @ V0s @ V1t ) ) )
+        = ( c_2Epred__set_2EINTER @ tyop_2Erealax_2Ereal @ V0s @ V1t ) ) ) ).
+
+thf(thm_2Ereal__topology_2EREGULAR__CLOSED__UNION,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1t: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( ( c_2Ereal__topology_2Eclosure @ ( c_2Ereal__topology_2Einterior @ V0s ) )
+          = V0s )
+        & ( ( c_2Ereal__topology_2Eclosure @ ( c_2Ereal__topology_2Einterior @ V1t ) )
+          = V1t ) )
+     => ( ( c_2Ereal__topology_2Eclosure @ ( c_2Ereal__topology_2Einterior @ ( c_2Epred__set_2EUNION @ tyop_2Erealax_2Ereal @ V0s @ V1t ) ) )
+        = ( c_2Epred__set_2EUNION @ tyop_2Erealax_2Ereal @ V0s @ V1t ) ) ) ).
+
+thf(thm_2Ereal__topology_2EREGULAR__CLOSED__BIGUNION,axiom,
+    ! [V0f: ( tyop_2Erealax_2Ereal > $o ) > $o] :
+      ( ( ( c_2Epred__set_2EFINITE @ ( tyop_2Erealax_2Ereal > $o ) @ V0f )
+        & ! [V1t: tyop_2Erealax_2Ereal > $o] :
+            ( ( c_2Ebool_2EIN @ ( tyop_2Erealax_2Ereal > $o ) @ V1t @ V0f )
+           => ( ( c_2Ereal__topology_2Eclosure @ ( c_2Ereal__topology_2Einterior @ V1t ) )
+              = V1t ) ) )
+     => ( ( c_2Ereal__topology_2Eclosure @ ( c_2Ereal__topology_2Einterior @ ( c_2Epred__set_2EBIGUNION @ tyop_2Erealax_2Ereal @ V0f ) ) )
+        = ( c_2Epred__set_2EBIGUNION @ tyop_2Erealax_2Ereal @ V0f ) ) ) ).
+
+thf(thm_2Ereal__topology_2EDIFF__CLOSURE__SUBSET,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1t: tyop_2Erealax_2Ereal > $o] : ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ ( c_2Epred__set_2EDIFF @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Eclosure @ V0s ) @ ( c_2Ereal__topology_2Eclosure @ V1t ) ) @ ( c_2Ereal__topology_2Eclosure @ ( c_2Epred__set_2EDIFF @ tyop_2Erealax_2Ereal @ V0s @ V1t ) ) ) ).
+
+thf(thm_2Ereal__topology_2EDENSE__OPEN__INTER,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1t: tyop_2Erealax_2Ereal > $o,V2u: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( ( c_2Etopology_2Eopen__in @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Esubtopology @ tyop_2Erealax_2Ereal @ c_2Ereal__topology_2Eeuclidean @ V2u ) @ V0s )
+          & ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ V1t @ V2u ) )
+        | ( ( c_2Etopology_2Eopen__in @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Esubtopology @ tyop_2Erealax_2Ereal @ c_2Ereal__topology_2Eeuclidean @ V2u ) @ V1t )
+          & ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ V0s @ V2u ) ) )
+     => ( ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ V2u @ ( c_2Ereal__topology_2Eclosure @ ( c_2Epred__set_2EINTER @ tyop_2Erealax_2Ereal @ V0s @ V1t ) ) )
+      <=> ( ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ V2u @ ( c_2Ereal__topology_2Eclosure @ V0s ) )
+          & ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ V2u @ ( c_2Ereal__topology_2Eclosure @ V1t ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EFRONTIER__CLOSED,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o] : ( c_2Ereal__topology_2EClosed @ ( c_2Ereal__topology_2Efrontier @ V0s ) ) ).
+
+thf(thm_2Ereal__topology_2EFRONTIER__CLOSURES,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ereal__topology_2Efrontier @ V0s )
+      = ( c_2Epred__set_2EINTER @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Eclosure @ V0s ) @ ( c_2Ereal__topology_2Eclosure @ ( c_2Epred__set_2EDIFF @ tyop_2Erealax_2Ereal @ ( c_2Epred__set_2EUNIV @ tyop_2Erealax_2Ereal ) @ V0s ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EFRONTIER__STRADDLE,axiom,
+    ! [V0a: tyop_2Erealax_2Ereal,V1s: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V0a @ ( c_2Ereal__topology_2Efrontier @ V1s ) )
+    <=> ! [V2e: tyop_2Erealax_2Ereal] :
+          ( ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V2e )
+         => ( ? [V3x: tyop_2Erealax_2Ereal] :
+                ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V3x @ V1s )
+                & ( c_2Erealax_2Ereal__lt @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ V3x ) ) @ V2e ) )
+            & ? [V4x: tyop_2Erealax_2Ereal] :
+                ( ( (~) @ ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V4x @ V1s ) )
+                & ( c_2Erealax_2Ereal__lt @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0a @ V4x ) ) @ V2e ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EFRONTIER__SUBSET__CLOSED,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ereal__topology_2EClosed @ V0s )
+     => ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Efrontier @ V0s ) @ V0s ) ) ).
+
+thf(thm_2Ereal__topology_2EFRONTIER__EMPTY,axiom,
+    ( ( c_2Ereal__topology_2Efrontier @ ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) )
+    = ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) ) ).
+
+thf(thm_2Ereal__topology_2EFRONTIER__UNIV,axiom,
+    ( ( c_2Ereal__topology_2Efrontier @ ( c_2Epred__set_2EUNIV @ tyop_2Erealax_2Ereal ) )
+    = ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) ) ).
+
+thf(thm_2Ereal__topology_2EFRONTIER__SUBSET__EQ,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Efrontier @ V0s ) @ V0s )
+      = ( c_2Ereal__topology_2EClosed @ V0s ) ) ).
+
+thf(thm_2Ereal__topology_2EFRONTIER__COMPLEMENT,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ereal__topology_2Efrontier @ ( c_2Epred__set_2EDIFF @ tyop_2Erealax_2Ereal @ ( c_2Epred__set_2EUNIV @ tyop_2Erealax_2Ereal ) @ V0s ) )
+      = ( c_2Ereal__topology_2Efrontier @ V0s ) ) ).
+
+thf(thm_2Ereal__topology_2EFRONTIER__DISJOINT__EQ,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( c_2Epred__set_2EINTER @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Efrontier @ V0s ) @ V0s )
+        = ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) )
+    <=> ( c_2Ereal__topology_2EOpen @ V0s ) ) ).
+
+thf(thm_2Ereal__topology_2EFRONTIER__INTER__SUBSET,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1t: tyop_2Erealax_2Ereal > $o] : ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Efrontier @ ( c_2Epred__set_2EINTER @ tyop_2Erealax_2Ereal @ V0s @ V1t ) ) @ ( c_2Epred__set_2EUNION @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Efrontier @ V0s ) @ ( c_2Ereal__topology_2Efrontier @ V1t ) ) ) ).
+
+thf(thm_2Ereal__topology_2EFRONTIER__UNION__SUBSET,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1t: tyop_2Erealax_2Ereal > $o] : ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Efrontier @ ( c_2Epred__set_2EUNION @ tyop_2Erealax_2Ereal @ V0s @ V1t ) ) @ ( c_2Epred__set_2EUNION @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Efrontier @ V0s ) @ ( c_2Ereal__topology_2Efrontier @ V1t ) ) ) ).
+
+thf(thm_2Ereal__topology_2EFRONTIER__INTERIORS,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ereal__topology_2Efrontier @ V0s )
+      = ( c_2Epred__set_2EDIFF @ tyop_2Erealax_2Ereal @ ( c_2Epred__set_2EDIFF @ tyop_2Erealax_2Ereal @ ( c_2Epred__set_2EUNIV @ tyop_2Erealax_2Ereal ) @ ( c_2Ereal__topology_2Einterior @ V0s ) ) @ ( c_2Ereal__topology_2Einterior @ ( c_2Epred__set_2EDIFF @ tyop_2Erealax_2Ereal @ ( c_2Epred__set_2EUNIV @ tyop_2Erealax_2Ereal ) @ V0s ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EFRONTIER__FRONTIER__SUBSET,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o] : ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Efrontier @ ( c_2Ereal__topology_2Efrontier @ V0s ) ) @ ( c_2Ereal__topology_2Efrontier @ V0s ) ) ).
+
+thf(thm_2Ereal__topology_2EINTERIOR__FRONTIER,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ereal__topology_2Einterior @ ( c_2Ereal__topology_2Efrontier @ V0s ) )
+      = ( c_2Epred__set_2EDIFF @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Einterior @ ( c_2Ereal__topology_2Eclosure @ V0s ) ) @ ( c_2Ereal__topology_2Eclosure @ ( c_2Ereal__topology_2Einterior @ V0s ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EINTERIOR__FRONTIER__EMPTY,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( c_2Ereal__topology_2EOpen @ V0s )
+        | ( c_2Ereal__topology_2EClosed @ V0s ) )
+     => ( ( c_2Ereal__topology_2Einterior @ ( c_2Ereal__topology_2Efrontier @ V0s ) )
+        = ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) ) ) ).
+
+thf(thm_2Ereal__topology_2EFRONTIER__FRONTIER,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( c_2Ereal__topology_2EOpen @ V0s )
+        | ( c_2Ereal__topology_2EClosed @ V0s ) )
+     => ( ( c_2Ereal__topology_2Efrontier @ ( c_2Ereal__topology_2Efrontier @ V0s ) )
+        = ( c_2Ereal__topology_2Efrontier @ V0s ) ) ) ).
+
+thf(thm_2Ereal__topology_2EFRONTIER__FRONTIER__FRONTIER,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ereal__topology_2Efrontier @ ( c_2Ereal__topology_2Efrontier @ ( c_2Ereal__topology_2Efrontier @ V0s ) ) )
+      = ( c_2Ereal__topology_2Efrontier @ ( c_2Ereal__topology_2Efrontier @ V0s ) ) ) ).
+
+thf(thm_2Ereal__topology_2EUNION__FRONTIER,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1t: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Epred__set_2EUNION @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Efrontier @ V0s ) @ ( c_2Ereal__topology_2Efrontier @ V1t ) )
+      = ( c_2Epred__set_2EUNION @ tyop_2Erealax_2Ereal @ ( c_2Epred__set_2EUNION @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Efrontier @ ( c_2Epred__set_2EUNION @ tyop_2Erealax_2Ereal @ V0s @ V1t ) ) @ ( c_2Ereal__topology_2Efrontier @ ( c_2Epred__set_2EINTER @ tyop_2Erealax_2Ereal @ V0s @ V1t ) ) ) @ ( c_2Epred__set_2EINTER @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Efrontier @ V0s ) @ ( c_2Ereal__topology_2Efrontier @ V1t ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ECONNECTED__INTER__FRONTIER,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1t: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( c_2Ereal__topology_2Econnected @ V0s )
+        & ( (~)
+          @ ( ( c_2Epred__set_2EINTER @ tyop_2Erealax_2Ereal @ V0s @ V1t )
+            = ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) ) )
+        & ( (~)
+          @ ( ( c_2Epred__set_2EDIFF @ tyop_2Erealax_2Ereal @ V0s @ V1t )
+            = ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) ) ) )
+     => ( (~)
+        @ ( ( c_2Epred__set_2EINTER @ tyop_2Erealax_2Ereal @ V0s @ ( c_2Ereal__topology_2Efrontier @ V1t ) )
+          = ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EINTERIOR__CLOSED__EQ__EMPTY__AS__FRONTIER,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( c_2Ereal__topology_2EClosed @ V0s )
+        & ( ( c_2Ereal__topology_2Einterior @ V0s )
+          = ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) ) )
+    <=> ? [V1t: tyop_2Erealax_2Ereal > $o] :
+          ( ( c_2Ereal__topology_2EOpen @ V1t )
+          & ( V0s
+            = ( c_2Ereal__topology_2Efrontier @ V1t ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EFRONTIER__UNION,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1t: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( c_2Epred__set_2EINTER @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Eclosure @ V0s ) @ ( c_2Ereal__topology_2Eclosure @ V1t ) )
+        = ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) )
+     => ( ( c_2Ereal__topology_2Efrontier @ ( c_2Epred__set_2EUNION @ tyop_2Erealax_2Ereal @ V0s @ V1t ) )
+        = ( c_2Epred__set_2EUNION @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Efrontier @ V0s ) @ ( c_2Ereal__topology_2Efrontier @ V1t ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ECLOSURE__UNION__FRONTIER,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ereal__topology_2Eclosure @ V0s )
+      = ( c_2Epred__set_2EUNION @ tyop_2Erealax_2Ereal @ V0s @ ( c_2Ereal__topology_2Efrontier @ V0s ) ) ) ).
+
+thf(thm_2Ereal__topology_2EFRONTIER__INTERIOR__SUBSET,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o] : ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Efrontier @ ( c_2Ereal__topology_2Einterior @ V0s ) ) @ ( c_2Ereal__topology_2Efrontier @ V0s ) ) ).
+
+thf(thm_2Ereal__topology_2EFRONTIER__CLOSURE__SUBSET,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o] : ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Efrontier @ ( c_2Ereal__topology_2Eclosure @ V0s ) ) @ ( c_2Ereal__topology_2Efrontier @ V0s ) ) ).
+
+thf(thm_2Ereal__topology_2ESET__DIFF__FRONTIER,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Epred__set_2EDIFF @ tyop_2Erealax_2Ereal @ V0s @ ( c_2Ereal__topology_2Efrontier @ V0s ) )
+      = ( c_2Ereal__topology_2Einterior @ V0s ) ) ).
+
+thf(thm_2Ereal__topology_2EFRONTIER__INTER__SUBSET__INTER,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1t: tyop_2Erealax_2Ereal > $o] : ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Efrontier @ ( c_2Epred__set_2EINTER @ tyop_2Erealax_2Ereal @ V0s @ V1t ) ) @ ( c_2Epred__set_2EUNION @ tyop_2Erealax_2Ereal @ ( c_2Epred__set_2EINTER @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Eclosure @ V0s ) @ ( c_2Ereal__topology_2Efrontier @ V1t ) ) @ ( c_2Epred__set_2EINTER @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Efrontier @ V0s ) @ ( c_2Ereal__topology_2Eclosure @ V1t ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2Enet__tybij,axiom,
+    ! [A_27a: $tType,A_27b: $tType] :
+      ( ! [V0a: tyop_2Ereal__topology_2Enet @ A_27a] :
+          ( ( c_2Ereal__topology_2Emk__net @ A_27a @ ( c_2Ereal__topology_2Enetord @ A_27a @ V0a ) )
+          = V0a )
+      & ! [V1r: A_27b > A_27b > $o] :
+          ( ! [V2x: A_27b,V3y: A_27b] :
+              ( ! [V4z: A_27b] :
+                  ( ( V1r @ V4z @ V2x )
+                 => ( V1r @ V4z @ V3y ) )
+              | ! [V5z: A_27b] :
+                  ( ( V1r @ V5z @ V3y )
+                 => ( V1r @ V5z @ V2x ) ) )
+        <=> ( ( c_2Ereal__topology_2Enetord @ A_27b @ ( c_2Ereal__topology_2Emk__net @ A_27b @ V1r ) )
+            = V1r ) ) ) ).
+
+thf(thm_2Ereal__topology_2ENET,axiom,
+    ! [A_27a: $tType,V0n: tyop_2Ereal__topology_2Enet @ A_27a,V1x: A_27a,V2y: A_27a] :
+      ( ! [V3z: A_27a] :
+          ( ( c_2Ereal__topology_2Enetord @ A_27a @ V0n @ V3z @ V1x )
+         => ( c_2Ereal__topology_2Enetord @ A_27a @ V0n @ V3z @ V2y ) )
+      | ! [V4z: A_27a] :
+          ( ( c_2Ereal__topology_2Enetord @ A_27a @ V0n @ V4z @ V2y )
+         => ( c_2Ereal__topology_2Enetord @ A_27a @ V0n @ V4z @ V1x ) ) ) ).
+
+thf(thm_2Ereal__topology_2EOLDNET,axiom,
+    ! [A_27a: $tType,V0n: tyop_2Ereal__topology_2Enet @ A_27a,V1x: A_27a,V2y: A_27a] :
+      ( ( ( c_2Ereal__topology_2Enetord @ A_27a @ V0n @ V1x @ V1x )
+        & ( c_2Ereal__topology_2Enetord @ A_27a @ V0n @ V2y @ V2y ) )
+     => ? [V3z: A_27a] :
+          ( ( c_2Ereal__topology_2Enetord @ A_27a @ V0n @ V3z @ V3z )
+          & ! [V4w: A_27a] :
+              ( ( c_2Ereal__topology_2Enetord @ A_27a @ V0n @ V4w @ V3z )
+             => ( ( c_2Ereal__topology_2Enetord @ A_27a @ V0n @ V4w @ V1x )
+                & ( c_2Ereal__topology_2Enetord @ A_27a @ V0n @ V4w @ V2y ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ENET__DILEMMA,axiom,
+    ! [A_27a: $tType,V0Q: A_27a > $o,V1P: A_27a > $o,V2net: tyop_2Ereal__topology_2Enet @ A_27a] :
+      ( ( ? [V3a: A_27a] :
+            ( ? [V4x: A_27a] : ( c_2Ereal__topology_2Enetord @ A_27a @ V2net @ V4x @ V3a )
+            & ! [V5x: A_27a] :
+                ( ( c_2Ereal__topology_2Enetord @ A_27a @ V2net @ V5x @ V3a )
+               => ( V1P @ V5x ) ) )
+        & ? [V6b: A_27a] :
+            ( ? [V7x: A_27a] : ( c_2Ereal__topology_2Enetord @ A_27a @ V2net @ V7x @ V6b )
+            & ! [V8x: A_27a] :
+                ( ( c_2Ereal__topology_2Enetord @ A_27a @ V2net @ V8x @ V6b )
+               => ( V0Q @ V8x ) ) ) )
+     => ? [V9c: A_27a] :
+          ( ? [V10x: A_27a] : ( c_2Ereal__topology_2Enetord @ A_27a @ V2net @ V10x @ V9c )
+          & ! [V11x: A_27a] :
+              ( ( c_2Ereal__topology_2Enetord @ A_27a @ V2net @ V11x @ V9c )
+             => ( ( V1P @ V11x )
+                & ( V0Q @ V11x ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EAT,axiom,
+    ! [V0a: tyop_2Erealax_2Ereal,V1x: tyop_2Erealax_2Ereal,V2y: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2Enetord @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Eat @ V0a ) @ V1x @ V2y )
+    <=> ( ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V1x @ V0a ) ) )
+        & ( c_2Ereal_2Ereal__lte @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V1x @ V0a ) ) @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V2y @ V0a ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EAT__INFINITY,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal,V1y: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2Enetord @ tyop_2Erealax_2Ereal @ c_2Ereal__topology_2Eat__infinity @ V0x @ V1y )
+      = ( c_2Ereal_2Ereal__ge @ ( c_2Ereal_2Eabs @ V0x ) @ ( c_2Ereal_2Eabs @ V1y ) ) ) ).
+
+thf(thm_2Ereal__topology_2EAT__POSINFINITY,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal,V1y: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2Enetord @ tyop_2Erealax_2Ereal @ c_2Ereal__topology_2Eat__posinfinity @ V0x @ V1y )
+      = ( c_2Ereal_2Ereal__ge @ V0x @ V1y ) ) ).
+
+thf(thm_2Ereal__topology_2EAT__NEGINFINITY,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal,V1y: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2Enetord @ tyop_2Erealax_2Ereal @ c_2Ereal__topology_2Eat__neginfinity @ V0x @ V1y )
+      = ( c_2Ereal_2Ereal__lte @ V0x @ V1y ) ) ).
+
+thf(thm_2Ereal__topology_2ESEQUENTIALLY,axiom,
+    ! [V0m: tyop_2Enum_2Enum,V1n: tyop_2Enum_2Enum] :
+      ( ( c_2Ereal__topology_2Enetord @ tyop_2Enum_2Enum @ c_2Ereal__topology_2Esequentially @ V0m @ V1n )
+      = ( c_2Earithmetic_2E_3E_3D @ V0m @ V1n ) ) ).
+
+thf(thm_2Ereal__topology_2EWITHIN,axiom,
+    ! [A_27a: $tType,V0n: tyop_2Ereal__topology_2Enet @ A_27a,V1s: A_27a > $o,V2x: A_27a,V3y: A_27a] :
+      ( ( c_2Ereal__topology_2Enetord @ A_27a @ ( c_2Ereal__topology_2Ewithin @ A_27a @ V0n @ V1s ) @ V2x @ V3y )
+    <=> ( ( c_2Ereal__topology_2Enetord @ A_27a @ V0n @ V2x @ V3y )
+        & ( c_2Ebool_2EIN @ A_27a @ V2x @ V1s ) ) ) ).
+
+thf(thm_2Ereal__topology_2EIN__DIRECTION,axiom,
+    ! [V0a: tyop_2Erealax_2Ereal,V1v: tyop_2Erealax_2Ereal,V2x: tyop_2Erealax_2Ereal,V3y: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2Enetord @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Ein__direction @ V0a @ V1v ) @ V2x @ V3y )
+    <=> ( ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V2x @ V0a ) ) )
+        & ( c_2Ereal_2Ereal__lte @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V2x @ V0a ) ) @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V3y @ V0a ) ) )
+        & ? [V4c: tyop_2Erealax_2Ereal] :
+            ( ( c_2Ereal_2Ereal__lte @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V4c )
+            & ( ( c_2Ereal_2Ereal__sub @ V2x @ V0a )
+              = ( c_2Erealax_2Ereal__mul @ V4c @ V1v ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EWITHIN__UNIV,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2Ewithin @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Eat @ V0x ) @ ( c_2Epred__set_2EUNIV @ tyop_2Erealax_2Ereal ) )
+      = ( c_2Ereal__topology_2Eat @ V0x ) ) ).
+
+thf(thm_2Ereal__topology_2EWITHIN__WITHIN,axiom,
+    ! [A_27a: $tType,V0net: tyop_2Ereal__topology_2Enet @ A_27a,V1s: A_27a > $o,V2t: A_27a > $o] :
+      ( ( c_2Ereal__topology_2Ewithin @ A_27a @ ( c_2Ereal__topology_2Ewithin @ A_27a @ V0net @ V1s ) @ V2t )
+      = ( c_2Ereal__topology_2Ewithin @ A_27a @ V0net @ ( c_2Epred__set_2EINTER @ A_27a @ V1s @ V2t ) ) ) ).
+
+thf(thm_2Ereal__topology_2ETRIVIAL__LIMIT__WITHIN,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1a: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2Etrivial__limit @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Ewithin @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Eat @ V1a ) @ V0s ) )
+    <=> ( (~) @ ( c_2Ereal__topology_2Elimit__point__of @ V1a @ V0s ) ) ) ).
+
+thf(thm_2Ereal__topology_2ETRIVIAL__LIMIT__AT,axiom,
+    ! [V0a: tyop_2Erealax_2Ereal] : ( (~) @ ( c_2Ereal__topology_2Etrivial__limit @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Eat @ V0a ) ) ) ).
+
+thf(thm_2Ereal__topology_2ETRIVIAL__LIMIT__AT__INFINITY,axiom,
+    (~) @ ( c_2Ereal__topology_2Etrivial__limit @ tyop_2Erealax_2Ereal @ c_2Ereal__topology_2Eat__infinity ) ).
+
+thf(thm_2Ereal__topology_2ETRIVIAL__LIMIT__AT__POSINFINITY,axiom,
+    (~) @ ( c_2Ereal__topology_2Etrivial__limit @ tyop_2Erealax_2Ereal @ c_2Ereal__topology_2Eat__posinfinity ) ).
+
+thf(thm_2Ereal__topology_2ETRIVIAL__LIMIT__AT__NEGINFINITY,axiom,
+    (~) @ ( c_2Ereal__topology_2Etrivial__limit @ tyop_2Erealax_2Ereal @ c_2Ereal__topology_2Eat__neginfinity ) ).
+
+thf(thm_2Ereal__topology_2ETRIVIAL__LIMIT__SEQUENTIALLY,axiom,
+    (~) @ ( c_2Ereal__topology_2Etrivial__limit @ tyop_2Enum_2Enum @ c_2Ereal__topology_2Esequentially ) ).
+
+thf(thm_2Ereal__topology_2ELIM__WITHIN__CLOSED__TRIVIAL,axiom,
+    ! [V0a: tyop_2Erealax_2Ereal,V1s: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( c_2Ereal__topology_2EClosed @ V1s )
+        & ( (~) @ ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V0a @ V1s ) ) )
+     => ( c_2Ereal__topology_2Etrivial__limit @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Ewithin @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Eat @ V0a ) @ V1s ) ) ) ).
+
+thf(thm_2Ereal__topology_2ENONTRIVIAL__LIMIT__WITHIN,axiom,
+    ! [A_27a: $tType,V0net: tyop_2Ereal__topology_2Enet @ A_27a,V1s: A_27a > $o] :
+      ( ( c_2Ereal__topology_2Etrivial__limit @ A_27a @ V0net )
+     => ( c_2Ereal__topology_2Etrivial__limit @ A_27a @ ( c_2Ereal__topology_2Ewithin @ A_27a @ V0net @ V1s ) ) ) ).
+
+thf(thm_2Ereal__topology_2EEVENTUALLY__HAPPENS,axiom,
+    ! [A_27a: $tType,V0net: tyop_2Ereal__topology_2Enet @ A_27a,V1p: A_27a > $o] :
+      ( ( c_2Ereal__topology_2Eeventually @ A_27a @ V1p @ V0net )
+     => ( ( c_2Ereal__topology_2Etrivial__limit @ A_27a @ V0net )
+        | ? [V2x: A_27a] : ( V1p @ V2x ) ) ) ).
+
+thf(thm_2Ereal__topology_2EEVENTUALLY__WITHIN__LE,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1a: tyop_2Erealax_2Ereal,V2p: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ereal__topology_2Eeventually @ tyop_2Erealax_2Ereal @ V2p @ ( c_2Ereal__topology_2Ewithin @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Eat @ V1a ) @ V0s ) )
+    <=> ? [V3d: tyop_2Erealax_2Ereal] :
+          ( ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V3d )
+          & ! [V4x: tyop_2Erealax_2Ereal] :
+              ( ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V4x @ V0s )
+                & ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V4x @ V1a ) ) )
+                & ( c_2Ereal_2Ereal__lte @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V4x @ V1a ) ) @ V3d ) )
+             => ( V2p @ V4x ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EEVENTUALLY__WITHIN,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1a: tyop_2Erealax_2Ereal,V2p: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ereal__topology_2Eeventually @ tyop_2Erealax_2Ereal @ V2p @ ( c_2Ereal__topology_2Ewithin @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Eat @ V1a ) @ V0s ) )
+    <=> ? [V3d: tyop_2Erealax_2Ereal] :
+          ( ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V3d )
+          & ! [V4x: tyop_2Erealax_2Ereal] :
+              ( ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V4x @ V0s )
+                & ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V4x @ V1a ) ) )
+                & ( c_2Erealax_2Ereal__lt @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V4x @ V1a ) ) @ V3d ) )
+             => ( V2p @ V4x ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EEVENTUALLY__AT,axiom,
+    ! [V0a: tyop_2Erealax_2Ereal,V1p: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ereal__topology_2Eeventually @ tyop_2Erealax_2Ereal @ V1p @ ( c_2Ereal__topology_2Eat @ V0a ) )
+    <=> ? [V2d: tyop_2Erealax_2Ereal] :
+          ( ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V2d )
+          & ! [V3x: tyop_2Erealax_2Ereal] :
+              ( ( ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V3x @ V0a ) ) )
+                & ( c_2Erealax_2Ereal__lt @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V3x @ V0a ) ) @ V2d ) )
+             => ( V1p @ V3x ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EEVENTUALLY__SEQUENTIALLY,axiom,
+    ! [V0p: tyop_2Enum_2Enum > $o] :
+      ( ( c_2Ereal__topology_2Eeventually @ tyop_2Enum_2Enum @ V0p @ c_2Ereal__topology_2Esequentially )
+    <=> ? [V1N: tyop_2Enum_2Enum] :
+        ! [V2n: tyop_2Enum_2Enum] :
+          ( ( c_2Earithmetic_2E_3C_3D @ V1N @ V2n )
+         => ( V0p @ V2n ) ) ) ).
+
+thf(thm_2Ereal__topology_2EEVENTUALLY__AT__INFINITY,axiom,
+    ! [V0p: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ereal__topology_2Eeventually @ tyop_2Erealax_2Ereal @ V0p @ c_2Ereal__topology_2Eat__infinity )
+    <=> ? [V1b: tyop_2Erealax_2Ereal] :
+        ! [V2x: tyop_2Erealax_2Ereal] :
+          ( ( c_2Ereal_2Ereal__ge @ ( c_2Ereal_2Eabs @ V2x ) @ V1b )
+         => ( V0p @ V2x ) ) ) ).
+
+thf(thm_2Ereal__topology_2EEVENTUALLY__AT__POSINFINITY,axiom,
+    ! [V0p: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ereal__topology_2Eeventually @ tyop_2Erealax_2Ereal @ V0p @ c_2Ereal__topology_2Eat__posinfinity )
+    <=> ? [V1b: tyop_2Erealax_2Ereal] :
+        ! [V2x: tyop_2Erealax_2Ereal] :
+          ( ( c_2Ereal_2Ereal__ge @ V2x @ V1b )
+         => ( V0p @ V2x ) ) ) ).
+
+thf(thm_2Ereal__topology_2EEVENTUALLY__AT__NEGINFINITY,axiom,
+    ! [V0p: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ereal__topology_2Eeventually @ tyop_2Erealax_2Ereal @ V0p @ c_2Ereal__topology_2Eat__neginfinity )
+    <=> ? [V1b: tyop_2Erealax_2Ereal] :
+        ! [V2x: tyop_2Erealax_2Ereal] :
+          ( ( c_2Ereal_2Ereal__lte @ V2x @ V1b )
+         => ( V0p @ V2x ) ) ) ).
+
+thf(thm_2Ereal__topology_2EEVENTUALLY__AT__INFINITY__POS,axiom,
+    ! [V0p: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ereal__topology_2Eeventually @ tyop_2Erealax_2Ereal @ V0p @ c_2Ereal__topology_2Eat__infinity )
+    <=> ? [V1b: tyop_2Erealax_2Ereal] :
+          ( ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V1b )
+          & ! [V2x: tyop_2Erealax_2Ereal] :
+              ( ( c_2Ereal_2Ereal__ge @ ( c_2Ereal_2Eabs @ V2x ) @ V1b )
+             => ( V0p @ V2x ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EALWAYS__EVENTUALLY,axiom,
+    ! [A_27a: $tType,V0p: A_27a > $o,V1net: tyop_2Ereal__topology_2Enet @ A_27a] :
+      ( ! [V2x: A_27a] : ( V0p @ V2x )
+     => ( c_2Ereal__topology_2Eeventually @ A_27a @ V0p @ V1net ) ) ).
+
+thf(thm_2Ereal__topology_2EEVENTUALLY__AND,axiom,
+    ! [A_27a: $tType,V0net: tyop_2Ereal__topology_2Enet @ A_27a,V1p: A_27a > $o,V2q: A_27a > $o] :
+      ( ( c_2Ereal__topology_2Eeventually @ A_27a
+        @ ^ [V3x: A_27a] : ( c_2Ebool_2E_2F_5C @ ( V1p @ V3x ) @ ( V2q @ V3x ) )
+        @ V0net )
+    <=> ( ( c_2Ereal__topology_2Eeventually @ A_27a @ V1p @ V0net )
+        & ( c_2Ereal__topology_2Eeventually @ A_27a @ V2q @ V0net ) ) ) ).
+
+thf(thm_2Ereal__topology_2EEVENTUALLY__MONO,axiom,
+    ! [A_27a: $tType,V0net: tyop_2Ereal__topology_2Enet @ A_27a,V1p: A_27a > $o,V2q: A_27a > $o] :
+      ( ( ! [V3x: A_27a] :
+            ( ( V1p @ V3x )
+           => ( V2q @ V3x ) )
+        & ( c_2Ereal__topology_2Eeventually @ A_27a @ V1p @ V0net ) )
+     => ( c_2Ereal__topology_2Eeventually @ A_27a @ V2q @ V0net ) ) ).
+
+thf(thm_2Ereal__topology_2EEVENTUALLY__MP,axiom,
+    ! [A_27a: $tType,V0net: tyop_2Ereal__topology_2Enet @ A_27a,V1p: A_27a > $o,V2q: A_27a > $o] :
+      ( ( ( c_2Ereal__topology_2Eeventually @ A_27a
+          @ ^ [V3x: A_27a] : ( c_2Emin_2E_3D_3D_3E @ ( V1p @ V3x ) @ ( V2q @ V3x ) )
+          @ V0net )
+        & ( c_2Ereal__topology_2Eeventually @ A_27a @ V1p @ V0net ) )
+     => ( c_2Ereal__topology_2Eeventually @ A_27a @ V2q @ V0net ) ) ).
+
+thf(thm_2Ereal__topology_2EEVENTUALLY__FALSE,axiom,
+    ! [A_27a: $tType,V0net: tyop_2Ereal__topology_2Enet @ A_27a] :
+      ( ( c_2Ereal__topology_2Eeventually @ A_27a
+        @ ^ [V1x: A_27a] : c_2Ebool_2EF
+        @ V0net )
+      = ( c_2Ereal__topology_2Etrivial__limit @ A_27a @ V0net ) ) ).
+
+thf(thm_2Ereal__topology_2EEVENTUALLY__TRUE,axiom,
+    ! [A_27a: $tType,V0net: tyop_2Ereal__topology_2Enet @ A_27a] :
+      ( ( c_2Ereal__topology_2Eeventually @ A_27a
+        @ ^ [V1x: A_27a] : c_2Ebool_2ET
+        @ V0net )
+      = c_2Ebool_2ET ) ).
+
+thf(thm_2Ereal__topology_2ENOT__EVENTUALLY,axiom,
+    ! [A_27a: $tType,V0net: tyop_2Ereal__topology_2Enet @ A_27a,V1p: A_27a > $o] :
+      ( ( ! [V2x: A_27a] : ( (~) @ ( V1p @ V2x ) )
+        & ( (~) @ ( c_2Ereal__topology_2Etrivial__limit @ A_27a @ V0net ) ) )
+     => ( (~) @ ( c_2Ereal__topology_2Eeventually @ A_27a @ V1p @ V0net ) ) ) ).
+
+thf(thm_2Ereal__topology_2EEVENTUALLY__FORALL,axiom,
+    ! [A_27a: $tType,A_27b: $tType,V0net: tyop_2Ereal__topology_2Enet @ A_27a,V1p: A_27b > A_27a > $o,V2s: A_27b > $o] :
+      ( ( ( c_2Epred__set_2EFINITE @ A_27b @ V2s )
+        & ( (~)
+          @ ( V2s
+            = ( c_2Epred__set_2EEMPTY @ A_27b ) ) ) )
+     => ( ( c_2Ereal__topology_2Eeventually @ A_27a
+          @ ^ [V3x: A_27a] :
+              ( c_2Ebool_2E_21 @ A_27b
+              @ ^ [V4a: A_27b] : ( c_2Emin_2E_3D_3D_3E @ ( c_2Ebool_2EIN @ A_27b @ V4a @ V2s ) @ ( V1p @ V4a @ V3x ) ) )
+          @ V0net )
+      <=> ! [V5a: A_27b] :
+            ( ( c_2Ebool_2EIN @ A_27b @ V5a @ V2s )
+           => ( c_2Ereal__topology_2Eeventually @ A_27a @ ( V1p @ V5a ) @ V0net ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EFORALL__EVENTUALLY,axiom,
+    ! [A_27a: $tType,A_27b: $tType,V0net: tyop_2Ereal__topology_2Enet @ A_27a,V1p: A_27b > A_27a > $o,V2s: A_27b > $o] :
+      ( ( ( c_2Epred__set_2EFINITE @ A_27b @ V2s )
+        & ( (~)
+          @ ( V2s
+            = ( c_2Epred__set_2EEMPTY @ A_27b ) ) ) )
+     => ( ! [V3a: A_27b] :
+            ( ( c_2Ebool_2EIN @ A_27b @ V3a @ V2s )
+           => ( c_2Ereal__topology_2Eeventually @ A_27a @ ( V1p @ V3a ) @ V0net ) )
+      <=> ( c_2Ereal__topology_2Eeventually @ A_27a
+          @ ^ [V4x: A_27a] :
+              ( c_2Ebool_2E_21 @ A_27b
+              @ ^ [V5a: A_27b] : ( c_2Emin_2E_3D_3D_3E @ ( c_2Ebool_2EIN @ A_27b @ V5a @ V2s ) @ ( V1p @ V5a @ V4x ) ) )
+          @ V0net ) ) ) ).
+
+thf(thm_2Ereal__topology_2ELIM,axiom,
+    ! [A_27a: $tType,V0net: tyop_2Ereal__topology_2Enet @ A_27a,V1l: tyop_2Erealax_2Ereal,V2f: A_27a > tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2E_2D_2D_3E @ A_27a @ V2f @ V1l @ V0net )
+    <=> ( ( c_2Ereal__topology_2Etrivial__limit @ A_27a @ V0net )
+        | ! [V3e: tyop_2Erealax_2Ereal] :
+            ( ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V3e )
+           => ? [V4y: A_27a] :
+                ( ? [V5x: A_27a] : ( c_2Ereal__topology_2Enetord @ A_27a @ V0net @ V5x @ V4y )
+                & ! [V6x: A_27a] :
+                    ( ( c_2Ereal__topology_2Enetord @ A_27a @ V0net @ V6x @ V4y )
+                   => ( c_2Erealax_2Ereal__lt @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ ( V2f @ V6x ) @ V1l ) ) @ V3e ) ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ELIM__WITHIN__LE,axiom,
+    ! [V0f: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal,V1l: tyop_2Erealax_2Ereal,V2a: tyop_2Erealax_2Ereal,V3s: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ereal__topology_2E_2D_2D_3E @ tyop_2Erealax_2Ereal @ V0f @ V1l @ ( c_2Ereal__topology_2Ewithin @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Eat @ V2a ) @ V3s ) )
+    <=> ! [V4e: tyop_2Erealax_2Ereal] :
+          ( ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V4e )
+         => ? [V5d: tyop_2Erealax_2Ereal] :
+              ( ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V5d )
+              & ! [V6x: tyop_2Erealax_2Ereal] :
+                  ( ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V6x @ V3s )
+                    & ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V6x @ V2a ) ) )
+                    & ( c_2Ereal_2Ereal__lte @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V6x @ V2a ) ) @ V5d ) )
+                 => ( c_2Erealax_2Ereal__lt @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ ( V0f @ V6x ) @ V1l ) ) @ V4e ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ELIM__WITHIN,axiom,
+    ! [V0f: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal,V1l: tyop_2Erealax_2Ereal,V2a: tyop_2Erealax_2Ereal,V3s: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ereal__topology_2E_2D_2D_3E @ tyop_2Erealax_2Ereal @ V0f @ V1l @ ( c_2Ereal__topology_2Ewithin @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Eat @ V2a ) @ V3s ) )
+    <=> ! [V4e: tyop_2Erealax_2Ereal] :
+          ( ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V4e )
+         => ? [V5d: tyop_2Erealax_2Ereal] :
+              ( ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V5d )
+              & ! [V6x: tyop_2Erealax_2Ereal] :
+                  ( ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V6x @ V3s )
+                    & ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V6x @ V2a ) ) )
+                    & ( c_2Erealax_2Ereal__lt @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V6x @ V2a ) ) @ V5d ) )
+                 => ( c_2Erealax_2Ereal__lt @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ ( V0f @ V6x ) @ V1l ) ) @ V4e ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ELIM__AT__LE,axiom,
+    ! [V0f: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal,V1l: tyop_2Erealax_2Ereal,V2a: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2E_2D_2D_3E @ tyop_2Erealax_2Ereal @ V0f @ V1l @ ( c_2Ereal__topology_2Eat @ V2a ) )
+    <=> ! [V3e: tyop_2Erealax_2Ereal] :
+          ( ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V3e )
+         => ? [V4d: tyop_2Erealax_2Ereal] :
+              ( ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V4d )
+              & ! [V5x: tyop_2Erealax_2Ereal] :
+                  ( ( ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V5x @ V2a ) ) )
+                    & ( c_2Ereal_2Ereal__lte @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V5x @ V2a ) ) @ V4d ) )
+                 => ( c_2Erealax_2Ereal__lt @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ ( V0f @ V5x ) @ V1l ) ) @ V3e ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ELIM__AT,axiom,
+    ! [V0f: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal,V1l: tyop_2Erealax_2Ereal,V2a: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2E_2D_2D_3E @ tyop_2Erealax_2Ereal @ V0f @ V1l @ ( c_2Ereal__topology_2Eat @ V2a ) )
+    <=> ! [V3e: tyop_2Erealax_2Ereal] :
+          ( ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V3e )
+         => ? [V4d: tyop_2Erealax_2Ereal] :
+              ( ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V4d )
+              & ! [V5x: tyop_2Erealax_2Ereal] :
+                  ( ( ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V5x @ V2a ) ) )
+                    & ( c_2Erealax_2Ereal__lt @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V5x @ V2a ) ) @ V4d ) )
+                 => ( c_2Erealax_2Ereal__lt @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ ( V0f @ V5x ) @ V1l ) ) @ V3e ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ELIM__AT__INFINITY,axiom,
+    ! [V0f: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal,V1l: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2E_2D_2D_3E @ tyop_2Erealax_2Ereal @ V0f @ V1l @ c_2Ereal__topology_2Eat__infinity )
+    <=> ! [V2e: tyop_2Erealax_2Ereal] :
+          ( ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V2e )
+         => ? [V3b: tyop_2Erealax_2Ereal] :
+            ! [V4x: tyop_2Erealax_2Ereal] :
+              ( ( c_2Ereal_2Ereal__ge @ ( c_2Ereal_2Eabs @ V4x ) @ V3b )
+             => ( c_2Erealax_2Ereal__lt @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ ( V0f @ V4x ) @ V1l ) ) @ V2e ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ELIM__AT__INFINITY__POS,axiom,
+    ! [V0f: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal,V1l: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2E_2D_2D_3E @ tyop_2Erealax_2Ereal @ V0f @ V1l @ c_2Ereal__topology_2Eat__infinity )
+    <=> ! [V2e: tyop_2Erealax_2Ereal] :
+          ( ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V2e )
+         => ? [V3b: tyop_2Erealax_2Ereal] :
+              ( ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V3b )
+              & ! [V4x: tyop_2Erealax_2Ereal] :
+                  ( ( c_2Ereal_2Ereal__ge @ ( c_2Ereal_2Eabs @ V4x ) @ V3b )
+                 => ( c_2Erealax_2Ereal__lt @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ ( V0f @ V4x ) @ V1l ) ) @ V2e ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ELIM__AT__POSINFINITY,axiom,
+    ! [V0f: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal,V1l: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2E_2D_2D_3E @ tyop_2Erealax_2Ereal @ V0f @ V1l @ c_2Ereal__topology_2Eat__posinfinity )
+    <=> ! [V2e: tyop_2Erealax_2Ereal] :
+          ( ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V2e )
+         => ? [V3b: tyop_2Erealax_2Ereal] :
+            ! [V4x: tyop_2Erealax_2Ereal] :
+              ( ( c_2Ereal_2Ereal__ge @ V4x @ V3b )
+             => ( c_2Erealax_2Ereal__lt @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ ( V0f @ V4x ) @ V1l ) ) @ V2e ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ELIM__AT__NEGINFINITY,axiom,
+    ! [V0f: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal,V1l: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2E_2D_2D_3E @ tyop_2Erealax_2Ereal @ V0f @ V1l @ c_2Ereal__topology_2Eat__neginfinity )
+    <=> ! [V2e: tyop_2Erealax_2Ereal] :
+          ( ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V2e )
+         => ? [V3b: tyop_2Erealax_2Ereal] :
+            ! [V4x: tyop_2Erealax_2Ereal] :
+              ( ( c_2Ereal_2Ereal__lte @ V4x @ V3b )
+             => ( c_2Erealax_2Ereal__lt @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ ( V0f @ V4x ) @ V1l ) ) @ V2e ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ELIM__SEQUENTIALLY,axiom,
+    ! [V0s: tyop_2Enum_2Enum > tyop_2Erealax_2Ereal,V1l: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2E_2D_2D_3E @ tyop_2Enum_2Enum @ V0s @ V1l @ c_2Ereal__topology_2Esequentially )
+    <=> ! [V2e: tyop_2Erealax_2Ereal] :
+          ( ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V2e )
+         => ? [V3N: tyop_2Enum_2Enum] :
+            ! [V4n: tyop_2Enum_2Enum] :
+              ( ( c_2Earithmetic_2E_3C_3D @ V3N @ V4n )
+             => ( c_2Erealax_2Ereal__lt @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ ( V0s @ V4n ) @ V1l ) ) @ V2e ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ELIM__EVENTUALLY,axiom,
+    ! [A_27a: $tType,V0net: tyop_2Ereal__topology_2Enet @ A_27a,V1f: A_27a > tyop_2Erealax_2Ereal,V2l: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2Eeventually @ A_27a
+        @ ^ [V3x: A_27a] : ( c_2Emin_2E_3D @ tyop_2Erealax_2Ereal @ ( V1f @ V3x ) @ V2l )
+        @ V0net )
+     => ( c_2Ereal__topology_2E_2D_2D_3E @ A_27a @ V1f @ V2l @ V0net ) ) ).
+
+thf(thm_2Ereal__topology_2ELIM__POSINFINITY__SEQUENTIALLY,axiom,
+    ! [V0f: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal,V1l: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2E_2D_2D_3E @ tyop_2Erealax_2Ereal @ V0f @ V1l @ c_2Ereal__topology_2Eat__posinfinity )
+     => ( c_2Ereal__topology_2E_2D_2D_3E @ tyop_2Enum_2Enum
+        @ ^ [V2n: tyop_2Enum_2Enum] : ( V0f @ ( c_2Ereal_2Ereal__of__num @ V2n ) )
+        @ V1l
+        @ c_2Ereal__topology_2Esequentially ) ) ).
+
+thf(thm_2Ereal__topology_2ELIM__INFINITY__POSINFINITY,axiom,
+    ! [V0f: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal,V1l: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2E_2D_2D_3E @ tyop_2Erealax_2Ereal @ V0f @ V1l @ c_2Ereal__topology_2Eat__infinity )
+     => ( c_2Ereal__topology_2E_2D_2D_3E @ tyop_2Erealax_2Ereal @ V0f @ V1l @ c_2Ereal__topology_2Eat__posinfinity ) ) ).
+
+thf(thm_2Ereal__topology_2ELIM__WITHIN__EMPTY,axiom,
+    ! [V0f: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal,V1l: tyop_2Erealax_2Ereal,V2x: tyop_2Erealax_2Ereal] : ( c_2Ereal__topology_2E_2D_2D_3E @ tyop_2Erealax_2Ereal @ V0f @ V1l @ ( c_2Ereal__topology_2Ewithin @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Eat @ V2x ) @ ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) ) ) ).
+
+thf(thm_2Ereal__topology_2ELIM__WITHIN__SUBSET,axiom,
+    ! [V0t: tyop_2Erealax_2Ereal > $o,V1f: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal,V2l: tyop_2Erealax_2Ereal,V3a: tyop_2Erealax_2Ereal,V4s: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( c_2Ereal__topology_2E_2D_2D_3E @ tyop_2Erealax_2Ereal @ V1f @ V2l @ ( c_2Ereal__topology_2Ewithin @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Eat @ V3a ) @ V4s ) )
+        & ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ V0t @ V4s ) )
+     => ( c_2Ereal__topology_2E_2D_2D_3E @ tyop_2Erealax_2Ereal @ V1f @ V2l @ ( c_2Ereal__topology_2Ewithin @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Eat @ V3a ) @ V0t ) ) ) ).
+
+thf(thm_2Ereal__topology_2ELIM__UNION,axiom,
+    ! [V0f: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal,V1x: tyop_2Erealax_2Ereal,V2l: tyop_2Erealax_2Ereal,V3s: tyop_2Erealax_2Ereal > $o,V4t: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( c_2Ereal__topology_2E_2D_2D_3E @ tyop_2Erealax_2Ereal @ V0f @ V2l @ ( c_2Ereal__topology_2Ewithin @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Eat @ V1x ) @ V3s ) )
+        & ( c_2Ereal__topology_2E_2D_2D_3E @ tyop_2Erealax_2Ereal @ V0f @ V2l @ ( c_2Ereal__topology_2Ewithin @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Eat @ V1x ) @ V4t ) ) )
+     => ( c_2Ereal__topology_2E_2D_2D_3E @ tyop_2Erealax_2Ereal @ V0f @ V2l @ ( c_2Ereal__topology_2Ewithin @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Eat @ V1x ) @ ( c_2Epred__set_2EUNION @ tyop_2Erealax_2Ereal @ V3s @ V4t ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ELIM__UNION__UNIV,axiom,
+    ! [V0f: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal,V1x: tyop_2Erealax_2Ereal,V2l: tyop_2Erealax_2Ereal,V3s: tyop_2Erealax_2Ereal > $o,V4t: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( c_2Ereal__topology_2E_2D_2D_3E @ tyop_2Erealax_2Ereal @ V0f @ V2l @ ( c_2Ereal__topology_2Ewithin @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Eat @ V1x ) @ V3s ) )
+        & ( c_2Ereal__topology_2E_2D_2D_3E @ tyop_2Erealax_2Ereal @ V0f @ V2l @ ( c_2Ereal__topology_2Ewithin @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Eat @ V1x ) @ V4t ) )
+        & ( ( c_2Epred__set_2EUNION @ tyop_2Erealax_2Ereal @ V3s @ V4t )
+          = ( c_2Epred__set_2EUNIV @ tyop_2Erealax_2Ereal ) ) )
+     => ( c_2Ereal__topology_2E_2D_2D_3E @ tyop_2Erealax_2Ereal @ V0f @ V2l @ ( c_2Ereal__topology_2Eat @ V1x ) ) ) ).
+
+thf(thm_2Ereal__topology_2ELIM__COMPOSE__WITHIN,axiom,
+    ! [A_27a: $tType,V0net: tyop_2Ereal__topology_2Enet @ A_27a,V1f: A_27a > tyop_2Erealax_2Ereal,V2g: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal,V3s: tyop_2Erealax_2Ereal > $o,V4y: tyop_2Erealax_2Ereal,V5z: tyop_2Erealax_2Ereal] :
+      ( ( ( c_2Ereal__topology_2E_2D_2D_3E @ A_27a @ V1f @ V4y @ V0net )
+        & ( c_2Ereal__topology_2Eeventually @ A_27a
+          @ ^ [V6w: A_27a] : ( c_2Ebool_2E_2F_5C @ ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ ( V1f @ V6w ) @ V3s ) @ ( c_2Emin_2E_3D_3D_3E @ ( c_2Emin_2E_3D @ tyop_2Erealax_2Ereal @ ( V1f @ V6w ) @ V4y ) @ ( c_2Emin_2E_3D @ tyop_2Erealax_2Ereal @ ( V2g @ V4y ) @ V5z ) ) )
+          @ V0net )
+        & ( c_2Ereal__topology_2E_2D_2D_3E @ tyop_2Erealax_2Ereal @ V2g @ V5z @ ( c_2Ereal__topology_2Ewithin @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Eat @ V4y ) @ V3s ) ) )
+     => ( c_2Ereal__topology_2E_2D_2D_3E @ A_27a @ ( c_2Ecombin_2Eo @ A_27a @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V2g @ V1f ) @ V5z @ V0net ) ) ).
+
+thf(thm_2Ereal__topology_2ELIM__COMPOSE__AT,axiom,
+    ! [A_27a: $tType,V0net: tyop_2Ereal__topology_2Enet @ A_27a,V1f: A_27a > tyop_2Erealax_2Ereal,V2g: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal,V3y: tyop_2Erealax_2Ereal,V4z: tyop_2Erealax_2Ereal] :
+      ( ( ( c_2Ereal__topology_2E_2D_2D_3E @ A_27a @ V1f @ V3y @ V0net )
+        & ( c_2Ereal__topology_2Eeventually @ A_27a
+          @ ^ [V5w: A_27a] : ( c_2Emin_2E_3D_3D_3E @ ( c_2Emin_2E_3D @ tyop_2Erealax_2Ereal @ ( V1f @ V5w ) @ V3y ) @ ( c_2Emin_2E_3D @ tyop_2Erealax_2Ereal @ ( V2g @ V3y ) @ V4z ) )
+          @ V0net )
+        & ( c_2Ereal__topology_2E_2D_2D_3E @ tyop_2Erealax_2Ereal @ V2g @ V4z @ ( c_2Ereal__topology_2Eat @ V3y ) ) )
+     => ( c_2Ereal__topology_2E_2D_2D_3E @ A_27a @ ( c_2Ecombin_2Eo @ A_27a @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V2g @ V1f ) @ V4z @ V0net ) ) ).
+
+thf(thm_2Ereal__topology_2ELIM__AT__WITHIN,axiom,
+    ! [V0f: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal,V1l: tyop_2Erealax_2Ereal,V2a: tyop_2Erealax_2Ereal,V3s: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ereal__topology_2E_2D_2D_3E @ tyop_2Erealax_2Ereal @ V0f @ V1l @ ( c_2Ereal__topology_2Eat @ V2a ) )
+     => ( c_2Ereal__topology_2E_2D_2D_3E @ tyop_2Erealax_2Ereal @ V0f @ V1l @ ( c_2Ereal__topology_2Ewithin @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Eat @ V2a ) @ V3s ) ) ) ).
+
+thf(thm_2Ereal__topology_2ELIM__WITHIN__OPEN,axiom,
+    ! [V0f: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal,V1l: tyop_2Erealax_2Ereal,V2a: tyop_2Erealax_2Ereal,V3s: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V2a @ V3s )
+        & ( c_2Ereal__topology_2EOpen @ V3s ) )
+     => ( ( c_2Ereal__topology_2E_2D_2D_3E @ tyop_2Erealax_2Ereal @ V0f @ V1l @ ( c_2Ereal__topology_2Ewithin @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Eat @ V2a ) @ V3s ) )
+        = ( c_2Ereal__topology_2E_2D_2D_3E @ tyop_2Erealax_2Ereal @ V0f @ V1l @ ( c_2Ereal__topology_2Eat @ V2a ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EFROM__0,axiom,
+    ( ( c_2Ereal__topology_2Efrom @ c_2Enum_2E0 )
+    = ( c_2Epred__set_2EUNIV @ tyop_2Enum_2Enum ) ) ).
+
+thf(thm_2Ereal__topology_2EIN__FROM,axiom,
+    ! [V0m: tyop_2Enum_2Enum,V1n: tyop_2Enum_2Enum] :
+      ( ( c_2Ebool_2EIN @ tyop_2Enum_2Enum @ V0m @ ( c_2Ereal__topology_2Efrom @ V1n ) )
+      = ( c_2Earithmetic_2E_3C_3D @ V1n @ V0m ) ) ).
+
+thf(thm_2Ereal__topology_2EFROM__INTER__NUMSEG__GEN,axiom,
+    ! [V0k: tyop_2Enum_2Enum,V1m: tyop_2Enum_2Enum,V2n: tyop_2Enum_2Enum] :
+      ( ( c_2Epred__set_2EINTER @ tyop_2Enum_2Enum @ ( c_2Ereal__topology_2Efrom @ V0k ) @ ( c_2Eiterate_2E_2E_2E @ V1m @ V2n ) )
+      = ( c_2Ebool_2ECOND @ ( tyop_2Enum_2Enum > $o ) @ ( c_2Eprim__rec_2E_3C @ V1m @ V0k ) @ ( c_2Eiterate_2E_2E_2E @ V0k @ V2n ) @ ( c_2Eiterate_2E_2E_2E @ V1m @ V2n ) ) ) ).
+
+thf(thm_2Ereal__topology_2EFROM__INTER__NUMSEG__MAX,axiom,
+    ! [V0m: tyop_2Enum_2Enum,V1n: tyop_2Enum_2Enum,V2p: tyop_2Enum_2Enum] :
+      ( ( c_2Epred__set_2EINTER @ tyop_2Enum_2Enum @ ( c_2Ereal__topology_2Efrom @ V2p ) @ ( c_2Eiterate_2E_2E_2E @ V0m @ V1n ) )
+      = ( c_2Eiterate_2E_2E_2E @ ( c_2Earithmetic_2EMAX @ V2p @ V0m ) @ V1n ) ) ).
+
+thf(thm_2Ereal__topology_2EFROM__INTER__NUMSEG,axiom,
+    ! [V0k: tyop_2Enum_2Enum,V1n: tyop_2Enum_2Enum] :
+      ( ( c_2Epred__set_2EINTER @ tyop_2Enum_2Enum @ ( c_2Ereal__topology_2Efrom @ V0k ) @ ( c_2Eiterate_2E_2E_2E @ c_2Enum_2E0 @ V1n ) )
+      = ( c_2Eiterate_2E_2E_2E @ V0k @ V1n ) ) ).
+
+thf(thm_2Ereal__topology_2EINFINITE__FROM,axiom,
+    ! [V0n: tyop_2Enum_2Enum] : ( (~) @ ( c_2Epred__set_2EFINITE @ tyop_2Enum_2Enum @ ( c_2Ereal__topology_2Efrom @ V0n ) ) ) ).
+
+thf(thm_2Ereal__topology_2EWLOG__LT,axiom,
+    ! [V0P: tyop_2Enum_2Enum > tyop_2Enum_2Enum > $o] :
+      ( ( ! [V1m: tyop_2Enum_2Enum] : ( V0P @ V1m @ V1m )
+        & ! [V2m: tyop_2Enum_2Enum,V3n: tyop_2Enum_2Enum] :
+            ( ( V0P @ V2m @ V3n )
+            = ( V0P @ V3n @ V2m ) )
+        & ! [V4m: tyop_2Enum_2Enum,V5n: tyop_2Enum_2Enum] :
+            ( ( c_2Eprim__rec_2E_3C @ V4m @ V5n )
+           => ( V0P @ V4m @ V5n ) ) )
+     => ! [V6m: tyop_2Enum_2Enum,V7y: tyop_2Enum_2Enum] : ( V0P @ V6m @ V7y ) ) ).
+
+thf(thm_2Ereal__topology_2EWLOG__LE,axiom,
+    ! [V0P: tyop_2Enum_2Enum > tyop_2Enum_2Enum > $o] :
+      ( ( ! [V1m: tyop_2Enum_2Enum,V2n: tyop_2Enum_2Enum] :
+            ( ( V0P @ V1m @ V2n )
+            = ( V0P @ V2n @ V1m ) )
+        & ! [V3m: tyop_2Enum_2Enum,V4n: tyop_2Enum_2Enum] :
+            ( ( c_2Earithmetic_2E_3C_3D @ V3m @ V4n )
+           => ( V0P @ V3m @ V4n ) ) )
+     => ! [V5m: tyop_2Enum_2Enum,V6n: tyop_2Enum_2Enum] : ( V0P @ V5m @ V6n ) ) ).
+
+thf(thm_2Ereal__topology_2EREAL__LE__BETWEEN,axiom,
+    ! [V0a: tyop_2Erealax_2Ereal,V1b: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal_2Ereal__lte @ V0a @ V1b )
+    <=> ? [V2x: tyop_2Erealax_2Ereal] :
+          ( ( c_2Ereal_2Ereal__lte @ V0a @ V2x )
+          & ( c_2Ereal_2Ereal__lte @ V2x @ V1b ) ) ) ).
+
+thf(thm_2Ereal__topology_2EBOUNDS__LINEAR__0,axiom,
+    ! [V0A: tyop_2Enum_2Enum,V1B: tyop_2Enum_2Enum] :
+      ( ! [V2n: tyop_2Enum_2Enum] : ( c_2Earithmetic_2E_3C_3D @ ( c_2Earithmetic_2E_2A @ V0A @ V2n ) @ V1B )
+    <=> ( V0A = c_2Enum_2E0 ) ) ).
+
+thf(thm_2Ereal__topology_2EBOUNDS__LINEAR,axiom,
+    ! [V0A: tyop_2Enum_2Enum,V1B: tyop_2Enum_2Enum,V2C: tyop_2Enum_2Enum] :
+      ( ! [V3n: tyop_2Enum_2Enum] : ( c_2Earithmetic_2E_3C_3D @ ( c_2Earithmetic_2E_2A @ V0A @ V3n ) @ ( c_2Earithmetic_2E_2B @ ( c_2Earithmetic_2E_2A @ V1B @ V3n ) @ V2C ) )
+    <=> ( c_2Earithmetic_2E_3C_3D @ V0A @ V1B ) ) ).
+
+thf(thm_2Ereal__topology_2ECLOSED__BIGINTER,axiom,
+    ! [V0f: ( tyop_2Erealax_2Ereal > $o ) > $o] :
+      ( ! [V1s: tyop_2Erealax_2Ereal > $o] :
+          ( ( c_2Ebool_2EIN @ ( tyop_2Erealax_2Ereal > $o ) @ V1s @ V0f )
+         => ( c_2Ereal__topology_2EClosed @ V1s ) )
+     => ( c_2Ereal__topology_2EClosed @ ( c_2Epred__set_2EBIGINTER @ tyop_2Erealax_2Ereal @ V0f ) ) ) ).
+
+thf(thm_2Ereal__topology_2ECLOSED__INTER,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1t: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( c_2Ereal__topology_2EClosed @ V0s )
+        & ( c_2Ereal__topology_2EClosed @ V1t ) )
+     => ( c_2Ereal__topology_2EClosed @ ( c_2Epred__set_2EINTER @ tyop_2Erealax_2Ereal @ V0s @ V1t ) ) ) ).
+
+thf(thm_2Ereal__topology_2ECLOSED__UNION,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1t: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( c_2Ereal__topology_2EClosed @ V0s )
+        & ( c_2Ereal__topology_2EClosed @ V1t ) )
+     => ( c_2Ereal__topology_2EClosed @ ( c_2Epred__set_2EUNION @ tyop_2Erealax_2Ereal @ V0s @ V1t ) ) ) ).
+
+thf(thm_2Ereal__topology_2ECLOSED__UNIV,axiom,
+    c_2Ereal__topology_2EClosed @ ( c_2Epred__set_2EUNIV @ tyop_2Erealax_2Ereal ) ).
+
+thf(thm_2Ereal__topology_2ECLOSED__EMPTY,axiom,
+    c_2Ereal__topology_2EClosed @ ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) ).
+
+thf(thm_2Ereal__topology_2EOPEN__SUB__OPEN,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ereal__topology_2EOpen @ V0s )
+    <=> ! [V1x: tyop_2Erealax_2Ereal] :
+          ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V1x @ V0s )
+         => ? [V2t: tyop_2Erealax_2Ereal > $o] :
+              ( ( c_2Ereal__topology_2EOpen @ V2t )
+              & ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V1x @ V2t )
+              & ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ V2t @ V0s ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EOPEN__UNION,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1t: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( c_2Ereal__topology_2EOpen @ V0s )
+        & ( c_2Ereal__topology_2EOpen @ V1t ) )
+     => ( c_2Ereal__topology_2EOpen @ ( c_2Epred__set_2EUNION @ tyop_2Erealax_2Ereal @ V0s @ V1t ) ) ) ).
+
+thf(thm_2Ereal__topology_2ECLOSED__IN,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ereal__topology_2EClosed @ V0s )
+      = ( c_2Etopology_2Eclosed__in @ tyop_2Erealax_2Ereal @ c_2Ereal__topology_2Eeuclidean @ V0s ) ) ).
+
+thf(thm_2Ereal__topology_2ECLOSED__IN__REFL,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o] : ( c_2Etopology_2Eclosed__in @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Esubtopology @ tyop_2Erealax_2Ereal @ c_2Ereal__topology_2Eeuclidean @ V0s ) @ V0s ) ).
+
+thf(thm_2Ereal__topology_2EOPEN__IN__REFL,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o] : ( c_2Etopology_2Eopen__in @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Esubtopology @ tyop_2Erealax_2Ereal @ c_2Ereal__topology_2Eeuclidean @ V0s ) @ V0s ) ).
+
+thf(thm_2Ereal__topology_2ETOPSPACE__EUCLIDEAN__SUBTOPOLOGY,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Etopology_2Etopspace @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Esubtopology @ tyop_2Erealax_2Ereal @ c_2Ereal__topology_2Eeuclidean @ V0s ) )
+      = V0s ) ).
+
+thf(thm_2Ereal__topology_2ETOPSPACE__EUCLIDEAN,axiom,
+    ( ( c_2Etopology_2Etopspace @ tyop_2Erealax_2Ereal @ c_2Ereal__topology_2Eeuclidean )
+    = ( c_2Epred__set_2EUNIV @ tyop_2Erealax_2Ereal ) ) ).
+
+thf(thm_2Ereal__topology_2EOPEN__IN,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ereal__topology_2EOpen @ V0s )
+      = ( c_2Etopology_2Eopen__in @ tyop_2Erealax_2Ereal @ c_2Ereal__topology_2Eeuclidean @ V0s ) ) ).
+
+thf(thm_2Ereal__topology_2EOPEN__EXISTS,axiom,
+    ! [A_27a: $tType,V0Q: A_27a > tyop_2Erealax_2Ereal > $o] :
+      ( ! [V1a: A_27a] :
+          ( c_2Ereal__topology_2EOpen
+          @ ( c_2Epred__set_2EGSPEC @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal
+            @ ^ [V2x: tyop_2Erealax_2Ereal] : ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ $o @ V2x @ ( V0Q @ V1a @ V2x ) ) ) )
+     => ( c_2Ereal__topology_2EOpen
+        @ ( c_2Epred__set_2EGSPEC @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal
+          @ ^ [V3x: tyop_2Erealax_2Ereal] :
+              ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ $o @ V3x
+              @ ( c_2Ebool_2E_3F @ A_27a
+                @ ^ [V4a: A_27a] : ( V0Q @ V4a @ V3x ) ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EOPEN__EXISTS__IN,axiom,
+    ! [A_27a: $tType,V0P: A_27a > $o,V1Q: A_27a > tyop_2Erealax_2Ereal > $o] :
+      ( ! [V2a: A_27a] :
+          ( ( V0P @ V2a )
+         => ( c_2Ereal__topology_2EOpen
+            @ ( c_2Epred__set_2EGSPEC @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal
+              @ ^ [V3x: tyop_2Erealax_2Ereal] : ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ $o @ V3x @ ( V1Q @ V2a @ V3x ) ) ) ) )
+     => ( c_2Ereal__topology_2EOpen
+        @ ( c_2Epred__set_2EGSPEC @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal
+          @ ^ [V4x: tyop_2Erealax_2Ereal] :
+              ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ $o @ V4x
+              @ ( c_2Ebool_2E_3F @ A_27a
+                @ ^ [V5a: A_27a] : ( c_2Ebool_2E_2F_5C @ ( V0P @ V5a ) @ ( V1Q @ V5a @ V4x ) ) ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EOPEN__BIGUNION,axiom,
+    ! [V0f: ( tyop_2Erealax_2Ereal > $o ) > $o] :
+      ( ! [V1s: tyop_2Erealax_2Ereal > $o] :
+          ( ( c_2Ebool_2EIN @ ( tyop_2Erealax_2Ereal > $o ) @ V1s @ V0f )
+         => ( c_2Ereal__topology_2EOpen @ V1s ) )
+     => ( c_2Ereal__topology_2EOpen @ ( c_2Epred__set_2EBIGUNION @ tyop_2Erealax_2Ereal @ V0f ) ) ) ).
+
+thf(thm_2Ereal__topology_2EOPEN__INTER,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1t: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( c_2Ereal__topology_2EOpen @ V0s )
+        & ( c_2Ereal__topology_2EOpen @ V1t ) )
+     => ( c_2Ereal__topology_2EOpen @ ( c_2Epred__set_2EINTER @ tyop_2Erealax_2Ereal @ V0s @ V1t ) ) ) ).
+
+thf(thm_2Ereal__topology_2EOPEN__UNIV,axiom,
+    c_2Ereal__topology_2EOpen @ ( c_2Epred__set_2EUNIV @ tyop_2Erealax_2Ereal ) ).
+
+thf(thm_2Ereal__topology_2EOPEN__EMPTY,axiom,
+    c_2Ereal__topology_2EOpen @ ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) ).
+
+thf(thm_2Ereal__topology_2ECLOSED__IN__SUBTOPOLOGY__UNION,axiom,
+    ! [A_27a: $tType,V0top: tyop_2Etopology_2Etopology @ A_27a,V1s: A_27a > $o,V2t: A_27a > $o,V3u: A_27a > $o] :
+      ( ( ( c_2Etopology_2Eclosed__in @ A_27a @ ( c_2Ereal__topology_2Esubtopology @ A_27a @ V0top @ V2t ) @ V1s )
+        & ( c_2Etopology_2Eclosed__in @ A_27a @ ( c_2Ereal__topology_2Esubtopology @ A_27a @ V0top @ V3u ) @ V1s ) )
+     => ( c_2Etopology_2Eclosed__in @ A_27a @ ( c_2Ereal__topology_2Esubtopology @ A_27a @ V0top @ ( c_2Epred__set_2EUNION @ A_27a @ V2t @ V3u ) ) @ V1s ) ) ).
+
+thf(thm_2Ereal__topology_2EOPEN__IN__SUBTOPOLOGY__UNION,axiom,
+    ! [A_27a: $tType,V0top: tyop_2Etopology_2Etopology @ A_27a,V1s: A_27a > $o,V2t: A_27a > $o,V3u: A_27a > $o] :
+      ( ( ( c_2Etopology_2Eopen__in @ A_27a @ ( c_2Ereal__topology_2Esubtopology @ A_27a @ V0top @ V2t ) @ V1s )
+        & ( c_2Etopology_2Eopen__in @ A_27a @ ( c_2Ereal__topology_2Esubtopology @ A_27a @ V0top @ V3u ) @ V1s ) )
+     => ( c_2Etopology_2Eopen__in @ A_27a @ ( c_2Ereal__topology_2Esubtopology @ A_27a @ V0top @ ( c_2Epred__set_2EUNION @ A_27a @ V2t @ V3u ) ) @ V1s ) ) ).
+
+thf(thm_2Ereal__topology_2ECLOSED__IN__IMP__SUBSET,axiom,
+    ! [A_27a: $tType,V0top: tyop_2Etopology_2Etopology @ A_27a,V1s: A_27a > $o,V2t: A_27a > $o] :
+      ( ( c_2Etopology_2Eclosed__in @ A_27a @ ( c_2Ereal__topology_2Esubtopology @ A_27a @ V0top @ V1s ) @ V2t )
+     => ( c_2Epred__set_2ESUBSET @ A_27a @ V2t @ V1s ) ) ).
+
+thf(thm_2Ereal__topology_2EOPEN__IN__IMP__SUBSET,axiom,
+    ! [A_27a: $tType,V0top: tyop_2Etopology_2Etopology @ A_27a,V1s: A_27a > $o,V2t: A_27a > $o] :
+      ( ( c_2Etopology_2Eopen__in @ A_27a @ ( c_2Ereal__topology_2Esubtopology @ A_27a @ V0top @ V1s ) @ V2t )
+     => ( c_2Epred__set_2ESUBSET @ A_27a @ V2t @ V1s ) ) ).
+
+thf(thm_2Ereal__topology_2ESUBTOPOLOGY__UNIV,axiom,
+    ! [A_27a: $tType,V0top: tyop_2Etopology_2Etopology @ A_27a] :
+      ( ( c_2Ereal__topology_2Esubtopology @ A_27a @ V0top @ ( c_2Epred__set_2EUNIV @ A_27a ) )
+      = V0top ) ).
+
+thf(thm_2Ereal__topology_2ESUBTOPOLOGY__TOPSPACE,axiom,
+    ! [A_27a: $tType,V0top: tyop_2Etopology_2Etopology @ A_27a] :
+      ( ( c_2Ereal__topology_2Esubtopology @ A_27a @ V0top @ ( c_2Etopology_2Etopspace @ A_27a @ V0top ) )
+      = V0top ) ).
+
+thf(thm_2Ereal__topology_2ESUBTOPOLOGY__SUPERSET,axiom,
+    ! [A_27a: $tType,V0top: tyop_2Etopology_2Etopology @ A_27a,V1s: A_27a > $o] :
+      ( ( c_2Epred__set_2ESUBSET @ A_27a @ ( c_2Etopology_2Etopspace @ A_27a @ V0top ) @ V1s )
+     => ( ( c_2Ereal__topology_2Esubtopology @ A_27a @ V0top @ V1s )
+        = V0top ) ) ).
+
+thf(thm_2Ereal__topology_2ECLOSED__IN__SUBTOPOLOGY__REFL,axiom,
+    ! [A_27a: $tType,V0top: tyop_2Etopology_2Etopology @ A_27a,V1u: A_27a > $o] :
+      ( ( c_2Etopology_2Eclosed__in @ A_27a @ ( c_2Ereal__topology_2Esubtopology @ A_27a @ V0top @ V1u ) @ V1u )
+      = ( c_2Epred__set_2ESUBSET @ A_27a @ V1u @ ( c_2Etopology_2Etopspace @ A_27a @ V0top ) ) ) ).
+
+thf(thm_2Ereal__topology_2EOPEN__IN__SUBTOPOLOGY__REFL,axiom,
+    ! [A_27a: $tType,V0top: tyop_2Etopology_2Etopology @ A_27a,V1u: A_27a > $o] :
+      ( ( c_2Etopology_2Eopen__in @ A_27a @ ( c_2Ereal__topology_2Esubtopology @ A_27a @ V0top @ V1u ) @ V1u )
+      = ( c_2Epred__set_2ESUBSET @ A_27a @ V1u @ ( c_2Etopology_2Etopspace @ A_27a @ V0top ) ) ) ).
+
+thf(thm_2Ereal__topology_2ECLOSED__IN__SUBTOPOLOGY__EMPTY,axiom,
+    ! [A_27a: $tType,V0top: tyop_2Etopology_2Etopology @ A_27a,V1s: A_27a > $o] :
+      ( ( c_2Etopology_2Eclosed__in @ A_27a @ ( c_2Ereal__topology_2Esubtopology @ A_27a @ V0top @ ( c_2Epred__set_2EEMPTY @ A_27a ) ) @ V1s )
+    <=> ( V1s
+        = ( c_2Epred__set_2EEMPTY @ A_27a ) ) ) ).
+
+thf(thm_2Ereal__topology_2EOPEN__IN__SUBTOPOLOGY__EMPTY,axiom,
+    ! [A_27a: $tType,V0top: tyop_2Etopology_2Etopology @ A_27a,V1s: A_27a > $o] :
+      ( ( c_2Etopology_2Eopen__in @ A_27a @ ( c_2Ereal__topology_2Esubtopology @ A_27a @ V0top @ ( c_2Epred__set_2EEMPTY @ A_27a ) ) @ V1s )
+    <=> ( V1s
+        = ( c_2Epred__set_2EEMPTY @ A_27a ) ) ) ).
+
+thf(thm_2Ereal__topology_2ECLOSED__IN__SUBTOPOLOGY,axiom,
+    ! [A_27a: $tType,V0top: tyop_2Etopology_2Etopology @ A_27a,V1u: A_27a > $o,V2s: A_27a > $o] :
+      ( ( c_2Etopology_2Eclosed__in @ A_27a @ ( c_2Ereal__topology_2Esubtopology @ A_27a @ V0top @ V1u ) @ V2s )
+    <=> ? [V3t: A_27a > $o] :
+          ( ( c_2Etopology_2Eclosed__in @ A_27a @ V0top @ V3t )
+          & ( V2s
+            = ( c_2Epred__set_2EINTER @ A_27a @ V3t @ V1u ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ETOPSPACE__SUBTOPOLOGY,axiom,
+    ! [A_27a: $tType,V0top: tyop_2Etopology_2Etopology @ A_27a,V1u: A_27a > $o] :
+      ( ( c_2Etopology_2Etopspace @ A_27a @ ( c_2Ereal__topology_2Esubtopology @ A_27a @ V0top @ V1u ) )
+      = ( c_2Epred__set_2EINTER @ A_27a @ ( c_2Etopology_2Etopspace @ A_27a @ V0top ) @ V1u ) ) ).
+
+thf(thm_2Ereal__topology_2EOPEN__IN__SUBTOPOLOGY,axiom,
+    ! [A_27a: $tType,V0top: tyop_2Etopology_2Etopology @ A_27a,V1u: A_27a > $o,V2s: A_27a > $o] :
+      ( ( c_2Etopology_2Eopen__in @ A_27a @ ( c_2Ereal__topology_2Esubtopology @ A_27a @ V0top @ V1u ) @ V2s )
+    <=> ? [V3t: A_27a > $o] :
+          ( ( c_2Etopology_2Eopen__in @ A_27a @ V0top @ V3t )
+          & ( V2s
+            = ( c_2Epred__set_2EINTER @ A_27a @ V3t @ V1u ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EISTOPLOGY__SUBTOPOLOGY,axiom,
+    ! [A_27a: $tType,V0top: tyop_2Etopology_2Etopology @ A_27a,V1u: A_27a > $o] :
+      ( c_2Etopology_2Eistopology @ A_27a
+      @ ( c_2Epred__set_2EGSPEC @ ( A_27a > $o ) @ ( A_27a > $o )
+        @ ^ [V2s: A_27a > $o] : ( c_2Epair_2E_2C @ ( A_27a > $o ) @ $o @ ( c_2Epred__set_2EINTER @ A_27a @ V2s @ V1u ) @ ( c_2Etopology_2Eopen__in @ A_27a @ V0top @ V2s ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EINTER__BIGUNION,axiom,
+    ! [A_27a: $tType,A_27b: $tType] :
+      ( ! [V0s: ( A_27a > $o ) > $o,V1t: A_27a > $o] :
+          ( ( c_2Epred__set_2EINTER @ A_27a @ ( c_2Epred__set_2EBIGUNION @ A_27a @ V0s ) @ V1t )
+          = ( c_2Epred__set_2EBIGUNION @ A_27a
+            @ ( c_2Epred__set_2EGSPEC @ ( A_27a > $o ) @ ( A_27a > $o )
+              @ ^ [V2x: A_27a > $o] : ( c_2Epair_2E_2C @ ( A_27a > $o ) @ $o @ ( c_2Epred__set_2EINTER @ A_27a @ V2x @ V1t ) @ ( c_2Ebool_2EIN @ ( A_27a > $o ) @ V2x @ V0s ) ) ) ) )
+      & ! [V3s: ( A_27b > $o ) > $o,V4t: A_27b > $o] :
+          ( ( c_2Epred__set_2EINTER @ A_27b @ V4t @ ( c_2Epred__set_2EBIGUNION @ A_27b @ V3s ) )
+          = ( c_2Epred__set_2EBIGUNION @ A_27b
+            @ ( c_2Epred__set_2EGSPEC @ ( A_27b > $o ) @ ( A_27b > $o )
+              @ ^ [V5x: A_27b > $o] : ( c_2Epair_2E_2C @ ( A_27b > $o ) @ $o @ ( c_2Epred__set_2EINTER @ A_27b @ V4t @ V5x ) @ ( c_2Ebool_2EIN @ ( A_27b > $o ) @ V5x @ V3s ) ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ESUBSET__IMAGE,axiom,
+    ! [A_27a: $tType,A_27b: $tType,V0f: A_27a > A_27b,V1s: A_27b > $o,V2t: A_27a > $o] :
+      ( ( c_2Epred__set_2ESUBSET @ A_27b @ V1s @ ( c_2Epred__set_2EIMAGE @ A_27a @ A_27b @ V0f @ V2t ) )
+    <=> ? [V3u: A_27a > $o] :
+          ( ( c_2Epred__set_2ESUBSET @ A_27a @ V3u @ V2t )
+          & ( V1s
+            = ( c_2Epred__set_2EIMAGE @ A_27a @ A_27b @ V0f @ V3u ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EDIM__SUBSET__UNIV,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o] : ( c_2Earithmetic_2E_3C_3D @ ( c_2Ereal__topology_2Edim @ V0s ) @ ( c_2Earithmetic_2ENUMERAL @ ( c_2Earithmetic_2EBIT1 @ c_2Earithmetic_2EZERO ) ) ) ).
+
+thf(thm_2Ereal__topology_2EDIM__SUBSET,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1t: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ V0s @ V1t )
+     => ( c_2Earithmetic_2E_3C_3D @ ( c_2Ereal__topology_2Edim @ V0s ) @ ( c_2Ereal__topology_2Edim @ V1t ) ) ) ).
+
+thf(thm_2Ereal__topology_2EDIM__UNIV,axiom,
+    ( ( c_2Ereal__topology_2Edim @ ( c_2Epred__set_2EUNIV @ tyop_2Erealax_2Ereal ) )
+    = ( c_2Earithmetic_2ENUMERAL @ ( c_2Earithmetic_2EBIT1 @ c_2Earithmetic_2EZERO ) ) ) ).
+
+thf(thm_2Ereal__topology_2EHAS__SIZE__STDBASIS,axiom,
+    ( c_2Ecardinal_2EHAS__SIZE @ tyop_2Erealax_2Ereal
+    @ ( c_2Epred__set_2EGSPEC @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal
+      @ ^ [V0i: tyop_2Erealax_2Ereal] : ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ $o @ V0i @ ( c_2Ebool_2E_2F_5C @ ( c_2Ereal_2Ereal__lte @ ( c_2Ereal_2Ereal__of__num @ ( c_2Earithmetic_2ENUMERAL @ ( c_2Earithmetic_2EBIT1 @ c_2Earithmetic_2EZERO ) ) ) @ V0i ) @ ( c_2Ereal_2Ereal__lte @ V0i @ ( c_2Ereal_2Ereal__of__num @ ( c_2Earithmetic_2ENUMERAL @ ( c_2Earithmetic_2EBIT1 @ c_2Earithmetic_2EZERO ) ) ) ) ) ) )
+    @ ( c_2Earithmetic_2ENUMERAL @ ( c_2Earithmetic_2EBIT1 @ c_2Earithmetic_2EZERO ) ) ) ).
+
+thf(thm_2Ereal__topology_2ESPAN__STDBASIS,axiom,
+    ( ( c_2Ereal__topology_2Espan
+      @ ( c_2Epred__set_2EGSPEC @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal
+        @ ^ [V0i: tyop_2Erealax_2Ereal] : ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ $o @ V0i @ ( c_2Ebool_2E_2F_5C @ ( c_2Ereal_2Ereal__lte @ ( c_2Ereal_2Ereal__of__num @ ( c_2Earithmetic_2ENUMERAL @ ( c_2Earithmetic_2EBIT1 @ c_2Earithmetic_2EZERO ) ) ) @ V0i ) @ ( c_2Ereal_2Ereal__lte @ V0i @ ( c_2Ereal_2Ereal__of__num @ ( c_2Earithmetic_2ENUMERAL @ ( c_2Earithmetic_2EBIT1 @ c_2Earithmetic_2EZERO ) ) ) ) ) ) ) )
+    = ( c_2Epred__set_2EUNIV @ tyop_2Erealax_2Ereal ) ) ).
+
+thf(thm_2Ereal__topology_2EDIM__LE__CARD,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Epred__set_2EFINITE @ tyop_2Erealax_2Ereal @ V0s )
+     => ( c_2Earithmetic_2E_3C_3D @ ( c_2Ereal__topology_2Edim @ V0s ) @ ( c_2Epred__set_2ECARD @ tyop_2Erealax_2Ereal @ V0s ) ) ) ).
+
+thf(thm_2Ereal__topology_2EDIM__UNIQUE,axiom,
+    ! [V0n: tyop_2Enum_2Enum,V1v: tyop_2Erealax_2Ereal > $o,V2b: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ V2b @ V1v )
+        & ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ V1v @ ( c_2Ereal__topology_2Espan @ V2b ) )
+        & ( c_2Ereal__topology_2Eindependent @ V2b )
+        & ( c_2Ecardinal_2EHAS__SIZE @ tyop_2Erealax_2Ereal @ V2b @ V0n ) )
+     => ( ( c_2Ereal__topology_2Edim @ V1v )
+        = V0n ) ) ).
+
+thf(thm_2Ereal__topology_2EBASIS__HAS__SIZE__DIM,axiom,
+    ! [V0v: tyop_2Erealax_2Ereal > $o,V1b: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( c_2Ereal__topology_2Eindependent @ V1b )
+        & ( ( c_2Ereal__topology_2Espan @ V1b )
+          = V0v ) )
+     => ( c_2Ecardinal_2EHAS__SIZE @ tyop_2Erealax_2Ereal @ V1b @ ( c_2Ereal__topology_2Edim @ V0v ) ) ) ).
+
+thf(thm_2Ereal__topology_2EBASIS__CARD__EQ__DIM,axiom,
+    ! [V0v: tyop_2Erealax_2Ereal > $o,V1b: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ V1b @ V0v )
+        & ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ V0v @ ( c_2Ereal__topology_2Espan @ V1b ) )
+        & ( c_2Ereal__topology_2Eindependent @ V1b ) )
+     => ( ( c_2Epred__set_2EFINITE @ tyop_2Erealax_2Ereal @ V1b )
+        & ( ( c_2Epred__set_2ECARD @ tyop_2Erealax_2Ereal @ V1b )
+          = ( c_2Ereal__topology_2Edim @ V0v ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ESPAN__CARD__GE__DIM,axiom,
+    ! [V0v: tyop_2Erealax_2Ereal > $o,V1b: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ V0v @ ( c_2Ereal__topology_2Espan @ V1b ) )
+        & ( c_2Epred__set_2EFINITE @ tyop_2Erealax_2Ereal @ V1b ) )
+     => ( c_2Earithmetic_2E_3C_3D @ ( c_2Ereal__topology_2Edim @ V0v ) @ ( c_2Epred__set_2ECARD @ tyop_2Erealax_2Ereal @ V1b ) ) ) ).
+
+thf(thm_2Ereal__topology_2EINDEPENDENT__CARD__LE__DIM,axiom,
+    ! [V0v: tyop_2Erealax_2Ereal > $o,V1b: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ V1b @ V0v )
+        & ( c_2Ereal__topology_2Eindependent @ V1b ) )
+     => ( ( c_2Epred__set_2EFINITE @ tyop_2Erealax_2Ereal @ V1b )
+        & ( c_2Earithmetic_2E_3C_3D @ ( c_2Epred__set_2ECARD @ tyop_2Erealax_2Ereal @ V1b ) @ ( c_2Ereal__topology_2Edim @ V0v ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EBASIS__EXISTS,axiom,
+    ! [V0v: tyop_2Erealax_2Ereal > $o] :
+    ? [V1b: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ V1b @ V0v )
+      & ( c_2Ereal__topology_2Eindependent @ V1b )
+      & ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ V0v @ ( c_2Ereal__topology_2Espan @ V1b ) )
+      & ( c_2Ecardinal_2EHAS__SIZE @ tyop_2Erealax_2Ereal @ V1b @ ( c_2Ereal__topology_2Edim @ V0v ) ) ) ).
+
+thf(thm_2Ereal__topology_2ELINEAR__INJECTIVE__LEFT__INVERSE,axiom,
+    ! [V0f: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal] :
+      ( ( ( c_2Ereal__topology_2Elinear @ V0f )
+        & ! [V1x: tyop_2Erealax_2Ereal,V2y: tyop_2Erealax_2Ereal] :
+            ( ( ( V0f @ V1x )
+              = ( V0f @ V2y ) )
+           => ( V1x = V2y ) ) )
+     => ? [V3g: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal] :
+          ( ( c_2Ereal__topology_2Elinear @ V3g )
+          & ( ( c_2Ecombin_2Eo @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V3g @ V0f )
+            = ( ^ [V4x: tyop_2Erealax_2Ereal] : V4x ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ELINEAR__EQ__STDBASIS,axiom,
+    ! [V0f: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal,V1g: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal] :
+      ( ( ( c_2Ereal__topology_2Elinear @ V0f )
+        & ( c_2Ereal__topology_2Elinear @ V1g )
+        & ! [V2i: tyop_2Erealax_2Ereal] :
+            ( ( ( c_2Ereal_2Ereal__lte @ ( c_2Ereal_2Ereal__of__num @ ( c_2Earithmetic_2ENUMERAL @ ( c_2Earithmetic_2EBIT1 @ c_2Earithmetic_2EZERO ) ) ) @ V2i )
+              & ( c_2Ereal_2Ereal__lte @ V2i @ ( c_2Ereal_2Ereal__of__num @ ( c_2Earithmetic_2ENUMERAL @ ( c_2Earithmetic_2EBIT1 @ c_2Earithmetic_2EZERO ) ) ) ) )
+           => ( ( V0f @ V2i )
+              = ( V1g @ V2i ) ) ) )
+     => ( V0f = V1g ) ) ).
+
+thf(thm_2Ereal__topology_2ELINEAR__EQ,axiom,
+    ! [V0f: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal,V1g: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal,V2b: tyop_2Erealax_2Ereal > $o,V3s: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( c_2Ereal__topology_2Elinear @ V0f )
+        & ( c_2Ereal__topology_2Elinear @ V1g )
+        & ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ V3s @ ( c_2Ereal__topology_2Espan @ V2b ) )
+        & ! [V4x: tyop_2Erealax_2Ereal] :
+            ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V4x @ V2b )
+           => ( ( V0f @ V4x )
+              = ( V1g @ V4x ) ) ) )
+     => ! [V5x: tyop_2Erealax_2Ereal] :
+          ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V5x @ V3s )
+         => ( ( V0f @ V5x )
+            = ( V1g @ V5x ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ELINEAR__EQ__0,axiom,
+    ! [V0f: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal,V1b: tyop_2Erealax_2Ereal > $o,V2s: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( c_2Ereal__topology_2Elinear @ V0f )
+        & ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ V2s @ ( c_2Ereal__topology_2Espan @ V1b ) )
+        & ! [V3x: tyop_2Erealax_2Ereal] :
+            ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V3x @ V1b )
+           => ( ( V0f @ V3x )
+              = ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) ) ) )
+     => ! [V4x: tyop_2Erealax_2Ereal] :
+          ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V4x @ V2s )
+         => ( ( V0f @ V4x )
+            = ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ELINEAR__EQ__0__SPAN,axiom,
+    ! [V0f: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal,V1b: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( c_2Ereal__topology_2Elinear @ V0f )
+        & ! [V2x: tyop_2Erealax_2Ereal] :
+            ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V2x @ V1b )
+           => ( ( V0f @ V2x )
+              = ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) ) ) )
+     => ! [V3x: tyop_2Erealax_2Ereal] :
+          ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V3x @ ( c_2Ereal__topology_2Espan @ V1b ) )
+         => ( ( V0f @ V3x )
+            = ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ESUBSPACE__KERNEL,axiom,
+    ! [V0f: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2Elinear @ V0f )
+     => ( c_2Ereal__topology_2Esubspace
+        @ ( c_2Epred__set_2EGSPEC @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal
+          @ ^ [V1x: tyop_2Erealax_2Ereal] : ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ $o @ V1x @ ( c_2Emin_2E_3D @ tyop_2Erealax_2Ereal @ ( V0f @ V1x ) @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ELINEAR__INDEPENDENT__EXTEND,axiom,
+    ! [V0f: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal,V1b: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ereal__topology_2Eindependent @ V1b )
+     => ? [V2g: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal] :
+          ( ( c_2Ereal__topology_2Elinear @ V2g )
+          & ! [V3x: tyop_2Erealax_2Ereal] :
+              ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V3x @ V1b )
+             => ( ( V2g @ V3x )
+                = ( V0f @ V3x ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ELINEAR__INDEPENDENT__EXTEND__LEMMA,axiom,
+    ! [V0f: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal,V1b: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Epred__set_2EFINITE @ tyop_2Erealax_2Ereal @ V1b )
+     => ( ( c_2Ereal__topology_2Eindependent @ V1b )
+       => ? [V2g: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal] :
+            ( ! [V3x: tyop_2Erealax_2Ereal,V4y: tyop_2Erealax_2Ereal] :
+                ( ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V3x @ ( c_2Ereal__topology_2Espan @ V1b ) )
+                  & ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V4y @ ( c_2Ereal__topology_2Espan @ V1b ) ) )
+               => ( ( V2g @ ( c_2Erealax_2Ereal__add @ V3x @ V4y ) )
+                  = ( c_2Erealax_2Ereal__add @ ( V2g @ V3x ) @ ( V2g @ V4y ) ) ) )
+            & ! [V5x: tyop_2Erealax_2Ereal,V6c: tyop_2Erealax_2Ereal] :
+                ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V5x @ ( c_2Ereal__topology_2Espan @ V1b ) )
+               => ( ( V2g @ ( c_2Erealax_2Ereal__mul @ V6c @ V5x ) )
+                  = ( c_2Erealax_2Ereal__mul @ V6c @ ( V2g @ V5x ) ) ) )
+            & ! [V7x: tyop_2Erealax_2Ereal] :
+                ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V7x @ V1b )
+               => ( ( V2g @ V7x )
+                  = ( V0f @ V7x ) ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ESPAN__BREAKDOWN__EQ,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal,V1a: tyop_2Erealax_2Ereal,V2s: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V0x @ ( c_2Ereal__topology_2Espan @ ( c_2Epred__set_2EINSERT @ tyop_2Erealax_2Ereal @ V1a @ V2s ) ) )
+    <=> ? [V3k: tyop_2Erealax_2Ereal] : ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ ( c_2Ereal_2Ereal__sub @ V0x @ ( c_2Erealax_2Ereal__mul @ V3k @ V1a ) ) @ ( c_2Ereal__topology_2Espan @ V2s ) ) ) ).
+
+thf(thm_2Ereal__topology_2EMAXIMAL__INDEPENDENT__SUBSET,axiom,
+    ! [V0v: tyop_2Erealax_2Ereal > $o] :
+    ? [V1b: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ V1b @ V0v )
+      & ( c_2Ereal__topology_2Eindependent @ V1b )
+      & ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ V0v @ ( c_2Ereal__topology_2Espan @ V1b ) ) ) ).
+
+thf(thm_2Ereal__topology_2EMAXIMAL__INDEPENDENT__SUBSET__EXTEND,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1v: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ V0s @ V1v )
+        & ( c_2Ereal__topology_2Eindependent @ V0s ) )
+     => ? [V2b: tyop_2Erealax_2Ereal > $o] :
+          ( ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ V0s @ V2b )
+          & ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ V2b @ V1v )
+          & ( c_2Ereal__topology_2Eindependent @ V2b )
+          & ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ V1v @ ( c_2Ereal__topology_2Espan @ V2b ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EINDEPENDENT__BOUND,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ereal__topology_2Eindependent @ V0s )
+     => ( ( c_2Epred__set_2EFINITE @ tyop_2Erealax_2Ereal @ V0s )
+        & ( c_2Earithmetic_2E_3C_3D @ ( c_2Epred__set_2ECARD @ tyop_2Erealax_2Ereal @ V0s ) @ ( c_2Earithmetic_2ENUMERAL @ ( c_2Earithmetic_2EBIT1 @ c_2Earithmetic_2EZERO ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EINDEPENDENT__SPAN__BOUND,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1t: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( c_2Epred__set_2EFINITE @ tyop_2Erealax_2Ereal @ V1t )
+        & ( c_2Ereal__topology_2Eindependent @ V0s )
+        & ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ V0s @ ( c_2Ereal__topology_2Espan @ V1t ) ) )
+     => ( ( c_2Epred__set_2EFINITE @ tyop_2Erealax_2Ereal @ V0s )
+        & ( c_2Earithmetic_2E_3C_3D @ ( c_2Epred__set_2ECARD @ tyop_2Erealax_2Ereal @ V0s ) @ ( c_2Epred__set_2ECARD @ tyop_2Erealax_2Ereal @ V1t ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ECARD__STDBASIS,axiom,
+    ( ( c_2Epred__set_2ECARD @ tyop_2Erealax_2Ereal @ ( c_2Epred__set_2EINSERT @ tyop_2Erealax_2Ereal @ ( c_2Ereal_2Ereal__of__num @ ( c_2Earithmetic_2ENUMERAL @ ( c_2Earithmetic_2EBIT1 @ c_2Earithmetic_2EZERO ) ) ) @ ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) ) )
+    = ( c_2Earithmetic_2ENUMERAL @ ( c_2Earithmetic_2EBIT1 @ c_2Earithmetic_2EZERO ) ) ) ).
+
+thf(thm_2Ereal__topology_2EEXCHANGE__LEMMA,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1t: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( c_2Epred__set_2EFINITE @ tyop_2Erealax_2Ereal @ V1t )
+        & ( c_2Ereal__topology_2Eindependent @ V0s )
+        & ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ V0s @ ( c_2Ereal__topology_2Espan @ V1t ) ) )
+     => ? [V2t_27: tyop_2Erealax_2Ereal > $o] :
+          ( ( c_2Ecardinal_2EHAS__SIZE @ tyop_2Erealax_2Ereal @ V2t_27 @ ( c_2Epred__set_2ECARD @ tyop_2Erealax_2Ereal @ V1t ) )
+          & ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ V0s @ V2t_27 )
+          & ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ V2t_27 @ ( c_2Epred__set_2EUNION @ tyop_2Erealax_2Ereal @ V0s @ V1t ) )
+          & ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ V0s @ ( c_2Ereal__topology_2Espan @ V2t_27 ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ESPAN__TRANS,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal,V1y: tyop_2Erealax_2Ereal,V2s: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V0x @ ( c_2Ereal__topology_2Espan @ V2s ) )
+        & ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V1y @ ( c_2Ereal__topology_2Espan @ ( c_2Epred__set_2EINSERT @ tyop_2Erealax_2Ereal @ V0x @ V2s ) ) ) )
+     => ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V1y @ ( c_2Ereal__topology_2Espan @ V2s ) ) ) ).
+
+thf(thm_2Ereal__topology_2EIN__SPAN__DELETE,axiom,
+    ! [V0a: tyop_2Erealax_2Ereal,V1b: tyop_2Erealax_2Ereal,V2s: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V0a @ ( c_2Ereal__topology_2Espan @ V2s ) )
+        & ( (~) @ ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V0a @ ( c_2Ereal__topology_2Espan @ ( c_2Epred__set_2EDELETE @ tyop_2Erealax_2Ereal @ V2s @ V1b ) ) ) ) )
+     => ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V1b @ ( c_2Ereal__topology_2Espan @ ( c_2Epred__set_2EINSERT @ tyop_2Erealax_2Ereal @ V0a @ ( c_2Epred__set_2EDELETE @ tyop_2Erealax_2Ereal @ V2s @ V1b ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ESPANNING__SUBSET__INDEPENDENT,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1t: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ V1t @ V0s )
+        & ( c_2Ereal__topology_2Eindependent @ V0s )
+        & ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ V0s @ ( c_2Ereal__topology_2Espan @ V1t ) ) )
+     => ( V0s = V1t ) ) ).
+
+thf(thm_2Ereal__topology_2EINDEPENDENT__STDBASIS,axiom,
+    ( c_2Ereal__topology_2Eindependent
+    @ ( c_2Epred__set_2EGSPEC @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal
+      @ ^ [V0i: tyop_2Erealax_2Ereal] : ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ $o @ V0i @ ( c_2Ebool_2E_2F_5C @ ( c_2Ereal_2Ereal__lte @ ( c_2Ereal_2Ereal__of__num @ ( c_2Earithmetic_2ENUMERAL @ ( c_2Earithmetic_2EBIT1 @ c_2Earithmetic_2EZERO ) ) ) @ V0i ) @ ( c_2Ereal_2Ereal__lte @ V0i @ ( c_2Ereal_2Ereal__of__num @ ( c_2Earithmetic_2ENUMERAL @ ( c_2Earithmetic_2EBIT1 @ c_2Earithmetic_2EZERO ) ) ) ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EINDEPENDENT__SING,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2Eindependent @ ( c_2Epred__set_2EINSERT @ tyop_2Erealax_2Ereal @ V0x @ ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) ) )
+    <=> ( (~)
+        @ ( V0x
+          = ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EINDEPENDENT__EMPTY,axiom,
+    c_2Ereal__topology_2Eindependent @ ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) ).
+
+thf(thm_2Ereal__topology_2ESPAN__EMPTY,axiom,
+    ( ( c_2Ereal__topology_2Espan @ ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) )
+    = ( c_2Epred__set_2EINSERT @ tyop_2Erealax_2Ereal @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) ) ) ).
+
+thf(thm_2Ereal__topology_2ESPAN__INDUCT,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1h: tyop_2Erealax_2Ereal > $o] :
+      ( ( ! [V2x: tyop_2Erealax_2Ereal] :
+            ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V2x @ V0s )
+           => ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V2x @ V1h ) )
+        & ( c_2Ereal__topology_2Esubspace @ V1h ) )
+     => ! [V3x: tyop_2Erealax_2Ereal] :
+          ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V3x @ ( c_2Ereal__topology_2Espan @ V0s ) )
+         => ( V1h @ V3x ) ) ) ).
+
+thf(thm_2Ereal__topology_2ESPAN__CLAUSES,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o] :
+      ( ! [V1a: tyop_2Erealax_2Ereal,V2s: tyop_2Erealax_2Ereal > $o] :
+          ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V1a @ V2s )
+         => ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V1a @ ( c_2Ereal__topology_2Espan @ V2s ) ) )
+      & ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ ( c_2Ereal__topology_2Espan @ V0s ) )
+      & ! [V3x: tyop_2Erealax_2Ereal,V4y: tyop_2Erealax_2Ereal,V5s: tyop_2Erealax_2Ereal > $o] :
+          ( ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V3x @ ( c_2Ereal__topology_2Espan @ V5s ) )
+            & ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V4y @ ( c_2Ereal__topology_2Espan @ V5s ) ) )
+         => ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ ( c_2Erealax_2Ereal__add @ V3x @ V4y ) @ ( c_2Ereal__topology_2Espan @ V5s ) ) )
+      & ! [V6x: tyop_2Erealax_2Ereal,V7c: tyop_2Erealax_2Ereal,V8s: tyop_2Erealax_2Ereal > $o] :
+          ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V6x @ ( c_2Ereal__topology_2Espan @ V8s ) )
+         => ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ ( c_2Erealax_2Ereal__mul @ V7c @ V6x ) @ ( c_2Ereal__topology_2Espan @ V8s ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ESUBSPACE__SPAN,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o] : ( c_2Ereal__topology_2Esubspace @ ( c_2Ereal__topology_2Espan @ V0s ) ) ).
+
+thf(thm_2Ereal__topology_2ESPAN__MONO,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1t: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ V0s @ V1t )
+     => ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ ( c_2Ereal__topology_2Espan @ V0s ) @ ( c_2Ereal__topology_2Espan @ V1t ) ) ) ).
+
+thf(thm_2Ereal__topology_2ESPAN__SPAN,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ereal__topology_2Espan @ ( c_2Ereal__topology_2Espan @ V0s ) )
+      = ( c_2Ereal__topology_2Espan @ V0s ) ) ).
+
+thf(thm_2Ereal__topology_2ESUBSPACE__UNION__CHAIN,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1t: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( c_2Ereal__topology_2Esubspace @ V0s )
+        & ( c_2Ereal__topology_2Esubspace @ V1t )
+        & ( c_2Ereal__topology_2Esubspace @ ( c_2Epred__set_2EUNION @ tyop_2Erealax_2Ereal @ V0s @ V1t ) ) )
+     => ( ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ V0s @ V1t )
+        | ( c_2Epred__set_2ESUBSET @ tyop_2Erealax_2Ereal @ V1t @ V0s ) ) ) ).
+
+thf(thm_2Ereal__topology_2ELINEAR__INJECTIVE__0__SUBSPACE,axiom,
+    ! [V0f: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal,V1s: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( c_2Ereal__topology_2Elinear @ V0f )
+        & ( c_2Ereal__topology_2Esubspace @ V1s ) )
+     => ( ! [V2x: tyop_2Erealax_2Ereal,V3y: tyop_2Erealax_2Ereal] :
+            ( ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V2x @ V1s )
+              & ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V3y @ V1s )
+              & ( ( V0f @ V2x )
+                = ( V0f @ V3y ) ) )
+           => ( V2x = V3y ) )
+      <=> ! [V4x: tyop_2Erealax_2Ereal] :
+            ( ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V4x @ V1s )
+              & ( ( V0f @ V4x )
+                = ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) ) )
+           => ( V4x
+              = ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ESUBSPACE__BIGINTER,axiom,
+    ! [V0f: ( tyop_2Erealax_2Ereal > $o ) > $o] :
+      ( ! [V1s: tyop_2Erealax_2Ereal > $o] :
+          ( ( c_2Ebool_2EIN @ ( tyop_2Erealax_2Ereal > $o ) @ V1s @ V0f )
+         => ( c_2Ereal__topology_2Esubspace @ V1s ) )
+     => ( c_2Ereal__topology_2Esubspace @ ( c_2Epred__set_2EBIGINTER @ tyop_2Erealax_2Ereal @ V0f ) ) ) ).
+
+thf(thm_2Ereal__topology_2ESUBSPACE__INTER,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1t: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( c_2Ereal__topology_2Esubspace @ V0s )
+        & ( c_2Ereal__topology_2Esubspace @ V1t ) )
+     => ( c_2Ereal__topology_2Esubspace @ ( c_2Epred__set_2EINTER @ tyop_2Erealax_2Ereal @ V0s @ V1t ) ) ) ).
+
+thf(thm_2Ereal__topology_2ESUBSPACE__TRIVIAL,axiom,
+    c_2Ereal__topology_2Esubspace @ ( c_2Epred__set_2EINSERT @ tyop_2Erealax_2Ereal @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) ) ).
+
+thf(thm_2Ereal__topology_2ESUBSPACE__LINEAR__PREIMAGE,axiom,
+    ! [V0f: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal,V1s: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( c_2Ereal__topology_2Elinear @ V0f )
+        & ( c_2Ereal__topology_2Esubspace @ V1s ) )
+     => ( c_2Ereal__topology_2Esubspace
+        @ ( c_2Epred__set_2EGSPEC @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal
+          @ ^ [V2x: tyop_2Erealax_2Ereal] : ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ $o @ V2x @ ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ ( V0f @ V2x ) @ V1s ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ESUBSPACE__LINEAR__IMAGE,axiom,
+    ! [V0f: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal,V1s: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( c_2Ereal__topology_2Elinear @ V0f )
+        & ( c_2Ereal__topology_2Esubspace @ V1s ) )
+     => ( c_2Ereal__topology_2Esubspace @ ( c_2Epred__set_2EIMAGE @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0f @ V1s ) ) ) ).
+
+thf(thm_2Ereal__topology_2ESUBSPACE__SUM,axiom,
+    ! [A_27a: $tType,V0s: tyop_2Erealax_2Ereal > $o,V1f: A_27a > tyop_2Erealax_2Ereal,V2t: A_27a > $o] :
+      ( ( ( c_2Ereal__topology_2Esubspace @ V0s )
+        & ( c_2Epred__set_2EFINITE @ A_27a @ V2t )
+        & ! [V3x: A_27a] :
+            ( ( c_2Ebool_2EIN @ A_27a @ V3x @ V2t )
+           => ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ ( V1f @ V3x ) @ V0s ) ) )
+     => ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ ( c_2Eiterate_2ESum @ A_27a @ V2t @ V1f ) @ V0s ) ) ).
+
+thf(thm_2Ereal__topology_2ESUBSPACE__SUB,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal,V1y: tyop_2Erealax_2Ereal,V2s: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( c_2Ereal__topology_2Esubspace @ V2s )
+        & ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V0x @ V2s )
+        & ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V1y @ V2s ) )
+     => ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ ( c_2Ereal_2Ereal__sub @ V0x @ V1y ) @ V2s ) ) ).
+
+thf(thm_2Ereal__topology_2ESUBSPACE__NEG,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal,V1s: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( c_2Ereal__topology_2Esubspace @ V1s )
+        & ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V0x @ V1s ) )
+     => ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ ( c_2Erealax_2Ereal__neg @ V0x ) @ V1s ) ) ).
+
+thf(thm_2Ereal__topology_2ESUBSPACE__MUL,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal,V1c: tyop_2Erealax_2Ereal,V2s: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( c_2Ereal__topology_2Esubspace @ V2s )
+        & ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V0x @ V2s ) )
+     => ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ ( c_2Erealax_2Ereal__mul @ V1c @ V0x ) @ V2s ) ) ).
+
+thf(thm_2Ereal__topology_2ESUBSPACE__ADD,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal,V1y: tyop_2Erealax_2Ereal,V2s: tyop_2Erealax_2Ereal > $o] :
+      ( ( ( c_2Ereal__topology_2Esubspace @ V2s )
+        & ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V0x @ V2s )
+        & ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V1y @ V2s ) )
+     => ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ ( c_2Erealax_2Ereal__add @ V0x @ V1y ) @ V2s ) ) ).
+
+thf(thm_2Ereal__topology_2ESUBSPACE__0,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ereal__topology_2Esubspace @ V0s )
+     => ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V0s ) ) ).
+
+thf(thm_2Ereal__topology_2ESUBSPACE__IMP__NONEMPTY,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Ereal__topology_2Esubspace @ V0s )
+     => ( (~)
+        @ ( V0s
+          = ( c_2Epred__set_2EEMPTY @ tyop_2Erealax_2Ereal ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ESUBSPACE__UNIV,axiom,
+    c_2Ereal__topology_2Esubspace @ ( c_2Epred__set_2EUNIV @ tyop_2Erealax_2Ereal ) ).
+
+thf(thm_2Ereal__topology_2EBILINEAR__SUM__PARTIAL__PRE,axiom,
+    ! [V0f: tyop_2Enum_2Enum > tyop_2Erealax_2Ereal,V1g: tyop_2Enum_2Enum > tyop_2Erealax_2Ereal,V2h: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal,V3m: tyop_2Enum_2Enum,V4n: tyop_2Enum_2Enum] :
+      ( ( c_2Ereal__topology_2Ebilinear @ V2h )
+     => ( ( c_2Eiterate_2ESum @ tyop_2Enum_2Enum @ ( c_2Eiterate_2E_2E_2E @ V3m @ V4n )
+          @ ^ [V5k: tyop_2Enum_2Enum] : ( V2h @ ( V0f @ V5k ) @ ( c_2Ereal_2Ereal__sub @ ( V1g @ V5k ) @ ( V1g @ ( c_2Earithmetic_2E_2D @ V5k @ ( c_2Earithmetic_2ENUMERAL @ ( c_2Earithmetic_2EBIT1 @ c_2Earithmetic_2EZERO ) ) ) ) ) ) )
+        = ( c_2Ebool_2ECOND @ tyop_2Erealax_2Ereal @ ( c_2Earithmetic_2E_3C_3D @ V3m @ V4n )
+          @ ( c_2Ereal_2Ereal__sub @ ( c_2Ereal_2Ereal__sub @ ( V2h @ ( V0f @ ( c_2Earithmetic_2E_2B @ V4n @ ( c_2Earithmetic_2ENUMERAL @ ( c_2Earithmetic_2EBIT1 @ c_2Earithmetic_2EZERO ) ) ) ) @ ( V1g @ V4n ) ) @ ( V2h @ ( V0f @ V3m ) @ ( V1g @ ( c_2Earithmetic_2E_2D @ V3m @ ( c_2Earithmetic_2ENUMERAL @ ( c_2Earithmetic_2EBIT1 @ c_2Earithmetic_2EZERO ) ) ) ) ) )
+            @ ( c_2Eiterate_2ESum @ tyop_2Enum_2Enum @ ( c_2Eiterate_2E_2E_2E @ V3m @ V4n )
+              @ ^ [V6k: tyop_2Enum_2Enum] : ( V2h @ ( c_2Ereal_2Ereal__sub @ ( V0f @ ( c_2Earithmetic_2E_2B @ V6k @ ( c_2Earithmetic_2ENUMERAL @ ( c_2Earithmetic_2EBIT1 @ c_2Earithmetic_2EZERO ) ) ) ) @ ( V0f @ V6k ) ) @ ( V1g @ V6k ) ) ) )
+          @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EBILINEAR__SUM__PARTIAL__SUC,axiom,
+    ! [V0f: tyop_2Enum_2Enum > tyop_2Erealax_2Ereal,V1g: tyop_2Enum_2Enum > tyop_2Erealax_2Ereal,V2h: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal,V3m: tyop_2Enum_2Enum,V4n: tyop_2Enum_2Enum] :
+      ( ( c_2Ereal__topology_2Ebilinear @ V2h )
+     => ( ( c_2Eiterate_2ESum @ tyop_2Enum_2Enum @ ( c_2Eiterate_2E_2E_2E @ V3m @ V4n )
+          @ ^ [V5k: tyop_2Enum_2Enum] : ( V2h @ ( V0f @ V5k ) @ ( c_2Ereal_2Ereal__sub @ ( V1g @ ( c_2Earithmetic_2E_2B @ V5k @ ( c_2Earithmetic_2ENUMERAL @ ( c_2Earithmetic_2EBIT1 @ c_2Earithmetic_2EZERO ) ) ) ) @ ( V1g @ V5k ) ) ) )
+        = ( c_2Ebool_2ECOND @ tyop_2Erealax_2Ereal @ ( c_2Earithmetic_2E_3C_3D @ V3m @ V4n )
+          @ ( c_2Ereal_2Ereal__sub @ ( c_2Ereal_2Ereal__sub @ ( V2h @ ( V0f @ ( c_2Earithmetic_2E_2B @ V4n @ ( c_2Earithmetic_2ENUMERAL @ ( c_2Earithmetic_2EBIT1 @ c_2Earithmetic_2EZERO ) ) ) ) @ ( V1g @ ( c_2Earithmetic_2E_2B @ V4n @ ( c_2Earithmetic_2ENUMERAL @ ( c_2Earithmetic_2EBIT1 @ c_2Earithmetic_2EZERO ) ) ) ) ) @ ( V2h @ ( V0f @ V3m ) @ ( V1g @ V3m ) ) )
+            @ ( c_2Eiterate_2ESum @ tyop_2Enum_2Enum @ ( c_2Eiterate_2E_2E_2E @ V3m @ V4n )
+              @ ^ [V6k: tyop_2Enum_2Enum] : ( V2h @ ( c_2Ereal_2Ereal__sub @ ( V0f @ ( c_2Earithmetic_2E_2B @ V6k @ ( c_2Earithmetic_2ENUMERAL @ ( c_2Earithmetic_2EBIT1 @ c_2Earithmetic_2EZERO ) ) ) ) @ ( V0f @ V6k ) ) @ ( V1g @ ( c_2Earithmetic_2E_2B @ V6k @ ( c_2Earithmetic_2ENUMERAL @ ( c_2Earithmetic_2EBIT1 @ c_2Earithmetic_2EZERO ) ) ) ) ) ) )
+          @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EBILINEAR__BOUNDED__POS,axiom,
+    ! [V0h: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2Ebilinear @ V0h )
+     => ? [V1B: tyop_2Erealax_2Ereal] :
+          ( ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V1B )
+          & ! [V2x: tyop_2Erealax_2Ereal,V3y: tyop_2Erealax_2Ereal] : ( c_2Ereal_2Ereal__lte @ ( c_2Ereal_2Eabs @ ( V0h @ V2x @ V3y ) ) @ ( c_2Erealax_2Ereal__mul @ ( c_2Erealax_2Ereal__mul @ V1B @ ( c_2Ereal_2Eabs @ V2x ) ) @ ( c_2Ereal_2Eabs @ V3y ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EBILINEAR__BOUNDED,axiom,
+    ! [V0h: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2Ebilinear @ V0h )
+     => ? [V1B: tyop_2Erealax_2Ereal] :
+        ! [V2x: tyop_2Erealax_2Ereal,V3y: tyop_2Erealax_2Ereal] : ( c_2Ereal_2Ereal__lte @ ( c_2Ereal_2Eabs @ ( V0h @ V2x @ V3y ) ) @ ( c_2Erealax_2Ereal__mul @ ( c_2Erealax_2Ereal__mul @ V1B @ ( c_2Ereal_2Eabs @ V2x ) ) @ ( c_2Ereal_2Eabs @ V3y ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EBILINEAR__SUM,axiom,
+    ! [A_27a: $tType,A_27b: $tType,V0t: A_27b > $o,V1s: A_27a > $o,V2g: A_27b > tyop_2Erealax_2Ereal,V3f: A_27a > tyop_2Erealax_2Ereal,V4h: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal] :
+      ( ( ( c_2Ereal__topology_2Ebilinear @ V4h )
+        & ( c_2Epred__set_2EFINITE @ A_27a @ V1s )
+        & ( c_2Epred__set_2EFINITE @ A_27b @ V0t ) )
+     => ( ( V4h @ ( c_2Eiterate_2ESum @ A_27a @ V1s @ V3f ) @ ( c_2Eiterate_2ESum @ A_27b @ V0t @ V2g ) )
+        = ( c_2Eiterate_2ESum @ ( tyop_2Epair_2Eprod @ A_27a @ A_27b ) @ ( c_2Epred__set_2ECROSS @ A_27a @ A_27b @ V1s @ V0t )
+          @ ( c_2Epair_2EUNCURRY @ A_27a @ A_27b @ tyop_2Erealax_2Ereal
+            @ ^ [V5i: A_27a,V6j: A_27b] : ( V4h @ ( V3f @ V5i ) @ ( V2g @ V6j ) ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EBILINEAR__RSUB,axiom,
+    ! [V0h: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal,V1x: tyop_2Erealax_2Ereal,V2y: tyop_2Erealax_2Ereal,V3z: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2Ebilinear @ V0h )
+     => ( ( V0h @ V1x @ ( c_2Ereal_2Ereal__sub @ V2y @ V3z ) )
+        = ( c_2Ereal_2Ereal__sub @ ( V0h @ V1x @ V2y ) @ ( V0h @ V1x @ V3z ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EBILINEAR__LSUB,axiom,
+    ! [V0h: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal,V1x: tyop_2Erealax_2Ereal,V2y: tyop_2Erealax_2Ereal,V3z: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2Ebilinear @ V0h )
+     => ( ( V0h @ ( c_2Ereal_2Ereal__sub @ V1x @ V2y ) @ V3z )
+        = ( c_2Ereal_2Ereal__sub @ ( V0h @ V1x @ V3z ) @ ( V0h @ V2y @ V3z ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EBILINEAR__RZERO,axiom,
+    ! [V0h: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal,V1x: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2Ebilinear @ V0h )
+     => ( ( V0h @ V1x @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) )
+        = ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) ) ) ).
+
+thf(thm_2Ereal__topology_2EBILINEAR__LZERO,axiom,
+    ! [V0h: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal,V1x: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2Ebilinear @ V0h )
+     => ( ( V0h @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V1x )
+        = ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) ) ) ).
+
+thf(thm_2Ereal__topology_2EBILINEAR__RNEG,axiom,
+    ! [V0h: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal,V1x: tyop_2Erealax_2Ereal,V2y: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2Ebilinear @ V0h )
+     => ( ( V0h @ V1x @ ( c_2Erealax_2Ereal__neg @ V2y ) )
+        = ( c_2Erealax_2Ereal__neg @ ( V0h @ V1x @ V2y ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EBILINEAR__LNEG,axiom,
+    ! [V0h: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal,V1x: tyop_2Erealax_2Ereal,V2y: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2Ebilinear @ V0h )
+     => ( ( V0h @ ( c_2Erealax_2Ereal__neg @ V1x ) @ V2y )
+        = ( c_2Erealax_2Ereal__neg @ ( V0h @ V1x @ V2y ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EBILINEAR__RMUL,axiom,
+    ! [V0h: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal,V1c: tyop_2Erealax_2Ereal,V2x: tyop_2Erealax_2Ereal,V3y: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2Ebilinear @ V0h )
+     => ( ( V0h @ V2x @ ( c_2Erealax_2Ereal__mul @ V1c @ V3y ) )
+        = ( c_2Erealax_2Ereal__mul @ V1c @ ( V0h @ V2x @ V3y ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EBILINEAR__LMUL,axiom,
+    ! [V0h: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal,V1c: tyop_2Erealax_2Ereal,V2x: tyop_2Erealax_2Ereal,V3y: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2Ebilinear @ V0h )
+     => ( ( V0h @ ( c_2Erealax_2Ereal__mul @ V1c @ V2x ) @ V3y )
+        = ( c_2Erealax_2Ereal__mul @ V1c @ ( V0h @ V2x @ V3y ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EBILINEAR__RADD,axiom,
+    ! [V0h: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal,V1x: tyop_2Erealax_2Ereal,V2y: tyop_2Erealax_2Ereal,V3z: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2Ebilinear @ V0h )
+     => ( ( V0h @ V1x @ ( c_2Erealax_2Ereal__add @ V2y @ V3z ) )
+        = ( c_2Erealax_2Ereal__add @ ( V0h @ V1x @ V2y ) @ ( V0h @ V1x @ V3z ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EBILINEAR__LADD,axiom,
+    ! [V0h: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal,V1x: tyop_2Erealax_2Ereal,V2y: tyop_2Erealax_2Ereal,V3z: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2Ebilinear @ V0h )
+     => ( ( V0h @ ( c_2Erealax_2Ereal__add @ V1x @ V2y ) @ V3z )
+        = ( c_2Erealax_2Ereal__add @ ( V0h @ V1x @ V3z ) @ ( V0h @ V2y @ V3z ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EBILINEAR__SWAP,axiom,
+    ! [V0op: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2Ebilinear
+        @ ^ [V1x: tyop_2Erealax_2Ereal,V2y: tyop_2Erealax_2Ereal] : ( V0op @ V2y @ V1x ) )
+      = ( c_2Ereal__topology_2Ebilinear @ V0op ) ) ).
+
+thf(thm_2Ereal__topology_2ESYMMETRIC__LINEAR__IMAGE,axiom,
+    ! [V0f: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal,V1s: tyop_2Erealax_2Ereal > $o] :
+      ( ( ! [V2x: tyop_2Erealax_2Ereal] :
+            ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V2x @ V1s )
+           => ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ ( c_2Erealax_2Ereal__neg @ V2x ) @ V1s ) )
+        & ( c_2Ereal__topology_2Elinear @ V0f ) )
+     => ! [V3x: tyop_2Erealax_2Ereal] :
+          ( ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V3x @ ( c_2Epred__set_2EIMAGE @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0f @ V1s ) )
+         => ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ ( c_2Erealax_2Ereal__neg @ V3x ) @ ( c_2Epred__set_2EIMAGE @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0f @ V1s ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ELINEAR__BOUNDED__POS,axiom,
+    ! [V0f: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2Elinear @ V0f )
+     => ? [V1B: tyop_2Erealax_2Ereal] :
+          ( ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V1B )
+          & ! [V2x: tyop_2Erealax_2Ereal] : ( c_2Ereal_2Ereal__lte @ ( c_2Ereal_2Eabs @ ( V0f @ V2x ) ) @ ( c_2Erealax_2Ereal__mul @ V1B @ ( c_2Ereal_2Eabs @ V2x ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ELINEAR__BOUNDED,axiom,
+    ! [V0f: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2Elinear @ V0f )
+     => ? [V1B: tyop_2Erealax_2Ereal] :
+        ! [V2x: tyop_2Erealax_2Ereal] : ( c_2Ereal_2Ereal__lte @ ( c_2Ereal_2Eabs @ ( V0f @ V2x ) ) @ ( c_2Erealax_2Ereal__mul @ V1B @ ( c_2Ereal_2Eabs @ V2x ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ELINEAR__SUM__MUL,axiom,
+    ! [A_27a: $tType,V0f: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal,V1s: A_27a > $o,V2c: A_27a > tyop_2Erealax_2Ereal,V3v: A_27a > tyop_2Erealax_2Ereal] :
+      ( ( ( c_2Ereal__topology_2Elinear @ V0f )
+        & ( c_2Epred__set_2EFINITE @ A_27a @ V1s ) )
+     => ( ( V0f
+          @ ( c_2Eiterate_2ESum @ A_27a @ V1s
+            @ ^ [V4i: A_27a] : ( c_2Erealax_2Ereal__mul @ ( V2c @ V4i ) @ ( V3v @ V4i ) ) ) )
+        = ( c_2Eiterate_2ESum @ A_27a @ V1s
+          @ ^ [V5i: A_27a] : ( c_2Erealax_2Ereal__mul @ ( V2c @ V5i ) @ ( V0f @ ( V3v @ V5i ) ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ELINEAR__SUM,axiom,
+    ! [A_27a: $tType,V0f: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal,V1g: A_27a > tyop_2Erealax_2Ereal,V2s: A_27a > $o] :
+      ( ( ( c_2Ereal__topology_2Elinear @ V0f )
+        & ( c_2Epred__set_2EFINITE @ A_27a @ V2s ) )
+     => ( ( V0f @ ( c_2Eiterate_2ESum @ A_27a @ V2s @ V1g ) )
+        = ( c_2Eiterate_2ESum @ A_27a @ V2s @ ( c_2Ecombin_2Eo @ A_27a @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0f @ V1g ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ELINEAR__SUB,axiom,
+    ! [V0f: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal,V1x: tyop_2Erealax_2Ereal,V2y: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2Elinear @ V0f )
+     => ( ( V0f @ ( c_2Ereal_2Ereal__sub @ V1x @ V2y ) )
+        = ( c_2Ereal_2Ereal__sub @ ( V0f @ V1x ) @ ( V0f @ V2y ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ELINEAR__ADD,axiom,
+    ! [V0f: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal,V1x: tyop_2Erealax_2Ereal,V2y: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2Elinear @ V0f )
+     => ( ( V0f @ ( c_2Erealax_2Ereal__add @ V1x @ V2y ) )
+        = ( c_2Erealax_2Ereal__add @ ( V0f @ V1x ) @ ( V0f @ V2y ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ELINEAR__NEG,axiom,
+    ! [V0f: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal,V1x: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2Elinear @ V0f )
+     => ( ( V0f @ ( c_2Erealax_2Ereal__neg @ V1x ) )
+        = ( c_2Erealax_2Ereal__neg @ ( V0f @ V1x ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ELINEAR__CMUL,axiom,
+    ! [V0f: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal,V1c: tyop_2Erealax_2Ereal,V2x: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2Elinear @ V0f )
+     => ( ( V0f @ ( c_2Erealax_2Ereal__mul @ V1c @ V2x ) )
+        = ( c_2Erealax_2Ereal__mul @ V1c @ ( V0f @ V2x ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ELINEAR__0,axiom,
+    ! [V0f: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2Elinear @ V0f )
+     => ( ( V0f @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) )
+        = ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) ) ) ).
+
+thf(thm_2Ereal__topology_2ELINEAR__MUL__COMPONENT,axiom,
+    ! [V0f: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal,V1v: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2Elinear @ V0f )
+     => ( c_2Ereal__topology_2Elinear
+        @ ^ [V2x: tyop_2Erealax_2Ereal] : ( c_2Erealax_2Ereal__mul @ ( V0f @ V2x ) @ V1v ) ) ) ).
+
+thf(thm_2Ereal__topology_2ELINEAR__COMPOSE__SUM,axiom,
+    ! [A_27a: $tType,V0f: A_27a > tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal,V1s: A_27a > $o] :
+      ( ( ( c_2Epred__set_2EFINITE @ A_27a @ V1s )
+        & ! [V2a: A_27a] :
+            ( ( c_2Ebool_2EIN @ A_27a @ V2a @ V1s )
+           => ( c_2Ereal__topology_2Elinear @ ( V0f @ V2a ) ) ) )
+     => ( c_2Ereal__topology_2Elinear
+        @ ^ [V3x: tyop_2Erealax_2Ereal] :
+            ( c_2Eiterate_2ESum @ A_27a @ V1s
+            @ ^ [V4a: A_27a] : ( V0f @ V4a @ V3x ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ELINEAR__NEGATION,axiom,
+    ( c_2Ereal__topology_2Elinear
+    @ ^ [V0x: tyop_2Erealax_2Ereal] : ( c_2Erealax_2Ereal__neg @ V0x ) ) ).
+
+thf(thm_2Ereal__topology_2ELINEAR__ZERO,axiom,
+    ( c_2Ereal__topology_2Elinear
+    @ ^ [V0x: tyop_2Erealax_2Ereal] : ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) ) ).
+
+thf(thm_2Ereal__topology_2ELINEAR__ID,axiom,
+    ( c_2Ereal__topology_2Elinear
+    @ ^ [V0x: tyop_2Erealax_2Ereal] : V0x ) ).
+
+thf(thm_2Ereal__topology_2ELINEAR__COMPOSE,axiom,
+    ! [V0f: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal,V1g: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal] :
+      ( ( ( c_2Ereal__topology_2Elinear @ V0f )
+        & ( c_2Ereal__topology_2Elinear @ V1g ) )
+     => ( c_2Ereal__topology_2Elinear @ ( c_2Ecombin_2Eo @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V1g @ V0f ) ) ) ).
+
+thf(thm_2Ereal__topology_2ELINEAR__COMPOSE__SUB,axiom,
+    ! [V0f: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal,V1g: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal] :
+      ( ( ( c_2Ereal__topology_2Elinear @ V0f )
+        & ( c_2Ereal__topology_2Elinear @ V1g ) )
+     => ( c_2Ereal__topology_2Elinear
+        @ ^ [V2x: tyop_2Erealax_2Ereal] : ( c_2Ereal_2Ereal__sub @ ( V0f @ V2x ) @ ( V1g @ V2x ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ELINEAR__COMPOSE__ADD,axiom,
+    ! [V0f: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal,V1g: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal] :
+      ( ( ( c_2Ereal__topology_2Elinear @ V0f )
+        & ( c_2Ereal__topology_2Elinear @ V1g ) )
+     => ( c_2Ereal__topology_2Elinear
+        @ ^ [V2x: tyop_2Erealax_2Ereal] : ( c_2Erealax_2Ereal__add @ ( V0f @ V2x ) @ ( V1g @ V2x ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ELINEAR__COMPOSE__NEG,axiom,
+    ! [V0f: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2Elinear @ V0f )
+     => ( c_2Ereal__topology_2Elinear
+        @ ^ [V1x: tyop_2Erealax_2Ereal] : ( c_2Erealax_2Ereal__neg @ ( V0f @ V1x ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ELINEAR__COMPOSE__CMUL,axiom,
+    ! [V0f: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal,V1c: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2Elinear @ V0f )
+     => ( c_2Ereal__topology_2Elinear
+        @ ^ [V2x: tyop_2Erealax_2Ereal] : ( c_2Erealax_2Ereal__mul @ V1c @ ( V0f @ V2x ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ELINEAR__SCALING,axiom,
+    ! [V0c: tyop_2Erealax_2Ereal] :
+      ( c_2Ereal__topology_2Elinear
+      @ ^ [V1x: tyop_2Erealax_2Ereal] : ( c_2Erealax_2Ereal__mul @ V0c @ V1x ) ) ).
+
+thf(thm_2Ereal__topology_2EREAL__CHOOSE__DIST,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal,V1e: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal_2Ereal__lte @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V1e )
+     => ? [V2y: tyop_2Erealax_2Ereal] :
+          ( ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0x @ V2y ) )
+          = V1e ) ) ).
+
+thf(thm_2Ereal__topology_2EDIST__0,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal] :
+      ( ( ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0x @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) ) )
+        = ( c_2Ereal_2Eabs @ V0x ) )
+      & ( ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V0x ) )
+        = ( c_2Ereal_2Eabs @ V0x ) ) ) ).
+
+thf(thm_2Ereal__topology_2EDIST__EQ,axiom,
+    ! [V0w: tyop_2Erealax_2Ereal,V1x: tyop_2Erealax_2Ereal,V2y: tyop_2Erealax_2Ereal,V3z: tyop_2Erealax_2Ereal] :
+      ( ( ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0w @ V1x ) )
+        = ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V2y @ V3z ) ) )
+    <=> ( ( c_2Ereal_2Epow @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0w @ V1x ) ) @ ( c_2Earithmetic_2ENUMERAL @ ( c_2Earithmetic_2EBIT2 @ c_2Earithmetic_2EZERO ) ) )
+        = ( c_2Ereal_2Epow @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V2y @ V3z ) ) @ ( c_2Earithmetic_2ENUMERAL @ ( c_2Earithmetic_2EBIT2 @ c_2Earithmetic_2EZERO ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EDIST__POS__LE,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal,V1y: tyop_2Erealax_2Ereal] : ( c_2Ereal_2Ereal__lte @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0x @ V1y ) ) ) ).
+
+thf(thm_2Ereal__topology_2EDIST__LE__0,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal,V1y: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal_2Ereal__lte @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0x @ V1y ) ) @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) )
+    <=> ( V0x = V1y ) ) ).
+
+thf(thm_2Ereal__topology_2EDIST__TRIANGLE__ADD__HALF,axiom,
+    ! [V0e: tyop_2Erealax_2Ereal,V1x: tyop_2Erealax_2Ereal,V2x_27: tyop_2Erealax_2Ereal,V3y: tyop_2Erealax_2Ereal,V4y_27: tyop_2Erealax_2Ereal] :
+      ( ( ( c_2Erealax_2Ereal__lt @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V1x @ V2x_27 ) ) @ ( c_2Ereal_2E_2F @ V0e @ ( c_2Ereal_2Ereal__of__num @ ( c_2Earithmetic_2ENUMERAL @ ( c_2Earithmetic_2EBIT2 @ c_2Earithmetic_2EZERO ) ) ) ) )
+        & ( c_2Erealax_2Ereal__lt @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V3y @ V4y_27 ) ) @ ( c_2Ereal_2E_2F @ V0e @ ( c_2Ereal_2Ereal__of__num @ ( c_2Earithmetic_2ENUMERAL @ ( c_2Earithmetic_2EBIT2 @ c_2Earithmetic_2EZERO ) ) ) ) ) )
+     => ( c_2Erealax_2Ereal__lt @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ ( c_2Erealax_2Ereal__add @ V1x @ V3y ) @ ( c_2Erealax_2Ereal__add @ V2x_27 @ V4y_27 ) ) ) @ V0e ) ) ).
+
+thf(thm_2Ereal__topology_2EDIST__MUL,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal,V1y: tyop_2Erealax_2Ereal,V2c: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ ( c_2Erealax_2Ereal__mul @ V2c @ V0x ) @ ( c_2Erealax_2Ereal__mul @ V2c @ V1y ) ) )
+      = ( c_2Erealax_2Ereal__mul @ ( c_2Ereal_2Eabs @ V2c ) @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0x @ V1y ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EDIST__TRIANGLE__ADD,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal,V1x_27: tyop_2Erealax_2Ereal,V2y: tyop_2Erealax_2Ereal,V3y_27: tyop_2Erealax_2Ereal] : ( c_2Ereal_2Ereal__lte @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ ( c_2Erealax_2Ereal__add @ V0x @ V2y ) @ ( c_2Erealax_2Ereal__add @ V1x_27 @ V3y_27 ) ) ) @ ( c_2Erealax_2Ereal__add @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0x @ V1x_27 ) ) @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V2y @ V3y_27 ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EDIST__TRIANGLE__HALF__R,axiom,
+    ! [V0e: tyop_2Erealax_2Ereal,V1x1: tyop_2Erealax_2Ereal,V2x2: tyop_2Erealax_2Ereal,V3y: tyop_2Erealax_2Ereal] :
+      ( ( ( c_2Erealax_2Ereal__lt @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V3y @ V1x1 ) ) @ ( c_2Ereal_2E_2F @ V0e @ ( c_2Ereal_2Ereal__of__num @ ( c_2Earithmetic_2ENUMERAL @ ( c_2Earithmetic_2EBIT2 @ c_2Earithmetic_2EZERO ) ) ) ) )
+        & ( c_2Erealax_2Ereal__lt @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V3y @ V2x2 ) ) @ ( c_2Ereal_2E_2F @ V0e @ ( c_2Ereal_2Ereal__of__num @ ( c_2Earithmetic_2ENUMERAL @ ( c_2Earithmetic_2EBIT2 @ c_2Earithmetic_2EZERO ) ) ) ) ) )
+     => ( c_2Erealax_2Ereal__lt @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V1x1 @ V2x2 ) ) @ V0e ) ) ).
+
+thf(thm_2Ereal__topology_2EDIST__TRIANGLE__HALF__L,axiom,
+    ! [V0e: tyop_2Erealax_2Ereal,V1x1: tyop_2Erealax_2Ereal,V2x2: tyop_2Erealax_2Ereal,V3y: tyop_2Erealax_2Ereal] :
+      ( ( ( c_2Erealax_2Ereal__lt @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V1x1 @ V3y ) ) @ ( c_2Ereal_2E_2F @ V0e @ ( c_2Ereal_2Ereal__of__num @ ( c_2Earithmetic_2ENUMERAL @ ( c_2Earithmetic_2EBIT2 @ c_2Earithmetic_2EZERO ) ) ) ) )
+        & ( c_2Erealax_2Ereal__lt @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V2x2 @ V3y ) ) @ ( c_2Ereal_2E_2F @ V0e @ ( c_2Ereal_2Ereal__of__num @ ( c_2Earithmetic_2ENUMERAL @ ( c_2Earithmetic_2EBIT2 @ c_2Earithmetic_2EZERO ) ) ) ) ) )
+     => ( c_2Erealax_2Ereal__lt @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V1x1 @ V2x2 ) ) @ V0e ) ) ).
+
+thf(thm_2Ereal__topology_2EDIST__TRIANGLE__LT,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal,V1y: tyop_2Erealax_2Ereal,V2z: tyop_2Erealax_2Ereal,V3e: tyop_2Erealax_2Ereal] :
+      ( ( c_2Erealax_2Ereal__lt @ ( c_2Erealax_2Ereal__add @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0x @ V2z ) ) @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V1y @ V2z ) ) ) @ V3e )
+     => ( c_2Erealax_2Ereal__lt @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0x @ V1y ) ) @ V3e ) ) ).
+
+thf(thm_2Ereal__topology_2EDIST__TRIANGLE__LE,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal,V1y: tyop_2Erealax_2Ereal,V2z: tyop_2Erealax_2Ereal,V3e: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal_2Ereal__lte @ ( c_2Erealax_2Ereal__add @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0x @ V2z ) ) @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V1y @ V2z ) ) ) @ V3e )
+     => ( c_2Ereal_2Ereal__lte @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0x @ V1y ) ) @ V3e ) ) ).
+
+thf(thm_2Ereal__topology_2EDIST__NZ,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal,V1y: tyop_2Erealax_2Ereal] :
+      ( ( (~) @ ( V0x = V1y ) )
+    <=> ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0x @ V1y ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EDIST__POS__LT,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal,V1y: tyop_2Erealax_2Ereal] :
+      ( ( (~) @ ( V0x = V1y ) )
+     => ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0x @ V1y ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EDIST__EQ__0,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal,V1y: tyop_2Erealax_2Ereal] :
+      ( ( ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0x @ V1y ) )
+        = ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) )
+    <=> ( V0x = V1y ) ) ).
+
+thf(thm_2Ereal__topology_2EDIST__TRIANGLE__ALT,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal,V1y: tyop_2Erealax_2Ereal,V2z: tyop_2Erealax_2Ereal] : ( c_2Ereal_2Ereal__lte @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V1y @ V2z ) ) @ ( c_2Erealax_2Ereal__add @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0x @ V1y ) ) @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0x @ V2z ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EDIST__TRIANGLE,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal,V1y: tyop_2Erealax_2Ereal,V2z: tyop_2Erealax_2Ereal] : ( c_2Ereal_2Ereal__lte @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0x @ V2z ) ) @ ( c_2Erealax_2Ereal__add @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0x @ V1y ) ) @ ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V1y @ V2z ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EDIST__SYM,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal,V1y: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0x @ V1y ) )
+      = ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V1y @ V0x ) ) ) ).
+
+thf(thm_2Ereal__topology_2EDIST__REFL,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal] :
+      ( ( c_2Ereal__topology_2EDist @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0x @ V0x ) )
+      = ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) ) ).
+
+thf(thm_2Ereal__topology_2EREAL__WLOG__LT,axiom,
+    ! [V0P: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal > $o] :
+      ( ( ! [V1x: tyop_2Erealax_2Ereal] : ( V0P @ V1x @ V1x )
+        & ! [V2x: tyop_2Erealax_2Ereal,V3y: tyop_2Erealax_2Ereal] :
+            ( ( V0P @ V2x @ V3y )
+            = ( V0P @ V3y @ V2x ) )
+        & ! [V4x: tyop_2Erealax_2Ereal,V5y: tyop_2Erealax_2Ereal] :
+            ( ( c_2Erealax_2Ereal__lt @ V4x @ V5y )
+           => ( V0P @ V4x @ V5y ) ) )
+     => ! [V6x: tyop_2Erealax_2Ereal,V7y: tyop_2Erealax_2Ereal] : ( V0P @ V6x @ V7y ) ) ).
+
+thf(thm_2Ereal__topology_2EBIGUNION__MONO,axiom,
+    ! [A_27a: $tType,V0t: ( A_27a > $o ) > $o,V1s: ( A_27a > $o ) > $o] :
+      ( ! [V2x: A_27a > $o] :
+          ( ( c_2Ebool_2EIN @ ( A_27a > $o ) @ V2x @ V1s )
+         => ? [V3y: A_27a > $o] :
+              ( ( c_2Ebool_2EIN @ ( A_27a > $o ) @ V3y @ V0t )
+              & ( c_2Epred__set_2ESUBSET @ A_27a @ V2x @ V3y ) ) )
+     => ( c_2Epred__set_2ESUBSET @ A_27a @ ( c_2Epred__set_2EBIGUNION @ A_27a @ V1s ) @ ( c_2Epred__set_2EBIGUNION @ A_27a @ V0t ) ) ) ).
+
+thf(thm_2Ereal__topology_2EBIGUNION__MONO__IMAGE,axiom,
+    ! [A_27a: $tType,A_27b: $tType,V0s: A_27a > $o,V1g: A_27a > A_27b > $o,V2f: A_27a > A_27b > $o] :
+      ( ! [V3x: A_27a] :
+          ( ( c_2Ebool_2EIN @ A_27a @ V3x @ V0s )
+         => ( c_2Epred__set_2ESUBSET @ A_27b @ ( V2f @ V3x ) @ ( V1g @ V3x ) ) )
+     => ( c_2Epred__set_2ESUBSET @ A_27b @ ( c_2Epred__set_2EBIGUNION @ A_27b @ ( c_2Epred__set_2EIMAGE @ A_27a @ ( A_27b > $o ) @ V2f @ V0s ) ) @ ( c_2Epred__set_2EBIGUNION @ A_27b @ ( c_2Epred__set_2EIMAGE @ A_27a @ ( A_27b > $o ) @ V1g @ V0s ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EDEPENDENT__CHOICE,axiom,
+    ! [A_27a: $tType,V0P: tyop_2Enum_2Enum > A_27a > $o,V1R: tyop_2Enum_2Enum > A_27a > A_27a > $o] :
+      ( ( ? [V2a: A_27a] : ( V0P @ c_2Enum_2E0 @ V2a )
+        & ! [V3n: tyop_2Enum_2Enum,V4x: A_27a] :
+            ( ( V0P @ V3n @ V4x )
+           => ? [V5y: A_27a] :
+                ( ( V0P @ ( c_2Enum_2ESUC @ V3n ) @ V5y )
+                & ( V1R @ V3n @ V4x @ V5y ) ) ) )
+     => ? [V6f: tyop_2Enum_2Enum > A_27a] :
+          ( ! [V7n: tyop_2Enum_2Enum] : ( V0P @ V7n @ ( V6f @ V7n ) )
+          & ! [V8n: tyop_2Enum_2Enum] : ( V1R @ V8n @ ( V6f @ V8n ) @ ( V6f @ ( c_2Enum_2ESUC @ V8n ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EDEPENDENT__CHOICE__FIXED,axiom,
+    ! [A_27a: $tType,V0P: tyop_2Enum_2Enum > A_27a > $o,V1R: tyop_2Enum_2Enum > A_27a > A_27a > $o,V2a: A_27a] :
+      ( ( ( V0P @ c_2Enum_2E0 @ V2a )
+        & ! [V3n: tyop_2Enum_2Enum,V4x: A_27a] :
+            ( ( V0P @ V3n @ V4x )
+           => ? [V5y: A_27a] :
+                ( ( V0P @ ( c_2Enum_2ESUC @ V3n ) @ V5y )
+                & ( V1R @ V3n @ V4x @ V5y ) ) ) )
+     => ? [V6f: tyop_2Enum_2Enum > A_27a] :
+          ( ( ( V6f @ c_2Enum_2E0 )
+            = V2a )
+          & ! [V7n: tyop_2Enum_2Enum] : ( V0P @ V7n @ ( V6f @ V7n ) )
+          & ! [V8n: tyop_2Enum_2Enum] : ( V1R @ V8n @ ( V6f @ V8n ) @ ( V6f @ ( c_2Enum_2ESUC @ V8n ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EEXISTS__IN__INSERT,axiom,
+    ! [A_27a: $tType,V0P: A_27a > $o,V1a: A_27a,V2s: A_27a > $o] :
+      ( ? [V3x: A_27a] :
+          ( ( c_2Ebool_2EIN @ A_27a @ V3x @ ( c_2Epred__set_2EINSERT @ A_27a @ V1a @ V2s ) )
+          & ( V0P @ V3x ) )
+    <=> ( ( V0P @ V1a )
+        | ? [V4x: A_27a] :
+            ( ( c_2Ebool_2EIN @ A_27a @ V4x @ V2s )
+            & ( V0P @ V4x ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EPERMUTES__INJECTIVE,axiom,
+    ! [A_27a: $tType,V0p: A_27a > A_27a,V1s: A_27a > $o] :
+      ( ( c_2Ereal__topology_2Epermutes @ A_27a @ V0p @ V1s )
+     => ! [V2x: A_27a,V3y: A_27a] :
+          ( ( ( V0p @ V2x )
+            = ( V0p @ V3y ) )
+        <=> ( V2x = V3y ) ) ) ).
+
+thf(thm_2Ereal__topology_2EPERMUTES__IMAGE,axiom,
+    ! [A_27a: $tType,V0p: A_27a > A_27a,V1s: A_27a > $o] :
+      ( ( c_2Ereal__topology_2Epermutes @ A_27a @ V0p @ V1s )
+     => ( ( c_2Epred__set_2EIMAGE @ A_27a @ A_27a @ V0p @ V1s )
+        = V1s ) ) ).
+
+thf(thm_2Ereal__topology_2EPAIRWISE__IMAGE,axiom,
+    ! [A_27a: $tType,A_27b: $tType,V0s: A_27b > $o,V1r: A_27a > A_27a > $o,V2f: A_27b > A_27a] :
+      ( ( c_2Ereal__topology_2Epairwise @ A_27a @ V1r @ ( c_2Epred__set_2EIMAGE @ A_27b @ A_27a @ V2f @ V0s ) )
+      = ( c_2Ereal__topology_2Epairwise @ A_27b
+        @ ^ [V3x: A_27b,V4y: A_27b] : ( c_2Emin_2E_3D_3D_3E @ ( c_2Ebool_2E_7E @ ( c_2Emin_2E_3D @ A_27a @ ( V2f @ V3x ) @ ( V2f @ V4y ) ) ) @ ( V1r @ ( V2f @ V3x ) @ ( V2f @ V4y ) ) )
+        @ V0s ) ) ).
+
+thf(thm_2Ereal__topology_2EPAIRWISE__INSERT,axiom,
+    ! [A_27a: $tType,V0r: A_27a > A_27a > $o,V1x: A_27a,V2s: A_27a > $o] :
+      ( ( c_2Ereal__topology_2Epairwise @ A_27a @ V0r @ ( c_2Epred__set_2EINSERT @ A_27a @ V1x @ V2s ) )
+    <=> ( ! [V3y: A_27a] :
+            ( ( ( c_2Ebool_2EIN @ A_27a @ V3y @ V2s )
+              & ( (~) @ ( V3y = V1x ) ) )
+           => ( ( V0r @ V1x @ V3y )
+              & ( V0r @ V3y @ V1x ) ) )
+        & ( c_2Ereal__topology_2Epairwise @ A_27a @ V0r @ V2s ) ) ) ).
+
+thf(thm_2Ereal__topology_2EPAIRWISE__MONO,axiom,
+    ! [A_27a: $tType,V0r: A_27a > A_27a > $o,V1s: A_27a > $o,V2t: A_27a > $o] :
+      ( ( ( c_2Ereal__topology_2Epairwise @ A_27a @ V0r @ V1s )
+        & ( c_2Epred__set_2ESUBSET @ A_27a @ V2t @ V1s ) )
+     => ( c_2Ereal__topology_2Epairwise @ A_27a @ V0r @ V2t ) ) ).
+
+thf(thm_2Ereal__topology_2EPAIRWISE__SING,axiom,
+    ! [A_27a: $tType,V0r: A_27a > A_27a > $o,V1x: A_27a] :
+      ( ( c_2Ereal__topology_2Epairwise @ A_27a @ V0r @ ( c_2Epred__set_2EINSERT @ A_27a @ V1x @ ( c_2Epred__set_2EEMPTY @ A_27a ) ) )
+      = c_2Ebool_2ET ) ).
+
+thf(thm_2Ereal__topology_2EPAIRWISE__EMPTY,axiom,
+    ! [A_27a: $tType,V0r: A_27a > A_27a > $o] :
+      ( ( c_2Ereal__topology_2Epairwise @ A_27a @ V0r @ ( c_2Epred__set_2EEMPTY @ A_27a ) )
+      = c_2Ebool_2ET ) ).
+
+thf(thm_2Ereal__topology_2EREAL__WLOG__LE,axiom,
+    ! [V0P: tyop_2Erealax_2Ereal > tyop_2Erealax_2Ereal > $o] :
+      ( ( ! [V1x: tyop_2Erealax_2Ereal,V2y: tyop_2Erealax_2Ereal] :
+            ( ( V0P @ V1x @ V2y )
+            = ( V0P @ V2y @ V1x ) )
+        & ! [V3x: tyop_2Erealax_2Ereal,V4y: tyop_2Erealax_2Ereal] :
+            ( ( c_2Ereal_2Ereal__lte @ V3x @ V4y )
+           => ( V0P @ V3x @ V4y ) ) )
+     => ! [V5x: tyop_2Erealax_2Ereal,V6y: tyop_2Erealax_2Ereal] : ( V0P @ V5x @ V6y ) ) ).
+
+thf(thm_2Ereal__topology_2EIMAGE__SING,axiom,
+    ! [A_27a: $tType,A_27b: $tType,V0f: A_27a > A_27b,V1a: A_27a] :
+      ( ( c_2Epred__set_2EIMAGE @ A_27a @ A_27b @ V0f @ ( c_2Epred__set_2EINSERT @ A_27a @ V1a @ ( c_2Epred__set_2EEMPTY @ A_27a ) ) )
+      = ( c_2Epred__set_2EINSERT @ A_27b @ ( V0f @ V1a ) @ ( c_2Epred__set_2EEMPTY @ A_27b ) ) ) ).
+
+thf(thm_2Ereal__topology_2ESUM__ABS__TRIANGLE,axiom,
+    ! [A_27a: $tType,V0s: A_27a > $o,V1f: A_27a > tyop_2Erealax_2Ereal,V2b: tyop_2Erealax_2Ereal] :
+      ( ( ( c_2Epred__set_2EFINITE @ A_27a @ V0s )
+        & ( c_2Ereal_2Ereal__lte
+          @ ( c_2Eiterate_2ESum @ A_27a @ V0s
+            @ ^ [V3a: A_27a] : ( c_2Ereal_2Eabs @ ( V1f @ V3a ) ) )
+          @ V2b ) )
+     => ( c_2Ereal_2Ereal__lte @ ( c_2Ereal_2Eabs @ ( c_2Eiterate_2ESum @ A_27a @ V0s @ V1f ) ) @ V2b ) ) ).
+
+thf(thm_2Ereal__topology_2ESUMS__SYM,axiom,
+    ! [V0s: tyop_2Erealax_2Ereal > $o,V1t: tyop_2Erealax_2Ereal > $o] :
+      ( ( c_2Epred__set_2EGSPEC @ tyop_2Erealax_2Ereal @ ( tyop_2Epair_2Eprod @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal )
+        @ ( c_2Epair_2EUNCURRY @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ ( tyop_2Epair_2Eprod @ tyop_2Erealax_2Ereal @ $o )
+          @ ^ [V2x: tyop_2Erealax_2Ereal,V3y: tyop_2Erealax_2Ereal] : ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ $o @ ( c_2Erealax_2Ereal__add @ V2x @ V3y ) @ ( c_2Ebool_2E_2F_5C @ ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V2x @ V0s ) @ ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V3y @ V1t ) ) ) ) )
+      = ( c_2Epred__set_2EGSPEC @ tyop_2Erealax_2Ereal @ ( tyop_2Epair_2Eprod @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal )
+        @ ( c_2Epair_2EUNCURRY @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ ( tyop_2Epair_2Eprod @ tyop_2Erealax_2Ereal @ $o )
+          @ ^ [V4y: tyop_2Erealax_2Ereal,V5x: tyop_2Erealax_2Ereal] : ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ $o @ ( c_2Erealax_2Ereal__add @ V4y @ V5x ) @ ( c_2Ebool_2E_2F_5C @ ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V4y @ V1t ) @ ( c_2Ebool_2EIN @ tyop_2Erealax_2Ereal @ V5x @ V0s ) ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ESUM__GP,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal,V1m: tyop_2Enum_2Enum,V2n: tyop_2Enum_2Enum] :
+      ( ( c_2Eiterate_2ESum @ tyop_2Enum_2Enum @ ( c_2Eiterate_2E_2E_2E @ V1m @ V2n )
+        @ ^ [V3i: tyop_2Enum_2Enum] : ( c_2Ereal_2Epow @ V0x @ V3i ) )
+      = ( c_2Ebool_2ECOND @ tyop_2Erealax_2Ereal @ ( c_2Eprim__rec_2E_3C @ V2n @ V1m ) @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ ( c_2Ebool_2ECOND @ tyop_2Erealax_2Ereal @ ( c_2Emin_2E_3D @ tyop_2Erealax_2Ereal @ V0x @ ( c_2Ereal_2Ereal__of__num @ ( c_2Earithmetic_2ENUMERAL @ ( c_2Earithmetic_2EBIT1 @ c_2Earithmetic_2EZERO ) ) ) ) @ ( c_2Ereal_2Ereal__of__num @ ( c_2Earithmetic_2E_2D @ ( c_2Earithmetic_2E_2B @ V2n @ ( c_2Earithmetic_2ENUMERAL @ ( c_2Earithmetic_2EBIT1 @ c_2Earithmetic_2EZERO ) ) ) @ V1m ) ) @ ( c_2Ereal_2E_2F @ ( c_2Ereal_2Ereal__sub @ ( c_2Ereal_2Epow @ V0x @ V1m ) @ ( c_2Ereal_2Epow @ V0x @ ( c_2Enum_2ESUC @ V2n ) ) ) @ ( c_2Ereal_2Ereal__sub @ ( c_2Ereal_2Ereal__of__num @ ( c_2Earithmetic_2ENUMERAL @ ( c_2Earithmetic_2EBIT1 @ c_2Earithmetic_2EZERO ) ) ) @ V0x ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ESUM__GP__MULTIPLIED,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal,V1m: tyop_2Enum_2Enum,V2n: tyop_2Enum_2Enum] :
+      ( ( c_2Earithmetic_2E_3C_3D @ V1m @ V2n )
+     => ( ( c_2Erealax_2Ereal__mul @ ( c_2Ereal_2Ereal__sub @ ( c_2Ereal_2Ereal__of__num @ ( c_2Earithmetic_2ENUMERAL @ ( c_2Earithmetic_2EBIT1 @ c_2Earithmetic_2EZERO ) ) ) @ V0x )
+          @ ( c_2Eiterate_2ESum @ tyop_2Enum_2Enum @ ( c_2Eiterate_2E_2E_2E @ V1m @ V2n )
+            @ ^ [V3i: tyop_2Enum_2Enum] : ( c_2Ereal_2Epow @ V0x @ V3i ) ) )
+        = ( c_2Ereal_2Ereal__sub @ ( c_2Ereal_2Epow @ V0x @ V1m ) @ ( c_2Ereal_2Epow @ V0x @ ( c_2Enum_2ESUC @ V2n ) ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2ESUM__GP__BASIC,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal,V1n: tyop_2Enum_2Enum] :
+      ( ( c_2Erealax_2Ereal__mul @ ( c_2Ereal_2Ereal__sub @ ( c_2Ereal_2Ereal__of__num @ ( c_2Earithmetic_2ENUMERAL @ ( c_2Earithmetic_2EBIT1 @ c_2Earithmetic_2EZERO ) ) ) @ V0x )
+        @ ( c_2Eiterate_2ESum @ tyop_2Enum_2Enum @ ( c_2Eiterate_2E_2E_2E @ c_2Enum_2E0 @ V1n )
+          @ ^ [V2i: tyop_2Enum_2Enum] : ( c_2Ereal_2Epow @ V0x @ V2i ) ) )
+      = ( c_2Ereal_2Ereal__sub @ ( c_2Ereal_2Ereal__of__num @ ( c_2Earithmetic_2ENUMERAL @ ( c_2Earithmetic_2EBIT1 @ c_2Earithmetic_2EZERO ) ) ) @ ( c_2Ereal_2Epow @ V0x @ ( c_2Enum_2ESUC @ V1n ) ) ) ) ).
+
+thf(thm_2Ereal__topology_2EREAL__INV__1__LE,axiom,
+    ! [V0x: tyop_2Erealax_2Ereal] :
+      ( ( ( c_2Erealax_2Ereal__lt @ ( c_2Ereal_2Ereal__of__num @ c_2Enum_2E0 ) @ V0x )
+        & ( c_2Ereal_2Ereal__lte @ V0x @ ( c_2Ereal_2Ereal__of__num @ ( c_2Earithmetic_2ENUMERAL @ ( c_2Earithmetic_2EBIT1 @ c_2Earithmetic_2EZERO ) ) ) ) )
+     => ( c_2Ereal_2Ereal__lte @ ( c_2Ereal_2Ereal__of__num @ ( c_2Earithmetic_2ENUMERAL @ ( c_2Earithmetic_2EBIT1 @ c_2Earithmetic_2EZERO ) ) ) @ ( c_2Erealax_2Einv @ V0x ) ) ) ).
+
+thf(thm_2Ereal__topology_2EBOUNDED__BALL,conjecture,
+    ! [V0x: tyop_2Erealax_2Ereal,V1e: tyop_2Erealax_2Ereal] : ( c_2Ereal__topology_2Ebounded__def @ ( c_2Ereal__topology_2Eball @ ( c_2Epair_2E_2C @ tyop_2Erealax_2Ereal @ tyop_2Erealax_2Ereal @ V0x @ V1e ) ) ) ).
+
+%------------------------------------------------------------------------------

@@ -1,0 +1,35 @@
+%------------------------------------------------------------------------------
+% File     : SEV142^5 : TPTP v9.2.1. Bugfixed v5.1.0.
+% Domain   : Set Theory (Relations)
+% Problem  : TPS problem THM250A
+% Version  : Especial.
+% English  :
+
+% Refs     : [Bro09] Brown (2009), Email to Geoff Sutcliffe
+% Source   : [Bro09]
+% Names    : tps_0538 [Bro09]
+%          : THM250A [TPS]
+
+% Status   : Theorem
+% Rating   : 0.60 v4.1.0, 0.67 v4.0.0
+% Syntax   : Number of formulae    :    2 (   1 unit;   1 type;   0 defn)
+%            Number of atoms       :  116 (   1 equality;  72 variable)
+%            Maximal formula depth :   23 (  12 average)
+%            Number of connectives :   70 (   0   ~;   2   |;   8   &;  48   @)
+%                                         (   0 <=>;  12  =>;   0  <=;   0 <~>)
+%                                         (   0  ~|;   0  ~&;   0  !!;   0  ??)
+%            Number of type conns  :   12 (  12   >;   0   *;   0   +;   0  <<)
+%            Number of symbols     :    3 (   1   :;   0  :=)
+%            Number of variables   :   30 (   0 sgn;  26   !;   0   ?;   4   ^)
+%                                         (  30   :;   0  :=;   0  !>;   0  ?*)
+%                                         (   0  @-;   0  @+)
+% SPC      : THF_THM_EQU
+
+% Comments : This problem is from the TPS library. Copyright (c) 2009 The TPS
+%            project in the Department of Mathematical Sciences at Carnegie
+%            Mellon University. Distributed under the Creative Commons copyleft
+%            license: http://creativecommons.org/licenses/by-sa/3.0/
+%          : Polymorphic definitions expanded.
+%          : THF0 syntax
+% Bugfixes : v5.1.0 - Removed - duplicate of SEV141^5 
+%------------------------------------------------------------------------------

@@ -1,0 +1,19 @@
+%--------------------------------------------------------------------------
+% File     : CAT019-6 : TPTP v9.2.1. Released v1.0.0.
+% Domain   : Category Theory
+% Problem  : Axiom of Indiscernibles
+% Version  : [Sco79] axioms : Reduced & Augmented > Complete.
+% English  : [all z (x=z <-> y=z)] -> x=y.
+
+% Refs     : [Sco79] Scott (1979), Identity and Existence in Intuitionist L
+% Source   : [TPTP]
+% Names    :
+
+% Status   : Unknown
+% Rating   : ? v2.0.0
+% Syntax   :
+
+% Comments : The dependent axioms have been removed.
+%          : Assumes something exists.
+% Bugfixes : v1.2.1 - Removed. Same as CAT019-5.
+%--------------------------------------------------------------------------

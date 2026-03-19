@@ -1,0 +1,29 @@
+%------------------------------------------------------------------------------
+% File     : NUM391+1 : TPTP v9.2.1. Released v3.2.0.
+% Domain   : Number Theory (Ordinals)
+% Problem  : Ordinal numbers, theorem 23
+% Version  : [Urb06] axioms : Especial.
+% English  :
+
+% Refs     : [Ban90] Bancerek (1990), The Ordinal Numbers
+%            [Urb06] Urban (2006), Email to G. Sutcliffe
+% Source   : [Urb06]
+% Names    : ordinal1__t23_ordinal1 [Urb06]
+
+% Status   : Theorem
+% Rating   : 0.89 v3.3.0, 0.93 v3.2.0
+% Syntax   : Number of formulae    :   41 (   7 unit)
+%            Number of atoms       :  105 (   6 equality)
+%            Maximal formula depth :   11 (   4 average)
+%            Number of connectives :   80 (  16 ~  ;   1  |;  41  &)
+%                                         (   7 <=>;  15 =>;   0 <=)
+%                                         (   0 <~>;   0 ~|;   0 ~&)
+%            Number of predicates  :   13 (   0 propositional; 1-2 arity)
+%            Number of functors    :    3 (   1 constant; 0-2 arity)
+%            Number of variables   :   65 (   1 singleton;  53 !;  12 ?)
+%            Maximal term depth    :    2 (   1 average)
+
+% Comments : Translated by MPTP 0.2 from the original problem in the Mizar
+%            library, www.mizar.org
+% Bugfixes : v3.4.0 - Renamed to SEU232+3
+%------------------------------------------------------------------------------

@@ -1,0 +1,31 @@
+%------------------------------------------------------------------------------
+% File     : SEU698^2 : TPTP v9.2.1. Bugfixed v5.1.0.
+% Domain   : Set Theory
+% Problem  : Functions - Extensionality and Beta Reduction
+% Version  : Especial > Reduced > Especial.
+% English  : (! A:i.! B:i.! f:i>i.(! x:i.in x A -> in (f x) B) ->
+%            (! x:i.in x A -> ap A B (lam A B (^ y:i.f y)) x = f x))
+
+% Refs     : [Bro08] Brown (2008), Email to G. Sutcliffe
+% Source   : [Bro08]
+% Names    : ZFC200l [Bro08]
+
+% Status   : Theorem
+% Rating   : 0.60 v4.1.0, 0.67 v3.7.0
+% Syntax   : Number of formulae    :   14 (   3 unit;   9 type;   4 defn)
+%            Number of atoms       :  158 (   7 equality;  61 variable)
+%            Maximal formula depth :   16 (   8 average)
+%            Number of connectives :   77 (   0   ~;   0   |;   0   &;  62   @)
+%                                         (   0 <=>;  15  =>;   0  <=;   0 <~>)
+%                                         (   0  ~|;   0  ~&;   0  !!;   0  ??)
+%            Number of type conns  :   25 (  25   >;   0   *;   0   +;   0  <<)
+%            Number of symbols     :   11 (   9   :;   0  :=)
+%            Number of variables   :   28 (   0 sgn;  19   !;   0   ?;   9   ^)
+%                                         (  28   :;   0  :=;   0  !>;   0  ?*)
+%                                         (   0  @-;   0  @+)
+% SPC      : THF_THM_EQU
+
+% Comments : http://mathgate.info/detsetitem.php?id=250
+%          : THF0 syntax
+% Bugfixes : v5.1.0 - Removed - duplicate of SEU695^2
+%------------------------------------------------------------------------------

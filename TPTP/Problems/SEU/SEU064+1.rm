@@ -1,0 +1,29 @@
+%------------------------------------------------------------------------------
+% File     : SEU064+1 : TPTP v9.2.1. Released v3.2.0.
+% Domain   : Set theory
+% Problem  : Functions and their basic properties, theorem 145
+% Version  : [Urb06] axioms : Especial.
+% English  :
+
+% Refs     : [Byl90] Bylinski (1990), Functions and Their Basic Properties
+%          : [Urb06] Urban (2006), Email to G. Sutcliffe
+% Source   : [Urb06]
+% Names    : funct_1__t145_funct_1 [Urb06]
+
+% Status   : Theorem
+% Rating   : 0.68 v3.3.0, 0.71 v3.2.0
+% Syntax   : Number of formulae    :   34 (   6 unit)
+%            Number of atoms       :   87 (   5 equality)
+%            Maximal formula depth :   11 (   4 average)
+%            Number of connectives :   65 (  12 ~  ;   1  |;  31  &)
+%                                         (   6 <=>;  15 =>;   0 <=)
+%                                         (   0 <~>;   0 ~|;   0 ~&)
+%            Number of predicates  :    9 (   0 propositional; 1-2 arity)
+%            Number of functors    :    6 (   1 constant; 0-2 arity)
+%            Number of variables   :   55 (   1 singleton;  43 !;  12 ?)
+%            Maximal term depth    :    3 (   1 average)
+
+% Comments : Translated by MPTP 0.2 from the original problem in the Mizar
+%            library, www.mizar.org
+% Bugfixes : v3.4.0 - Renamed to SEU226+3
+%------------------------------------------------------------------------------

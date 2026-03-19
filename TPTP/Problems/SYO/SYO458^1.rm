@@ -1,0 +1,30 @@
+%------------------------------------------------------------------------------
+% File     : SYO458^1 : TPTP v9.2.1. Bugfixed v5.1.0.
+% Domain   : Syntactic
+% Problem  : Ted Sider's propositional modal logic wff 09
+% Version  : Especial.
+%          : Theorem formulation : Uses system K axioms.
+% English  :
+
+% Refs     : [Sid09] Sider (2009), Logic for Philosophy
+% Source   : [Sid09]
+% Names    :
+
+% Status   : Theorem
+% Rating   : 0.20 v4.1.0, 0.00 v4.0.0
+% Syntax   : Number of formulae    :   71 (   1 unit;  37 type;  33 defn)
+%            Number of atoms       :  551 (  38 equality; 135 variable)
+%            Maximal formula depth :   11 (   6 average)
+%            Number of connectives :  141 (   5   ~;   5   |;   8   &; 115   @)
+%                                         (   0 <=>;   8  =>;   0  <=;   0 <~>)
+%                                         (   0  ~|;   0  ~&;   0  !!;   0  ??)
+%            Number of type conns  :  180 ( 180   >;   0   *;   0   +;   0  <<)
+%            Number of symbols     :   43 (  37   :;   0  :=)
+%            Number of variables   :   88 (   3 sgn;  30   !;   6   ?;  52   ^)
+%                                         (  88   :;   0  :=;   0  !>;   0  ?*)
+%                                         (   0  @-;   0  @+)
+% SPC      : THF_THM_EQU
+
+% Comments : THF0 syntax
+% Bugfixes : v5.1.0 - Removed - duplicate of SYO408^1
+%------------------------------------------------------------------------------

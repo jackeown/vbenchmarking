@@ -1,0 +1,12 @@
+__pycache__
+/TPTP/*
+!/TPTP/Axioms/
+!/TPTP/Axioms/**
+!/TPTP/Problems/
+!/TPTP/Problems/**
+/TPTP/Axioms/CSR*
+/TPTP/Axioms/HWV*
+/TPTP/Problems/CSR/
+/TPTP/Problems/CSR/**
+/TPTP/Problems/HWV/
+/TPTP/Problems/HWV/**

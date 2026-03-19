@@ -1,0 +1,28 @@
+%------------------------------------------------------------------------------
+% File     : SWC424-1.005.003 : TPTP v9.2.1. Released v4.1.0.
+% Domain   : Hardware Verification
+% Problem  : Faulty channel 5 3
+% Version  : Especial.
+% English  : The problem of sending N bits over a faulty channel that can
+%            mutilate any one bit. We can use K extra bits to help us do this.
+%            Satisfiable means that it is possible, unsatisfiable means that
+%            it is not possible.
+
+% Refs     : [Cla10] Claessen (2010), Email to Geoff Sutcliffe
+% Source   : [Cla10]
+% Names    : fault_5_3 [Cla10]
+
+% Status   : Unsatisfiable
+% Rating   : 0.89 v5.3.0, 0.90 v5.2.0, 0.88 v5.1.0, 0.89 v5.0.0, 0.90 v4.1.0
+% Syntax   : Number of clauses     :   47 (   1 non-Horn;  46 unit;   1 RR)
+%            Number of atoms       :   48 (  48 equality)
+%            Maximal clause size   :    2 (   1 average)
+%            Number of predicates  :    1 (   0 propositional; 2-2 arity)
+%            Number of functors    :   11 (   2 constant; 0-8 arity)
+%            Number of variables   :  227 (   0 singleton)
+%            Maximal term depth    :    4 (   2 average)
+% SPC      : CNF_UNS_RFO_PEQ_NUE
+
+% Comments :
+% Bugfixes : Renamed to HWV052-1.005.003
+%------------------------------------------------------------------------------

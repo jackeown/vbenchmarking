@@ -13,7 +13,7 @@
 <tasks name="non-recursive-synth">
     <option name="-qa">synthesis</option>
     <include>/home/mhajdu/vampire_benchmarks_flat/synthesis::NR_*.smt2</include>
-    <includesfile>/home/mhajdu/vbenchmarking/benchmarks/tptp-synth.set</includesfile>
+    <includesfile>tptp-synth.set</includesfile>
 </tasks>
 
 <tasks name="recursive-synth">

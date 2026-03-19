@@ -1,0 +1,28 @@
+%------------------------------------------------------------------------------
+% File     : SEU554^2 : TPTP v9.2.1. Removed v4.0.0.
+% Domain   : Set Theory
+% Problem  : A simple congruence property of setunion
+% Version  : Especial > Reduced > Especial.
+% English  : (forall A:i.forall B:i.A = B -> setunion A = setunion B)
+
+% Refs     : [Bro08] Brown (2008), Email to G. Sutcliffe
+% Source   : [Bro08]
+% Names    : ZFC056l [Bro08]
+
+% Status   : Theorem
+% Rating   : 0.33 v3.7.0
+% Syntax   : Number of formulae    :    1 (   0 unit;   0 type;   0 defn)
+%            Number of atoms       :   10 (   2 equality;   4 variable)
+%            Maximal formula depth :    6 (   6 average)
+%            Number of connectives :    3 (   0   ~;   0   |;   0   &;   2   @)
+%                                         (   0 <=>;   1  =>;   0  <=;   0 <~>)
+%                                         (   0  ~|;   0  ~&;   0  !!;   0  ??)
+%            Number of type conns  :    0 (   0   >;   0   *;   0   +)
+%            Number of symbols     :    2 (   0   :;   0  :=)
+%            Number of variables   :    2 (   0 sgn;   2   !;   0   ?;   0   ^)
+%                                         (   2   :;   0  :=;   0  !>;   0  ?*)
+
+% Comments : http://mathgate.info/detsetitem.php?id=34
+%          : THF0 syntax
+% Bugfixes : v4.0.0 - Removed because it's SEU553^2.
+%------------------------------------------------------------------------------

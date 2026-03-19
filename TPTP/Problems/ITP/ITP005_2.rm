@@ -1,0 +1,33 @@
+%------------------------------------------------------------------------------
+% File     : ITP005_2 : TPTP v9.2.1. Removed v8.0.0.
+% Domain   : Interactive Theorem Proving
+% Problem  : HOL4 set theory export of thm_2Eset__relation_2Erel__to__reln__inv.p, bushy mode
+% Version  : [BG+19] axioms.
+% English  :
+
+% Refs     : [BG+19] Brown et al. (2019), GRUNGE: A Grand Unified ATP Chall
+%          : [Gau19] Gauthier (2019), Email to Geoff Sutcliffe
+% Source   : [BG+19]
+% Names    : thm_2Eset__relation_2Erel__to__reln__inv.p [Gau19]
+%          : HL402001_2.p [TPAP]
+
+% Status   : Theorem
+% Rating   : 1.00 v7.5.0
+% Syntax   : Number of formulae    :   87 (  26 unit;  34 type)
+%            Number of atoms       :  140 (  31 equality)
+%            Maximal formula depth :   13 (   4 average)
+%            Number of connectives :   91 (   4   ~;   0   |;  10   &)
+%                                         (  24 <=>;  53  =>;   0  <=;   0 <~>)
+%                                         (   0  ~|;   0  ~&)
+%            Number of type conns  :   38 (  23   >;  15   *;   0   +;   0  <<)
+%            Number of predicates  :   13 (  10 propositional; 0-2 arity)
+%            Number of functors    :   31 (   8 constant; 0-3 arity)
+%            Number of variables   :  112 (   0 sgn; 109   !;   3   ?)
+%                                         ( 112   :;   0  !>;   0  ?*)
+%            Maximal term depth    :    6 (   2 average)
+% SPC      : TF0_THM_EQU_NAR
+
+% Comments :
+% Bugfixes : v7.5.0 - Bugfixes in axioms and export.
+%          : v8.0.0 - Removed due to type errors.
+%------------------------------------------------------------------------------

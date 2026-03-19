@@ -1,0 +1,29 @@
+%------------------------------------------------------------------------------
+% File     : SYO036^1 : TPTP v9.2.1. Removed v4.0.0.
+% Domain   : Syntactic
+% Problem  : Surjective Cantor theorem
+% Version  : Especial.
+% English  :
+
+% Refs     : [BB05]  Benzmueller & Brown (2005), A Structured Set of Higher
+%          : [Ben09] Benzmueller (2009), Email to Geoff Sutcliffe
+% Source   : [Ben09]
+% Names    : Example 31 [BB05]
+
+% Status   : Theorem
+% Rating   : 0.33 v3.7.0
+% Syntax   : Number of formulae    :    1 (   0 unit;   0 type;   0 defn)
+%            Number of atoms       :   10 (   1 equality;   3 variable)
+%            Maximal formula depth :    7 (   7 average)
+%            Number of connectives :    2 (   1   ~;   0   |;   0   &;   1   @)
+%                                         (   0 <=>;   0  =>;   0  <=;   0 <~>)
+%                                         (   0  ~|;   0  ~&;   0  !!;   0  ??)
+%            Number of type conns  :    3 (   3   >;   0   *;   0   +)
+%            Number of symbols     :    2 (   0   :;   0  :=)
+%            Number of variables   :    3 (   0 sgn;   1   !;   2   ?;   0   ^)
+%                                         (   3   :;   0  :=;   0  !>;   0  ?*)
+
+% Comments : Requires set comprehension, and set instantiation
+%          : THF0 syntax
+% Bugfixes : v4.0.0 - Removed because it's SET557^1.
+%------------------------------------------------------------------------------

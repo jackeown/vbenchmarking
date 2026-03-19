@@ -1,0 +1,31 @@
+%------------------------------------------------------------------------------
+% File     : GEG017^1 : TPTP v9.2.1. Bugfixed v5.1.0.
+% Domain   : Geography
+% Problem  : Places in Spain and France do not overlap
+% Version  : [RCC92] axioms.
+% English  : 
+
+% Refs     : [RCC92] Randell et al. (1992), A Spatial Logic Based on Region
+%          : [Ben10a] Benzmueller (2010), Email to Geoff Sutcliffe
+%          : [Ben10b] Benzmueller (2010), Simple Type Theory as a Framework
+% Source   : [Ben10a]
+% Names    : Problem 76 [Ben10b]
+
+% Status   : Theorem
+% Rating   : 0.60 v5.0.0, 0.40 v4.1.0
+% Syntax   : Number of formulae    :   98 (   6 unit;  49 type;  40 defn)
+%            Number of atoms       :  550 (  45 equality; 186 variable)
+%            Maximal formula depth :   11 (   6 average)
+%            Number of connectives :  238 (  11   ~;   4   |;  19   &; 193   @)
+%                                         (   0 <=>;  11  =>;   0  <=;   0 <~>)
+%                                         (   0  ~|;   0  ~&;   0  !!;   0  ??)
+%            Number of type conns  :  195 ( 195   >;   0   *;   0   +;   0  <<)
+%            Number of symbols     :   55 (  49   :)
+%            Number of variables   :  118 (   7 sgn;  35   !;   9   ?;  74   ^)
+%                                         ( 118   :;   0  !>;   0  ?*)
+%                                         (   0  @-;   0  @+)
+% SPC      : THF_THM_EQU
+
+% Comments : 
+% Bugfixes : v5.1.0 - Removed - duplicate of GEG016^1
+%------------------------------------------------------------------------------

@@ -1,0 +1,35 @@
+%------------------------------------------------------------------------------
+% File     : SEV073^5 : TPTP v9.2.1. Bugfixed v5.1.0.
+% Domain   : Set Theory (Relations)
+% Problem  : TPS problem THM575
+% Version  : Especial.
+% English  : Existence of transitive closure.
+
+% Refs     : [Bro09] Brown (2009), Email to Geoff Sutcliffe
+% Source   : [Bro09]
+% Names    : tps_0500 [Bro09]
+%          : THM575 [TPS]
+
+% Status   : Theorem
+% Rating   : 0.75 v4.1.0, 0.67 v4.0.0
+% Syntax   : Number of formulae    :    1 (   0 unit;   0 type;   0 defn)
+%            Number of atoms       :   57 (   0 equality;  36 variable)
+%            Maximal formula depth :   15 (  15 average)
+%            Number of connectives :   35 (   0   ~;   0   |;   5   &;  24   @)
+%                                         (   0 <=>;   6  =>;   0  <=;   0 <~>)
+%                                         (   0  ~|;   0  ~&;   0  !!;   0  ??)
+%            Number of type conns  :    6 (   6   >;   0   *;   0   +;   0  <<)
+%            Number of symbols     :    2 (   0   :;   0  :=)
+%            Number of variables   :   15 (   0 sgn;  14   !;   1   ?;   0   ^)
+%                                         (  15   :;   0  :=;   0  !>;   0  ?*)
+%                                         (   0  @-;   0  @+)
+% SPC      : THF_THM_NEQ
+
+% Comments : This problem is from the TPS library. Copyright (c) 2009 The TPS
+%            project in the Department of Mathematical Sciences at Carnegie
+%            Mellon University. Distributed under the Creative Commons copyleft
+%            license: http://creativecommons.org/licenses/by-sa/3.0/
+%          : Polymorphic definitions expanded.
+%          : THF0 syntax
+% Bugfixes : v5.1.0 - renamed to SEV069^6 
+%------------------------------------------------------------------------------

@@ -1,0 +1,73 @@
+%------------------------------------------------------------------------------
+% File     : SYO038^1.003.004 : TPTP v9.2.1. Released v5.3.0.
+% Domain   : Syntactic
+% Problem  : Boolos' Curious Inference, size f(3,4)
+% Version  : Especial.
+% English  :
+
+% Refs     : [Boo87] Boolos (1987), A Curious Inference
+%          : [BB05]  Benzmueller & Brown (2005), A Structured Set of Higher
+%          : [BB07]  Benzmueller & Brown (2007), The Curious Inference of B
+%          : [Ben09] Benzmueller (2009), Email to Geoff Sutcliffe
+% Source   : [Ben09]
+% Names    : Example 35 [BB05]
+
+% Status   : Theorem
+% Rating   : 1.00 v9.1.0, 0.88 v9.0.0, 0.90 v8.2.0, 0.77 v8.1.0, 0.73 v7.5.0, 0.86 v7.4.0, 1.00 v5.3.0
+% Syntax   : Number of formulae    :   10 (   5 unt;   4 typ;   0 def)
+%            Number of atoms       :    7 (   3 equ;   0 cnn)
+%            Maximal formula atoms :    2 (   1 avg)
+%            Number of connectives :   32 (   0   ~;   0   |;   0   &;  31   @)
+%                                         (   0 <=>;   1  =>;   0  <=;   0 <~>)
+%            Maximal formula depth :    6 (   3 avg)
+%            Number of types       :    2 (   0 usr)
+%            Number of type conns  :    4 (   4   >;   0   *;   0   +;   0  <<)
+%            Number of symbols     :    5 (   4 usr;   1 con; 0-2 aty)
+%            Number of variables   :    5 (   0   ^;   5   !;   0   ?;   5   :)
+% SPC      : TH0_THM_EQU_NAR
+
+% Comments : The first order proof is infeasibly long - f(5,5) is huge. It is
+%            a number that makes googolplex look tiny.  Practically impossible
+%            to solve using only first-order means. However, there exists a
+%            proof in higher-order logic that is very short but hard to find.
+%          : f(3,4) is 65536. Hard.
+%------------------------------------------------------------------------------
+thf(one,type,
+    one: $i ).
+
+thf(s,type,
+    s: $i > $i ).
+
+thf(f,type,
+    f: $i > $i > $i ).
+
+thf(d,type,
+    d: $i > $o ).
+
+thf(ax1,axiom,
+    ! [N: $i] :
+      ( ( f @ N @ one )
+      = ( s @ one ) ) ).
+
+thf(ax2,axiom,
+    ! [X: $i] :
+      ( ( f @ one @ ( s @ X ) )
+      = ( s @ ( s @ ( f @ one @ X ) ) ) ) ).
+
+thf(ax3,axiom,
+    ! [N: $i,X: $i] :
+      ( ( f @ ( s @ N ) @ ( s @ X ) )
+      = ( f @ N @ ( f @ ( s @ N ) @ X ) ) ) ).
+
+thf(ax4,axiom,
+    d @ one ).
+
+thf(ax5,axiom,
+    ! [X: $i] :
+      ( ( d @ X )
+     => ( d @ ( s @ X ) ) ) ).
+
+thf(conj,conjecture,
+    d @ ( f @ ( s @ ( s @ one ) ) @ ( s @ ( s @ ( s @ one ) ) ) ) ).
+
+%------------------------------------------------------------------------------

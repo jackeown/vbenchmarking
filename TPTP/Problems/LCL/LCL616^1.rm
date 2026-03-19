@@ -1,0 +1,28 @@
+%------------------------------------------------------------------------------
+% File     : LCL616^1 : TPTP v9.2.1. Removed v4.0.0.
+% Domain   : Logical Calculi
+% Problem  : Axiom T
+% Version  : [Ben08] axioms.
+% English  :
+
+% Refs     : [Fit07] Fitting (2007), Modal Proof Theory
+%          : [Ben08] Benzmueller (2008), Email to G. Sutcliffe
+% Source   : [Ben08]
+% Names    : Fitting-HB-6-T [Ben08]
+
+% Status   : CounterSatisfiable
+% Rating   : 1.00 v3.7.0
+% Syntax   : Number of formulae    :   36 (   2 unit;  20 type;  15 defn)
+%            Number of atoms       :  223 (  15 equality;  43 variable)
+%            Maximal formula depth :    9 (   5 average)
+%            Number of connectives :   40 (   3   ~;   1   |;   2   &;  33   @)
+%                                         (   0 <=>;   1  =>;   0  <=;   0 <~>)
+%                                         (   0  ~|;   0  ~&;   0  !!;   0  ??)
+%            Number of type conns  :   82 (  82   >;   0   *;   0   +)
+%            Number of symbols     :   21 (  20   :;   0  :=)
+%            Number of variables   :   38 (   2 sgn;   6   !;   4   ?;  28   ^)
+%                                         (  38   :;   0  :=;   0  !>;   0  ?*)
+
+% Comments : THF0 syntax
+% Bugfixes : v4.0.0 - Removed because it's LCL593^1.
+%------------------------------------------------------------------------------

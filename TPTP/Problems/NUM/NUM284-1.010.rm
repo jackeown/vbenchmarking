@@ -1,0 +1,23 @@
+%--------------------------------------------------------------------------
+% File     : NUM284-1.010 : TPTP v9.2.1. Released v1.0.0.
+% Domain   : Number Theory
+% Problem  : Calculation of fibonacci numbers
+% Version  : [SETHEO] axioms : Biased.
+% English  : Compute the 10th Fibonacci number.
+
+% Refs     :
+% Source   : [SETHEO]
+% Names    : fib3.lop (Size 3) [SETHEO]
+%          : fib4.lop (Size 4) [SETHEO]
+%          : fib5.lop (Size 5) [SETHEO]
+%          : fib6.lop (Size 6) [SETHEO]
+%          : fib9.lop (Size 9) [SETHEO]
+
+% Status   : Unsatisfiable
+% Rating   : 0.00 v2.0.0
+% Syntax   :
+
+% Comments : Biased towards SETHEO.
+%          : tptp2X: -ftptp -s10 NUM284-1.g
+% Bugfixes : v2.1.0 - Replaced by a new SOTA size.
+%--------------------------------------------------------------------------

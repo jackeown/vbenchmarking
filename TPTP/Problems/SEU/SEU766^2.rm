@@ -1,0 +1,29 @@
+%------------------------------------------------------------------------------
+% File     : SEU766^2 : TPTP v9.2.1. Removed v4.0.0.
+% Domain   : Set Theory
+% Problem  : Typed Set Theory - First Wizard of Oz Examples - WoZ1 Problems
+% Version  : Especial > Reduced > Especial.
+% English  : (! A:i.! X:i.in X (powerset A) -> (! Y:i.in Y (powerset A) ->
+%            subset X (setminus A Y) -> subset Y (setminus A X)))
+
+% Refs     : [Bro08] Brown (2008), Email to G. Sutcliffe
+% Source   : [Bro08]
+% Names    : ZFC268l [Bro08]
+
+% Status   : Theorem
+% Rating   : 0.00 v3.7.0
+% Syntax   : Number of formulae    :   11 (   3 unit;   7 type;   3 defn)
+%            Number of atoms       :  108 (   3 equality;  41 variable)
+%            Maximal formula depth :   14 (   6 average)
+%            Number of connectives :   71 (   0   ~;   0   |;   0   &;  54   @)
+%                                         (   0 <=>;  17  =>;   0  <=;   0 <~>)
+%                                         (   0  ~|;   0  ~&;   0  !!;   0  ??)
+%            Number of type conns  :    7 (   7   >;   0   *;   0   +)
+%            Number of symbols     :    9 (   7   :;   0  :=)
+%            Number of variables   :   13 (   0 sgn;  13   !;   0   ?;   0   ^)
+%                                         (  13   :;   0  :=;   0  !>;   0  ?*)
+
+% Comments : http://mathgate.info/detsetitem.php?id=327
+%          : THF0 syntax
+% Bugfixes : v4.0.0 - Removed because it's SEU737^2.
+%------------------------------------------------------------------------------

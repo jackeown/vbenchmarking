@@ -1,0 +1,29 @@
+%------------------------------------------------------------------------------
+% File     : SEU087+1 : TPTP v9.2.1. Released v3.2.0.
+% Domain   : Set theory
+% Problem  : Finite sets, theorem 18
+% Version  : [Urb06] axioms : Especial.
+% English  :
+
+% Refs     : [Dar90] Darmochwal (1990), Finite Sets
+%          : [Urb06] Urban (2006), Email to G. Sutcliffe
+% Source   : [Urb06]
+% Names    : finset_1__t18_finset_1 [Urb06]
+
+% Status   : Unknown
+% Rating   : 1.00 v3.2.0
+% Syntax   : Number of formulae    :  110 (  19 unit)
+%            Number of atoms       :  390 (  40 equality)
+%            Maximal formula depth :   22 (   5 average)
+%            Number of connectives :  338 (  58 ~  ;   5  |; 168  &)
+%                                         (  17 <=>;  90 =>;   0 <=)
+%                                         (   0 <~>;   0 ~|;   0 ~&)
+%            Number of predicates  :   21 (   0 propositional; 1-2 arity)
+%            Number of functors    :   12 (   3 constant; 0-2 arity)
+%            Number of variables   :  196 (   2 singleton; 166 !;  30 ?)
+%            Maximal term depth    :    4 (   1 average)
+
+% Comments : Translated by MPTP 0.2 from the original problem in the Mizar
+%            library, www.mizar.org
+% Bugfixes : v3.4.0 - Renamed to SEU302+3
+%------------------------------------------------------------------------------

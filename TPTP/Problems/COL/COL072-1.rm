@@ -1,0 +1,21 @@
+%--------------------------------------------------------------------------
+% File     : COL072-1 : TPTP v9.2.1. Bugfixed v2.3.0.
+% Domain   : Combinatory Logic
+% Problem  : Strong fixed point for B and L
+% Version  : [WM88] (equality) axioms.
+% English  : The strong fixed point property holds for the set
+%            P consisting of the combinators B and L, where ((Bx)y)z =
+%            x(yz) and (Lx)y = x(yy).
+
+% Refs     : [WM88]  Wos & McCune (1988), Challenge Problems Focusing on Eq
+%          : [Wos93] Wos (1993), The Kernel Strategy and Its Use for the St
+% Source   : [Wos93]
+% Names    : Question 16 [Wos93]
+
+% Status   : Unknown
+% Rating   : 1.00 v2.0.0
+% Syntax   :
+
+% Comments :
+% Bugfixes : v2.3.0 - Removed. Duplicate of COL069-1.
+%--------------------------------------------------------------------------

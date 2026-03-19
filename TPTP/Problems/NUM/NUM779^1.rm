@@ -1,0 +1,32 @@
+%------------------------------------------------------------------------------
+% File     : NUM779^1 : TPTP v9.2.1. Bugfixed v5.1.0.
+% Domain   : Number Theory
+% Problem  : Landau theorem 75c
+% Version  : Especial.
+% English  : lessf (tf x z) (tf y u)
+
+% Refs     : [Lan30] Landau (1930), Grundlagen der Analysis
+%          : [vBJ79] van Benthem Jutting (1979), Checking Landau's "Grundla
+%          : [Bro09] Brown (2009), Email to Geoff Sutcliffe
+% Source   : [Bro09]
+% Names    : satz75c [Lan30]
+
+% Status   : Theorem
+%          : Without extensionality : Theorem
+% Rating   : 0.00 v3.7.0
+% Syntax   : Number of formulae    :   17 (   5 unit;  10 type;   0 defn)
+%            Number of atoms       :   74 (   0 equality;  20 variable)
+%            Maximal formula depth :   11 (   4 average)
+%            Number of connectives :   37 (   0   ~;   0   |;   0   &;  32   @)
+%                                         (   0 <=>;   5  =>;   0  <=;   0 <~>)
+%                                         (   0  ~|;   0  ~&;   0  !!;   0  ??)
+%            Number of type conns  :   10 (  10   >;   0   *;   0   +;   0  <<)
+%            Number of symbols     :   12 (  10   :;   0  :=)
+%            Number of variables   :   10 (   0 sgn;  10   !;   0   ?;   0   ^)
+%                                         (  10   :;   0  :=;   0  !>;   0  ?*)
+%                                         (   0  @-;   0  @+)
+% SPC      : THF_THM_NEQ
+
+% Comments : THF0 syntax
+% Bugfixes : v5.1.0 - Removed - duplicate of NUM795^1 
+%------------------------------------------------------------------------------

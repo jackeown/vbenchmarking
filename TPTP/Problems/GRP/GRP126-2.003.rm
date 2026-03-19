@@ -1,0 +1,26 @@
+%--------------------------------------------------------------------------
+% File     : GRP126-2.003 : TPTP v9.2.1. Bugfixed v2.1.0.
+% Domain   : Group Theory (Quasigroups)
+% Problem  : (a.b).(b.a) = b
+% Version  : [Sla93] axioms : Augmented.
+% English  : Generate the multiplication table for the specified quasi-
+%            group with 3 elements.
+
+% Refs     : [FSB93] Fujita et al. (1993), Automatic Generation of Some Res
+%          : [Sla93] Slaney (1993), Email to G. Sutcliffe
+%          : [SFS95] Slaney et al. (1995), Automated Reasoning and Exhausti
+% Source   : [TPTP]
+% Names    :
+
+% Status   : Unsatisfiable
+% Rating   : 0.00 v2.0.0
+% Syntax   :
+
+% Comments : [Sla93]'s axiomatization has been modified for this.
+%          : Substitution axioms are not needed, as any positive equality
+%            literals should resolve on negative ones directly.
+%          : Version 2 has simple isomorphism avoidance (as mentioned in
+%            [FSB93])
+%          : tptp2X: -ftptp -s3 GRP126-2.g
+% Bugfixes : v2.1.0 - Replaced by a new SOTA size.
+%--------------------------------------------------------------------------

@@ -1,0 +1,27 @@
+%--------------------------------------------------------------------------
+% File     : COL004-2 : TPTP v9.2.1. Bugfixed v2.3.0.
+% Domain   : Combinatory Logic
+% Problem  : Find combinator equivalent to U from S and K.
+% Version  : [WM88] (equality) axioms.
+%            Theorem formulation : The combination is provided and checked.
+% English  : Construct from S and K alone a combinator that behaves as the
+%            combinator U does, where ((Sx)y)z = (xz)(yz), (Kx)y = x,
+%            (Ux)y = y((xx)y).
+
+% Refs     : [WM88]  Wos & McCune (1988), Challenge Problems Focusing on Eq
+% Source   : [TPTP]
+% Names    :
+
+% Status   : Unknown
+% Rating   : 1.00 v2.0.0
+% Syntax   :
+
+% Comments :
+% Bugfixes : v2.3.0 - Removed. The combinator, as given in [WM88] is wrong.
+%            McCune says "Yes, there is a bug in that paper.  The combinator
+%            ((s((s(ks))k))((s(k(s((s((sk)k))((sk)k)))))k)) is wrong. It is
+%            not a typo error, so I can't correct it. I believe I could come
+%            up with a replacement, but I don't think it's worth anything
+%            for TPTP, because it will a trivial proof by rewriting (like
+%            COL004-3 is). I suggest just throwing out problem COL004-2.
+%--------------------------------------------------------------------------

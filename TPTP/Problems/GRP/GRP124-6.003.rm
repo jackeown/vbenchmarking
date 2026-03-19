@@ -1,0 +1,26 @@
+%--------------------------------------------------------------------------
+% File     : GRP124-6.003 : TPTP v9.2.1. Bugfixed v2.1.0.
+% Domain   : Group Theory (Quasigroups)
+% Problem  : (3,1,2) conjugate orthogonality
+% Version  : [Sla93] axioms.
+%            Theorem formulation : Uses a second group.
+% English  : If ab=xy and a*b = x*y then a=x and b=y, where c*a=b iff ab=c.
+%            Generate the multiplication table for the specified quasi-
+%            group with 3 elements.
+
+% Refs     : [FSB93] Fujita et al. (1993), Automatic Generation of Some Res
+%          : [Sla93] Slaney (1993), Email to G. Sutcliffe
+%          : [SFS95] Slaney et al. (1995), Automated Reasoning and Exhausti
+% Source   : [Sla93]
+% Names    : QG2a [Sla93]
+
+% Status   : Unsatisfiable
+% Rating   : 0.00 v2.0.0
+% Syntax   :
+
+% Comments : [Sla93]'s axiomatization has been modified for this.
+%          : Substitution axioms are not needed, as any positive equality
+%            literals should resolve on negative ones directly.
+%          : tptp2X: -ftptp -s3 GRP124-6.g
+% Bugfixes : v2.1.0 - Replaced by a new SOTA size.
+%--------------------------------------------------------------------------

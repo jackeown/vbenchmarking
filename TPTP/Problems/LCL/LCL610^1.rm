@@ -1,0 +1,27 @@
+%------------------------------------------------------------------------------
+% File     : LCL610^1 : TPTP v9.2.1. Removed v4.0.0.
+% Domain   : Logical Calculi
+% Problem  : LAMBDA^mm_1 validates the modal generalization rule
+% Version  : [BP09] axioms.
+% English  :
+
+% Refs     : [BP09]  Benzmueller & Paulson (2009), Exploring Properties of
+% Source   : [BP09]
+% Names    : NL_7 [BP09]
+
+% Status   : Theorem
+% Rating   : 0.33 v3.7.0
+% Syntax   : Number of formulae    :   36 (   2 unit;  20 type;  15 defn)
+%            Number of atoms       :  223 (  15 equality;  43 variable)
+%            Maximal formula depth :    9 (   5 average)
+%            Number of connectives :   40 (   3   ~;   1   |;   2   &;  32   @)
+%                                         (   0 <=>;   2  =>;   0  <=;   0 <~>)
+%                                         (   0  ~|;   0  ~&;   0  !!;   0  ??)
+%            Number of type conns  :   82 (  82   >;   0   *;   0   +)
+%            Number of symbols     :   21 (  20   :;   0  :=)
+%            Number of variables   :   38 (   2 sgn;   6   !;   4   ?;  28   ^)
+%                                         (  38   :;   0  :=;   0  !>;   0  ?*)
+
+% Comments : THF0 syntax
+% Bugfixes : v4.0.0 - Removed because it's LCL591^1.
+%------------------------------------------------------------------------------

@@ -1,0 +1,35 @@
+%------------------------------------------------------------------------------
+% File     : SEV077^5 : TPTP v9.2.1. Bugfixed v5.1.0.
+% Domain   : Set Theory (Relations)
+% Problem  : TPS problem THM401Z
+% Version  : Especial.
+% English  :
+
+% Refs     : [Bro09] Brown (2009), Email to Geoff Sutcliffe
+% Source   : [Bro09]
+% Names    : tps_0557 [Bro09]
+%          : THM401Z [TPS]
+
+% Status   : Theorem
+% Rating   : 0.00 v4.0.1, 0.33 v4.0.0
+% Syntax   : Number of formulae    :    2 (   1 unit;   1 type;   0 defn)
+%            Number of atoms       :   48 (   0 equality;  29 variable)
+%            Maximal formula depth :   13 (   8 average)
+%            Number of connectives :   28 (   0   ~;   0   |;   3   &;  19   @)
+%                                         (   0 <=>;   6  =>;   0  <=;   0 <~>)
+%                                         (   0  ~|;   0  ~&;   0  !!;   0  ??)
+%            Number of type conns  :    6 (   6   >;   0   *;   0   +;   0  <<)
+%            Number of symbols     :    3 (   1   :;   0  :=)
+%            Number of variables   :   12 (   0 sgn;  11   !;   1   ?;   0   ^)
+%                                         (  12   :;   0  :=;   0  !>;   0  ?*)
+%                                         (   0  @-;   0  @+)
+% SPC      : THF_THM_NEQ
+
+% Comments : This problem is from the TPS library. Copyright (c) 2009 The TPS
+%            project in the Department of Mathematical Sciences at Carnegie
+%            Mellon University. Distributed under the Creative Commons copyleft
+%            license: http://creativecommons.org/licenses/by-sa/3.0/
+%          : Polymorphic definitions expanded.
+%          : THF0 syntax
+% Bugfixes : v5.1.0 - Removed - duplicate of SEV076^5 
+%------------------------------------------------------------------------------

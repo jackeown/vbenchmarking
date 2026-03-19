@@ -1,0 +1,31 @@
+%------------------------------------------------------------------------------
+% File     : SEU542^2 : TPTP v9.2.1. Bugfixed v5.1.0.
+% Domain   : Set Theory
+% Problem  : Preliminary Notions - Negated Quantifiers
+% Version  : Especial > Reduced > Especial.
+% English  : (! A:i.! phi:i>o.~(? x:i.in x A & phi x) -> (! x:i.in x A ->
+%            ~(phi x)))
+
+% Refs     : [Bro08] Brown (2008), Email to G. Sutcliffe
+% Source   : [Bro08]
+% Names    : ZFC044l [Bro08]
+
+% Status   : Theorem
+% Rating   : 0.00 v3.7.0
+% Syntax   : Number of formulae    :    2 (   0 unit;   1 type;   0 defn)
+%            Number of atoms       :   18 (   0 equality;   8 variable)
+%            Maximal formula depth :    9 (   6 average)
+%            Number of connectives :   11 (   2   ~;   0   |;   1   &;   6   @)
+%                                         (   0 <=>;   2  =>;   0  <=;   0 <~>)
+%                                         (   0  ~|;   0  ~&;   0  !!;   0  ??)
+%            Number of type conns  :    3 (   3   >;   0   *;   0   +;   0  <<)
+%            Number of symbols     :    4 (   1   :;   0  :=)
+%            Number of variables   :    4 (   0 sgn;   3   !;   1   ?;   0   ^)
+%                                         (   4   :;   0  :=;   0  !>;   0  ?*)
+%                                         (   0  @-;   0  @+)
+% SPC      : THF_THM_NEQ
+
+% Comments : http://mathgate.info/detsetitem.php?id=118
+%          : THF0 syntax
+% Bugfixes : v5.1.0 - Removed - duplicate of SEU538^2
+%------------------------------------------------------------------------------

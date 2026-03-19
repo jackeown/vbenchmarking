@@ -1,0 +1,33 @@
+%------------------------------------------------------------------------------
+% File     : ITP014_2 : TPTP v9.2.1. Removed v8.0.0.
+% Domain   : Interactive Theorem Proving
+% Problem  : HOL4 set theory export of thm_2Ebitstring_2Eword__1comp__v2w.p, bushy mode
+% Version  : [BG+19] axioms.
+% English  :
+
+% Refs     : [BG+19] Brown et al. (2019), GRUNGE: A Grand Unified ATP Chall
+%          : [Gau19] Gauthier (2019), Email to Geoff Sutcliffe
+% Source   : [BG+19]
+% Names    : thm_2Ebitstring_2Eword__1comp__v2w.p [Gau19]
+%          : HL406501_2.p [TPAP]
+
+% Status   : Theorem
+% Rating   : 1.00 v7.5.0
+% Syntax   : Number of formulae    :  249 (  88 unit;  90 type)
+%            Number of atoms       :  507 ( 121 equality)
+%            Maximal formula depth :   37 (   4 average)
+%            Number of connectives :  398 (  50   ~;  38   |; 116   &)
+%                                         ( 101 <=>;  93  =>;   0  <=;   0 <~>)
+%                                         (   0  ~|;   0  ~&)
+%            Number of type conns  :   72 (  51   >;  21   *;   0   +;   0  <<)
+%            Number of predicates  :   15 (  12 propositional; 0-2 arity)
+%            Number of functors    :   86 (  34 constant; 0-2 arity)
+%            Number of variables   :  289 (   0 sgn; 289   !;   0   ?)
+%                                         ( 289   :;   0  !>;   0  ?*)
+%            Maximal term depth    :   10 (   3 average)
+% SPC      : TF0_THM_EQU_NAR
+
+% Comments :
+% Bugfixes : v7.5.0 - Bugfixes in axioms and export.
+%          : v8.0.0 - Removed due to type errors.
+%------------------------------------------------------------------------------

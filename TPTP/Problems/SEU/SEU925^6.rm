@@ -1,0 +1,37 @@
+%------------------------------------------------------------------------------
+% File     : SEU925^6 : TPTP v9.2.1. Removed v5.2.0.
+% Domain   : Set Theory
+% Problem  : TPS problem THM104
+% Version  : Especial.
+% English  : Unitset is injective. Example from [And89].
+
+% Refs     : [And89] Andrews (1989), On Connections and Higher-Order Logic
+%          : [Bro09] Brown (2009), Email to Geoff Sutcliffe
+% Source   : [Bro09]
+% Names    : tps_0341 [Bro09]
+%          : THM104 [TPS]
+
+% Status   : Theorem
+% Rating   : 0.20 v5.1.0
+% Syntax   : Number of formulae    :    2 (   1 unit;   1 type;   0 defn)
+%            Number of atoms       :   15 (   4 equality;   6 variable)
+%            Maximal formula depth :    7 (   4 average)
+%            Number of connectives :    1 (   0   ~;   0   |;   0   &;   0   @)
+%                                         (   0 <=>;   1  =>;   0  <=;   0 <~>)
+%                                         (   0  ~|;   0  ~&;   0  !!;   0  ??)
+%            Number of type conns  :    0 (   0   >;   0   *;   0   +;   0  <<)
+%            Number of symbols     :    2 (   1   :;   0  :=)
+%            Number of variables   :    4 (   0 sgn;   2   !;   0   ?;   2   ^)
+%                                         (   4   :;   0  :=;   0  !>;   0  ?*)
+%                                         (   0  @-;   0  @+)
+% SPC      : THF_THM_EQU
+
+% Comments : This problem is from the TPS library. Copyright (c) 2009 The TPS
+%            project in the Department of Mathematical Sciences at Carnegie
+%            Mellon University. Distributed under the Creative Commons copyleft
+%            license: http://creativecommons.org/licenses/by-sa/3.0/
+%          : Polymorphic definitions expanded.
+%          : THF0 syntax
+%          : Renamed from SEV395^5 
+% Bugfixes : v5.2.0 - Removed, duplicate of SEU925^5
+%------------------------------------------------------------------------------

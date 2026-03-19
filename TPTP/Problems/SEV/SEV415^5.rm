@@ -1,0 +1,33 @@
+%------------------------------------------------------------------------------
+% File     : SEV415^5 : TPTP v9.2.1. Bugfixed v5.1.0.
+% Domain   : Set Theory
+% Problem  : TPS problem from SETS-THMS
+% Version  : Especial.
+% English  :
+
+% Refs     : [Bro09] Brown (2009), Email to Geoff Sutcliffe
+% Source   : [Bro09]
+% Names    : tps_0870 [Bro09]
+
+% Status   : Theorem
+% Rating   : 0.75 v4.1.0, 0.67 v4.0.0
+% Syntax   : Number of formulae    :    3 (   1 unit;   2 type;   0 defn)
+%            Number of atoms       :   28 (   0 equality;  14 variable)
+%            Maximal formula depth :   11 (   5 average)
+%            Number of connectives :   17 (   0   ~;   0   |;   3   &;  10   @)
+%                                         (   0 <=>;   4  =>;   0  <=;   0 <~>)
+%                                         (   0  ~|;   0  ~&;   0  !!;   0  ??)
+%            Number of type conns  :    3 (   3   >;   0   *;   0   +;   0  <<)
+%            Number of symbols     :    4 (   2   :;   0  :=)
+%            Number of variables   :    5 (   0 sgn;   4   !;   1   ?;   0   ^)
+%                                         (   5   :;   0  :=;   0  !>;   0  ?*)
+%                                         (   0  @-;   0  @+)
+% SPC      : THF_THM_NEQ
+
+% Comments : This problem is from the TPS library. Copyright (c) 2009 The TPS
+%            project in the Department of Mathematical Sciences at Carnegie
+%            Mellon University. Distributed under the Creative Commons copyleft
+%            license: http://creativecommons.org/licenses/by-sa/3.0/
+%          : THF0 syntax
+% Bugfixes : v5.1.0 - Removed - duplicate of SEV414^5 
+%------------------------------------------------------------------------------

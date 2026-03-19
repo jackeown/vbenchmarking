@@ -1,0 +1,6636 @@
+%------------------------------------------------------------------------------
+% File     : ITP309_1 : TPTP v9.2.1. Released v8.0.0.
+% Domain   : Interactive Theorem Proving
+% Problem  : SMT-LIB Core_DOM DocumentMonad 00382_018924
+% Version  : [Des21] axioms.
+% English  :
+
+% Refs     : [Des21] Desharnais (2021), Email to Geoff Sutcliffe
+% Source   : [Des21]
+% Names    : Core_DOM-0022_DocumentMonad-prob_00382_018924 [Des21]
+
+% Status   : Theorem
+% Rating   : 0.25 v9.1.0, 0.30 v9.0.0, 0.22 v8.2.0, 0.30 v8.1.0
+% Syntax   : Number of formulae    : 1320 ( 191 unt; 585 typ;   0 def)
+%            Number of atoms       : 1979 ( 895 equ)
+%            Maximal formula atoms :   10 (   2 avg)
+%            Number of connectives : 1531 ( 287   ~;  37   |; 338   &)
+%                                         ( 341 <=>; 528  =>;   0  <=;   0 <~>)
+%            Maximal formula depth :   16 (   5 avg)
+%            Maximal term depth    :    6 (   1 avg)
+%            Number of types       :  151 ( 150 usr)
+%            Number of type conns  :  647 ( 344   >; 303   *;   0   +;   0  <<)
+%            Number of predicates  :   70 (  67 usr;   2 prp; 0-3 aty)
+%            Number of functors    :  368 ( 368 usr;  91 con; 0-3 aty)
+%            Number of variables   : 1768 (1715   !;  53   ?;1768   :)
+% SPC      : TF0_THM_EQU_NAR
+
+% Comments : Translated from SMT format using smttotptp 0.9.10. See
+%            https://bitbucket.org/peba123/smttotptp/src/master/
+%          : SMT-LIB AUFLIA logic
+%------------------------------------------------------------------------------
+%% Types:
+tff('C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_fun$',type,
+    'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_fun$': $tType ).
+
+tff('C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_bool_fun_fun$',type,
+    'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_bool_fun_fun$': $tType ).
+
+tff('C_a_b_j_option_RDocument_ext_RObject_ext_a_element_ptr_option_fun$',type,
+    'C_a_b_j_option_RDocument_ext_RObject_ext_a_element_ptr_option_fun$': $tType ).
+
+tff('A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun_fun$',type,
+    'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun_fun$': $tType ).
+
+tff('A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_bool_fun$',type,
+    'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_bool_fun$': $tType ).
+
+tff('D_document_ptr_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_c_a_b_j_option_RDocument_ext_RObject_ext_option_fun_fun$',type,
+    'D_document_ptr_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_c_a_b_j_option_RDocument_ext_RObject_ext_option_fun_fun$': $tType ).
+
+tff('C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_fun$',type,
+    'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_fun$': $tType ).
+
+tff('A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_a_element_ptr_fset_fun$',type,
+    'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_a_element_ptr_fset_fun$': $tType ).
+
+tff('A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_option_fun_fun$',type,
+    'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_option_fun_fun$': $tType ).
+
+tff('C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_c_a_b_j_option_RDocument_ext_RObject_ext_option_bool_fun_fun$',type,
+    'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_c_a_b_j_option_RDocument_ext_RObject_ext_option_bool_fun_fun$': $tType ).
+
+tff('A_element_ptr_a_element_ptr_option_fun$',type,
+    'A_element_ptr_a_element_ptr_option_fun$': $tType ).
+
+tff('A_element_ptr_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_prod$',type,
+    'A_element_ptr_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_prod$': $tType ).
+
+tff('Unit_RNode_ext_RObject_ext$',type,
+    'Unit_RNode_ext_RObject_ext$': $tType ).
+
+tff('C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum$',type,
+    'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum$': $tType ).
+
+tff('A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_fun$',type,
+    'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_fun$': $tType ).
+
+tff('C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$',type,
+    'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$': $tType ).
+
+tff('A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset_bool_fun$',type,
+    'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset_bool_fun$': $tType ).
+
+tff('C_a_b_j_option_RDocument_ext_RObject_ext$',type,
+    'C_a_b_j_option_RDocument_ext_RObject_ext$': $tType ).
+
+tff('A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_c_a_b_j_option_RDocument_ext_RObject_ext_option_fun$',type,
+    'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_c_a_b_j_option_RDocument_ext_RObject_ext_option_fun$': $tType ).
+
+tff('C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_a_element_ptr_option_fun$',type,
+    'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_a_element_ptr_option_fun$': $tType ).
+
+tff('A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_list_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_list_fun$',type,
+    'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_list_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_list_fun$': $tType ).
+
+tff('D_document_ptr_c_a_b_j_option_RDocument_ext_RObject_ext_option_fun$',type,
+    'D_document_ptr_c_a_b_j_option_RDocument_ext_RObject_ext_option_fun$': $tType ).
+
+tff('A_element_ptr_option_bool_fun$',type,
+    'A_element_ptr_option_bool_fun$': $tType ).
+
+tff('A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_b_character_data_ptr_fset_fun$',type,
+    'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_b_character_data_ptr_fset_fun$': $tType ).
+
+tff('H_option_RCharacterData_ext_RNode_ext_RObject_ext_bool_fun$',type,
+    'H_option_RCharacterData_ext_RNode_ext_RObject_ext_bool_fun$': $tType ).
+
+tff('C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$',type,
+    'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$': $tType ).
+
+tff('C_a_b_j_option_RDocument_ext_RObject_ext_c_a_b_j_option_RDocument_ext_RObject_ext_option_fun$',type,
+    'C_a_b_j_option_RDocument_ext_RObject_ext_c_a_b_j_option_RDocument_ext_RObject_ext_option_fun$': $tType ).
+
+tff('C_a_b_j_option_RDocument_ext_k_sum$',type,
+    'C_a_b_j_option_RDocument_ext_k_sum$': $tType ).
+
+tff('C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_option_bool_fun$',type,
+    'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_option_bool_fun$': $tType ).
+
+tff('D_document_ptr_bool_fun$',type,
+    'D_document_ptr_bool_fun$': $tType ).
+
+tff('B_character_data_ptr_option$',type,
+    'B_character_data_ptr_option$': $tType ).
+
+tff('A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset_fun$',type,
+    'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset_fun$': $tType ).
+
+tff('H_option_RCharacterData_ext_RNode_ext_RObject_ext_option_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_bool_fun_fun$',type,
+    'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_bool_fun_fun$': $tType ).
+
+tff('D_document_ptr_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_prod$',type,
+    'D_document_ptr_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_prod$': $tType ).
+
+tff('C_a_b_j_option_RDocument_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun$',type,
+    'C_a_b_j_option_RDocument_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun$': $tType ).
+
+tff('A_element_ptr_a_element_ptr_option_fun_a_element_ptr_option_fun$',type,
+    'A_element_ptr_a_element_ptr_option_fun_a_element_ptr_option_fun$': $tType ).
+
+tff('C_a_b_e_g_option_RElement_ext$',type,
+    'C_a_b_e_g_option_RElement_ext$': $tType ).
+
+tff('A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_RNode_ext_heap_bool_fun$',type,
+    'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_RNode_ext_heap_bool_fun$': $tType ).
+
+tff('A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$',type,
+    'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$': $tType ).
+
+tff('C_a_b_j_option_RDocument_ext_RObject_ext_option_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_bool_fun_fun$',type,
+    'C_a_b_j_option_RDocument_ext_RObject_ext_option_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_bool_fun_fun$': $tType ).
+
+tff('B_character_data_ptr_bool_fun$',type,
+    'B_character_data_ptr_bool_fun$': $tType ).
+
+tff('C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_bool_fun$',type,
+    'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_bool_fun$': $tType ).
+
+tff('H_option_RCharacterData_ext_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_fun$',type,
+    'H_option_RCharacterData_ext_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_fun$': $tType ).
+
+tff('A_element_ptr_bool_fun$',type,
+    'A_element_ptr_bool_fun$': $tType ).
+
+tff('C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_bool_fun$',type,
+    'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_bool_fun$': $tType ).
+
+tff('A_element_ptr_fset$',type,
+    'A_element_ptr_fset$': $tType ).
+
+tff('H_option_RCharacterData_ext_RNode_ext_RObject_ext_option_bool_fun$',type,
+    'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option_bool_fun$': $tType ).
+
+tff('A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_option_fun$',type,
+    'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_option_fun$': $tType ).
+
+tff('A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_option$',type,
+    'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_option$': $tType ).
+
+tff('C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_option_fun$',type,
+    'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_option_fun$': $tType ).
+
+tff('C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_fun_fun$',type,
+    'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_fun_fun$': $tType ).
+
+tff('H_option_RCharacterData_ext_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun$',type,
+    'H_option_RCharacterData_ext_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun$': $tType ).
+
+tff('D_document_ptr$',type,
+    'D_document_ptr$': $tType ).
+
+tff('H_option_RCharacterData_ext_RNode_ext_RObject_ext_c_a_b_j_option_RDocument_ext_RObject_ext_option_fun$',type,
+    'H_option_RCharacterData_ext_RNode_ext_RObject_ext_c_a_b_j_option_RDocument_ext_RObject_ext_option_fun$': $tType ).
+
+tff('C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun$',type,
+    'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun$': $tType ).
+
+tff('H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$',type,
+    'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$': $tType ).
+
+tff('A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_RNode_ext_heap$',type,
+    'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_RNode_ext_heap$': $tType ).
+
+tff('A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$',type,
+    'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$': $tType ).
+
+tff('A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_option_fun_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_option_fun$',type,
+    'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_option_fun_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_option_fun$': $tType ).
+
+tff('B_character_data_ptr_fset$',type,
+    'B_character_data_ptr_fset$': $tType ).
+
+tff('C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$',type,
+    'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$': $tType ).
+
+tff('A_element_ptr_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun$',type,
+    'A_element_ptr_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun$': $tType ).
+
+tff('A_element_ptr$',type,
+    'A_element_ptr$': $tType ).
+
+tff('C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_bool_fun$',type,
+    'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_bool_fun$': $tType ).
+
+tff('H_option_RCharacterData_ext_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_fun_fun$',type,
+    'H_option_RCharacterData_ext_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_fun_fun$': $tType ).
+
+tff('A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_j_option_RDocument_ext_heap_bool_fun$',type,
+    'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_j_option_RDocument_ext_heap_bool_fun$': $tType ).
+
+tff('C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun$',type,
+    'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun$': $tType ).
+
+tff('C_a_b_j_option_RDocument_ext_RObject_ext_c_a_b_j_option_RDocument_ext_RObject_ext_option_fun_c_a_b_j_option_RDocument_ext_RObject_ext_option_fun$',type,
+    'C_a_b_j_option_RDocument_ext_RObject_ext_c_a_b_j_option_RDocument_ext_RObject_ext_option_fun_c_a_b_j_option_RDocument_ext_RObject_ext_option_fun$': $tType ).
+
+tff('H_option_RCharacterData_ext_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$',type,
+    'H_option_RCharacterData_ext_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$': $tType ).
+
+tff('H_option_RCharacterData_ext_i_sum_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun$',type,
+    'H_option_RCharacterData_ext_i_sum_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun$': $tType ).
+
+tff('C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_bool_fun$',type,
+    'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_bool_fun$': $tType ).
+
+tff('D_document_ptr_set$',type,
+    'D_document_ptr_set$': $tType ).
+
+tff('C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun$',type,
+    'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun$': $tType ).
+
+tff('A_element_ptr_set$',type,
+    'A_element_ptr_set$': $tType ).
+
+tff('C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_option_fun_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_option_fun$',type,
+    'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_option_fun_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_option_fun$': $tType ).
+
+tff('A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_j_option_RDocument_ext_heap$',type,
+    'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_j_option_RDocument_ext_heap$': $tType ).
+
+tff(tlbool,type,
+    tlbool: $tType ).
+
+tff('A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$',type,
+    'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$': $tType ).
+
+tff('C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$',type,
+    'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$': $tType ).
+
+tff('B_character_data_ptr_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_prod$',type,
+    'B_character_data_ptr_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_prod$': $tType ).
+
+tff('H_option_RCharacterData_ext_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun$',type,
+    'H_option_RCharacterData_ext_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun$': $tType ).
+
+tff('B_character_data_ptr$',type,
+    'B_character_data_ptr$': $tType ).
+
+tff('C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$',type,
+    'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$': $tType ).
+
+tff('C_a_b_j_option_RDocument_ext_RObject_ext_option$',type,
+    'C_a_b_j_option_RDocument_ext_RObject_ext_option$': $tType ).
+
+tff('A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$',type,
+    'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$': $tType ).
+
+tff('A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_option_fun$',type,
+    'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_option_fun$': $tType ).
+
+tff('A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_option_bool_fun$',type,
+    'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_option_bool_fun$': $tType ).
+
+tff('H_option_RCharacterData_ext_RNode_ext_RObject_ext_option_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_bool_fun_fun$',type,
+    'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_bool_fun_fun$': $tType ).
+
+tff('C_a_b_e_g_option_RElement_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun$',type,
+    'C_a_b_e_g_option_RElement_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun$': $tType ).
+
+tff('C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_fun_fun$',type,
+    'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_fun_fun$': $tType ).
+
+tff('A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_list$',type,
+    'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_list$': $tType ).
+
+tff('C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_bool_fun_fun$',type,
+    'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_bool_fun_fun$': $tType ).
+
+tff('C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_c_a_b_j_option_RDocument_ext_RObject_ext_option_fun$',type,
+    'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_c_a_b_j_option_RDocument_ext_RObject_ext_option_fun$': $tType ).
+
+tff('C_a_b_j_option_RDocument_ext_RObject_ext_option_c_a_b_j_option_RDocument_ext_RObject_ext_option_bool_fun_fun$',type,
+    'C_a_b_j_option_RDocument_ext_RObject_ext_option_c_a_b_j_option_RDocument_ext_RObject_ext_option_bool_fun_fun$': $tType ).
+
+tff('C_a_b_j_option_RDocument_ext_RObject_ext_c_a_b_j_option_RDocument_ext_RObject_ext_c_a_b_j_option_RDocument_ext_RObject_ext_fun_fun$',type,
+    'C_a_b_j_option_RDocument_ext_RObject_ext_c_a_b_j_option_RDocument_ext_RObject_ext_c_a_b_j_option_RDocument_ext_RObject_ext_fun_fun$': $tType ).
+
+tff('A_element_ptr_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun_fun$',type,
+    'A_element_ptr_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun_fun$': $tType ).
+
+tff('A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_heap$',type,
+    'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_heap$': $tType ).
+
+tff('C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_bool_fun_fun$',type,
+    'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_bool_fun_fun$': $tType ).
+
+tff('A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun$',type,
+    'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun$': $tType ).
+
+tff('C_a_b_j_option_RDocument_ext_RObject_ext_bool_fun$',type,
+    'C_a_b_j_option_RDocument_ext_RObject_ext_bool_fun$': $tType ).
+
+tff('A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset_bool_fun_fun$',type,
+    'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset_bool_fun_fun$': $tType ).
+
+tff('A_element_ptr_option$',type,
+    'A_element_ptr_option$': $tType ).
+
+tff('D_document_ptr_a_element_ptr_option_fun$',type,
+    'D_document_ptr_a_element_ptr_option_fun$': $tType ).
+
+tff('H_option_RCharacterData_ext_i_sum$',type,
+    'H_option_RCharacterData_ext_i_sum$': $tType ).
+
+tff('Unit_RObject_ext$',type,
+    'Unit_RObject_ext$': $tType ).
+
+tff('C_a_b_j_option_RDocument_ext_RObject_ext_option_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_bool_fun_fun$',type,
+    'C_a_b_j_option_RDocument_ext_RObject_ext_option_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_bool_fun_fun$': $tType ).
+
+tff('A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_h_option_RCharacterData_ext_RNode_ext_heap_bool_fun$',type,
+    'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_h_option_RCharacterData_ext_RNode_ext_heap_bool_fun$': $tType ).
+
+tff('C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum$',type,
+    'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum$': $tType ).
+
+tff('C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$',type,
+    'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$': $tType ).
+
+tff('A_element_ptr_c_a_b_j_option_RDocument_ext_RObject_ext_option_fun$',type,
+    'A_element_ptr_c_a_b_j_option_RDocument_ext_RObject_ext_option_fun$': $tType ).
+
+tff('Bool_bool_fun$',type,
+    'Bool_bool_fun$': $tType ).
+
+tff('B_character_data_ptr_set$',type,
+    'B_character_data_ptr_set$': $tType ).
+
+tff('C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$',type,
+    'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$': $tType ).
+
+tff('C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_c_a_b_j_option_RDocument_ext_RObject_ext_option_fun$',type,
+    'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_c_a_b_j_option_RDocument_ext_RObject_ext_option_fun$': $tType ).
+
+tff('C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_option$',type,
+    'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_option$': $tType ).
+
+tff('C_a_b_j_option_RDocument_ext_k_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun$',type,
+    'C_a_b_j_option_RDocument_ext_k_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun$': $tType ).
+
+tff('H_option_RCharacterData_ext_RNode_ext_RObject_ext$',type,
+    'H_option_RCharacterData_ext_RNode_ext_RObject_ext$': $tType ).
+
+tff('A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_fmap$',type,
+    'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_fmap$': $tType ).
+
+tff('A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_d_document_ptr_fset_fun$',type,
+    'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_d_document_ptr_fset_fun$': $tType ).
+
+tff('H_option_RCharacterData_ext_RNode_ext_RObject_ext_option_c_a_b_j_option_RDocument_ext_RObject_ext_option_bool_fun_fun$',type,
+    'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option_c_a_b_j_option_RDocument_ext_RObject_ext_option_bool_fun_fun$': $tType ).
+
+tff('C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_bool_fun$',type,
+    'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_bool_fun$': $tType ).
+
+tff('C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun$',type,
+    'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun$': $tType ).
+
+tff('A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_a_element_ptr_option_fun$',type,
+    'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_a_element_ptr_option_fun$': $tType ).
+
+tff('C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun$',type,
+    'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun$': $tType ).
+
+tff('A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_h_option_RCharacterData_ext_RNode_ext_heap$',type,
+    'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_h_option_RCharacterData_ext_RNode_ext_heap$': $tType ).
+
+tff('C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun$',type,
+    'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun$': $tType ).
+
+tff('A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_b_character_data_ptr_option_fun$',type,
+    'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_b_character_data_ptr_option_fun$': $tType ).
+
+tff('A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$',type,
+    'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$': $tType ).
+
+tff('A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun$',type,
+    'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun$': $tType ).
+
+tff('A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_option$',type,
+    'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_option$': $tType ).
+
+tff('A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_bool_fun$',type,
+    'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_bool_fun$': $tType ).
+
+tff('A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr_set$',type,
+    'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr_set$': $tType ).
+
+tff('C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext$',type,
+    'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext$': $tType ).
+
+tff('B_character_data_ptr_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun_fun$',type,
+    'B_character_data_ptr_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun_fun$': $tType ).
+
+tff('C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun$',type,
+    'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun$': $tType ).
+
+tff('C_a_b_j_option_RDocument_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$',type,
+    'C_a_b_j_option_RDocument_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$': $tType ).
+
+tff('H_option_RCharacterData_ext_RNode_ext_RObject_ext_a_element_ptr_option_fun$',type,
+    'H_option_RCharacterData_ext_RNode_ext_RObject_ext_a_element_ptr_option_fun$': $tType ).
+
+tff('D_document_ptr_option$',type,
+    'D_document_ptr_option$': $tType ).
+
+tff('A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr_fset$',type,
+    'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr_fset$': $tType ).
+
+tff('A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_set$',type,
+    'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_set$': $tType ).
+
+tff('C_a_b_j_option_RDocument_ext_RObject_ext_option_bool_fun$',type,
+    'C_a_b_j_option_RDocument_ext_RObject_ext_option_bool_fun$': $tType ).
+
+tff('A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_heap_bool_fun$',type,
+    'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_heap_bool_fun$': $tType ).
+
+tff('H_option_RCharacterData_ext_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$',type,
+    'H_option_RCharacterData_ext_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$': $tType ).
+
+tff('C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$',type,
+    'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$': $tType ).
+
+tff('D_document_ptr_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$',type,
+    'D_document_ptr_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$': $tType ).
+
+tff('C_a_b_j_option_RDocument_ext_RObject_ext_c_a_b_j_option_RDocument_ext_RObject_ext_fun$',type,
+    'C_a_b_j_option_RDocument_ext_RObject_ext_c_a_b_j_option_RDocument_ext_RObject_ext_fun$': $tType ).
+
+tff('A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr_fset_fun$',type,
+    'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr_fset_fun$': $tType ).
+
+tff('A_element_ptr_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$',type,
+    'A_element_ptr_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$': $tType ).
+
+tff('D_document_ptr_fset$',type,
+    'D_document_ptr_fset$': $tType ).
+
+tff('C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun$',type,
+    'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun$': $tType ).
+
+%% Declarations:
+tff(def_14,type,
+    def_14: ( tlbool * 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_bool_fun$' * 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_option$' ) > tlbool ).
+
+tff('element_ptr_kinds$',type,
+    'element_ptr_kinds$': 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_a_element_ptr_fset_fun$' ).
+
+tff('cast_d_o_c_u_m_e_n_t_p_t_r_2_o_b_j_e_c_t_p_t_r$',type,
+    'cast_d_o_c_u_m_e_n_t_p_t_r_2_o_b_j_e_c_t_p_t_r$': 'D_document_ptr$' > 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$' ).
+
+tff('collect$a',type,
+    'collect$a': 'D_document_ptr_bool_fun$' > 'D_document_ptr_set$' ).
+
+tff('finsert$b',type,
+    'finsert$b': ( 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$' * 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$' ) > 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$' ).
+
+tff(def_3,type,
+    def_3: ( 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_bool_fun$' * 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$' ) > tlbool ).
+
+tff('fun_app$au',type,
+    'fun_app$au': ( 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset_fun$' * 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$' ) > 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$' ).
+
+tff('fset$d',type,
+    'fset$d': 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr_fset$' > 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr_set$' ).
+
+tff('fun_app$cn',type,
+    'fun_app$cn': ( 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_h_option_RCharacterData_ext_RNode_ext_heap_bool_fun$' * 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_h_option_RCharacterData_ext_RNode_ext_heap$' ) > $o ).
+
+tff(def_24,type,
+    def_24: ( tlbool * 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_bool_fun$' * 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_option$' ) > tlbool ).
+
+tff('some$d',type,
+    'some$d': 'A_element_ptr_a_element_ptr_option_fun$' ).
+
+tff('bot$',type,
+    'bot$': 'A_element_ptr_fset$' ).
+
+tff('less_eq$h',type,
+    'less_eq$h': ( 'B_character_data_ptr_bool_fun$' * 'B_character_data_ptr_bool_fun$' ) > $o ).
+
+tff('uve$',type,
+    'uve$': 'A_element_ptr_bool_fun$' ).
+
+tff('less_eq$f',type,
+    'less_eq$f': ( 'A_element_ptr_fset$' * 'A_element_ptr_fset$' ) > $o ).
+
+tff('the$h',type,
+    'the$h': 'B_character_data_ptr_option$' > 'B_character_data_ptr$' ).
+
+tff('fun_app$s',type,
+    'fun_app$s': ( 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun$' * 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$' ) > 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$' ).
+
+tff('type_wf$f',type,
+    'type_wf$f': 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_h_option_RCharacterData_ext_RNode_ext_heap_bool_fun$' ).
+
+tff('object_ptr_kinds$',type,
+    'object_ptr_kinds$': 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr_fset_fun$' ).
+
+tff('type_wf$d',type,
+    'type_wf$d': 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_bool_fun$' ).
+
+tff('fun_app$ad',type,
+    'fun_app$ad': ( 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_fun_fun$' * 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$' ) > 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_fun$' ).
+
+tff('get_O_b_j_e_c_t$b',type,
+    'get_O_b_j_e_c_t$b': ( 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$' * 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_h_option_RCharacterData_ext_RNode_ext_heap$' ) > 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$' ).
+
+tff('bot$a',type,
+    'bot$a': 'B_character_data_ptr_fset$' ).
+
+tff('fun_app$bx',type,
+    'fun_app$bx': ( 'C_a_b_j_option_RDocument_ext_RObject_ext_option_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_bool_fun_fun$' * 'C_a_b_j_option_RDocument_ext_RObject_ext_option$' ) > 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_bool_fun$' ).
+
+tff('fun_app$b',type,
+    'fun_app$b': ( 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_a_element_ptr_option_fun$' * 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$' ) > 'A_element_ptr_option$' ).
+
+tff('uvi$',type,
+    'uvi$': 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_bool_fun$' ).
+
+tff('none$e',type,
+    'none$e': 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_option$' ).
+
+tff('bind$ab',type,
+    'bind$ab': ( 'D_document_ptr_option$' * 'D_document_ptr_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$' ) > 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$' ).
+
+tff('fun_app$bb',type,
+    'fun_app$bb': ( 'A_element_ptr_a_element_ptr_option_fun_a_element_ptr_option_fun$' * 'A_element_ptr_a_element_ptr_option_fun$' ) > 'A_element_ptr_option$' ).
+
+tff('fun_app$ao',type,
+    'fun_app$ao': ( 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_d_document_ptr_fset_fun$' * 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$' ) > 'D_document_ptr_fset$' ).
+
+tff('case_option$d',type,
+    'case_option$d': ( 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$' * 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun$' * 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$' ) > 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$' ).
+
+tff('get_D_o_c_u_m_e_n_t$',type,
+    'get_D_o_c_u_m_e_n_t$': 'D_document_ptr_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_c_a_b_j_option_RDocument_ext_RObject_ext_option_fun_fun$' ).
+
+tff('fmember$',type,
+    'fmember$': 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$' > 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset_bool_fun$' ).
+
+tff('fun_app$q',type,
+    'fun_app$q': ( 'C_a_b_j_option_RDocument_ext_RObject_ext_c_a_b_j_option_RDocument_ext_RObject_ext_option_fun_c_a_b_j_option_RDocument_ext_RObject_ext_option_fun$' * 'C_a_b_j_option_RDocument_ext_RObject_ext_c_a_b_j_option_RDocument_ext_RObject_ext_option_fun$' ) > 'C_a_b_j_option_RDocument_ext_RObject_ext_option$' ).
+
+tff('fun_app$m',type,
+    'fun_app$m': ( 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$' * 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$' ) > 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$' ).
+
+tff('fun_app$x',type,
+    'fun_app$x': ( 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_bool_fun$' * 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$' ) > $o ).
+
+tff('l_get_D_o_c_u_m_e_n_t_lemmas$',type,
+    'l_get_D_o_c_u_m_e_n_t_lemmas$': 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_bool_fun$' > $o ).
+
+tff('fun_app$cp',type,
+    'fun_app$cp': ( 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_heap_bool_fun$' * 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_heap$' ) > $o ).
+
+tff('less_eq$c',type,
+    'less_eq$c': ( 'D_document_ptr_fset$' * 'D_document_ptr_fset$' ) > $o ).
+
+tff('get_O_b_j_e_c_t$',type,
+    'get_O_b_j_e_c_t$': 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_option_fun_fun$' ).
+
+tff('sup$c',type,
+    'sup$c': ( 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr_fset$' * 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr_fset$' ) > 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr_fset$' ).
+
+tff('l_get_O_b_j_e_c_t_lemmas$c',type,
+    'l_get_O_b_j_e_c_t_lemmas$c': 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_heap_bool_fun$' > $o ).
+
+tff(def_7,type,
+    def_7: ( 'Bool_bool_fun$' * tlbool ) > tlbool ).
+
+tff('l_put_M$',type,
+    'l_put_M$': ( 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_bool_fun$' * 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_d_document_ptr_fset_fun$' * 'D_document_ptr_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_c_a_b_j_option_RDocument_ext_RObject_ext_option_fun_fun$' ) > $o ).
+
+tff('uvy$',type,
+    'uvy$': ( 'A_element_ptr_set$' * 'A_element_ptr_bool_fun$' ) > 'A_element_ptr_bool_fun$' ).
+
+tff('cast_n_o_d_e_p_t_r_2_o_b_j_e_c_t_p_t_r$',type,
+    'cast_n_o_d_e_p_t_r_2_o_b_j_e_c_t_p_t_r$': 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$' > 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$' ).
+
+tff('fun_app$bw',type,
+    'fun_app$bw': ( 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_bool_fun_fun$' * 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$' ) > 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option_bool_fun$' ).
+
+tff('fmember$b',type,
+    'fmember$b': ( 'B_character_data_ptr$' * 'B_character_data_ptr_fset$' ) > $o ).
+
+tff('the$g',type,
+    'the$g': 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$' > 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$' ).
+
+tff('case_option$m',type,
+    'case_option$m': ( 'A_element_ptr_option$' * 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_a_element_ptr_option_fun$' * 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_option$' ) > 'A_element_ptr_option$' ).
+
+tff('uun$',type,
+    'uun$': 'A_element_ptr_set$' > 'A_element_ptr_bool_fun$' ).
+
+tff('bind$k',type,
+    'bind$k': ( 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_option$' * 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun$' ) > 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$' ).
+
+tff('less_eq$i',type,
+    'less_eq$i': ( 'D_document_ptr_bool_fun$' * 'D_document_ptr_bool_fun$' ) > $o ).
+
+tff('some$a',type,
+    'some$a': 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun$' ).
+
+tff('uvf$',type,
+    'uvf$': 'C_a_b_j_option_RDocument_ext_RObject_ext_bool_fun$' ).
+
+tff('l_get_M$b',type,
+    'l_get_M$b': ( 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun_fun$' * 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_bool_fun$' * 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset_fun$' ) > $o ).
+
+tff('fun_app$p',type,
+    'fun_app$p': ( 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_c_a_b_j_option_RDocument_ext_RObject_ext_option_fun$' * 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$' ) > 'C_a_b_j_option_RDocument_ext_RObject_ext_option$' ).
+
+tff('is_element_ptr_e_l_e_m_e_n_t_p_t_r$',type,
+    'is_element_ptr_e_l_e_m_e_n_t_p_t_r$': 'A_element_ptr_bool_fun$' ).
+
+tff('fun_app$bg',type,
+    'fun_app$bg': ( 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$' * 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$' ) > 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$' ).
+
+tff('bind$h',type,
+    'bind$h': 'C_a_b_j_option_RDocument_ext_RObject_ext_option$' > 'C_a_b_j_option_RDocument_ext_RObject_ext_c_a_b_j_option_RDocument_ext_RObject_ext_option_fun_c_a_b_j_option_RDocument_ext_RObject_ext_option_fun$' ).
+
+tff('object_ptr_kinds$d',type,
+    'object_ptr_kinds$d': 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_heap$' > 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr_fset$' ).
+
+tff('fun_app$al',type,
+    'fun_app$al': ( 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_b_character_data_ptr_fset_fun$' * 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$' ) > 'B_character_data_ptr_fset$' ).
+
+tff('fun_app$bl',type,
+    'fun_app$bl': ( 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr_fset_fun$' * 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$' ) > 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr_fset$' ).
+
+tff('case_option$j',type,
+    'case_option$j': ( tlbool * 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_bool_fun$' ) > 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_option_bool_fun$' ).
+
+tff('uvx$',type,
+    'uvx$': ( 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_set$' * 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_bool_fun$' ) > 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_bool_fun$' ).
+
+tff('object_ptr_kinds$b',type,
+    'object_ptr_kinds$b': 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_h_option_RCharacterData_ext_RNode_ext_heap$' > 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr_fset$' ).
+
+tff('case_option$f',type,
+    'case_option$f': ( tlbool * 'C_a_b_j_option_RDocument_ext_RObject_ext_bool_fun$' ) > 'C_a_b_j_option_RDocument_ext_RObject_ext_option_bool_fun$' ).
+
+tff(def_22,type,
+    def_22: ( tlbool * 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_bool_fun$' * 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$' ) > tlbool ).
+
+tff('fun_app$ct',type,
+    'fun_app$ct': ( 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_b_character_data_ptr_option_fun$' * 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$' ) > 'B_character_data_ptr_option$' ).
+
+tff('finsert$d',type,
+    'finsert$d': ( 'D_document_ptr$' * 'D_document_ptr_fset$' ) > 'D_document_ptr_fset$' ).
+
+tff('cast_n_o_d_e_p_t_r_2_c_h_a_r_a_c_t_e_r_d_a_t_a_p_t_r$',type,
+    'cast_n_o_d_e_p_t_r_2_c_h_a_r_a_c_t_e_r_d_a_t_a_p_t_r$': 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_b_character_data_ptr_option_fun$' ).
+
+tff('cast_n_o_d_e_p_t_r_2_e_l_e_m_e_n_t_p_t_r$',type,
+    'cast_n_o_d_e_p_t_r_2_e_l_e_m_e_n_t_p_t_r$': 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_a_element_ptr_option_fun$' ).
+
+tff('uvs$',type,
+    'uvs$': ( 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_fun_fun$' * 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$' ) > 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun$' ).
+
+tff('bind$w',type,
+    'bind$w': ( 'A_element_ptr_option$' * 'A_element_ptr_c_a_b_j_option_RDocument_ext_RObject_ext_option_fun$' ) > 'C_a_b_j_option_RDocument_ext_RObject_ext_option$' ).
+
+tff('bind$m',type,
+    'bind$m': 'A_element_ptr_option$' > 'A_element_ptr_a_element_ptr_option_fun_a_element_ptr_option_fun$' ).
+
+tff('fun_app$cu',type,
+    'fun_app$cu': ( 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset_bool_fun_fun$' * 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$' ) > 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset_bool_fun$' ).
+
+tff(def_28,type,
+    def_28: ( tlbool * 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_bool_fun$' * 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$' ) > tlbool ).
+
+tff('none$d',type,
+    'none$d': 'A_element_ptr_option$' ).
+
+tff(def_15,type,
+    def_15: ( 'Bool_bool_fun$' * tlbool ) > tlbool ).
+
+tff('uvg$',type,
+    'uvg$': 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_bool_fun$' ).
+
+tff('child_nodes$',type,
+    'child_nodes$': 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$' > 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_list$' ).
+
+tff('fun_app$ap',type,
+    'fun_app$ap': ( 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_c_a_b_j_option_RDocument_ext_RObject_ext_option_fun$' * 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$' ) > 'C_a_b_j_option_RDocument_ext_RObject_ext_option$' ).
+
+tff('the_elem$b',type,
+    'the_elem$b': 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_set$' > 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$' ).
+
+tff('uut$',type,
+    'uut$': ( 'Bool_bool_fun$' * 'C_a_b_j_option_RDocument_ext_RObject_ext_bool_fun$' ) > 'C_a_b_j_option_RDocument_ext_RObject_ext_bool_fun$' ).
+
+tff('less_eq$',type,
+    'less_eq$': 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset_bool_fun_fun$' ).
+
+tff('l_get_E_l_e_m_e_n_t_lemmas$',type,
+    'l_get_E_l_e_m_e_n_t_lemmas$': 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_bool_fun$' > $o ).
+
+tff('combine_options$b',type,
+    'combine_options$b': ( 'C_a_b_j_option_RDocument_ext_RObject_ext_c_a_b_j_option_RDocument_ext_RObject_ext_c_a_b_j_option_RDocument_ext_RObject_ext_fun_fun$' * 'C_a_b_j_option_RDocument_ext_RObject_ext_option$' * 'C_a_b_j_option_RDocument_ext_RObject_ext_option$' ) > 'C_a_b_j_option_RDocument_ext_RObject_ext_option$' ).
+
+tff('fset$c',type,
+    'fset$c': 'A_element_ptr_fset$' > 'A_element_ptr_set$' ).
+
+tff('put_E_l_e_m_e_n_t$',type,
+    'put_E_l_e_m_e_n_t$': ( 'A_element_ptr$' * 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$' ) > 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_fun$' ).
+
+tff('more$',type,
+    'more$': 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$' > 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum$' ).
+
+tff('l_put_M$b',type,
+    'l_put_M$b': ( 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_bool_fun$' * 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset_fun$' * 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun_fun$' ) > $o ).
+
+tff('fmember$c',type,
+    'fmember$c': ( 'D_document_ptr$' * 'D_document_ptr_fset$' ) > $o ).
+
+tff('is_document_ptr_kind$',type,
+    'is_document_ptr_kind$': 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$' > $o ).
+
+tff('fun_app$cg',type,
+    'fun_app$cg': ( 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_a_element_ptr_option_fun$' * 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$' ) > 'A_element_ptr_option$' ).
+
+tff('fmember$d',type,
+    'fmember$d': ( 'A_element_ptr$' * 'A_element_ptr_fset$' ) > $o ).
+
+tff('l_put_M$d',type,
+    'l_put_M$d': ( 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_bool_fun$' * 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr_fset_fun$' * 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_option_fun_fun$' ) > $o ).
+
+tff('less_eq$d',type,
+    'less_eq$d': ( 'D_document_ptr_set$' * 'D_document_ptr_set$' ) > $o ).
+
+tff('put_D_o_c_u_m_e_n_t$',type,
+    'put_D_o_c_u_m_e_n_t$': ( 'D_document_ptr$' * 'C_a_b_j_option_RDocument_ext_RObject_ext$' ) > 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_fun$' ).
+
+tff('fun_app$ak',type,
+    'fun_app$ak': ( 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun_fun$' * 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$' ) > 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun$' ).
+
+tff('cast_C_h_a_r_a_c_t_e_r_D_a_t_a_2_N_o_d_e$',type,
+    'cast_C_h_a_r_a_c_t_e_r_D_a_t_a_2_N_o_d_e$': 'H_option_RCharacterData_ext_RNode_ext_RObject_ext$' > 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$' ).
+
+tff(def_6,type,
+    def_6: ( tlbool * 'C_a_b_j_option_RDocument_ext_RObject_ext_bool_fun$' * 'C_a_b_j_option_RDocument_ext_RObject_ext_option$' ) > tlbool ).
+
+tff('bind$g',type,
+    'bind$g': ( 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$' * 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun$' ) > 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$' ).
+
+tff('put_O_b_j_e_c_t$',type,
+    'put_O_b_j_e_c_t$': ( 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$' * 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$' ) > 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_fun$' ).
+
+tff('combine_options$c',type,
+    'combine_options$c': ( 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_fun_fun$' * 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$' * 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$' ) > 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$' ).
+
+tff('fun_app$ay',type,
+    'fun_app$ay': ( 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_option_fun$' * 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$' ) > 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_option$' ).
+
+tff('is_character_data_kind_N_o_d_e$',type,
+    'is_character_data_kind_N_o_d_e$': 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_bool_fun$' ).
+
+tff('cast_D_o_c_u_m_e_n_t_2_O_b_j_e_c_t$',type,
+    'cast_D_o_c_u_m_e_n_t_2_O_b_j_e_c_t$': 'C_a_b_j_option_RDocument_ext_RObject_ext$' > 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$' ).
+
+tff('fthe_elem$b',type,
+    'fthe_elem$b': 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$' > 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$' ).
+
+tff('bind$f',type,
+    'bind$f': ( 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$' * 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$' ) > 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$' ).
+
+tff('fun_app$ch',type,
+    'fun_app$ch': ( 'A_element_ptr_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun$' * 'A_element_ptr$' ) > 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$' ).
+
+tff('fun_app$bz',type,
+    'fun_app$bz': ( 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_bool_fun_fun$' * 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$' ) > 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_bool_fun$' ).
+
+tff('some$i',type,
+    'some$i': 'B_character_data_ptr$' > 'B_character_data_ptr_option$' ).
+
+tff('cast_e_l_e_m_e_n_t_p_t_r_2_n_o_d_e_p_t_r$',type,
+    'cast_e_l_e_m_e_n_t_p_t_r_2_n_o_d_e_p_t_r$': 'A_element_ptr$' > 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$' ).
+
+tff('fun_app$aw',type,
+    'fun_app$aw': ( 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset_bool_fun$' * 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$' ) > $o ).
+
+tff('fun_app$bj',type,
+    'fun_app$bj': ( 'C_a_b_j_option_RDocument_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun$' * 'C_a_b_j_option_RDocument_ext_RObject_ext$' ) > 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$' ).
+
+tff('fun_app$bk',type,
+    'fun_app$bk': ( 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun$' * 'H_option_RCharacterData_ext_RNode_ext_RObject_ext$' ) > 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$' ).
+
+tff('uvr$',type,
+    'uvr$': ( 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_fun_fun$' * 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$' ) > 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun$' ).
+
+tff('combine_options$a',type,
+    'combine_options$a': ( 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_fun_fun$' * 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$' * 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$' ) > 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$' ).
+
+tff('truncate$a',type,
+    'truncate$a': 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$' > 'Unit_RNode_ext_RObject_ext$' ).
+
+tff('fun_app$aj',type,
+    'fun_app$aj': ( 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun$' * 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$' ) > 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$' ).
+
+tff('cast_O_b_j_e_c_t_2_N_o_d_e$',type,
+    'cast_O_b_j_e_c_t_2_N_o_d_e$': 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun$' ).
+
+tff('member$c',type,
+    'member$c': ( 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$' * 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_set$' ) > $o ).
+
+tff('is_element_kind_N_o_d_e$',type,
+    'is_element_kind_N_o_d_e$': 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_bool_fun$' ).
+
+tff('fmember$a',type,
+    'fmember$a': ( 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$' * 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr_fset$' ) > $o ).
+
+tff('a_type_wf$a',type,
+    'a_type_wf$a': 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_bool_fun$' ).
+
+tff('less_eq$k',type,
+    'less_eq$k': ( 'A_element_ptr_bool_fun$' * 'A_element_ptr_bool_fun$' ) > $o ).
+
+tff('fun_app$z',type,
+    'fun_app$z': ( 'C_a_b_j_option_RDocument_ext_RObject_ext_c_a_b_j_option_RDocument_ext_RObject_ext_c_a_b_j_option_RDocument_ext_RObject_ext_fun_fun$' * 'C_a_b_j_option_RDocument_ext_RObject_ext$' ) > 'C_a_b_j_option_RDocument_ext_RObject_ext_c_a_b_j_option_RDocument_ext_RObject_ext_fun$' ).
+
+tff('less_eq$b',type,
+    'less_eq$b': ( 'B_character_data_ptr_set$' * 'B_character_data_ptr_set$' ) > $o ).
+
+tff(def_34,type,
+    def_34: ( tlbool * 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_bool_fun$' * 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_option$' ) > tlbool ).
+
+tff('some$g',type,
+    'some$g': 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$' > 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_option$' ).
+
+tff('uu$',type,
+    'uu$': 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_list_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_list_fun$' ).
+
+tff('case_option$e',type,
+    'case_option$e': ( 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$' * 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun$' * 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$' ) > 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$' ).
+
+tff('less_eq$e',type,
+    'less_eq$e': ( 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_set$' * 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_set$' ) > $o ).
+
+tff('uuh$',type,
+    'uuh$': ( 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun$' * 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun$' ) > 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun$' ).
+
+tff('fun_app$a',type,
+    'fun_app$a': ( 'A_element_ptr_option_bool_fun$' * 'A_element_ptr_option$' ) > $o ).
+
+tff('type_wf$a',type,
+    'type_wf$a': 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_bool_fun$' ).
+
+tff('fset$',type,
+    'fset$': 'B_character_data_ptr_fset$' > 'B_character_data_ptr_set$' ).
+
+tff('case_option$c',type,
+    'case_option$c': ( 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$' * 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$' * 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$' ) > 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$' ).
+
+tff('bind$ac',type,
+    'bind$ac': ( 'D_document_ptr_option$' * 'D_document_ptr_c_a_b_j_option_RDocument_ext_RObject_ext_option_fun$' ) > 'C_a_b_j_option_RDocument_ext_RObject_ext_option$' ).
+
+tff('uur$',type,
+    'uur$': 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun$' ).
+
+tff('the$f',type,
+    'the$f': 'C_a_b_j_option_RDocument_ext_RObject_ext_option$' > 'C_a_b_j_option_RDocument_ext_RObject_ext$' ).
+
+tff('sup$',type,
+    'sup$': ( 'A_element_ptr_fset$' * 'A_element_ptr_fset$' ) > 'A_element_ptr_fset$' ).
+
+tff('fun_app$aq',type,
+    'fun_app$aq': ( 'D_document_ptr_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_c_a_b_j_option_RDocument_ext_RObject_ext_option_fun_fun$' * 'D_document_ptr$' ) > 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_c_a_b_j_option_RDocument_ext_RObject_ext_option_fun$' ).
+
+tff('is_character_data_ptr_kind_n_o_d_e_p_t_r$',type,
+    'is_character_data_ptr_kind_n_o_d_e_p_t_r$': 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_bool_fun$' ).
+
+tff('uvc$',type,
+    'uvc$': 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_bool_fun$' ).
+
+tff('bind$r',type,
+    'bind$r': ( 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$' * 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_c_a_b_j_option_RDocument_ext_RObject_ext_option_fun$' ) > 'C_a_b_j_option_RDocument_ext_RObject_ext_option$' ).
+
+tff('fun_app$h',type,
+    'fun_app$h': ( 'C_a_b_e_g_option_RElement_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun$' * 'C_a_b_e_g_option_RElement_ext$' ) > 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$' ).
+
+tff('uud$',type,
+    'uud$': ( 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun$' * 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun$' ) > 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun$' ).
+
+tff('fun_app$ca',type,
+    'fun_app$ca': ( 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_bool_fun_fun$' * 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$' ) > 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option_bool_fun$' ).
+
+tff('member$d',type,
+    'member$d': ( 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$' * 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr_set$' ) > $o ).
+
+tff('fun_app$j',type,
+    'fun_app$j': ( 'C_a_b_j_option_RDocument_ext_RObject_ext_c_a_b_j_option_RDocument_ext_RObject_ext_option_fun$' * 'C_a_b_j_option_RDocument_ext_RObject_ext$' ) > 'C_a_b_j_option_RDocument_ext_RObject_ext_option$' ).
+
+tff('pair$',type,
+    'pair$': ( 'A_element_ptr$' * 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$' ) > 'A_element_ptr_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_prod$' ).
+
+tff('x$',type,
+    'x$': 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$' ).
+
+tff('fun_app$bn',type,
+    'fun_app$bn': ( 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option_bool_fun$' * 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$' ) > $o ).
+
+tff(def_10,type,
+    def_10: ( tlbool * 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_bool_fun$' * 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$' ) > tlbool ).
+
+tff(def_2,type,
+    def_2: ( 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_bool_fun$' * 'H_option_RCharacterData_ext_RNode_ext_RObject_ext$' ) > tlbool ).
+
+tff('member$a',type,
+    'member$a': ( 'D_document_ptr$' * 'D_document_ptr_set$' ) > $o ).
+
+tff('more$a',type,
+    'more$a': 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$' > 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum$' ).
+
+tff('child_nodes_update$',type,
+    'child_nodes_update$': ( 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_list_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_list_fun$' * 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$' ) > 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$' ).
+
+tff('uvz$',type,
+    'uvz$': 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$' > 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun$' ).
+
+tff('uuo$',type,
+    'uuo$': 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_c_a_b_j_option_RDocument_ext_RObject_ext_option_fun$' ).
+
+tff('fun_app$az',type,
+    'fun_app$az': ( 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_option_fun$' * 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$' ) > 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_option$' ).
+
+tff('uvv$',type,
+    'uvv$': ( 'B_character_data_ptr_set$' * 'B_character_data_ptr_bool_fun$' ) > 'B_character_data_ptr_bool_fun$' ).
+
+tff('a_type_wf$b',type,
+    'a_type_wf$b': 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_bool_fun$' ).
+
+tff('finsert$',type,
+    'finsert$': ( 'A_element_ptr$' * 'A_element_ptr_fset$' ) > 'A_element_ptr_fset$' ).
+
+tff('fun_app$y',type,
+    'fun_app$y': ( 'C_a_b_j_option_RDocument_ext_RObject_ext_c_a_b_j_option_RDocument_ext_RObject_ext_fun$' * 'C_a_b_j_option_RDocument_ext_RObject_ext$' ) > 'C_a_b_j_option_RDocument_ext_RObject_ext$' ).
+
+tff('l_get_M$d',type,
+    'l_get_M$d': ( 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_option_fun_fun$' * 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_bool_fun$' * 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr_fset_fun$' ) > $o ).
+
+tff('fun_app$t',type,
+    'fun_app$t': ( 'C_a_b_j_option_RDocument_ext_RObject_ext_bool_fun$' * 'C_a_b_j_option_RDocument_ext_RObject_ext$' ) > $o ).
+
+tff('fun_app$i',type,
+    'fun_app$i': ( 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun$' * 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$' ) > 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$' ).
+
+tff(def_5,type,
+    def_5: ( 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_bool_fun$' * 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$' ) > tlbool ).
+
+tff('l_get_O_b_j_e_c_t_lemmas$a',type,
+    'l_get_O_b_j_e_c_t_lemmas$a': 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_h_option_RCharacterData_ext_RNode_ext_heap_bool_fun$' > $o ).
+
+tff('fun_app$af',type,
+    'fun_app$af': ( 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_fun_fun$' * 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$' ) > 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_fun$' ).
+
+tff('fun_app$ba',type,
+    'fun_app$ba': ( 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun$' * 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun$' ) > 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$' ).
+
+tff('get_O_b_j_e_c_t$a',type,
+    'get_O_b_j_e_c_t$a': ( 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$' * 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_j_option_RDocument_ext_heap$' ) > 'C_a_b_j_option_RDocument_ext_RObject_ext_option$' ).
+
+tff('sup$a',type,
+    'sup$a': ( 'B_character_data_ptr_fset$' * 'B_character_data_ptr_fset$' ) > 'B_character_data_ptr_fset$' ).
+
+tff('uvj$',type,
+    'uvj$': 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_bool_fun$' ).
+
+tff('is_node_ptr_kind$',type,
+    'is_node_ptr_kind$': 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$' > $o ).
+
+tff('fun_app$bs',type,
+    'fun_app$bs': ( 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option_c_a_b_j_option_RDocument_ext_RObject_ext_option_bool_fun_fun$' * 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$' ) > 'C_a_b_j_option_RDocument_ext_RObject_ext_option_bool_fun$' ).
+
+tff('fun_app$bd',type,
+    'fun_app$bd': ( 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_option_fun_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_option_fun$' * 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_option_fun$' ) > 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_option$' ).
+
+tff('less_eq$j',type,
+    'less_eq$j': ( 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_bool_fun$' * 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_bool_fun$' ) > $o ).
+
+tff('fthe_elem$a',type,
+    'fthe_elem$a': 'D_document_ptr_fset$' > 'D_document_ptr$' ).
+
+tff('h$a',type,
+    'h$a': 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$' ).
+
+tff('fun_app$as',type,
+    'fun_app$as': ( 'A_element_ptr_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun_fun$' * 'A_element_ptr$' ) > 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun$' ).
+
+tff('the$d',type,
+    'the$d': 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$' > 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$' ).
+
+tff('fun_app$c',type,
+    'fun_app$c': ( 'B_character_data_ptr_bool_fun$' * 'B_character_data_ptr$' ) > $o ).
+
+tff(def_9,type,
+    def_9: ( 'Bool_bool_fun$' * tlbool ) > tlbool ).
+
+tff('collect$c',type,
+    'collect$c': 'A_element_ptr_bool_fun$' > 'A_element_ptr_set$' ).
+
+tff('uuz$',type,
+    'uuz$': 'C_a_b_j_option_RDocument_ext_RObject_ext_bool_fun$' ).
+
+tff('uub$',type,
+    'uub$': ( 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$' * 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun$' ) > 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun$' ).
+
+tff('cast_E_l_e_m_e_n_t_2_N_o_d_e$',type,
+    'cast_E_l_e_m_e_n_t_2_N_o_d_e$': 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$' > 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$' ).
+
+tff('fun_app$ag',type,
+    'fun_app$ag': ( 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_list_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_list_fun$' * 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_list$' ) > 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_list$' ).
+
+tff('some$f',type,
+    'some$f': 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_option_fun$' ).
+
+tff('none$',type,
+    'none$': 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$' ).
+
+tff(def_19,type,
+    def_19: ( 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_bool_fun$' * 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$' ) > tlbool ).
+
+tff('fun_app$ck',type,
+    'fun_app$ck': ( 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_option_fun$' * 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$' ) > 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_option$' ).
+
+tff(tltrue,type,
+    tltrue: tlbool ).
+
+tff('uuj$',type,
+    'uuj$': ( 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun$' * 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$' ) > 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$' ).
+
+tff('none$h',type,
+    'none$h': 'D_document_ptr_option$' ).
+
+tff('get_O_b_j_e_c_t$c',type,
+    'get_O_b_j_e_c_t$c': ( 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$' * 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_RNode_ext_heap$' ) > 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$' ).
+
+tff('case_option$k',type,
+    'case_option$k': ( tlbool * 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_bool_fun$' ) > 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_option_bool_fun$' ).
+
+tff('the$',type,
+    'the$': 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_option$' > 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$' ).
+
+tff('fun_app$bo',type,
+    'fun_app$bo': ( 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_bool_fun$' * 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$' ) > $o ).
+
+tff('bind$t',type,
+    'bind$t': ( 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$' * 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_a_element_ptr_option_fun$' ) > 'A_element_ptr_option$' ).
+
+tff('case_sum$a',type,
+    'case_sum$a': ( 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun$' * 'C_a_b_j_option_RDocument_ext_k_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun$' * 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum$' ) > 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$' ).
+
+tff(def_4,type,
+    def_4: ( 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_bool_fun$' * 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$' ) > tlbool ).
+
+tff('none$f',type,
+    'none$f': 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_option$' ).
+
+tff('uvo$',type,
+    'uvo$': ( 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_fun_fun$' * 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$' ) > 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$' ).
+
+tff('uuq$',type,
+    'uuq$': 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun$' ).
+
+tff('case_option$n',type,
+    'case_option$n': ( 'B_character_data_ptr_option$' * 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_b_character_data_ptr_option_fun$' * 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_option$' ) > 'B_character_data_ptr_option$' ).
+
+tff('fun_app$ac',type,
+    'fun_app$ac': ( 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_fun$' * 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$' ) > 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$' ).
+
+tff('fset$a',type,
+    'fset$a': 'D_document_ptr_fset$' > 'D_document_ptr_set$' ).
+
+tff('l_put_M$c',type,
+    'l_put_M$c': ( 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_bool_fun$' * 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_b_character_data_ptr_fset_fun$' * 'B_character_data_ptr_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun_fun$' ) > $o ).
+
+tff('case_sum$',type,
+    'case_sum$': ( 'C_a_b_e_g_option_RElement_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun$' * 'H_option_RCharacterData_ext_i_sum_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun$' * 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum$' ) > 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$' ).
+
+tff('delete_O_b_j_e_c_t$',type,
+    'delete_O_b_j_e_c_t$': ( 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$' * 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$' ) > 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_option$' ).
+
+tff('fun_app$cj',type,
+    'fun_app$cj': ( 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_bool_fun$' * 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$' ) > $o ).
+
+tff(def_33,type,
+    def_33: ( 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_bool_fun$' * 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$' ) > tlbool ).
+
+tff('bind$o',type,
+    'bind$o': 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_option$' > 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_option_fun_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_option_fun$' ).
+
+tff('fun_app$f',type,
+    'fun_app$f': ( 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun$' * 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext$' ) > 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$' ).
+
+tff('fun_app$bf',type,
+    'fun_app$bf': ( 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_c_a_b_j_option_RDocument_ext_RObject_ext_option_fun$' * 'H_option_RCharacterData_ext_RNode_ext_RObject_ext$' ) > 'C_a_b_j_option_RDocument_ext_RObject_ext_option$' ).
+
+tff('node_ptr$',type,
+    'node_ptr$': 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$' ).
+
+tff('uvb$',type,
+    'uvb$': 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_bool_fun$' ).
+
+tff('fun_app$bp',type,
+    'fun_app$bp': ( 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_bool_fun$' * 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$' ) > $o ).
+
+tff('fun_app$n',type,
+    'fun_app$n': ( 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun$' * 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$' ) > 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$' ).
+
+tff('case_option$',type,
+    'case_option$': ( tlbool * 'A_element_ptr_bool_fun$' ) > 'A_element_ptr_option_bool_fun$' ).
+
+tff('some$c',type,
+    'some$c': 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$' ).
+
+tff('bind$x',type,
+    'bind$x': ( 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$' * 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_a_element_ptr_option_fun$' ) > 'A_element_ptr_option$' ).
+
+tff(def_26,type,
+    def_26: ( tlbool * 'C_a_b_j_option_RDocument_ext_RObject_ext_bool_fun$' * 'C_a_b_j_option_RDocument_ext_RObject_ext_option$' ) > tlbool ).
+
+tff('type_wf$h',type,
+    'type_wf$h': 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_heap_bool_fun$' ).
+
+tff('fun_app$d',type,
+    'fun_app$d': ( 'D_document_ptr_bool_fun$' * 'D_document_ptr$' ) > $o ).
+
+tff('known_ptr$',type,
+    'known_ptr$': 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$' > $o ).
+
+tff('fun_app$r',type,
+    'fun_app$r': ( 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$' * 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$' ) > 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$' ).
+
+tff('fun_app$',type,
+    'fun_app$': ( 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_bool_fun$' * 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$' ) > $o ).
+
+tff('fun_app$am',type,
+    'fun_app$am': ( 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$' * 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$' ) > 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$' ).
+
+tff(def_27,type,
+    def_27: ( 'C_a_b_j_option_RDocument_ext_RObject_ext_bool_fun$' * 'C_a_b_j_option_RDocument_ext_RObject_ext_option$' ) > tlbool ).
+
+tff('bind$y',type,
+    'bind$y': ( 'A_element_ptr_option$' * 'A_element_ptr_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun$' ) > 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$' ).
+
+tff('known_ptrs$',type,
+    'known_ptrs$': 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_bool_fun$' ).
+
+tff('fun_app$bt',type,
+    'fun_app$bt': ( 'C_a_b_j_option_RDocument_ext_RObject_ext_option_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_bool_fun_fun$' * 'C_a_b_j_option_RDocument_ext_RObject_ext_option$' ) > 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option_bool_fun$' ).
+
+tff('bind$a',type,
+    'bind$a': ( 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$' * 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun$' ) > 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$' ).
+
+tff('bind$d',type,
+    'bind$d': 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$' > 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun$' ).
+
+tff('bot$d',type,
+    'bot$d': 'D_document_ptr_fset$' ).
+
+tff('none$a',type,
+    'none$a': 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$' ).
+
+tff('the_elem$',type,
+    'the_elem$': 'B_character_data_ptr_set$' > 'B_character_data_ptr$' ).
+
+tff('cast_N_o_d_e_2_E_l_e_m_e_n_t$',type,
+    'cast_N_o_d_e_2_E_l_e_m_e_n_t$': 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun$' ).
+
+tff('fun_app$at',type,
+    'fun_app$at': ( 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_fun$' * 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$' ) > 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$' ).
+
+tff('fun_app$ci',type,
+    'fun_app$ci': ( 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_bool_fun$' * 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$' ) > $o ).
+
+tff('fun_app$l',type,
+    'fun_app$l': ( 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$' * 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$' ) > 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$' ).
+
+tff('bind$l',type,
+    'bind$l': ( 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_option$' * 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$' ) > 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$' ).
+
+tff('fun_app$bq',type,
+    'fun_app$bq': ( 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_option_bool_fun$' * 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_option$' ) > $o ).
+
+tff('l_get_M$c',type,
+    'l_get_M$c': ( 'B_character_data_ptr_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun_fun$' * 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_bool_fun$' * 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_b_character_data_ptr_fset_fun$' ) > $o ).
+
+tff('bind$i',type,
+    'bind$i': 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$' > 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun$' ).
+
+tff('extend$',type,
+    'extend$': ( 'Unit_RObject_ext$' * 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext$' ) > 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$' ).
+
+tff(def_21,type,
+    def_21: ( 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_bool_fun$' * 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$' ) > tlbool ).
+
+tff('less_eq$g',type,
+    'less_eq$g': ( 'A_element_ptr_set$' * 'A_element_ptr_set$' ) > $o ).
+
+tff('fun_app$e',type,
+    'fun_app$e': ( 'A_element_ptr_bool_fun$' * 'A_element_ptr$' ) > $o ).
+
+tff('fun_app$cd',type,
+    'fun_app$cd': ( 'A_element_ptr_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$' * 'A_element_ptr$' ) > 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$' ).
+
+tff('bind$',type,
+    'bind$': 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$' > 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$' ).
+
+tff('uvq$',type,
+    'uvq$': ( 'C_a_b_j_option_RDocument_ext_RObject_ext_c_a_b_j_option_RDocument_ext_RObject_ext_c_a_b_j_option_RDocument_ext_RObject_ext_fun_fun$' * 'C_a_b_j_option_RDocument_ext_RObject_ext_option$' ) > 'C_a_b_j_option_RDocument_ext_RObject_ext_c_a_b_j_option_RDocument_ext_RObject_ext_option_fun$' ).
+
+tff('element_ptr$',type,
+    'element_ptr$': 'A_element_ptr$' ).
+
+tff('uvn$',type,
+    'uvn$': ( 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_fun_fun$' * 'H_option_RCharacterData_ext_RNode_ext_RObject_ext$' ) > 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$' ).
+
+tff('fun_app$u',type,
+    'fun_app$u': ( 'Bool_bool_fun$' * tlbool ) > $o ).
+
+tff('uwa$',type,
+    'uwa$': 'C_a_b_j_option_RDocument_ext_k_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun$' ).
+
+tff('finsert$a',type,
+    'finsert$a': ( 'B_character_data_ptr$' * 'B_character_data_ptr_fset$' ) > 'B_character_data_ptr_fset$' ).
+
+tff('uum$',type,
+    'uum$': 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_set$' > 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_bool_fun$' ).
+
+tff('sup$b',type,
+    'sup$b': ( 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$' * 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$' ) > 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$' ).
+
+tff('bind$v',type,
+    'bind$v': ( 'C_a_b_j_option_RDocument_ext_RObject_ext_option$' * 'C_a_b_j_option_RDocument_ext_RObject_ext_a_element_ptr_option_fun$' ) > 'A_element_ptr_option$' ).
+
+tff('character_data_ptr_kinds$',type,
+    'character_data_ptr_kinds$': 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_b_character_data_ptr_fset_fun$' ).
+
+tff('v$',type,
+    'v$': 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_list$' ).
+
+tff(def_29,type,
+    def_29: ( 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_bool_fun$' * 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$' ) > tlbool ).
+
+tff('heap$',type,
+    'heap$': 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_fmap$' > 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$' ).
+
+tff('bind$q',type,
+    'bind$q': ( 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$' * 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_c_a_b_j_option_RDocument_ext_RObject_ext_option_fun$' ) > 'C_a_b_j_option_RDocument_ext_RObject_ext_option$' ).
+
+tff('get_C_h_a_r_a_c_t_e_r_D_a_t_a$',type,
+    'get_C_h_a_r_a_c_t_e_r_D_a_t_a$': 'B_character_data_ptr_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun_fun$' ).
+
+tff('a_known_ptr$',type,
+    'a_known_ptr$': 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$' > $o ).
+
+tff('uus$',type,
+    'uus$': 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun$' ).
+
+tff('uvh$',type,
+    'uvh$': 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_bool_fun$' ).
+
+tff(def_20,type,
+    def_20: ( tlbool * 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_bool_fun$' * 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$' ) > tlbool ).
+
+tff('fun_app$cb',type,
+    'fun_app$cb': ( 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_option_bool_fun$' * 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_option$' ) > $o ).
+
+tff('type_wf$e',type,
+    'type_wf$e': 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_j_option_RDocument_ext_heap_bool_fun$' ).
+
+tff(def_35,type,
+    def_35: ( 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_bool_fun$' * 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_option$' ) > tlbool ).
+
+tff('fun_app$cq',type,
+    'fun_app$cq': ( 'D_document_ptr_a_element_ptr_option_fun$' * 'D_document_ptr$' ) > 'A_element_ptr_option$' ).
+
+tff('fun_app$w',type,
+    'fun_app$w': ( 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_bool_fun$' * 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$' ) > $o ).
+
+tff('bind$b',type,
+    'bind$b': ( 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$' * 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun$' ) > 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$' ).
+
+tff('l_get_C_h_a_r_a_c_t_e_r_D_a_t_a_lemmas$',type,
+    'l_get_C_h_a_r_a_c_t_e_r_D_a_t_a_lemmas$': 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_bool_fun$' > $o ).
+
+tff(def_30,type,
+    def_30: ( tlbool * 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_bool_fun$' * 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$' ) > tlbool ).
+
+tff('the_elem$c',type,
+    'the_elem$c': 'A_element_ptr_set$' > 'A_element_ptr$' ).
+
+tff('none$i',type,
+    'none$i': 'B_character_data_ptr_option$' ).
+
+tff('case_option$h',type,
+    'case_option$h': ( tlbool * 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_bool_fun$' ) > 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_bool_fun$' ).
+
+tff('sup$d',type,
+    'sup$d': ( 'D_document_ptr_fset$' * 'D_document_ptr_fset$' ) > 'D_document_ptr_fset$' ).
+
+tff('uuw$',type,
+    'uuw$': ( 'Bool_bool_fun$' * 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_bool_fun$' ) > 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_bool_fun$' ).
+
+tff('fun_app$ar',type,
+    'fun_app$ar': ( 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun$' * 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$' ) > 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$' ).
+
+tff('fun_app$bc',type,
+    'fun_app$bc': ( 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_option_fun_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_option_fun$' * 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_option_fun$' ) > 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_option$' ).
+
+tff('member$',type,
+    'member$': ( 'B_character_data_ptr$' * 'B_character_data_ptr_set$' ) > $o ).
+
+tff('fun_app$cr',type,
+    'fun_app$cr': ( 'D_document_ptr_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$' * 'D_document_ptr$' ) > 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$' ).
+
+tff('bind$c',type,
+    'bind$c': ( 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$' * 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$' ) > 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$' ).
+
+tff('fun_app$cf',type,
+    'fun_app$cf': ( 'A_element_ptr_c_a_b_j_option_RDocument_ext_RObject_ext_option_fun$' * 'A_element_ptr$' ) > 'C_a_b_j_option_RDocument_ext_RObject_ext_option$' ).
+
+tff('bind$e',type,
+    'bind$e': ( 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$' * 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun$' ) > 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$' ).
+
+tff('uue$',type,
+    'uue$': ( 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$' * 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun$' ) > 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun$' ).
+
+tff('uuu$',type,
+    'uuu$': ( 'Bool_bool_fun$' * 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_bool_fun$' ) > 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_bool_fun$' ).
+
+tff('fun_app$an',type,
+    'fun_app$an': ( 'B_character_data_ptr_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun_fun$' * 'B_character_data_ptr$' ) > 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$' ).
+
+tff('object_ptr_kinds$a',type,
+    'object_ptr_kinds$a': 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_j_option_RDocument_ext_heap$' > 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr_fset$' ).
+
+tff('l_get_N_o_d_e_lemmas$',type,
+    'l_get_N_o_d_e_lemmas$': 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_bool_fun$' > $o ).
+
+tff('finsert$c',type,
+    'finsert$c': ( 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$' * 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr_fset$' ) > 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr_fset$' ).
+
+tff('uvd$',type,
+    'uvd$': 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_bool_fun$' ).
+
+tff('uua$',type,
+    'uua$': ( 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$' * 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$' ) > 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$' ).
+
+tff('fun_app$k',type,
+    'fun_app$k': ( 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$' * 'H_option_RCharacterData_ext_RNode_ext_RObject_ext$' ) > 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$' ).
+
+tff('none$g',type,
+    'none$g': 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_option$' ).
+
+tff('bind$aa',type,
+    'bind$aa': ( 'D_document_ptr_option$' * 'D_document_ptr_a_element_ptr_option_fun$' ) > 'A_element_ptr_option$' ).
+
+tff(def_32,type,
+    def_32: ( tlbool * 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_bool_fun$' * 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$' ) > tlbool ).
+
+tff('l_get_O_b_j_e_c_t_lemmas$d',type,
+    'l_get_O_b_j_e_c_t_lemmas$d': 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_bool_fun$' > $o ).
+
+tff('get_O_b_j_e_c_t$d',type,
+    'get_O_b_j_e_c_t$d': ( 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$' * 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_heap$' ) > 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$' ).
+
+tff('type_wf$',type,
+    'type_wf$': 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_bool_fun$' ).
+
+tff('fun_app$av',type,
+    'fun_app$av': ( 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_a_element_ptr_fset_fun$' * 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$' ) > 'A_element_ptr_fset$' ).
+
+tff('put_C_h_a_r_a_c_t_e_r_D_a_t_a$',type,
+    'put_C_h_a_r_a_c_t_e_r_D_a_t_a$': ( 'B_character_data_ptr$' * 'H_option_RCharacterData_ext_RNode_ext_RObject_ext$' ) > 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_fun$' ).
+
+tff('type_wf$b',type,
+    'type_wf$b': 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_bool_fun$' ).
+
+tff('fun_app$bi',type,
+    'fun_app$bi': ( 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_c_a_b_j_option_RDocument_ext_RObject_ext_option_fun$' * 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$' ) > 'C_a_b_j_option_RDocument_ext_RObject_ext_option$' ).
+
+tff(def_16,type,
+    def_16: ( tlbool * 'C_a_b_j_option_RDocument_ext_RObject_ext_bool_fun$' * 'C_a_b_j_option_RDocument_ext_RObject_ext_option$' ) > tlbool ).
+
+tff('the$c',type,
+    'the$c': 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_option$' > 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$' ).
+
+tff('fun_app$o',type,
+    'fun_app$o': ( 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun$' * 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun$' ) > 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$' ).
+
+tff('the$e',type,
+    'the$e': 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$' > 'H_option_RCharacterData_ext_RNode_ext_RObject_ext$' ).
+
+tff('uux$',type,
+    'uux$': ( 'Bool_bool_fun$' * 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_bool_fun$' ) > 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_bool_fun$' ).
+
+tff('uvk$',type,
+    'uvk$': 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_bool_fun$' ).
+
+tff('bind$p',type,
+    'bind$p': ( 'C_a_b_j_option_RDocument_ext_RObject_ext_option$' * 'C_a_b_j_option_RDocument_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$' ) > 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$' ).
+
+tff('fun_app$cm',type,
+    'fun_app$cm': ( 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_j_option_RDocument_ext_heap_bool_fun$' * 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_j_option_RDocument_ext_heap$' ) > $o ).
+
+tff('uuf$',type,
+    'uuf$': ( 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun$' * 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$' ) > 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$' ).
+
+tff(def_12,type,
+    def_12: ( tlbool * 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_bool_fun$' * 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$' ) > tlbool ).
+
+tff('fun_app$bv',type,
+    'fun_app$bv': ( 'C_a_b_j_option_RDocument_ext_RObject_ext_option_c_a_b_j_option_RDocument_ext_RObject_ext_option_bool_fun_fun$' * 'C_a_b_j_option_RDocument_ext_RObject_ext_option$' ) > 'C_a_b_j_option_RDocument_ext_RObject_ext_option_bool_fun$' ).
+
+tff('the_elem$a',type,
+    'the_elem$a': 'D_document_ptr_set$' > 'D_document_ptr$' ).
+
+tff('fset$b',type,
+    'fset$b': 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$' > 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_set$' ).
+
+tff('is_node_kind$',type,
+    'is_node_kind$': 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_bool_fun$' ).
+
+tff('collect$b',type,
+    'collect$b': 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_bool_fun$' > 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_set$' ).
+
+tff('fun_app$g',type,
+    'fun_app$g': ( 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun$' * 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$' ) > 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$' ).
+
+tff(def_23,type,
+    def_23: ( 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_bool_fun$' * 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$' ) > tlbool ).
+
+tff('pair$b',type,
+    'pair$b': ( 'D_document_ptr$' * 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$' ) > 'D_document_ptr_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_prod$' ).
+
+tff('fun_app$cc',type,
+    'fun_app$cc': ( 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_a_element_ptr_option_fun$' * 'H_option_RCharacterData_ext_RNode_ext_RObject_ext$' ) > 'A_element_ptr_option$' ).
+
+tff('bot$c',type,
+    'bot$c': 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr_fset$' ).
+
+tff('l_get_M$',type,
+    'l_get_M$': ( 'D_document_ptr_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_c_a_b_j_option_RDocument_ext_RObject_ext_option_fun_fun$' * 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_bool_fun$' * 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_d_document_ptr_fset_fun$' ) > $o ).
+
+tff(tlfalse,type,
+    tlfalse: tlbool ).
+
+tff('uvu$',type,
+    'uvu$': 'H_option_RCharacterData_ext_i_sum_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun$' ).
+
+tff('bind$z',type,
+    'bind$z': ( 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_option$' * 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_a_element_ptr_option_fun$' ) > 'A_element_ptr_option$' ).
+
+tff(def_11,type,
+    def_11: ( 'Bool_bool_fun$' * tlbool ) > tlbool ).
+
+tff('the$b',type,
+    'the$b': 'A_element_ptr_option$' > 'A_element_ptr$' ).
+
+tff('some$e',type,
+    'some$e': 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_option_fun$' ).
+
+tff('some$h',type,
+    'some$h': 'D_document_ptr$' > 'D_document_ptr_option$' ).
+
+tff('less_eq$a',type,
+    'less_eq$a': ( 'B_character_data_ptr_fset$' * 'B_character_data_ptr_fset$' ) > $o ).
+
+tff('uui$',type,
+    'uui$': ( 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun$' * 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun$' ) > 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun$' ).
+
+tff('new_D_o_c_u_m_e_n_t$',type,
+    'new_D_o_c_u_m_e_n_t$': 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$' > 'D_document_ptr_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_prod$' ).
+
+tff('new_E_l_e_m_e_n_t$',type,
+    'new_E_l_e_m_e_n_t$': 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$' > 'A_element_ptr_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_prod$' ).
+
+tff('none$b',type,
+    'none$b': 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$' ).
+
+tff('fmupd$',type,
+    'fmupd$': ( 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$' * 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$' * 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_fmap$' ) > 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_fmap$' ).
+
+tff('a_type_wf$',type,
+    'a_type_wf$': 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_bool_fun$' ).
+
+tff('cast_o_b_j_e_c_t_p_t_r_2_n_o_d_e_p_t_r$',type,
+    'cast_o_b_j_e_c_t_p_t_r_2_n_o_d_e_p_t_r$': 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$' > 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_option$' ).
+
+tff('uul$',type,
+    'uul$': 'D_document_ptr_set$' > 'D_document_ptr_bool_fun$' ).
+
+tff(def_31,type,
+    def_31: ( 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_bool_fun$' * 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$' ) > tlbool ).
+
+tff('node_ptr_kinds$',type,
+    'node_ptr_kinds$': 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset_fun$' ).
+
+tff('fun_app$bu',type,
+    'fun_app$bu': ( 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_bool_fun_fun$' * 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$' ) > 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_bool_fun$' ).
+
+tff('fun_app$v',type,
+    'fun_app$v': ( 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_bool_fun$' * 'H_option_RCharacterData_ext_RNode_ext_RObject_ext$' ) > $o ).
+
+tff('cast_O_b_j_e_c_t_2_D_o_c_u_m_e_n_t$',type,
+    'cast_O_b_j_e_c_t_2_D_o_c_u_m_e_n_t$': 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_c_a_b_j_option_RDocument_ext_RObject_ext_option_fun$' ).
+
+tff('some$',type,
+    'some$': 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun$' ).
+
+tff('fun_app$be',type,
+    'fun_app$be': ( 'C_a_b_j_option_RDocument_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$' * 'C_a_b_j_option_RDocument_ext_RObject_ext$' ) > 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$' ).
+
+tff('fthe_elem$c',type,
+    'fthe_elem$c': 'A_element_ptr_fset$' > 'A_element_ptr$' ).
+
+tff('is_element_ptr_kind_n_o_d_e_p_t_r$',type,
+    'is_element_ptr_kind_n_o_d_e_p_t_r$': 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_bool_fun$' ).
+
+tff('fun_app$co',type,
+    'fun_app$co': ( 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_RNode_ext_heap_bool_fun$' * 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_RNode_ext_heap$' ) > $o ).
+
+tff('uvl$',type,
+    'uvl$': ( 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_fun_fun$' * 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$' ) > 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun$' ).
+
+tff('fun_app$ae',type,
+    'fun_app$ae': ( 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_fun$' * 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$' ) > 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$' ).
+
+tff('case_option$g',type,
+    'case_option$g': ( tlbool * 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_bool_fun$' ) > 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option_bool_fun$' ).
+
+tff('bind$j',type,
+    'bind$j': ( 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_option$' * 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_c_a_b_j_option_RDocument_ext_RObject_ext_option_fun$' ) > 'C_a_b_j_option_RDocument_ext_RObject_ext_option$' ).
+
+tff(def_8,type,
+    def_8: ( tlbool * 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_bool_fun$' * 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$' ) > tlbool ).
+
+tff('uuc$',type,
+    'uuc$': ( 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun$' * 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$' ) > 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$' ).
+
+tff('l_get_O_b_j_e_c_t_lemmas$',type,
+    'l_get_O_b_j_e_c_t_lemmas$': 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_j_option_RDocument_ext_heap_bool_fun$' > $o ).
+
+tff('fun_app$ai',type,
+    'fun_app$ai': ( 'C_a_b_j_option_RDocument_ext_k_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun$' * 'C_a_b_j_option_RDocument_ext_k_sum$' ) > 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$' ).
+
+tff(def_25,type,
+    def_25: ( 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_bool_fun$' * 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_option$' ) > tlbool ).
+
+tff('fun_app$bh',type,
+    'fun_app$bh': ( 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun$' * 'H_option_RCharacterData_ext_RNode_ext_RObject_ext$' ) > 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$' ).
+
+tff('object_ptr_kinds$c',type,
+    'object_ptr_kinds$c': 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_RNode_ext_heap$' > 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr_fset$' ).
+
+tff('cast_c_h_a_r_a_c_t_e_r_d_a_t_a_p_t_r_2_n_o_d_e_p_t_r$',type,
+    'cast_c_h_a_r_a_c_t_e_r_d_a_t_a_p_t_r_2_n_o_d_e_p_t_r$': 'B_character_data_ptr$' > 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$' ).
+
+tff(def_18,type,
+    def_18: ( tlbool * 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_bool_fun$' * 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$' ) > tlbool ).
+
+tff('type_wf$c',type,
+    'type_wf$c': 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_bool_fun$' ).
+
+tff('fun_app$bm',type,
+    'fun_app$bm': ( 'C_a_b_j_option_RDocument_ext_RObject_ext_option_bool_fun$' * 'C_a_b_j_option_RDocument_ext_RObject_ext_option$' ) > $o ).
+
+tff('fthe_elem$',type,
+    'fthe_elem$': 'B_character_data_ptr_fset$' > 'B_character_data_ptr$' ).
+
+tff('truncate$',type,
+    'truncate$': 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$' > 'Unit_RObject_ext$' ).
+
+tff('uup$',type,
+    'uup$': 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$' ).
+
+tff('uuk$',type,
+    'uuk$': 'B_character_data_ptr_set$' > 'B_character_data_ptr_bool_fun$' ).
+
+tff('fun_app$aa',type,
+    'fun_app$aa': ( 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_fun$' * 'H_option_RCharacterData_ext_RNode_ext_RObject_ext$' ) > 'H_option_RCharacterData_ext_RNode_ext_RObject_ext$' ).
+
+tff('case_option$b',type,
+    'case_option$b': ( 'C_a_b_j_option_RDocument_ext_RObject_ext_option$' * 'C_a_b_j_option_RDocument_ext_RObject_ext_c_a_b_j_option_RDocument_ext_RObject_ext_option_fun$' * 'C_a_b_j_option_RDocument_ext_RObject_ext_option$' ) > 'C_a_b_j_option_RDocument_ext_RObject_ext_option$' ).
+
+tff('uvt$',type,
+    'uvt$': 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$' > 'C_a_b_e_g_option_RElement_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun$' ).
+
+tff('uuy$',type,
+    'uuy$': 'A_element_ptr_bool_fun$' ).
+
+tff('fun_app$br',type,
+    'fun_app$br': ( 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_bool_fun_fun$' * 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$' ) > 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option_bool_fun$' ).
+
+tff('get_E_l_e_m_e_n_t$',type,
+    'get_E_l_e_m_e_n_t$': 'A_element_ptr_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun_fun$' ).
+
+tff('is_document_kind$',type,
+    'is_document_kind$': 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_bool_fun$' ).
+
+tff('document_ptr_kinds$',type,
+    'document_ptr_kinds$': 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_d_document_ptr_fset_fun$' ).
+
+tff('collect$',type,
+    'collect$': 'B_character_data_ptr_bool_fun$' > 'B_character_data_ptr_set$' ).
+
+tff('none$c',type,
+    'none$c': 'C_a_b_j_option_RDocument_ext_RObject_ext_option$' ).
+
+tff('some$b',type,
+    'some$b': 'C_a_b_j_option_RDocument_ext_RObject_ext_c_a_b_j_option_RDocument_ext_RObject_ext_option_fun$' ).
+
+tff('extend$a',type,
+    'extend$a': ( 'Unit_RNode_ext_RObject_ext$' * 'C_a_b_e_g_option_RElement_ext$' ) > 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$' ).
+
+tff('fun_app$ax',type,
+    'fun_app$ax': ( 'A_element_ptr_a_element_ptr_option_fun$' * 'A_element_ptr$' ) > 'A_element_ptr_option$' ).
+
+tff('uuv$',type,
+    'uuv$': ( 'Bool_bool_fun$' * 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_bool_fun$' ) > 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_bool_fun$' ).
+
+tff('l_get_O_b_j_e_c_t_lemmas$b',type,
+    'l_get_O_b_j_e_c_t_lemmas$b': 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_RNode_ext_heap_bool_fun$' > $o ).
+
+tff('case_option$i',type,
+    'case_option$i': ( tlbool * 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_bool_fun$' ) > 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_bool_fun$' ).
+
+tff('cast_o_b_j_e_c_t_p_t_r_2_d_o_c_u_m_e_n_t_p_t_r$',type,
+    'cast_o_b_j_e_c_t_p_t_r_2_d_o_c_u_m_e_n_t_p_t_r$': 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$' > 'D_document_ptr_option$' ).
+
+tff('member$b',type,
+    'member$b': ( 'A_element_ptr$' * 'A_element_ptr_set$' ) > $o ).
+
+tff('type_wf$g',type,
+    'type_wf$g': 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_RNode_ext_heap_bool_fun$' ).
+
+tff('uvw$',type,
+    'uvw$': ( 'D_document_ptr_set$' * 'D_document_ptr_bool_fun$' ) > 'D_document_ptr_bool_fun$' ).
+
+tff('uug$',type,
+    'uug$': ( 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_c_a_b_j_option_RDocument_ext_RObject_ext_option_fun$' * 'C_a_b_j_option_RDocument_ext_RObject_ext_c_a_b_j_option_RDocument_ext_RObject_ext_option_fun$' ) > 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_c_a_b_j_option_RDocument_ext_RObject_ext_option_fun$' ).
+
+tff('l_get_M$a',type,
+    'l_get_M$a': ( 'A_element_ptr_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun_fun$' * 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_bool_fun$' * 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_a_element_ptr_fset_fun$' ) > $o ).
+
+tff('put_N_o_d_e$',type,
+    'put_N_o_d_e$': ( 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$' * 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$' ) > 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_fun$' ).
+
+tff('fun_app$cl',type,
+    'fun_app$cl': ( 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_option_fun_fun$' * 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$' ) > 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_option_fun$' ).
+
+tff('cast_N_o_d_e_2_O_b_j_e_c_t$',type,
+    'cast_N_o_d_e_2_O_b_j_e_c_t$': 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$' > 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$' ).
+
+tff('h$',type,
+    'h$': 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$' ).
+
+tff('case_option$l',type,
+    'case_option$l': ( 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$' * 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$' * 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$' ) > 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$' ).
+
+tff('fun_app$cs',type,
+    'fun_app$cs': ( 'D_document_ptr_c_a_b_j_option_RDocument_ext_RObject_ext_option_fun$' * 'D_document_ptr$' ) > 'C_a_b_j_option_RDocument_ext_RObject_ext_option$' ).
+
+tff('bind$s',type,
+    'bind$s': ( 'C_a_b_j_option_RDocument_ext_RObject_ext_option$' * 'C_a_b_j_option_RDocument_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun$' ) > 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$' ).
+
+tff('bind$u',type,
+    'bind$u': ( 'A_element_ptr_option$' * 'A_element_ptr_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$' ) > 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$' ).
+
+tff('fun_app$ce',type,
+    'fun_app$ce': ( 'C_a_b_j_option_RDocument_ext_RObject_ext_a_element_ptr_option_fun$' * 'C_a_b_j_option_RDocument_ext_RObject_ext$' ) > 'A_element_ptr_option$' ).
+
+tff('a_type_wf$d',type,
+    'a_type_wf$d': 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_bool_fun$' ).
+
+tff('pair$a',type,
+    'pair$a': ( 'B_character_data_ptr$' * 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$' ) > 'B_character_data_ptr_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_prod$' ).
+
+tff('known_ptrs$a',type,
+    'known_ptrs$a': 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_bool_fun$' ).
+
+tff('new_C_h_a_r_a_c_t_e_r_D_a_t_a$',type,
+    'new_C_h_a_r_a_c_t_e_r_D_a_t_a$': 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$' > 'B_character_data_ptr_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_prod$' ).
+
+tff('the$a',type,
+    'the$a': 'D_document_ptr_option$' > 'D_document_ptr$' ).
+
+tff(def_13,type,
+    def_13: ( 'Bool_bool_fun$' * tlbool ) > tlbool ).
+
+tff('a_type_wf$c',type,
+    'a_type_wf$c': 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_bool_fun$' ).
+
+tff('fun_app$ab',type,
+    'fun_app$ab': ( 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_fun_fun$' * 'H_option_RCharacterData_ext_RNode_ext_RObject_ext$' ) > 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_fun$' ).
+
+tff('l_put_M$a',type,
+    'l_put_M$a': ( 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_bool_fun$' * 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_a_element_ptr_fset_fun$' * 'A_element_ptr_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun_fun$' ) > $o ).
+
+tff('case_option$a',type,
+    'case_option$a': ( 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$' * 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun$' * 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$' ) > 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$' ).
+
+tff('uvm$',type,
+    'uvm$': ( 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_fun_fun$' * 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$' ) > 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun$' ).
+
+tff('known_ptr$a',type,
+    'known_ptr$a': 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$' > $o ).
+
+tff('fun_app$ah',type,
+    'fun_app$ah': ( 'H_option_RCharacterData_ext_i_sum_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun$' * 'H_option_RCharacterData_ext_i_sum$' ) > 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$' ).
+
+tff('bind$n',type,
+    'bind$n': 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_option$' > 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_option_fun_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_option_fun$' ).
+
+tff('uvp$',type,
+    'uvp$': ( 'C_a_b_j_option_RDocument_ext_RObject_ext_c_a_b_j_option_RDocument_ext_RObject_ext_c_a_b_j_option_RDocument_ext_RObject_ext_fun_fun$' * 'C_a_b_j_option_RDocument_ext_RObject_ext$' ) > 'C_a_b_j_option_RDocument_ext_RObject_ext_c_a_b_j_option_RDocument_ext_RObject_ext_option_fun$' ).
+
+tff(def_17,type,
+    def_17: ( 'C_a_b_j_option_RDocument_ext_RObject_ext_bool_fun$' * 'C_a_b_j_option_RDocument_ext_RObject_ext_option$' ) > tlbool ).
+
+tff('get_N_o_d_e$',type,
+    'get_N_o_d_e$': 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun_fun$' ).
+
+tff(def_1,type,
+    def_1: ( 'C_a_b_j_option_RDocument_ext_RObject_ext_bool_fun$' * 'C_a_b_j_option_RDocument_ext_RObject_ext$' ) > tlbool ).
+
+tff('uva$',type,
+    'uva$': 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_bool_fun$' ).
+
+tff('combine_options$',type,
+    'combine_options$': ( 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_fun_fun$' * 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$' * 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$' ) > 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$' ).
+
+tff('fun_app$by',type,
+    'fun_app$by': ( 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_c_a_b_j_option_RDocument_ext_RObject_ext_option_bool_fun_fun$' * 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$' ) > 'C_a_b_j_option_RDocument_ext_RObject_ext_option_bool_fun$' ).
+
+tff('bot$b',type,
+    'bot$b': 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$' ).
+
+tff('the_heap$',type,
+    'the_heap$': 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$' > 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_fmap$' ).
+
+tff('cast_N_o_d_e_2_C_h_a_r_a_c_t_e_r_D_a_t_a$',type,
+    'cast_N_o_d_e_2_C_h_a_r_a_c_t_e_r_D_a_t_a$': 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$' ).
+
+%% Assertions:
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ (fun_app$(uvk$, ?v0) = fun_app$a(case_option$(false, is_element_ptr_e_l_e_m_e_n_t_p_t_r$), fun_app$b(cast_n_o_d_e_p_t_r_2_e_l_e_m_e_n_t_p_t_r$, ?v0)))
+tff(axiom0,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$'] :
+      ( 'fun_app$'('uvk$',A__questionmark_v0)
+    <=> 'fun_app$a'('case_option$'(tlfalse,'is_element_ptr_e_l_e_m_e_n_t_p_t_r$'),'fun_app$b'('cast_n_o_d_e_p_t_r_2_e_l_e_m_e_n_t_p_t_r$',A__questionmark_v0)) ) ).
+
+%% ∀ ?v0:B_character_data_ptr_set$ ?v1:B_character_data_ptr$ (fun_app$c(uuk$(?v0), ?v1) = member$(?v1, ?v0))
+tff(axiom1,axiom,
+    ! [A__questionmark_v0: 'B_character_data_ptr_set$',A__questionmark_v1: 'B_character_data_ptr$'] :
+      ( 'fun_app$c'('uuk$'(A__questionmark_v0),A__questionmark_v1)
+    <=> 'member$'(A__questionmark_v1,A__questionmark_v0) ) ).
+
+%% ∀ ?v0:D_document_ptr_set$ ?v1:D_document_ptr$ (fun_app$d(uul$(?v0), ?v1) = member$a(?v1, ?v0))
+tff(axiom2,axiom,
+    ! [A__questionmark_v0: 'D_document_ptr_set$',A__questionmark_v1: 'D_document_ptr$'] :
+      ( 'fun_app$d'('uul$'(A__questionmark_v0),A__questionmark_v1)
+    <=> 'member$a'(A__questionmark_v1,A__questionmark_v0) ) ).
+
+%% ∀ ?v0:A_element_ptr_set$ ?v1:A_element_ptr$ (fun_app$e(uun$(?v0), ?v1) = member$b(?v1, ?v0))
+tff(axiom3,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_set$',A__questionmark_v1: 'A_element_ptr$'] :
+      ( 'fun_app$e'('uun$'(A__questionmark_v0),A__questionmark_v1)
+    <=> 'member$b'(A__questionmark_v1,A__questionmark_v0) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_set$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ (fun_app$(uum$(?v0), ?v1) = member$c(?v1, ?v0))
+tff(axiom4,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_set$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$'] :
+      ( 'fun_app$'('uum$'(A__questionmark_v0),A__questionmark_v1)
+    <=> 'member$c'(A__questionmark_v1,A__questionmark_v0) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$ ?v1:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext$ (fun_app$f(uvz$(?v0), ?v1) = fun_app$g(some$, extend$(truncate$(?v0), ?v1)))
+tff(axiom5,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$',A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext$'] : ( 'fun_app$f'('uvz$'(A__questionmark_v0),A__questionmark_v1) = 'fun_app$g'('some$','extend$'('truncate$'(A__questionmark_v0),A__questionmark_v1)) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$ ?v1:C_a_b_e_g_option_RElement_ext$ (fun_app$h(uvt$(?v0), ?v1) = fun_app$i(some$a, extend$a(truncate$a(?v0), ?v1)))
+tff(axiom6,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$',A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext$'] : ( 'fun_app$h'('uvt$'(A__questionmark_v0),A__questionmark_v1) = 'fun_app$i'('some$a','extend$a'('truncate$a'(A__questionmark_v0),A__questionmark_v1)) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_fun_fun$ ?v1:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$ ?v2:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$ (fun_app$i(uvs$(?v0, ?v1), ?v2) = case_option$a(fun_app$i(some$a, ?v2), uvr$(?v0, ?v2), ?v1))
+tff(axiom7,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_fun_fun$',A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$',A__questionmark_v2: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$'] : ( 'fun_app$i'('uvs$'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2) = 'case_option$a'('fun_app$i'('some$a',A__questionmark_v2),'uvr$'(A__questionmark_v0,A__questionmark_v2),A__questionmark_v1) ) ).
+
+%% ∀ ?v0:C_a_b_j_option_RDocument_ext_RObject_ext_c_a_b_j_option_RDocument_ext_RObject_ext_c_a_b_j_option_RDocument_ext_RObject_ext_fun_fun$ ?v1:C_a_b_j_option_RDocument_ext_RObject_ext_option$ ?v2:C_a_b_j_option_RDocument_ext_RObject_ext$ (fun_app$j(uvq$(?v0, ?v1), ?v2) = case_option$b(fun_app$j(some$b, ?v2), uvp$(?v0, ?v2), ?v1))
+tff(axiom8,axiom,
+    ! [A__questionmark_v0: 'C_a_b_j_option_RDocument_ext_RObject_ext_c_a_b_j_option_RDocument_ext_RObject_ext_c_a_b_j_option_RDocument_ext_RObject_ext_fun_fun$',A__questionmark_v1: 'C_a_b_j_option_RDocument_ext_RObject_ext_option$',A__questionmark_v2: 'C_a_b_j_option_RDocument_ext_RObject_ext$'] : ( 'fun_app$j'('uvq$'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2) = 'case_option$b'('fun_app$j'('some$b',A__questionmark_v2),'uvp$'(A__questionmark_v0,A__questionmark_v2),A__questionmark_v1) ) ).
+
+%% ∀ ?v0:H_option_RCharacterData_ext_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_fun_fun$ ?v1:H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$ ?v2:H_option_RCharacterData_ext_RNode_ext_RObject_ext$ (fun_app$k(uvo$(?v0, ?v1), ?v2) = case_option$c(fun_app$k(some$c, ?v2), uvn$(?v0, ?v2), ?v1))
+tff(axiom9,axiom,
+    ! [A__questionmark_v0: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_fun_fun$',A__questionmark_v1: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$',A__questionmark_v2: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext$'] : ( 'fun_app$k'('uvo$'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2) = 'case_option$c'('fun_app$k'('some$c',A__questionmark_v2),'uvn$'(A__questionmark_v0,A__questionmark_v2),A__questionmark_v1) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_fun_fun$ ?v1:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$ ?v2:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$ (fun_app$g(uvm$(?v0, ?v1), ?v2) = case_option$d(fun_app$g(some$, ?v2), uvl$(?v0, ?v2), ?v1))
+tff(axiom10,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_fun_fun$',A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$',A__questionmark_v2: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$'] : ( 'fun_app$g'('uvm$'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2) = 'case_option$d'('fun_app$g'('some$',A__questionmark_v2),'uvl$'(A__questionmark_v0,A__questionmark_v2),A__questionmark_v1) ) ).
+
+%% ∀ ?v0:B_character_data_ptr_set$ ?v1:B_character_data_ptr_bool_fun$ ?v2:B_character_data_ptr$ (fun_app$c(uvv$(?v0, ?v1), ?v2) = (member$(?v2, ?v0) ∧ fun_app$c(?v1, ?v2)))
+tff(axiom11,axiom,
+    ! [A__questionmark_v0: 'B_character_data_ptr_set$',A__questionmark_v1: 'B_character_data_ptr_bool_fun$',A__questionmark_v2: 'B_character_data_ptr$'] :
+      ( 'fun_app$c'('uvv$'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2)
+    <=> ( 'member$'(A__questionmark_v2,A__questionmark_v0)
+        & 'fun_app$c'(A__questionmark_v1,A__questionmark_v2) ) ) ).
+
+%% ∀ ?v0:D_document_ptr_set$ ?v1:D_document_ptr_bool_fun$ ?v2:D_document_ptr$ (fun_app$d(uvw$(?v0, ?v1), ?v2) = (member$a(?v2, ?v0) ∧ fun_app$d(?v1, ?v2)))
+tff(axiom12,axiom,
+    ! [A__questionmark_v0: 'D_document_ptr_set$',A__questionmark_v1: 'D_document_ptr_bool_fun$',A__questionmark_v2: 'D_document_ptr$'] :
+      ( 'fun_app$d'('uvw$'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2)
+    <=> ( 'member$a'(A__questionmark_v2,A__questionmark_v0)
+        & 'fun_app$d'(A__questionmark_v1,A__questionmark_v2) ) ) ).
+
+%% ∀ ?v0:A_element_ptr_set$ ?v1:A_element_ptr_bool_fun$ ?v2:A_element_ptr$ (fun_app$e(uvy$(?v0, ?v1), ?v2) = (member$b(?v2, ?v0) ∧ fun_app$e(?v1, ?v2)))
+tff(axiom13,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_set$',A__questionmark_v1: 'A_element_ptr_bool_fun$',A__questionmark_v2: 'A_element_ptr$'] :
+      ( 'fun_app$e'('uvy$'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2)
+    <=> ( 'member$b'(A__questionmark_v2,A__questionmark_v0)
+        & 'fun_app$e'(A__questionmark_v1,A__questionmark_v2) ) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_set$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_bool_fun$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ (fun_app$(uvx$(?v0, ?v1), ?v2) = (member$c(?v2, ?v0) ∧ fun_app$(?v1, ?v2)))
+tff(axiom14,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_set$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_bool_fun$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$'] :
+      ( 'fun_app$'('uvx$'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2)
+    <=> ( 'member$c'(A__questionmark_v2,A__questionmark_v0)
+        & 'fun_app$'(A__questionmark_v1,A__questionmark_v2) ) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$ ?v1:H_option_RCharacterData_ext_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$ ?v2:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$ (fun_app$l(uua$(?v0, ?v1), ?v2) = fun_app$m(bind$(fun_app$l(?v0, ?v2)), ?v1))
+tff(axiom15,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$',A__questionmark_v1: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$',A__questionmark_v2: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$'] : ( 'fun_app$l'('uua$'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2) = 'fun_app$m'('bind$'('fun_app$l'(A__questionmark_v0,A__questionmark_v2)),A__questionmark_v1) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$ ?v1:H_option_RCharacterData_ext_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun$ ?v2:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$ (fun_app$n(uub$(?v0, ?v1), ?v2) = bind$a(fun_app$l(?v0, ?v2), ?v1))
+tff(axiom16,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$',A__questionmark_v1: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun$',A__questionmark_v2: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$'] : ( 'fun_app$n'('uub$'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2) = 'bind$a'('fun_app$l'(A__questionmark_v0,A__questionmark_v2),A__questionmark_v1) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$ ?v1:H_option_RCharacterData_ext_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun$ ?v2:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$ (fun_app$g(uue$(?v0, ?v1), ?v2) = bind$b(fun_app$l(?v0, ?v2), ?v1))
+tff(axiom17,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$',A__questionmark_v1: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun$',A__questionmark_v2: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$'] : ( 'fun_app$g'('uue$'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2) = 'bind$b'('fun_app$l'(A__questionmark_v0,A__questionmark_v2),A__questionmark_v1) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun$ ?v1:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$ ?v2:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$ (fun_app$l(uuc$(?v0, ?v1), ?v2) = bind$c(fun_app$n(?v0, ?v2), ?v1))
+tff(axiom18,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun$',A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$',A__questionmark_v2: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$'] : ( 'fun_app$l'('uuc$'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2) = 'bind$c'('fun_app$n'(A__questionmark_v0,A__questionmark_v2),A__questionmark_v1) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun$ ?v1:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun$ ?v2:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$ (fun_app$n(uud$(?v0, ?v1), ?v2) = fun_app$o(bind$d(fun_app$n(?v0, ?v2)), ?v1))
+tff(axiom19,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun$',A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun$',A__questionmark_v2: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$'] : ( 'fun_app$n'('uud$'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2) = 'fun_app$o'('bind$d'('fun_app$n'(A__questionmark_v0,A__questionmark_v2)),A__questionmark_v1) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun$ ?v1:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun$ ?v2:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$ (fun_app$g(uuh$(?v0, ?v1), ?v2) = bind$e(fun_app$n(?v0, ?v2), ?v1))
+tff(axiom20,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun$',A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun$',A__questionmark_v2: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$'] : ( 'fun_app$g'('uuh$'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2) = 'bind$e'('fun_app$n'(A__questionmark_v0,A__questionmark_v2),A__questionmark_v1) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun$ ?v1:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$ ?v2:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$ (fun_app$l(uuf$(?v0, ?v1), ?v2) = bind$f(fun_app$g(?v0, ?v2), ?v1))
+tff(axiom21,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun$',A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$',A__questionmark_v2: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$'] : ( 'fun_app$l'('uuf$'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2) = 'bind$f'('fun_app$g'(A__questionmark_v0,A__questionmark_v2),A__questionmark_v1) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun$ ?v1:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun$ ?v2:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$ (fun_app$n(uui$(?v0, ?v1), ?v2) = bind$g(fun_app$g(?v0, ?v2), ?v1))
+tff(axiom22,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun$',A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun$',A__questionmark_v2: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$'] : ( 'fun_app$n'('uui$'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2) = 'bind$g'('fun_app$g'(A__questionmark_v0,A__questionmark_v2),A__questionmark_v1) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_c_a_b_j_option_RDocument_ext_RObject_ext_option_fun$ ?v1:C_a_b_j_option_RDocument_ext_RObject_ext_c_a_b_j_option_RDocument_ext_RObject_ext_option_fun$ ?v2:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$ (fun_app$p(uug$(?v0, ?v1), ?v2) = fun_app$q(bind$h(fun_app$p(?v0, ?v2)), ?v1))
+tff(axiom23,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_c_a_b_j_option_RDocument_ext_RObject_ext_option_fun$',A__questionmark_v1: 'C_a_b_j_option_RDocument_ext_RObject_ext_c_a_b_j_option_RDocument_ext_RObject_ext_option_fun$',A__questionmark_v2: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$'] : ( 'fun_app$p'('uug$'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2) = 'fun_app$q'('bind$h'('fun_app$p'(A__questionmark_v0,A__questionmark_v2)),A__questionmark_v1) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun$ ?v1:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$ ?v2:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$ (fun_app$r(uuj$(?v0, ?v1), ?v2) = bind$f(fun_app$s(?v0, ?v2), ?v1))
+tff(axiom24,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun$',A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$',A__questionmark_v2: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$'] : ( 'fun_app$r'('uuj$'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2) = 'bind$f'('fun_app$s'(A__questionmark_v0,A__questionmark_v2),A__questionmark_v1) ) ).
+
+%% ∀ ?v0:Bool_bool_fun$ ?v1:C_a_b_j_option_RDocument_ext_RObject_ext_bool_fun$ ?v2:C_a_b_j_option_RDocument_ext_RObject_ext$ (fun_app$t(uut$(?v0, ?v1), ?v2) = fun_app$u(?v0, fun_app$t(?v1, ?v2)))
+tff(axiom25,axiom,
+    ! [A__questionmark_v0: 'Bool_bool_fun$',A__questionmark_v1: 'C_a_b_j_option_RDocument_ext_RObject_ext_bool_fun$',A__questionmark_v2: 'C_a_b_j_option_RDocument_ext_RObject_ext$'] :
+      ( 'fun_app$t'('uut$'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2)
+    <=> 'fun_app$u'(A__questionmark_v0,def_1(A__questionmark_v1,A__questionmark_v2)) ) ).
+
+%% ∀ ?v0:Bool_bool_fun$ ?v1:H_option_RCharacterData_ext_RNode_ext_RObject_ext_bool_fun$ ?v2:H_option_RCharacterData_ext_RNode_ext_RObject_ext$ (fun_app$v(uuu$(?v0, ?v1), ?v2) = fun_app$u(?v0, fun_app$v(?v1, ?v2)))
+tff(axiom26,axiom,
+    ! [A__questionmark_v0: 'Bool_bool_fun$',A__questionmark_v1: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_bool_fun$',A__questionmark_v2: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext$'] :
+      ( 'fun_app$v'('uuu$'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2)
+    <=> 'fun_app$u'(A__questionmark_v0,def_2(A__questionmark_v1,A__questionmark_v2)) ) ).
+
+%% ∀ ?v0:Bool_bool_fun$ ?v1:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_bool_fun$ ?v2:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$ (fun_app$w(uuv$(?v0, ?v1), ?v2) = fun_app$u(?v0, fun_app$w(?v1, ?v2)))
+tff(axiom27,axiom,
+    ! [A__questionmark_v0: 'Bool_bool_fun$',A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_bool_fun$',A__questionmark_v2: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$'] :
+      ( 'fun_app$w'('uuv$'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2)
+    <=> 'fun_app$u'(A__questionmark_v0,def_3(A__questionmark_v1,A__questionmark_v2)) ) ).
+
+%% ∀ ?v0:Bool_bool_fun$ ?v1:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_bool_fun$ ?v2:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$ (fun_app$x(uuw$(?v0, ?v1), ?v2) = fun_app$u(?v0, fun_app$x(?v1, ?v2)))
+tff(axiom28,axiom,
+    ! [A__questionmark_v0: 'Bool_bool_fun$',A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_bool_fun$',A__questionmark_v2: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$'] :
+      ( 'fun_app$x'('uuw$'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2)
+    <=> 'fun_app$u'(A__questionmark_v0,def_4(A__questionmark_v1,A__questionmark_v2)) ) ).
+
+%% ∀ ?v0:Bool_bool_fun$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_bool_fun$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ (fun_app$(uux$(?v0, ?v1), ?v2) = fun_app$u(?v0, fun_app$(?v1, ?v2)))
+tff(axiom29,axiom,
+    ! [A__questionmark_v0: 'Bool_bool_fun$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_bool_fun$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$'] :
+      ( 'fun_app$'('uux$'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2)
+    <=> 'fun_app$u'(A__questionmark_v0,def_5(A__questionmark_v1,A__questionmark_v2)) ) ).
+
+%% ∀ ?v0:C_a_b_j_option_RDocument_ext_RObject_ext_c_a_b_j_option_RDocument_ext_RObject_ext_c_a_b_j_option_RDocument_ext_RObject_ext_fun_fun$ ?v1:C_a_b_j_option_RDocument_ext_RObject_ext$ ?v2:C_a_b_j_option_RDocument_ext_RObject_ext$ (fun_app$j(uvp$(?v0, ?v1), ?v2) = fun_app$j(some$b, fun_app$y(fun_app$z(?v0, ?v1), ?v2)))
+tff(axiom30,axiom,
+    ! [A__questionmark_v0: 'C_a_b_j_option_RDocument_ext_RObject_ext_c_a_b_j_option_RDocument_ext_RObject_ext_c_a_b_j_option_RDocument_ext_RObject_ext_fun_fun$',A__questionmark_v1: 'C_a_b_j_option_RDocument_ext_RObject_ext$',A__questionmark_v2: 'C_a_b_j_option_RDocument_ext_RObject_ext$'] : ( 'fun_app$j'('uvp$'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2) = 'fun_app$j'('some$b','fun_app$y'('fun_app$z'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2)) ) ).
+
+%% ∀ ?v0:H_option_RCharacterData_ext_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_fun_fun$ ?v1:H_option_RCharacterData_ext_RNode_ext_RObject_ext$ ?v2:H_option_RCharacterData_ext_RNode_ext_RObject_ext$ (fun_app$k(uvn$(?v0, ?v1), ?v2) = fun_app$k(some$c, fun_app$aa(fun_app$ab(?v0, ?v1), ?v2)))
+tff(axiom31,axiom,
+    ! [A__questionmark_v0: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_fun_fun$',A__questionmark_v1: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext$',A__questionmark_v2: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext$'] : ( 'fun_app$k'('uvn$'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2) = 'fun_app$k'('some$c','fun_app$aa'('fun_app$ab'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2)) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_fun_fun$ ?v1:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$ ?v2:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$ (fun_app$i(uvr$(?v0, ?v1), ?v2) = fun_app$i(some$a, fun_app$ac(fun_app$ad(?v0, ?v1), ?v2)))
+tff(axiom32,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_fun_fun$',A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$',A__questionmark_v2: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$'] : ( 'fun_app$i'('uvr$'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2) = 'fun_app$i'('some$a','fun_app$ac'('fun_app$ad'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2)) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_fun_fun$ ?v1:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$ ?v2:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$ (fun_app$g(uvl$(?v0, ?v1), ?v2) = fun_app$g(some$, fun_app$ae(fun_app$af(?v0, ?v1), ?v2)))
+tff(axiom33,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_fun_fun$',A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$',A__questionmark_v2: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$'] : ( 'fun_app$g'('uvl$'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2) = 'fun_app$g'('some$','fun_app$ae'('fun_app$af'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2)) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_list$ (fun_app$ag(uu$, ?v0) = v$)
+tff(axiom34,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_list$'] : ( 'fun_app$ag'('uu$',A__questionmark_v0) = 'v$' ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$ (fun_app$l(uup$, ?v0) = none$)
+tff(axiom35,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$'] : ( 'fun_app$l'('uup$',A__questionmark_v0) = 'none$' ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$ (fun_app$n(uuq$, ?v0) = none$a)
+tff(axiom36,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$'] : ( 'fun_app$n'('uuq$',A__questionmark_v0) = 'none$a' ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$ (fun_app$g(uur$, ?v0) = none$b)
+tff(axiom37,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$'] : ( 'fun_app$g'('uur$',A__questionmark_v0) = 'none$b' ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$ (fun_app$p(uuo$, ?v0) = none$c)
+tff(axiom38,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$'] : ( 'fun_app$p'('uuo$',A__questionmark_v0) = 'none$c' ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$ (fun_app$s(uus$, ?v0) = none$b)
+tff(axiom39,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$'] : ( 'fun_app$s'('uus$',A__questionmark_v0) = 'none$b' ) ).
+
+%% ∀ ?v0:H_option_RCharacterData_ext_i_sum$ (fun_app$ah(uvu$, ?v0) = none$a)
+tff(axiom40,axiom,
+    ! [A__questionmark_v0: 'H_option_RCharacterData_ext_i_sum$'] : ( 'fun_app$ah'('uvu$',A__questionmark_v0) = 'none$a' ) ).
+
+%% ∀ ?v0:C_a_b_j_option_RDocument_ext_k_sum$ (fun_app$ai(uwa$, ?v0) = none$b)
+tff(axiom41,axiom,
+    ! [A__questionmark_v0: 'C_a_b_j_option_RDocument_ext_k_sum$'] : ( 'fun_app$ai'('uwa$',A__questionmark_v0) = 'none$b' ) ).
+
+%% ∀ ?v0:C_a_b_j_option_RDocument_ext_RObject_ext$ (fun_app$t(uvf$, ?v0) = false)
+tff(axiom42,axiom,
+    ! [A__questionmark_v0: 'C_a_b_j_option_RDocument_ext_RObject_ext$'] :
+      ( 'fun_app$t'('uvf$',A__questionmark_v0)
+    <=> $false ) ).
+
+%% ∀ ?v0:H_option_RCharacterData_ext_RNode_ext_RObject_ext$ (fun_app$v(uvg$, ?v0) = false)
+tff(axiom43,axiom,
+    ! [A__questionmark_v0: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext$'] :
+      ( 'fun_app$v'('uvg$',A__questionmark_v0)
+    <=> $false ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$ (fun_app$w(uvh$, ?v0) = false)
+tff(axiom44,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$'] :
+      ( 'fun_app$w'('uvh$',A__questionmark_v0)
+    <=> $false ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$ (fun_app$x(uvi$, ?v0) = false)
+tff(axiom45,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$'] :
+      ( 'fun_app$x'('uvi$',A__questionmark_v0)
+    <=> $false ) ).
+
+%% ∀ ?v0:A_element_ptr$ (fun_app$e(uve$, ?v0) = false)
+tff(axiom46,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr$'] :
+      ( 'fun_app$e'('uve$',A__questionmark_v0)
+    <=> $false ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ (fun_app$(uvj$, ?v0) = false)
+tff(axiom47,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$'] :
+      ( 'fun_app$'('uvj$',A__questionmark_v0)
+    <=> $false ) ).
+
+%% ∀ ?v0:C_a_b_j_option_RDocument_ext_RObject_ext$ (fun_app$t(uuz$, ?v0) = true)
+tff(axiom48,axiom,
+    ! [A__questionmark_v0: 'C_a_b_j_option_RDocument_ext_RObject_ext$'] :
+      ( 'fun_app$t'('uuz$',A__questionmark_v0)
+    <=> $true ) ).
+
+%% ∀ ?v0:H_option_RCharacterData_ext_RNode_ext_RObject_ext$ (fun_app$v(uva$, ?v0) = true)
+tff(axiom49,axiom,
+    ! [A__questionmark_v0: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext$'] :
+      ( 'fun_app$v'('uva$',A__questionmark_v0)
+    <=> $true ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$ (fun_app$w(uvb$, ?v0) = true)
+tff(axiom50,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$'] :
+      ( 'fun_app$w'('uvb$',A__questionmark_v0)
+    <=> $true ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$ (fun_app$x(uvc$, ?v0) = true)
+tff(axiom51,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$'] :
+      ( 'fun_app$x'('uvc$',A__questionmark_v0)
+    <=> $true ) ).
+
+%% ∀ ?v0:A_element_ptr$ (fun_app$e(uuy$, ?v0) = true)
+tff(axiom52,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr$'] :
+      ( 'fun_app$e'('uuy$',A__questionmark_v0)
+    <=> $true ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ (fun_app$(uvd$, ?v0) = true)
+tff(axiom53,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$'] :
+      ( 'fun_app$'('uvd$',A__questionmark_v0)
+    <=> $true ) ).
+
+%% ¬∃ ?v0:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$ (fun_app$aj(fun_app$ak(get_N_o_d_e$, node_ptr$), h$) = fun_app$g(some$, ?v0))
+tff(conjecture54,conjecture,
+    ? [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$'] : ( 'fun_app$aj'('fun_app$ak'('get_N_o_d_e$','node_ptr$'),'h$') = 'fun_app$g'('some$',A__questionmark_v0) ) ).
+
+%% ∀ ?v0:B_character_data_ptr$ (member$(?v0, fset$(fun_app$al(character_data_ptr_kinds$, h$))) ⇒ ∃ ?v1:H_option_RCharacterData_ext_RNode_ext_RObject_ext$ (fun_app$am(fun_app$an(get_C_h_a_r_a_c_t_e_r_D_a_t_a$, ?v0), h$) = fun_app$k(some$c, ?v1)))
+tff(hypothesis55,hypothesis,
+    ! [A__questionmark_v0: 'B_character_data_ptr$'] :
+      ( 'member$'(A__questionmark_v0,'fset$'('fun_app$al'('character_data_ptr_kinds$','h$')))
+     => ? [A__questionmark_v1: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext$'] : ( 'fun_app$am'('fun_app$an'('get_C_h_a_r_a_c_t_e_r_D_a_t_a$',A__questionmark_v0),'h$') = 'fun_app$k'('some$c',A__questionmark_v1) ) ) ).
+
+%% ∀ ?v0:D_document_ptr$ (member$a(?v0, fset$a(fun_app$ao(document_ptr_kinds$, h$))) ⇒ ∃ ?v1:C_a_b_j_option_RDocument_ext_RObject_ext$ (fun_app$ap(fun_app$aq(get_D_o_c_u_m_e_n_t$, ?v0), h$) = fun_app$j(some$b, ?v1)))
+tff(hypothesis56,hypothesis,
+    ! [A__questionmark_v0: 'D_document_ptr$'] :
+      ( 'member$a'(A__questionmark_v0,'fset$a'('fun_app$ao'('document_ptr_kinds$','h$')))
+     => ? [A__questionmark_v1: 'C_a_b_j_option_RDocument_ext_RObject_ext$'] : ( 'fun_app$ap'('fun_app$aq'('get_D_o_c_u_m_e_n_t$',A__questionmark_v0),'h$') = 'fun_app$j'('some$b',A__questionmark_v1) ) ) ).
+
+%% (fun_app$ar(fun_app$as(get_E_l_e_m_e_n_t$, element_ptr$), h$) = fun_app$i(some$a, x$))
+tff(hypothesis57,hypothesis,
+    'fun_app$ar'('fun_app$as'('get_E_l_e_m_e_n_t$','element_ptr$'),'h$') = 'fun_app$i'('some$a','x$') ).
+
+%% (h$a = fun_app$at(put_O_b_j_e_c_t$(cast_n_o_d_e_p_t_r_2_o_b_j_e_c_t_p_t_r$(cast_e_l_e_m_e_n_t_p_t_r_2_n_o_d_e_p_t_r$(element_ptr$)), cast_N_o_d_e_2_O_b_j_e_c_t$(cast_E_l_e_m_e_n_t_2_N_o_d_e$(child_nodes_update$(uu$, x$)))), h$))
+tff(hypothesis58,hypothesis,
+    'h$a' = 'fun_app$at'('put_O_b_j_e_c_t$'('cast_n_o_d_e_p_t_r_2_o_b_j_e_c_t_p_t_r$'('cast_e_l_e_m_e_n_t_p_t_r_2_n_o_d_e_p_t_r$'('element_ptr$')),'cast_N_o_d_e_2_O_b_j_e_c_t$'('cast_E_l_e_m_e_n_t_2_N_o_d_e$'('child_nodes_update$'('uu$','x$')))),'h$') ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ (member$c(?v0, fset$b(fun_app$au(node_ptr_kinds$, h$))) ⇒ ∃ ?v1:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$ ((if (cast_e_l_e_m_e_n_t_p_t_r_2_n_o_d_e_p_t_r$(element_ptr$) = ?v0) fun_app$s(cast_O_b_j_e_c_t_2_N_o_d_e$, cast_N_o_d_e_2_O_b_j_e_c_t$(cast_E_l_e_m_e_n_t_2_N_o_d_e$(child_nodes_update$(uu$, x$)))) else fun_app$aj(fun_app$ak(get_N_o_d_e$, ?v0), h$)) = fun_app$g(some$, ?v1)))
+tff(hypothesis59,hypothesis,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$'] :
+      ( 'member$c'(A__questionmark_v0,'fset$b'('fun_app$au'('node_ptr_kinds$','h$')))
+     => ? [A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$'] :
+          ( ( ( 'cast_e_l_e_m_e_n_t_p_t_r_2_n_o_d_e_p_t_r$'('element_ptr$') = A__questionmark_v0 )
+           => ( 'fun_app$s'('cast_O_b_j_e_c_t_2_N_o_d_e$','cast_N_o_d_e_2_O_b_j_e_c_t$'('cast_E_l_e_m_e_n_t_2_N_o_d_e$'('child_nodes_update$'('uu$','x$')))) = 'fun_app$g'('some$',A__questionmark_v1) ) )
+          & ( ( 'cast_e_l_e_m_e_n_t_p_t_r_2_n_o_d_e_p_t_r$'('element_ptr$') != A__questionmark_v0 )
+           => ( 'fun_app$aj'('fun_app$ak'('get_N_o_d_e$',A__questionmark_v0),'h$') = 'fun_app$g'('some$',A__questionmark_v1) ) ) ) ) ).
+
+%% ∀ ?v0:A_element_ptr$ (member$b(?v0, fset$c(fun_app$av(element_ptr_kinds$, h$))) ⇒ ∃ ?v1:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$ ((if (element_ptr$ = ?v0) fun_app$n(cast_N_o_d_e_2_E_l_e_m_e_n_t$, cast_E_l_e_m_e_n_t_2_N_o_d_e$(child_nodes_update$(uu$, x$))) else fun_app$ar(fun_app$as(get_E_l_e_m_e_n_t$, ?v0), h$)) = fun_app$i(some$a, ?v1)))
+tff(hypothesis60,hypothesis,
+    ! [A__questionmark_v0: 'A_element_ptr$'] :
+      ( 'member$b'(A__questionmark_v0,'fset$c'('fun_app$av'('element_ptr_kinds$','h$')))
+     => ? [A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$'] :
+          ( ( ( 'element_ptr$' = A__questionmark_v0 )
+           => ( 'fun_app$n'('cast_N_o_d_e_2_E_l_e_m_e_n_t$','cast_E_l_e_m_e_n_t_2_N_o_d_e$'('child_nodes_update$'('uu$','x$'))) = 'fun_app$i'('some$a',A__questionmark_v1) ) )
+          & ( ( 'element_ptr$' != A__questionmark_v0 )
+           => ( 'fun_app$ar'('fun_app$as'('get_E_l_e_m_e_n_t$',A__questionmark_v0),'h$') = 'fun_app$i'('some$a',A__questionmark_v1) ) ) ) ) ).
+
+%% fun_app$aw(fmember$(node_ptr$), fun_app$au(node_ptr_kinds$, h$))
+tff(hypothesis61,hypothesis,
+    'fun_app$aw'('fmember$'('node_ptr$'),'fun_app$au'('node_ptr_kinds$','h$')) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$ ?v2:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$ ?v3:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ (fun_app$aj(fun_app$ak(get_N_o_d_e$, ?v0), fun_app$at(put_O_b_j_e_c_t$(?v1, ?v2), ?v3)) = (if (?v1 = cast_n_o_d_e_p_t_r_2_o_b_j_e_c_t_p_t_r$(?v0)) fun_app$s(cast_O_b_j_e_c_t_2_N_o_d_e$, ?v2) else fun_app$aj(fun_app$ak(get_N_o_d_e$, ?v0), ?v3)))
+tff(axiom62,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$',A__questionmark_v2: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$',A__questionmark_v3: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$'] :
+      ( ( ( A__questionmark_v1 = 'cast_n_o_d_e_p_t_r_2_o_b_j_e_c_t_p_t_r$'(A__questionmark_v0) )
+       => ( 'fun_app$aj'('fun_app$ak'('get_N_o_d_e$',A__questionmark_v0),'fun_app$at'('put_O_b_j_e_c_t$'(A__questionmark_v1,A__questionmark_v2),A__questionmark_v3)) = 'fun_app$s'('cast_O_b_j_e_c_t_2_N_o_d_e$',A__questionmark_v2) ) )
+      & ( ( A__questionmark_v1 != 'cast_n_o_d_e_p_t_r_2_o_b_j_e_c_t_p_t_r$'(A__questionmark_v0) )
+       => ( 'fun_app$aj'('fun_app$ak'('get_N_o_d_e$',A__questionmark_v0),'fun_app$at'('put_O_b_j_e_c_t$'(A__questionmark_v1,A__questionmark_v2),A__questionmark_v3)) = 'fun_app$aj'('fun_app$ak'('get_N_o_d_e$',A__questionmark_v0),A__questionmark_v3) ) ) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$ (fun_app$n(cast_N_o_d_e_2_E_l_e_m_e_n_t$, cast_E_l_e_m_e_n_t_2_N_o_d_e$(?v0)) = fun_app$i(some$a, ?v0))
+tff(axiom63,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$'] : ( 'fun_app$n'('cast_N_o_d_e_2_E_l_e_m_e_n_t$','cast_E_l_e_m_e_n_t_2_N_o_d_e$'(A__questionmark_v0)) = 'fun_app$i'('some$a',A__questionmark_v0) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$ ?v1:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$ ((fun_app$n(cast_N_o_d_e_2_E_l_e_m_e_n_t$, ?v0) = fun_app$i(some$a, ?v1)) = (cast_E_l_e_m_e_n_t_2_N_o_d_e$(?v1) = ?v0))
+tff(axiom64,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$',A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$'] :
+      ( ( 'fun_app$n'('cast_N_o_d_e_2_E_l_e_m_e_n_t$',A__questionmark_v0) = 'fun_app$i'('some$a',A__questionmark_v1) )
+    <=> ( 'cast_E_l_e_m_e_n_t_2_N_o_d_e$'(A__questionmark_v1) = A__questionmark_v0 ) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$ (fun_app$s(cast_O_b_j_e_c_t_2_N_o_d_e$, cast_N_o_d_e_2_O_b_j_e_c_t$(?v0)) = fun_app$g(some$, ?v0))
+tff(axiom65,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$'] : ( 'fun_app$s'('cast_O_b_j_e_c_t_2_N_o_d_e$','cast_N_o_d_e_2_O_b_j_e_c_t$'(A__questionmark_v0)) = 'fun_app$g'('some$',A__questionmark_v0) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$ ?v1:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$ ((fun_app$s(cast_O_b_j_e_c_t_2_N_o_d_e$, ?v0) = fun_app$g(some$, ?v1)) = (cast_N_o_d_e_2_O_b_j_e_c_t$(?v1) = ?v0))
+tff(axiom66,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$',A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$'] :
+      ( ( 'fun_app$s'('cast_O_b_j_e_c_t_2_N_o_d_e$',A__questionmark_v0) = 'fun_app$g'('some$',A__questionmark_v1) )
+    <=> ( 'cast_N_o_d_e_2_O_b_j_e_c_t$'(A__questionmark_v1) = A__questionmark_v0 ) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr_fset$ (member$d(?v0, fset$d(?v1)) = fmember$a(?v0, ?v1))
+tff(axiom67,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr_fset$'] :
+      ( 'member$d'(A__questionmark_v0,'fset$d'(A__questionmark_v1))
+    <=> 'fmember$a'(A__questionmark_v0,A__questionmark_v1) ) ).
+
+%% ∀ ?v0:B_character_data_ptr$ ?v1:B_character_data_ptr_fset$ (member$(?v0, fset$(?v1)) = fmember$b(?v0, ?v1))
+tff(axiom68,axiom,
+    ! [A__questionmark_v0: 'B_character_data_ptr$',A__questionmark_v1: 'B_character_data_ptr_fset$'] :
+      ( 'member$'(A__questionmark_v0,'fset$'(A__questionmark_v1))
+    <=> 'fmember$b'(A__questionmark_v0,A__questionmark_v1) ) ).
+
+%% ∀ ?v0:D_document_ptr$ ?v1:D_document_ptr_fset$ (member$a(?v0, fset$a(?v1)) = fmember$c(?v0, ?v1))
+tff(axiom69,axiom,
+    ! [A__questionmark_v0: 'D_document_ptr$',A__questionmark_v1: 'D_document_ptr_fset$'] :
+      ( 'member$a'(A__questionmark_v0,'fset$a'(A__questionmark_v1))
+    <=> 'fmember$c'(A__questionmark_v0,A__questionmark_v1) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$ (member$c(?v0, fset$b(?v1)) = fun_app$aw(fmember$(?v0), ?v1))
+tff(axiom70,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$'] :
+      ( 'member$c'(A__questionmark_v0,'fset$b'(A__questionmark_v1))
+    <=> 'fun_app$aw'('fmember$'(A__questionmark_v0),A__questionmark_v1) ) ).
+
+%% ∀ ?v0:A_element_ptr$ ?v1:A_element_ptr_fset$ (member$b(?v0, fset$c(?v1)) = fmember$d(?v0, ?v1))
+tff(axiom71,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr$',A__questionmark_v1: 'A_element_ptr_fset$'] :
+      ( 'member$b'(A__questionmark_v0,'fset$c'(A__questionmark_v1))
+    <=> 'fmember$d'(A__questionmark_v0,A__questionmark_v1) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$ ?v1:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$ ((cast_E_l_e_m_e_n_t_2_N_o_d_e$(?v0) = cast_E_l_e_m_e_n_t_2_N_o_d_e$(?v1)) = (?v0 = ?v1))
+tff(axiom72,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$',A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$'] :
+      ( ( 'cast_E_l_e_m_e_n_t_2_N_o_d_e$'(A__questionmark_v0) = 'cast_E_l_e_m_e_n_t_2_N_o_d_e$'(A__questionmark_v1) )
+    <=> ( A__questionmark_v0 = A__questionmark_v1 ) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$ ?v1:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$ ((cast_N_o_d_e_2_O_b_j_e_c_t$(?v0) = cast_N_o_d_e_2_O_b_j_e_c_t$(?v1)) = (?v0 = ?v1))
+tff(axiom73,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$',A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$'] :
+      ( ( 'cast_N_o_d_e_2_O_b_j_e_c_t$'(A__questionmark_v0) = 'cast_N_o_d_e_2_O_b_j_e_c_t$'(A__questionmark_v1) )
+    <=> ( A__questionmark_v0 = A__questionmark_v1 ) ) ).
+
+%% ∀ ?v0:A_element_ptr$ ?v1:A_element_ptr$ ((cast_e_l_e_m_e_n_t_p_t_r_2_n_o_d_e_p_t_r$(?v0) = cast_e_l_e_m_e_n_t_p_t_r_2_n_o_d_e_p_t_r$(?v1)) = (?v0 = ?v1))
+tff(axiom74,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr$',A__questionmark_v1: 'A_element_ptr$'] :
+      ( ( 'cast_e_l_e_m_e_n_t_p_t_r_2_n_o_d_e_p_t_r$'(A__questionmark_v0) = 'cast_e_l_e_m_e_n_t_p_t_r_2_n_o_d_e_p_t_r$'(A__questionmark_v1) )
+    <=> ( A__questionmark_v0 = A__questionmark_v1 ) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ ((cast_n_o_d_e_p_t_r_2_o_b_j_e_c_t_p_t_r$(?v0) = cast_n_o_d_e_p_t_r_2_o_b_j_e_c_t_p_t_r$(?v1)) = (?v0 = ?v1))
+tff(axiom75,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$'] :
+      ( ( 'cast_n_o_d_e_p_t_r_2_o_b_j_e_c_t_p_t_r$'(A__questionmark_v0) = 'cast_n_o_d_e_p_t_r_2_o_b_j_e_c_t_p_t_r$'(A__questionmark_v1) )
+    <=> ( A__questionmark_v0 = A__questionmark_v1 ) ) ).
+
+%% ∀ ?v0:A_element_ptr$ ?v1:A_element_ptr$ ((fun_app$ax(some$d, ?v0) = fun_app$ax(some$d, ?v1)) = (?v0 = ?v1))
+tff(axiom76,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr$',A__questionmark_v1: 'A_element_ptr$'] :
+      ( ( 'fun_app$ax'('some$d',A__questionmark_v0) = 'fun_app$ax'('some$d',A__questionmark_v1) )
+    <=> ( A__questionmark_v0 = A__questionmark_v1 ) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ ((fun_app$ay(some$e, ?v0) = fun_app$ay(some$e, ?v1)) = (?v0 = ?v1))
+tff(axiom77,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$'] :
+      ( ( 'fun_app$ay'('some$e',A__questionmark_v0) = 'fun_app$ay'('some$e',A__questionmark_v1) )
+    <=> ( A__questionmark_v0 = A__questionmark_v1 ) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$ ?v1:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$ ((fun_app$az(some$f, ?v0) = fun_app$az(some$f, ?v1)) = (?v0 = ?v1))
+tff(axiom78,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$',A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$'] :
+      ( ( 'fun_app$az'('some$f',A__questionmark_v0) = 'fun_app$az'('some$f',A__questionmark_v1) )
+    <=> ( A__questionmark_v0 = A__questionmark_v1 ) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$ ?v1:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$ ((fun_app$g(some$, ?v0) = fun_app$g(some$, ?v1)) = (?v0 = ?v1))
+tff(axiom79,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$',A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$'] :
+      ( ( 'fun_app$g'('some$',A__questionmark_v0) = 'fun_app$g'('some$',A__questionmark_v1) )
+    <=> ( A__questionmark_v0 = A__questionmark_v1 ) ) ).
+
+%% ∀ ?v0:H_option_RCharacterData_ext_RNode_ext_RObject_ext$ ?v1:H_option_RCharacterData_ext_RNode_ext_RObject_ext$ ((fun_app$k(some$c, ?v0) = fun_app$k(some$c, ?v1)) = (?v0 = ?v1))
+tff(axiom80,axiom,
+    ! [A__questionmark_v0: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext$',A__questionmark_v1: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext$'] :
+      ( ( 'fun_app$k'('some$c',A__questionmark_v0) = 'fun_app$k'('some$c',A__questionmark_v1) )
+    <=> ( A__questionmark_v0 = A__questionmark_v1 ) ) ).
+
+%% ∀ ?v0:C_a_b_j_option_RDocument_ext_RObject_ext$ ?v1:C_a_b_j_option_RDocument_ext_RObject_ext$ ((fun_app$j(some$b, ?v0) = fun_app$j(some$b, ?v1)) = (?v0 = ?v1))
+tff(axiom81,axiom,
+    ! [A__questionmark_v0: 'C_a_b_j_option_RDocument_ext_RObject_ext$',A__questionmark_v1: 'C_a_b_j_option_RDocument_ext_RObject_ext$'] :
+      ( ( 'fun_app$j'('some$b',A__questionmark_v0) = 'fun_app$j'('some$b',A__questionmark_v1) )
+    <=> ( A__questionmark_v0 = A__questionmark_v1 ) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$ ?v1:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$ ((fun_app$i(some$a, ?v0) = fun_app$i(some$a, ?v1)) = (?v0 = ?v1))
+tff(axiom82,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$',A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$'] :
+      ( ( 'fun_app$i'('some$a',A__questionmark_v0) = 'fun_app$i'('some$a',A__questionmark_v1) )
+    <=> ( A__questionmark_v0 = A__questionmark_v1 ) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr_fset$ (fmember$a(?v0, ?v1) = member$d(?v0, fset$d(?v1)))
+tff(axiom83,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr_fset$'] :
+      ( 'fmember$a'(A__questionmark_v0,A__questionmark_v1)
+    <=> 'member$d'(A__questionmark_v0,'fset$d'(A__questionmark_v1)) ) ).
+
+%% ∀ ?v0:B_character_data_ptr$ ?v1:B_character_data_ptr_fset$ (fmember$b(?v0, ?v1) = member$(?v0, fset$(?v1)))
+tff(axiom84,axiom,
+    ! [A__questionmark_v0: 'B_character_data_ptr$',A__questionmark_v1: 'B_character_data_ptr_fset$'] :
+      ( 'fmember$b'(A__questionmark_v0,A__questionmark_v1)
+    <=> 'member$'(A__questionmark_v0,'fset$'(A__questionmark_v1)) ) ).
+
+%% ∀ ?v0:D_document_ptr$ ?v1:D_document_ptr_fset$ (fmember$c(?v0, ?v1) = member$a(?v0, fset$a(?v1)))
+tff(axiom85,axiom,
+    ! [A__questionmark_v0: 'D_document_ptr$',A__questionmark_v1: 'D_document_ptr_fset$'] :
+      ( 'fmember$c'(A__questionmark_v0,A__questionmark_v1)
+    <=> 'member$a'(A__questionmark_v0,'fset$a'(A__questionmark_v1)) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$ (fun_app$aw(fmember$(?v0), ?v1) = member$c(?v0, fset$b(?v1)))
+tff(axiom86,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$'] :
+      ( 'fun_app$aw'('fmember$'(A__questionmark_v0),A__questionmark_v1)
+    <=> 'member$c'(A__questionmark_v0,'fset$b'(A__questionmark_v1)) ) ).
+
+%% ∀ ?v0:A_element_ptr$ ?v1:A_element_ptr_fset$ (fmember$d(?v0, ?v1) = member$b(?v0, fset$c(?v1)))
+tff(axiom87,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr$',A__questionmark_v1: 'A_element_ptr_fset$'] :
+      ( 'fmember$d'(A__questionmark_v0,A__questionmark_v1)
+    <=> 'member$b'(A__questionmark_v0,'fset$c'(A__questionmark_v1)) ) ).
+
+%% ∀ ?v0:A_element_ptr$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ (fun_app$aw(fmember$(cast_e_l_e_m_e_n_t_p_t_r_2_n_o_d_e_p_t_r$(?v0)), fun_app$au(node_ptr_kinds$, ?v1)) = fmember$d(?v0, fun_app$av(element_ptr_kinds$, ?v1)))
+tff(axiom88,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$'] :
+      ( 'fun_app$aw'('fmember$'('cast_e_l_e_m_e_n_t_p_t_r_2_n_o_d_e_p_t_r$'(A__questionmark_v0)),'fun_app$au'('node_ptr_kinds$',A__questionmark_v1))
+    <=> 'fmember$d'(A__questionmark_v0,'fun_app$av'('element_ptr_kinds$',A__questionmark_v1)) ) ).
+
+%% ∀ ?v0:A_element_ptr$ ?v1:A_element_ptr$ ?v2:A_element_ptr_fset$ ((?v0 = ?v1) ⇒ (fmember$d(?v0, ?v2) = fmember$d(?v1, ?v2)))
+tff(axiom89,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr$',A__questionmark_v1: 'A_element_ptr$',A__questionmark_v2: 'A_element_ptr_fset$'] :
+      ( ( A__questionmark_v0 = A__questionmark_v1 )
+     => ( 'fmember$d'(A__questionmark_v0,A__questionmark_v2)
+      <=> 'fmember$d'(A__questionmark_v1,A__questionmark_v2) ) ) ).
+
+%% ∀ ?v0:D_document_ptr$ ?v1:D_document_ptr$ ?v2:D_document_ptr_fset$ ((?v0 = ?v1) ⇒ (fmember$c(?v0, ?v2) = fmember$c(?v1, ?v2)))
+tff(axiom90,axiom,
+    ! [A__questionmark_v0: 'D_document_ptr$',A__questionmark_v1: 'D_document_ptr$',A__questionmark_v2: 'D_document_ptr_fset$'] :
+      ( ( A__questionmark_v0 = A__questionmark_v1 )
+     => ( 'fmember$c'(A__questionmark_v0,A__questionmark_v2)
+      <=> 'fmember$c'(A__questionmark_v1,A__questionmark_v2) ) ) ).
+
+%% ∀ ?v0:B_character_data_ptr$ ?v1:B_character_data_ptr$ ?v2:B_character_data_ptr_fset$ ((?v0 = ?v1) ⇒ (fmember$b(?v0, ?v2) = fmember$b(?v1, ?v2)))
+tff(axiom91,axiom,
+    ! [A__questionmark_v0: 'B_character_data_ptr$',A__questionmark_v1: 'B_character_data_ptr$',A__questionmark_v2: 'B_character_data_ptr_fset$'] :
+      ( ( A__questionmark_v0 = A__questionmark_v1 )
+     => ( 'fmember$b'(A__questionmark_v0,A__questionmark_v2)
+      <=> 'fmember$b'(A__questionmark_v1,A__questionmark_v2) ) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr_fset$ ((?v0 = ?v1) ⇒ (fmember$a(?v0, ?v2) = fmember$a(?v1, ?v2)))
+tff(axiom92,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr_fset$'] :
+      ( ( A__questionmark_v0 = A__questionmark_v1 )
+     => ( 'fmember$a'(A__questionmark_v0,A__questionmark_v2)
+      <=> 'fmember$a'(A__questionmark_v1,A__questionmark_v2) ) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$ ((?v0 = ?v1) ⇒ (fun_app$aw(fmember$(?v0), ?v2) = fun_app$aw(fmember$(?v1), ?v2)))
+tff(axiom93,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$'] :
+      ( ( A__questionmark_v0 = A__questionmark_v1 )
+     => ( 'fun_app$aw'('fmember$'(A__questionmark_v0),A__questionmark_v2)
+      <=> 'fun_app$aw'('fmember$'(A__questionmark_v1),A__questionmark_v2) ) ) ).
+
+%% ∀ ?v0:A_element_ptr$ ?v1:Bool ?v2:A_element_ptr_fset$ ?v3:A_element_ptr_fset$ (fmember$d(?v0, (if ?v1 ?v2 else ?v3)) = ((?v1 ⇒ fmember$d(?v0, ?v2)) ∧ (¬?v1 ⇒ fmember$d(?v0, ?v3))))
+tff(axiom94,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr$',A__questionmark_v1: tlbool,A__questionmark_v2: 'A_element_ptr_fset$',A__questionmark_v3: 'A_element_ptr_fset$'] :
+      ( ( ( ( A__questionmark_v1 = tltrue )
+         => 'fmember$d'(A__questionmark_v0,A__questionmark_v2) )
+        & ( ( A__questionmark_v1 != tltrue )
+         => 'fmember$d'(A__questionmark_v0,A__questionmark_v3) ) )
+    <=> ( ( ( A__questionmark_v1 = tltrue )
+         => 'fmember$d'(A__questionmark_v0,A__questionmark_v2) )
+        & ( ( A__questionmark_v1 != tltrue )
+         => 'fmember$d'(A__questionmark_v0,A__questionmark_v3) ) ) ) ).
+
+%% ∀ ?v0:D_document_ptr$ ?v1:Bool ?v2:D_document_ptr_fset$ ?v3:D_document_ptr_fset$ (fmember$c(?v0, (if ?v1 ?v2 else ?v3)) = ((?v1 ⇒ fmember$c(?v0, ?v2)) ∧ (¬?v1 ⇒ fmember$c(?v0, ?v3))))
+tff(axiom95,axiom,
+    ! [A__questionmark_v0: 'D_document_ptr$',A__questionmark_v1: tlbool,A__questionmark_v2: 'D_document_ptr_fset$',A__questionmark_v3: 'D_document_ptr_fset$'] :
+      ( ( ( ( A__questionmark_v1 = tltrue )
+         => 'fmember$c'(A__questionmark_v0,A__questionmark_v2) )
+        & ( ( A__questionmark_v1 != tltrue )
+         => 'fmember$c'(A__questionmark_v0,A__questionmark_v3) ) )
+    <=> ( ( ( A__questionmark_v1 = tltrue )
+         => 'fmember$c'(A__questionmark_v0,A__questionmark_v2) )
+        & ( ( A__questionmark_v1 != tltrue )
+         => 'fmember$c'(A__questionmark_v0,A__questionmark_v3) ) ) ) ).
+
+%% ∀ ?v0:B_character_data_ptr$ ?v1:Bool ?v2:B_character_data_ptr_fset$ ?v3:B_character_data_ptr_fset$ (fmember$b(?v0, (if ?v1 ?v2 else ?v3)) = ((?v1 ⇒ fmember$b(?v0, ?v2)) ∧ (¬?v1 ⇒ fmember$b(?v0, ?v3))))
+tff(axiom96,axiom,
+    ! [A__questionmark_v0: 'B_character_data_ptr$',A__questionmark_v1: tlbool,A__questionmark_v2: 'B_character_data_ptr_fset$',A__questionmark_v3: 'B_character_data_ptr_fset$'] :
+      ( ( ( ( A__questionmark_v1 = tltrue )
+         => 'fmember$b'(A__questionmark_v0,A__questionmark_v2) )
+        & ( ( A__questionmark_v1 != tltrue )
+         => 'fmember$b'(A__questionmark_v0,A__questionmark_v3) ) )
+    <=> ( ( ( A__questionmark_v1 = tltrue )
+         => 'fmember$b'(A__questionmark_v0,A__questionmark_v2) )
+        & ( ( A__questionmark_v1 != tltrue )
+         => 'fmember$b'(A__questionmark_v0,A__questionmark_v3) ) ) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$ ?v1:Bool ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr_fset$ ?v3:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr_fset$ (fmember$a(?v0, (if ?v1 ?v2 else ?v3)) = ((?v1 ⇒ fmember$a(?v0, ?v2)) ∧ (¬?v1 ⇒ fmember$a(?v0, ?v3))))
+tff(axiom97,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$',A__questionmark_v1: tlbool,A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr_fset$',A__questionmark_v3: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr_fset$'] :
+      ( ( ( ( A__questionmark_v1 = tltrue )
+         => 'fmember$a'(A__questionmark_v0,A__questionmark_v2) )
+        & ( ( A__questionmark_v1 != tltrue )
+         => 'fmember$a'(A__questionmark_v0,A__questionmark_v3) ) )
+    <=> ( ( ( A__questionmark_v1 = tltrue )
+         => 'fmember$a'(A__questionmark_v0,A__questionmark_v2) )
+        & ( ( A__questionmark_v1 != tltrue )
+         => 'fmember$a'(A__questionmark_v0,A__questionmark_v3) ) ) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ ?v1:Bool ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$ ?v3:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$ (fun_app$aw(fmember$(?v0), (if ?v1 ?v2 else ?v3)) = ((?v1 ⇒ fun_app$aw(fmember$(?v0), ?v2)) ∧ (¬?v1 ⇒ fun_app$aw(fmember$(?v0), ?v3))))
+tff(axiom98,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$',A__questionmark_v1: tlbool,A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$',A__questionmark_v3: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$'] :
+      ( ( ( ( A__questionmark_v1 = tltrue )
+         => 'fun_app$aw'('fmember$'(A__questionmark_v0),A__questionmark_v2) )
+        & ( ( A__questionmark_v1 != tltrue )
+         => 'fun_app$aw'('fmember$'(A__questionmark_v0),A__questionmark_v3) ) )
+    <=> ( ( ( A__questionmark_v1 = tltrue )
+         => 'fun_app$aw'('fmember$'(A__questionmark_v0),A__questionmark_v2) )
+        & ( ( A__questionmark_v1 != tltrue )
+         => 'fun_app$aw'('fmember$'(A__questionmark_v0),A__questionmark_v3) ) ) ) ).
+
+%% ∀ ?v0:Bool ?v1:A_element_ptr$ ?v2:A_element_ptr$ ?v3:A_element_ptr_fset$ (fmember$d((if ?v0 ?v1 else ?v2), ?v3) = ((?v0 ⇒ fmember$d(?v1, ?v3)) ∧ (¬?v0 ⇒ fmember$d(?v2, ?v3))))
+tff(axiom99,axiom,
+    ! [A__questionmark_v0: tlbool,A__questionmark_v1: 'A_element_ptr$',A__questionmark_v2: 'A_element_ptr$',A__questionmark_v3: 'A_element_ptr_fset$'] :
+      ( ( ( ( A__questionmark_v0 = tltrue )
+         => 'fmember$d'(A__questionmark_v1,A__questionmark_v3) )
+        & ( ( A__questionmark_v0 != tltrue )
+         => 'fmember$d'(A__questionmark_v2,A__questionmark_v3) ) )
+    <=> ( ( ( A__questionmark_v0 = tltrue )
+         => 'fmember$d'(A__questionmark_v1,A__questionmark_v3) )
+        & ( ( A__questionmark_v0 != tltrue )
+         => 'fmember$d'(A__questionmark_v2,A__questionmark_v3) ) ) ) ).
+
+%% ∀ ?v0:Bool ?v1:D_document_ptr$ ?v2:D_document_ptr$ ?v3:D_document_ptr_fset$ (fmember$c((if ?v0 ?v1 else ?v2), ?v3) = ((?v0 ⇒ fmember$c(?v1, ?v3)) ∧ (¬?v0 ⇒ fmember$c(?v2, ?v3))))
+tff(axiom100,axiom,
+    ! [A__questionmark_v0: tlbool,A__questionmark_v1: 'D_document_ptr$',A__questionmark_v2: 'D_document_ptr$',A__questionmark_v3: 'D_document_ptr_fset$'] :
+      ( ( ( ( A__questionmark_v0 = tltrue )
+         => 'fmember$c'(A__questionmark_v1,A__questionmark_v3) )
+        & ( ( A__questionmark_v0 != tltrue )
+         => 'fmember$c'(A__questionmark_v2,A__questionmark_v3) ) )
+    <=> ( ( ( A__questionmark_v0 = tltrue )
+         => 'fmember$c'(A__questionmark_v1,A__questionmark_v3) )
+        & ( ( A__questionmark_v0 != tltrue )
+         => 'fmember$c'(A__questionmark_v2,A__questionmark_v3) ) ) ) ).
+
+%% ∀ ?v0:Bool ?v1:B_character_data_ptr$ ?v2:B_character_data_ptr$ ?v3:B_character_data_ptr_fset$ (fmember$b((if ?v0 ?v1 else ?v2), ?v3) = ((?v0 ⇒ fmember$b(?v1, ?v3)) ∧ (¬?v0 ⇒ fmember$b(?v2, ?v3))))
+tff(axiom101,axiom,
+    ! [A__questionmark_v0: tlbool,A__questionmark_v1: 'B_character_data_ptr$',A__questionmark_v2: 'B_character_data_ptr$',A__questionmark_v3: 'B_character_data_ptr_fset$'] :
+      ( ( ( ( A__questionmark_v0 = tltrue )
+         => 'fmember$b'(A__questionmark_v1,A__questionmark_v3) )
+        & ( ( A__questionmark_v0 != tltrue )
+         => 'fmember$b'(A__questionmark_v2,A__questionmark_v3) ) )
+    <=> ( ( ( A__questionmark_v0 = tltrue )
+         => 'fmember$b'(A__questionmark_v1,A__questionmark_v3) )
+        & ( ( A__questionmark_v0 != tltrue )
+         => 'fmember$b'(A__questionmark_v2,A__questionmark_v3) ) ) ) ).
+
+%% ∀ ?v0:Bool ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$ ?v3:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr_fset$ (fmember$a((if ?v0 ?v1 else ?v2), ?v3) = ((?v0 ⇒ fmember$a(?v1, ?v3)) ∧ (¬?v0 ⇒ fmember$a(?v2, ?v3))))
+tff(axiom102,axiom,
+    ! [A__questionmark_v0: tlbool,A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$',A__questionmark_v3: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr_fset$'] :
+      ( ( ( ( A__questionmark_v0 = tltrue )
+         => 'fmember$a'(A__questionmark_v1,A__questionmark_v3) )
+        & ( ( A__questionmark_v0 != tltrue )
+         => 'fmember$a'(A__questionmark_v2,A__questionmark_v3) ) )
+    <=> ( ( ( A__questionmark_v0 = tltrue )
+         => 'fmember$a'(A__questionmark_v1,A__questionmark_v3) )
+        & ( ( A__questionmark_v0 != tltrue )
+         => 'fmember$a'(A__questionmark_v2,A__questionmark_v3) ) ) ) ).
+
+%% ∀ ?v0:Bool ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ ?v3:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$ (fun_app$aw(fmember$((if ?v0 ?v1 else ?v2)), ?v3) = ((?v0 ⇒ fun_app$aw(fmember$(?v1), ?v3)) ∧ (¬?v0 ⇒ fun_app$aw(fmember$(?v2), ?v3))))
+tff(axiom103,axiom,
+    ! [A__questionmark_v0: tlbool,A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$',A__questionmark_v3: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$'] :
+      ( ( ( ( A__questionmark_v0 = tltrue )
+         => 'fun_app$aw'('fmember$'(A__questionmark_v1),A__questionmark_v3) )
+        & ( ( A__questionmark_v0 != tltrue )
+         => 'fun_app$aw'('fmember$'(A__questionmark_v2),A__questionmark_v3) ) )
+    <=> ( ( ( A__questionmark_v0 = tltrue )
+         => 'fun_app$aw'('fmember$'(A__questionmark_v1),A__questionmark_v3) )
+        & ( ( A__questionmark_v0 != tltrue )
+         => 'fun_app$aw'('fmember$'(A__questionmark_v2),A__questionmark_v3) ) ) ) ).
+
+%% ∀ ?v0:A_element_ptr_fset$ ?v1:A_element_ptr_fset$ ?v2:A_element_ptr$ ((?v0 = ?v1) ⇒ (fmember$d(?v2, ?v0) = fmember$d(?v2, ?v1)))
+tff(axiom104,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_fset$',A__questionmark_v1: 'A_element_ptr_fset$',A__questionmark_v2: 'A_element_ptr$'] :
+      ( ( A__questionmark_v0 = A__questionmark_v1 )
+     => ( 'fmember$d'(A__questionmark_v2,A__questionmark_v0)
+      <=> 'fmember$d'(A__questionmark_v2,A__questionmark_v1) ) ) ).
+
+%% ∀ ?v0:D_document_ptr_fset$ ?v1:D_document_ptr_fset$ ?v2:D_document_ptr$ ((?v0 = ?v1) ⇒ (fmember$c(?v2, ?v0) = fmember$c(?v2, ?v1)))
+tff(axiom105,axiom,
+    ! [A__questionmark_v0: 'D_document_ptr_fset$',A__questionmark_v1: 'D_document_ptr_fset$',A__questionmark_v2: 'D_document_ptr$'] :
+      ( ( A__questionmark_v0 = A__questionmark_v1 )
+     => ( 'fmember$c'(A__questionmark_v2,A__questionmark_v0)
+      <=> 'fmember$c'(A__questionmark_v2,A__questionmark_v1) ) ) ).
+
+%% ∀ ?v0:B_character_data_ptr_fset$ ?v1:B_character_data_ptr_fset$ ?v2:B_character_data_ptr$ ((?v0 = ?v1) ⇒ (fmember$b(?v2, ?v0) = fmember$b(?v2, ?v1)))
+tff(axiom106,axiom,
+    ! [A__questionmark_v0: 'B_character_data_ptr_fset$',A__questionmark_v1: 'B_character_data_ptr_fset$',A__questionmark_v2: 'B_character_data_ptr$'] :
+      ( ( A__questionmark_v0 = A__questionmark_v1 )
+     => ( 'fmember$b'(A__questionmark_v2,A__questionmark_v0)
+      <=> 'fmember$b'(A__questionmark_v2,A__questionmark_v1) ) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr_fset$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr_fset$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$ ((?v0 = ?v1) ⇒ (fmember$a(?v2, ?v0) = fmember$a(?v2, ?v1)))
+tff(axiom107,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr_fset$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr_fset$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$'] :
+      ( ( A__questionmark_v0 = A__questionmark_v1 )
+     => ( 'fmember$a'(A__questionmark_v2,A__questionmark_v0)
+      <=> 'fmember$a'(A__questionmark_v2,A__questionmark_v1) ) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ ((?v0 = ?v1) ⇒ (fun_app$aw(fmember$(?v2), ?v0) = fun_app$aw(fmember$(?v2), ?v1)))
+tff(axiom108,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$'] :
+      ( ( A__questionmark_v0 = A__questionmark_v1 )
+     => ( 'fun_app$aw'('fmember$'(A__questionmark_v2),A__questionmark_v0)
+      <=> 'fun_app$aw'('fmember$'(A__questionmark_v2),A__questionmark_v1) ) ) ).
+
+%% ∀ ?v0:A_element_ptr$ ?v1:A_element_ptr$ ?v2:A_element_ptr_fset$ (((?v0 = ?v1) ∧ fmember$d(?v1, ?v2)) ⇒ fmember$d(?v0, ?v2))
+tff(axiom109,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr$',A__questionmark_v1: 'A_element_ptr$',A__questionmark_v2: 'A_element_ptr_fset$'] :
+      ( ( ( A__questionmark_v0 = A__questionmark_v1 )
+        & 'fmember$d'(A__questionmark_v1,A__questionmark_v2) )
+     => 'fmember$d'(A__questionmark_v0,A__questionmark_v2) ) ).
+
+%% ∀ ?v0:D_document_ptr$ ?v1:D_document_ptr$ ?v2:D_document_ptr_fset$ (((?v0 = ?v1) ∧ fmember$c(?v1, ?v2)) ⇒ fmember$c(?v0, ?v2))
+tff(axiom110,axiom,
+    ! [A__questionmark_v0: 'D_document_ptr$',A__questionmark_v1: 'D_document_ptr$',A__questionmark_v2: 'D_document_ptr_fset$'] :
+      ( ( ( A__questionmark_v0 = A__questionmark_v1 )
+        & 'fmember$c'(A__questionmark_v1,A__questionmark_v2) )
+     => 'fmember$c'(A__questionmark_v0,A__questionmark_v2) ) ).
+
+%% ∀ ?v0:B_character_data_ptr$ ?v1:B_character_data_ptr$ ?v2:B_character_data_ptr_fset$ (((?v0 = ?v1) ∧ fmember$b(?v1, ?v2)) ⇒ fmember$b(?v0, ?v2))
+tff(axiom111,axiom,
+    ! [A__questionmark_v0: 'B_character_data_ptr$',A__questionmark_v1: 'B_character_data_ptr$',A__questionmark_v2: 'B_character_data_ptr_fset$'] :
+      ( ( ( A__questionmark_v0 = A__questionmark_v1 )
+        & 'fmember$b'(A__questionmark_v1,A__questionmark_v2) )
+     => 'fmember$b'(A__questionmark_v0,A__questionmark_v2) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr_fset$ (((?v0 = ?v1) ∧ fmember$a(?v1, ?v2)) ⇒ fmember$a(?v0, ?v2))
+tff(axiom112,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr_fset$'] :
+      ( ( ( A__questionmark_v0 = A__questionmark_v1 )
+        & 'fmember$a'(A__questionmark_v1,A__questionmark_v2) )
+     => 'fmember$a'(A__questionmark_v0,A__questionmark_v2) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$ (((?v0 = ?v1) ∧ fun_app$aw(fmember$(?v1), ?v2)) ⇒ fun_app$aw(fmember$(?v0), ?v2))
+tff(axiom113,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$'] :
+      ( ( ( A__questionmark_v0 = A__questionmark_v1 )
+        & 'fun_app$aw'('fmember$'(A__questionmark_v1),A__questionmark_v2) )
+     => 'fun_app$aw'('fmember$'(A__questionmark_v0),A__questionmark_v2) ) ).
+
+%% ∀ ?v0:A_element_ptr_fset$ ?v1:A_element_ptr_fset$ ?v2:A_element_ptr$ (((?v0 = ?v1) ∧ (((fmember$d(?v2, ?v0) ∧ fmember$d(?v2, ?v1)) ⇒ false) ∧ ((¬fmember$d(?v2, ?v0) ∧ ¬fmember$d(?v2, ?v1)) ⇒ false))) ⇒ false)
+tff(axiom114,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_fset$',A__questionmark_v1: 'A_element_ptr_fset$',A__questionmark_v2: 'A_element_ptr$'] :
+      ( ( ( A__questionmark_v0 = A__questionmark_v1 )
+        & ( ( 'fmember$d'(A__questionmark_v2,A__questionmark_v0)
+            & 'fmember$d'(A__questionmark_v2,A__questionmark_v1) )
+         => $false )
+        & ( ( ~ 'fmember$d'(A__questionmark_v2,A__questionmark_v0)
+            & ~ 'fmember$d'(A__questionmark_v2,A__questionmark_v1) )
+         => $false ) )
+     => $false ) ).
+
+%% ∀ ?v0:D_document_ptr_fset$ ?v1:D_document_ptr_fset$ ?v2:D_document_ptr$ (((?v0 = ?v1) ∧ (((fmember$c(?v2, ?v0) ∧ fmember$c(?v2, ?v1)) ⇒ false) ∧ ((¬fmember$c(?v2, ?v0) ∧ ¬fmember$c(?v2, ?v1)) ⇒ false))) ⇒ false)
+tff(axiom115,axiom,
+    ! [A__questionmark_v0: 'D_document_ptr_fset$',A__questionmark_v1: 'D_document_ptr_fset$',A__questionmark_v2: 'D_document_ptr$'] :
+      ( ( ( A__questionmark_v0 = A__questionmark_v1 )
+        & ( ( 'fmember$c'(A__questionmark_v2,A__questionmark_v0)
+            & 'fmember$c'(A__questionmark_v2,A__questionmark_v1) )
+         => $false )
+        & ( ( ~ 'fmember$c'(A__questionmark_v2,A__questionmark_v0)
+            & ~ 'fmember$c'(A__questionmark_v2,A__questionmark_v1) )
+         => $false ) )
+     => $false ) ).
+
+%% ∀ ?v0:B_character_data_ptr_fset$ ?v1:B_character_data_ptr_fset$ ?v2:B_character_data_ptr$ (((?v0 = ?v1) ∧ (((fmember$b(?v2, ?v0) ∧ fmember$b(?v2, ?v1)) ⇒ false) ∧ ((¬fmember$b(?v2, ?v0) ∧ ¬fmember$b(?v2, ?v1)) ⇒ false))) ⇒ false)
+tff(axiom116,axiom,
+    ! [A__questionmark_v0: 'B_character_data_ptr_fset$',A__questionmark_v1: 'B_character_data_ptr_fset$',A__questionmark_v2: 'B_character_data_ptr$'] :
+      ( ( ( A__questionmark_v0 = A__questionmark_v1 )
+        & ( ( 'fmember$b'(A__questionmark_v2,A__questionmark_v0)
+            & 'fmember$b'(A__questionmark_v2,A__questionmark_v1) )
+         => $false )
+        & ( ( ~ 'fmember$b'(A__questionmark_v2,A__questionmark_v0)
+            & ~ 'fmember$b'(A__questionmark_v2,A__questionmark_v1) )
+         => $false ) )
+     => $false ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr_fset$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr_fset$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$ (((?v0 = ?v1) ∧ (((fmember$a(?v2, ?v0) ∧ fmember$a(?v2, ?v1)) ⇒ false) ∧ ((¬fmember$a(?v2, ?v0) ∧ ¬fmember$a(?v2, ?v1)) ⇒ false))) ⇒ false)
+tff(axiom117,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr_fset$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr_fset$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$'] :
+      ( ( ( A__questionmark_v0 = A__questionmark_v1 )
+        & ( ( 'fmember$a'(A__questionmark_v2,A__questionmark_v0)
+            & 'fmember$a'(A__questionmark_v2,A__questionmark_v1) )
+         => $false )
+        & ( ( ~ 'fmember$a'(A__questionmark_v2,A__questionmark_v0)
+            & ~ 'fmember$a'(A__questionmark_v2,A__questionmark_v1) )
+         => $false ) )
+     => $false ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ (((?v0 = ?v1) ∧ (((fun_app$aw(fmember$(?v2), ?v0) ∧ fun_app$aw(fmember$(?v2), ?v1)) ⇒ false) ∧ ((¬fun_app$aw(fmember$(?v2), ?v0) ∧ ¬fun_app$aw(fmember$(?v2), ?v1)) ⇒ false))) ⇒ false)
+tff(axiom118,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$'] :
+      ( ( ( A__questionmark_v0 = A__questionmark_v1 )
+        & ( ( 'fun_app$aw'('fmember$'(A__questionmark_v2),A__questionmark_v0)
+            & 'fun_app$aw'('fmember$'(A__questionmark_v2),A__questionmark_v1) )
+         => $false )
+        & ( ( ~ 'fun_app$aw'('fmember$'(A__questionmark_v2),A__questionmark_v0)
+            & ~ 'fun_app$aw'('fmember$'(A__questionmark_v2),A__questionmark_v1) )
+         => $false ) )
+     => $false ) ).
+
+%% ∀ ?v0:A_element_ptr_fset$ ?v1:A_element_ptr_fset$ (∀ ?v2:A_element_ptr$ (fmember$d(?v2, ?v0) = fmember$d(?v2, ?v1)) ⇒ (?v0 = ?v1))
+tff(axiom119,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_fset$',A__questionmark_v1: 'A_element_ptr_fset$'] :
+      ( ! [A__questionmark_v2: 'A_element_ptr$'] :
+          ( 'fmember$d'(A__questionmark_v2,A__questionmark_v0)
+        <=> 'fmember$d'(A__questionmark_v2,A__questionmark_v1) )
+     => ( A__questionmark_v0 = A__questionmark_v1 ) ) ).
+
+%% ∀ ?v0:D_document_ptr_fset$ ?v1:D_document_ptr_fset$ (∀ ?v2:D_document_ptr$ (fmember$c(?v2, ?v0) = fmember$c(?v2, ?v1)) ⇒ (?v0 = ?v1))
+tff(axiom120,axiom,
+    ! [A__questionmark_v0: 'D_document_ptr_fset$',A__questionmark_v1: 'D_document_ptr_fset$'] :
+      ( ! [A__questionmark_v2: 'D_document_ptr$'] :
+          ( 'fmember$c'(A__questionmark_v2,A__questionmark_v0)
+        <=> 'fmember$c'(A__questionmark_v2,A__questionmark_v1) )
+     => ( A__questionmark_v0 = A__questionmark_v1 ) ) ).
+
+%% ∀ ?v0:B_character_data_ptr_fset$ ?v1:B_character_data_ptr_fset$ (∀ ?v2:B_character_data_ptr$ (fmember$b(?v2, ?v0) = fmember$b(?v2, ?v1)) ⇒ (?v0 = ?v1))
+tff(axiom121,axiom,
+    ! [A__questionmark_v0: 'B_character_data_ptr_fset$',A__questionmark_v1: 'B_character_data_ptr_fset$'] :
+      ( ! [A__questionmark_v2: 'B_character_data_ptr$'] :
+          ( 'fmember$b'(A__questionmark_v2,A__questionmark_v0)
+        <=> 'fmember$b'(A__questionmark_v2,A__questionmark_v1) )
+     => ( A__questionmark_v0 = A__questionmark_v1 ) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr_fset$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr_fset$ (∀ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$ (fmember$a(?v2, ?v0) = fmember$a(?v2, ?v1)) ⇒ (?v0 = ?v1))
+tff(axiom122,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr_fset$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr_fset$'] :
+      ( ! [A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$'] :
+          ( 'fmember$a'(A__questionmark_v2,A__questionmark_v0)
+        <=> 'fmember$a'(A__questionmark_v2,A__questionmark_v1) )
+     => ( A__questionmark_v0 = A__questionmark_v1 ) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$ (∀ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ (fun_app$aw(fmember$(?v2), ?v0) = fun_app$aw(fmember$(?v2), ?v1)) ⇒ (?v0 = ?v1))
+tff(axiom123,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$'] :
+      ( ! [A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$'] :
+          ( 'fun_app$aw'('fmember$'(A__questionmark_v2),A__questionmark_v0)
+        <=> 'fun_app$aw'('fmember$'(A__questionmark_v2),A__questionmark_v1) )
+     => ( A__questionmark_v0 = A__questionmark_v1 ) ) ).
+
+%% ∀ ?v0:B_character_data_ptr_fset$ ?v1:B_character_data_ptr_fset$ ((fset$(?v0) = fset$(?v1)) = (?v0 = ?v1))
+tff(axiom124,axiom,
+    ! [A__questionmark_v0: 'B_character_data_ptr_fset$',A__questionmark_v1: 'B_character_data_ptr_fset$'] :
+      ( ( 'fset$'(A__questionmark_v0) = 'fset$'(A__questionmark_v1) )
+    <=> ( A__questionmark_v0 = A__questionmark_v1 ) ) ).
+
+%% ∀ ?v0:D_document_ptr_fset$ ?v1:D_document_ptr_fset$ ((fset$a(?v0) = fset$a(?v1)) = (?v0 = ?v1))
+tff(axiom125,axiom,
+    ! [A__questionmark_v0: 'D_document_ptr_fset$',A__questionmark_v1: 'D_document_ptr_fset$'] :
+      ( ( 'fset$a'(A__questionmark_v0) = 'fset$a'(A__questionmark_v1) )
+    <=> ( A__questionmark_v0 = A__questionmark_v1 ) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$ ((fset$b(?v0) = fset$b(?v1)) = (?v0 = ?v1))
+tff(axiom126,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$'] :
+      ( ( 'fset$b'(A__questionmark_v0) = 'fset$b'(A__questionmark_v1) )
+    <=> ( A__questionmark_v0 = A__questionmark_v1 ) ) ).
+
+%% ∀ ?v0:A_element_ptr_fset$ ?v1:A_element_ptr_fset$ ((fset$c(?v0) = fset$c(?v1)) = (?v0 = ?v1))
+tff(axiom127,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_fset$',A__questionmark_v1: 'A_element_ptr_fset$'] :
+      ( ( 'fset$c'(A__questionmark_v0) = 'fset$c'(A__questionmark_v1) )
+    <=> ( A__questionmark_v0 = A__questionmark_v1 ) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr_fset$ (¬fmember$a(?v0, ?v1) = ¬member$d(?v0, fset$d(?v1)))
+tff(axiom128,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr_fset$'] :
+      ( ~ 'fmember$a'(A__questionmark_v0,A__questionmark_v1)
+    <=> ~ 'member$d'(A__questionmark_v0,'fset$d'(A__questionmark_v1)) ) ).
+
+%% ∀ ?v0:B_character_data_ptr$ ?v1:B_character_data_ptr_fset$ (¬fmember$b(?v0, ?v1) = ¬member$(?v0, fset$(?v1)))
+tff(axiom129,axiom,
+    ! [A__questionmark_v0: 'B_character_data_ptr$',A__questionmark_v1: 'B_character_data_ptr_fset$'] :
+      ( ~ 'fmember$b'(A__questionmark_v0,A__questionmark_v1)
+    <=> ~ 'member$'(A__questionmark_v0,'fset$'(A__questionmark_v1)) ) ).
+
+%% ∀ ?v0:D_document_ptr$ ?v1:D_document_ptr_fset$ (¬fmember$c(?v0, ?v1) = ¬member$a(?v0, fset$a(?v1)))
+tff(axiom130,axiom,
+    ! [A__questionmark_v0: 'D_document_ptr$',A__questionmark_v1: 'D_document_ptr_fset$'] :
+      ( ~ 'fmember$c'(A__questionmark_v0,A__questionmark_v1)
+    <=> ~ 'member$a'(A__questionmark_v0,'fset$a'(A__questionmark_v1)) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$ (¬fun_app$aw(fmember$(?v0), ?v1) = ¬member$c(?v0, fset$b(?v1)))
+tff(axiom131,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$'] :
+      ( ~ 'fun_app$aw'('fmember$'(A__questionmark_v0),A__questionmark_v1)
+    <=> ~ 'member$c'(A__questionmark_v0,'fset$b'(A__questionmark_v1)) ) ).
+
+%% ∀ ?v0:A_element_ptr$ ?v1:A_element_ptr_fset$ (¬fmember$d(?v0, ?v1) = ¬member$b(?v0, fset$c(?v1)))
+tff(axiom132,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr$',A__questionmark_v1: 'A_element_ptr_fset$'] :
+      ( ~ 'fmember$d'(A__questionmark_v0,A__questionmark_v1)
+    <=> ~ 'member$b'(A__questionmark_v0,'fset$c'(A__questionmark_v1)) ) ).
+
+%% ∀ ?v0:A_element_ptr$ ?v1:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ (fun_app$ar(fun_app$as(get_E_l_e_m_e_n_t$, ?v0), fun_app$at(put_E_l_e_m_e_n_t$(?v0, ?v1), ?v2)) = fun_app$i(some$a, ?v1))
+tff(axiom133,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr$',A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$'] : ( 'fun_app$ar'('fun_app$as'('get_E_l_e_m_e_n_t$',A__questionmark_v0),'fun_app$at'('put_E_l_e_m_e_n_t$'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2)) = 'fun_app$i'('some$a',A__questionmark_v1) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ ?v1:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ (fun_app$aj(fun_app$ak(get_N_o_d_e$, ?v0), fun_app$at(put_N_o_d_e$(?v0, ?v1), ?v2)) = fun_app$g(some$, ?v1))
+tff(axiom134,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$',A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$'] : ( 'fun_app$aj'('fun_app$ak'('get_N_o_d_e$',A__questionmark_v0),'fun_app$at'('put_N_o_d_e$'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2)) = 'fun_app$g'('some$',A__questionmark_v1) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ ?v1:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$ (put_N_o_d_e$(?v0, ?v1) = put_O_b_j_e_c_t$(cast_n_o_d_e_p_t_r_2_o_b_j_e_c_t_p_t_r$(?v0), cast_N_o_d_e_2_O_b_j_e_c_t$(?v1)))
+tff(axiom135,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$',A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$'] : ( 'put_N_o_d_e$'(A__questionmark_v0,A__questionmark_v1) = 'put_O_b_j_e_c_t$'('cast_n_o_d_e_p_t_r_2_o_b_j_e_c_t_p_t_r$'(A__questionmark_v0),'cast_N_o_d_e_2_O_b_j_e_c_t$'(A__questionmark_v1)) ) ).
+
+%% ∀ ?v0:A_element_ptr$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ (fun_app$ar(fun_app$as(get_E_l_e_m_e_n_t$, ?v0), ?v1) = bind$g(fun_app$aj(fun_app$ak(get_N_o_d_e$, cast_e_l_e_m_e_n_t_p_t_r_2_n_o_d_e_p_t_r$(?v0)), ?v1), cast_N_o_d_e_2_E_l_e_m_e_n_t$))
+tff(axiom136,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$'] : ( 'fun_app$ar'('fun_app$as'('get_E_l_e_m_e_n_t$',A__questionmark_v0),A__questionmark_v1) = 'bind$g'('fun_app$aj'('fun_app$ak'('get_N_o_d_e$','cast_e_l_e_m_e_n_t_p_t_r_2_n_o_d_e_p_t_r$'(A__questionmark_v0)),A__questionmark_v1),'cast_N_o_d_e_2_E_l_e_m_e_n_t$') ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ ?v1:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ ?v3:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ ((fun_app$at(put_N_o_d_e$(?v0, ?v1), ?v2) = ?v3) ⇒ fun_app$aw(fmember$(?v0), fun_app$au(node_ptr_kinds$, ?v3)))
+tff(axiom137,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$',A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$',A__questionmark_v3: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$'] :
+      ( ( 'fun_app$at'('put_N_o_d_e$'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2) = A__questionmark_v3 )
+     => 'fun_app$aw'('fmember$'(A__questionmark_v0),'fun_app$au'('node_ptr_kinds$',A__questionmark_v3)) ) ).
+
+%% ∀ ?v0:A_element_ptr$ (fun_app$b(cast_n_o_d_e_p_t_r_2_e_l_e_m_e_n_t_p_t_r$, cast_e_l_e_m_e_n_t_p_t_r_2_n_o_d_e_p_t_r$(?v0)) = fun_app$ax(some$d, ?v0))
+tff(axiom138,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr$'] : ( 'fun_app$b'('cast_n_o_d_e_p_t_r_2_e_l_e_m_e_n_t_p_t_r$','cast_e_l_e_m_e_n_t_p_t_r_2_n_o_d_e_p_t_r$'(A__questionmark_v0)) = 'fun_app$ax'('some$d',A__questionmark_v0) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ ?v1:A_element_ptr$ ((fun_app$b(cast_n_o_d_e_p_t_r_2_e_l_e_m_e_n_t_p_t_r$, ?v0) = fun_app$ax(some$d, ?v1)) = (cast_e_l_e_m_e_n_t_p_t_r_2_n_o_d_e_p_t_r$(?v1) = ?v0))
+tff(axiom139,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$',A__questionmark_v1: 'A_element_ptr$'] :
+      ( ( 'fun_app$b'('cast_n_o_d_e_p_t_r_2_e_l_e_m_e_n_t_p_t_r$',A__questionmark_v0) = 'fun_app$ax'('some$d',A__questionmark_v1) )
+    <=> ( 'cast_e_l_e_m_e_n_t_p_t_r_2_n_o_d_e_p_t_r$'(A__questionmark_v1) = A__questionmark_v0 ) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ ?v2:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$ ?v3:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ (¬(?v0 = ?v1) ⇒ (fun_app$aj(fun_app$ak(get_N_o_d_e$, ?v0), fun_app$at(put_N_o_d_e$(?v1, ?v2), ?v3)) = fun_app$aj(fun_app$ak(get_N_o_d_e$, ?v0), ?v3)))
+tff(axiom140,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$',A__questionmark_v2: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$',A__questionmark_v3: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$'] :
+      ( ( A__questionmark_v0 != A__questionmark_v1 )
+     => ( 'fun_app$aj'('fun_app$ak'('get_N_o_d_e$',A__questionmark_v0),'fun_app$at'('put_N_o_d_e$'(A__questionmark_v1,A__questionmark_v2),A__questionmark_v3)) = 'fun_app$aj'('fun_app$ak'('get_N_o_d_e$',A__questionmark_v0),A__questionmark_v3) ) ) ).
+
+%% ∀ ?v0:A_element_ptr$ ?v1:A_element_ptr$ ?v2:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$ ?v3:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ (¬(?v0 = ?v1) ⇒ (fun_app$ar(fun_app$as(get_E_l_e_m_e_n_t$, ?v0), fun_app$at(put_E_l_e_m_e_n_t$(?v1, ?v2), ?v3)) = fun_app$ar(fun_app$as(get_E_l_e_m_e_n_t$, ?v0), ?v3)))
+tff(axiom141,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr$',A__questionmark_v1: 'A_element_ptr$',A__questionmark_v2: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$',A__questionmark_v3: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$'] :
+      ( ( A__questionmark_v0 != A__questionmark_v1 )
+     => ( 'fun_app$ar'('fun_app$as'('get_E_l_e_m_e_n_t$',A__questionmark_v0),'fun_app$at'('put_E_l_e_m_e_n_t$'(A__questionmark_v1,A__questionmark_v2),A__questionmark_v3)) = 'fun_app$ar'('fun_app$as'('get_E_l_e_m_e_n_t$',A__questionmark_v0),A__questionmark_v3) ) ) ).
+
+%% ∀ ?v0:B_character_data_ptr$ ?v1:H_option_RCharacterData_ext_RNode_ext_RObject_ext$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ (fun_app$am(fun_app$an(get_C_h_a_r_a_c_t_e_r_D_a_t_a$, ?v0), fun_app$at(put_C_h_a_r_a_c_t_e_r_D_a_t_a$(?v0, ?v1), ?v2)) = fun_app$k(some$c, ?v1))
+tff(axiom142,axiom,
+    ! [A__questionmark_v0: 'B_character_data_ptr$',A__questionmark_v1: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$'] : ( 'fun_app$am'('fun_app$an'('get_C_h_a_r_a_c_t_e_r_D_a_t_a$',A__questionmark_v0),'fun_app$at'('put_C_h_a_r_a_c_t_e_r_D_a_t_a$'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2)) = 'fun_app$k'('some$c',A__questionmark_v1) ) ).
+
+%% ∀ ?v0:B_character_data_ptr$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ (fun_app$aw(fmember$(cast_c_h_a_r_a_c_t_e_r_d_a_t_a_p_t_r_2_n_o_d_e_p_t_r$(?v0)), fun_app$au(node_ptr_kinds$, ?v1)) = fmember$b(?v0, fun_app$al(character_data_ptr_kinds$, ?v1)))
+tff(axiom143,axiom,
+    ! [A__questionmark_v0: 'B_character_data_ptr$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$'] :
+      ( 'fun_app$aw'('fmember$'('cast_c_h_a_r_a_c_t_e_r_d_a_t_a_p_t_r_2_n_o_d_e_p_t_r$'(A__questionmark_v0)),'fun_app$au'('node_ptr_kinds$',A__questionmark_v1))
+    <=> 'fmember$b'(A__questionmark_v0,'fun_app$al'('character_data_ptr_kinds$',A__questionmark_v1)) ) ).
+
+%% ∀ ?v0:B_character_data_ptr$ ?v1:A_element_ptr$ ?v2:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$ ?v3:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ (fun_app$am(fun_app$an(get_C_h_a_r_a_c_t_e_r_D_a_t_a$, ?v0), fun_app$at(put_E_l_e_m_e_n_t$(?v1, ?v2), ?v3)) = fun_app$am(fun_app$an(get_C_h_a_r_a_c_t_e_r_D_a_t_a$, ?v0), ?v3))
+tff(axiom144,axiom,
+    ! [A__questionmark_v0: 'B_character_data_ptr$',A__questionmark_v1: 'A_element_ptr$',A__questionmark_v2: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$',A__questionmark_v3: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$'] : ( 'fun_app$am'('fun_app$an'('get_C_h_a_r_a_c_t_e_r_D_a_t_a$',A__questionmark_v0),'fun_app$at'('put_E_l_e_m_e_n_t$'(A__questionmark_v1,A__questionmark_v2),A__questionmark_v3)) = 'fun_app$am'('fun_app$an'('get_C_h_a_r_a_c_t_e_r_D_a_t_a$',A__questionmark_v0),A__questionmark_v3) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$ ?v1:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$ ?v2:H_option_RCharacterData_ext_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$ (fun_app$m(bind$(bind$f(?v0, ?v1)), ?v2) = bind$f(?v0, uua$(?v1, ?v2)))
+tff(axiom145,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$',A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$',A__questionmark_v2: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$'] : ( 'fun_app$m'('bind$'('bind$f'(A__questionmark_v0,A__questionmark_v1)),A__questionmark_v2) = 'bind$f'(A__questionmark_v0,'uua$'(A__questionmark_v1,A__questionmark_v2)) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$ ?v1:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$ ?v2:H_option_RCharacterData_ext_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun$ (bind$a(bind$f(?v0, ?v1), ?v2) = bind$g(?v0, uub$(?v1, ?v2)))
+tff(axiom146,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$',A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$',A__questionmark_v2: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun$'] : ( 'bind$a'('bind$f'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2) = 'bind$g'(A__questionmark_v0,'uub$'(A__questionmark_v1,A__questionmark_v2)) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$ ?v1:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun$ ?v2:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$ (bind$c(bind$g(?v0, ?v1), ?v2) = bind$f(?v0, uuc$(?v1, ?v2)))
+tff(axiom147,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$',A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun$',A__questionmark_v2: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$'] : ( 'bind$c'('bind$g'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2) = 'bind$f'(A__questionmark_v0,'uuc$'(A__questionmark_v1,A__questionmark_v2)) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$ ?v1:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun$ ?v2:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun$ (fun_app$o(bind$d(bind$g(?v0, ?v1)), ?v2) = bind$g(?v0, uud$(?v1, ?v2)))
+tff(axiom148,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$',A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun$',A__questionmark_v2: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun$'] : ( 'fun_app$o'('bind$d'('bind$g'(A__questionmark_v0,A__questionmark_v1)),A__questionmark_v2) = 'bind$g'(A__questionmark_v0,'uud$'(A__questionmark_v1,A__questionmark_v2)) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$ ?v1:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$ ?v2:H_option_RCharacterData_ext_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun$ (bind$b(bind$f(?v0, ?v1), ?v2) = fun_app$ba(bind$i(?v0), uue$(?v1, ?v2)))
+tff(axiom149,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$',A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$',A__questionmark_v2: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun$'] : ( 'bind$b'('bind$f'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2) = 'fun_app$ba'('bind$i'(A__questionmark_v0),'uue$'(A__questionmark_v1,A__questionmark_v2)) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$ ?v1:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun$ ?v2:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$ (bind$f(fun_app$ba(bind$i(?v0), ?v1), ?v2) = bind$f(?v0, uuf$(?v1, ?v2)))
+tff(axiom150,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$',A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun$',A__questionmark_v2: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$'] : ( 'bind$f'('fun_app$ba'('bind$i'(A__questionmark_v0),A__questionmark_v1),A__questionmark_v2) = 'bind$f'(A__questionmark_v0,'uuf$'(A__questionmark_v1,A__questionmark_v2)) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_option$ ?v1:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_c_a_b_j_option_RDocument_ext_RObject_ext_option_fun$ ?v2:C_a_b_j_option_RDocument_ext_RObject_ext_c_a_b_j_option_RDocument_ext_RObject_ext_option_fun$ (fun_app$q(bind$h(bind$j(?v0, ?v1)), ?v2) = bind$j(?v0, uug$(?v1, ?v2)))
+tff(axiom151,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_option$',A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_c_a_b_j_option_RDocument_ext_RObject_ext_option_fun$',A__questionmark_v2: 'C_a_b_j_option_RDocument_ext_RObject_ext_c_a_b_j_option_RDocument_ext_RObject_ext_option_fun$'] : ( 'fun_app$q'('bind$h'('bind$j'(A__questionmark_v0,A__questionmark_v1)),A__questionmark_v2) = 'bind$j'(A__questionmark_v0,'uug$'(A__questionmark_v1,A__questionmark_v2)) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$ ?v1:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun$ ?v2:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun$ (bind$e(bind$g(?v0, ?v1), ?v2) = fun_app$ba(bind$i(?v0), uuh$(?v1, ?v2)))
+tff(axiom152,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$',A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun$',A__questionmark_v2: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun$'] : ( 'bind$e'('bind$g'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2) = 'fun_app$ba'('bind$i'(A__questionmark_v0),'uuh$'(A__questionmark_v1,A__questionmark_v2)) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$ ?v1:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun$ ?v2:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun$ (bind$g(fun_app$ba(bind$i(?v0), ?v1), ?v2) = bind$g(?v0, uui$(?v1, ?v2)))
+tff(axiom153,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$',A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun$',A__questionmark_v2: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun$'] : ( 'bind$g'('fun_app$ba'('bind$i'(A__questionmark_v0),A__questionmark_v1),A__questionmark_v2) = 'bind$g'(A__questionmark_v0,'uui$'(A__questionmark_v1,A__questionmark_v2)) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_option$ ?v1:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun$ ?v2:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$ (bind$f(bind$k(?v0, ?v1), ?v2) = bind$l(?v0, uuj$(?v1, ?v2)))
+tff(axiom154,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_option$',A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun$',A__questionmark_v2: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$'] : ( 'bind$f'('bind$k'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2) = 'bind$l'(A__questionmark_v0,'uuj$'(A__questionmark_v1,A__questionmark_v2)) ) ).
+
+%% ∀ ?v0:A_element_ptr_option$ (fun_app$bb(bind$m(?v0), some$d) = ?v0)
+tff(axiom155,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_option$'] : ( 'fun_app$bb'('bind$m'(A__questionmark_v0),'some$d') = A__questionmark_v0 ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_option$ (fun_app$bc(bind$n(?v0), some$e) = ?v0)
+tff(axiom156,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_option$'] : ( 'fun_app$bc'('bind$n'(A__questionmark_v0),'some$e') = A__questionmark_v0 ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_option$ (fun_app$bd(bind$o(?v0), some$f) = ?v0)
+tff(axiom157,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_option$'] : ( 'fun_app$bd'('bind$o'(A__questionmark_v0),'some$f') = A__questionmark_v0 ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$ (fun_app$ba(bind$i(?v0), some$) = ?v0)
+tff(axiom158,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$'] : ( 'fun_app$ba'('bind$i'(A__questionmark_v0),'some$') = A__questionmark_v0 ) ).
+
+%% ∀ ?v0:H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$ (fun_app$m(bind$(?v0), some$c) = ?v0)
+tff(axiom159,axiom,
+    ! [A__questionmark_v0: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$'] : ( 'fun_app$m'('bind$'(A__questionmark_v0),'some$c') = A__questionmark_v0 ) ).
+
+%% ∀ ?v0:C_a_b_j_option_RDocument_ext_RObject_ext_option$ (fun_app$q(bind$h(?v0), some$b) = ?v0)
+tff(axiom160,axiom,
+    ! [A__questionmark_v0: 'C_a_b_j_option_RDocument_ext_RObject_ext_option$'] : ( 'fun_app$q'('bind$h'(A__questionmark_v0),'some$b') = A__questionmark_v0 ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$ (fun_app$o(bind$d(?v0), some$a) = ?v0)
+tff(axiom161,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$'] : ( 'fun_app$o'('bind$d'(A__questionmark_v0),'some$a') = A__questionmark_v0 ) ).
+
+%% ∀ ?v0:B_character_data_ptr$ ?v1:B_character_data_ptr$ ?v2:H_option_RCharacterData_ext_RNode_ext_RObject_ext$ ?v3:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ (¬(?v0 = ?v1) ⇒ (fun_app$am(fun_app$an(get_C_h_a_r_a_c_t_e_r_D_a_t_a$, ?v0), fun_app$at(put_C_h_a_r_a_c_t_e_r_D_a_t_a$(?v1, ?v2), ?v3)) = fun_app$am(fun_app$an(get_C_h_a_r_a_c_t_e_r_D_a_t_a$, ?v0), ?v3)))
+tff(axiom162,axiom,
+    ! [A__questionmark_v0: 'B_character_data_ptr$',A__questionmark_v1: 'B_character_data_ptr$',A__questionmark_v2: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext$',A__questionmark_v3: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$'] :
+      ( ( A__questionmark_v0 != A__questionmark_v1 )
+     => ( 'fun_app$am'('fun_app$an'('get_C_h_a_r_a_c_t_e_r_D_a_t_a$',A__questionmark_v0),'fun_app$at'('put_C_h_a_r_a_c_t_e_r_D_a_t_a$'(A__questionmark_v1,A__questionmark_v2),A__questionmark_v3)) = 'fun_app$am'('fun_app$an'('get_C_h_a_r_a_c_t_e_r_D_a_t_a$',A__questionmark_v0),A__questionmark_v3) ) ) ).
+
+%% ∀ ?v0:A_element_ptr$ ?v1:B_character_data_ptr$ ?v2:H_option_RCharacterData_ext_RNode_ext_RObject_ext$ ?v3:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ (fun_app$ar(fun_app$as(get_E_l_e_m_e_n_t$, ?v0), fun_app$at(put_C_h_a_r_a_c_t_e_r_D_a_t_a$(?v1, ?v2), ?v3)) = fun_app$ar(fun_app$as(get_E_l_e_m_e_n_t$, ?v0), ?v3))
+tff(axiom163,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr$',A__questionmark_v1: 'B_character_data_ptr$',A__questionmark_v2: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext$',A__questionmark_v3: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$'] : ( 'fun_app$ar'('fun_app$as'('get_E_l_e_m_e_n_t$',A__questionmark_v0),'fun_app$at'('put_C_h_a_r_a_c_t_e_r_D_a_t_a$'(A__questionmark_v1,A__questionmark_v2),A__questionmark_v3)) = 'fun_app$ar'('fun_app$as'('get_E_l_e_m_e_n_t$',A__questionmark_v0),A__questionmark_v3) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$ ?v1:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$ ?v2:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$ ((?v0 = ?v1) ⇒ (bind$f(?v0, ?v2) = bind$f(?v1, ?v2)))
+tff(axiom164,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$',A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$',A__questionmark_v2: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$'] :
+      ( ( A__questionmark_v0 = A__questionmark_v1 )
+     => ( 'bind$f'(A__questionmark_v0,A__questionmark_v2) = 'bind$f'(A__questionmark_v1,A__questionmark_v2) ) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$ ?v1:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$ ?v2:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun$ ((?v0 = ?v1) ⇒ (bind$g(?v0, ?v2) = bind$g(?v1, ?v2)))
+tff(axiom165,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$',A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$',A__questionmark_v2: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun$'] :
+      ( ( A__questionmark_v0 = A__questionmark_v1 )
+     => ( 'bind$g'(A__questionmark_v0,A__questionmark_v2) = 'bind$g'(A__questionmark_v1,A__questionmark_v2) ) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$ ?v1:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$ ?v2:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun$ ((?v0 = ?v1) ⇒ (fun_app$ba(bind$i(?v0), ?v2) = fun_app$ba(bind$i(?v1), ?v2)))
+tff(axiom166,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$',A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$',A__questionmark_v2: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun$'] :
+      ( ( A__questionmark_v0 = A__questionmark_v1 )
+     => ( 'fun_app$ba'('bind$i'(A__questionmark_v0),A__questionmark_v2) = 'fun_app$ba'('bind$i'(A__questionmark_v1),A__questionmark_v2) ) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_option$ ?v1:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_option$ ?v2:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_c_a_b_j_option_RDocument_ext_RObject_ext_option_fun$ ((?v0 = ?v1) ⇒ (bind$j(?v0, ?v2) = bind$j(?v1, ?v2)))
+tff(axiom167,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_option$',A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_option$',A__questionmark_v2: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_c_a_b_j_option_RDocument_ext_RObject_ext_option_fun$'] :
+      ( ( A__questionmark_v0 = A__questionmark_v1 )
+     => ( 'bind$j'(A__questionmark_v0,A__questionmark_v2) = 'bind$j'(A__questionmark_v1,A__questionmark_v2) ) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_option$ ?v1:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_option$ ?v2:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun$ ((?v0 = ?v1) ⇒ (bind$k(?v0, ?v2) = bind$k(?v1, ?v2)))
+tff(axiom168,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_option$',A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_option$',A__questionmark_v2: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun$'] :
+      ( ( A__questionmark_v0 = A__questionmark_v1 )
+     => ( 'bind$k'(A__questionmark_v0,A__questionmark_v2) = 'bind$k'(A__questionmark_v1,A__questionmark_v2) ) ) ).
+
+%% ∀ ?v0:B_character_data_ptr$ ?v1:H_option_RCharacterData_ext_RNode_ext_RObject_ext$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ ?v3:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ ((fun_app$at(put_C_h_a_r_a_c_t_e_r_D_a_t_a$(?v0, ?v1), ?v2) = ?v3) ⇒ fmember$b(?v0, fun_app$al(character_data_ptr_kinds$, ?v3)))
+tff(axiom169,axiom,
+    ! [A__questionmark_v0: 'B_character_data_ptr$',A__questionmark_v1: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$',A__questionmark_v3: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$'] :
+      ( ( 'fun_app$at'('put_C_h_a_r_a_c_t_e_r_D_a_t_a$'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2) = A__questionmark_v3 )
+     => 'fmember$b'(A__questionmark_v0,'fun_app$al'('character_data_ptr_kinds$',A__questionmark_v3)) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$ ?v1:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$ (bind$f(fun_app$g(some$, ?v0), ?v1) = fun_app$l(?v1, ?v0))
+tff(axiom170,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$',A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$'] : ( 'bind$f'('fun_app$g'('some$',A__questionmark_v0),A__questionmark_v1) = 'fun_app$l'(A__questionmark_v1,A__questionmark_v0) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$ ?v1:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun$ (bind$g(fun_app$g(some$, ?v0), ?v1) = fun_app$n(?v1, ?v0))
+tff(axiom171,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$',A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun$'] : ( 'bind$g'('fun_app$g'('some$',A__questionmark_v0),A__questionmark_v1) = 'fun_app$n'(A__questionmark_v1,A__questionmark_v0) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$ ?v1:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun$ (fun_app$ba(bind$i(fun_app$g(some$, ?v0)), ?v1) = fun_app$g(?v1, ?v0))
+tff(axiom172,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$',A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun$'] : ( 'fun_app$ba'('bind$i'('fun_app$g'('some$',A__questionmark_v0)),A__questionmark_v1) = 'fun_app$g'(A__questionmark_v1,A__questionmark_v0) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$ ?v1:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_c_a_b_j_option_RDocument_ext_RObject_ext_option_fun$ (bind$j(fun_app$az(some$f, ?v0), ?v1) = fun_app$p(?v1, ?v0))
+tff(axiom173,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$',A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_c_a_b_j_option_RDocument_ext_RObject_ext_option_fun$'] : ( 'bind$j'('fun_app$az'('some$f',A__questionmark_v0),A__questionmark_v1) = 'fun_app$p'(A__questionmark_v1,A__questionmark_v0) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$ ?v1:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun$ (bind$k(fun_app$az(some$f, ?v0), ?v1) = fun_app$s(?v1, ?v0))
+tff(axiom174,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$',A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun$'] : ( 'bind$k'('fun_app$az'('some$f',A__questionmark_v0),A__questionmark_v1) = 'fun_app$s'(A__questionmark_v1,A__questionmark_v0) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$ ?v1:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$ ?v2:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$ ?v3:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$ (((?v0 = ?v1) ∧ ∀ ?v4:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$ ((?v1 = fun_app$g(some$, ?v4)) ⇒ (fun_app$l(?v2, ?v4) = fun_app$l(?v3, ?v4)))) ⇒ (bind$f(?v0, ?v2) = bind$f(?v1, ?v3)))
+tff(axiom175,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$',A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$',A__questionmark_v2: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$',A__questionmark_v3: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$'] :
+      ( ( ( A__questionmark_v0 = A__questionmark_v1 )
+        & ! [A__questionmark_v4: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$'] :
+            ( ( A__questionmark_v1 = 'fun_app$g'('some$',A__questionmark_v4) )
+           => ( 'fun_app$l'(A__questionmark_v2,A__questionmark_v4) = 'fun_app$l'(A__questionmark_v3,A__questionmark_v4) ) ) )
+     => ( 'bind$f'(A__questionmark_v0,A__questionmark_v2) = 'bind$f'(A__questionmark_v1,A__questionmark_v3) ) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$ ?v1:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$ ?v2:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun$ ?v3:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun$ (((?v0 = ?v1) ∧ ∀ ?v4:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$ ((?v1 = fun_app$g(some$, ?v4)) ⇒ (fun_app$n(?v2, ?v4) = fun_app$n(?v3, ?v4)))) ⇒ (bind$g(?v0, ?v2) = bind$g(?v1, ?v3)))
+tff(axiom176,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$',A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$',A__questionmark_v2: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun$',A__questionmark_v3: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun$'] :
+      ( ( ( A__questionmark_v0 = A__questionmark_v1 )
+        & ! [A__questionmark_v4: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$'] :
+            ( ( A__questionmark_v1 = 'fun_app$g'('some$',A__questionmark_v4) )
+           => ( 'fun_app$n'(A__questionmark_v2,A__questionmark_v4) = 'fun_app$n'(A__questionmark_v3,A__questionmark_v4) ) ) )
+     => ( 'bind$g'(A__questionmark_v0,A__questionmark_v2) = 'bind$g'(A__questionmark_v1,A__questionmark_v3) ) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$ ?v1:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$ ?v2:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun$ ?v3:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun$ (((?v0 = ?v1) ∧ ∀ ?v4:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$ ((?v1 = fun_app$g(some$, ?v4)) ⇒ (fun_app$g(?v2, ?v4) = fun_app$g(?v3, ?v4)))) ⇒ (fun_app$ba(bind$i(?v0), ?v2) = fun_app$ba(bind$i(?v1), ?v3)))
+tff(axiom177,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$',A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$',A__questionmark_v2: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun$',A__questionmark_v3: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun$'] :
+      ( ( ( A__questionmark_v0 = A__questionmark_v1 )
+        & ! [A__questionmark_v4: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$'] :
+            ( ( A__questionmark_v1 = 'fun_app$g'('some$',A__questionmark_v4) )
+           => ( 'fun_app$g'(A__questionmark_v2,A__questionmark_v4) = 'fun_app$g'(A__questionmark_v3,A__questionmark_v4) ) ) )
+     => ( 'fun_app$ba'('bind$i'(A__questionmark_v0),A__questionmark_v2) = 'fun_app$ba'('bind$i'(A__questionmark_v1),A__questionmark_v3) ) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_option$ ?v1:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_option$ ?v2:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_c_a_b_j_option_RDocument_ext_RObject_ext_option_fun$ ?v3:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_c_a_b_j_option_RDocument_ext_RObject_ext_option_fun$ (((?v0 = ?v1) ∧ ∀ ?v4:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$ ((?v1 = fun_app$az(some$f, ?v4)) ⇒ (fun_app$p(?v2, ?v4) = fun_app$p(?v3, ?v4)))) ⇒ (bind$j(?v0, ?v2) = bind$j(?v1, ?v3)))
+tff(axiom178,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_option$',A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_option$',A__questionmark_v2: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_c_a_b_j_option_RDocument_ext_RObject_ext_option_fun$',A__questionmark_v3: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_c_a_b_j_option_RDocument_ext_RObject_ext_option_fun$'] :
+      ( ( ( A__questionmark_v0 = A__questionmark_v1 )
+        & ! [A__questionmark_v4: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$'] :
+            ( ( A__questionmark_v1 = 'fun_app$az'('some$f',A__questionmark_v4) )
+           => ( 'fun_app$p'(A__questionmark_v2,A__questionmark_v4) = 'fun_app$p'(A__questionmark_v3,A__questionmark_v4) ) ) )
+     => ( 'bind$j'(A__questionmark_v0,A__questionmark_v2) = 'bind$j'(A__questionmark_v1,A__questionmark_v3) ) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_option$ ?v1:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_option$ ?v2:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun$ ?v3:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun$ (((?v0 = ?v1) ∧ ∀ ?v4:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$ ((?v1 = fun_app$az(some$f, ?v4)) ⇒ (fun_app$s(?v2, ?v4) = fun_app$s(?v3, ?v4)))) ⇒ (bind$k(?v0, ?v2) = bind$k(?v1, ?v3)))
+tff(axiom179,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_option$',A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_option$',A__questionmark_v2: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun$',A__questionmark_v3: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun$'] :
+      ( ( ( A__questionmark_v0 = A__questionmark_v1 )
+        & ! [A__questionmark_v4: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$'] :
+            ( ( A__questionmark_v1 = 'fun_app$az'('some$f',A__questionmark_v4) )
+           => ( 'fun_app$s'(A__questionmark_v2,A__questionmark_v4) = 'fun_app$s'(A__questionmark_v3,A__questionmark_v4) ) ) )
+     => ( 'bind$k'(A__questionmark_v0,A__questionmark_v2) = 'bind$k'(A__questionmark_v1,A__questionmark_v3) ) ) ).
+
+%% ∀ ?v0:H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$ ?v1:H_option_RCharacterData_ext_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$ ?v2:H_option_RCharacterData_ext_RNode_ext_RObject_ext$ ((fun_app$m(bind$(?v0), ?v1) = fun_app$k(some$c, ?v2)) = ∃ ?v3:H_option_RCharacterData_ext_RNode_ext_RObject_ext$ ((?v0 = fun_app$k(some$c, ?v3)) ∧ (fun_app$k(?v1, ?v3) = fun_app$k(some$c, ?v2))))
+tff(axiom180,axiom,
+    ! [A__questionmark_v0: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$',A__questionmark_v1: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$',A__questionmark_v2: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext$'] :
+      ( ( 'fun_app$m'('bind$'(A__questionmark_v0),A__questionmark_v1) = 'fun_app$k'('some$c',A__questionmark_v2) )
+    <=> ? [A__questionmark_v3: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext$'] :
+          ( ( A__questionmark_v0 = 'fun_app$k'('some$c',A__questionmark_v3) )
+          & ( 'fun_app$k'(A__questionmark_v1,A__questionmark_v3) = 'fun_app$k'('some$c',A__questionmark_v2) ) ) ) ).
+
+%% ∀ ?v0:C_a_b_j_option_RDocument_ext_RObject_ext_option$ ?v1:C_a_b_j_option_RDocument_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$ ?v2:H_option_RCharacterData_ext_RNode_ext_RObject_ext$ ((bind$p(?v0, ?v1) = fun_app$k(some$c, ?v2)) = ∃ ?v3:C_a_b_j_option_RDocument_ext_RObject_ext$ ((?v0 = fun_app$j(some$b, ?v3)) ∧ (fun_app$be(?v1, ?v3) = fun_app$k(some$c, ?v2))))
+tff(axiom181,axiom,
+    ! [A__questionmark_v0: 'C_a_b_j_option_RDocument_ext_RObject_ext_option$',A__questionmark_v1: 'C_a_b_j_option_RDocument_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$',A__questionmark_v2: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext$'] :
+      ( ( 'bind$p'(A__questionmark_v0,A__questionmark_v1) = 'fun_app$k'('some$c',A__questionmark_v2) )
+    <=> ? [A__questionmark_v3: 'C_a_b_j_option_RDocument_ext_RObject_ext$'] :
+          ( ( A__questionmark_v0 = 'fun_app$j'('some$b',A__questionmark_v3) )
+          & ( 'fun_app$be'(A__questionmark_v1,A__questionmark_v3) = 'fun_app$k'('some$c',A__questionmark_v2) ) ) ) ).
+
+%% ∀ ?v0:H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$ ?v1:H_option_RCharacterData_ext_RNode_ext_RObject_ext_c_a_b_j_option_RDocument_ext_RObject_ext_option_fun$ ?v2:C_a_b_j_option_RDocument_ext_RObject_ext$ ((bind$q(?v0, ?v1) = fun_app$j(some$b, ?v2)) = ∃ ?v3:H_option_RCharacterData_ext_RNode_ext_RObject_ext$ ((?v0 = fun_app$k(some$c, ?v3)) ∧ (fun_app$bf(?v1, ?v3) = fun_app$j(some$b, ?v2))))
+tff(axiom182,axiom,
+    ! [A__questionmark_v0: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$',A__questionmark_v1: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_c_a_b_j_option_RDocument_ext_RObject_ext_option_fun$',A__questionmark_v2: 'C_a_b_j_option_RDocument_ext_RObject_ext$'] :
+      ( ( 'bind$q'(A__questionmark_v0,A__questionmark_v1) = 'fun_app$j'('some$b',A__questionmark_v2) )
+    <=> ? [A__questionmark_v3: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext$'] :
+          ( ( A__questionmark_v0 = 'fun_app$k'('some$c',A__questionmark_v3) )
+          & ( 'fun_app$bf'(A__questionmark_v1,A__questionmark_v3) = 'fun_app$j'('some$b',A__questionmark_v2) ) ) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$ ?v1:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$ ?v2:H_option_RCharacterData_ext_RNode_ext_RObject_ext$ ((bind$c(?v0, ?v1) = fun_app$k(some$c, ?v2)) = ∃ ?v3:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$ ((?v0 = fun_app$i(some$a, ?v3)) ∧ (fun_app$bg(?v1, ?v3) = fun_app$k(some$c, ?v2))))
+tff(axiom183,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$',A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$',A__questionmark_v2: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext$'] :
+      ( ( 'bind$c'(A__questionmark_v0,A__questionmark_v1) = 'fun_app$k'('some$c',A__questionmark_v2) )
+    <=> ? [A__questionmark_v3: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$'] :
+          ( ( A__questionmark_v0 = 'fun_app$i'('some$a',A__questionmark_v3) )
+          & ( 'fun_app$bg'(A__questionmark_v1,A__questionmark_v3) = 'fun_app$k'('some$c',A__questionmark_v2) ) ) ) ).
+
+%% ∀ ?v0:C_a_b_j_option_RDocument_ext_RObject_ext_option$ ?v1:C_a_b_j_option_RDocument_ext_RObject_ext_c_a_b_j_option_RDocument_ext_RObject_ext_option_fun$ ?v2:C_a_b_j_option_RDocument_ext_RObject_ext$ ((fun_app$q(bind$h(?v0), ?v1) = fun_app$j(some$b, ?v2)) = ∃ ?v3:C_a_b_j_option_RDocument_ext_RObject_ext$ ((?v0 = fun_app$j(some$b, ?v3)) ∧ (fun_app$j(?v1, ?v3) = fun_app$j(some$b, ?v2))))
+tff(axiom184,axiom,
+    ! [A__questionmark_v0: 'C_a_b_j_option_RDocument_ext_RObject_ext_option$',A__questionmark_v1: 'C_a_b_j_option_RDocument_ext_RObject_ext_c_a_b_j_option_RDocument_ext_RObject_ext_option_fun$',A__questionmark_v2: 'C_a_b_j_option_RDocument_ext_RObject_ext$'] :
+      ( ( 'fun_app$q'('bind$h'(A__questionmark_v0),A__questionmark_v1) = 'fun_app$j'('some$b',A__questionmark_v2) )
+    <=> ? [A__questionmark_v3: 'C_a_b_j_option_RDocument_ext_RObject_ext$'] :
+          ( ( A__questionmark_v0 = 'fun_app$j'('some$b',A__questionmark_v3) )
+          & ( 'fun_app$j'(A__questionmark_v1,A__questionmark_v3) = 'fun_app$j'('some$b',A__questionmark_v2) ) ) ) ).
+
+%% ∀ ?v0:H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$ ?v1:H_option_RCharacterData_ext_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun$ ?v2:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$ ((bind$a(?v0, ?v1) = fun_app$i(some$a, ?v2)) = ∃ ?v3:H_option_RCharacterData_ext_RNode_ext_RObject_ext$ ((?v0 = fun_app$k(some$c, ?v3)) ∧ (fun_app$bh(?v1, ?v3) = fun_app$i(some$a, ?v2))))
+tff(axiom185,axiom,
+    ! [A__questionmark_v0: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$',A__questionmark_v1: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun$',A__questionmark_v2: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$'] :
+      ( ( 'bind$a'(A__questionmark_v0,A__questionmark_v1) = 'fun_app$i'('some$a',A__questionmark_v2) )
+    <=> ? [A__questionmark_v3: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext$'] :
+          ( ( A__questionmark_v0 = 'fun_app$k'('some$c',A__questionmark_v3) )
+          & ( 'fun_app$bh'(A__questionmark_v1,A__questionmark_v3) = 'fun_app$i'('some$a',A__questionmark_v2) ) ) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$ ?v1:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_c_a_b_j_option_RDocument_ext_RObject_ext_option_fun$ ?v2:C_a_b_j_option_RDocument_ext_RObject_ext$ ((bind$r(?v0, ?v1) = fun_app$j(some$b, ?v2)) = ∃ ?v3:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$ ((?v0 = fun_app$i(some$a, ?v3)) ∧ (fun_app$bi(?v1, ?v3) = fun_app$j(some$b, ?v2))))
+tff(axiom186,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$',A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_c_a_b_j_option_RDocument_ext_RObject_ext_option_fun$',A__questionmark_v2: 'C_a_b_j_option_RDocument_ext_RObject_ext$'] :
+      ( ( 'bind$r'(A__questionmark_v0,A__questionmark_v1) = 'fun_app$j'('some$b',A__questionmark_v2) )
+    <=> ? [A__questionmark_v3: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$'] :
+          ( ( A__questionmark_v0 = 'fun_app$i'('some$a',A__questionmark_v3) )
+          & ( 'fun_app$bi'(A__questionmark_v1,A__questionmark_v3) = 'fun_app$j'('some$b',A__questionmark_v2) ) ) ) ).
+
+%% ∀ ?v0:C_a_b_j_option_RDocument_ext_RObject_ext_option$ ?v1:C_a_b_j_option_RDocument_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun$ ?v2:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$ ((bind$s(?v0, ?v1) = fun_app$i(some$a, ?v2)) = ∃ ?v3:C_a_b_j_option_RDocument_ext_RObject_ext$ ((?v0 = fun_app$j(some$b, ?v3)) ∧ (fun_app$bj(?v1, ?v3) = fun_app$i(some$a, ?v2))))
+tff(axiom187,axiom,
+    ! [A__questionmark_v0: 'C_a_b_j_option_RDocument_ext_RObject_ext_option$',A__questionmark_v1: 'C_a_b_j_option_RDocument_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun$',A__questionmark_v2: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$'] :
+      ( ( 'bind$s'(A__questionmark_v0,A__questionmark_v1) = 'fun_app$i'('some$a',A__questionmark_v2) )
+    <=> ? [A__questionmark_v3: 'C_a_b_j_option_RDocument_ext_RObject_ext$'] :
+          ( ( A__questionmark_v0 = 'fun_app$j'('some$b',A__questionmark_v3) )
+          & ( 'fun_app$bj'(A__questionmark_v1,A__questionmark_v3) = 'fun_app$i'('some$a',A__questionmark_v2) ) ) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$ ?v1:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun$ ?v2:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$ ((fun_app$o(bind$d(?v0), ?v1) = fun_app$i(some$a, ?v2)) = ∃ ?v3:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$ ((?v0 = fun_app$i(some$a, ?v3)) ∧ (fun_app$i(?v1, ?v3) = fun_app$i(some$a, ?v2))))
+tff(axiom188,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$',A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun$',A__questionmark_v2: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$'] :
+      ( ( 'fun_app$o'('bind$d'(A__questionmark_v0),A__questionmark_v1) = 'fun_app$i'('some$a',A__questionmark_v2) )
+    <=> ? [A__questionmark_v3: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$'] :
+          ( ( A__questionmark_v0 = 'fun_app$i'('some$a',A__questionmark_v3) )
+          & ( 'fun_app$i'(A__questionmark_v1,A__questionmark_v3) = 'fun_app$i'('some$a',A__questionmark_v2) ) ) ) ).
+
+%% ∀ ?v0:H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$ ?v1:H_option_RCharacterData_ext_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun$ ?v2:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$ ((bind$b(?v0, ?v1) = fun_app$g(some$, ?v2)) = ∃ ?v3:H_option_RCharacterData_ext_RNode_ext_RObject_ext$ ((?v0 = fun_app$k(some$c, ?v3)) ∧ (fun_app$bk(?v1, ?v3) = fun_app$g(some$, ?v2))))
+tff(axiom189,axiom,
+    ! [A__questionmark_v0: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$',A__questionmark_v1: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun$',A__questionmark_v2: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$'] :
+      ( ( 'bind$b'(A__questionmark_v0,A__questionmark_v1) = 'fun_app$g'('some$',A__questionmark_v2) )
+    <=> ? [A__questionmark_v3: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext$'] :
+          ( ( A__questionmark_v0 = 'fun_app$k'('some$c',A__questionmark_v3) )
+          & ( 'fun_app$bk'(A__questionmark_v1,A__questionmark_v3) = 'fun_app$g'('some$',A__questionmark_v2) ) ) ) ).
+
+%% ∀ ?v0:A_element_ptr$ ?v1:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$ (put_E_l_e_m_e_n_t$(?v0, ?v1) = put_N_o_d_e$(cast_e_l_e_m_e_n_t_p_t_r_2_n_o_d_e_p_t_r$(?v0), cast_E_l_e_m_e_n_t_2_N_o_d_e$(?v1)))
+tff(axiom190,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr$',A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$'] : ( 'put_E_l_e_m_e_n_t$'(A__questionmark_v0,A__questionmark_v1) = 'put_N_o_d_e$'('cast_e_l_e_m_e_n_t_p_t_r_2_n_o_d_e_p_t_r$'(A__questionmark_v0),'cast_E_l_e_m_e_n_t_2_N_o_d_e$'(A__questionmark_v1)) ) ).
+
+%% ∀ ?v0:B_character_data_ptr$ ?v1:B_character_data_ptr_bool_fun$ (member$(?v0, collect$(?v1)) = fun_app$c(?v1, ?v0))
+tff(axiom191,axiom,
+    ! [A__questionmark_v0: 'B_character_data_ptr$',A__questionmark_v1: 'B_character_data_ptr_bool_fun$'] :
+      ( 'member$'(A__questionmark_v0,'collect$'(A__questionmark_v1))
+    <=> 'fun_app$c'(A__questionmark_v1,A__questionmark_v0) ) ).
+
+%% ∀ ?v0:D_document_ptr$ ?v1:D_document_ptr_bool_fun$ (member$a(?v0, collect$a(?v1)) = fun_app$d(?v1, ?v0))
+tff(axiom192,axiom,
+    ! [A__questionmark_v0: 'D_document_ptr$',A__questionmark_v1: 'D_document_ptr_bool_fun$'] :
+      ( 'member$a'(A__questionmark_v0,'collect$a'(A__questionmark_v1))
+    <=> 'fun_app$d'(A__questionmark_v1,A__questionmark_v0) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_bool_fun$ (member$c(?v0, collect$b(?v1)) = fun_app$(?v1, ?v0))
+tff(axiom193,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_bool_fun$'] :
+      ( 'member$c'(A__questionmark_v0,'collect$b'(A__questionmark_v1))
+    <=> 'fun_app$'(A__questionmark_v1,A__questionmark_v0) ) ).
+
+%% ∀ ?v0:A_element_ptr$ ?v1:A_element_ptr_bool_fun$ (member$b(?v0, collect$c(?v1)) = fun_app$e(?v1, ?v0))
+tff(axiom194,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr$',A__questionmark_v1: 'A_element_ptr_bool_fun$'] :
+      ( 'member$b'(A__questionmark_v0,'collect$c'(A__questionmark_v1))
+    <=> 'fun_app$e'(A__questionmark_v1,A__questionmark_v0) ) ).
+
+%% ∀ ?v0:B_character_data_ptr_set$ (collect$(uuk$(?v0)) = ?v0)
+tff(axiom195,axiom,
+    ! [A__questionmark_v0: 'B_character_data_ptr_set$'] : ( 'collect$'('uuk$'(A__questionmark_v0)) = A__questionmark_v0 ) ).
+
+%% ∀ ?v0:D_document_ptr_set$ (collect$a(uul$(?v0)) = ?v0)
+tff(axiom196,axiom,
+    ! [A__questionmark_v0: 'D_document_ptr_set$'] : ( 'collect$a'('uul$'(A__questionmark_v0)) = A__questionmark_v0 ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_set$ (collect$b(uum$(?v0)) = ?v0)
+tff(axiom197,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_set$'] : ( 'collect$b'('uum$'(A__questionmark_v0)) = A__questionmark_v0 ) ).
+
+%% ∀ ?v0:A_element_ptr_set$ (collect$c(uun$(?v0)) = ?v0)
+tff(axiom198,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_set$'] : ( 'collect$c'('uun$'(A__questionmark_v0)) = A__questionmark_v0 ) ).
+
+%% ∀ ?v0:A_element_ptr_bool_fun$ ?v1:A_element_ptr_bool_fun$ (∀ ?v2:A_element_ptr$ (fun_app$e(?v0, ?v2) = fun_app$e(?v1, ?v2)) ⇒ (collect$c(?v0) = collect$c(?v1)))
+tff(axiom199,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_bool_fun$',A__questionmark_v1: 'A_element_ptr_bool_fun$'] :
+      ( ! [A__questionmark_v2: 'A_element_ptr$'] :
+          ( 'fun_app$e'(A__questionmark_v0,A__questionmark_v2)
+        <=> 'fun_app$e'(A__questionmark_v1,A__questionmark_v2) )
+     => ( 'collect$c'(A__questionmark_v0) = 'collect$c'(A__questionmark_v1) ) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_bool_fun$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_bool_fun$ (∀ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ (fun_app$(?v0, ?v2) = fun_app$(?v1, ?v2)) ⇒ (collect$b(?v0) = collect$b(?v1)))
+tff(axiom200,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_bool_fun$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_bool_fun$'] :
+      ( ! [A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$'] :
+          ( 'fun_app$'(A__questionmark_v0,A__questionmark_v2)
+        <=> 'fun_app$'(A__questionmark_v1,A__questionmark_v2) )
+     => ( 'collect$b'(A__questionmark_v0) = 'collect$b'(A__questionmark_v1) ) ) ).
+
+%% ∀ ?v0:D_document_ptr_bool_fun$ ?v1:D_document_ptr_bool_fun$ (∀ ?v2:D_document_ptr$ (fun_app$d(?v0, ?v2) = fun_app$d(?v1, ?v2)) ⇒ (collect$a(?v0) = collect$a(?v1)))
+tff(axiom201,axiom,
+    ! [A__questionmark_v0: 'D_document_ptr_bool_fun$',A__questionmark_v1: 'D_document_ptr_bool_fun$'] :
+      ( ! [A__questionmark_v2: 'D_document_ptr$'] :
+          ( 'fun_app$d'(A__questionmark_v0,A__questionmark_v2)
+        <=> 'fun_app$d'(A__questionmark_v1,A__questionmark_v2) )
+     => ( 'collect$a'(A__questionmark_v0) = 'collect$a'(A__questionmark_v1) ) ) ).
+
+%% ∀ ?v0:B_character_data_ptr_bool_fun$ ?v1:B_character_data_ptr_bool_fun$ (∀ ?v2:B_character_data_ptr$ (fun_app$c(?v0, ?v2) = fun_app$c(?v1, ?v2)) ⇒ (collect$(?v0) = collect$(?v1)))
+tff(axiom202,axiom,
+    ! [A__questionmark_v0: 'B_character_data_ptr_bool_fun$',A__questionmark_v1: 'B_character_data_ptr_bool_fun$'] :
+      ( ! [A__questionmark_v2: 'B_character_data_ptr$'] :
+          ( 'fun_app$c'(A__questionmark_v0,A__questionmark_v2)
+        <=> 'fun_app$c'(A__questionmark_v1,A__questionmark_v2) )
+     => ( 'collect$'(A__questionmark_v0) = 'collect$'(A__questionmark_v1) ) ) ).
+
+%% ∀ ?v0:A_element_ptr$ ?v1:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ ?v3:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ ((fun_app$at(put_E_l_e_m_e_n_t$(?v0, ?v1), ?v2) = ?v3) ⇒ fmember$d(?v0, fun_app$av(element_ptr_kinds$, ?v3)))
+tff(axiom203,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr$',A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$',A__questionmark_v3: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$'] :
+      ( ( 'fun_app$at'('put_E_l_e_m_e_n_t$'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2) = A__questionmark_v3 )
+     => 'fmember$d'(A__questionmark_v0,'fun_app$av'('element_ptr_kinds$',A__questionmark_v3)) ) ).
+
+%% ∀ ?v0:B_character_data_ptr$ ?v1:B_character_data_ptr$ ((cast_c_h_a_r_a_c_t_e_r_d_a_t_a_p_t_r_2_n_o_d_e_p_t_r$(?v0) = cast_c_h_a_r_a_c_t_e_r_d_a_t_a_p_t_r_2_n_o_d_e_p_t_r$(?v1)) = (?v0 = ?v1))
+tff(axiom204,axiom,
+    ! [A__questionmark_v0: 'B_character_data_ptr$',A__questionmark_v1: 'B_character_data_ptr$'] :
+      ( ( 'cast_c_h_a_r_a_c_t_e_r_d_a_t_a_p_t_r_2_n_o_d_e_p_t_r$'(A__questionmark_v0) = 'cast_c_h_a_r_a_c_t_e_r_d_a_t_a_p_t_r_2_n_o_d_e_p_t_r$'(A__questionmark_v1) )
+    <=> ( A__questionmark_v0 = A__questionmark_v1 ) ) ).
+
+%% ∀ ?v0:D_document_ptr$ ?v1:A_element_ptr$ ?v2:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$ ?v3:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ (fun_app$ap(fun_app$aq(get_D_o_c_u_m_e_n_t$, ?v0), fun_app$at(put_E_l_e_m_e_n_t$(?v1, ?v2), ?v3)) = fun_app$ap(fun_app$aq(get_D_o_c_u_m_e_n_t$, ?v0), ?v3))
+tff(axiom205,axiom,
+    ! [A__questionmark_v0: 'D_document_ptr$',A__questionmark_v1: 'A_element_ptr$',A__questionmark_v2: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$',A__questionmark_v3: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$'] : ( 'fun_app$ap'('fun_app$aq'('get_D_o_c_u_m_e_n_t$',A__questionmark_v0),'fun_app$at'('put_E_l_e_m_e_n_t$'(A__questionmark_v1,A__questionmark_v2),A__questionmark_v3)) = 'fun_app$ap'('fun_app$aq'('get_D_o_c_u_m_e_n_t$',A__questionmark_v0),A__questionmark_v3) ) ).
+
+%% ∀ ?v0:D_document_ptr$ ?v1:B_character_data_ptr$ ?v2:H_option_RCharacterData_ext_RNode_ext_RObject_ext$ ?v3:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ (fun_app$ap(fun_app$aq(get_D_o_c_u_m_e_n_t$, ?v0), fun_app$at(put_C_h_a_r_a_c_t_e_r_D_a_t_a$(?v1, ?v2), ?v3)) = fun_app$ap(fun_app$aq(get_D_o_c_u_m_e_n_t$, ?v0), ?v3))
+tff(axiom206,axiom,
+    ! [A__questionmark_v0: 'D_document_ptr$',A__questionmark_v1: 'B_character_data_ptr$',A__questionmark_v2: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext$',A__questionmark_v3: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$'] : ( 'fun_app$ap'('fun_app$aq'('get_D_o_c_u_m_e_n_t$',A__questionmark_v0),'fun_app$at'('put_C_h_a_r_a_c_t_e_r_D_a_t_a$'(A__questionmark_v1,A__questionmark_v2),A__questionmark_v3)) = 'fun_app$ap'('fun_app$aq'('get_D_o_c_u_m_e_n_t$',A__questionmark_v0),A__questionmark_v3) ) ).
+
+%% ∀ ?v0:B_character_data_ptr$ ?v1:A_element_ptr$ ¬(cast_c_h_a_r_a_c_t_e_r_d_a_t_a_p_t_r_2_n_o_d_e_p_t_r$(?v0) = cast_e_l_e_m_e_n_t_p_t_r_2_n_o_d_e_p_t_r$(?v1))
+tff(axiom207,axiom,
+    ! [A__questionmark_v0: 'B_character_data_ptr$',A__questionmark_v1: 'A_element_ptr$'] : ( 'cast_c_h_a_r_a_c_t_e_r_d_a_t_a_p_t_r_2_n_o_d_e_p_t_r$'(A__questionmark_v0) != 'cast_e_l_e_m_e_n_t_p_t_r_2_n_o_d_e_p_t_r$'(A__questionmark_v1) ) ).
+
+%% ∀ ?v0:A_element_ptr$ ?v1:B_character_data_ptr$ ¬(cast_e_l_e_m_e_n_t_p_t_r_2_n_o_d_e_p_t_r$(?v0) = cast_c_h_a_r_a_c_t_e_r_d_a_t_a_p_t_r_2_n_o_d_e_p_t_r$(?v1))
+tff(axiom208,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr$',A__questionmark_v1: 'B_character_data_ptr$'] : ( 'cast_e_l_e_m_e_n_t_p_t_r_2_n_o_d_e_p_t_r$'(A__questionmark_v0) != 'cast_c_h_a_r_a_c_t_e_r_d_a_t_a_p_t_r_2_n_o_d_e_p_t_r$'(A__questionmark_v1) ) ).
+
+%% ∀ ?v0:B_character_data_ptr$ ?v1:H_option_RCharacterData_ext_RNode_ext_RObject_ext$ (put_C_h_a_r_a_c_t_e_r_D_a_t_a$(?v0, ?v1) = put_N_o_d_e$(cast_c_h_a_r_a_c_t_e_r_d_a_t_a_p_t_r_2_n_o_d_e_p_t_r$(?v0), cast_C_h_a_r_a_c_t_e_r_D_a_t_a_2_N_o_d_e$(?v1)))
+tff(axiom209,axiom,
+    ! [A__questionmark_v0: 'B_character_data_ptr$',A__questionmark_v1: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext$'] : ( 'put_C_h_a_r_a_c_t_e_r_D_a_t_a$'(A__questionmark_v0,A__questionmark_v1) = 'put_N_o_d_e$'('cast_c_h_a_r_a_c_t_e_r_d_a_t_a_p_t_r_2_n_o_d_e_p_t_r$'(A__questionmark_v0),'cast_C_h_a_r_a_c_t_e_r_D_a_t_a_2_N_o_d_e$'(A__questionmark_v1)) ) ).
+
+%% ∀ ?v0:D_document_ptr$ ?v1:C_a_b_j_option_RDocument_ext_RObject_ext$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ (fun_app$ap(fun_app$aq(get_D_o_c_u_m_e_n_t$, ?v0), fun_app$at(put_D_o_c_u_m_e_n_t$(?v0, ?v1), ?v2)) = fun_app$j(some$b, ?v1))
+tff(axiom210,axiom,
+    ! [A__questionmark_v0: 'D_document_ptr$',A__questionmark_v1: 'C_a_b_j_option_RDocument_ext_RObject_ext$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$'] : ( 'fun_app$ap'('fun_app$aq'('get_D_o_c_u_m_e_n_t$',A__questionmark_v0),'fun_app$at'('put_D_o_c_u_m_e_n_t$'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2)) = 'fun_app$j'('some$b',A__questionmark_v1) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ (fmember$a(cast_n_o_d_e_p_t_r_2_o_b_j_e_c_t_p_t_r$(?v0), fun_app$bl(object_ptr_kinds$, ?v1)) = fun_app$aw(fmember$(?v0), fun_app$au(node_ptr_kinds$, ?v1)))
+tff(axiom211,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$'] :
+      ( 'fmember$a'('cast_n_o_d_e_p_t_r_2_o_b_j_e_c_t_p_t_r$'(A__questionmark_v0),'fun_app$bl'('object_ptr_kinds$',A__questionmark_v1))
+    <=> 'fun_app$aw'('fmember$'(A__questionmark_v0),'fun_app$au'('node_ptr_kinds$',A__questionmark_v1)) ) ).
+
+%% ∀ ?v0:A_element_ptr$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$ ?v2:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$ ?v3:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ (fun_app$ar(fun_app$as(get_E_l_e_m_e_n_t$, ?v0), fun_app$at(put_O_b_j_e_c_t$(?v1, ?v2), ?v3)) = (if (?v1 = cast_n_o_d_e_p_t_r_2_o_b_j_e_c_t_p_t_r$(cast_e_l_e_m_e_n_t_p_t_r_2_n_o_d_e_p_t_r$(?v0))) case_option$e(none$a, cast_N_o_d_e_2_E_l_e_m_e_n_t$, fun_app$s(cast_O_b_j_e_c_t_2_N_o_d_e$, ?v2)) else fun_app$ar(fun_app$as(get_E_l_e_m_e_n_t$, ?v0), ?v3)))
+tff(axiom212,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$',A__questionmark_v2: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$',A__questionmark_v3: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$'] :
+      ( ( ( A__questionmark_v1 = 'cast_n_o_d_e_p_t_r_2_o_b_j_e_c_t_p_t_r$'('cast_e_l_e_m_e_n_t_p_t_r_2_n_o_d_e_p_t_r$'(A__questionmark_v0)) )
+       => ( 'fun_app$ar'('fun_app$as'('get_E_l_e_m_e_n_t$',A__questionmark_v0),'fun_app$at'('put_O_b_j_e_c_t$'(A__questionmark_v1,A__questionmark_v2),A__questionmark_v3)) = 'case_option$e'('none$a','cast_N_o_d_e_2_E_l_e_m_e_n_t$','fun_app$s'('cast_O_b_j_e_c_t_2_N_o_d_e$',A__questionmark_v2)) ) )
+      & ( ( A__questionmark_v1 != 'cast_n_o_d_e_p_t_r_2_o_b_j_e_c_t_p_t_r$'('cast_e_l_e_m_e_n_t_p_t_r_2_n_o_d_e_p_t_r$'(A__questionmark_v0)) )
+       => ( 'fun_app$ar'('fun_app$as'('get_E_l_e_m_e_n_t$',A__questionmark_v0),'fun_app$at'('put_O_b_j_e_c_t$'(A__questionmark_v1,A__questionmark_v2),A__questionmark_v3)) = 'fun_app$ar'('fun_app$as'('get_E_l_e_m_e_n_t$',A__questionmark_v0),A__questionmark_v3) ) ) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$ ?v1:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_list$ ?v3:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_list_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_list_fun$ ?v4:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_list_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_list_fun$ (((?v0 = ?v1) ∧ ((child_nodes$(?v1) = ?v2) ∧ ∀ ?v5:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_list$ ((?v2 = ?v5) ⇒ (fun_app$ag(?v3, ?v5) = fun_app$ag(?v4, ?v5))))) ⇒ (child_nodes_update$(?v3, ?v0) = child_nodes_update$(?v4, ?v1)))
+tff(axiom213,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$',A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_list$',A__questionmark_v3: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_list_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_list_fun$',A__questionmark_v4: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_list_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_list_fun$'] :
+      ( ( ( A__questionmark_v0 = A__questionmark_v1 )
+        & ( 'child_nodes$'(A__questionmark_v1) = A__questionmark_v2 )
+        & ! [A__questionmark_v5: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_list$'] :
+            ( ( A__questionmark_v2 = A__questionmark_v5 )
+           => ( 'fun_app$ag'(A__questionmark_v3,A__questionmark_v5) = 'fun_app$ag'(A__questionmark_v4,A__questionmark_v5) ) ) )
+     => ( 'child_nodes_update$'(A__questionmark_v3,A__questionmark_v0) = 'child_nodes_update$'(A__questionmark_v4,A__questionmark_v1) ) ) ).
+
+%% ∀ ?v0:H_option_RCharacterData_ext_RNode_ext_RObject_ext$ ?v1:H_option_RCharacterData_ext_RNode_ext_RObject_ext$ ((cast_C_h_a_r_a_c_t_e_r_D_a_t_a_2_N_o_d_e$(?v0) = cast_C_h_a_r_a_c_t_e_r_D_a_t_a_2_N_o_d_e$(?v1)) = (?v0 = ?v1))
+tff(axiom214,axiom,
+    ! [A__questionmark_v0: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext$',A__questionmark_v1: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext$'] :
+      ( ( 'cast_C_h_a_r_a_c_t_e_r_D_a_t_a_2_N_o_d_e$'(A__questionmark_v0) = 'cast_C_h_a_r_a_c_t_e_r_D_a_t_a_2_N_o_d_e$'(A__questionmark_v1) )
+    <=> ( A__questionmark_v0 = A__questionmark_v1 ) ) ).
+
+%% ∀ ?v0:A_element_ptr_option$ (∀ ?v1:A_element_ptr$ ¬(?v0 = fun_app$ax(some$d, ?v1)) = (?v0 = none$d))
+tff(axiom215,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_option$'] :
+      ( ! [A__questionmark_v1: 'A_element_ptr$'] : ( A__questionmark_v0 != 'fun_app$ax'('some$d',A__questionmark_v1) )
+    <=> ( A__questionmark_v0 = 'none$d' ) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_option$ (∀ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ ¬(?v0 = fun_app$ay(some$e, ?v1)) = (?v0 = none$e))
+tff(axiom216,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_option$'] :
+      ( ! [A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$'] : ( A__questionmark_v0 != 'fun_app$ay'('some$e',A__questionmark_v1) )
+    <=> ( A__questionmark_v0 = 'none$e' ) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_option$ (∀ ?v1:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$ ¬(?v0 = fun_app$az(some$f, ?v1)) = (?v0 = none$f))
+tff(axiom217,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_option$'] :
+      ( ! [A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$'] : ( A__questionmark_v0 != 'fun_app$az'('some$f',A__questionmark_v1) )
+    <=> ( A__questionmark_v0 = 'none$f' ) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$ (∀ ?v1:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$ ¬(?v0 = fun_app$g(some$, ?v1)) = (?v0 = none$b))
+tff(axiom218,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$'] :
+      ( ! [A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$'] : ( A__questionmark_v0 != 'fun_app$g'('some$',A__questionmark_v1) )
+    <=> ( A__questionmark_v0 = 'none$b' ) ) ).
+
+%% ∀ ?v0:H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$ (∀ ?v1:H_option_RCharacterData_ext_RNode_ext_RObject_ext$ ¬(?v0 = fun_app$k(some$c, ?v1)) = (?v0 = none$))
+tff(axiom219,axiom,
+    ! [A__questionmark_v0: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$'] :
+      ( ! [A__questionmark_v1: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext$'] : ( A__questionmark_v0 != 'fun_app$k'('some$c',A__questionmark_v1) )
+    <=> ( A__questionmark_v0 = 'none$' ) ) ).
+
+%% ∀ ?v0:C_a_b_j_option_RDocument_ext_RObject_ext_option$ (∀ ?v1:C_a_b_j_option_RDocument_ext_RObject_ext$ ¬(?v0 = fun_app$j(some$b, ?v1)) = (?v0 = none$c))
+tff(axiom220,axiom,
+    ! [A__questionmark_v0: 'C_a_b_j_option_RDocument_ext_RObject_ext_option$'] :
+      ( ! [A__questionmark_v1: 'C_a_b_j_option_RDocument_ext_RObject_ext$'] : ( A__questionmark_v0 != 'fun_app$j'('some$b',A__questionmark_v1) )
+    <=> ( A__questionmark_v0 = 'none$c' ) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$ (∀ ?v1:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$ ¬(?v0 = fun_app$i(some$a, ?v1)) = (?v0 = none$a))
+tff(axiom221,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$'] :
+      ( ! [A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$'] : ( A__questionmark_v0 != 'fun_app$i'('some$a',A__questionmark_v1) )
+    <=> ( A__questionmark_v0 = 'none$a' ) ) ).
+
+%% ∀ ?v0:A_element_ptr_option$ (¬(?v0 = none$d) = ∃ ?v1:A_element_ptr$ (?v0 = fun_app$ax(some$d, ?v1)))
+tff(axiom222,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_option$'] :
+      ( ( A__questionmark_v0 != 'none$d' )
+    <=> ? [A__questionmark_v1: 'A_element_ptr$'] : ( A__questionmark_v0 = 'fun_app$ax'('some$d',A__questionmark_v1) ) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_option$ (¬(?v0 = none$e) = ∃ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ (?v0 = fun_app$ay(some$e, ?v1)))
+tff(axiom223,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_option$'] :
+      ( ( A__questionmark_v0 != 'none$e' )
+    <=> ? [A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$'] : ( A__questionmark_v0 = 'fun_app$ay'('some$e',A__questionmark_v1) ) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_option$ (¬(?v0 = none$f) = ∃ ?v1:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$ (?v0 = fun_app$az(some$f, ?v1)))
+tff(axiom224,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_option$'] :
+      ( ( A__questionmark_v0 != 'none$f' )
+    <=> ? [A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$'] : ( A__questionmark_v0 = 'fun_app$az'('some$f',A__questionmark_v1) ) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$ (¬(?v0 = none$b) = ∃ ?v1:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$ (?v0 = fun_app$g(some$, ?v1)))
+tff(axiom225,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$'] :
+      ( ( A__questionmark_v0 != 'none$b' )
+    <=> ? [A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$'] : ( A__questionmark_v0 = 'fun_app$g'('some$',A__questionmark_v1) ) ) ).
+
+%% ∀ ?v0:H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$ (¬(?v0 = none$) = ∃ ?v1:H_option_RCharacterData_ext_RNode_ext_RObject_ext$ (?v0 = fun_app$k(some$c, ?v1)))
+tff(axiom226,axiom,
+    ! [A__questionmark_v0: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$'] :
+      ( ( A__questionmark_v0 != 'none$' )
+    <=> ? [A__questionmark_v1: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext$'] : ( A__questionmark_v0 = 'fun_app$k'('some$c',A__questionmark_v1) ) ) ).
+
+%% ∀ ?v0:C_a_b_j_option_RDocument_ext_RObject_ext_option$ (¬(?v0 = none$c) = ∃ ?v1:C_a_b_j_option_RDocument_ext_RObject_ext$ (?v0 = fun_app$j(some$b, ?v1)))
+tff(axiom227,axiom,
+    ! [A__questionmark_v0: 'C_a_b_j_option_RDocument_ext_RObject_ext_option$'] :
+      ( ( A__questionmark_v0 != 'none$c' )
+    <=> ? [A__questionmark_v1: 'C_a_b_j_option_RDocument_ext_RObject_ext$'] : ( A__questionmark_v0 = 'fun_app$j'('some$b',A__questionmark_v1) ) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$ (¬(?v0 = none$a) = ∃ ?v1:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$ (?v0 = fun_app$i(some$a, ?v1)))
+tff(axiom228,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$'] :
+      ( ( A__questionmark_v0 != 'none$a' )
+    <=> ? [A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$'] : ( A__questionmark_v0 = 'fun_app$i'('some$a',A__questionmark_v1) ) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_option$ (bind$j(?v0, uuo$) = none$c)
+tff(axiom229,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_option$'] : ( 'bind$j'(A__questionmark_v0,'uuo$') = 'none$c' ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$ (bind$f(?v0, uup$) = none$)
+tff(axiom230,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$'] : ( 'bind$f'(A__questionmark_v0,'uup$') = 'none$' ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$ (bind$g(?v0, uuq$) = none$a)
+tff(axiom231,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$'] : ( 'bind$g'(A__questionmark_v0,'uuq$') = 'none$a' ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$ (fun_app$ba(bind$i(?v0), uur$) = none$b)
+tff(axiom232,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$'] : ( 'fun_app$ba'('bind$i'(A__questionmark_v0),'uur$') = 'none$b' ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_option$ (bind$k(?v0, uus$) = none$b)
+tff(axiom233,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_option$'] : ( 'bind$k'(A__questionmark_v0,'uus$') = 'none$b' ) ).
+
+%% ∀ ?v0:D_document_ptr$ ?v1:D_document_ptr$ ?v2:C_a_b_j_option_RDocument_ext_RObject_ext$ ?v3:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ (¬(?v0 = ?v1) ⇒ (fun_app$ap(fun_app$aq(get_D_o_c_u_m_e_n_t$, ?v0), fun_app$at(put_D_o_c_u_m_e_n_t$(?v1, ?v2), ?v3)) = fun_app$ap(fun_app$aq(get_D_o_c_u_m_e_n_t$, ?v0), ?v3)))
+tff(axiom234,axiom,
+    ! [A__questionmark_v0: 'D_document_ptr$',A__questionmark_v1: 'D_document_ptr$',A__questionmark_v2: 'C_a_b_j_option_RDocument_ext_RObject_ext$',A__questionmark_v3: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$'] :
+      ( ( A__questionmark_v0 != A__questionmark_v1 )
+     => ( 'fun_app$ap'('fun_app$aq'('get_D_o_c_u_m_e_n_t$',A__questionmark_v0),'fun_app$at'('put_D_o_c_u_m_e_n_t$'(A__questionmark_v1,A__questionmark_v2),A__questionmark_v3)) = 'fun_app$ap'('fun_app$aq'('get_D_o_c_u_m_e_n_t$',A__questionmark_v0),A__questionmark_v3) ) ) ).
+
+%% ∀ ?v0:B_character_data_ptr$ ?v1:D_document_ptr$ ?v2:C_a_b_j_option_RDocument_ext_RObject_ext$ ?v3:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ (fun_app$am(fun_app$an(get_C_h_a_r_a_c_t_e_r_D_a_t_a$, ?v0), fun_app$at(put_D_o_c_u_m_e_n_t$(?v1, ?v2), ?v3)) = fun_app$am(fun_app$an(get_C_h_a_r_a_c_t_e_r_D_a_t_a$, ?v0), ?v3))
+tff(axiom235,axiom,
+    ! [A__questionmark_v0: 'B_character_data_ptr$',A__questionmark_v1: 'D_document_ptr$',A__questionmark_v2: 'C_a_b_j_option_RDocument_ext_RObject_ext$',A__questionmark_v3: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$'] : ( 'fun_app$am'('fun_app$an'('get_C_h_a_r_a_c_t_e_r_D_a_t_a$',A__questionmark_v0),'fun_app$at'('put_D_o_c_u_m_e_n_t$'(A__questionmark_v1,A__questionmark_v2),A__questionmark_v3)) = 'fun_app$am'('fun_app$an'('get_C_h_a_r_a_c_t_e_r_D_a_t_a$',A__questionmark_v0),A__questionmark_v3) ) ).
+
+%% ∀ ?v0:A_element_ptr$ ?v1:D_document_ptr$ ?v2:C_a_b_j_option_RDocument_ext_RObject_ext$ ?v3:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ (fun_app$ar(fun_app$as(get_E_l_e_m_e_n_t$, ?v0), fun_app$at(put_D_o_c_u_m_e_n_t$(?v1, ?v2), ?v3)) = fun_app$ar(fun_app$as(get_E_l_e_m_e_n_t$, ?v0), ?v3))
+tff(axiom236,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr$',A__questionmark_v1: 'D_document_ptr$',A__questionmark_v2: 'C_a_b_j_option_RDocument_ext_RObject_ext$',A__questionmark_v3: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$'] : ( 'fun_app$ar'('fun_app$as'('get_E_l_e_m_e_n_t$',A__questionmark_v0),'fun_app$at'('put_D_o_c_u_m_e_n_t$'(A__questionmark_v1,A__questionmark_v2),A__questionmark_v3)) = 'fun_app$ar'('fun_app$as'('get_E_l_e_m_e_n_t$',A__questionmark_v0),A__questionmark_v3) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$ ((fun_app$s(cast_O_b_j_e_c_t_2_N_o_d_e$, ?v0) = none$b) = ¬∃ ?v1:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$ (cast_N_o_d_e_2_O_b_j_e_c_t$(?v1) = ?v0))
+tff(axiom237,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$'] :
+      ( ( 'fun_app$s'('cast_O_b_j_e_c_t_2_N_o_d_e$',A__questionmark_v0) = 'none$b' )
+    <=> ~ ? [A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$'] : ( 'cast_N_o_d_e_2_O_b_j_e_c_t$'(A__questionmark_v1) = A__questionmark_v0 ) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$ ((fun_app$n(cast_N_o_d_e_2_E_l_e_m_e_n_t$, ?v0) = none$a) = ¬∃ ?v1:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$ (cast_E_l_e_m_e_n_t_2_N_o_d_e$(?v1) = ?v0))
+tff(axiom238,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$'] :
+      ( ( 'fun_app$n'('cast_N_o_d_e_2_E_l_e_m_e_n_t$',A__questionmark_v0) = 'none$a' )
+    <=> ~ ? [A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$'] : ( 'cast_E_l_e_m_e_n_t_2_N_o_d_e$'(A__questionmark_v1) = A__questionmark_v0 ) ) ).
+
+%% ∀ ?v0:C_a_b_j_option_RDocument_ext_RObject_ext_option$ ((((?v0 = none$c) ⇒ false) ∧ (¬(?v0 = none$c) ⇒ false)) ⇒ false)
+tff(axiom239,axiom,
+    ! [A__questionmark_v0: 'C_a_b_j_option_RDocument_ext_RObject_ext_option$'] :
+      ( ( ( ( A__questionmark_v0 = 'none$c' )
+         => $false )
+        & ( ( A__questionmark_v0 != 'none$c' )
+         => $false ) )
+     => $false ) ).
+
+%% ∀ ?v0:H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$ ((((?v0 = none$) ⇒ false) ∧ (¬(?v0 = none$) ⇒ false)) ⇒ false)
+tff(axiom240,axiom,
+    ! [A__questionmark_v0: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$'] :
+      ( ( ( ( A__questionmark_v0 = 'none$' )
+         => $false )
+        & ( ( A__questionmark_v0 != 'none$' )
+         => $false ) )
+     => $false ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$ ((((?v0 = none$a) ⇒ false) ∧ (¬(?v0 = none$a) ⇒ false)) ⇒ false)
+tff(axiom241,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$'] :
+      ( ( ( ( A__questionmark_v0 = 'none$a' )
+         => $false )
+        & ( ( A__questionmark_v0 != 'none$a' )
+         => $false ) )
+     => $false ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$ ((((?v0 = none$b) ⇒ false) ∧ (¬(?v0 = none$b) ⇒ false)) ⇒ false)
+tff(axiom242,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$'] :
+      ( ( ( ( A__questionmark_v0 = 'none$b' )
+         => $false )
+        & ( ( A__questionmark_v0 != 'none$b' )
+         => $false ) )
+     => $false ) ).
+
+%% ∀ ?v0:A_element_ptr_option$ ((((?v0 = none$d) ⇒ false) ∧ (¬(?v0 = none$d) ⇒ false)) ⇒ false)
+tff(axiom243,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_option$'] :
+      ( ( ( ( A__questionmark_v0 = 'none$d' )
+         => $false )
+        & ( ( A__questionmark_v0 != 'none$d' )
+         => $false ) )
+     => $false ) ).
+
+%% ∀ ?v0:Bool ?v1:C_a_b_j_option_RDocument_ext_RObject_ext_bool_fun$ (fun_app$bm(case_option$f(?v0, ?v1), none$c) = ?v0)
+tff(axiom244,axiom,
+    ! [A__questionmark_v0: tlbool,A__questionmark_v1: 'C_a_b_j_option_RDocument_ext_RObject_ext_bool_fun$'] :
+      ( 'fun_app$bm'('case_option$f'(A__questionmark_v0,A__questionmark_v1),'none$c')
+    <=> ( A__questionmark_v0 = tltrue ) ) ).
+
+%% ∀ ?v0:Bool ?v1:H_option_RCharacterData_ext_RNode_ext_RObject_ext_bool_fun$ (fun_app$bn(case_option$g(?v0, ?v1), none$) = ?v0)
+tff(axiom245,axiom,
+    ! [A__questionmark_v0: tlbool,A__questionmark_v1: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_bool_fun$'] :
+      ( 'fun_app$bn'('case_option$g'(A__questionmark_v0,A__questionmark_v1),'none$')
+    <=> ( A__questionmark_v0 = tltrue ) ) ).
+
+%% ∀ ?v0:Bool ?v1:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_bool_fun$ (fun_app$bo(case_option$h(?v0, ?v1), none$a) = ?v0)
+tff(axiom246,axiom,
+    ! [A__questionmark_v0: tlbool,A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_bool_fun$'] :
+      ( 'fun_app$bo'('case_option$h'(A__questionmark_v0,A__questionmark_v1),'none$a')
+    <=> ( A__questionmark_v0 = tltrue ) ) ).
+
+%% ∀ ?v0:Bool ?v1:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_bool_fun$ (fun_app$bp(case_option$i(?v0, ?v1), none$b) = ?v0)
+tff(axiom247,axiom,
+    ! [A__questionmark_v0: tlbool,A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_bool_fun$'] :
+      ( 'fun_app$bp'('case_option$i'(A__questionmark_v0,A__questionmark_v1),'none$b')
+    <=> ( A__questionmark_v0 = tltrue ) ) ).
+
+%% ∀ ?v0:Bool ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_bool_fun$ (fun_app$bq(case_option$j(?v0, ?v1), none$e) = ?v0)
+tff(axiom248,axiom,
+    ! [A__questionmark_v0: tlbool,A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_bool_fun$'] :
+      ( 'fun_app$bq'('case_option$j'(A__questionmark_v0,A__questionmark_v1),'none$e')
+    <=> ( A__questionmark_v0 = tltrue ) ) ).
+
+%% ∀ ?v0:Bool_bool_fun$ ?v1:Bool ?v2:C_a_b_j_option_RDocument_ext_RObject_ext_bool_fun$ ?v3:C_a_b_j_option_RDocument_ext_RObject_ext_option$ (fun_app$u(?v0, fun_app$bm(case_option$f(?v1, ?v2), ?v3)) = fun_app$bm(case_option$f(fun_app$u(?v0, ?v1), uut$(?v0, ?v2)), ?v3))
+tff(axiom249,axiom,
+    ! [A__questionmark_v0: 'Bool_bool_fun$',A__questionmark_v1: tlbool,A__questionmark_v2: 'C_a_b_j_option_RDocument_ext_RObject_ext_bool_fun$',A__questionmark_v3: 'C_a_b_j_option_RDocument_ext_RObject_ext_option$'] :
+      ( 'fun_app$u'(A__questionmark_v0,def_6(A__questionmark_v1,A__questionmark_v2,A__questionmark_v3))
+    <=> 'fun_app$bm'('case_option$f'(def_7(A__questionmark_v0,A__questionmark_v1),'uut$'(A__questionmark_v0,A__questionmark_v2)),A__questionmark_v3) ) ).
+
+%% ∀ ?v0:Bool_bool_fun$ ?v1:Bool ?v2:H_option_RCharacterData_ext_RNode_ext_RObject_ext_bool_fun$ ?v3:H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$ (fun_app$u(?v0, fun_app$bn(case_option$g(?v1, ?v2), ?v3)) = fun_app$bn(case_option$g(fun_app$u(?v0, ?v1), uuu$(?v0, ?v2)), ?v3))
+tff(axiom250,axiom,
+    ! [A__questionmark_v0: 'Bool_bool_fun$',A__questionmark_v1: tlbool,A__questionmark_v2: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_bool_fun$',A__questionmark_v3: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$'] :
+      ( 'fun_app$u'(A__questionmark_v0,def_8(A__questionmark_v1,A__questionmark_v2,A__questionmark_v3))
+    <=> 'fun_app$bn'('case_option$g'(def_9(A__questionmark_v0,A__questionmark_v1),'uuu$'(A__questionmark_v0,A__questionmark_v2)),A__questionmark_v3) ) ).
+
+%% ∀ ?v0:Bool_bool_fun$ ?v1:Bool ?v2:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_bool_fun$ ?v3:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$ (fun_app$u(?v0, fun_app$bo(case_option$h(?v1, ?v2), ?v3)) = fun_app$bo(case_option$h(fun_app$u(?v0, ?v1), uuv$(?v0, ?v2)), ?v3))
+tff(axiom251,axiom,
+    ! [A__questionmark_v0: 'Bool_bool_fun$',A__questionmark_v1: tlbool,A__questionmark_v2: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_bool_fun$',A__questionmark_v3: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$'] :
+      ( 'fun_app$u'(A__questionmark_v0,def_10(A__questionmark_v1,A__questionmark_v2,A__questionmark_v3))
+    <=> 'fun_app$bo'('case_option$h'(def_11(A__questionmark_v0,A__questionmark_v1),'uuv$'(A__questionmark_v0,A__questionmark_v2)),A__questionmark_v3) ) ).
+
+%% ∀ ?v0:Bool_bool_fun$ ?v1:Bool ?v2:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_bool_fun$ ?v3:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$ (fun_app$u(?v0, fun_app$bp(case_option$i(?v1, ?v2), ?v3)) = fun_app$bp(case_option$i(fun_app$u(?v0, ?v1), uuw$(?v0, ?v2)), ?v3))
+tff(axiom252,axiom,
+    ! [A__questionmark_v0: 'Bool_bool_fun$',A__questionmark_v1: tlbool,A__questionmark_v2: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_bool_fun$',A__questionmark_v3: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$'] :
+      ( 'fun_app$u'(A__questionmark_v0,def_12(A__questionmark_v1,A__questionmark_v2,A__questionmark_v3))
+    <=> 'fun_app$bp'('case_option$i'(def_13(A__questionmark_v0,A__questionmark_v1),'uuw$'(A__questionmark_v0,A__questionmark_v2)),A__questionmark_v3) ) ).
+
+%% ∀ ?v0:Bool_bool_fun$ ?v1:Bool ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_bool_fun$ ?v3:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_option$ (fun_app$u(?v0, fun_app$bq(case_option$j(?v1, ?v2), ?v3)) = fun_app$bq(case_option$j(fun_app$u(?v0, ?v1), uux$(?v0, ?v2)), ?v3))
+tff(axiom253,axiom,
+    ! [A__questionmark_v0: 'Bool_bool_fun$',A__questionmark_v1: tlbool,A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_bool_fun$',A__questionmark_v3: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_option$'] :
+      ( 'fun_app$u'(A__questionmark_v0,def_14(A__questionmark_v1,A__questionmark_v2,A__questionmark_v3))
+    <=> 'fun_app$bq'('case_option$j'(def_15(A__questionmark_v0,A__questionmark_v1),'uux$'(A__questionmark_v0,A__questionmark_v2)),A__questionmark_v3) ) ).
+
+%% ∀ ?v0:H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$ ?v1:H_option_RCharacterData_ext_RNode_ext_RObject_ext_option_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_bool_fun_fun$ ?v2:H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$ ((((?v0 = none$) ⇒ fun_app$bn(fun_app$br(?v1, ?v0), ?v2)) ∧ (((?v2 = none$) ⇒ fun_app$bn(fun_app$br(?v1, ?v0), ?v2)) ∧ ∀ ?v3:H_option_RCharacterData_ext_RNode_ext_RObject_ext$ ?v4:H_option_RCharacterData_ext_RNode_ext_RObject_ext$ (((?v0 = fun_app$k(some$c, ?v3)) ∧ (?v2 = fun_app$k(some$c, ?v4))) ⇒ fun_app$bn(fun_app$br(?v1, ?v0), ?v2)))) ⇒ fun_app$bn(fun_app$br(?v1, ?v0), ?v2))
+tff(axiom254,axiom,
+    ! [A__questionmark_v0: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$',A__questionmark_v1: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_bool_fun_fun$',A__questionmark_v2: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$'] :
+      ( ( ( ( A__questionmark_v0 = 'none$' )
+         => 'fun_app$bn'('fun_app$br'(A__questionmark_v1,A__questionmark_v0),A__questionmark_v2) )
+        & ( ( A__questionmark_v2 = 'none$' )
+         => 'fun_app$bn'('fun_app$br'(A__questionmark_v1,A__questionmark_v0),A__questionmark_v2) )
+        & ! [A__questionmark_v3: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext$',A__questionmark_v4: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext$'] :
+            ( ( ( A__questionmark_v0 = 'fun_app$k'('some$c',A__questionmark_v3) )
+              & ( A__questionmark_v2 = 'fun_app$k'('some$c',A__questionmark_v4) ) )
+           => 'fun_app$bn'('fun_app$br'(A__questionmark_v1,A__questionmark_v0),A__questionmark_v2) ) )
+     => 'fun_app$bn'('fun_app$br'(A__questionmark_v1,A__questionmark_v0),A__questionmark_v2) ) ).
+
+%% ∀ ?v0:H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$ ?v1:H_option_RCharacterData_ext_RNode_ext_RObject_ext_option_c_a_b_j_option_RDocument_ext_RObject_ext_option_bool_fun_fun$ ?v2:C_a_b_j_option_RDocument_ext_RObject_ext_option$ ((((?v0 = none$) ⇒ fun_app$bm(fun_app$bs(?v1, ?v0), ?v2)) ∧ (((?v2 = none$c) ⇒ fun_app$bm(fun_app$bs(?v1, ?v0), ?v2)) ∧ ∀ ?v3:H_option_RCharacterData_ext_RNode_ext_RObject_ext$ ?v4:C_a_b_j_option_RDocument_ext_RObject_ext$ (((?v0 = fun_app$k(some$c, ?v3)) ∧ (?v2 = fun_app$j(some$b, ?v4))) ⇒ fun_app$bm(fun_app$bs(?v1, ?v0), ?v2)))) ⇒ fun_app$bm(fun_app$bs(?v1, ?v0), ?v2))
+tff(axiom255,axiom,
+    ! [A__questionmark_v0: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$',A__questionmark_v1: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option_c_a_b_j_option_RDocument_ext_RObject_ext_option_bool_fun_fun$',A__questionmark_v2: 'C_a_b_j_option_RDocument_ext_RObject_ext_option$'] :
+      ( ( ( ( A__questionmark_v0 = 'none$' )
+         => 'fun_app$bm'('fun_app$bs'(A__questionmark_v1,A__questionmark_v0),A__questionmark_v2) )
+        & ( ( A__questionmark_v2 = 'none$c' )
+         => 'fun_app$bm'('fun_app$bs'(A__questionmark_v1,A__questionmark_v0),A__questionmark_v2) )
+        & ! [A__questionmark_v3: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext$',A__questionmark_v4: 'C_a_b_j_option_RDocument_ext_RObject_ext$'] :
+            ( ( ( A__questionmark_v0 = 'fun_app$k'('some$c',A__questionmark_v3) )
+              & ( A__questionmark_v2 = 'fun_app$j'('some$b',A__questionmark_v4) ) )
+           => 'fun_app$bm'('fun_app$bs'(A__questionmark_v1,A__questionmark_v0),A__questionmark_v2) ) )
+     => 'fun_app$bm'('fun_app$bs'(A__questionmark_v1,A__questionmark_v0),A__questionmark_v2) ) ).
+
+%% ∀ ?v0:C_a_b_j_option_RDocument_ext_RObject_ext_option$ ?v1:C_a_b_j_option_RDocument_ext_RObject_ext_option_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_bool_fun_fun$ ?v2:H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$ ((((?v0 = none$c) ⇒ fun_app$bn(fun_app$bt(?v1, ?v0), ?v2)) ∧ (((?v2 = none$) ⇒ fun_app$bn(fun_app$bt(?v1, ?v0), ?v2)) ∧ ∀ ?v3:C_a_b_j_option_RDocument_ext_RObject_ext$ ?v4:H_option_RCharacterData_ext_RNode_ext_RObject_ext$ (((?v0 = fun_app$j(some$b, ?v3)) ∧ (?v2 = fun_app$k(some$c, ?v4))) ⇒ fun_app$bn(fun_app$bt(?v1, ?v0), ?v2)))) ⇒ fun_app$bn(fun_app$bt(?v1, ?v0), ?v2))
+tff(axiom256,axiom,
+    ! [A__questionmark_v0: 'C_a_b_j_option_RDocument_ext_RObject_ext_option$',A__questionmark_v1: 'C_a_b_j_option_RDocument_ext_RObject_ext_option_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_bool_fun_fun$',A__questionmark_v2: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$'] :
+      ( ( ( ( A__questionmark_v0 = 'none$c' )
+         => 'fun_app$bn'('fun_app$bt'(A__questionmark_v1,A__questionmark_v0),A__questionmark_v2) )
+        & ( ( A__questionmark_v2 = 'none$' )
+         => 'fun_app$bn'('fun_app$bt'(A__questionmark_v1,A__questionmark_v0),A__questionmark_v2) )
+        & ! [A__questionmark_v3: 'C_a_b_j_option_RDocument_ext_RObject_ext$',A__questionmark_v4: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext$'] :
+            ( ( ( A__questionmark_v0 = 'fun_app$j'('some$b',A__questionmark_v3) )
+              & ( A__questionmark_v2 = 'fun_app$k'('some$c',A__questionmark_v4) ) )
+           => 'fun_app$bn'('fun_app$bt'(A__questionmark_v1,A__questionmark_v0),A__questionmark_v2) ) )
+     => 'fun_app$bn'('fun_app$bt'(A__questionmark_v1,A__questionmark_v0),A__questionmark_v2) ) ).
+
+%% ∀ ?v0:H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$ ?v1:H_option_RCharacterData_ext_RNode_ext_RObject_ext_option_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_bool_fun_fun$ ?v2:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$ ((((?v0 = none$) ⇒ fun_app$bo(fun_app$bu(?v1, ?v0), ?v2)) ∧ (((?v2 = none$a) ⇒ fun_app$bo(fun_app$bu(?v1, ?v0), ?v2)) ∧ ∀ ?v3:H_option_RCharacterData_ext_RNode_ext_RObject_ext$ ?v4:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$ (((?v0 = fun_app$k(some$c, ?v3)) ∧ (?v2 = fun_app$i(some$a, ?v4))) ⇒ fun_app$bo(fun_app$bu(?v1, ?v0), ?v2)))) ⇒ fun_app$bo(fun_app$bu(?v1, ?v0), ?v2))
+tff(axiom257,axiom,
+    ! [A__questionmark_v0: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$',A__questionmark_v1: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_bool_fun_fun$',A__questionmark_v2: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$'] :
+      ( ( ( ( A__questionmark_v0 = 'none$' )
+         => 'fun_app$bo'('fun_app$bu'(A__questionmark_v1,A__questionmark_v0),A__questionmark_v2) )
+        & ( ( A__questionmark_v2 = 'none$a' )
+         => 'fun_app$bo'('fun_app$bu'(A__questionmark_v1,A__questionmark_v0),A__questionmark_v2) )
+        & ! [A__questionmark_v3: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext$',A__questionmark_v4: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$'] :
+            ( ( ( A__questionmark_v0 = 'fun_app$k'('some$c',A__questionmark_v3) )
+              & ( A__questionmark_v2 = 'fun_app$i'('some$a',A__questionmark_v4) ) )
+           => 'fun_app$bo'('fun_app$bu'(A__questionmark_v1,A__questionmark_v0),A__questionmark_v2) ) )
+     => 'fun_app$bo'('fun_app$bu'(A__questionmark_v1,A__questionmark_v0),A__questionmark_v2) ) ).
+
+%% ∀ ?v0:C_a_b_j_option_RDocument_ext_RObject_ext_option$ ?v1:C_a_b_j_option_RDocument_ext_RObject_ext_option_c_a_b_j_option_RDocument_ext_RObject_ext_option_bool_fun_fun$ ?v2:C_a_b_j_option_RDocument_ext_RObject_ext_option$ ((((?v0 = none$c) ⇒ fun_app$bm(fun_app$bv(?v1, ?v0), ?v2)) ∧ (((?v2 = none$c) ⇒ fun_app$bm(fun_app$bv(?v1, ?v0), ?v2)) ∧ ∀ ?v3:C_a_b_j_option_RDocument_ext_RObject_ext$ ?v4:C_a_b_j_option_RDocument_ext_RObject_ext$ (((?v0 = fun_app$j(some$b, ?v3)) ∧ (?v2 = fun_app$j(some$b, ?v4))) ⇒ fun_app$bm(fun_app$bv(?v1, ?v0), ?v2)))) ⇒ fun_app$bm(fun_app$bv(?v1, ?v0), ?v2))
+tff(axiom258,axiom,
+    ! [A__questionmark_v0: 'C_a_b_j_option_RDocument_ext_RObject_ext_option$',A__questionmark_v1: 'C_a_b_j_option_RDocument_ext_RObject_ext_option_c_a_b_j_option_RDocument_ext_RObject_ext_option_bool_fun_fun$',A__questionmark_v2: 'C_a_b_j_option_RDocument_ext_RObject_ext_option$'] :
+      ( ( ( ( A__questionmark_v0 = 'none$c' )
+         => 'fun_app$bm'('fun_app$bv'(A__questionmark_v1,A__questionmark_v0),A__questionmark_v2) )
+        & ( ( A__questionmark_v2 = 'none$c' )
+         => 'fun_app$bm'('fun_app$bv'(A__questionmark_v1,A__questionmark_v0),A__questionmark_v2) )
+        & ! [A__questionmark_v3: 'C_a_b_j_option_RDocument_ext_RObject_ext$',A__questionmark_v4: 'C_a_b_j_option_RDocument_ext_RObject_ext$'] :
+            ( ( ( A__questionmark_v0 = 'fun_app$j'('some$b',A__questionmark_v3) )
+              & ( A__questionmark_v2 = 'fun_app$j'('some$b',A__questionmark_v4) ) )
+           => 'fun_app$bm'('fun_app$bv'(A__questionmark_v1,A__questionmark_v0),A__questionmark_v2) ) )
+     => 'fun_app$bm'('fun_app$bv'(A__questionmark_v1,A__questionmark_v0),A__questionmark_v2) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$ ?v1:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_bool_fun_fun$ ?v2:H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$ ((((?v0 = none$a) ⇒ fun_app$bn(fun_app$bw(?v1, ?v0), ?v2)) ∧ (((?v2 = none$) ⇒ fun_app$bn(fun_app$bw(?v1, ?v0), ?v2)) ∧ ∀ ?v3:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$ ?v4:H_option_RCharacterData_ext_RNode_ext_RObject_ext$ (((?v0 = fun_app$i(some$a, ?v3)) ∧ (?v2 = fun_app$k(some$c, ?v4))) ⇒ fun_app$bn(fun_app$bw(?v1, ?v0), ?v2)))) ⇒ fun_app$bn(fun_app$bw(?v1, ?v0), ?v2))
+tff(axiom259,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$',A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_bool_fun_fun$',A__questionmark_v2: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$'] :
+      ( ( ( ( A__questionmark_v0 = 'none$a' )
+         => 'fun_app$bn'('fun_app$bw'(A__questionmark_v1,A__questionmark_v0),A__questionmark_v2) )
+        & ( ( A__questionmark_v2 = 'none$' )
+         => 'fun_app$bn'('fun_app$bw'(A__questionmark_v1,A__questionmark_v0),A__questionmark_v2) )
+        & ! [A__questionmark_v3: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$',A__questionmark_v4: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext$'] :
+            ( ( ( A__questionmark_v0 = 'fun_app$i'('some$a',A__questionmark_v3) )
+              & ( A__questionmark_v2 = 'fun_app$k'('some$c',A__questionmark_v4) ) )
+           => 'fun_app$bn'('fun_app$bw'(A__questionmark_v1,A__questionmark_v0),A__questionmark_v2) ) )
+     => 'fun_app$bn'('fun_app$bw'(A__questionmark_v1,A__questionmark_v0),A__questionmark_v2) ) ).
+
+%% ∀ ?v0:C_a_b_j_option_RDocument_ext_RObject_ext_option$ ?v1:C_a_b_j_option_RDocument_ext_RObject_ext_option_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_bool_fun_fun$ ?v2:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$ ((((?v0 = none$c) ⇒ fun_app$bo(fun_app$bx(?v1, ?v0), ?v2)) ∧ (((?v2 = none$a) ⇒ fun_app$bo(fun_app$bx(?v1, ?v0), ?v2)) ∧ ∀ ?v3:C_a_b_j_option_RDocument_ext_RObject_ext$ ?v4:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$ (((?v0 = fun_app$j(some$b, ?v3)) ∧ (?v2 = fun_app$i(some$a, ?v4))) ⇒ fun_app$bo(fun_app$bx(?v1, ?v0), ?v2)))) ⇒ fun_app$bo(fun_app$bx(?v1, ?v0), ?v2))
+tff(axiom260,axiom,
+    ! [A__questionmark_v0: 'C_a_b_j_option_RDocument_ext_RObject_ext_option$',A__questionmark_v1: 'C_a_b_j_option_RDocument_ext_RObject_ext_option_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_bool_fun_fun$',A__questionmark_v2: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$'] :
+      ( ( ( ( A__questionmark_v0 = 'none$c' )
+         => 'fun_app$bo'('fun_app$bx'(A__questionmark_v1,A__questionmark_v0),A__questionmark_v2) )
+        & ( ( A__questionmark_v2 = 'none$a' )
+         => 'fun_app$bo'('fun_app$bx'(A__questionmark_v1,A__questionmark_v0),A__questionmark_v2) )
+        & ! [A__questionmark_v3: 'C_a_b_j_option_RDocument_ext_RObject_ext$',A__questionmark_v4: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$'] :
+            ( ( ( A__questionmark_v0 = 'fun_app$j'('some$b',A__questionmark_v3) )
+              & ( A__questionmark_v2 = 'fun_app$i'('some$a',A__questionmark_v4) ) )
+           => 'fun_app$bo'('fun_app$bx'(A__questionmark_v1,A__questionmark_v0),A__questionmark_v2) ) )
+     => 'fun_app$bo'('fun_app$bx'(A__questionmark_v1,A__questionmark_v0),A__questionmark_v2) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$ ?v1:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_c_a_b_j_option_RDocument_ext_RObject_ext_option_bool_fun_fun$ ?v2:C_a_b_j_option_RDocument_ext_RObject_ext_option$ ((((?v0 = none$a) ⇒ fun_app$bm(fun_app$by(?v1, ?v0), ?v2)) ∧ (((?v2 = none$c) ⇒ fun_app$bm(fun_app$by(?v1, ?v0), ?v2)) ∧ ∀ ?v3:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$ ?v4:C_a_b_j_option_RDocument_ext_RObject_ext$ (((?v0 = fun_app$i(some$a, ?v3)) ∧ (?v2 = fun_app$j(some$b, ?v4))) ⇒ fun_app$bm(fun_app$by(?v1, ?v0), ?v2)))) ⇒ fun_app$bm(fun_app$by(?v1, ?v0), ?v2))
+tff(axiom261,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$',A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_c_a_b_j_option_RDocument_ext_RObject_ext_option_bool_fun_fun$',A__questionmark_v2: 'C_a_b_j_option_RDocument_ext_RObject_ext_option$'] :
+      ( ( ( ( A__questionmark_v0 = 'none$a' )
+         => 'fun_app$bm'('fun_app$by'(A__questionmark_v1,A__questionmark_v0),A__questionmark_v2) )
+        & ( ( A__questionmark_v2 = 'none$c' )
+         => 'fun_app$bm'('fun_app$by'(A__questionmark_v1,A__questionmark_v0),A__questionmark_v2) )
+        & ! [A__questionmark_v3: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$',A__questionmark_v4: 'C_a_b_j_option_RDocument_ext_RObject_ext$'] :
+            ( ( ( A__questionmark_v0 = 'fun_app$i'('some$a',A__questionmark_v3) )
+              & ( A__questionmark_v2 = 'fun_app$j'('some$b',A__questionmark_v4) ) )
+           => 'fun_app$bm'('fun_app$by'(A__questionmark_v1,A__questionmark_v0),A__questionmark_v2) ) )
+     => 'fun_app$bm'('fun_app$by'(A__questionmark_v1,A__questionmark_v0),A__questionmark_v2) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$ ?v1:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_bool_fun_fun$ ?v2:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$ ((((?v0 = none$a) ⇒ fun_app$bo(fun_app$bz(?v1, ?v0), ?v2)) ∧ (((?v2 = none$a) ⇒ fun_app$bo(fun_app$bz(?v1, ?v0), ?v2)) ∧ ∀ ?v3:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$ ?v4:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$ (((?v0 = fun_app$i(some$a, ?v3)) ∧ (?v2 = fun_app$i(some$a, ?v4))) ⇒ fun_app$bo(fun_app$bz(?v1, ?v0), ?v2)))) ⇒ fun_app$bo(fun_app$bz(?v1, ?v0), ?v2))
+tff(axiom262,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$',A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_bool_fun_fun$',A__questionmark_v2: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$'] :
+      ( ( ( ( A__questionmark_v0 = 'none$a' )
+         => 'fun_app$bo'('fun_app$bz'(A__questionmark_v1,A__questionmark_v0),A__questionmark_v2) )
+        & ( ( A__questionmark_v2 = 'none$a' )
+         => 'fun_app$bo'('fun_app$bz'(A__questionmark_v1,A__questionmark_v0),A__questionmark_v2) )
+        & ! [A__questionmark_v3: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$',A__questionmark_v4: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$'] :
+            ( ( ( A__questionmark_v0 = 'fun_app$i'('some$a',A__questionmark_v3) )
+              & ( A__questionmark_v2 = 'fun_app$i'('some$a',A__questionmark_v4) ) )
+           => 'fun_app$bo'('fun_app$bz'(A__questionmark_v1,A__questionmark_v0),A__questionmark_v2) ) )
+     => 'fun_app$bo'('fun_app$bz'(A__questionmark_v1,A__questionmark_v0),A__questionmark_v2) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$ ?v1:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_bool_fun_fun$ ?v2:H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$ ((((?v0 = none$b) ⇒ fun_app$bn(fun_app$ca(?v1, ?v0), ?v2)) ∧ (((?v2 = none$) ⇒ fun_app$bn(fun_app$ca(?v1, ?v0), ?v2)) ∧ ∀ ?v3:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$ ?v4:H_option_RCharacterData_ext_RNode_ext_RObject_ext$ (((?v0 = fun_app$g(some$, ?v3)) ∧ (?v2 = fun_app$k(some$c, ?v4))) ⇒ fun_app$bn(fun_app$ca(?v1, ?v0), ?v2)))) ⇒ fun_app$bn(fun_app$ca(?v1, ?v0), ?v2))
+tff(axiom263,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$',A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_bool_fun_fun$',A__questionmark_v2: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$'] :
+      ( ( ( ( A__questionmark_v0 = 'none$b' )
+         => 'fun_app$bn'('fun_app$ca'(A__questionmark_v1,A__questionmark_v0),A__questionmark_v2) )
+        & ( ( A__questionmark_v2 = 'none$' )
+         => 'fun_app$bn'('fun_app$ca'(A__questionmark_v1,A__questionmark_v0),A__questionmark_v2) )
+        & ! [A__questionmark_v3: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$',A__questionmark_v4: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext$'] :
+            ( ( ( A__questionmark_v0 = 'fun_app$g'('some$',A__questionmark_v3) )
+              & ( A__questionmark_v2 = 'fun_app$k'('some$c',A__questionmark_v4) ) )
+           => 'fun_app$bn'('fun_app$ca'(A__questionmark_v1,A__questionmark_v0),A__questionmark_v2) ) )
+     => 'fun_app$bn'('fun_app$ca'(A__questionmark_v1,A__questionmark_v0),A__questionmark_v2) ) ).
+
+%% ∀ ?v0:A_element_ptr_option_bool_fun$ (∀ ?v1:A_element_ptr_option$ fun_app$a(?v0, ?v1) = (fun_app$a(?v0, none$d) ∧ ∀ ?v1:A_element_ptr$ fun_app$a(?v0, fun_app$ax(some$d, ?v1))))
+tff(axiom264,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_option_bool_fun$'] :
+      ( ! [A__questionmark_v1: 'A_element_ptr_option$'] : 'fun_app$a'(A__questionmark_v0,A__questionmark_v1)
+    <=> ( 'fun_app$a'(A__questionmark_v0,'none$d')
+        & ! [A__questionmark_v1: 'A_element_ptr$'] : 'fun_app$a'(A__questionmark_v0,'fun_app$ax'('some$d',A__questionmark_v1)) ) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_option_bool_fun$ (∀ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_option$ fun_app$bq(?v0, ?v1) = (fun_app$bq(?v0, none$e) ∧ ∀ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ fun_app$bq(?v0, fun_app$ay(some$e, ?v1))))
+tff(axiom265,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_option_bool_fun$'] :
+      ( ! [A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_option$'] : 'fun_app$bq'(A__questionmark_v0,A__questionmark_v1)
+    <=> ( 'fun_app$bq'(A__questionmark_v0,'none$e')
+        & ! [A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$'] : 'fun_app$bq'(A__questionmark_v0,'fun_app$ay'('some$e',A__questionmark_v1)) ) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_option_bool_fun$ (∀ ?v1:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_option$ fun_app$cb(?v0, ?v1) = (fun_app$cb(?v0, none$f) ∧ ∀ ?v1:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$ fun_app$cb(?v0, fun_app$az(some$f, ?v1))))
+tff(axiom266,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_option_bool_fun$'] :
+      ( ! [A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_option$'] : 'fun_app$cb'(A__questionmark_v0,A__questionmark_v1)
+    <=> ( 'fun_app$cb'(A__questionmark_v0,'none$f')
+        & ! [A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$'] : 'fun_app$cb'(A__questionmark_v0,'fun_app$az'('some$f',A__questionmark_v1)) ) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_bool_fun$ (∀ ?v1:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$ fun_app$bp(?v0, ?v1) = (fun_app$bp(?v0, none$b) ∧ ∀ ?v1:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$ fun_app$bp(?v0, fun_app$g(some$, ?v1))))
+tff(axiom267,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_bool_fun$'] :
+      ( ! [A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$'] : 'fun_app$bp'(A__questionmark_v0,A__questionmark_v1)
+    <=> ( 'fun_app$bp'(A__questionmark_v0,'none$b')
+        & ! [A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$'] : 'fun_app$bp'(A__questionmark_v0,'fun_app$g'('some$',A__questionmark_v1)) ) ) ).
+
+%% ∀ ?v0:H_option_RCharacterData_ext_RNode_ext_RObject_ext_option_bool_fun$ (∀ ?v1:H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$ fun_app$bn(?v0, ?v1) = (fun_app$bn(?v0, none$) ∧ ∀ ?v1:H_option_RCharacterData_ext_RNode_ext_RObject_ext$ fun_app$bn(?v0, fun_app$k(some$c, ?v1))))
+tff(axiom268,axiom,
+    ! [A__questionmark_v0: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option_bool_fun$'] :
+      ( ! [A__questionmark_v1: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$'] : 'fun_app$bn'(A__questionmark_v0,A__questionmark_v1)
+    <=> ( 'fun_app$bn'(A__questionmark_v0,'none$')
+        & ! [A__questionmark_v1: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext$'] : 'fun_app$bn'(A__questionmark_v0,'fun_app$k'('some$c',A__questionmark_v1)) ) ) ).
+
+%% ∀ ?v0:C_a_b_j_option_RDocument_ext_RObject_ext_option_bool_fun$ (∀ ?v1:C_a_b_j_option_RDocument_ext_RObject_ext_option$ fun_app$bm(?v0, ?v1) = (fun_app$bm(?v0, none$c) ∧ ∀ ?v1:C_a_b_j_option_RDocument_ext_RObject_ext$ fun_app$bm(?v0, fun_app$j(some$b, ?v1))))
+tff(axiom269,axiom,
+    ! [A__questionmark_v0: 'C_a_b_j_option_RDocument_ext_RObject_ext_option_bool_fun$'] :
+      ( ! [A__questionmark_v1: 'C_a_b_j_option_RDocument_ext_RObject_ext_option$'] : 'fun_app$bm'(A__questionmark_v0,A__questionmark_v1)
+    <=> ( 'fun_app$bm'(A__questionmark_v0,'none$c')
+        & ! [A__questionmark_v1: 'C_a_b_j_option_RDocument_ext_RObject_ext$'] : 'fun_app$bm'(A__questionmark_v0,'fun_app$j'('some$b',A__questionmark_v1)) ) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_bool_fun$ (∀ ?v1:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$ fun_app$bo(?v0, ?v1) = (fun_app$bo(?v0, none$a) ∧ ∀ ?v1:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$ fun_app$bo(?v0, fun_app$i(some$a, ?v1))))
+tff(axiom270,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_bool_fun$'] :
+      ( ! [A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$'] : 'fun_app$bo'(A__questionmark_v0,A__questionmark_v1)
+    <=> ( 'fun_app$bo'(A__questionmark_v0,'none$a')
+        & ! [A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$'] : 'fun_app$bo'(A__questionmark_v0,'fun_app$i'('some$a',A__questionmark_v1)) ) ) ).
+
+%% ∀ ?v0:A_element_ptr_option_bool_fun$ (∃ ?v1:A_element_ptr_option$ fun_app$a(?v0, ?v1) = (fun_app$a(?v0, none$d) ∨ ∃ ?v1:A_element_ptr$ fun_app$a(?v0, fun_app$ax(some$d, ?v1))))
+tff(axiom271,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_option_bool_fun$'] :
+      ( ? [A__questionmark_v1: 'A_element_ptr_option$'] : 'fun_app$a'(A__questionmark_v0,A__questionmark_v1)
+    <=> ( 'fun_app$a'(A__questionmark_v0,'none$d')
+        | ? [A__questionmark_v1: 'A_element_ptr$'] : 'fun_app$a'(A__questionmark_v0,'fun_app$ax'('some$d',A__questionmark_v1)) ) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_option_bool_fun$ (∃ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_option$ fun_app$bq(?v0, ?v1) = (fun_app$bq(?v0, none$e) ∨ ∃ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ fun_app$bq(?v0, fun_app$ay(some$e, ?v1))))
+tff(axiom272,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_option_bool_fun$'] :
+      ( ? [A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_option$'] : 'fun_app$bq'(A__questionmark_v0,A__questionmark_v1)
+    <=> ( 'fun_app$bq'(A__questionmark_v0,'none$e')
+        | ? [A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$'] : 'fun_app$bq'(A__questionmark_v0,'fun_app$ay'('some$e',A__questionmark_v1)) ) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_option_bool_fun$ (∃ ?v1:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_option$ fun_app$cb(?v0, ?v1) = (fun_app$cb(?v0, none$f) ∨ ∃ ?v1:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$ fun_app$cb(?v0, fun_app$az(some$f, ?v1))))
+tff(axiom273,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_option_bool_fun$'] :
+      ( ? [A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_option$'] : 'fun_app$cb'(A__questionmark_v0,A__questionmark_v1)
+    <=> ( 'fun_app$cb'(A__questionmark_v0,'none$f')
+        | ? [A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$'] : 'fun_app$cb'(A__questionmark_v0,'fun_app$az'('some$f',A__questionmark_v1)) ) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_bool_fun$ (∃ ?v1:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$ fun_app$bp(?v0, ?v1) = (fun_app$bp(?v0, none$b) ∨ ∃ ?v1:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$ fun_app$bp(?v0, fun_app$g(some$, ?v1))))
+tff(axiom274,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_bool_fun$'] :
+      ( ? [A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$'] : 'fun_app$bp'(A__questionmark_v0,A__questionmark_v1)
+    <=> ( 'fun_app$bp'(A__questionmark_v0,'none$b')
+        | ? [A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$'] : 'fun_app$bp'(A__questionmark_v0,'fun_app$g'('some$',A__questionmark_v1)) ) ) ).
+
+%% ∀ ?v0:H_option_RCharacterData_ext_RNode_ext_RObject_ext_option_bool_fun$ (∃ ?v1:H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$ fun_app$bn(?v0, ?v1) = (fun_app$bn(?v0, none$) ∨ ∃ ?v1:H_option_RCharacterData_ext_RNode_ext_RObject_ext$ fun_app$bn(?v0, fun_app$k(some$c, ?v1))))
+tff(axiom275,axiom,
+    ! [A__questionmark_v0: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option_bool_fun$'] :
+      ( ? [A__questionmark_v1: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$'] : 'fun_app$bn'(A__questionmark_v0,A__questionmark_v1)
+    <=> ( 'fun_app$bn'(A__questionmark_v0,'none$')
+        | ? [A__questionmark_v1: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext$'] : 'fun_app$bn'(A__questionmark_v0,'fun_app$k'('some$c',A__questionmark_v1)) ) ) ).
+
+%% ∀ ?v0:C_a_b_j_option_RDocument_ext_RObject_ext_option_bool_fun$ (∃ ?v1:C_a_b_j_option_RDocument_ext_RObject_ext_option$ fun_app$bm(?v0, ?v1) = (fun_app$bm(?v0, none$c) ∨ ∃ ?v1:C_a_b_j_option_RDocument_ext_RObject_ext$ fun_app$bm(?v0, fun_app$j(some$b, ?v1))))
+tff(axiom276,axiom,
+    ! [A__questionmark_v0: 'C_a_b_j_option_RDocument_ext_RObject_ext_option_bool_fun$'] :
+      ( ? [A__questionmark_v1: 'C_a_b_j_option_RDocument_ext_RObject_ext_option$'] : 'fun_app$bm'(A__questionmark_v0,A__questionmark_v1)
+    <=> ( 'fun_app$bm'(A__questionmark_v0,'none$c')
+        | ? [A__questionmark_v1: 'C_a_b_j_option_RDocument_ext_RObject_ext$'] : 'fun_app$bm'(A__questionmark_v0,'fun_app$j'('some$b',A__questionmark_v1)) ) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_bool_fun$ (∃ ?v1:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$ fun_app$bo(?v0, ?v1) = (fun_app$bo(?v0, none$a) ∨ ∃ ?v1:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$ fun_app$bo(?v0, fun_app$i(some$a, ?v1))))
+tff(axiom277,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_bool_fun$'] :
+      ( ? [A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$'] : 'fun_app$bo'(A__questionmark_v0,A__questionmark_v1)
+    <=> ( 'fun_app$bo'(A__questionmark_v0,'none$a')
+        | ? [A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$'] : 'fun_app$bo'(A__questionmark_v0,'fun_app$i'('some$a',A__questionmark_v1)) ) ) ).
+
+%% ∀ ?v0:A_element_ptr_option$ ((((?v0 = none$d) ⇒ false) ∧ ∀ ?v1:A_element_ptr$ ((?v0 = fun_app$ax(some$d, ?v1)) ⇒ false)) ⇒ false)
+tff(axiom278,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_option$'] :
+      ( ( ( ( A__questionmark_v0 = 'none$d' )
+         => $false )
+        & ! [A__questionmark_v1: 'A_element_ptr$'] :
+            ( ( A__questionmark_v0 = 'fun_app$ax'('some$d',A__questionmark_v1) )
+           => $false ) )
+     => $false ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_option$ ((((?v0 = none$e) ⇒ false) ∧ ∀ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ ((?v0 = fun_app$ay(some$e, ?v1)) ⇒ false)) ⇒ false)
+tff(axiom279,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_option$'] :
+      ( ( ( ( A__questionmark_v0 = 'none$e' )
+         => $false )
+        & ! [A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$'] :
+            ( ( A__questionmark_v0 = 'fun_app$ay'('some$e',A__questionmark_v1) )
+           => $false ) )
+     => $false ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_option$ ((((?v0 = none$f) ⇒ false) ∧ ∀ ?v1:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$ ((?v0 = fun_app$az(some$f, ?v1)) ⇒ false)) ⇒ false)
+tff(axiom280,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_option$'] :
+      ( ( ( ( A__questionmark_v0 = 'none$f' )
+         => $false )
+        & ! [A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$'] :
+            ( ( A__questionmark_v0 = 'fun_app$az'('some$f',A__questionmark_v1) )
+           => $false ) )
+     => $false ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$ ((((?v0 = none$b) ⇒ false) ∧ ∀ ?v1:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$ ((?v0 = fun_app$g(some$, ?v1)) ⇒ false)) ⇒ false)
+tff(axiom281,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$'] :
+      ( ( ( ( A__questionmark_v0 = 'none$b' )
+         => $false )
+        & ! [A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$'] :
+            ( ( A__questionmark_v0 = 'fun_app$g'('some$',A__questionmark_v1) )
+           => $false ) )
+     => $false ) ).
+
+%% ∀ ?v0:H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$ ((((?v0 = none$) ⇒ false) ∧ ∀ ?v1:H_option_RCharacterData_ext_RNode_ext_RObject_ext$ ((?v0 = fun_app$k(some$c, ?v1)) ⇒ false)) ⇒ false)
+tff(axiom282,axiom,
+    ! [A__questionmark_v0: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$'] :
+      ( ( ( ( A__questionmark_v0 = 'none$' )
+         => $false )
+        & ! [A__questionmark_v1: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext$'] :
+            ( ( A__questionmark_v0 = 'fun_app$k'('some$c',A__questionmark_v1) )
+           => $false ) )
+     => $false ) ).
+
+%% ∀ ?v0:C_a_b_j_option_RDocument_ext_RObject_ext_option$ ((((?v0 = none$c) ⇒ false) ∧ ∀ ?v1:C_a_b_j_option_RDocument_ext_RObject_ext$ ((?v0 = fun_app$j(some$b, ?v1)) ⇒ false)) ⇒ false)
+tff(axiom283,axiom,
+    ! [A__questionmark_v0: 'C_a_b_j_option_RDocument_ext_RObject_ext_option$'] :
+      ( ( ( ( A__questionmark_v0 = 'none$c' )
+         => $false )
+        & ! [A__questionmark_v1: 'C_a_b_j_option_RDocument_ext_RObject_ext$'] :
+            ( ( A__questionmark_v0 = 'fun_app$j'('some$b',A__questionmark_v1) )
+           => $false ) )
+     => $false ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$ ((((?v0 = none$a) ⇒ false) ∧ ∀ ?v1:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$ ((?v0 = fun_app$i(some$a, ?v1)) ⇒ false)) ⇒ false)
+tff(axiom284,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$'] :
+      ( ( ( ( A__questionmark_v0 = 'none$a' )
+         => $false )
+        & ! [A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$'] :
+            ( ( A__questionmark_v0 = 'fun_app$i'('some$a',A__questionmark_v1) )
+           => $false ) )
+     => $false ) ).
+
+%% ∀ ?v0:A_element_ptr_option$ ?v1:A_element_ptr$ ((?v0 = fun_app$ax(some$d, ?v1)) ⇒ ¬(?v0 = none$d))
+tff(axiom285,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_option$',A__questionmark_v1: 'A_element_ptr$'] :
+      ( ( A__questionmark_v0 = 'fun_app$ax'('some$d',A__questionmark_v1) )
+     => ( A__questionmark_v0 != 'none$d' ) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_option$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ ((?v0 = fun_app$ay(some$e, ?v1)) ⇒ ¬(?v0 = none$e))
+tff(axiom286,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_option$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$'] :
+      ( ( A__questionmark_v0 = 'fun_app$ay'('some$e',A__questionmark_v1) )
+     => ( A__questionmark_v0 != 'none$e' ) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_option$ ?v1:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$ ((?v0 = fun_app$az(some$f, ?v1)) ⇒ ¬(?v0 = none$f))
+tff(axiom287,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_option$',A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$'] :
+      ( ( A__questionmark_v0 = 'fun_app$az'('some$f',A__questionmark_v1) )
+     => ( A__questionmark_v0 != 'none$f' ) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$ ?v1:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$ ((?v0 = fun_app$g(some$, ?v1)) ⇒ ¬(?v0 = none$b))
+tff(axiom288,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$',A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$'] :
+      ( ( A__questionmark_v0 = 'fun_app$g'('some$',A__questionmark_v1) )
+     => ( A__questionmark_v0 != 'none$b' ) ) ).
+
+%% ∀ ?v0:H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$ ?v1:H_option_RCharacterData_ext_RNode_ext_RObject_ext$ ((?v0 = fun_app$k(some$c, ?v1)) ⇒ ¬(?v0 = none$))
+tff(axiom289,axiom,
+    ! [A__questionmark_v0: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$',A__questionmark_v1: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext$'] :
+      ( ( A__questionmark_v0 = 'fun_app$k'('some$c',A__questionmark_v1) )
+     => ( A__questionmark_v0 != 'none$' ) ) ).
+
+%% ∀ ?v0:C_a_b_j_option_RDocument_ext_RObject_ext_option$ ?v1:C_a_b_j_option_RDocument_ext_RObject_ext$ ((?v0 = fun_app$j(some$b, ?v1)) ⇒ ¬(?v0 = none$c))
+tff(axiom290,axiom,
+    ! [A__questionmark_v0: 'C_a_b_j_option_RDocument_ext_RObject_ext_option$',A__questionmark_v1: 'C_a_b_j_option_RDocument_ext_RObject_ext$'] :
+      ( ( A__questionmark_v0 = 'fun_app$j'('some$b',A__questionmark_v1) )
+     => ( A__questionmark_v0 != 'none$c' ) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$ ?v1:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$ ((?v0 = fun_app$i(some$a, ?v1)) ⇒ ¬(?v0 = none$a))
+tff(axiom291,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$',A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$'] :
+      ( ( A__questionmark_v0 = 'fun_app$i'('some$a',A__questionmark_v1) )
+     => ( A__questionmark_v0 != 'none$a' ) ) ).
+
+%% ∀ ?v0:A_element_ptr$ ¬(none$d = fun_app$ax(some$d, ?v0))
+tff(axiom292,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr$'] : ( 'none$d' != 'fun_app$ax'('some$d',A__questionmark_v0) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ ¬(none$e = fun_app$ay(some$e, ?v0))
+tff(axiom293,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$'] : ( 'none$e' != 'fun_app$ay'('some$e',A__questionmark_v0) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$ ¬(none$f = fun_app$az(some$f, ?v0))
+tff(axiom294,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$'] : ( 'none$f' != 'fun_app$az'('some$f',A__questionmark_v0) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$ ¬(none$b = fun_app$g(some$, ?v0))
+tff(axiom295,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$'] : ( 'none$b' != 'fun_app$g'('some$',A__questionmark_v0) ) ).
+
+%% ∀ ?v0:H_option_RCharacterData_ext_RNode_ext_RObject_ext$ ¬(none$ = fun_app$k(some$c, ?v0))
+tff(axiom296,axiom,
+    ! [A__questionmark_v0: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext$'] : ( 'none$' != 'fun_app$k'('some$c',A__questionmark_v0) ) ).
+
+%% ∀ ?v0:C_a_b_j_option_RDocument_ext_RObject_ext$ ¬(none$c = fun_app$j(some$b, ?v0))
+tff(axiom297,axiom,
+    ! [A__questionmark_v0: 'C_a_b_j_option_RDocument_ext_RObject_ext$'] : ( 'none$c' != 'fun_app$j'('some$b',A__questionmark_v0) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$ ¬(none$a = fun_app$i(some$a, ?v0))
+tff(axiom298,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$'] : ( 'none$a' != 'fun_app$i'('some$a',A__questionmark_v0) ) ).
+
+%% ∀ ?v0:D_document_ptr$ ?v1:C_a_b_j_option_RDocument_ext_RObject_ext$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ ?v3:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ ((fun_app$at(put_D_o_c_u_m_e_n_t$(?v0, ?v1), ?v2) = ?v3) ⇒ fmember$c(?v0, fun_app$ao(document_ptr_kinds$, ?v3)))
+tff(axiom299,axiom,
+    ! [A__questionmark_v0: 'D_document_ptr$',A__questionmark_v1: 'C_a_b_j_option_RDocument_ext_RObject_ext$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$',A__questionmark_v3: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$'] :
+      ( ( 'fun_app$at'('put_D_o_c_u_m_e_n_t$'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2) = A__questionmark_v3 )
+     => 'fmember$c'(A__questionmark_v0,'fun_app$ao'('document_ptr_kinds$',A__questionmark_v3)) ) ).
+
+%% ∀ ?v0:A_element_ptr_a_element_ptr_option_fun$ (fun_app$bb(bind$m(none$d), ?v0) = none$d)
+tff(axiom300,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_a_element_ptr_option_fun$'] : ( 'fun_app$bb'('bind$m'('none$d'),A__questionmark_v0) = 'none$d' ) ).
+
+%% ∀ ?v0:H_option_RCharacterData_ext_RNode_ext_RObject_ext_a_element_ptr_option_fun$ (bind$t(none$, ?v0) = none$d)
+tff(axiom301,axiom,
+    ! [A__questionmark_v0: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_a_element_ptr_option_fun$'] : ( 'bind$t'('none$',A__questionmark_v0) = 'none$d' ) ).
+
+%% ∀ ?v0:A_element_ptr_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$ (bind$u(none$d, ?v0) = none$)
+tff(axiom302,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$'] : ( 'bind$u'('none$d',A__questionmark_v0) = 'none$' ) ).
+
+%% ∀ ?v0:C_a_b_j_option_RDocument_ext_RObject_ext_a_element_ptr_option_fun$ (bind$v(none$c, ?v0) = none$d)
+tff(axiom303,axiom,
+    ! [A__questionmark_v0: 'C_a_b_j_option_RDocument_ext_RObject_ext_a_element_ptr_option_fun$'] : ( 'bind$v'('none$c',A__questionmark_v0) = 'none$d' ) ).
+
+%% ∀ ?v0:A_element_ptr_c_a_b_j_option_RDocument_ext_RObject_ext_option_fun$ (bind$w(none$d, ?v0) = none$c)
+tff(axiom304,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_c_a_b_j_option_RDocument_ext_RObject_ext_option_fun$'] : ( 'bind$w'('none$d',A__questionmark_v0) = 'none$c' ) ).
+
+%% ∀ ?v0:H_option_RCharacterData_ext_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$ (fun_app$m(bind$(none$), ?v0) = none$)
+tff(axiom305,axiom,
+    ! [A__questionmark_v0: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$'] : ( 'fun_app$m'('bind$'('none$'),A__questionmark_v0) = 'none$' ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_a_element_ptr_option_fun$ (bind$x(none$a, ?v0) = none$d)
+tff(axiom306,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_a_element_ptr_option_fun$'] : ( 'bind$x'('none$a',A__questionmark_v0) = 'none$d' ) ).
+
+%% ∀ ?v0:A_element_ptr_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun$ (bind$y(none$d, ?v0) = none$a)
+tff(axiom307,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun$'] : ( 'bind$y'('none$d',A__questionmark_v0) = 'none$a' ) ).
+
+%% ∀ ?v0:C_a_b_j_option_RDocument_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$ (bind$p(none$c, ?v0) = none$)
+tff(axiom308,axiom,
+    ! [A__questionmark_v0: 'C_a_b_j_option_RDocument_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$'] : ( 'bind$p'('none$c',A__questionmark_v0) = 'none$' ) ).
+
+%% ∀ ?v0:H_option_RCharacterData_ext_RNode_ext_RObject_ext_c_a_b_j_option_RDocument_ext_RObject_ext_option_fun$ (bind$q(none$, ?v0) = none$c)
+tff(axiom309,axiom,
+    ! [A__questionmark_v0: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_c_a_b_j_option_RDocument_ext_RObject_ext_option_fun$'] : ( 'bind$q'('none$',A__questionmark_v0) = 'none$c' ) ).
+
+%% ∀ ?v0:Bool ?v1:C_a_b_j_option_RDocument_ext_RObject_ext_bool_fun$ ?v2:C_a_b_j_option_RDocument_ext_RObject_ext$ (fun_app$bm(case_option$f(?v0, ?v1), fun_app$j(some$b, ?v2)) = fun_app$t(?v1, ?v2))
+tff(axiom310,axiom,
+    ! [A__questionmark_v0: tlbool,A__questionmark_v1: 'C_a_b_j_option_RDocument_ext_RObject_ext_bool_fun$',A__questionmark_v2: 'C_a_b_j_option_RDocument_ext_RObject_ext$'] :
+      ( 'fun_app$bm'('case_option$f'(A__questionmark_v0,A__questionmark_v1),'fun_app$j'('some$b',A__questionmark_v2))
+    <=> 'fun_app$t'(A__questionmark_v1,A__questionmark_v2) ) ).
+
+%% ∀ ?v0:Bool ?v1:H_option_RCharacterData_ext_RNode_ext_RObject_ext_bool_fun$ ?v2:H_option_RCharacterData_ext_RNode_ext_RObject_ext$ (fun_app$bn(case_option$g(?v0, ?v1), fun_app$k(some$c, ?v2)) = fun_app$v(?v1, ?v2))
+tff(axiom311,axiom,
+    ! [A__questionmark_v0: tlbool,A__questionmark_v1: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_bool_fun$',A__questionmark_v2: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext$'] :
+      ( 'fun_app$bn'('case_option$g'(A__questionmark_v0,A__questionmark_v1),'fun_app$k'('some$c',A__questionmark_v2))
+    <=> 'fun_app$v'(A__questionmark_v1,A__questionmark_v2) ) ).
+
+%% ∀ ?v0:Bool ?v1:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_bool_fun$ ?v2:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$ (fun_app$bo(case_option$h(?v0, ?v1), fun_app$i(some$a, ?v2)) = fun_app$w(?v1, ?v2))
+tff(axiom312,axiom,
+    ! [A__questionmark_v0: tlbool,A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_bool_fun$',A__questionmark_v2: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$'] :
+      ( 'fun_app$bo'('case_option$h'(A__questionmark_v0,A__questionmark_v1),'fun_app$i'('some$a',A__questionmark_v2))
+    <=> 'fun_app$w'(A__questionmark_v1,A__questionmark_v2) ) ).
+
+%% ∀ ?v0:Bool ?v1:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_bool_fun$ ?v2:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$ (fun_app$bp(case_option$i(?v0, ?v1), fun_app$g(some$, ?v2)) = fun_app$x(?v1, ?v2))
+tff(axiom313,axiom,
+    ! [A__questionmark_v0: tlbool,A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_bool_fun$',A__questionmark_v2: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$'] :
+      ( 'fun_app$bp'('case_option$i'(A__questionmark_v0,A__questionmark_v1),'fun_app$g'('some$',A__questionmark_v2))
+    <=> 'fun_app$x'(A__questionmark_v1,A__questionmark_v2) ) ).
+
+%% ∀ ?v0:Bool ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_bool_fun$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ (fun_app$bq(case_option$j(?v0, ?v1), fun_app$ay(some$e, ?v2)) = fun_app$(?v1, ?v2))
+tff(axiom314,axiom,
+    ! [A__questionmark_v0: tlbool,A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_bool_fun$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$'] :
+      ( 'fun_app$bq'('case_option$j'(A__questionmark_v0,A__questionmark_v1),'fun_app$ay'('some$e',A__questionmark_v2))
+    <=> 'fun_app$'(A__questionmark_v1,A__questionmark_v2) ) ).
+
+%% ∀ ?v0:A_element_ptr_option_bool_fun$ ?v1:A_element_ptr_option$ ?v2:A_element_ptr_a_element_ptr_option_fun$ (fun_app$a(?v0, fun_app$bb(bind$m(?v1), ?v2)) = (((?v1 = none$d) ⇒ fun_app$a(?v0, none$d)) ∧ ∀ ?v3:A_element_ptr$ ((?v1 = fun_app$ax(some$d, ?v3)) ⇒ fun_app$a(?v0, fun_app$ax(?v2, ?v3)))))
+tff(axiom315,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_option_bool_fun$',A__questionmark_v1: 'A_element_ptr_option$',A__questionmark_v2: 'A_element_ptr_a_element_ptr_option_fun$'] :
+      ( 'fun_app$a'(A__questionmark_v0,'fun_app$bb'('bind$m'(A__questionmark_v1),A__questionmark_v2))
+    <=> ( ( ( A__questionmark_v1 = 'none$d' )
+         => 'fun_app$a'(A__questionmark_v0,'none$d') )
+        & ! [A__questionmark_v3: 'A_element_ptr$'] :
+            ( ( A__questionmark_v1 = 'fun_app$ax'('some$d',A__questionmark_v3) )
+           => 'fun_app$a'(A__questionmark_v0,'fun_app$ax'(A__questionmark_v2,A__questionmark_v3)) ) ) ) ).
+
+%% ∀ ?v0:A_element_ptr_option_bool_fun$ ?v1:H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$ ?v2:H_option_RCharacterData_ext_RNode_ext_RObject_ext_a_element_ptr_option_fun$ (fun_app$a(?v0, bind$t(?v1, ?v2)) = (((?v1 = none$) ⇒ fun_app$a(?v0, none$d)) ∧ ∀ ?v3:H_option_RCharacterData_ext_RNode_ext_RObject_ext$ ((?v1 = fun_app$k(some$c, ?v3)) ⇒ fun_app$a(?v0, fun_app$cc(?v2, ?v3)))))
+tff(axiom316,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_option_bool_fun$',A__questionmark_v1: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$',A__questionmark_v2: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_a_element_ptr_option_fun$'] :
+      ( 'fun_app$a'(A__questionmark_v0,'bind$t'(A__questionmark_v1,A__questionmark_v2))
+    <=> ( ( ( A__questionmark_v1 = 'none$' )
+         => 'fun_app$a'(A__questionmark_v0,'none$d') )
+        & ! [A__questionmark_v3: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext$'] :
+            ( ( A__questionmark_v1 = 'fun_app$k'('some$c',A__questionmark_v3) )
+           => 'fun_app$a'(A__questionmark_v0,'fun_app$cc'(A__questionmark_v2,A__questionmark_v3)) ) ) ) ).
+
+%% ∀ ?v0:H_option_RCharacterData_ext_RNode_ext_RObject_ext_option_bool_fun$ ?v1:A_element_ptr_option$ ?v2:A_element_ptr_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$ (fun_app$bn(?v0, bind$u(?v1, ?v2)) = (((?v1 = none$d) ⇒ fun_app$bn(?v0, none$)) ∧ ∀ ?v3:A_element_ptr$ ((?v1 = fun_app$ax(some$d, ?v3)) ⇒ fun_app$bn(?v0, fun_app$cd(?v2, ?v3)))))
+tff(axiom317,axiom,
+    ! [A__questionmark_v0: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option_bool_fun$',A__questionmark_v1: 'A_element_ptr_option$',A__questionmark_v2: 'A_element_ptr_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$'] :
+      ( 'fun_app$bn'(A__questionmark_v0,'bind$u'(A__questionmark_v1,A__questionmark_v2))
+    <=> ( ( ( A__questionmark_v1 = 'none$d' )
+         => 'fun_app$bn'(A__questionmark_v0,'none$') )
+        & ! [A__questionmark_v3: 'A_element_ptr$'] :
+            ( ( A__questionmark_v1 = 'fun_app$ax'('some$d',A__questionmark_v3) )
+           => 'fun_app$bn'(A__questionmark_v0,'fun_app$cd'(A__questionmark_v2,A__questionmark_v3)) ) ) ) ).
+
+%% ∀ ?v0:A_element_ptr_option_bool_fun$ ?v1:C_a_b_j_option_RDocument_ext_RObject_ext_option$ ?v2:C_a_b_j_option_RDocument_ext_RObject_ext_a_element_ptr_option_fun$ (fun_app$a(?v0, bind$v(?v1, ?v2)) = (((?v1 = none$c) ⇒ fun_app$a(?v0, none$d)) ∧ ∀ ?v3:C_a_b_j_option_RDocument_ext_RObject_ext$ ((?v1 = fun_app$j(some$b, ?v3)) ⇒ fun_app$a(?v0, fun_app$ce(?v2, ?v3)))))
+tff(axiom318,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_option_bool_fun$',A__questionmark_v1: 'C_a_b_j_option_RDocument_ext_RObject_ext_option$',A__questionmark_v2: 'C_a_b_j_option_RDocument_ext_RObject_ext_a_element_ptr_option_fun$'] :
+      ( 'fun_app$a'(A__questionmark_v0,'bind$v'(A__questionmark_v1,A__questionmark_v2))
+    <=> ( ( ( A__questionmark_v1 = 'none$c' )
+         => 'fun_app$a'(A__questionmark_v0,'none$d') )
+        & ! [A__questionmark_v3: 'C_a_b_j_option_RDocument_ext_RObject_ext$'] :
+            ( ( A__questionmark_v1 = 'fun_app$j'('some$b',A__questionmark_v3) )
+           => 'fun_app$a'(A__questionmark_v0,'fun_app$ce'(A__questionmark_v2,A__questionmark_v3)) ) ) ) ).
+
+%% ∀ ?v0:C_a_b_j_option_RDocument_ext_RObject_ext_option_bool_fun$ ?v1:A_element_ptr_option$ ?v2:A_element_ptr_c_a_b_j_option_RDocument_ext_RObject_ext_option_fun$ (fun_app$bm(?v0, bind$w(?v1, ?v2)) = (((?v1 = none$d) ⇒ fun_app$bm(?v0, none$c)) ∧ ∀ ?v3:A_element_ptr$ ((?v1 = fun_app$ax(some$d, ?v3)) ⇒ fun_app$bm(?v0, fun_app$cf(?v2, ?v3)))))
+tff(axiom319,axiom,
+    ! [A__questionmark_v0: 'C_a_b_j_option_RDocument_ext_RObject_ext_option_bool_fun$',A__questionmark_v1: 'A_element_ptr_option$',A__questionmark_v2: 'A_element_ptr_c_a_b_j_option_RDocument_ext_RObject_ext_option_fun$'] :
+      ( 'fun_app$bm'(A__questionmark_v0,'bind$w'(A__questionmark_v1,A__questionmark_v2))
+    <=> ( ( ( A__questionmark_v1 = 'none$d' )
+         => 'fun_app$bm'(A__questionmark_v0,'none$c') )
+        & ! [A__questionmark_v3: 'A_element_ptr$'] :
+            ( ( A__questionmark_v1 = 'fun_app$ax'('some$d',A__questionmark_v3) )
+           => 'fun_app$bm'(A__questionmark_v0,'fun_app$cf'(A__questionmark_v2,A__questionmark_v3)) ) ) ) ).
+
+%% ∀ ?v0:H_option_RCharacterData_ext_RNode_ext_RObject_ext_option_bool_fun$ ?v1:H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$ ?v2:H_option_RCharacterData_ext_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$ (fun_app$bn(?v0, fun_app$m(bind$(?v1), ?v2)) = (((?v1 = none$) ⇒ fun_app$bn(?v0, none$)) ∧ ∀ ?v3:H_option_RCharacterData_ext_RNode_ext_RObject_ext$ ((?v1 = fun_app$k(some$c, ?v3)) ⇒ fun_app$bn(?v0, fun_app$k(?v2, ?v3)))))
+tff(axiom320,axiom,
+    ! [A__questionmark_v0: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option_bool_fun$',A__questionmark_v1: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$',A__questionmark_v2: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$'] :
+      ( 'fun_app$bn'(A__questionmark_v0,'fun_app$m'('bind$'(A__questionmark_v1),A__questionmark_v2))
+    <=> ( ( ( A__questionmark_v1 = 'none$' )
+         => 'fun_app$bn'(A__questionmark_v0,'none$') )
+        & ! [A__questionmark_v3: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext$'] :
+            ( ( A__questionmark_v1 = 'fun_app$k'('some$c',A__questionmark_v3) )
+           => 'fun_app$bn'(A__questionmark_v0,'fun_app$k'(A__questionmark_v2,A__questionmark_v3)) ) ) ) ).
+
+%% ∀ ?v0:A_element_ptr_option_bool_fun$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_option$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_a_element_ptr_option_fun$ (fun_app$a(?v0, bind$z(?v1, ?v2)) = (((?v1 = none$e) ⇒ fun_app$a(?v0, none$d)) ∧ ∀ ?v3:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ ((?v1 = fun_app$ay(some$e, ?v3)) ⇒ fun_app$a(?v0, fun_app$b(?v2, ?v3)))))
+tff(axiom321,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_option_bool_fun$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_option$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_a_element_ptr_option_fun$'] :
+      ( 'fun_app$a'(A__questionmark_v0,'bind$z'(A__questionmark_v1,A__questionmark_v2))
+    <=> ( ( ( A__questionmark_v1 = 'none$e' )
+         => 'fun_app$a'(A__questionmark_v0,'none$d') )
+        & ! [A__questionmark_v3: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$'] :
+            ( ( A__questionmark_v1 = 'fun_app$ay'('some$e',A__questionmark_v3) )
+           => 'fun_app$a'(A__questionmark_v0,'fun_app$b'(A__questionmark_v2,A__questionmark_v3)) ) ) ) ).
+
+%% ∀ ?v0:A_element_ptr_option_bool_fun$ ?v1:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$ ?v2:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_a_element_ptr_option_fun$ (fun_app$a(?v0, bind$x(?v1, ?v2)) = (((?v1 = none$a) ⇒ fun_app$a(?v0, none$d)) ∧ ∀ ?v3:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$ ((?v1 = fun_app$i(some$a, ?v3)) ⇒ fun_app$a(?v0, fun_app$cg(?v2, ?v3)))))
+tff(axiom322,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_option_bool_fun$',A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$',A__questionmark_v2: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_a_element_ptr_option_fun$'] :
+      ( 'fun_app$a'(A__questionmark_v0,'bind$x'(A__questionmark_v1,A__questionmark_v2))
+    <=> ( ( ( A__questionmark_v1 = 'none$a' )
+         => 'fun_app$a'(A__questionmark_v0,'none$d') )
+        & ! [A__questionmark_v3: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$'] :
+            ( ( A__questionmark_v1 = 'fun_app$i'('some$a',A__questionmark_v3) )
+           => 'fun_app$a'(A__questionmark_v0,'fun_app$cg'(A__questionmark_v2,A__questionmark_v3)) ) ) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_bool_fun$ ?v1:A_element_ptr_option$ ?v2:A_element_ptr_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun$ (fun_app$bo(?v0, bind$y(?v1, ?v2)) = (((?v1 = none$d) ⇒ fun_app$bo(?v0, none$a)) ∧ ∀ ?v3:A_element_ptr$ ((?v1 = fun_app$ax(some$d, ?v3)) ⇒ fun_app$bo(?v0, fun_app$ch(?v2, ?v3)))))
+tff(axiom323,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_bool_fun$',A__questionmark_v1: 'A_element_ptr_option$',A__questionmark_v2: 'A_element_ptr_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun$'] :
+      ( 'fun_app$bo'(A__questionmark_v0,'bind$y'(A__questionmark_v1,A__questionmark_v2))
+    <=> ( ( ( A__questionmark_v1 = 'none$d' )
+         => 'fun_app$bo'(A__questionmark_v0,'none$a') )
+        & ! [A__questionmark_v3: 'A_element_ptr$'] :
+            ( ( A__questionmark_v1 = 'fun_app$ax'('some$d',A__questionmark_v3) )
+           => 'fun_app$bo'(A__questionmark_v0,'fun_app$ch'(A__questionmark_v2,A__questionmark_v3)) ) ) ) ).
+
+%% ∀ ?v0:C_a_b_j_option_RDocument_ext_RObject_ext_option_bool_fun$ ?v1:H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$ ?v2:H_option_RCharacterData_ext_RNode_ext_RObject_ext_c_a_b_j_option_RDocument_ext_RObject_ext_option_fun$ (fun_app$bm(?v0, bind$q(?v1, ?v2)) = (((?v1 = none$) ⇒ fun_app$bm(?v0, none$c)) ∧ ∀ ?v3:H_option_RCharacterData_ext_RNode_ext_RObject_ext$ ((?v1 = fun_app$k(some$c, ?v3)) ⇒ fun_app$bm(?v0, fun_app$bf(?v2, ?v3)))))
+tff(axiom324,axiom,
+    ! [A__questionmark_v0: 'C_a_b_j_option_RDocument_ext_RObject_ext_option_bool_fun$',A__questionmark_v1: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$',A__questionmark_v2: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_c_a_b_j_option_RDocument_ext_RObject_ext_option_fun$'] :
+      ( 'fun_app$bm'(A__questionmark_v0,'bind$q'(A__questionmark_v1,A__questionmark_v2))
+    <=> ( ( ( A__questionmark_v1 = 'none$' )
+         => 'fun_app$bm'(A__questionmark_v0,'none$c') )
+        & ! [A__questionmark_v3: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext$'] :
+            ( ( A__questionmark_v1 = 'fun_app$k'('some$c',A__questionmark_v3) )
+           => 'fun_app$bm'(A__questionmark_v0,'fun_app$bf'(A__questionmark_v2,A__questionmark_v3)) ) ) ) ).
+
+%% ∀ ?v0:A_element_ptr_option_bool_fun$ ?v1:A_element_ptr_option$ ?v2:A_element_ptr_a_element_ptr_option_fun$ (fun_app$a(?v0, fun_app$bb(bind$m(?v1), ?v2)) = ¬(((?v1 = none$d) ∧ ¬fun_app$a(?v0, none$d)) ∨ ∃ ?v3:A_element_ptr$ ((?v1 = fun_app$ax(some$d, ?v3)) ∧ ¬fun_app$a(?v0, fun_app$ax(?v2, ?v3)))))
+tff(axiom325,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_option_bool_fun$',A__questionmark_v1: 'A_element_ptr_option$',A__questionmark_v2: 'A_element_ptr_a_element_ptr_option_fun$'] :
+      ( 'fun_app$a'(A__questionmark_v0,'fun_app$bb'('bind$m'(A__questionmark_v1),A__questionmark_v2))
+    <=> ~ ( ( ( A__questionmark_v1 = 'none$d' )
+            & ~ 'fun_app$a'(A__questionmark_v0,'none$d') )
+          | ? [A__questionmark_v3: 'A_element_ptr$'] :
+              ( ( A__questionmark_v1 = 'fun_app$ax'('some$d',A__questionmark_v3) )
+              & ~ 'fun_app$a'(A__questionmark_v0,'fun_app$ax'(A__questionmark_v2,A__questionmark_v3)) ) ) ) ).
+
+%% ∀ ?v0:A_element_ptr_option_bool_fun$ ?v1:H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$ ?v2:H_option_RCharacterData_ext_RNode_ext_RObject_ext_a_element_ptr_option_fun$ (fun_app$a(?v0, bind$t(?v1, ?v2)) = ¬(((?v1 = none$) ∧ ¬fun_app$a(?v0, none$d)) ∨ ∃ ?v3:H_option_RCharacterData_ext_RNode_ext_RObject_ext$ ((?v1 = fun_app$k(some$c, ?v3)) ∧ ¬fun_app$a(?v0, fun_app$cc(?v2, ?v3)))))
+tff(axiom326,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_option_bool_fun$',A__questionmark_v1: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$',A__questionmark_v2: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_a_element_ptr_option_fun$'] :
+      ( 'fun_app$a'(A__questionmark_v0,'bind$t'(A__questionmark_v1,A__questionmark_v2))
+    <=> ~ ( ( ( A__questionmark_v1 = 'none$' )
+            & ~ 'fun_app$a'(A__questionmark_v0,'none$d') )
+          | ? [A__questionmark_v3: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext$'] :
+              ( ( A__questionmark_v1 = 'fun_app$k'('some$c',A__questionmark_v3) )
+              & ~ 'fun_app$a'(A__questionmark_v0,'fun_app$cc'(A__questionmark_v2,A__questionmark_v3)) ) ) ) ).
+
+%% ∀ ?v0:H_option_RCharacterData_ext_RNode_ext_RObject_ext_option_bool_fun$ ?v1:A_element_ptr_option$ ?v2:A_element_ptr_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$ (fun_app$bn(?v0, bind$u(?v1, ?v2)) = ¬(((?v1 = none$d) ∧ ¬fun_app$bn(?v0, none$)) ∨ ∃ ?v3:A_element_ptr$ ((?v1 = fun_app$ax(some$d, ?v3)) ∧ ¬fun_app$bn(?v0, fun_app$cd(?v2, ?v3)))))
+tff(axiom327,axiom,
+    ! [A__questionmark_v0: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option_bool_fun$',A__questionmark_v1: 'A_element_ptr_option$',A__questionmark_v2: 'A_element_ptr_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$'] :
+      ( 'fun_app$bn'(A__questionmark_v0,'bind$u'(A__questionmark_v1,A__questionmark_v2))
+    <=> ~ ( ( ( A__questionmark_v1 = 'none$d' )
+            & ~ 'fun_app$bn'(A__questionmark_v0,'none$') )
+          | ? [A__questionmark_v3: 'A_element_ptr$'] :
+              ( ( A__questionmark_v1 = 'fun_app$ax'('some$d',A__questionmark_v3) )
+              & ~ 'fun_app$bn'(A__questionmark_v0,'fun_app$cd'(A__questionmark_v2,A__questionmark_v3)) ) ) ) ).
+
+%% ∀ ?v0:A_element_ptr_option_bool_fun$ ?v1:C_a_b_j_option_RDocument_ext_RObject_ext_option$ ?v2:C_a_b_j_option_RDocument_ext_RObject_ext_a_element_ptr_option_fun$ (fun_app$a(?v0, bind$v(?v1, ?v2)) = ¬(((?v1 = none$c) ∧ ¬fun_app$a(?v0, none$d)) ∨ ∃ ?v3:C_a_b_j_option_RDocument_ext_RObject_ext$ ((?v1 = fun_app$j(some$b, ?v3)) ∧ ¬fun_app$a(?v0, fun_app$ce(?v2, ?v3)))))
+tff(axiom328,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_option_bool_fun$',A__questionmark_v1: 'C_a_b_j_option_RDocument_ext_RObject_ext_option$',A__questionmark_v2: 'C_a_b_j_option_RDocument_ext_RObject_ext_a_element_ptr_option_fun$'] :
+      ( 'fun_app$a'(A__questionmark_v0,'bind$v'(A__questionmark_v1,A__questionmark_v2))
+    <=> ~ ( ( ( A__questionmark_v1 = 'none$c' )
+            & ~ 'fun_app$a'(A__questionmark_v0,'none$d') )
+          | ? [A__questionmark_v3: 'C_a_b_j_option_RDocument_ext_RObject_ext$'] :
+              ( ( A__questionmark_v1 = 'fun_app$j'('some$b',A__questionmark_v3) )
+              & ~ 'fun_app$a'(A__questionmark_v0,'fun_app$ce'(A__questionmark_v2,A__questionmark_v3)) ) ) ) ).
+
+%% ∀ ?v0:C_a_b_j_option_RDocument_ext_RObject_ext_option_bool_fun$ ?v1:A_element_ptr_option$ ?v2:A_element_ptr_c_a_b_j_option_RDocument_ext_RObject_ext_option_fun$ (fun_app$bm(?v0, bind$w(?v1, ?v2)) = ¬(((?v1 = none$d) ∧ ¬fun_app$bm(?v0, none$c)) ∨ ∃ ?v3:A_element_ptr$ ((?v1 = fun_app$ax(some$d, ?v3)) ∧ ¬fun_app$bm(?v0, fun_app$cf(?v2, ?v3)))))
+tff(axiom329,axiom,
+    ! [A__questionmark_v0: 'C_a_b_j_option_RDocument_ext_RObject_ext_option_bool_fun$',A__questionmark_v1: 'A_element_ptr_option$',A__questionmark_v2: 'A_element_ptr_c_a_b_j_option_RDocument_ext_RObject_ext_option_fun$'] :
+      ( 'fun_app$bm'(A__questionmark_v0,'bind$w'(A__questionmark_v1,A__questionmark_v2))
+    <=> ~ ( ( ( A__questionmark_v1 = 'none$d' )
+            & ~ 'fun_app$bm'(A__questionmark_v0,'none$c') )
+          | ? [A__questionmark_v3: 'A_element_ptr$'] :
+              ( ( A__questionmark_v1 = 'fun_app$ax'('some$d',A__questionmark_v3) )
+              & ~ 'fun_app$bm'(A__questionmark_v0,'fun_app$cf'(A__questionmark_v2,A__questionmark_v3)) ) ) ) ).
+
+%% ∀ ?v0:H_option_RCharacterData_ext_RNode_ext_RObject_ext_option_bool_fun$ ?v1:H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$ ?v2:H_option_RCharacterData_ext_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$ (fun_app$bn(?v0, fun_app$m(bind$(?v1), ?v2)) = ¬(((?v1 = none$) ∧ ¬fun_app$bn(?v0, none$)) ∨ ∃ ?v3:H_option_RCharacterData_ext_RNode_ext_RObject_ext$ ((?v1 = fun_app$k(some$c, ?v3)) ∧ ¬fun_app$bn(?v0, fun_app$k(?v2, ?v3)))))
+tff(axiom330,axiom,
+    ! [A__questionmark_v0: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option_bool_fun$',A__questionmark_v1: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$',A__questionmark_v2: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$'] :
+      ( 'fun_app$bn'(A__questionmark_v0,'fun_app$m'('bind$'(A__questionmark_v1),A__questionmark_v2))
+    <=> ~ ( ( ( A__questionmark_v1 = 'none$' )
+            & ~ 'fun_app$bn'(A__questionmark_v0,'none$') )
+          | ? [A__questionmark_v3: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext$'] :
+              ( ( A__questionmark_v1 = 'fun_app$k'('some$c',A__questionmark_v3) )
+              & ~ 'fun_app$bn'(A__questionmark_v0,'fun_app$k'(A__questionmark_v2,A__questionmark_v3)) ) ) ) ).
+
+%% ∀ ?v0:A_element_ptr_option_bool_fun$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_option$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_a_element_ptr_option_fun$ (fun_app$a(?v0, bind$z(?v1, ?v2)) = ¬(((?v1 = none$e) ∧ ¬fun_app$a(?v0, none$d)) ∨ ∃ ?v3:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ ((?v1 = fun_app$ay(some$e, ?v3)) ∧ ¬fun_app$a(?v0, fun_app$b(?v2, ?v3)))))
+tff(axiom331,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_option_bool_fun$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_option$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_a_element_ptr_option_fun$'] :
+      ( 'fun_app$a'(A__questionmark_v0,'bind$z'(A__questionmark_v1,A__questionmark_v2))
+    <=> ~ ( ( ( A__questionmark_v1 = 'none$e' )
+            & ~ 'fun_app$a'(A__questionmark_v0,'none$d') )
+          | ? [A__questionmark_v3: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$'] :
+              ( ( A__questionmark_v1 = 'fun_app$ay'('some$e',A__questionmark_v3) )
+              & ~ 'fun_app$a'(A__questionmark_v0,'fun_app$b'(A__questionmark_v2,A__questionmark_v3)) ) ) ) ).
+
+%% ∀ ?v0:A_element_ptr_option_bool_fun$ ?v1:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$ ?v2:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_a_element_ptr_option_fun$ (fun_app$a(?v0, bind$x(?v1, ?v2)) = ¬(((?v1 = none$a) ∧ ¬fun_app$a(?v0, none$d)) ∨ ∃ ?v3:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$ ((?v1 = fun_app$i(some$a, ?v3)) ∧ ¬fun_app$a(?v0, fun_app$cg(?v2, ?v3)))))
+tff(axiom332,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_option_bool_fun$',A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$',A__questionmark_v2: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_a_element_ptr_option_fun$'] :
+      ( 'fun_app$a'(A__questionmark_v0,'bind$x'(A__questionmark_v1,A__questionmark_v2))
+    <=> ~ ( ( ( A__questionmark_v1 = 'none$a' )
+            & ~ 'fun_app$a'(A__questionmark_v0,'none$d') )
+          | ? [A__questionmark_v3: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$'] :
+              ( ( A__questionmark_v1 = 'fun_app$i'('some$a',A__questionmark_v3) )
+              & ~ 'fun_app$a'(A__questionmark_v0,'fun_app$cg'(A__questionmark_v2,A__questionmark_v3)) ) ) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_bool_fun$ ?v1:A_element_ptr_option$ ?v2:A_element_ptr_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun$ (fun_app$bo(?v0, bind$y(?v1, ?v2)) = ¬(((?v1 = none$d) ∧ ¬fun_app$bo(?v0, none$a)) ∨ ∃ ?v3:A_element_ptr$ ((?v1 = fun_app$ax(some$d, ?v3)) ∧ ¬fun_app$bo(?v0, fun_app$ch(?v2, ?v3)))))
+tff(axiom333,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_bool_fun$',A__questionmark_v1: 'A_element_ptr_option$',A__questionmark_v2: 'A_element_ptr_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun$'] :
+      ( 'fun_app$bo'(A__questionmark_v0,'bind$y'(A__questionmark_v1,A__questionmark_v2))
+    <=> ~ ( ( ( A__questionmark_v1 = 'none$d' )
+            & ~ 'fun_app$bo'(A__questionmark_v0,'none$a') )
+          | ? [A__questionmark_v3: 'A_element_ptr$'] :
+              ( ( A__questionmark_v1 = 'fun_app$ax'('some$d',A__questionmark_v3) )
+              & ~ 'fun_app$bo'(A__questionmark_v0,'fun_app$ch'(A__questionmark_v2,A__questionmark_v3)) ) ) ) ).
+
+%% ∀ ?v0:C_a_b_j_option_RDocument_ext_RObject_ext_option_bool_fun$ ?v1:H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$ ?v2:H_option_RCharacterData_ext_RNode_ext_RObject_ext_c_a_b_j_option_RDocument_ext_RObject_ext_option_fun$ (fun_app$bm(?v0, bind$q(?v1, ?v2)) = ¬(((?v1 = none$) ∧ ¬fun_app$bm(?v0, none$c)) ∨ ∃ ?v3:H_option_RCharacterData_ext_RNode_ext_RObject_ext$ ((?v1 = fun_app$k(some$c, ?v3)) ∧ ¬fun_app$bm(?v0, fun_app$bf(?v2, ?v3)))))
+tff(axiom334,axiom,
+    ! [A__questionmark_v0: 'C_a_b_j_option_RDocument_ext_RObject_ext_option_bool_fun$',A__questionmark_v1: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$',A__questionmark_v2: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_c_a_b_j_option_RDocument_ext_RObject_ext_option_fun$'] :
+      ( 'fun_app$bm'(A__questionmark_v0,'bind$q'(A__questionmark_v1,A__questionmark_v2))
+    <=> ~ ( ( ( A__questionmark_v1 = 'none$' )
+            & ~ 'fun_app$bm'(A__questionmark_v0,'none$c') )
+          | ? [A__questionmark_v3: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext$'] :
+              ( ( A__questionmark_v1 = 'fun_app$k'('some$c',A__questionmark_v3) )
+              & ~ 'fun_app$bm'(A__questionmark_v0,'fun_app$bf'(A__questionmark_v2,A__questionmark_v3)) ) ) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$ ?v1:H_option_RCharacterData_ext_RNode_ext_RObject_ext$ ¬(cast_E_l_e_m_e_n_t_2_N_o_d_e$(?v0) = cast_C_h_a_r_a_c_t_e_r_D_a_t_a_2_N_o_d_e$(?v1))
+tff(axiom335,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$',A__questionmark_v1: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext$'] : ( 'cast_E_l_e_m_e_n_t_2_N_o_d_e$'(A__questionmark_v0) != 'cast_C_h_a_r_a_c_t_e_r_D_a_t_a_2_N_o_d_e$'(A__questionmark_v1) ) ).
+
+%% ∀ ?v0:H_option_RCharacterData_ext_RNode_ext_RObject_ext$ ?v1:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$ ¬(cast_C_h_a_r_a_c_t_e_r_D_a_t_a_2_N_o_d_e$(?v0) = cast_E_l_e_m_e_n_t_2_N_o_d_e$(?v1))
+tff(axiom336,axiom,
+    ! [A__questionmark_v0: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext$',A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$'] : ( 'cast_C_h_a_r_a_c_t_e_r_D_a_t_a_2_N_o_d_e$'(A__questionmark_v0) != 'cast_E_l_e_m_e_n_t_2_N_o_d_e$'(A__questionmark_v1) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$ ?v1:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_list$ ?v3:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_list_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_list_fun$ ?v4:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_list_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_list_fun$ (((?v0 = ?v1) ∧ ((child_nodes$(?v1) = ?v2) ∧ ∀ ?v5:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_list$ ((?v5 = ?v2) ⇒ (fun_app$ag(?v3, ?v5) = fun_app$ag(?v4, ?v5))))) ⇒ (child_nodes_update$(?v3, ?v0) = child_nodes_update$(?v4, ?v1)))
+tff(axiom337,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$',A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_list$',A__questionmark_v3: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_list_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_list_fun$',A__questionmark_v4: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_list_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_list_fun$'] :
+      ( ( ( A__questionmark_v0 = A__questionmark_v1 )
+        & ( 'child_nodes$'(A__questionmark_v1) = A__questionmark_v2 )
+        & ! [A__questionmark_v5: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_list$'] :
+            ( ( A__questionmark_v5 = A__questionmark_v2 )
+           => ( 'fun_app$ag'(A__questionmark_v3,A__questionmark_v5) = 'fun_app$ag'(A__questionmark_v4,A__questionmark_v5) ) ) )
+     => ( 'child_nodes_update$'(A__questionmark_v3,A__questionmark_v0) = 'child_nodes_update$'(A__questionmark_v4,A__questionmark_v1) ) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$ (fun_app$x(is_element_kind_N_o_d_e$, ?v0) = ¬(fun_app$n(cast_N_o_d_e_2_E_l_e_m_e_n_t$, ?v0) = none$a))
+tff(axiom338,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$'] :
+      ( 'fun_app$x'('is_element_kind_N_o_d_e$',A__questionmark_v0)
+    <=> ( 'fun_app$n'('cast_N_o_d_e_2_E_l_e_m_e_n_t$',A__questionmark_v0) != 'none$a' ) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$ ?v1:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ ?v3:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ ((fun_app$at(put_O_b_j_e_c_t$(?v0, ?v1), ?v2) = ?v3) ⇒ fmember$a(?v0, fun_app$bl(object_ptr_kinds$, ?v3)))
+tff(axiom339,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$',A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$',A__questionmark_v3: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$'] :
+      ( ( 'fun_app$at'('put_O_b_j_e_c_t$'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2) = A__questionmark_v3 )
+     => 'fmember$a'(A__questionmark_v0,'fun_app$bl'('object_ptr_kinds$',A__questionmark_v3)) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_bool_fun$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ ?v2:A_element_ptr$ ((l_get_E_l_e_m_e_n_t_lemmas$(?v0) ∧ fun_app$ci(?v0, ?v1)) ⇒ (fmember$d(?v2, fun_app$av(element_ptr_kinds$, ?v1)) = ¬(fun_app$ar(fun_app$as(get_E_l_e_m_e_n_t$, ?v2), ?v1) = none$a)))
+tff(axiom340,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_bool_fun$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$',A__questionmark_v2: 'A_element_ptr$'] :
+      ( ( 'l_get_E_l_e_m_e_n_t_lemmas$'(A__questionmark_v0)
+        & 'fun_app$ci'(A__questionmark_v0,A__questionmark_v1) )
+     => ( 'fmember$d'(A__questionmark_v2,'fun_app$av'('element_ptr_kinds$',A__questionmark_v1))
+      <=> ( 'fun_app$ar'('fun_app$as'('get_E_l_e_m_e_n_t$',A__questionmark_v2),A__questionmark_v1) != 'none$a' ) ) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_bool_fun$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ ((l_get_N_o_d_e_lemmas$(?v0) ∧ fun_app$ci(?v0, ?v1)) ⇒ (fun_app$aw(fmember$(?v2), fun_app$au(node_ptr_kinds$, ?v1)) = ¬(fun_app$aj(fun_app$ak(get_N_o_d_e$, ?v2), ?v1) = none$b)))
+tff(axiom341,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_bool_fun$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$'] :
+      ( ( 'l_get_N_o_d_e_lemmas$'(A__questionmark_v0)
+        & 'fun_app$ci'(A__questionmark_v0,A__questionmark_v1) )
+     => ( 'fun_app$aw'('fmember$'(A__questionmark_v2),'fun_app$au'('node_ptr_kinds$',A__questionmark_v1))
+      <=> ( 'fun_app$aj'('fun_app$ak'('get_N_o_d_e$',A__questionmark_v2),A__questionmark_v1) != 'none$b' ) ) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$ ?v1:H_option_RCharacterData_ext_RNode_ext_RObject_ext$ ((fun_app$l(cast_N_o_d_e_2_C_h_a_r_a_c_t_e_r_D_a_t_a$, ?v0) = fun_app$k(some$c, ?v1)) = (cast_C_h_a_r_a_c_t_e_r_D_a_t_a_2_N_o_d_e$(?v1) = ?v0))
+tff(axiom342,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$',A__questionmark_v1: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext$'] :
+      ( ( 'fun_app$l'('cast_N_o_d_e_2_C_h_a_r_a_c_t_e_r_D_a_t_a$',A__questionmark_v0) = 'fun_app$k'('some$c',A__questionmark_v1) )
+    <=> ( 'cast_C_h_a_r_a_c_t_e_r_D_a_t_a_2_N_o_d_e$'(A__questionmark_v1) = A__questionmark_v0 ) ) ).
+
+%% ∀ ?v0:H_option_RCharacterData_ext_RNode_ext_RObject_ext$ (fun_app$l(cast_N_o_d_e_2_C_h_a_r_a_c_t_e_r_D_a_t_a$, cast_C_h_a_r_a_c_t_e_r_D_a_t_a_2_N_o_d_e$(?v0)) = fun_app$k(some$c, ?v0))
+tff(axiom343,axiom,
+    ! [A__questionmark_v0: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext$'] : ( 'fun_app$l'('cast_N_o_d_e_2_C_h_a_r_a_c_t_e_r_D_a_t_a$','cast_C_h_a_r_a_c_t_e_r_D_a_t_a_2_N_o_d_e$'(A__questionmark_v0)) = 'fun_app$k'('some$c',A__questionmark_v0) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$ (fun_app$cj(is_node_kind$, ?v0) = ¬(fun_app$s(cast_O_b_j_e_c_t_2_N_o_d_e$, ?v0) = none$b))
+tff(axiom344,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$'] :
+      ( 'fun_app$cj'('is_node_kind$',A__questionmark_v0)
+    <=> ( 'fun_app$s'('cast_O_b_j_e_c_t_2_N_o_d_e$',A__questionmark_v0) != 'none$b' ) ) ).
+
+%% ∀ ?v0:B_character_data_ptr$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ (fun_app$am(fun_app$an(get_C_h_a_r_a_c_t_e_r_D_a_t_a$, ?v0), ?v1) = bind$f(fun_app$aj(fun_app$ak(get_N_o_d_e$, cast_c_h_a_r_a_c_t_e_r_d_a_t_a_p_t_r_2_n_o_d_e_p_t_r$(?v0)), ?v1), cast_N_o_d_e_2_C_h_a_r_a_c_t_e_r_D_a_t_a$))
+tff(axiom345,axiom,
+    ! [A__questionmark_v0: 'B_character_data_ptr$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$'] : ( 'fun_app$am'('fun_app$an'('get_C_h_a_r_a_c_t_e_r_D_a_t_a$',A__questionmark_v0),A__questionmark_v1) = 'bind$f'('fun_app$aj'('fun_app$ak'('get_N_o_d_e$','cast_c_h_a_r_a_c_t_e_r_d_a_t_a_p_t_r_2_n_o_d_e_p_t_r$'(A__questionmark_v0)),A__questionmark_v1),'cast_N_o_d_e_2_C_h_a_r_a_c_t_e_r_D_a_t_a$') ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ ?v1:A_element_ptr$ (fun_app$ci(type_wf$, ?v0) ⇒ (fmember$d(?v1, fun_app$av(element_ptr_kinds$, ?v0)) = ¬(fun_app$ar(fun_app$as(get_E_l_e_m_e_n_t$, ?v1), ?v0) = none$a)))
+tff(axiom346,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$',A__questionmark_v1: 'A_element_ptr$'] :
+      ( 'fun_app$ci'('type_wf$',A__questionmark_v0)
+     => ( 'fmember$d'(A__questionmark_v1,'fun_app$av'('element_ptr_kinds$',A__questionmark_v0))
+      <=> ( 'fun_app$ar'('fun_app$as'('get_E_l_e_m_e_n_t$',A__questionmark_v1),A__questionmark_v0) != 'none$a' ) ) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$ ((fun_app$l(cast_N_o_d_e_2_C_h_a_r_a_c_t_e_r_D_a_t_a$, ?v0) = none$) = ¬∃ ?v1:H_option_RCharacterData_ext_RNode_ext_RObject_ext$ (cast_C_h_a_r_a_c_t_e_r_D_a_t_a_2_N_o_d_e$(?v1) = ?v0))
+tff(axiom347,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$'] :
+      ( ( 'fun_app$l'('cast_N_o_d_e_2_C_h_a_r_a_c_t_e_r_D_a_t_a$',A__questionmark_v0) = 'none$' )
+    <=> ~ ? [A__questionmark_v1: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext$'] : ( 'cast_C_h_a_r_a_c_t_e_r_D_a_t_a_2_N_o_d_e$'(A__questionmark_v1) = A__questionmark_v0 ) ) ).
+
+%% l_get_N_o_d_e_lemmas$(type_wf$)
+tff(axiom348,axiom,
+    'l_get_N_o_d_e_lemmas$'('type_wf$') ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ (fun_app$ci(type_wf$, ?v0) ⇒ fun_app$ci(type_wf$, ?v0))
+tff(axiom349,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$'] :
+      ( 'fun_app$ci'('type_wf$',A__questionmark_v0)
+     => 'fun_app$ci'('type_wf$',A__questionmark_v0) ) ).
+
+%% l_get_E_l_e_m_e_n_t_lemmas$(type_wf$)
+tff(axiom350,axiom,
+    'l_get_E_l_e_m_e_n_t_lemmas$'('type_wf$') ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ ?v1:D_document_ptr$ (fun_app$ci(type_wf$, ?v0) ⇒ (fmember$c(?v1, fun_app$ao(document_ptr_kinds$, ?v0)) = ¬(fun_app$ap(fun_app$aq(get_D_o_c_u_m_e_n_t$, ?v1), ?v0) = none$c)))
+tff(axiom351,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$',A__questionmark_v1: 'D_document_ptr$'] :
+      ( 'fun_app$ci'('type_wf$',A__questionmark_v0)
+     => ( 'fmember$c'(A__questionmark_v1,'fun_app$ao'('document_ptr_kinds$',A__questionmark_v0))
+      <=> ( 'fun_app$ap'('fun_app$aq'('get_D_o_c_u_m_e_n_t$',A__questionmark_v1),A__questionmark_v0) != 'none$c' ) ) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$ ?v1:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ ((fun_app$ci(type_wf$, fun_app$at(put_O_b_j_e_c_t$(?v0, ?v1), ?v2)) ∧ ¬fmember$a(?v0, fun_app$bl(object_ptr_kinds$, ?v2))) ⇒ fun_app$ci(type_wf$, ?v2))
+tff(axiom352,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$',A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$'] :
+      ( ( 'fun_app$ci'('type_wf$','fun_app$at'('put_O_b_j_e_c_t$'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2))
+        & ~ 'fmember$a'(A__questionmark_v0,'fun_app$bl'('object_ptr_kinds$',A__questionmark_v2)) )
+     => 'fun_app$ci'('type_wf$',A__questionmark_v2) ) ).
+
+%% ∀ ?v0:A_element_ptr_option$ (¬(?v0 = none$d) = fun_app$a(case_option$(false, uuy$), ?v0))
+tff(axiom353,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_option$'] :
+      ( ( A__questionmark_v0 != 'none$d' )
+    <=> 'fun_app$a'('case_option$'(tlfalse,'uuy$'),A__questionmark_v0) ) ).
+
+%% ∀ ?v0:C_a_b_j_option_RDocument_ext_RObject_ext_option$ (¬(?v0 = none$c) = fun_app$bm(case_option$f(false, uuz$), ?v0))
+tff(axiom354,axiom,
+    ! [A__questionmark_v0: 'C_a_b_j_option_RDocument_ext_RObject_ext_option$'] :
+      ( ( A__questionmark_v0 != 'none$c' )
+    <=> 'fun_app$bm'('case_option$f'(tlfalse,'uuz$'),A__questionmark_v0) ) ).
+
+%% ∀ ?v0:H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$ (¬(?v0 = none$) = fun_app$bn(case_option$g(false, uva$), ?v0))
+tff(axiom355,axiom,
+    ! [A__questionmark_v0: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$'] :
+      ( ( A__questionmark_v0 != 'none$' )
+    <=> 'fun_app$bn'('case_option$g'(tlfalse,'uva$'),A__questionmark_v0) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$ (¬(?v0 = none$a) = fun_app$bo(case_option$h(false, uvb$), ?v0))
+tff(axiom356,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$'] :
+      ( ( A__questionmark_v0 != 'none$a' )
+    <=> 'fun_app$bo'('case_option$h'(tlfalse,'uvb$'),A__questionmark_v0) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$ (¬(?v0 = none$b) = fun_app$bp(case_option$i(false, uvc$), ?v0))
+tff(axiom357,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$'] :
+      ( ( A__questionmark_v0 != 'none$b' )
+    <=> 'fun_app$bp'('case_option$i'(tlfalse,'uvc$'),A__questionmark_v0) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_option$ (¬(?v0 = none$e) = fun_app$bq(case_option$j(false, uvd$), ?v0))
+tff(axiom358,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_option$'] :
+      ( ( A__questionmark_v0 != 'none$e' )
+    <=> 'fun_app$bq'('case_option$j'(tlfalse,'uvd$'),A__questionmark_v0) ) ).
+
+%% ∀ ?v0:A_element_ptr_option$ ((?v0 = none$d) = fun_app$a(case_option$(true, uve$), ?v0))
+tff(axiom359,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_option$'] :
+      ( ( A__questionmark_v0 = 'none$d' )
+    <=> 'fun_app$a'('case_option$'(tltrue,'uve$'),A__questionmark_v0) ) ).
+
+%% ∀ ?v0:C_a_b_j_option_RDocument_ext_RObject_ext_option$ ((?v0 = none$c) = fun_app$bm(case_option$f(true, uvf$), ?v0))
+tff(axiom360,axiom,
+    ! [A__questionmark_v0: 'C_a_b_j_option_RDocument_ext_RObject_ext_option$'] :
+      ( ( A__questionmark_v0 = 'none$c' )
+    <=> 'fun_app$bm'('case_option$f'(tltrue,'uvf$'),A__questionmark_v0) ) ).
+
+%% ∀ ?v0:H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$ ((?v0 = none$) = fun_app$bn(case_option$g(true, uvg$), ?v0))
+tff(axiom361,axiom,
+    ! [A__questionmark_v0: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$'] :
+      ( ( A__questionmark_v0 = 'none$' )
+    <=> 'fun_app$bn'('case_option$g'(tltrue,'uvg$'),A__questionmark_v0) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$ ((?v0 = none$a) = fun_app$bo(case_option$h(true, uvh$), ?v0))
+tff(axiom362,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$'] :
+      ( ( A__questionmark_v0 = 'none$a' )
+    <=> 'fun_app$bo'('case_option$h'(tltrue,'uvh$'),A__questionmark_v0) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$ ((?v0 = none$b) = fun_app$bp(case_option$i(true, uvi$), ?v0))
+tff(axiom363,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$'] :
+      ( ( A__questionmark_v0 = 'none$b' )
+    <=> 'fun_app$bp'('case_option$i'(tltrue,'uvi$'),A__questionmark_v0) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_option$ ((?v0 = none$e) = fun_app$bq(case_option$j(true, uvj$), ?v0))
+tff(axiom364,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_option$'] :
+      ( ( A__questionmark_v0 = 'none$e' )
+    <=> 'fun_app$bq'('case_option$j'(tltrue,'uvj$'),A__questionmark_v0) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ ?v1:B_character_data_ptr$ (fun_app$ci(type_wf$, ?v0) ⇒ (fmember$b(?v1, fun_app$al(character_data_ptr_kinds$, ?v0)) = ¬(fun_app$am(fun_app$an(get_C_h_a_r_a_c_t_e_r_D_a_t_a$, ?v1), ?v0) = none$)))
+tff(axiom365,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$',A__questionmark_v1: 'B_character_data_ptr$'] :
+      ( 'fun_app$ci'('type_wf$',A__questionmark_v0)
+     => ( 'fmember$b'(A__questionmark_v1,'fun_app$al'('character_data_ptr_kinds$',A__questionmark_v0))
+      <=> ( 'fun_app$am'('fun_app$an'('get_C_h_a_r_a_c_t_e_r_D_a_t_a$',A__questionmark_v1),A__questionmark_v0) != 'none$' ) ) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ (fun_app$ci(type_wf$, ?v0) ⇒ (fun_app$aw(fmember$(?v1), fun_app$au(node_ptr_kinds$, ?v0)) = ¬(fun_app$aj(fun_app$ak(get_N_o_d_e$, ?v1), ?v0) = none$b)))
+tff(axiom366,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$'] :
+      ( 'fun_app$ci'('type_wf$',A__questionmark_v0)
+     => ( 'fun_app$aw'('fmember$'(A__questionmark_v1),'fun_app$au'('node_ptr_kinds$',A__questionmark_v0))
+      <=> ( 'fun_app$aj'('fun_app$ak'('get_N_o_d_e$',A__questionmark_v1),A__questionmark_v0) != 'none$b' ) ) ) ).
+
+%% ∀ ?v0:Bool ?v1:A_element_ptr_bool_fun$ ?v2:A_element_ptr_option$ ((fun_app$a(case_option$(?v0, ?v1), ?v2) ∧ ((((?v2 = none$d) ∧ ?v0) ⇒ false) ∧ ∀ ?v3:A_element_ptr$ (((?v2 = fun_app$ax(some$d, ?v3)) ∧ fun_app$e(?v1, ?v3)) ⇒ false))) ⇒ false)
+tff(axiom367,axiom,
+    ! [A__questionmark_v0: tlbool,A__questionmark_v1: 'A_element_ptr_bool_fun$',A__questionmark_v2: 'A_element_ptr_option$'] :
+      ( ( 'fun_app$a'('case_option$'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2)
+        & ( ( ( A__questionmark_v2 = 'none$d' )
+            & ( A__questionmark_v0 = tltrue ) )
+         => $false )
+        & ! [A__questionmark_v3: 'A_element_ptr$'] :
+            ( ( ( A__questionmark_v2 = 'fun_app$ax'('some$d',A__questionmark_v3) )
+              & 'fun_app$e'(A__questionmark_v1,A__questionmark_v3) )
+           => $false ) )
+     => $false ) ).
+
+%% ∀ ?v0:Bool ?v1:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_bool_fun$ ?v2:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_option$ ((fun_app$cb(case_option$k(?v0, ?v1), ?v2) ∧ ((((?v2 = none$f) ∧ ?v0) ⇒ false) ∧ ∀ ?v3:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$ (((?v2 = fun_app$az(some$f, ?v3)) ∧ fun_app$cj(?v1, ?v3)) ⇒ false))) ⇒ false)
+tff(axiom368,axiom,
+    ! [A__questionmark_v0: tlbool,A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_bool_fun$',A__questionmark_v2: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_option$'] :
+      ( ( 'fun_app$cb'('case_option$k'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2)
+        & ( ( ( A__questionmark_v2 = 'none$f' )
+            & ( A__questionmark_v0 = tltrue ) )
+         => $false )
+        & ! [A__questionmark_v3: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$'] :
+            ( ( ( A__questionmark_v2 = 'fun_app$az'('some$f',A__questionmark_v3) )
+              & 'fun_app$cj'(A__questionmark_v1,A__questionmark_v3) )
+           => $false ) )
+     => $false ) ).
+
+%% ∀ ?v0:Bool ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_bool_fun$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_option$ ((fun_app$bq(case_option$j(?v0, ?v1), ?v2) ∧ ((((?v2 = none$e) ∧ ?v0) ⇒ false) ∧ ∀ ?v3:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ (((?v2 = fun_app$ay(some$e, ?v3)) ∧ fun_app$(?v1, ?v3)) ⇒ false))) ⇒ false)
+tff(axiom369,axiom,
+    ! [A__questionmark_v0: tlbool,A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_bool_fun$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_option$'] :
+      ( ( 'fun_app$bq'('case_option$j'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2)
+        & ( ( ( A__questionmark_v2 = 'none$e' )
+            & ( A__questionmark_v0 = tltrue ) )
+         => $false )
+        & ! [A__questionmark_v3: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$'] :
+            ( ( ( A__questionmark_v2 = 'fun_app$ay'('some$e',A__questionmark_v3) )
+              & 'fun_app$'(A__questionmark_v1,A__questionmark_v3) )
+           => $false ) )
+     => $false ) ).
+
+%% ∀ ?v0:Bool ?v1:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_bool_fun$ ?v2:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$ ((fun_app$bp(case_option$i(?v0, ?v1), ?v2) ∧ ((((?v2 = none$b) ∧ ?v0) ⇒ false) ∧ ∀ ?v3:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$ (((?v2 = fun_app$g(some$, ?v3)) ∧ fun_app$x(?v1, ?v3)) ⇒ false))) ⇒ false)
+tff(axiom370,axiom,
+    ! [A__questionmark_v0: tlbool,A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_bool_fun$',A__questionmark_v2: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$'] :
+      ( ( 'fun_app$bp'('case_option$i'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2)
+        & ( ( ( A__questionmark_v2 = 'none$b' )
+            & ( A__questionmark_v0 = tltrue ) )
+         => $false )
+        & ! [A__questionmark_v3: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$'] :
+            ( ( ( A__questionmark_v2 = 'fun_app$g'('some$',A__questionmark_v3) )
+              & 'fun_app$x'(A__questionmark_v1,A__questionmark_v3) )
+           => $false ) )
+     => $false ) ).
+
+%% ∀ ?v0:Bool ?v1:H_option_RCharacterData_ext_RNode_ext_RObject_ext_bool_fun$ ?v2:H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$ ((fun_app$bn(case_option$g(?v0, ?v1), ?v2) ∧ ((((?v2 = none$) ∧ ?v0) ⇒ false) ∧ ∀ ?v3:H_option_RCharacterData_ext_RNode_ext_RObject_ext$ (((?v2 = fun_app$k(some$c, ?v3)) ∧ fun_app$v(?v1, ?v3)) ⇒ false))) ⇒ false)
+tff(axiom371,axiom,
+    ! [A__questionmark_v0: tlbool,A__questionmark_v1: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_bool_fun$',A__questionmark_v2: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$'] :
+      ( ( 'fun_app$bn'('case_option$g'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2)
+        & ( ( ( A__questionmark_v2 = 'none$' )
+            & ( A__questionmark_v0 = tltrue ) )
+         => $false )
+        & ! [A__questionmark_v3: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext$'] :
+            ( ( ( A__questionmark_v2 = 'fun_app$k'('some$c',A__questionmark_v3) )
+              & 'fun_app$v'(A__questionmark_v1,A__questionmark_v3) )
+           => $false ) )
+     => $false ) ).
+
+%% ∀ ?v0:Bool ?v1:C_a_b_j_option_RDocument_ext_RObject_ext_bool_fun$ ?v2:C_a_b_j_option_RDocument_ext_RObject_ext_option$ ((fun_app$bm(case_option$f(?v0, ?v1), ?v2) ∧ ((((?v2 = none$c) ∧ ?v0) ⇒ false) ∧ ∀ ?v3:C_a_b_j_option_RDocument_ext_RObject_ext$ (((?v2 = fun_app$j(some$b, ?v3)) ∧ fun_app$t(?v1, ?v3)) ⇒ false))) ⇒ false)
+tff(axiom372,axiom,
+    ! [A__questionmark_v0: tlbool,A__questionmark_v1: 'C_a_b_j_option_RDocument_ext_RObject_ext_bool_fun$',A__questionmark_v2: 'C_a_b_j_option_RDocument_ext_RObject_ext_option$'] :
+      ( ( 'fun_app$bm'('case_option$f'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2)
+        & ( ( ( A__questionmark_v2 = 'none$c' )
+            & ( A__questionmark_v0 = tltrue ) )
+         => $false )
+        & ! [A__questionmark_v3: 'C_a_b_j_option_RDocument_ext_RObject_ext$'] :
+            ( ( ( A__questionmark_v2 = 'fun_app$j'('some$b',A__questionmark_v3) )
+              & 'fun_app$t'(A__questionmark_v1,A__questionmark_v3) )
+           => $false ) )
+     => $false ) ).
+
+%% ∀ ?v0:Bool ?v1:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_bool_fun$ ?v2:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$ ((fun_app$bo(case_option$h(?v0, ?v1), ?v2) ∧ ((((?v2 = none$a) ∧ ?v0) ⇒ false) ∧ ∀ ?v3:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$ (((?v2 = fun_app$i(some$a, ?v3)) ∧ fun_app$w(?v1, ?v3)) ⇒ false))) ⇒ false)
+tff(axiom373,axiom,
+    ! [A__questionmark_v0: tlbool,A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_bool_fun$',A__questionmark_v2: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$'] :
+      ( ( 'fun_app$bo'('case_option$h'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2)
+        & ( ( ( A__questionmark_v2 = 'none$a' )
+            & ( A__questionmark_v0 = tltrue ) )
+         => $false )
+        & ! [A__questionmark_v3: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$'] :
+            ( ( ( A__questionmark_v2 = 'fun_app$i'('some$a',A__questionmark_v3) )
+              & 'fun_app$w'(A__questionmark_v1,A__questionmark_v3) )
+           => $false ) )
+     => $false ) ).
+
+%% ∀ ?v0:B_character_data_ptr$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$ ?v2:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$ ?v3:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ (fun_app$am(fun_app$an(get_C_h_a_r_a_c_t_e_r_D_a_t_a$, ?v0), fun_app$at(put_O_b_j_e_c_t$(?v1, ?v2), ?v3)) = (if (?v1 = cast_n_o_d_e_p_t_r_2_o_b_j_e_c_t_p_t_r$(cast_c_h_a_r_a_c_t_e_r_d_a_t_a_p_t_r_2_n_o_d_e_p_t_r$(?v0))) case_option$l(none$, cast_N_o_d_e_2_C_h_a_r_a_c_t_e_r_D_a_t_a$, fun_app$s(cast_O_b_j_e_c_t_2_N_o_d_e$, ?v2)) else fun_app$am(fun_app$an(get_C_h_a_r_a_c_t_e_r_D_a_t_a$, ?v0), ?v3)))
+tff(axiom374,axiom,
+    ! [A__questionmark_v0: 'B_character_data_ptr$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$',A__questionmark_v2: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$',A__questionmark_v3: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$'] :
+      ( ( ( A__questionmark_v1 = 'cast_n_o_d_e_p_t_r_2_o_b_j_e_c_t_p_t_r$'('cast_c_h_a_r_a_c_t_e_r_d_a_t_a_p_t_r_2_n_o_d_e_p_t_r$'(A__questionmark_v0)) )
+       => ( 'fun_app$am'('fun_app$an'('get_C_h_a_r_a_c_t_e_r_D_a_t_a$',A__questionmark_v0),'fun_app$at'('put_O_b_j_e_c_t$'(A__questionmark_v1,A__questionmark_v2),A__questionmark_v3)) = 'case_option$l'('none$','cast_N_o_d_e_2_C_h_a_r_a_c_t_e_r_D_a_t_a$','fun_app$s'('cast_O_b_j_e_c_t_2_N_o_d_e$',A__questionmark_v2)) ) )
+      & ( ( A__questionmark_v1 != 'cast_n_o_d_e_p_t_r_2_o_b_j_e_c_t_p_t_r$'('cast_c_h_a_r_a_c_t_e_r_d_a_t_a_p_t_r_2_n_o_d_e_p_t_r$'(A__questionmark_v0)) )
+       => ( 'fun_app$am'('fun_app$an'('get_C_h_a_r_a_c_t_e_r_D_a_t_a$',A__questionmark_v0),'fun_app$at'('put_O_b_j_e_c_t$'(A__questionmark_v1,A__questionmark_v2),A__questionmark_v3)) = 'fun_app$am'('fun_app$an'('get_C_h_a_r_a_c_t_e_r_D_a_t_a$',A__questionmark_v0),A__questionmark_v3) ) ) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$ (fun_app$x(is_character_data_kind_N_o_d_e$, ?v0) = ¬(fun_app$l(cast_N_o_d_e_2_C_h_a_r_a_c_t_e_r_D_a_t_a$, ?v0) = none$))
+tff(axiom375,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$'] :
+      ( 'fun_app$x'('is_character_data_kind_N_o_d_e$',A__questionmark_v0)
+    <=> ( 'fun_app$l'('cast_N_o_d_e_2_C_h_a_r_a_c_t_e_r_D_a_t_a$',A__questionmark_v0) != 'none$' ) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_bool_fun$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ ?v2:D_document_ptr$ ((l_get_D_o_c_u_m_e_n_t_lemmas$(?v0) ∧ fun_app$ci(?v0, ?v1)) ⇒ (fmember$c(?v2, fun_app$ao(document_ptr_kinds$, ?v1)) = ¬(fun_app$ap(fun_app$aq(get_D_o_c_u_m_e_n_t$, ?v2), ?v1) = none$c)))
+tff(axiom376,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_bool_fun$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$',A__questionmark_v2: 'D_document_ptr$'] :
+      ( ( 'l_get_D_o_c_u_m_e_n_t_lemmas$'(A__questionmark_v0)
+        & 'fun_app$ci'(A__questionmark_v0,A__questionmark_v1) )
+     => ( 'fmember$c'(A__questionmark_v2,'fun_app$ao'('document_ptr_kinds$',A__questionmark_v1))
+      <=> ( 'fun_app$ap'('fun_app$aq'('get_D_o_c_u_m_e_n_t$',A__questionmark_v2),A__questionmark_v1) != 'none$c' ) ) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_bool_fun$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ ?v2:B_character_data_ptr$ ((l_get_C_h_a_r_a_c_t_e_r_D_a_t_a_lemmas$(?v0) ∧ fun_app$ci(?v0, ?v1)) ⇒ (fmember$b(?v2, fun_app$al(character_data_ptr_kinds$, ?v1)) = ¬(fun_app$am(fun_app$an(get_C_h_a_r_a_c_t_e_r_D_a_t_a$, ?v2), ?v1) = none$)))
+tff(axiom377,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_bool_fun$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$',A__questionmark_v2: 'B_character_data_ptr$'] :
+      ( ( 'l_get_C_h_a_r_a_c_t_e_r_D_a_t_a_lemmas$'(A__questionmark_v0)
+        & 'fun_app$ci'(A__questionmark_v0,A__questionmark_v1) )
+     => ( 'fmember$b'(A__questionmark_v2,'fun_app$al'('character_data_ptr_kinds$',A__questionmark_v1))
+      <=> ( 'fun_app$am'('fun_app$an'('get_C_h_a_r_a_c_t_e_r_D_a_t_a$',A__questionmark_v2),A__questionmark_v1) != 'none$' ) ) ) ).
+
+%% l_put_M$(type_wf$, document_ptr_kinds$, get_D_o_c_u_m_e_n_t$)
+tff(axiom378,axiom,
+    'l_put_M$'('type_wf$','document_ptr_kinds$','get_D_o_c_u_m_e_n_t$') ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ (fmember$a(?v0, fun_app$bl(object_ptr_kinds$, ?v1)) ⇒ ¬(delete_O_b_j_e_c_t$(?v0, ?v1) = none$g))
+tff(axiom379,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$'] :
+      ( 'fmember$a'(A__questionmark_v0,'fun_app$bl'('object_ptr_kinds$',A__questionmark_v1))
+     => ( 'delete_O_b_j_e_c_t$'(A__questionmark_v0,A__questionmark_v1) != 'none$g' ) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ ((delete_O_b_j_e_c_t$(?v0, ?v1) = some$g(?v2)) ⇒ fmember$a(?v0, fun_app$bl(object_ptr_kinds$, ?v1)))
+tff(axiom380,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$'] :
+      ( ( 'delete_O_b_j_e_c_t$'(A__questionmark_v0,A__questionmark_v1) = 'some$g'(A__questionmark_v2) )
+     => 'fmember$a'(A__questionmark_v0,'fun_app$bl'('object_ptr_kinds$',A__questionmark_v1)) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ ((delete_O_b_j_e_c_t$(?v0, ?v1) = some$g(?v2)) ⇒ ¬fmember$a(?v0, fun_app$bl(object_ptr_kinds$, ?v2)))
+tff(axiom381,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$'] :
+      ( ( 'delete_O_b_j_e_c_t$'(A__questionmark_v0,A__questionmark_v1) = 'some$g'(A__questionmark_v2) )
+     => ~ 'fmember$a'(A__questionmark_v0,'fun_app$bl'('object_ptr_kinds$',A__questionmark_v2)) ) ).
+
+%% l_get_C_h_a_r_a_c_t_e_r_D_a_t_a_lemmas$(type_wf$)
+tff(axiom382,axiom,
+    'l_get_C_h_a_r_a_c_t_e_r_D_a_t_a_lemmas$'('type_wf$') ).
+
+%% l_get_D_o_c_u_m_e_n_t_lemmas$(type_wf$)
+tff(axiom383,axiom,
+    'l_get_D_o_c_u_m_e_n_t_lemmas$'('type_wf$') ).
+
+%% ∀ ?v0:D_document_ptr$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ (fmember$a(cast_d_o_c_u_m_e_n_t_p_t_r_2_o_b_j_e_c_t_p_t_r$(?v0), fun_app$bl(object_ptr_kinds$, ?v1)) = fmember$c(?v0, fun_app$ao(document_ptr_kinds$, ?v1)))
+tff(axiom384,axiom,
+    ! [A__questionmark_v0: 'D_document_ptr$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$'] :
+      ( 'fmember$a'('cast_d_o_c_u_m_e_n_t_p_t_r_2_o_b_j_e_c_t_p_t_r$'(A__questionmark_v0),'fun_app$bl'('object_ptr_kinds$',A__questionmark_v1))
+    <=> 'fmember$c'(A__questionmark_v0,'fun_app$ao'('document_ptr_kinds$',A__questionmark_v1)) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ (fun_app$ci(type_wf$a, ?v0) ⇒ (fun_app$aw(fmember$(?v1), fun_app$au(node_ptr_kinds$, ?v0)) = ¬(fun_app$aj(fun_app$ak(get_N_o_d_e$, ?v1), ?v0) = none$b)))
+tff(axiom385,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$'] :
+      ( 'fun_app$ci'('type_wf$a',A__questionmark_v0)
+     => ( 'fun_app$aw'('fmember$'(A__questionmark_v1),'fun_app$au'('node_ptr_kinds$',A__questionmark_v0))
+      <=> ( 'fun_app$aj'('fun_app$ak'('get_N_o_d_e$',A__questionmark_v1),A__questionmark_v0) != 'none$b' ) ) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ (fun_app$ci(type_wf$, ?v0) = (fun_app$ci(type_wf$a, ?v0) ∧ ∀ ?v1:D_document_ptr$ (member$a(?v1, fset$a(fun_app$ao(document_ptr_kinds$, ?v0))) ⇒ ¬(fun_app$ap(fun_app$aq(get_D_o_c_u_m_e_n_t$, ?v1), ?v0) = none$c))))
+tff(axiom386,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$'] :
+      ( 'fun_app$ci'('type_wf$',A__questionmark_v0)
+    <=> ( 'fun_app$ci'('type_wf$a',A__questionmark_v0)
+        & ! [A__questionmark_v1: 'D_document_ptr$'] :
+            ( 'member$a'(A__questionmark_v1,'fset$a'('fun_app$ao'('document_ptr_kinds$',A__questionmark_v0)))
+           => ( 'fun_app$ap'('fun_app$aq'('get_D_o_c_u_m_e_n_t$',A__questionmark_v1),A__questionmark_v0) != 'none$c' ) ) ) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ (fun_app$ci(type_wf$b, ?v0) ⇒ (fun_app$aw(fmember$(?v1), fun_app$au(node_ptr_kinds$, ?v0)) = ¬(fun_app$aj(fun_app$ak(get_N_o_d_e$, ?v1), ?v0) = none$b)))
+tff(axiom387,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$'] :
+      ( 'fun_app$ci'('type_wf$b',A__questionmark_v0)
+     => ( 'fun_app$aw'('fmember$'(A__questionmark_v1),'fun_app$au'('node_ptr_kinds$',A__questionmark_v0))
+      <=> ( 'fun_app$aj'('fun_app$ak'('get_N_o_d_e$',A__questionmark_v1),A__questionmark_v0) != 'none$b' ) ) ) ).
+
+%% l_get_M$(get_D_o_c_u_m_e_n_t$, type_wf$, document_ptr_kinds$)
+tff(axiom388,axiom,
+    'l_get_M$'('get_D_o_c_u_m_e_n_t$','type_wf$','document_ptr_kinds$') ).
+
+%% l_get_M$(get_D_o_c_u_m_e_n_t$, type_wf$, document_ptr_kinds$)
+tff(axiom389,axiom,
+    'l_get_M$'('get_D_o_c_u_m_e_n_t$','type_wf$','document_ptr_kinds$') ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ (fun_app$ci(type_wf$b, ?v0) ⇒ fun_app$ci(type_wf$b, ?v0))
+tff(axiom390,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$'] :
+      ( 'fun_app$ci'('type_wf$b',A__questionmark_v0)
+     => 'fun_app$ci'('type_wf$b',A__questionmark_v0) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ (fun_app$ci(type_wf$a, ?v0) ⇒ fun_app$ci(type_wf$b, ?v0))
+tff(axiom391,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$'] :
+      ( 'fun_app$ci'('type_wf$a',A__questionmark_v0)
+     => 'fun_app$ci'('type_wf$b',A__questionmark_v0) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ (fun_app$ci(type_wf$a, ?v0) ⇒ fun_app$ci(type_wf$a, ?v0))
+tff(axiom392,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$'] :
+      ( 'fun_app$ci'('type_wf$a',A__questionmark_v0)
+     => 'fun_app$ci'('type_wf$a',A__questionmark_v0) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ (fun_app$ci(type_wf$, ?v0) ⇒ fun_app$ci(type_wf$a, ?v0))
+tff(axiom393,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$'] :
+      ( 'fun_app$ci'('type_wf$',A__questionmark_v0)
+     => 'fun_app$ci'('type_wf$a',A__questionmark_v0) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ (fun_app$ci(type_wf$, ?v0) ⇒ fun_app$ci(type_wf$b, ?v0))
+tff(axiom394,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$'] :
+      ( 'fun_app$ci'('type_wf$',A__questionmark_v0)
+     => 'fun_app$ci'('type_wf$b',A__questionmark_v0) ) ).
+
+%% l_get_C_h_a_r_a_c_t_e_r_D_a_t_a_lemmas$(type_wf$a)
+tff(axiom395,axiom,
+    'l_get_C_h_a_r_a_c_t_e_r_D_a_t_a_lemmas$'('type_wf$a') ).
+
+%% l_get_E_l_e_m_e_n_t_lemmas$(type_wf$b)
+tff(axiom396,axiom,
+    'l_get_E_l_e_m_e_n_t_lemmas$'('type_wf$b') ).
+
+%% l_get_N_o_d_e_lemmas$(type_wf$b)
+tff(axiom397,axiom,
+    'l_get_N_o_d_e_lemmas$'('type_wf$b') ).
+
+%% l_get_E_l_e_m_e_n_t_lemmas$(type_wf$a)
+tff(axiom398,axiom,
+    'l_get_E_l_e_m_e_n_t_lemmas$'('type_wf$a') ).
+
+%% l_get_N_o_d_e_lemmas$(type_wf$a)
+tff(axiom399,axiom,
+    'l_get_N_o_d_e_lemmas$'('type_wf$a') ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ (fun_app$ci(type_wf$a, ?v0) = (fun_app$ci(type_wf$b, ?v0) ∧ ∀ ?v1:B_character_data_ptr$ (member$(?v1, fset$(fun_app$al(character_data_ptr_kinds$, ?v0))) ⇒ ¬(fun_app$am(fun_app$an(get_C_h_a_r_a_c_t_e_r_D_a_t_a$, ?v1), ?v0) = none$))))
+tff(axiom400,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$'] :
+      ( 'fun_app$ci'('type_wf$a',A__questionmark_v0)
+    <=> ( 'fun_app$ci'('type_wf$b',A__questionmark_v0)
+        & ! [A__questionmark_v1: 'B_character_data_ptr$'] :
+            ( 'member$'(A__questionmark_v1,'fset$'('fun_app$al'('character_data_ptr_kinds$',A__questionmark_v0)))
+           => ( 'fun_app$am'('fun_app$an'('get_C_h_a_r_a_c_t_e_r_D_a_t_a$',A__questionmark_v1),A__questionmark_v0) != 'none$' ) ) ) ) ).
+
+%% ∀ ?v0:D_document_ptr_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_c_a_b_j_option_RDocument_ext_RObject_ext_option_fun_fun$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_bool_fun$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_d_document_ptr_fset_fun$ (l_get_M$(?v0, ?v1, ?v2) ⇒ l_put_M$(?v1, ?v2, ?v0))
+tff(axiom401,axiom,
+    ! [A__questionmark_v0: 'D_document_ptr_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_c_a_b_j_option_RDocument_ext_RObject_ext_option_fun_fun$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_bool_fun$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_d_document_ptr_fset_fun$'] :
+      ( 'l_get_M$'(A__questionmark_v0,A__questionmark_v1,A__questionmark_v2)
+     => 'l_put_M$'(A__questionmark_v1,A__questionmark_v2,A__questionmark_v0) ) ).
+
+%% ∀ ?v0:A_element_ptr_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun_fun$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_bool_fun$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_a_element_ptr_fset_fun$ (l_get_M$a(?v0, ?v1, ?v2) ⇒ l_put_M$a(?v1, ?v2, ?v0))
+tff(axiom402,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun_fun$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_bool_fun$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_a_element_ptr_fset_fun$'] :
+      ( 'l_get_M$a'(A__questionmark_v0,A__questionmark_v1,A__questionmark_v2)
+     => 'l_put_M$a'(A__questionmark_v1,A__questionmark_v2,A__questionmark_v0) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun_fun$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_bool_fun$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset_fun$ (l_get_M$b(?v0, ?v1, ?v2) ⇒ l_put_M$b(?v1, ?v2, ?v0))
+tff(axiom403,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun_fun$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_bool_fun$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset_fun$'] :
+      ( 'l_get_M$b'(A__questionmark_v0,A__questionmark_v1,A__questionmark_v2)
+     => 'l_put_M$b'(A__questionmark_v1,A__questionmark_v2,A__questionmark_v0) ) ).
+
+%% ∀ ?v0:B_character_data_ptr_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun_fun$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_bool_fun$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_b_character_data_ptr_fset_fun$ (l_get_M$c(?v0, ?v1, ?v2) ⇒ l_put_M$c(?v1, ?v2, ?v0))
+tff(axiom404,axiom,
+    ! [A__questionmark_v0: 'B_character_data_ptr_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun_fun$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_bool_fun$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_b_character_data_ptr_fset_fun$'] :
+      ( 'l_get_M$c'(A__questionmark_v0,A__questionmark_v1,A__questionmark_v2)
+     => 'l_put_M$c'(A__questionmark_v1,A__questionmark_v2,A__questionmark_v0) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_bool_fun$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_d_document_ptr_fset_fun$ ?v2:D_document_ptr_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_c_a_b_j_option_RDocument_ext_RObject_ext_option_fun_fun$ (l_put_M$(?v0, ?v1, ?v2) ⇒ l_get_M$(?v2, ?v0, ?v1))
+tff(axiom405,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_bool_fun$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_d_document_ptr_fset_fun$',A__questionmark_v2: 'D_document_ptr_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_c_a_b_j_option_RDocument_ext_RObject_ext_option_fun_fun$'] :
+      ( 'l_put_M$'(A__questionmark_v0,A__questionmark_v1,A__questionmark_v2)
+     => 'l_get_M$'(A__questionmark_v2,A__questionmark_v0,A__questionmark_v1) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_bool_fun$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_a_element_ptr_fset_fun$ ?v2:A_element_ptr_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun_fun$ (l_put_M$a(?v0, ?v1, ?v2) ⇒ l_get_M$a(?v2, ?v0, ?v1))
+tff(axiom406,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_bool_fun$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_a_element_ptr_fset_fun$',A__questionmark_v2: 'A_element_ptr_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun_fun$'] :
+      ( 'l_put_M$a'(A__questionmark_v0,A__questionmark_v1,A__questionmark_v2)
+     => 'l_get_M$a'(A__questionmark_v2,A__questionmark_v0,A__questionmark_v1) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_bool_fun$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset_fun$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun_fun$ (l_put_M$b(?v0, ?v1, ?v2) ⇒ l_get_M$b(?v2, ?v0, ?v1))
+tff(axiom407,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_bool_fun$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset_fun$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun_fun$'] :
+      ( 'l_put_M$b'(A__questionmark_v0,A__questionmark_v1,A__questionmark_v2)
+     => 'l_get_M$b'(A__questionmark_v2,A__questionmark_v0,A__questionmark_v1) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_bool_fun$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_b_character_data_ptr_fset_fun$ ?v2:B_character_data_ptr_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun_fun$ (l_put_M$c(?v0, ?v1, ?v2) ⇒ l_get_M$c(?v2, ?v0, ?v1))
+tff(axiom408,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_bool_fun$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_b_character_data_ptr_fset_fun$',A__questionmark_v2: 'B_character_data_ptr_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun_fun$'] :
+      ( 'l_put_M$c'(A__questionmark_v0,A__questionmark_v1,A__questionmark_v2)
+     => 'l_get_M$c'(A__questionmark_v2,A__questionmark_v0,A__questionmark_v1) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_bool_fun$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_d_document_ptr_fset_fun$ ?v2:D_document_ptr_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_c_a_b_j_option_RDocument_ext_RObject_ext_option_fun_fun$ (l_put_M$(?v0, ?v1, ?v2) = l_get_M$(?v2, ?v0, ?v1))
+tff(axiom409,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_bool_fun$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_d_document_ptr_fset_fun$',A__questionmark_v2: 'D_document_ptr_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_c_a_b_j_option_RDocument_ext_RObject_ext_option_fun_fun$'] :
+      ( 'l_put_M$'(A__questionmark_v0,A__questionmark_v1,A__questionmark_v2)
+    <=> 'l_get_M$'(A__questionmark_v2,A__questionmark_v0,A__questionmark_v1) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_bool_fun$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_a_element_ptr_fset_fun$ ?v2:A_element_ptr_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun_fun$ (l_put_M$a(?v0, ?v1, ?v2) = l_get_M$a(?v2, ?v0, ?v1))
+tff(axiom410,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_bool_fun$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_a_element_ptr_fset_fun$',A__questionmark_v2: 'A_element_ptr_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun_fun$'] :
+      ( 'l_put_M$a'(A__questionmark_v0,A__questionmark_v1,A__questionmark_v2)
+    <=> 'l_get_M$a'(A__questionmark_v2,A__questionmark_v0,A__questionmark_v1) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_bool_fun$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset_fun$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun_fun$ (l_put_M$b(?v0, ?v1, ?v2) = l_get_M$b(?v2, ?v0, ?v1))
+tff(axiom411,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_bool_fun$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset_fun$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun_fun$'] :
+      ( 'l_put_M$b'(A__questionmark_v0,A__questionmark_v1,A__questionmark_v2)
+    <=> 'l_get_M$b'(A__questionmark_v2,A__questionmark_v0,A__questionmark_v1) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_bool_fun$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_b_character_data_ptr_fset_fun$ ?v2:B_character_data_ptr_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun_fun$ (l_put_M$c(?v0, ?v1, ?v2) = l_get_M$c(?v2, ?v0, ?v1))
+tff(axiom412,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_bool_fun$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_b_character_data_ptr_fset_fun$',A__questionmark_v2: 'B_character_data_ptr_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun_fun$'] :
+      ( 'l_put_M$c'(A__questionmark_v0,A__questionmark_v1,A__questionmark_v2)
+    <=> 'l_get_M$c'(A__questionmark_v2,A__questionmark_v0,A__questionmark_v1) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$ ?v1:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ ((fun_app$ci(type_wf$a, fun_app$at(put_O_b_j_e_c_t$(?v0, ?v1), ?v2)) ∧ ¬fmember$a(?v0, fun_app$bl(object_ptr_kinds$, ?v2))) ⇒ fun_app$ci(type_wf$a, ?v2))
+tff(axiom413,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$',A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$'] :
+      ( ( 'fun_app$ci'('type_wf$a','fun_app$at'('put_O_b_j_e_c_t$'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2))
+        & ~ 'fmember$a'(A__questionmark_v0,'fun_app$bl'('object_ptr_kinds$',A__questionmark_v2)) )
+     => 'fun_app$ci'('type_wf$a',A__questionmark_v2) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$ ?v1:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ ((fun_app$ci(type_wf$b, fun_app$at(put_O_b_j_e_c_t$(?v0, ?v1), ?v2)) ∧ ¬fmember$a(?v0, fun_app$bl(object_ptr_kinds$, ?v2))) ⇒ fun_app$ci(type_wf$b, ?v2))
+tff(axiom414,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$',A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$'] :
+      ( ( 'fun_app$ci'('type_wf$b','fun_app$at'('put_O_b_j_e_c_t$'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2))
+        & ~ 'fmember$a'(A__questionmark_v0,'fun_app$bl'('object_ptr_kinds$',A__questionmark_v2)) )
+     => 'fun_app$ci'('type_wf$b',A__questionmark_v2) ) ).
+
+%% ∀ ?v0:D_document_ptr_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_c_a_b_j_option_RDocument_ext_RObject_ext_option_fun_fun$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_bool_fun$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_d_document_ptr_fset_fun$ (l_get_M$(?v0, ?v1, ?v2) = (∀ ?v3:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ ?v4:D_document_ptr$ ((fun_app$ci(?v1, ?v3) ∧ fmember$c(?v4, fun_app$ao(?v2, ?v3))) ⇒ ¬(fun_app$ap(fun_app$aq(?v0, ?v4), ?v3) = none$c)) ∧ ∀ ?v3:D_document_ptr$ ?v4:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ (¬(fun_app$ap(fun_app$aq(?v0, ?v3), ?v4) = none$c) ⇒ fmember$c(?v3, fun_app$ao(?v2, ?v4)))))
+tff(axiom415,axiom,
+    ! [A__questionmark_v0: 'D_document_ptr_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_c_a_b_j_option_RDocument_ext_RObject_ext_option_fun_fun$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_bool_fun$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_d_document_ptr_fset_fun$'] :
+      ( 'l_get_M$'(A__questionmark_v0,A__questionmark_v1,A__questionmark_v2)
+    <=> ( ! [A__questionmark_v3: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$',A__questionmark_v4: 'D_document_ptr$'] :
+            ( ( 'fun_app$ci'(A__questionmark_v1,A__questionmark_v3)
+              & 'fmember$c'(A__questionmark_v4,'fun_app$ao'(A__questionmark_v2,A__questionmark_v3)) )
+           => ( 'fun_app$ap'('fun_app$aq'(A__questionmark_v0,A__questionmark_v4),A__questionmark_v3) != 'none$c' ) )
+        & ! [A__questionmark_v3: 'D_document_ptr$',A__questionmark_v4: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$'] :
+            ( ( 'fun_app$ap'('fun_app$aq'(A__questionmark_v0,A__questionmark_v3),A__questionmark_v4) != 'none$c' )
+           => 'fmember$c'(A__questionmark_v3,'fun_app$ao'(A__questionmark_v2,A__questionmark_v4)) ) ) ) ).
+
+%% ∀ ?v0:B_character_data_ptr_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun_fun$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_bool_fun$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_b_character_data_ptr_fset_fun$ (l_get_M$c(?v0, ?v1, ?v2) = (∀ ?v3:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ ?v4:B_character_data_ptr$ ((fun_app$ci(?v1, ?v3) ∧ fmember$b(?v4, fun_app$al(?v2, ?v3))) ⇒ ¬(fun_app$am(fun_app$an(?v0, ?v4), ?v3) = none$)) ∧ ∀ ?v3:B_character_data_ptr$ ?v4:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ (¬(fun_app$am(fun_app$an(?v0, ?v3), ?v4) = none$) ⇒ fmember$b(?v3, fun_app$al(?v2, ?v4)))))
+tff(axiom416,axiom,
+    ! [A__questionmark_v0: 'B_character_data_ptr_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun_fun$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_bool_fun$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_b_character_data_ptr_fset_fun$'] :
+      ( 'l_get_M$c'(A__questionmark_v0,A__questionmark_v1,A__questionmark_v2)
+    <=> ( ! [A__questionmark_v3: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$',A__questionmark_v4: 'B_character_data_ptr$'] :
+            ( ( 'fun_app$ci'(A__questionmark_v1,A__questionmark_v3)
+              & 'fmember$b'(A__questionmark_v4,'fun_app$al'(A__questionmark_v2,A__questionmark_v3)) )
+           => ( 'fun_app$am'('fun_app$an'(A__questionmark_v0,A__questionmark_v4),A__questionmark_v3) != 'none$' ) )
+        & ! [A__questionmark_v3: 'B_character_data_ptr$',A__questionmark_v4: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$'] :
+            ( ( 'fun_app$am'('fun_app$an'(A__questionmark_v0,A__questionmark_v3),A__questionmark_v4) != 'none$' )
+           => 'fmember$b'(A__questionmark_v3,'fun_app$al'(A__questionmark_v2,A__questionmark_v4)) ) ) ) ).
+
+%% ∀ ?v0:A_element_ptr_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun_fun$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_bool_fun$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_a_element_ptr_fset_fun$ (l_get_M$a(?v0, ?v1, ?v2) = (∀ ?v3:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ ?v4:A_element_ptr$ ((fun_app$ci(?v1, ?v3) ∧ fmember$d(?v4, fun_app$av(?v2, ?v3))) ⇒ ¬(fun_app$ar(fun_app$as(?v0, ?v4), ?v3) = none$a)) ∧ ∀ ?v3:A_element_ptr$ ?v4:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ (¬(fun_app$ar(fun_app$as(?v0, ?v3), ?v4) = none$a) ⇒ fmember$d(?v3, fun_app$av(?v2, ?v4)))))
+tff(axiom417,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun_fun$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_bool_fun$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_a_element_ptr_fset_fun$'] :
+      ( 'l_get_M$a'(A__questionmark_v0,A__questionmark_v1,A__questionmark_v2)
+    <=> ( ! [A__questionmark_v3: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$',A__questionmark_v4: 'A_element_ptr$'] :
+            ( ( 'fun_app$ci'(A__questionmark_v1,A__questionmark_v3)
+              & 'fmember$d'(A__questionmark_v4,'fun_app$av'(A__questionmark_v2,A__questionmark_v3)) )
+           => ( 'fun_app$ar'('fun_app$as'(A__questionmark_v0,A__questionmark_v4),A__questionmark_v3) != 'none$a' ) )
+        & ! [A__questionmark_v3: 'A_element_ptr$',A__questionmark_v4: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$'] :
+            ( ( 'fun_app$ar'('fun_app$as'(A__questionmark_v0,A__questionmark_v3),A__questionmark_v4) != 'none$a' )
+           => 'fmember$d'(A__questionmark_v3,'fun_app$av'(A__questionmark_v2,A__questionmark_v4)) ) ) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun_fun$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_bool_fun$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset_fun$ (l_get_M$b(?v0, ?v1, ?v2) = (∀ ?v3:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ ?v4:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ ((fun_app$ci(?v1, ?v3) ∧ fun_app$aw(fmember$(?v4), fun_app$au(?v2, ?v3))) ⇒ ¬(fun_app$aj(fun_app$ak(?v0, ?v4), ?v3) = none$b)) ∧ ∀ ?v3:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ ?v4:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ (¬(fun_app$aj(fun_app$ak(?v0, ?v3), ?v4) = none$b) ⇒ fun_app$aw(fmember$(?v3), fun_app$au(?v2, ?v4)))))
+tff(axiom418,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun_fun$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_bool_fun$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset_fun$'] :
+      ( 'l_get_M$b'(A__questionmark_v0,A__questionmark_v1,A__questionmark_v2)
+    <=> ( ! [A__questionmark_v3: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$',A__questionmark_v4: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$'] :
+            ( ( 'fun_app$ci'(A__questionmark_v1,A__questionmark_v3)
+              & 'fun_app$aw'('fmember$'(A__questionmark_v4),'fun_app$au'(A__questionmark_v2,A__questionmark_v3)) )
+           => ( 'fun_app$aj'('fun_app$ak'(A__questionmark_v0,A__questionmark_v4),A__questionmark_v3) != 'none$b' ) )
+        & ! [A__questionmark_v3: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$',A__questionmark_v4: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$'] :
+            ( ( 'fun_app$aj'('fun_app$ak'(A__questionmark_v0,A__questionmark_v3),A__questionmark_v4) != 'none$b' )
+           => 'fun_app$aw'('fmember$'(A__questionmark_v3),'fun_app$au'(A__questionmark_v2,A__questionmark_v4)) ) ) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_bool_fun$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_d_document_ptr_fset_fun$ ?v2:D_document_ptr_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_c_a_b_j_option_RDocument_ext_RObject_ext_option_fun_fun$ ((∀ ?v3:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ ?v4:D_document_ptr$ ((fun_app$ci(?v0, ?v3) ∧ fmember$c(?v4, fun_app$ao(?v1, ?v3))) ⇒ ¬(fun_app$ap(fun_app$aq(?v2, ?v4), ?v3) = none$c)) ∧ ∀ ?v3:D_document_ptr$ ?v4:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ (¬(fun_app$ap(fun_app$aq(?v2, ?v3), ?v4) = none$c) ⇒ fmember$c(?v3, fun_app$ao(?v1, ?v4)))) ⇒ l_get_M$(?v2, ?v0, ?v1))
+tff(axiom419,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_bool_fun$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_d_document_ptr_fset_fun$',A__questionmark_v2: 'D_document_ptr_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_c_a_b_j_option_RDocument_ext_RObject_ext_option_fun_fun$'] :
+      ( ( ! [A__questionmark_v3: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$',A__questionmark_v4: 'D_document_ptr$'] :
+            ( ( 'fun_app$ci'(A__questionmark_v0,A__questionmark_v3)
+              & 'fmember$c'(A__questionmark_v4,'fun_app$ao'(A__questionmark_v1,A__questionmark_v3)) )
+           => ( 'fun_app$ap'('fun_app$aq'(A__questionmark_v2,A__questionmark_v4),A__questionmark_v3) != 'none$c' ) )
+        & ! [A__questionmark_v3: 'D_document_ptr$',A__questionmark_v4: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$'] :
+            ( ( 'fun_app$ap'('fun_app$aq'(A__questionmark_v2,A__questionmark_v3),A__questionmark_v4) != 'none$c' )
+           => 'fmember$c'(A__questionmark_v3,'fun_app$ao'(A__questionmark_v1,A__questionmark_v4)) ) )
+     => 'l_get_M$'(A__questionmark_v2,A__questionmark_v0,A__questionmark_v1) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_bool_fun$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_b_character_data_ptr_fset_fun$ ?v2:B_character_data_ptr_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun_fun$ ((∀ ?v3:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ ?v4:B_character_data_ptr$ ((fun_app$ci(?v0, ?v3) ∧ fmember$b(?v4, fun_app$al(?v1, ?v3))) ⇒ ¬(fun_app$am(fun_app$an(?v2, ?v4), ?v3) = none$)) ∧ ∀ ?v3:B_character_data_ptr$ ?v4:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ (¬(fun_app$am(fun_app$an(?v2, ?v3), ?v4) = none$) ⇒ fmember$b(?v3, fun_app$al(?v1, ?v4)))) ⇒ l_get_M$c(?v2, ?v0, ?v1))
+tff(axiom420,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_bool_fun$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_b_character_data_ptr_fset_fun$',A__questionmark_v2: 'B_character_data_ptr_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun_fun$'] :
+      ( ( ! [A__questionmark_v3: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$',A__questionmark_v4: 'B_character_data_ptr$'] :
+            ( ( 'fun_app$ci'(A__questionmark_v0,A__questionmark_v3)
+              & 'fmember$b'(A__questionmark_v4,'fun_app$al'(A__questionmark_v1,A__questionmark_v3)) )
+           => ( 'fun_app$am'('fun_app$an'(A__questionmark_v2,A__questionmark_v4),A__questionmark_v3) != 'none$' ) )
+        & ! [A__questionmark_v3: 'B_character_data_ptr$',A__questionmark_v4: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$'] :
+            ( ( 'fun_app$am'('fun_app$an'(A__questionmark_v2,A__questionmark_v3),A__questionmark_v4) != 'none$' )
+           => 'fmember$b'(A__questionmark_v3,'fun_app$al'(A__questionmark_v1,A__questionmark_v4)) ) )
+     => 'l_get_M$c'(A__questionmark_v2,A__questionmark_v0,A__questionmark_v1) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_bool_fun$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_a_element_ptr_fset_fun$ ?v2:A_element_ptr_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun_fun$ ((∀ ?v3:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ ?v4:A_element_ptr$ ((fun_app$ci(?v0, ?v3) ∧ fmember$d(?v4, fun_app$av(?v1, ?v3))) ⇒ ¬(fun_app$ar(fun_app$as(?v2, ?v4), ?v3) = none$a)) ∧ ∀ ?v3:A_element_ptr$ ?v4:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ (¬(fun_app$ar(fun_app$as(?v2, ?v3), ?v4) = none$a) ⇒ fmember$d(?v3, fun_app$av(?v1, ?v4)))) ⇒ l_get_M$a(?v2, ?v0, ?v1))
+tff(axiom421,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_bool_fun$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_a_element_ptr_fset_fun$',A__questionmark_v2: 'A_element_ptr_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option_fun_fun$'] :
+      ( ( ! [A__questionmark_v3: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$',A__questionmark_v4: 'A_element_ptr$'] :
+            ( ( 'fun_app$ci'(A__questionmark_v0,A__questionmark_v3)
+              & 'fmember$d'(A__questionmark_v4,'fun_app$av'(A__questionmark_v1,A__questionmark_v3)) )
+           => ( 'fun_app$ar'('fun_app$as'(A__questionmark_v2,A__questionmark_v4),A__questionmark_v3) != 'none$a' ) )
+        & ! [A__questionmark_v3: 'A_element_ptr$',A__questionmark_v4: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$'] :
+            ( ( 'fun_app$ar'('fun_app$as'(A__questionmark_v2,A__questionmark_v3),A__questionmark_v4) != 'none$a' )
+           => 'fmember$d'(A__questionmark_v3,'fun_app$av'(A__questionmark_v1,A__questionmark_v4)) ) )
+     => 'l_get_M$a'(A__questionmark_v2,A__questionmark_v0,A__questionmark_v1) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_bool_fun$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset_fun$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun_fun$ ((∀ ?v3:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ ?v4:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ ((fun_app$ci(?v0, ?v3) ∧ fun_app$aw(fmember$(?v4), fun_app$au(?v1, ?v3))) ⇒ ¬(fun_app$aj(fun_app$ak(?v2, ?v4), ?v3) = none$b)) ∧ ∀ ?v3:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ ?v4:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ (¬(fun_app$aj(fun_app$ak(?v2, ?v3), ?v4) = none$b) ⇒ fun_app$aw(fmember$(?v3), fun_app$au(?v1, ?v4)))) ⇒ l_get_M$b(?v2, ?v0, ?v1))
+tff(axiom422,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_bool_fun$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset_fun$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option_fun_fun$'] :
+      ( ( ! [A__questionmark_v3: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$',A__questionmark_v4: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$'] :
+            ( ( 'fun_app$ci'(A__questionmark_v0,A__questionmark_v3)
+              & 'fun_app$aw'('fmember$'(A__questionmark_v4),'fun_app$au'(A__questionmark_v1,A__questionmark_v3)) )
+           => ( 'fun_app$aj'('fun_app$ak'(A__questionmark_v2,A__questionmark_v4),A__questionmark_v3) != 'none$b' ) )
+        & ! [A__questionmark_v3: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$',A__questionmark_v4: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$'] :
+            ( ( 'fun_app$aj'('fun_app$ak'(A__questionmark_v2,A__questionmark_v3),A__questionmark_v4) != 'none$b' )
+           => 'fun_app$aw'('fmember$'(A__questionmark_v3),'fun_app$au'(A__questionmark_v1,A__questionmark_v4)) ) )
+     => 'l_get_M$b'(A__questionmark_v2,A__questionmark_v0,A__questionmark_v1) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ ?v1:B_character_data_ptr$ (fun_app$ci(type_wf$a, ?v0) ⇒ (fmember$b(?v1, fun_app$al(character_data_ptr_kinds$, ?v0)) = ¬(fun_app$am(fun_app$an(get_C_h_a_r_a_c_t_e_r_D_a_t_a$, ?v1), ?v0) = none$)))
+tff(axiom423,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$',A__questionmark_v1: 'B_character_data_ptr$'] :
+      ( 'fun_app$ci'('type_wf$a',A__questionmark_v0)
+     => ( 'fmember$b'(A__questionmark_v1,'fun_app$al'('character_data_ptr_kinds$',A__questionmark_v0))
+      <=> ( 'fun_app$am'('fun_app$an'('get_C_h_a_r_a_c_t_e_r_D_a_t_a$',A__questionmark_v1),A__questionmark_v0) != 'none$' ) ) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ ?v1:A_element_ptr$ (fun_app$ci(type_wf$b, ?v0) ⇒ (fmember$d(?v1, fun_app$av(element_ptr_kinds$, ?v0)) = ¬(fun_app$ar(fun_app$as(get_E_l_e_m_e_n_t$, ?v1), ?v0) = none$a)))
+tff(axiom424,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$',A__questionmark_v1: 'A_element_ptr$'] :
+      ( 'fun_app$ci'('type_wf$b',A__questionmark_v0)
+     => ( 'fmember$d'(A__questionmark_v1,'fun_app$av'('element_ptr_kinds$',A__questionmark_v0))
+      <=> ( 'fun_app$ar'('fun_app$as'('get_E_l_e_m_e_n_t$',A__questionmark_v1),A__questionmark_v0) != 'none$a' ) ) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ ?v1:A_element_ptr$ (fun_app$ci(type_wf$a, ?v0) ⇒ (fmember$d(?v1, fun_app$av(element_ptr_kinds$, ?v0)) = ¬(fun_app$ar(fun_app$as(get_E_l_e_m_e_n_t$, ?v1), ?v0) = none$a)))
+tff(axiom425,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$',A__questionmark_v1: 'A_element_ptr$'] :
+      ( 'fun_app$ci'('type_wf$a',A__questionmark_v0)
+     => ( 'fmember$d'(A__questionmark_v1,'fun_app$av'('element_ptr_kinds$',A__questionmark_v0))
+      <=> ( 'fun_app$ar'('fun_app$as'('get_E_l_e_m_e_n_t$',A__questionmark_v1),A__questionmark_v0) != 'none$a' ) ) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ (fun_app$ci(a_type_wf$, ?v0) = (fun_app$ci(type_wf$a, ?v0) ∧ ∀ ?v1:D_document_ptr$ (member$a(?v1, fset$a(fun_app$ao(document_ptr_kinds$, ?v0))) ⇒ ¬(fun_app$ap(fun_app$aq(get_D_o_c_u_m_e_n_t$, ?v1), ?v0) = none$c))))
+tff(axiom426,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$'] :
+      ( 'fun_app$ci'('a_type_wf$',A__questionmark_v0)
+    <=> ( 'fun_app$ci'('type_wf$a',A__questionmark_v0)
+        & ! [A__questionmark_v1: 'D_document_ptr$'] :
+            ( 'member$a'(A__questionmark_v1,'fset$a'('fun_app$ao'('document_ptr_kinds$',A__questionmark_v0)))
+           => ( 'fun_app$ap'('fun_app$aq'('get_D_o_c_u_m_e_n_t$',A__questionmark_v1),A__questionmark_v0) != 'none$c' ) ) ) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ (fun_app$ci(a_type_wf$a, ?v0) = (fun_app$ci(type_wf$b, ?v0) ∧ ∀ ?v1:B_character_data_ptr$ (member$(?v1, fset$(fun_app$al(character_data_ptr_kinds$, ?v0))) ⇒ ¬(fun_app$am(fun_app$an(get_C_h_a_r_a_c_t_e_r_D_a_t_a$, ?v1), ?v0) = none$))))
+tff(axiom427,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$'] :
+      ( 'fun_app$ci'('a_type_wf$a',A__questionmark_v0)
+    <=> ( 'fun_app$ci'('type_wf$b',A__questionmark_v0)
+        & ! [A__questionmark_v1: 'B_character_data_ptr$'] :
+            ( 'member$'(A__questionmark_v1,'fset$'('fun_app$al'('character_data_ptr_kinds$',A__questionmark_v0)))
+           => ( 'fun_app$am'('fun_app$an'('get_C_h_a_r_a_c_t_e_r_D_a_t_a$',A__questionmark_v1),A__questionmark_v0) != 'none$' ) ) ) ) ).
+
+%% ∀ ?v0:D_document_ptr$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$ ?v2:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$ ?v3:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ (fun_app$ap(fun_app$aq(get_D_o_c_u_m_e_n_t$, ?v0), fun_app$at(put_O_b_j_e_c_t$(?v1, ?v2), ?v3)) = (if (?v1 = cast_d_o_c_u_m_e_n_t_p_t_r_2_o_b_j_e_c_t_p_t_r$(?v0)) fun_app$p(cast_O_b_j_e_c_t_2_D_o_c_u_m_e_n_t$, ?v2) else fun_app$ap(fun_app$aq(get_D_o_c_u_m_e_n_t$, ?v0), ?v3)))
+tff(axiom428,axiom,
+    ! [A__questionmark_v0: 'D_document_ptr$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$',A__questionmark_v2: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$',A__questionmark_v3: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$'] :
+      ( ( ( A__questionmark_v1 = 'cast_d_o_c_u_m_e_n_t_p_t_r_2_o_b_j_e_c_t_p_t_r$'(A__questionmark_v0) )
+       => ( 'fun_app$ap'('fun_app$aq'('get_D_o_c_u_m_e_n_t$',A__questionmark_v0),'fun_app$at'('put_O_b_j_e_c_t$'(A__questionmark_v1,A__questionmark_v2),A__questionmark_v3)) = 'fun_app$p'('cast_O_b_j_e_c_t_2_D_o_c_u_m_e_n_t$',A__questionmark_v2) ) )
+      & ( ( A__questionmark_v1 != 'cast_d_o_c_u_m_e_n_t_p_t_r_2_o_b_j_e_c_t_p_t_r$'(A__questionmark_v0) )
+       => ( 'fun_app$ap'('fun_app$aq'('get_D_o_c_u_m_e_n_t$',A__questionmark_v0),'fun_app$at'('put_O_b_j_e_c_t$'(A__questionmark_v1,A__questionmark_v2),A__questionmark_v3)) = 'fun_app$ap'('fun_app$aq'('get_D_o_c_u_m_e_n_t$',A__questionmark_v0),A__questionmark_v3) ) ) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ ?v1:D_document_ptr$ ¬(cast_n_o_d_e_p_t_r_2_o_b_j_e_c_t_p_t_r$(?v0) = cast_d_o_c_u_m_e_n_t_p_t_r_2_o_b_j_e_c_t_p_t_r$(?v1))
+tff(axiom429,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$',A__questionmark_v1: 'D_document_ptr$'] : ( 'cast_n_o_d_e_p_t_r_2_o_b_j_e_c_t_p_t_r$'(A__questionmark_v0) != 'cast_d_o_c_u_m_e_n_t_p_t_r_2_o_b_j_e_c_t_p_t_r$'(A__questionmark_v1) ) ).
+
+%% ∀ ?v0:D_document_ptr$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ ¬(cast_d_o_c_u_m_e_n_t_p_t_r_2_o_b_j_e_c_t_p_t_r$(?v0) = cast_n_o_d_e_p_t_r_2_o_b_j_e_c_t_p_t_r$(?v1))
+tff(axiom430,axiom,
+    ! [A__questionmark_v0: 'D_document_ptr$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$'] : ( 'cast_d_o_c_u_m_e_n_t_p_t_r_2_o_b_j_e_c_t_p_t_r$'(A__questionmark_v0) != 'cast_n_o_d_e_p_t_r_2_o_b_j_e_c_t_p_t_r$'(A__questionmark_v1) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ (fun_app$ci(type_wf$b, ?v0) = (fun_app$ci(type_wf$c, ?v0) ∧ ∀ ?v1:A_element_ptr$ (member$b(?v1, fset$c(fun_app$av(element_ptr_kinds$, ?v0))) ⇒ ¬(fun_app$ar(fun_app$as(get_E_l_e_m_e_n_t$, ?v1), ?v0) = none$a))))
+tff(axiom431,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$'] :
+      ( 'fun_app$ci'('type_wf$b',A__questionmark_v0)
+    <=> ( 'fun_app$ci'('type_wf$c',A__questionmark_v0)
+        & ! [A__questionmark_v1: 'A_element_ptr$'] :
+            ( 'member$b'(A__questionmark_v1,'fset$c'('fun_app$av'('element_ptr_kinds$',A__questionmark_v0)))
+           => ( 'fun_app$ar'('fun_app$as'('get_E_l_e_m_e_n_t$',A__questionmark_v1),A__questionmark_v0) != 'none$a' ) ) ) ) ).
+
+%% l_put_M$a(type_wf$b, element_ptr_kinds$, get_E_l_e_m_e_n_t$)
+tff(axiom432,axiom,
+    'l_put_M$a'('type_wf$b','element_ptr_kinds$','get_E_l_e_m_e_n_t$') ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ (fun_app$ci(type_wf$c, ?v0) ⇒ fun_app$ci(type_wf$c, ?v0))
+tff(axiom433,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$'] :
+      ( 'fun_app$ci'('type_wf$c',A__questionmark_v0)
+     => 'fun_app$ci'('type_wf$c',A__questionmark_v0) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ (fun_app$ci(type_wf$a, ?v0) ⇒ fun_app$ci(type_wf$c, ?v0))
+tff(axiom434,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$'] :
+      ( 'fun_app$ci'('type_wf$a',A__questionmark_v0)
+     => 'fun_app$ci'('type_wf$c',A__questionmark_v0) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ (fun_app$ci(type_wf$, ?v0) ⇒ fun_app$ci(type_wf$c, ?v0))
+tff(axiom435,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$'] :
+      ( 'fun_app$ci'('type_wf$',A__questionmark_v0)
+     => 'fun_app$ci'('type_wf$c',A__questionmark_v0) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ (fun_app$ci(type_wf$b, ?v0) ⇒ fun_app$ci(type_wf$c, ?v0))
+tff(axiom436,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$'] :
+      ( 'fun_app$ci'('type_wf$b',A__questionmark_v0)
+     => 'fun_app$ci'('type_wf$c',A__questionmark_v0) ) ).
+
+%% l_get_M$b(get_N_o_d_e$, type_wf$c, node_ptr_kinds$)
+tff(axiom437,axiom,
+    'l_get_M$b'('get_N_o_d_e$','type_wf$c','node_ptr_kinds$') ).
+
+%% l_put_M$b(type_wf$c, node_ptr_kinds$, get_N_o_d_e$)
+tff(axiom438,axiom,
+    'l_put_M$b'('type_wf$c','node_ptr_kinds$','get_N_o_d_e$') ).
+
+%% l_get_N_o_d_e_lemmas$(type_wf$c)
+tff(axiom439,axiom,
+    'l_get_N_o_d_e_lemmas$'('type_wf$c') ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$ ?v1:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ ((fun_app$ci(type_wf$c, fun_app$at(put_O_b_j_e_c_t$(?v0, ?v1), ?v2)) ∧ ¬fmember$a(?v0, fun_app$bl(object_ptr_kinds$, ?v2))) ⇒ fun_app$ci(type_wf$c, ?v2))
+tff(axiom440,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$',A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$'] :
+      ( ( 'fun_app$ci'('type_wf$c','fun_app$at'('put_O_b_j_e_c_t$'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2))
+        & ~ 'fmember$a'(A__questionmark_v0,'fun_app$bl'('object_ptr_kinds$',A__questionmark_v2)) )
+     => 'fun_app$ci'('type_wf$c',A__questionmark_v2) ) ).
+
+%% (type_wf$a = a_type_wf$a)
+tff(axiom441,axiom,
+    'type_wf$a' = 'a_type_wf$a' ).
+
+%% (type_wf$ = a_type_wf$)
+tff(axiom442,axiom,
+    'type_wf$' = 'a_type_wf$' ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ (fun_app$ci(type_wf$c, ?v0) ⇒ (fun_app$aw(fmember$(?v1), fun_app$au(node_ptr_kinds$, ?v0)) = ¬(fun_app$aj(fun_app$ak(get_N_o_d_e$, ?v1), ?v0) = none$b)))
+tff(axiom443,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$'] :
+      ( 'fun_app$ci'('type_wf$c',A__questionmark_v0)
+     => ( 'fun_app$aw'('fmember$'(A__questionmark_v1),'fun_app$au'('node_ptr_kinds$',A__questionmark_v0))
+      <=> ( 'fun_app$aj'('fun_app$ak'('get_N_o_d_e$',A__questionmark_v1),A__questionmark_v0) != 'none$b' ) ) ) ).
+
+%% l_get_M$c(get_C_h_a_r_a_c_t_e_r_D_a_t_a$, type_wf$a, character_data_ptr_kinds$)
+tff(axiom444,axiom,
+    'l_get_M$c'('get_C_h_a_r_a_c_t_e_r_D_a_t_a$','type_wf$a','character_data_ptr_kinds$') ).
+
+%% l_get_M$c(get_C_h_a_r_a_c_t_e_r_D_a_t_a$, type_wf$a, character_data_ptr_kinds$)
+tff(axiom445,axiom,
+    'l_get_M$c'('get_C_h_a_r_a_c_t_e_r_D_a_t_a$','type_wf$a','character_data_ptr_kinds$') ).
+
+%% l_get_M$a(get_E_l_e_m_e_n_t$, type_wf$b, element_ptr_kinds$)
+tff(axiom446,axiom,
+    'l_get_M$a'('get_E_l_e_m_e_n_t$','type_wf$b','element_ptr_kinds$') ).
+
+%% l_put_M$c(type_wf$a, character_data_ptr_kinds$, get_C_h_a_r_a_c_t_e_r_D_a_t_a$)
+tff(axiom447,axiom,
+    'l_put_M$c'('type_wf$a','character_data_ptr_kinds$','get_C_h_a_r_a_c_t_e_r_D_a_t_a$') ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ (fun_app$ci(a_type_wf$b, ?v0) = (fun_app$ci(type_wf$c, ?v0) ∧ ∀ ?v1:A_element_ptr$ (member$b(?v1, fset$c(fun_app$av(element_ptr_kinds$, ?v0))) ⇒ ¬(fun_app$ar(fun_app$as(get_E_l_e_m_e_n_t$, ?v1), ?v0) = none$a))))
+tff(axiom448,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$'] :
+      ( 'fun_app$ci'('a_type_wf$b',A__questionmark_v0)
+    <=> ( 'fun_app$ci'('type_wf$c',A__questionmark_v0)
+        & ! [A__questionmark_v1: 'A_element_ptr$'] :
+            ( 'member$b'(A__questionmark_v1,'fset$c'('fun_app$av'('element_ptr_kinds$',A__questionmark_v0)))
+           => ( 'fun_app$ar'('fun_app$as'('get_E_l_e_m_e_n_t$',A__questionmark_v1),A__questionmark_v0) != 'none$a' ) ) ) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$ (fun_app$cj(is_document_kind$, ?v0) = ¬(fun_app$p(cast_O_b_j_e_c_t_2_D_o_c_u_m_e_n_t$, ?v0) = none$c))
+tff(axiom449,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$'] :
+      ( 'fun_app$cj'('is_document_kind$',A__questionmark_v0)
+    <=> ( 'fun_app$p'('cast_O_b_j_e_c_t_2_D_o_c_u_m_e_n_t$',A__questionmark_v0) != 'none$c' ) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$ ?v2:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$ ((fun_app$ci(type_wf$a, ?v0) ∧ (fun_app$ci(type_wf$b, fun_app$at(put_O_b_j_e_c_t$(?v1, ?v2), ?v0)) ∧ (fun_app$bq(case_option$j(false, is_character_data_ptr_kind_n_o_d_e_p_t_r$), cast_o_b_j_e_c_t_p_t_r_2_n_o_d_e_p_t_r$(?v1)) ⇒ ¬(case_option$l(none$, cast_N_o_d_e_2_C_h_a_r_a_c_t_e_r_D_a_t_a$, fun_app$s(cast_O_b_j_e_c_t_2_N_o_d_e$, ?v2)) = none$)))) ⇒ fun_app$ci(type_wf$a, fun_app$at(put_O_b_j_e_c_t$(?v1, ?v2), ?v0)))
+tff(axiom450,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$',A__questionmark_v2: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$'] :
+      ( ( 'fun_app$ci'('type_wf$a',A__questionmark_v0)
+        & 'fun_app$ci'('type_wf$b','fun_app$at'('put_O_b_j_e_c_t$'(A__questionmark_v1,A__questionmark_v2),A__questionmark_v0))
+        & ( 'fun_app$bq'('case_option$j'(tlfalse,'is_character_data_ptr_kind_n_o_d_e_p_t_r$'),'cast_o_b_j_e_c_t_p_t_r_2_n_o_d_e_p_t_r$'(A__questionmark_v1))
+         => ( 'case_option$l'('none$','cast_N_o_d_e_2_C_h_a_r_a_c_t_e_r_D_a_t_a$','fun_app$s'('cast_O_b_j_e_c_t_2_N_o_d_e$',A__questionmark_v2)) != 'none$' ) ) )
+     => 'fun_app$ci'('type_wf$a','fun_app$at'('put_O_b_j_e_c_t$'(A__questionmark_v1,A__questionmark_v2),A__questionmark_v0)) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ (fun_app$ci(type_wf$c, ?v0) = (fun_app$ci(type_wf$d, ?v0) ∧ ∀ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ (member$c(?v1, fset$b(fun_app$au(node_ptr_kinds$, ?v0))) ⇒ ¬(fun_app$aj(fun_app$ak(get_N_o_d_e$, ?v1), ?v0) = none$b))))
+tff(axiom451,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$'] :
+      ( 'fun_app$ci'('type_wf$c',A__questionmark_v0)
+    <=> ( 'fun_app$ci'('type_wf$d',A__questionmark_v0)
+        & ! [A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$'] :
+            ( 'member$c'(A__questionmark_v1,'fset$b'('fun_app$au'('node_ptr_kinds$',A__questionmark_v0)))
+           => ( 'fun_app$aj'('fun_app$ak'('get_N_o_d_e$',A__questionmark_v1),A__questionmark_v0) != 'none$b' ) ) ) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$ ?v1:C_a_b_j_option_RDocument_ext_RObject_ext$ ((fun_app$p(cast_O_b_j_e_c_t_2_D_o_c_u_m_e_n_t$, ?v0) = fun_app$j(some$b, ?v1)) = (cast_D_o_c_u_m_e_n_t_2_O_b_j_e_c_t$(?v1) = ?v0))
+tff(axiom452,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$',A__questionmark_v1: 'C_a_b_j_option_RDocument_ext_RObject_ext$'] :
+      ( ( 'fun_app$p'('cast_O_b_j_e_c_t_2_D_o_c_u_m_e_n_t$',A__questionmark_v0) = 'fun_app$j'('some$b',A__questionmark_v1) )
+    <=> ( 'cast_D_o_c_u_m_e_n_t_2_O_b_j_e_c_t$'(A__questionmark_v1) = A__questionmark_v0 ) ) ).
+
+%% ∀ ?v0:C_a_b_j_option_RDocument_ext_RObject_ext$ (fun_app$p(cast_O_b_j_e_c_t_2_D_o_c_u_m_e_n_t$, cast_D_o_c_u_m_e_n_t_2_O_b_j_e_c_t$(?v0)) = fun_app$j(some$b, ?v0))
+tff(axiom453,axiom,
+    ! [A__questionmark_v0: 'C_a_b_j_option_RDocument_ext_RObject_ext$'] : ( 'fun_app$p'('cast_O_b_j_e_c_t_2_D_o_c_u_m_e_n_t$','cast_D_o_c_u_m_e_n_t_2_O_b_j_e_c_t$'(A__questionmark_v0)) = 'fun_app$j'('some$b',A__questionmark_v0) ) ).
+
+%% ∀ ?v0:C_a_b_j_option_RDocument_ext_RObject_ext$ ?v1:C_a_b_j_option_RDocument_ext_RObject_ext$ ((cast_D_o_c_u_m_e_n_t_2_O_b_j_e_c_t$(?v0) = cast_D_o_c_u_m_e_n_t_2_O_b_j_e_c_t$(?v1)) = (?v0 = ?v1))
+tff(axiom454,axiom,
+    ! [A__questionmark_v0: 'C_a_b_j_option_RDocument_ext_RObject_ext$',A__questionmark_v1: 'C_a_b_j_option_RDocument_ext_RObject_ext$'] :
+      ( ( 'cast_D_o_c_u_m_e_n_t_2_O_b_j_e_c_t$'(A__questionmark_v0) = 'cast_D_o_c_u_m_e_n_t_2_O_b_j_e_c_t$'(A__questionmark_v1) )
+    <=> ( A__questionmark_v0 = A__questionmark_v1 ) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ ((cast_o_b_j_e_c_t_p_t_r_2_n_o_d_e_p_t_r$(?v0) = fun_app$ay(some$e, ?v1)) = (cast_n_o_d_e_p_t_r_2_o_b_j_e_c_t_p_t_r$(?v1) = ?v0))
+tff(axiom455,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$'] :
+      ( ( 'cast_o_b_j_e_c_t_p_t_r_2_n_o_d_e_p_t_r$'(A__questionmark_v0) = 'fun_app$ay'('some$e',A__questionmark_v1) )
+    <=> ( 'cast_n_o_d_e_p_t_r_2_o_b_j_e_c_t_p_t_r$'(A__questionmark_v1) = A__questionmark_v0 ) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ (cast_o_b_j_e_c_t_p_t_r_2_n_o_d_e_p_t_r$(cast_n_o_d_e_p_t_r_2_o_b_j_e_c_t_p_t_r$(?v0)) = fun_app$ay(some$e, ?v0))
+tff(axiom456,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$'] : ( 'cast_o_b_j_e_c_t_p_t_r_2_n_o_d_e_p_t_r$'('cast_n_o_d_e_p_t_r_2_o_b_j_e_c_t_p_t_r$'(A__questionmark_v0)) = 'fun_app$ay'('some$e',A__questionmark_v0) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$ ((fun_app$p(cast_O_b_j_e_c_t_2_D_o_c_u_m_e_n_t$, ?v0) = none$c) = ¬∃ ?v1:C_a_b_j_option_RDocument_ext_RObject_ext$ (cast_D_o_c_u_m_e_n_t_2_O_b_j_e_c_t$(?v1) = ?v0))
+tff(axiom457,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$'] :
+      ( ( 'fun_app$p'('cast_O_b_j_e_c_t_2_D_o_c_u_m_e_n_t$',A__questionmark_v0) = 'none$c' )
+    <=> ~ ? [A__questionmark_v1: 'C_a_b_j_option_RDocument_ext_RObject_ext$'] : ( 'cast_D_o_c_u_m_e_n_t_2_O_b_j_e_c_t$'(A__questionmark_v1) = A__questionmark_v0 ) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ (fun_app$ci(type_wf$d, ?v0) = true)
+tff(axiom458,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$'] :
+      ( 'fun_app$ci'('type_wf$d',A__questionmark_v0)
+    <=> $true ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ (fun_app$ci(type_wf$d, ?v0) ⇒ fun_app$ci(type_wf$d, ?v0))
+tff(axiom459,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$'] :
+      ( 'fun_app$ci'('type_wf$d',A__questionmark_v0)
+     => 'fun_app$ci'('type_wf$d',A__questionmark_v0) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ (fun_app$ci(type_wf$a, ?v0) ⇒ fun_app$ci(type_wf$d, ?v0))
+tff(axiom460,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$'] :
+      ( 'fun_app$ci'('type_wf$a',A__questionmark_v0)
+     => 'fun_app$ci'('type_wf$d',A__questionmark_v0) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ (fun_app$ci(type_wf$, ?v0) ⇒ fun_app$ci(type_wf$d, ?v0))
+tff(axiom461,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$'] :
+      ( 'fun_app$ci'('type_wf$',A__questionmark_v0)
+     => 'fun_app$ci'('type_wf$d',A__questionmark_v0) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ (fun_app$ci(type_wf$b, ?v0) ⇒ fun_app$ci(type_wf$d, ?v0))
+tff(axiom462,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$'] :
+      ( 'fun_app$ci'('type_wf$b',A__questionmark_v0)
+     => 'fun_app$ci'('type_wf$d',A__questionmark_v0) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ (fun_app$ci(type_wf$c, ?v0) ⇒ fun_app$ci(type_wf$d, ?v0))
+tff(axiom463,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$'] :
+      ( 'fun_app$ci'('type_wf$c',A__questionmark_v0)
+     => 'fun_app$ci'('type_wf$d',A__questionmark_v0) ) ).
+
+%% ∀ ?v0:B_character_data_ptr$ fun_app$(is_character_data_ptr_kind_n_o_d_e_p_t_r$, cast_c_h_a_r_a_c_t_e_r_d_a_t_a_p_t_r_2_n_o_d_e_p_t_r$(?v0))
+tff(axiom464,axiom,
+    ! [A__questionmark_v0: 'B_character_data_ptr$'] : 'fun_app$'('is_character_data_ptr_kind_n_o_d_e_p_t_r$','cast_c_h_a_r_a_c_t_e_r_d_a_t_a_p_t_r_2_n_o_d_e_p_t_r$'(A__questionmark_v0)) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ ((fun_app$(is_character_data_ptr_kind_n_o_d_e_p_t_r$, ?v0) ∧ ∀ ?v1:B_character_data_ptr$ ((cast_c_h_a_r_a_c_t_e_r_d_a_t_a_p_t_r_2_n_o_d_e_p_t_r$(?v1) = ?v0) ⇒ false)) ⇒ false)
+tff(axiom465,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$'] :
+      ( ( 'fun_app$'('is_character_data_ptr_kind_n_o_d_e_p_t_r$',A__questionmark_v0)
+        & ! [A__questionmark_v1: 'B_character_data_ptr$'] :
+            ( ( 'cast_c_h_a_r_a_c_t_e_r_d_a_t_a_p_t_r_2_n_o_d_e_p_t_r$'(A__questionmark_v1) = A__questionmark_v0 )
+           => $false ) )
+     => $false ) ).
+
+%% ∀ ?v0:A_element_ptr$ ¬fun_app$(is_character_data_ptr_kind_n_o_d_e_p_t_r$, cast_e_l_e_m_e_n_t_p_t_r_2_n_o_d_e_p_t_r$(?v0))
+tff(axiom466,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr$'] : ~ 'fun_app$'('is_character_data_ptr_kind_n_o_d_e_p_t_r$','cast_e_l_e_m_e_n_t_p_t_r_2_n_o_d_e_p_t_r$'(A__questionmark_v0)) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$ ?v1:C_a_b_j_option_RDocument_ext_RObject_ext$ ¬(cast_N_o_d_e_2_O_b_j_e_c_t$(?v0) = cast_D_o_c_u_m_e_n_t_2_O_b_j_e_c_t$(?v1))
+tff(axiom467,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$',A__questionmark_v1: 'C_a_b_j_option_RDocument_ext_RObject_ext$'] : ( 'cast_N_o_d_e_2_O_b_j_e_c_t$'(A__questionmark_v0) != 'cast_D_o_c_u_m_e_n_t_2_O_b_j_e_c_t$'(A__questionmark_v1) ) ).
+
+%% ∀ ?v0:C_a_b_j_option_RDocument_ext_RObject_ext$ ?v1:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$ ¬(cast_D_o_c_u_m_e_n_t_2_O_b_j_e_c_t$(?v0) = cast_N_o_d_e_2_O_b_j_e_c_t$(?v1))
+tff(axiom468,axiom,
+    ! [A__questionmark_v0: 'C_a_b_j_option_RDocument_ext_RObject_ext$',A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$'] : ( 'cast_D_o_c_u_m_e_n_t_2_O_b_j_e_c_t$'(A__questionmark_v0) != 'cast_N_o_d_e_2_O_b_j_e_c_t$'(A__questionmark_v1) ) ).
+
+%% (type_wf$b = a_type_wf$b)
+tff(axiom469,axiom,
+    'type_wf$b' = 'a_type_wf$b' ).
+
+%% ∀ ?v0:D_document_ptr$ ?v1:C_a_b_j_option_RDocument_ext_RObject_ext$ (put_D_o_c_u_m_e_n_t$(?v0, ?v1) = put_O_b_j_e_c_t$(cast_d_o_c_u_m_e_n_t_p_t_r_2_o_b_j_e_c_t_p_t_r$(?v0), cast_D_o_c_u_m_e_n_t_2_O_b_j_e_c_t$(?v1)))
+tff(axiom470,axiom,
+    ! [A__questionmark_v0: 'D_document_ptr$',A__questionmark_v1: 'C_a_b_j_option_RDocument_ext_RObject_ext$'] : ( 'put_D_o_c_u_m_e_n_t$'(A__questionmark_v0,A__questionmark_v1) = 'put_O_b_j_e_c_t$'('cast_d_o_c_u_m_e_n_t_p_t_r_2_o_b_j_e_c_t_p_t_r$'(A__questionmark_v0),'cast_D_o_c_u_m_e_n_t_2_O_b_j_e_c_t$'(A__questionmark_v1)) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ (fun_app$ci(a_type_wf$c, ?v0) = (fun_app$ci(type_wf$d, ?v0) ∧ ∀ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ (member$c(?v1, fset$b(fun_app$au(node_ptr_kinds$, ?v0))) ⇒ ¬(fun_app$aj(fun_app$ak(get_N_o_d_e$, ?v1), ?v0) = none$b))))
+tff(axiom471,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$'] :
+      ( 'fun_app$ci'('a_type_wf$c',A__questionmark_v0)
+    <=> ( 'fun_app$ci'('type_wf$d',A__questionmark_v0)
+        & ! [A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$'] :
+            ( 'member$c'(A__questionmark_v1,'fset$b'('fun_app$au'('node_ptr_kinds$',A__questionmark_v0)))
+           => ( 'fun_app$aj'('fun_app$ak'('get_N_o_d_e$',A__questionmark_v1),A__questionmark_v0) != 'none$b' ) ) ) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$ ?v2:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$ ((fun_app$ci(type_wf$b, ?v0) ∧ (fun_app$ci(type_wf$c, fun_app$at(put_O_b_j_e_c_t$(?v1, ?v2), ?v0)) ∧ (fun_app$bq(case_option$j(false, is_element_ptr_kind_n_o_d_e_p_t_r$), cast_o_b_j_e_c_t_p_t_r_2_n_o_d_e_p_t_r$(?v1)) ⇒ ¬(case_option$e(none$a, cast_N_o_d_e_2_E_l_e_m_e_n_t$, fun_app$s(cast_O_b_j_e_c_t_2_N_o_d_e$, ?v2)) = none$a)))) ⇒ fun_app$ci(type_wf$b, fun_app$at(put_O_b_j_e_c_t$(?v1, ?v2), ?v0)))
+tff(axiom472,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$',A__questionmark_v2: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$'] :
+      ( ( 'fun_app$ci'('type_wf$b',A__questionmark_v0)
+        & 'fun_app$ci'('type_wf$c','fun_app$at'('put_O_b_j_e_c_t$'(A__questionmark_v1,A__questionmark_v2),A__questionmark_v0))
+        & ( 'fun_app$bq'('case_option$j'(tlfalse,'is_element_ptr_kind_n_o_d_e_p_t_r$'),'cast_o_b_j_e_c_t_p_t_r_2_n_o_d_e_p_t_r$'(A__questionmark_v1))
+         => ( 'case_option$e'('none$a','cast_N_o_d_e_2_E_l_e_m_e_n_t$','fun_app$s'('cast_O_b_j_e_c_t_2_N_o_d_e$',A__questionmark_v2)) != 'none$a' ) ) )
+     => 'fun_app$ci'('type_wf$b','fun_app$at'('put_O_b_j_e_c_t$'(A__questionmark_v1,A__questionmark_v2),A__questionmark_v0)) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$ ?v1:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ ((fun_app$ci(type_wf$d, fun_app$at(put_O_b_j_e_c_t$(?v0, ?v1), ?v2)) ∧ ¬fmember$a(?v0, fun_app$bl(object_ptr_kinds$, ?v2))) ⇒ fun_app$ci(type_wf$d, ?v2))
+tff(axiom473,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$',A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$'] :
+      ( ( 'fun_app$ci'('type_wf$d','fun_app$at'('put_O_b_j_e_c_t$'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2))
+        & ~ 'fmember$a'(A__questionmark_v0,'fun_app$bl'('object_ptr_kinds$',A__questionmark_v2)) )
+     => 'fun_app$ci'('type_wf$d',A__questionmark_v2) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$ ?v1:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ ((fun_app$ci(type_wf$d, fun_app$at(put_O_b_j_e_c_t$(?v0, ?v1), ?v2)) ∧ fmember$a(?v0, fun_app$bl(object_ptr_kinds$, ?v2))) ⇒ fun_app$ci(type_wf$d, ?v2))
+tff(axiom474,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$',A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$'] :
+      ( ( 'fun_app$ci'('type_wf$d','fun_app$at'('put_O_b_j_e_c_t$'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2))
+        & 'fmember$a'(A__questionmark_v0,'fun_app$bl'('object_ptr_kinds$',A__questionmark_v2)) )
+     => 'fun_app$ci'('type_wf$d',A__questionmark_v2) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$ ?v2:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$ ((fun_app$ci(type_wf$c, ?v0) ∧ (fun_app$ci(type_wf$d, fun_app$at(put_O_b_j_e_c_t$(?v1, ?v2), ?v0)) ∧ (is_node_ptr_kind$(?v1) ⇒ fun_app$cj(is_node_kind$, ?v2)))) ⇒ fun_app$ci(type_wf$c, fun_app$at(put_O_b_j_e_c_t$(?v1, ?v2), ?v0)))
+tff(axiom475,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$',A__questionmark_v2: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$'] :
+      ( ( 'fun_app$ci'('type_wf$c',A__questionmark_v0)
+        & 'fun_app$ci'('type_wf$d','fun_app$at'('put_O_b_j_e_c_t$'(A__questionmark_v1,A__questionmark_v2),A__questionmark_v0))
+        & ( 'is_node_ptr_kind$'(A__questionmark_v1)
+         => 'fun_app$cj'('is_node_kind$',A__questionmark_v2) ) )
+     => 'fun_app$ci'('type_wf$c','fun_app$at'('put_O_b_j_e_c_t$'(A__questionmark_v1,A__questionmark_v2),A__questionmark_v0)) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$ ?v2:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$ ((fun_app$ci(type_wf$, ?v0) ∧ (fun_app$ci(type_wf$a, fun_app$at(put_O_b_j_e_c_t$(?v1, ?v2), ?v0)) ∧ (is_document_ptr_kind$(?v1) ⇒ fun_app$cj(is_document_kind$, ?v2)))) ⇒ fun_app$ci(type_wf$, fun_app$at(put_O_b_j_e_c_t$(?v1, ?v2), ?v0)))
+tff(axiom476,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$',A__questionmark_v2: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$'] :
+      ( ( 'fun_app$ci'('type_wf$',A__questionmark_v0)
+        & 'fun_app$ci'('type_wf$a','fun_app$at'('put_O_b_j_e_c_t$'(A__questionmark_v1,A__questionmark_v2),A__questionmark_v0))
+        & ( 'is_document_ptr_kind$'(A__questionmark_v1)
+         => 'fun_app$cj'('is_document_kind$',A__questionmark_v2) ) )
+     => 'fun_app$ci'('type_wf$','fun_app$at'('put_O_b_j_e_c_t$'(A__questionmark_v1,A__questionmark_v2),A__questionmark_v0)) ) ).
+
+%% ∀ ?v0:B_character_data_ptr$ ¬fun_app$(is_element_ptr_kind_n_o_d_e_p_t_r$, cast_c_h_a_r_a_c_t_e_r_d_a_t_a_p_t_r_2_n_o_d_e_p_t_r$(?v0))
+tff(axiom477,axiom,
+    ! [A__questionmark_v0: 'B_character_data_ptr$'] : ~ 'fun_app$'('is_element_ptr_kind_n_o_d_e_p_t_r$','cast_c_h_a_r_a_c_t_e_r_d_a_t_a_p_t_r_2_n_o_d_e_p_t_r$'(A__questionmark_v0)) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ is_node_ptr_kind$(cast_n_o_d_e_p_t_r_2_o_b_j_e_c_t_p_t_r$(?v0))
+tff(axiom478,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$'] : 'is_node_ptr_kind$'('cast_n_o_d_e_p_t_r_2_o_b_j_e_c_t_p_t_r$'(A__questionmark_v0)) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$ (¬is_node_ptr_kind$(?v0) ⇒ (cast_o_b_j_e_c_t_p_t_r_2_n_o_d_e_p_t_r$(?v0) = none$e))
+tff(axiom479,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$'] :
+      ( ~ 'is_node_ptr_kind$'(A__questionmark_v0)
+     => ( 'cast_o_b_j_e_c_t_p_t_r_2_n_o_d_e_p_t_r$'(A__questionmark_v0) = 'none$e' ) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$ (is_node_ptr_kind$(?v0) = ¬(cast_o_b_j_e_c_t_p_t_r_2_n_o_d_e_p_t_r$(?v0) = none$e))
+tff(axiom480,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$'] :
+      ( 'is_node_ptr_kind$'(A__questionmark_v0)
+    <=> ( 'cast_o_b_j_e_c_t_p_t_r_2_n_o_d_e_p_t_r$'(A__questionmark_v0) != 'none$e' ) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$ ((is_node_ptr_kind$(?v0) ∧ ∀ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ ((cast_o_b_j_e_c_t_p_t_r_2_n_o_d_e_p_t_r$(?v0) = fun_app$ay(some$e, ?v1)) ⇒ false)) ⇒ false)
+tff(axiom481,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$'] :
+      ( ( 'is_node_ptr_kind$'(A__questionmark_v0)
+        & ! [A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$'] :
+            ( ( 'cast_o_b_j_e_c_t_p_t_r_2_n_o_d_e_p_t_r$'(A__questionmark_v0) = 'fun_app$ay'('some$e',A__questionmark_v1) )
+           => $false ) )
+     => $false ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$ (is_document_ptr_kind$(?v0) ⇒ ¬fun_app$bq(case_option$j(false, is_element_ptr_kind_n_o_d_e_p_t_r$), cast_o_b_j_e_c_t_p_t_r_2_n_o_d_e_p_t_r$(?v0)))
+tff(axiom482,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$'] :
+      ( 'is_document_ptr_kind$'(A__questionmark_v0)
+     => ~ 'fun_app$bq'('case_option$j'(tlfalse,'is_element_ptr_kind_n_o_d_e_p_t_r$'),'cast_o_b_j_e_c_t_p_t_r_2_n_o_d_e_p_t_r$'(A__questionmark_v0)) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ ¬is_document_ptr_kind$(cast_n_o_d_e_p_t_r_2_o_b_j_e_c_t_p_t_r$(?v0))
+tff(axiom483,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$'] : ~ 'is_document_ptr_kind$'('cast_n_o_d_e_p_t_r_2_o_b_j_e_c_t_p_t_r$'(A__questionmark_v0)) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ ((fun_app$(is_element_ptr_kind_n_o_d_e_p_t_r$, ?v0) ∧ ∀ ?v1:A_element_ptr$ ((?v0 = cast_e_l_e_m_e_n_t_p_t_r_2_n_o_d_e_p_t_r$(?v1)) ⇒ false)) ⇒ false)
+tff(axiom484,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$'] :
+      ( ( 'fun_app$'('is_element_ptr_kind_n_o_d_e_p_t_r$',A__questionmark_v0)
+        & ! [A__questionmark_v1: 'A_element_ptr$'] :
+            ( ( A__questionmark_v0 = 'cast_e_l_e_m_e_n_t_p_t_r_2_n_o_d_e_p_t_r$'(A__questionmark_v1) )
+           => $false ) )
+     => $false ) ).
+
+%% ∀ ?v0:A_element_ptr$ fun_app$(is_element_ptr_kind_n_o_d_e_p_t_r$, cast_e_l_e_m_e_n_t_p_t_r_2_n_o_d_e_p_t_r$(?v0))
+tff(axiom485,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr$'] : 'fun_app$'('is_element_ptr_kind_n_o_d_e_p_t_r$','cast_e_l_e_m_e_n_t_p_t_r_2_n_o_d_e_p_t_r$'(A__questionmark_v0)) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ (¬fun_app$(is_element_ptr_kind_n_o_d_e_p_t_r$, ?v0) ⇒ (fun_app$b(cast_n_o_d_e_p_t_r_2_e_l_e_m_e_n_t_p_t_r$, ?v0) = none$d))
+tff(axiom486,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$'] :
+      ( ~ 'fun_app$'('is_element_ptr_kind_n_o_d_e_p_t_r$',A__questionmark_v0)
+     => ( 'fun_app$b'('cast_n_o_d_e_p_t_r_2_e_l_e_m_e_n_t_p_t_r$',A__questionmark_v0) = 'none$d' ) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ (fun_app$(is_element_ptr_kind_n_o_d_e_p_t_r$, ?v0) = fun_app$a(case_option$(false, uuy$), fun_app$b(cast_n_o_d_e_p_t_r_2_e_l_e_m_e_n_t_p_t_r$, ?v0)))
+tff(axiom487,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$'] :
+      ( 'fun_app$'('is_element_ptr_kind_n_o_d_e_p_t_r$',A__questionmark_v0)
+    <=> 'fun_app$a'('case_option$'(tlfalse,'uuy$'),'fun_app$b'('cast_n_o_d_e_p_t_r_2_e_l_e_m_e_n_t_p_t_r$',A__questionmark_v0)) ) ).
+
+%% (type_wf$c = a_type_wf$c)
+tff(axiom488,axiom,
+    'type_wf$c' = 'a_type_wf$c' ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$ ?v2:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$ (fun_app$ci(type_wf$d, ?v0) ⇒ fun_app$ci(type_wf$d, fun_app$at(put_O_b_j_e_c_t$(?v1, ?v2), ?v0)))
+tff(axiom489,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$',A__questionmark_v2: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$'] :
+      ( 'fun_app$ci'('type_wf$d',A__questionmark_v0)
+     => 'fun_app$ci'('type_wf$d','fun_app$at'('put_O_b_j_e_c_t$'(A__questionmark_v1,A__questionmark_v2),A__questionmark_v0)) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$ ?v1:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ ((fun_app$ci(type_wf$b, fun_app$at(put_O_b_j_e_c_t$(?v0, ?v1), ?v2)) ∧ (fmember$a(?v0, fun_app$bl(object_ptr_kinds$, ?v2)) ∧ (fun_app$ci(type_wf$c, ?v2) ∧ (fun_app$bq(case_option$j(false, is_element_ptr_kind_n_o_d_e_p_t_r$), cast_o_b_j_e_c_t_p_t_r_2_n_o_d_e_p_t_r$(?v0)) ⇒ ¬(case_option$e(none$a, cast_N_o_d_e_2_E_l_e_m_e_n_t$, fun_app$s(cast_O_b_j_e_c_t_2_N_o_d_e$, the$(fun_app$ck(fun_app$cl(get_O_b_j_e_c_t$, ?v0), ?v2)))) = none$a))))) ⇒ fun_app$ci(type_wf$b, ?v2))
+tff(axiom490,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$',A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$'] :
+      ( ( 'fun_app$ci'('type_wf$b','fun_app$at'('put_O_b_j_e_c_t$'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2))
+        & 'fmember$a'(A__questionmark_v0,'fun_app$bl'('object_ptr_kinds$',A__questionmark_v2))
+        & 'fun_app$ci'('type_wf$c',A__questionmark_v2)
+        & ( 'fun_app$bq'('case_option$j'(tlfalse,'is_element_ptr_kind_n_o_d_e_p_t_r$'),'cast_o_b_j_e_c_t_p_t_r_2_n_o_d_e_p_t_r$'(A__questionmark_v0))
+         => ( 'case_option$e'('none$a','cast_N_o_d_e_2_E_l_e_m_e_n_t$','fun_app$s'('cast_O_b_j_e_c_t_2_N_o_d_e$','the$'('fun_app$ck'('fun_app$cl'('get_O_b_j_e_c_t$',A__questionmark_v0),A__questionmark_v2)))) != 'none$a' ) ) )
+     => 'fun_app$ci'('type_wf$b',A__questionmark_v2) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$ ?v1:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ ((fun_app$ci(type_wf$a, fun_app$at(put_O_b_j_e_c_t$(?v0, ?v1), ?v2)) ∧ (fmember$a(?v0, fun_app$bl(object_ptr_kinds$, ?v2)) ∧ (fun_app$ci(type_wf$b, ?v2) ∧ (fun_app$bq(case_option$j(false, is_character_data_ptr_kind_n_o_d_e_p_t_r$), cast_o_b_j_e_c_t_p_t_r_2_n_o_d_e_p_t_r$(?v0)) ⇒ ¬(case_option$l(none$, cast_N_o_d_e_2_C_h_a_r_a_c_t_e_r_D_a_t_a$, fun_app$s(cast_O_b_j_e_c_t_2_N_o_d_e$, the$(fun_app$ck(fun_app$cl(get_O_b_j_e_c_t$, ?v0), ?v2)))) = none$))))) ⇒ fun_app$ci(type_wf$a, ?v2))
+tff(axiom491,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$',A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$'] :
+      ( ( 'fun_app$ci'('type_wf$a','fun_app$at'('put_O_b_j_e_c_t$'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2))
+        & 'fmember$a'(A__questionmark_v0,'fun_app$bl'('object_ptr_kinds$',A__questionmark_v2))
+        & 'fun_app$ci'('type_wf$b',A__questionmark_v2)
+        & ( 'fun_app$bq'('case_option$j'(tlfalse,'is_character_data_ptr_kind_n_o_d_e_p_t_r$'),'cast_o_b_j_e_c_t_p_t_r_2_n_o_d_e_p_t_r$'(A__questionmark_v0))
+         => ( 'case_option$l'('none$','cast_N_o_d_e_2_C_h_a_r_a_c_t_e_r_D_a_t_a$','fun_app$s'('cast_O_b_j_e_c_t_2_N_o_d_e$','the$'('fun_app$ck'('fun_app$cl'('get_O_b_j_e_c_t$',A__questionmark_v0),A__questionmark_v2)))) != 'none$' ) ) )
+     => 'fun_app$ci'('type_wf$a',A__questionmark_v2) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_j_option_RDocument_ext_heap$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$ (fun_app$cm(type_wf$e, ?v0) ⇒ (fmember$a(?v1, object_ptr_kinds$a(?v0)) = ¬(get_O_b_j_e_c_t$a(?v1, ?v0) = none$c)))
+tff(axiom492,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_j_option_RDocument_ext_heap$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$'] :
+      ( 'fun_app$cm'('type_wf$e',A__questionmark_v0)
+     => ( 'fmember$a'(A__questionmark_v1,'object_ptr_kinds$a'(A__questionmark_v0))
+      <=> ( 'get_O_b_j_e_c_t$a'(A__questionmark_v1,A__questionmark_v0) != 'none$c' ) ) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_h_option_RCharacterData_ext_RNode_ext_heap$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$ (fun_app$cn(type_wf$f, ?v0) ⇒ (fmember$a(?v1, object_ptr_kinds$b(?v0)) = ¬(get_O_b_j_e_c_t$b(?v1, ?v0) = none$)))
+tff(axiom493,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_h_option_RCharacterData_ext_RNode_ext_heap$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$'] :
+      ( 'fun_app$cn'('type_wf$f',A__questionmark_v0)
+     => ( 'fmember$a'(A__questionmark_v1,'object_ptr_kinds$b'(A__questionmark_v0))
+      <=> ( 'get_O_b_j_e_c_t$b'(A__questionmark_v1,A__questionmark_v0) != 'none$' ) ) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_RNode_ext_heap$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$ (fun_app$co(type_wf$g, ?v0) ⇒ (fmember$a(?v1, object_ptr_kinds$c(?v0)) = ¬(get_O_b_j_e_c_t$c(?v1, ?v0) = none$a)))
+tff(axiom494,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_RNode_ext_heap$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$'] :
+      ( 'fun_app$co'('type_wf$g',A__questionmark_v0)
+     => ( 'fmember$a'(A__questionmark_v1,'object_ptr_kinds$c'(A__questionmark_v0))
+      <=> ( 'get_O_b_j_e_c_t$c'(A__questionmark_v1,A__questionmark_v0) != 'none$a' ) ) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_heap$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$ (fun_app$cp(type_wf$h, ?v0) ⇒ (fmember$a(?v1, object_ptr_kinds$d(?v0)) = ¬(get_O_b_j_e_c_t$d(?v1, ?v0) = none$b)))
+tff(axiom495,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_heap$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$'] :
+      ( 'fun_app$cp'('type_wf$h',A__questionmark_v0)
+     => ( 'fmember$a'(A__questionmark_v1,'object_ptr_kinds$d'(A__questionmark_v0))
+      <=> ( 'get_O_b_j_e_c_t$d'(A__questionmark_v1,A__questionmark_v0) != 'none$b' ) ) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$ (fun_app$ci(type_wf$d, ?v0) ⇒ (fmember$a(?v1, fun_app$bl(object_ptr_kinds$, ?v0)) = ¬(fun_app$ck(fun_app$cl(get_O_b_j_e_c_t$, ?v1), ?v0) = none$f)))
+tff(axiom496,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$'] :
+      ( 'fun_app$ci'('type_wf$d',A__questionmark_v0)
+     => ( 'fmember$a'(A__questionmark_v1,'fun_app$bl'('object_ptr_kinds$',A__questionmark_v0))
+      <=> ( 'fun_app$ck'('fun_app$cl'('get_O_b_j_e_c_t$',A__questionmark_v1),A__questionmark_v0) != 'none$f' ) ) ) ).
+
+%% (type_wf$d = a_type_wf$d)
+tff(axiom497,axiom,
+    'type_wf$d' = 'a_type_wf$d' ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ (fun_app$a(case_option$(false, is_element_ptr_e_l_e_m_e_n_t_p_t_r$), fun_app$b(cast_n_o_d_e_p_t_r_2_e_l_e_m_e_n_t_p_t_r$, ?v0)) ⇒ fun_app$(is_element_ptr_kind_n_o_d_e_p_t_r$, ?v0))
+tff(axiom498,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$'] :
+      ( 'fun_app$a'('case_option$'(tlfalse,'is_element_ptr_e_l_e_m_e_n_t_p_t_r$'),'fun_app$b'('cast_n_o_d_e_p_t_r_2_e_l_e_m_e_n_t_p_t_r$',A__questionmark_v0))
+     => 'fun_app$'('is_element_ptr_kind_n_o_d_e_p_t_r$',A__questionmark_v0) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$ ?v2:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$ ?v3:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ (¬(?v0 = ?v1) ⇒ (fun_app$ck(fun_app$cl(get_O_b_j_e_c_t$, ?v0), fun_app$at(put_O_b_j_e_c_t$(?v1, ?v2), ?v3)) = fun_app$ck(fun_app$cl(get_O_b_j_e_c_t$, ?v0), ?v3)))
+tff(axiom499,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$',A__questionmark_v2: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$',A__questionmark_v3: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$'] :
+      ( ( A__questionmark_v0 != A__questionmark_v1 )
+     => ( 'fun_app$ck'('fun_app$cl'('get_O_b_j_e_c_t$',A__questionmark_v0),'fun_app$at'('put_O_b_j_e_c_t$'(A__questionmark_v1,A__questionmark_v2),A__questionmark_v3)) = 'fun_app$ck'('fun_app$cl'('get_O_b_j_e_c_t$',A__questionmark_v0),A__questionmark_v3) ) ) ).
+
+%% ∀ ?v0:D_document_ptr_option$ (¬(?v0 = none$h) ⇒ (some$h(the$a(?v0)) = ?v0))
+tff(axiom500,axiom,
+    ! [A__questionmark_v0: 'D_document_ptr_option$'] :
+      ( ( A__questionmark_v0 != 'none$h' )
+     => ( 'some$h'('the$a'(A__questionmark_v0)) = A__questionmark_v0 ) ) ).
+
+%% ∀ ?v0:A_element_ptr_option$ (¬(?v0 = none$d) ⇒ (fun_app$ax(some$d, the$b(?v0)) = ?v0))
+tff(axiom501,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_option$'] :
+      ( ( A__questionmark_v0 != 'none$d' )
+     => ( 'fun_app$ax'('some$d','the$b'(A__questionmark_v0)) = A__questionmark_v0 ) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_option$ (¬(?v0 = none$e) ⇒ (fun_app$ay(some$e, the$c(?v0)) = ?v0))
+tff(axiom502,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_option$'] :
+      ( ( A__questionmark_v0 != 'none$e' )
+     => ( 'fun_app$ay'('some$e','the$c'(A__questionmark_v0)) = A__questionmark_v0 ) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_option$ (¬(?v0 = none$f) ⇒ (fun_app$az(some$f, the$(?v0)) = ?v0))
+tff(axiom503,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_option$'] :
+      ( ( A__questionmark_v0 != 'none$f' )
+     => ( 'fun_app$az'('some$f','the$'(A__questionmark_v0)) = A__questionmark_v0 ) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$ (¬(?v0 = none$b) ⇒ (fun_app$g(some$, the$d(?v0)) = ?v0))
+tff(axiom504,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$'] :
+      ( ( A__questionmark_v0 != 'none$b' )
+     => ( 'fun_app$g'('some$','the$d'(A__questionmark_v0)) = A__questionmark_v0 ) ) ).
+
+%% ∀ ?v0:H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$ (¬(?v0 = none$) ⇒ (fun_app$k(some$c, the$e(?v0)) = ?v0))
+tff(axiom505,axiom,
+    ! [A__questionmark_v0: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$'] :
+      ( ( A__questionmark_v0 != 'none$' )
+     => ( 'fun_app$k'('some$c','the$e'(A__questionmark_v0)) = A__questionmark_v0 ) ) ).
+
+%% ∀ ?v0:C_a_b_j_option_RDocument_ext_RObject_ext_option$ (¬(?v0 = none$c) ⇒ (fun_app$j(some$b, the$f(?v0)) = ?v0))
+tff(axiom506,axiom,
+    ! [A__questionmark_v0: 'C_a_b_j_option_RDocument_ext_RObject_ext_option$'] :
+      ( ( A__questionmark_v0 != 'none$c' )
+     => ( 'fun_app$j'('some$b','the$f'(A__questionmark_v0)) = A__questionmark_v0 ) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$ (¬(?v0 = none$a) ⇒ (fun_app$i(some$a, the$g(?v0)) = ?v0))
+tff(axiom507,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$'] :
+      ( ( A__questionmark_v0 != 'none$a' )
+     => ( 'fun_app$i'('some$a','the$g'(A__questionmark_v0)) = A__questionmark_v0 ) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$ ?v1:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ (fun_app$ck(fun_app$cl(get_O_b_j_e_c_t$, ?v0), fun_app$at(put_O_b_j_e_c_t$(?v0, ?v1), ?v2)) = fun_app$az(some$f, ?v1))
+tff(axiom508,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$',A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$'] : ( 'fun_app$ck'('fun_app$cl'('get_O_b_j_e_c_t$',A__questionmark_v0),'fun_app$at'('put_O_b_j_e_c_t$'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2)) = 'fun_app$az'('some$f',A__questionmark_v1) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$ ?v2:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$ ?v3:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ (fun_app$ck(fun_app$cl(get_O_b_j_e_c_t$, ?v0), fun_app$at(put_O_b_j_e_c_t$(?v1, ?v2), ?v3)) = (if (?v1 = ?v0) fun_app$az(some$f, ?v2) else fun_app$ck(fun_app$cl(get_O_b_j_e_c_t$, ?v0), ?v3)))
+tff(axiom509,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$',A__questionmark_v2: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$',A__questionmark_v3: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$'] :
+      ( ( ( A__questionmark_v1 = A__questionmark_v0 )
+       => ( 'fun_app$ck'('fun_app$cl'('get_O_b_j_e_c_t$',A__questionmark_v0),'fun_app$at'('put_O_b_j_e_c_t$'(A__questionmark_v1,A__questionmark_v2),A__questionmark_v3)) = 'fun_app$az'('some$f',A__questionmark_v2) ) )
+      & ( ( A__questionmark_v1 != A__questionmark_v0 )
+       => ( 'fun_app$ck'('fun_app$cl'('get_O_b_j_e_c_t$',A__questionmark_v0),'fun_app$at'('put_O_b_j_e_c_t$'(A__questionmark_v1,A__questionmark_v2),A__questionmark_v3)) = 'fun_app$ck'('fun_app$cl'('get_O_b_j_e_c_t$',A__questionmark_v0),A__questionmark_v3) ) ) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_option$ ?v1:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_option$ ((((?v0 = none$f) = (?v1 = none$f)) ∧ ((¬(?v0 = none$f) ∧ ¬(?v1 = none$f)) ⇒ (the$(?v0) = the$(?v1)))) ⇒ (?v0 = ?v1))
+tff(axiom510,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_option$',A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_option$'] :
+      ( ( ( ( A__questionmark_v0 = 'none$f' )
+        <=> ( A__questionmark_v1 = 'none$f' ) )
+        & ( ( ( A__questionmark_v0 != 'none$f' )
+            & ( A__questionmark_v1 != 'none$f' ) )
+         => ( 'the$'(A__questionmark_v0) = 'the$'(A__questionmark_v1) ) ) )
+     => ( A__questionmark_v0 = A__questionmark_v1 ) ) ).
+
+%% ∀ ?v0:D_document_ptr_option$ ?v1:D_document_ptr_option$ ((((?v0 = none$h) = (?v1 = none$h)) ∧ ((¬(?v0 = none$h) ∧ ¬(?v1 = none$h)) ⇒ (the$a(?v0) = the$a(?v1)))) ⇒ (?v0 = ?v1))
+tff(axiom511,axiom,
+    ! [A__questionmark_v0: 'D_document_ptr_option$',A__questionmark_v1: 'D_document_ptr_option$'] :
+      ( ( ( ( A__questionmark_v0 = 'none$h' )
+        <=> ( A__questionmark_v1 = 'none$h' ) )
+        & ( ( ( A__questionmark_v0 != 'none$h' )
+            & ( A__questionmark_v1 != 'none$h' ) )
+         => ( 'the$a'(A__questionmark_v0) = 'the$a'(A__questionmark_v1) ) ) )
+     => ( A__questionmark_v0 = A__questionmark_v1 ) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_option$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_option$ ((((?v0 = none$e) = (?v1 = none$e)) ∧ ((¬(?v0 = none$e) ∧ ¬(?v1 = none$e)) ⇒ (the$c(?v0) = the$c(?v1)))) ⇒ (?v0 = ?v1))
+tff(axiom512,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_option$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_option$'] :
+      ( ( ( ( A__questionmark_v0 = 'none$e' )
+        <=> ( A__questionmark_v1 = 'none$e' ) )
+        & ( ( ( A__questionmark_v0 != 'none$e' )
+            & ( A__questionmark_v1 != 'none$e' ) )
+         => ( 'the$c'(A__questionmark_v0) = 'the$c'(A__questionmark_v1) ) ) )
+     => ( A__questionmark_v0 = A__questionmark_v1 ) ) ).
+
+%% ∀ ?v0:C_a_b_j_option_RDocument_ext_RObject_ext_option$ ?v1:C_a_b_j_option_RDocument_ext_RObject_ext_option$ ((((?v0 = none$c) = (?v1 = none$c)) ∧ ((¬(?v0 = none$c) ∧ ¬(?v1 = none$c)) ⇒ (the$f(?v0) = the$f(?v1)))) ⇒ (?v0 = ?v1))
+tff(axiom513,axiom,
+    ! [A__questionmark_v0: 'C_a_b_j_option_RDocument_ext_RObject_ext_option$',A__questionmark_v1: 'C_a_b_j_option_RDocument_ext_RObject_ext_option$'] :
+      ( ( ( ( A__questionmark_v0 = 'none$c' )
+        <=> ( A__questionmark_v1 = 'none$c' ) )
+        & ( ( ( A__questionmark_v0 != 'none$c' )
+            & ( A__questionmark_v1 != 'none$c' ) )
+         => ( 'the$f'(A__questionmark_v0) = 'the$f'(A__questionmark_v1) ) ) )
+     => ( A__questionmark_v0 = A__questionmark_v1 ) ) ).
+
+%% ∀ ?v0:H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$ ?v1:H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$ ((((?v0 = none$) = (?v1 = none$)) ∧ ((¬(?v0 = none$) ∧ ¬(?v1 = none$)) ⇒ (the$e(?v0) = the$e(?v1)))) ⇒ (?v0 = ?v1))
+tff(axiom514,axiom,
+    ! [A__questionmark_v0: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$',A__questionmark_v1: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$'] :
+      ( ( ( ( A__questionmark_v0 = 'none$' )
+        <=> ( A__questionmark_v1 = 'none$' ) )
+        & ( ( ( A__questionmark_v0 != 'none$' )
+            & ( A__questionmark_v1 != 'none$' ) )
+         => ( 'the$e'(A__questionmark_v0) = 'the$e'(A__questionmark_v1) ) ) )
+     => ( A__questionmark_v0 = A__questionmark_v1 ) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$ ?v1:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$ ((((?v0 = none$a) = (?v1 = none$a)) ∧ ((¬(?v0 = none$a) ∧ ¬(?v1 = none$a)) ⇒ (the$g(?v0) = the$g(?v1)))) ⇒ (?v0 = ?v1))
+tff(axiom515,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$',A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$'] :
+      ( ( ( ( A__questionmark_v0 = 'none$a' )
+        <=> ( A__questionmark_v1 = 'none$a' ) )
+        & ( ( ( A__questionmark_v0 != 'none$a' )
+            & ( A__questionmark_v1 != 'none$a' ) )
+         => ( 'the$g'(A__questionmark_v0) = 'the$g'(A__questionmark_v1) ) ) )
+     => ( A__questionmark_v0 = A__questionmark_v1 ) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$ ?v1:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$ ((((?v0 = none$b) = (?v1 = none$b)) ∧ ((¬(?v0 = none$b) ∧ ¬(?v1 = none$b)) ⇒ (the$d(?v0) = the$d(?v1)))) ⇒ (?v0 = ?v1))
+tff(axiom516,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$',A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$'] :
+      ( ( ( ( A__questionmark_v0 = 'none$b' )
+        <=> ( A__questionmark_v1 = 'none$b' ) )
+        & ( ( ( A__questionmark_v0 != 'none$b' )
+            & ( A__questionmark_v1 != 'none$b' ) )
+         => ( 'the$d'(A__questionmark_v0) = 'the$d'(A__questionmark_v1) ) ) )
+     => ( A__questionmark_v0 = A__questionmark_v1 ) ) ).
+
+%% ∀ ?v0:A_element_ptr_option$ ?v1:A_element_ptr_option$ ((((?v0 = none$d) = (?v1 = none$d)) ∧ ((¬(?v0 = none$d) ∧ ¬(?v1 = none$d)) ⇒ (the$b(?v0) = the$b(?v1)))) ⇒ (?v0 = ?v1))
+tff(axiom517,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_option$',A__questionmark_v1: 'A_element_ptr_option$'] :
+      ( ( ( ( A__questionmark_v0 = 'none$d' )
+        <=> ( A__questionmark_v1 = 'none$d' ) )
+        & ( ( ( A__questionmark_v0 != 'none$d' )
+            & ( A__questionmark_v1 != 'none$d' ) )
+         => ( 'the$b'(A__questionmark_v0) = 'the$b'(A__questionmark_v1) ) ) )
+     => ( A__questionmark_v0 = A__questionmark_v1 ) ) ).
+
+%% ∀ ?v0:D_document_ptr$ (the$a(some$h(?v0)) = ?v0)
+tff(axiom518,axiom,
+    ! [A__questionmark_v0: 'D_document_ptr$'] : ( 'the$a'('some$h'(A__questionmark_v0)) = A__questionmark_v0 ) ).
+
+%% ∀ ?v0:A_element_ptr$ (the$b(fun_app$ax(some$d, ?v0)) = ?v0)
+tff(axiom519,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr$'] : ( 'the$b'('fun_app$ax'('some$d',A__questionmark_v0)) = A__questionmark_v0 ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ (the$c(fun_app$ay(some$e, ?v0)) = ?v0)
+tff(axiom520,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$'] : ( 'the$c'('fun_app$ay'('some$e',A__questionmark_v0)) = A__questionmark_v0 ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$ (the$(fun_app$az(some$f, ?v0)) = ?v0)
+tff(axiom521,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$'] : ( 'the$'('fun_app$az'('some$f',A__questionmark_v0)) = A__questionmark_v0 ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$ (the$d(fun_app$g(some$, ?v0)) = ?v0)
+tff(axiom522,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$'] : ( 'the$d'('fun_app$g'('some$',A__questionmark_v0)) = A__questionmark_v0 ) ).
+
+%% ∀ ?v0:H_option_RCharacterData_ext_RNode_ext_RObject_ext$ (the$e(fun_app$k(some$c, ?v0)) = ?v0)
+tff(axiom523,axiom,
+    ! [A__questionmark_v0: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext$'] : ( 'the$e'('fun_app$k'('some$c',A__questionmark_v0)) = A__questionmark_v0 ) ).
+
+%% ∀ ?v0:C_a_b_j_option_RDocument_ext_RObject_ext$ (the$f(fun_app$j(some$b, ?v0)) = ?v0)
+tff(axiom524,axiom,
+    ! [A__questionmark_v0: 'C_a_b_j_option_RDocument_ext_RObject_ext$'] : ( 'the$f'('fun_app$j'('some$b',A__questionmark_v0)) = A__questionmark_v0 ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$ (the$g(fun_app$i(some$a, ?v0)) = ?v0)
+tff(axiom525,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$'] : ( 'the$g'('fun_app$i'('some$a',A__questionmark_v0)) = A__questionmark_v0 ) ).
+
+%% ∀ ?v0:D_document_ptr_option$ ((((?v0 = none$h) ⇒ false) ∧ ((?v0 = some$h(the$a(?v0))) ⇒ false)) ⇒ false)
+tff(axiom526,axiom,
+    ! [A__questionmark_v0: 'D_document_ptr_option$'] :
+      ( ( ( ( A__questionmark_v0 = 'none$h' )
+         => $false )
+        & ( ( A__questionmark_v0 = 'some$h'('the$a'(A__questionmark_v0)) )
+         => $false ) )
+     => $false ) ).
+
+%% ∀ ?v0:A_element_ptr_option$ ((((?v0 = none$d) ⇒ false) ∧ ((?v0 = fun_app$ax(some$d, the$b(?v0))) ⇒ false)) ⇒ false)
+tff(axiom527,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_option$'] :
+      ( ( ( ( A__questionmark_v0 = 'none$d' )
+         => $false )
+        & ( ( A__questionmark_v0 = 'fun_app$ax'('some$d','the$b'(A__questionmark_v0)) )
+         => $false ) )
+     => $false ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_option$ ((((?v0 = none$e) ⇒ false) ∧ ((?v0 = fun_app$ay(some$e, the$c(?v0))) ⇒ false)) ⇒ false)
+tff(axiom528,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_option$'] :
+      ( ( ( ( A__questionmark_v0 = 'none$e' )
+         => $false )
+        & ( ( A__questionmark_v0 = 'fun_app$ay'('some$e','the$c'(A__questionmark_v0)) )
+         => $false ) )
+     => $false ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_option$ ((((?v0 = none$f) ⇒ false) ∧ ((?v0 = fun_app$az(some$f, the$(?v0))) ⇒ false)) ⇒ false)
+tff(axiom529,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext_option$'] :
+      ( ( ( ( A__questionmark_v0 = 'none$f' )
+         => $false )
+        & ( ( A__questionmark_v0 = 'fun_app$az'('some$f','the$'(A__questionmark_v0)) )
+         => $false ) )
+     => $false ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$ ((((?v0 = none$b) ⇒ false) ∧ ((?v0 = fun_app$g(some$, the$d(?v0))) ⇒ false)) ⇒ false)
+tff(axiom530,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$'] :
+      ( ( ( ( A__questionmark_v0 = 'none$b' )
+         => $false )
+        & ( ( A__questionmark_v0 = 'fun_app$g'('some$','the$d'(A__questionmark_v0)) )
+         => $false ) )
+     => $false ) ).
+
+%% ∀ ?v0:H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$ ((((?v0 = none$) ⇒ false) ∧ ((?v0 = fun_app$k(some$c, the$e(?v0))) ⇒ false)) ⇒ false)
+tff(axiom531,axiom,
+    ! [A__questionmark_v0: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$'] :
+      ( ( ( ( A__questionmark_v0 = 'none$' )
+         => $false )
+        & ( ( A__questionmark_v0 = 'fun_app$k'('some$c','the$e'(A__questionmark_v0)) )
+         => $false ) )
+     => $false ) ).
+
+%% ∀ ?v0:C_a_b_j_option_RDocument_ext_RObject_ext_option$ ((((?v0 = none$c) ⇒ false) ∧ ((?v0 = fun_app$j(some$b, the$f(?v0))) ⇒ false)) ⇒ false)
+tff(axiom532,axiom,
+    ! [A__questionmark_v0: 'C_a_b_j_option_RDocument_ext_RObject_ext_option$'] :
+      ( ( ( ( A__questionmark_v0 = 'none$c' )
+         => $false )
+        & ( ( A__questionmark_v0 = 'fun_app$j'('some$b','the$f'(A__questionmark_v0)) )
+         => $false ) )
+     => $false ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$ ((((?v0 = none$a) ⇒ false) ∧ ((?v0 = fun_app$i(some$a, the$g(?v0))) ⇒ false)) ⇒ false)
+tff(axiom533,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$'] :
+      ( ( ( ( A__questionmark_v0 = 'none$a' )
+         => $false )
+        & ( ( A__questionmark_v0 = 'fun_app$i'('some$a','the$g'(A__questionmark_v0)) )
+         => $false ) )
+     => $false ) ).
+
+%% ∀ ?v0:Bool ?v1:C_a_b_j_option_RDocument_ext_RObject_ext_bool_fun$ ?v2:C_a_b_j_option_RDocument_ext_RObject_ext_option$ (fun_app$bm(case_option$f(?v0, ?v1), ?v2) = (if (?v2 = none$c) ?v0 else fun_app$t(?v1, the$f(?v2))))
+tff(axiom534,axiom,
+    ! [A__questionmark_v0: tlbool,A__questionmark_v1: 'C_a_b_j_option_RDocument_ext_RObject_ext_bool_fun$',A__questionmark_v2: 'C_a_b_j_option_RDocument_ext_RObject_ext_option$'] :
+      ( 'fun_app$bm'('case_option$f'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2)
+    <=> ( ( ( A__questionmark_v2 = 'none$c' )
+         => ( A__questionmark_v0 = tltrue ) )
+        & ( ( A__questionmark_v2 != 'none$c' )
+         => 'fun_app$t'(A__questionmark_v1,'the$f'(A__questionmark_v2)) ) ) ) ).
+
+%% ∀ ?v0:Bool ?v1:H_option_RCharacterData_ext_RNode_ext_RObject_ext_bool_fun$ ?v2:H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$ (fun_app$bn(case_option$g(?v0, ?v1), ?v2) = (if (?v2 = none$) ?v0 else fun_app$v(?v1, the$e(?v2))))
+tff(axiom535,axiom,
+    ! [A__questionmark_v0: tlbool,A__questionmark_v1: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_bool_fun$',A__questionmark_v2: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$'] :
+      ( 'fun_app$bn'('case_option$g'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2)
+    <=> ( ( ( A__questionmark_v2 = 'none$' )
+         => ( A__questionmark_v0 = tltrue ) )
+        & ( ( A__questionmark_v2 != 'none$' )
+         => 'fun_app$v'(A__questionmark_v1,'the$e'(A__questionmark_v2)) ) ) ) ).
+
+%% ∀ ?v0:Bool ?v1:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_bool_fun$ ?v2:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$ (fun_app$bo(case_option$h(?v0, ?v1), ?v2) = (if (?v2 = none$a) ?v0 else fun_app$w(?v1, the$g(?v2))))
+tff(axiom536,axiom,
+    ! [A__questionmark_v0: tlbool,A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_bool_fun$',A__questionmark_v2: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$'] :
+      ( 'fun_app$bo'('case_option$h'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2)
+    <=> ( ( ( A__questionmark_v2 = 'none$a' )
+         => ( A__questionmark_v0 = tltrue ) )
+        & ( ( A__questionmark_v2 != 'none$a' )
+         => 'fun_app$w'(A__questionmark_v1,'the$g'(A__questionmark_v2)) ) ) ) ).
+
+%% ∀ ?v0:Bool ?v1:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_bool_fun$ ?v2:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$ (fun_app$bp(case_option$i(?v0, ?v1), ?v2) = (if (?v2 = none$b) ?v0 else fun_app$x(?v1, the$d(?v2))))
+tff(axiom537,axiom,
+    ! [A__questionmark_v0: tlbool,A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_bool_fun$',A__questionmark_v2: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$'] :
+      ( 'fun_app$bp'('case_option$i'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2)
+    <=> ( ( ( A__questionmark_v2 = 'none$b' )
+         => ( A__questionmark_v0 = tltrue ) )
+        & ( ( A__questionmark_v2 != 'none$b' )
+         => 'fun_app$x'(A__questionmark_v1,'the$d'(A__questionmark_v2)) ) ) ) ).
+
+%% ∀ ?v0:Bool ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_bool_fun$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_option$ (fun_app$bq(case_option$j(?v0, ?v1), ?v2) = (if (?v2 = none$e) ?v0 else fun_app$(?v1, the$c(?v2))))
+tff(axiom538,axiom,
+    ! [A__questionmark_v0: tlbool,A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_bool_fun$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_option$'] :
+      ( 'fun_app$bq'('case_option$j'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2)
+    <=> ( ( ( A__questionmark_v2 = 'none$e' )
+         => ( A__questionmark_v0 = tltrue ) )
+        & ( ( A__questionmark_v2 != 'none$e' )
+         => 'fun_app$'(A__questionmark_v1,'the$c'(A__questionmark_v2)) ) ) ) ).
+
+%% ∀ ?v0:D_document_ptr_option$ ?v1:D_document_ptr_a_element_ptr_option_fun$ ((bind$aa(?v0, ?v1) = none$d) = ((?v0 = none$h) ∨ (fun_app$cq(?v1, the$a(?v0)) = none$d)))
+tff(axiom539,axiom,
+    ! [A__questionmark_v0: 'D_document_ptr_option$',A__questionmark_v1: 'D_document_ptr_a_element_ptr_option_fun$'] :
+      ( ( 'bind$aa'(A__questionmark_v0,A__questionmark_v1) = 'none$d' )
+    <=> ( ( A__questionmark_v0 = 'none$h' )
+        | ( 'fun_app$cq'(A__questionmark_v1,'the$a'(A__questionmark_v0)) = 'none$d' ) ) ) ).
+
+%% ∀ ?v0:A_element_ptr_option$ ?v1:A_element_ptr_a_element_ptr_option_fun$ ((fun_app$bb(bind$m(?v0), ?v1) = none$d) = ((?v0 = none$d) ∨ (fun_app$ax(?v1, the$b(?v0)) = none$d)))
+tff(axiom540,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_option$',A__questionmark_v1: 'A_element_ptr_a_element_ptr_option_fun$'] :
+      ( ( 'fun_app$bb'('bind$m'(A__questionmark_v0),A__questionmark_v1) = 'none$d' )
+    <=> ( ( A__questionmark_v0 = 'none$d' )
+        | ( 'fun_app$ax'(A__questionmark_v1,'the$b'(A__questionmark_v0)) = 'none$d' ) ) ) ).
+
+%% ∀ ?v0:D_document_ptr_option$ ?v1:D_document_ptr_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$ ((bind$ab(?v0, ?v1) = none$) = ((?v0 = none$h) ∨ (fun_app$cr(?v1, the$a(?v0)) = none$)))
+tff(axiom541,axiom,
+    ! [A__questionmark_v0: 'D_document_ptr_option$',A__questionmark_v1: 'D_document_ptr_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$'] :
+      ( ( 'bind$ab'(A__questionmark_v0,A__questionmark_v1) = 'none$' )
+    <=> ( ( A__questionmark_v0 = 'none$h' )
+        | ( 'fun_app$cr'(A__questionmark_v1,'the$a'(A__questionmark_v0)) = 'none$' ) ) ) ).
+
+%% ∀ ?v0:A_element_ptr_option$ ?v1:A_element_ptr_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$ ((bind$u(?v0, ?v1) = none$) = ((?v0 = none$d) ∨ (fun_app$cd(?v1, the$b(?v0)) = none$)))
+tff(axiom542,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_option$',A__questionmark_v1: 'A_element_ptr_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$'] :
+      ( ( 'bind$u'(A__questionmark_v0,A__questionmark_v1) = 'none$' )
+    <=> ( ( A__questionmark_v0 = 'none$d' )
+        | ( 'fun_app$cd'(A__questionmark_v1,'the$b'(A__questionmark_v0)) = 'none$' ) ) ) ).
+
+%% ∀ ?v0:H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$ ?v1:H_option_RCharacterData_ext_RNode_ext_RObject_ext_a_element_ptr_option_fun$ ((bind$t(?v0, ?v1) = none$d) = ((?v0 = none$) ∨ (fun_app$cc(?v1, the$e(?v0)) = none$d)))
+tff(axiom543,axiom,
+    ! [A__questionmark_v0: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$',A__questionmark_v1: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_a_element_ptr_option_fun$'] :
+      ( ( 'bind$t'(A__questionmark_v0,A__questionmark_v1) = 'none$d' )
+    <=> ( ( A__questionmark_v0 = 'none$' )
+        | ( 'fun_app$cc'(A__questionmark_v1,'the$e'(A__questionmark_v0)) = 'none$d' ) ) ) ).
+
+%% ∀ ?v0:D_document_ptr_option$ ?v1:D_document_ptr_c_a_b_j_option_RDocument_ext_RObject_ext_option_fun$ ((bind$ac(?v0, ?v1) = none$c) = ((?v0 = none$h) ∨ (fun_app$cs(?v1, the$a(?v0)) = none$c)))
+tff(axiom544,axiom,
+    ! [A__questionmark_v0: 'D_document_ptr_option$',A__questionmark_v1: 'D_document_ptr_c_a_b_j_option_RDocument_ext_RObject_ext_option_fun$'] :
+      ( ( 'bind$ac'(A__questionmark_v0,A__questionmark_v1) = 'none$c' )
+    <=> ( ( A__questionmark_v0 = 'none$h' )
+        | ( 'fun_app$cs'(A__questionmark_v1,'the$a'(A__questionmark_v0)) = 'none$c' ) ) ) ).
+
+%% ∀ ?v0:A_element_ptr_option$ ?v1:A_element_ptr_c_a_b_j_option_RDocument_ext_RObject_ext_option_fun$ ((bind$w(?v0, ?v1) = none$c) = ((?v0 = none$d) ∨ (fun_app$cf(?v1, the$b(?v0)) = none$c)))
+tff(axiom545,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_option$',A__questionmark_v1: 'A_element_ptr_c_a_b_j_option_RDocument_ext_RObject_ext_option_fun$'] :
+      ( ( 'bind$w'(A__questionmark_v0,A__questionmark_v1) = 'none$c' )
+    <=> ( ( A__questionmark_v0 = 'none$d' )
+        | ( 'fun_app$cf'(A__questionmark_v1,'the$b'(A__questionmark_v0)) = 'none$c' ) ) ) ).
+
+%% ∀ ?v0:C_a_b_j_option_RDocument_ext_RObject_ext_option$ ?v1:C_a_b_j_option_RDocument_ext_RObject_ext_a_element_ptr_option_fun$ ((bind$v(?v0, ?v1) = none$d) = ((?v0 = none$c) ∨ (fun_app$ce(?v1, the$f(?v0)) = none$d)))
+tff(axiom546,axiom,
+    ! [A__questionmark_v0: 'C_a_b_j_option_RDocument_ext_RObject_ext_option$',A__questionmark_v1: 'C_a_b_j_option_RDocument_ext_RObject_ext_a_element_ptr_option_fun$'] :
+      ( ( 'bind$v'(A__questionmark_v0,A__questionmark_v1) = 'none$d' )
+    <=> ( ( A__questionmark_v0 = 'none$c' )
+        | ( 'fun_app$ce'(A__questionmark_v1,'the$f'(A__questionmark_v0)) = 'none$d' ) ) ) ).
+
+%% ∀ ?v0:H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$ ?v1:H_option_RCharacterData_ext_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$ ((fun_app$m(bind$(?v0), ?v1) = none$) = ((?v0 = none$) ∨ (fun_app$k(?v1, the$e(?v0)) = none$)))
+tff(axiom547,axiom,
+    ! [A__questionmark_v0: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$',A__questionmark_v1: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_option_fun$'] :
+      ( ( 'fun_app$m'('bind$'(A__questionmark_v0),A__questionmark_v1) = 'none$' )
+    <=> ( ( A__questionmark_v0 = 'none$' )
+        | ( 'fun_app$k'(A__questionmark_v1,'the$e'(A__questionmark_v0)) = 'none$' ) ) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_option$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_a_element_ptr_option_fun$ ((bind$z(?v0, ?v1) = none$d) = ((?v0 = none$e) ∨ (fun_app$b(?v1, the$c(?v0)) = none$d)))
+tff(axiom548,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_option$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_a_element_ptr_option_fun$'] :
+      ( ( 'bind$z'(A__questionmark_v0,A__questionmark_v1) = 'none$d' )
+    <=> ( ( A__questionmark_v0 = 'none$e' )
+        | ( 'fun_app$b'(A__questionmark_v1,'the$c'(A__questionmark_v0)) = 'none$d' ) ) ) ).
+
+%% ∀ ?v0:Bool_bool_fun$ ?v1:Bool ?v2:C_a_b_j_option_RDocument_ext_RObject_ext_bool_fun$ ?v3:C_a_b_j_option_RDocument_ext_RObject_ext_option$ (fun_app$u(?v0, fun_app$bm(case_option$f(?v1, ?v2), ?v3)) = ¬(((?v3 = none$c) ∧ ¬fun_app$u(?v0, ?v1)) ∨ ((?v3 = fun_app$j(some$b, the$f(?v3))) ∧ ¬fun_app$u(?v0, fun_app$t(?v2, the$f(?v3))))))
+tff(axiom549,axiom,
+    ! [A__questionmark_v0: 'Bool_bool_fun$',A__questionmark_v1: tlbool,A__questionmark_v2: 'C_a_b_j_option_RDocument_ext_RObject_ext_bool_fun$',A__questionmark_v3: 'C_a_b_j_option_RDocument_ext_RObject_ext_option$'] :
+      ( 'fun_app$u'(A__questionmark_v0,def_16(A__questionmark_v1,A__questionmark_v2,A__questionmark_v3))
+    <=> ~ ( ( ( A__questionmark_v3 = 'none$c' )
+            & ~ 'fun_app$u'(A__questionmark_v0,A__questionmark_v1) )
+          | ( ( A__questionmark_v3 = 'fun_app$j'('some$b','the$f'(A__questionmark_v3)) )
+            & ~ 'fun_app$u'(A__questionmark_v0,def_17(A__questionmark_v2,A__questionmark_v3)) ) ) ) ).
+
+%% ∀ ?v0:Bool_bool_fun$ ?v1:Bool ?v2:H_option_RCharacterData_ext_RNode_ext_RObject_ext_bool_fun$ ?v3:H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$ (fun_app$u(?v0, fun_app$bn(case_option$g(?v1, ?v2), ?v3)) = ¬(((?v3 = none$) ∧ ¬fun_app$u(?v0, ?v1)) ∨ ((?v3 = fun_app$k(some$c, the$e(?v3))) ∧ ¬fun_app$u(?v0, fun_app$v(?v2, the$e(?v3))))))
+tff(axiom550,axiom,
+    ! [A__questionmark_v0: 'Bool_bool_fun$',A__questionmark_v1: tlbool,A__questionmark_v2: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_bool_fun$',A__questionmark_v3: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$'] :
+      ( 'fun_app$u'(A__questionmark_v0,def_18(A__questionmark_v1,A__questionmark_v2,A__questionmark_v3))
+    <=> ~ ( ( ( A__questionmark_v3 = 'none$' )
+            & ~ 'fun_app$u'(A__questionmark_v0,A__questionmark_v1) )
+          | ( ( A__questionmark_v3 = 'fun_app$k'('some$c','the$e'(A__questionmark_v3)) )
+            & ~ 'fun_app$u'(A__questionmark_v0,def_19(A__questionmark_v2,A__questionmark_v3)) ) ) ) ).
+
+%% ∀ ?v0:Bool_bool_fun$ ?v1:Bool ?v2:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_bool_fun$ ?v3:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$ (fun_app$u(?v0, fun_app$bo(case_option$h(?v1, ?v2), ?v3)) = ¬(((?v3 = none$a) ∧ ¬fun_app$u(?v0, ?v1)) ∨ ((?v3 = fun_app$i(some$a, the$g(?v3))) ∧ ¬fun_app$u(?v0, fun_app$w(?v2, the$g(?v3))))))
+tff(axiom551,axiom,
+    ! [A__questionmark_v0: 'Bool_bool_fun$',A__questionmark_v1: tlbool,A__questionmark_v2: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_bool_fun$',A__questionmark_v3: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$'] :
+      ( 'fun_app$u'(A__questionmark_v0,def_20(A__questionmark_v1,A__questionmark_v2,A__questionmark_v3))
+    <=> ~ ( ( ( A__questionmark_v3 = 'none$a' )
+            & ~ 'fun_app$u'(A__questionmark_v0,A__questionmark_v1) )
+          | ( ( A__questionmark_v3 = 'fun_app$i'('some$a','the$g'(A__questionmark_v3)) )
+            & ~ 'fun_app$u'(A__questionmark_v0,def_21(A__questionmark_v2,A__questionmark_v3)) ) ) ) ).
+
+%% ∀ ?v0:Bool_bool_fun$ ?v1:Bool ?v2:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_bool_fun$ ?v3:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$ (fun_app$u(?v0, fun_app$bp(case_option$i(?v1, ?v2), ?v3)) = ¬(((?v3 = none$b) ∧ ¬fun_app$u(?v0, ?v1)) ∨ ((?v3 = fun_app$g(some$, the$d(?v3))) ∧ ¬fun_app$u(?v0, fun_app$x(?v2, the$d(?v3))))))
+tff(axiom552,axiom,
+    ! [A__questionmark_v0: 'Bool_bool_fun$',A__questionmark_v1: tlbool,A__questionmark_v2: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_bool_fun$',A__questionmark_v3: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$'] :
+      ( 'fun_app$u'(A__questionmark_v0,def_22(A__questionmark_v1,A__questionmark_v2,A__questionmark_v3))
+    <=> ~ ( ( ( A__questionmark_v3 = 'none$b' )
+            & ~ 'fun_app$u'(A__questionmark_v0,A__questionmark_v1) )
+          | ( ( A__questionmark_v3 = 'fun_app$g'('some$','the$d'(A__questionmark_v3)) )
+            & ~ 'fun_app$u'(A__questionmark_v0,def_23(A__questionmark_v2,A__questionmark_v3)) ) ) ) ).
+
+%% ∀ ?v0:Bool_bool_fun$ ?v1:Bool ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_bool_fun$ ?v3:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_option$ (fun_app$u(?v0, fun_app$bq(case_option$j(?v1, ?v2), ?v3)) = ¬(((?v3 = none$e) ∧ ¬fun_app$u(?v0, ?v1)) ∨ ((?v3 = fun_app$ay(some$e, the$c(?v3))) ∧ ¬fun_app$u(?v0, fun_app$(?v2, the$c(?v3))))))
+tff(axiom553,axiom,
+    ! [A__questionmark_v0: 'Bool_bool_fun$',A__questionmark_v1: tlbool,A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_bool_fun$',A__questionmark_v3: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_option$'] :
+      ( 'fun_app$u'(A__questionmark_v0,def_24(A__questionmark_v1,A__questionmark_v2,A__questionmark_v3))
+    <=> ~ ( ( ( A__questionmark_v3 = 'none$e' )
+            & ~ 'fun_app$u'(A__questionmark_v0,A__questionmark_v1) )
+          | ( ( A__questionmark_v3 = 'fun_app$ay'('some$e','the$c'(A__questionmark_v3)) )
+            & ~ 'fun_app$u'(A__questionmark_v0,def_25(A__questionmark_v2,A__questionmark_v3)) ) ) ) ).
+
+%% ∀ ?v0:Bool_bool_fun$ ?v1:Bool ?v2:C_a_b_j_option_RDocument_ext_RObject_ext_bool_fun$ ?v3:C_a_b_j_option_RDocument_ext_RObject_ext_option$ (fun_app$u(?v0, fun_app$bm(case_option$f(?v1, ?v2), ?v3)) = (((?v3 = none$c) ⇒ fun_app$u(?v0, ?v1)) ∧ ((?v3 = fun_app$j(some$b, the$f(?v3))) ⇒ fun_app$u(?v0, fun_app$t(?v2, the$f(?v3))))))
+tff(axiom554,axiom,
+    ! [A__questionmark_v0: 'Bool_bool_fun$',A__questionmark_v1: tlbool,A__questionmark_v2: 'C_a_b_j_option_RDocument_ext_RObject_ext_bool_fun$',A__questionmark_v3: 'C_a_b_j_option_RDocument_ext_RObject_ext_option$'] :
+      ( 'fun_app$u'(A__questionmark_v0,def_26(A__questionmark_v1,A__questionmark_v2,A__questionmark_v3))
+    <=> ( ( ( A__questionmark_v3 = 'none$c' )
+         => 'fun_app$u'(A__questionmark_v0,A__questionmark_v1) )
+        & ( ( A__questionmark_v3 = 'fun_app$j'('some$b','the$f'(A__questionmark_v3)) )
+         => 'fun_app$u'(A__questionmark_v0,def_27(A__questionmark_v2,A__questionmark_v3)) ) ) ) ).
+
+%% ∀ ?v0:Bool_bool_fun$ ?v1:Bool ?v2:H_option_RCharacterData_ext_RNode_ext_RObject_ext_bool_fun$ ?v3:H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$ (fun_app$u(?v0, fun_app$bn(case_option$g(?v1, ?v2), ?v3)) = (((?v3 = none$) ⇒ fun_app$u(?v0, ?v1)) ∧ ((?v3 = fun_app$k(some$c, the$e(?v3))) ⇒ fun_app$u(?v0, fun_app$v(?v2, the$e(?v3))))))
+tff(axiom555,axiom,
+    ! [A__questionmark_v0: 'Bool_bool_fun$',A__questionmark_v1: tlbool,A__questionmark_v2: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_bool_fun$',A__questionmark_v3: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$'] :
+      ( 'fun_app$u'(A__questionmark_v0,def_28(A__questionmark_v1,A__questionmark_v2,A__questionmark_v3))
+    <=> ( ( ( A__questionmark_v3 = 'none$' )
+         => 'fun_app$u'(A__questionmark_v0,A__questionmark_v1) )
+        & ( ( A__questionmark_v3 = 'fun_app$k'('some$c','the$e'(A__questionmark_v3)) )
+         => 'fun_app$u'(A__questionmark_v0,def_29(A__questionmark_v2,A__questionmark_v3)) ) ) ) ).
+
+%% ∀ ?v0:Bool_bool_fun$ ?v1:Bool ?v2:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_bool_fun$ ?v3:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$ (fun_app$u(?v0, fun_app$bo(case_option$h(?v1, ?v2), ?v3)) = (((?v3 = none$a) ⇒ fun_app$u(?v0, ?v1)) ∧ ((?v3 = fun_app$i(some$a, the$g(?v3))) ⇒ fun_app$u(?v0, fun_app$w(?v2, the$g(?v3))))))
+tff(axiom556,axiom,
+    ! [A__questionmark_v0: 'Bool_bool_fun$',A__questionmark_v1: tlbool,A__questionmark_v2: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_bool_fun$',A__questionmark_v3: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$'] :
+      ( 'fun_app$u'(A__questionmark_v0,def_30(A__questionmark_v1,A__questionmark_v2,A__questionmark_v3))
+    <=> ( ( ( A__questionmark_v3 = 'none$a' )
+         => 'fun_app$u'(A__questionmark_v0,A__questionmark_v1) )
+        & ( ( A__questionmark_v3 = 'fun_app$i'('some$a','the$g'(A__questionmark_v3)) )
+         => 'fun_app$u'(A__questionmark_v0,def_31(A__questionmark_v2,A__questionmark_v3)) ) ) ) ).
+
+%% ∀ ?v0:Bool_bool_fun$ ?v1:Bool ?v2:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_bool_fun$ ?v3:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$ (fun_app$u(?v0, fun_app$bp(case_option$i(?v1, ?v2), ?v3)) = (((?v3 = none$b) ⇒ fun_app$u(?v0, ?v1)) ∧ ((?v3 = fun_app$g(some$, the$d(?v3))) ⇒ fun_app$u(?v0, fun_app$x(?v2, the$d(?v3))))))
+tff(axiom557,axiom,
+    ! [A__questionmark_v0: 'Bool_bool_fun$',A__questionmark_v1: tlbool,A__questionmark_v2: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_bool_fun$',A__questionmark_v3: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$'] :
+      ( 'fun_app$u'(A__questionmark_v0,def_32(A__questionmark_v1,A__questionmark_v2,A__questionmark_v3))
+    <=> ( ( ( A__questionmark_v3 = 'none$b' )
+         => 'fun_app$u'(A__questionmark_v0,A__questionmark_v1) )
+        & ( ( A__questionmark_v3 = 'fun_app$g'('some$','the$d'(A__questionmark_v3)) )
+         => 'fun_app$u'(A__questionmark_v0,def_33(A__questionmark_v2,A__questionmark_v3)) ) ) ) ).
+
+%% ∀ ?v0:Bool_bool_fun$ ?v1:Bool ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_bool_fun$ ?v3:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_option$ (fun_app$u(?v0, fun_app$bq(case_option$j(?v1, ?v2), ?v3)) = (((?v3 = none$e) ⇒ fun_app$u(?v0, ?v1)) ∧ ((?v3 = fun_app$ay(some$e, the$c(?v3))) ⇒ fun_app$u(?v0, fun_app$(?v2, the$c(?v3))))))
+tff(axiom558,axiom,
+    ! [A__questionmark_v0: 'Bool_bool_fun$',A__questionmark_v1: tlbool,A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_bool_fun$',A__questionmark_v3: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_option$'] :
+      ( 'fun_app$u'(A__questionmark_v0,def_34(A__questionmark_v1,A__questionmark_v2,A__questionmark_v3))
+    <=> ( ( ( A__questionmark_v3 = 'none$e' )
+         => 'fun_app$u'(A__questionmark_v0,A__questionmark_v1) )
+        & ( ( A__questionmark_v3 = 'fun_app$ay'('some$e','the$c'(A__questionmark_v3)) )
+         => 'fun_app$u'(A__questionmark_v0,def_35(A__questionmark_v2,A__questionmark_v3)) ) ) ) ).
+
+%% l_get_M$d(get_O_b_j_e_c_t$, type_wf$d, object_ptr_kinds$)
+tff(axiom559,axiom,
+    'l_get_M$d'('get_O_b_j_e_c_t$','type_wf$d','object_ptr_kinds$') ).
+
+%% l_put_M$d(type_wf$d, object_ptr_kinds$, get_O_b_j_e_c_t$)
+tff(axiom560,axiom,
+    'l_put_M$d'('type_wf$d','object_ptr_kinds$','get_O_b_j_e_c_t$') ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$ (fun_app$ci(type_wf$, ?v0) ⇒ (fmember$a(?v1, fun_app$bl(object_ptr_kinds$, ?v0)) = ¬(fun_app$ck(fun_app$cl(get_O_b_j_e_c_t$, ?v1), ?v0) = none$f)))
+tff(axiom561,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$'] :
+      ( 'fun_app$ci'('type_wf$',A__questionmark_v0)
+     => ( 'fmember$a'(A__questionmark_v1,'fun_app$bl'('object_ptr_kinds$',A__questionmark_v0))
+      <=> ( 'fun_app$ck'('fun_app$cl'('get_O_b_j_e_c_t$',A__questionmark_v1),A__questionmark_v0) != 'none$f' ) ) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$ (fun_app$ci(type_wf$a, ?v0) ⇒ (fmember$a(?v1, fun_app$bl(object_ptr_kinds$, ?v0)) = ¬(fun_app$ck(fun_app$cl(get_O_b_j_e_c_t$, ?v1), ?v0) = none$f)))
+tff(axiom562,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$'] :
+      ( 'fun_app$ci'('type_wf$a',A__questionmark_v0)
+     => ( 'fmember$a'(A__questionmark_v1,'fun_app$bl'('object_ptr_kinds$',A__questionmark_v0))
+      <=> ( 'fun_app$ck'('fun_app$cl'('get_O_b_j_e_c_t$',A__questionmark_v1),A__questionmark_v0) != 'none$f' ) ) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$ (fun_app$ci(type_wf$b, ?v0) ⇒ (fmember$a(?v1, fun_app$bl(object_ptr_kinds$, ?v0)) = ¬(fun_app$ck(fun_app$cl(get_O_b_j_e_c_t$, ?v1), ?v0) = none$f)))
+tff(axiom563,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$'] :
+      ( 'fun_app$ci'('type_wf$b',A__questionmark_v0)
+     => ( 'fmember$a'(A__questionmark_v1,'fun_app$bl'('object_ptr_kinds$',A__questionmark_v0))
+      <=> ( 'fun_app$ck'('fun_app$cl'('get_O_b_j_e_c_t$',A__questionmark_v1),A__questionmark_v0) != 'none$f' ) ) ) ).
+
+%% ∀ ?v0:D_document_ptr$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ (fun_app$ap(fun_app$aq(get_D_o_c_u_m_e_n_t$, ?v0), ?v1) = bind$j(fun_app$ck(fun_app$cl(get_O_b_j_e_c_t$, cast_d_o_c_u_m_e_n_t_p_t_r_2_o_b_j_e_c_t_p_t_r$(?v0)), ?v1), cast_O_b_j_e_c_t_2_D_o_c_u_m_e_n_t$))
+tff(axiom564,axiom,
+    ! [A__questionmark_v0: 'D_document_ptr$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$'] : ( 'fun_app$ap'('fun_app$aq'('get_D_o_c_u_m_e_n_t$',A__questionmark_v0),A__questionmark_v1) = 'bind$j'('fun_app$ck'('fun_app$cl'('get_O_b_j_e_c_t$','cast_d_o_c_u_m_e_n_t_p_t_r_2_o_b_j_e_c_t_p_t_r$'(A__questionmark_v0)),A__questionmark_v1),'cast_O_b_j_e_c_t_2_D_o_c_u_m_e_n_t$') ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$ (fun_app$ci(type_wf$c, ?v0) ⇒ (fmember$a(?v1, fun_app$bl(object_ptr_kinds$, ?v0)) = ¬(fun_app$ck(fun_app$cl(get_O_b_j_e_c_t$, ?v1), ?v0) = none$f)))
+tff(axiom565,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$'] :
+      ( 'fun_app$ci'('type_wf$c',A__questionmark_v0)
+     => ( 'fmember$a'(A__questionmark_v1,'fun_app$bl'('object_ptr_kinds$',A__questionmark_v0))
+      <=> ( 'fun_app$ck'('fun_app$cl'('get_O_b_j_e_c_t$',A__questionmark_v1),A__questionmark_v0) != 'none$f' ) ) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ (fun_app$aj(fun_app$ak(get_N_o_d_e$, ?v0), ?v1) = bind$k(fun_app$ck(fun_app$cl(get_O_b_j_e_c_t$, cast_n_o_d_e_p_t_r_2_o_b_j_e_c_t_p_t_r$(?v0)), ?v1), cast_O_b_j_e_c_t_2_N_o_d_e$))
+tff(axiom566,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$'] : ( 'fun_app$aj'('fun_app$ak'('get_N_o_d_e$',A__questionmark_v0),A__questionmark_v1) = 'bind$k'('fun_app$ck'('fun_app$cl'('get_O_b_j_e_c_t$','cast_n_o_d_e_p_t_r_2_o_b_j_e_c_t_p_t_r$'(A__questionmark_v0)),A__questionmark_v1),'cast_O_b_j_e_c_t_2_N_o_d_e$') ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$ ?v1:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ ((fun_app$ci(type_wf$, fun_app$at(put_O_b_j_e_c_t$(?v0, ?v1), ?v2)) ∧ (fmember$a(?v0, fun_app$bl(object_ptr_kinds$, ?v2)) ∧ (fun_app$ci(type_wf$a, ?v2) ∧ (is_document_ptr_kind$(?v0) ⇒ fun_app$cj(is_document_kind$, the$(fun_app$ck(fun_app$cl(get_O_b_j_e_c_t$, ?v0), ?v2))))))) ⇒ fun_app$ci(type_wf$, ?v2))
+tff(axiom567,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$',A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$'] :
+      ( ( 'fun_app$ci'('type_wf$','fun_app$at'('put_O_b_j_e_c_t$'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2))
+        & 'fmember$a'(A__questionmark_v0,'fun_app$bl'('object_ptr_kinds$',A__questionmark_v2))
+        & 'fun_app$ci'('type_wf$a',A__questionmark_v2)
+        & ( 'is_document_ptr_kind$'(A__questionmark_v0)
+         => 'fun_app$cj'('is_document_kind$','the$'('fun_app$ck'('fun_app$cl'('get_O_b_j_e_c_t$',A__questionmark_v0),A__questionmark_v2))) ) )
+     => 'fun_app$ci'('type_wf$',A__questionmark_v2) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$ ?v1:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ ((fun_app$ci(type_wf$c, fun_app$at(put_O_b_j_e_c_t$(?v0, ?v1), ?v2)) ∧ (fmember$a(?v0, fun_app$bl(object_ptr_kinds$, ?v2)) ∧ (fun_app$ci(type_wf$d, ?v2) ∧ (is_node_ptr_kind$(?v0) ⇒ fun_app$cj(is_node_kind$, the$(fun_app$ck(fun_app$cl(get_O_b_j_e_c_t$, ?v0), ?v2))))))) ⇒ fun_app$ci(type_wf$c, ?v2))
+tff(axiom568,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$',A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$'] :
+      ( ( 'fun_app$ci'('type_wf$c','fun_app$at'('put_O_b_j_e_c_t$'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2))
+        & 'fmember$a'(A__questionmark_v0,'fun_app$bl'('object_ptr_kinds$',A__questionmark_v2))
+        & 'fun_app$ci'('type_wf$d',A__questionmark_v2)
+        & ( 'is_node_ptr_kind$'(A__questionmark_v0)
+         => 'fun_app$cj'('is_node_kind$','the$'('fun_app$ck'('fun_app$cl'('get_O_b_j_e_c_t$',A__questionmark_v0),A__questionmark_v2))) ) )
+     => 'fun_app$ci'('type_wf$c',A__questionmark_v2) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_j_option_RDocument_ext_heap_bool_fun$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_j_option_RDocument_ext_heap$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$ ((l_get_O_b_j_e_c_t_lemmas$(?v0) ∧ fun_app$cm(?v0, ?v1)) ⇒ (fmember$a(?v2, object_ptr_kinds$a(?v1)) = ¬(get_O_b_j_e_c_t$a(?v2, ?v1) = none$c)))
+tff(axiom569,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_j_option_RDocument_ext_heap_bool_fun$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_j_option_RDocument_ext_heap$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$'] :
+      ( ( 'l_get_O_b_j_e_c_t_lemmas$'(A__questionmark_v0)
+        & 'fun_app$cm'(A__questionmark_v0,A__questionmark_v1) )
+     => ( 'fmember$a'(A__questionmark_v2,'object_ptr_kinds$a'(A__questionmark_v1))
+      <=> ( 'get_O_b_j_e_c_t$a'(A__questionmark_v2,A__questionmark_v1) != 'none$c' ) ) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_h_option_RCharacterData_ext_RNode_ext_heap_bool_fun$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_h_option_RCharacterData_ext_RNode_ext_heap$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$ ((l_get_O_b_j_e_c_t_lemmas$a(?v0) ∧ fun_app$cn(?v0, ?v1)) ⇒ (fmember$a(?v2, object_ptr_kinds$b(?v1)) = ¬(get_O_b_j_e_c_t$b(?v2, ?v1) = none$)))
+tff(axiom570,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_h_option_RCharacterData_ext_RNode_ext_heap_bool_fun$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_h_option_RCharacterData_ext_RNode_ext_heap$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$'] :
+      ( ( 'l_get_O_b_j_e_c_t_lemmas$a'(A__questionmark_v0)
+        & 'fun_app$cn'(A__questionmark_v0,A__questionmark_v1) )
+     => ( 'fmember$a'(A__questionmark_v2,'object_ptr_kinds$b'(A__questionmark_v1))
+      <=> ( 'get_O_b_j_e_c_t$b'(A__questionmark_v2,A__questionmark_v1) != 'none$' ) ) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_RNode_ext_heap_bool_fun$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_RNode_ext_heap$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$ ((l_get_O_b_j_e_c_t_lemmas$b(?v0) ∧ fun_app$co(?v0, ?v1)) ⇒ (fmember$a(?v2, object_ptr_kinds$c(?v1)) = ¬(get_O_b_j_e_c_t$c(?v2, ?v1) = none$a)))
+tff(axiom571,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_RNode_ext_heap_bool_fun$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_RNode_ext_heap$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$'] :
+      ( ( 'l_get_O_b_j_e_c_t_lemmas$b'(A__questionmark_v0)
+        & 'fun_app$co'(A__questionmark_v0,A__questionmark_v1) )
+     => ( 'fmember$a'(A__questionmark_v2,'object_ptr_kinds$c'(A__questionmark_v1))
+      <=> ( 'get_O_b_j_e_c_t$c'(A__questionmark_v2,A__questionmark_v1) != 'none$a' ) ) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_heap_bool_fun$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_heap$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$ ((l_get_O_b_j_e_c_t_lemmas$c(?v0) ∧ fun_app$cp(?v0, ?v1)) ⇒ (fmember$a(?v2, object_ptr_kinds$d(?v1)) = ¬(get_O_b_j_e_c_t$d(?v2, ?v1) = none$b)))
+tff(axiom572,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_heap_bool_fun$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_heap$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$'] :
+      ( ( 'l_get_O_b_j_e_c_t_lemmas$c'(A__questionmark_v0)
+        & 'fun_app$cp'(A__questionmark_v0,A__questionmark_v1) )
+     => ( 'fmember$a'(A__questionmark_v2,'object_ptr_kinds$d'(A__questionmark_v1))
+      <=> ( 'get_O_b_j_e_c_t$d'(A__questionmark_v2,A__questionmark_v1) != 'none$b' ) ) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_bool_fun$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$ ((l_get_O_b_j_e_c_t_lemmas$d(?v0) ∧ fun_app$ci(?v0, ?v1)) ⇒ (fmember$a(?v2, fun_app$bl(object_ptr_kinds$, ?v1)) = ¬(fun_app$ck(fun_app$cl(get_O_b_j_e_c_t$, ?v2), ?v1) = none$f)))
+tff(axiom573,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap_bool_fun$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$'] :
+      ( ( 'l_get_O_b_j_e_c_t_lemmas$d'(A__questionmark_v0)
+        & 'fun_app$ci'(A__questionmark_v0,A__questionmark_v1) )
+     => ( 'fmember$a'(A__questionmark_v2,'fun_app$bl'('object_ptr_kinds$',A__questionmark_v1))
+      <=> ( 'fun_app$ck'('fun_app$cl'('get_O_b_j_e_c_t$',A__questionmark_v2),A__questionmark_v1) != 'none$f' ) ) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$ (a_known_ptr$(?v0) = (known_ptr$(?v0) ∨ fun_app$bq(case_option$j(false, uvk$), cast_o_b_j_e_c_t_p_t_r_2_n_o_d_e_p_t_r$(?v0))))
+tff(axiom574,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$'] :
+      ( 'a_known_ptr$'(A__questionmark_v0)
+    <=> ( 'known_ptr$'(A__questionmark_v0)
+        | 'fun_app$bq'('case_option$j'(tlfalse,'uvk$'),'cast_o_b_j_e_c_t_p_t_r_2_n_o_d_e_p_t_r$'(A__questionmark_v0)) ) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$ ((¬fun_app$bq(case_option$j(false, uvk$), cast_o_b_j_e_c_t_p_t_r_2_n_o_d_e_p_t_r$(?v0)) ∧ a_known_ptr$(?v0)) ⇒ known_ptr$(?v0))
+tff(axiom575,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$'] :
+      ( ( ~ 'fun_app$bq'('case_option$j'(tlfalse,'uvk$'),'cast_o_b_j_e_c_t_p_t_r_2_n_o_d_e_p_t_r$'(A__questionmark_v0))
+        & 'a_known_ptr$'(A__questionmark_v0) )
+     => 'known_ptr$'(A__questionmark_v0) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ (fun_app$(is_element_ptr_kind_n_o_d_e_p_t_r$, ?v0) ⇒ (cast_e_l_e_m_e_n_t_p_t_r_2_n_o_d_e_p_t_r$(the$b(fun_app$b(cast_n_o_d_e_p_t_r_2_e_l_e_m_e_n_t_p_t_r$, ?v0))) = ?v0))
+tff(axiom576,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$'] :
+      ( 'fun_app$'('is_element_ptr_kind_n_o_d_e_p_t_r$',A__questionmark_v0)
+     => ( 'cast_e_l_e_m_e_n_t_p_t_r_2_n_o_d_e_p_t_r$'('the$b'('fun_app$b'('cast_n_o_d_e_p_t_r_2_e_l_e_m_e_n_t_p_t_r$',A__questionmark_v0))) = A__questionmark_v0 ) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$ (is_node_ptr_kind$(?v0) ⇒ (cast_n_o_d_e_p_t_r_2_o_b_j_e_c_t_p_t_r$(the$c(cast_o_b_j_e_c_t_p_t_r_2_n_o_d_e_p_t_r$(?v0))) = ?v0))
+tff(axiom577,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$'] :
+      ( 'is_node_ptr_kind$'(A__questionmark_v0)
+     => ( 'cast_n_o_d_e_p_t_r_2_o_b_j_e_c_t_p_t_r$'('the$c'('cast_o_b_j_e_c_t_p_t_r_2_n_o_d_e_p_t_r$'(A__questionmark_v0))) = A__questionmark_v0 ) ) ).
+
+%% l_get_O_b_j_e_c_t_lemmas$d(type_wf$)
+tff(axiom578,axiom,
+    'l_get_O_b_j_e_c_t_lemmas$d'('type_wf$') ).
+
+%% l_get_O_b_j_e_c_t_lemmas$d(type_wf$a)
+tff(axiom579,axiom,
+    'l_get_O_b_j_e_c_t_lemmas$d'('type_wf$a') ).
+
+%% l_get_O_b_j_e_c_t_lemmas$d(type_wf$b)
+tff(axiom580,axiom,
+    'l_get_O_b_j_e_c_t_lemmas$d'('type_wf$b') ).
+
+%% l_get_O_b_j_e_c_t_lemmas$d(type_wf$c)
+tff(axiom581,axiom,
+    'l_get_O_b_j_e_c_t_lemmas$d'('type_wf$c') ).
+
+%% l_get_O_b_j_e_c_t_lemmas$d(type_wf$d)
+tff(axiom582,axiom,
+    'l_get_O_b_j_e_c_t_lemmas$d'('type_wf$d') ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$ ((¬fun_app$bq(case_option$j(false, uvk$), cast_o_b_j_e_c_t_p_t_r_2_n_o_d_e_p_t_r$(?v0)) ∧ known_ptr$a(?v0)) ⇒ known_ptr$(?v0))
+tff(axiom583,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$'] :
+      ( ( ~ 'fun_app$bq'('case_option$j'(tlfalse,'uvk$'),'cast_o_b_j_e_c_t_p_t_r_2_n_o_d_e_p_t_r$'(A__questionmark_v0))
+        & 'known_ptr$a'(A__questionmark_v0) )
+     => 'known_ptr$'(A__questionmark_v0) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$ (known_ptr$a(?v0) = (known_ptr$(?v0) ∨ fun_app$bq(case_option$j(false, uvk$), cast_o_b_j_e_c_t_p_t_r_2_n_o_d_e_p_t_r$(?v0))))
+tff(axiom584,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$'] :
+      ( 'known_ptr$a'(A__questionmark_v0)
+    <=> ( 'known_ptr$'(A__questionmark_v0)
+        | 'fun_app$bq'('case_option$j'(tlfalse,'uvk$'),'cast_o_b_j_e_c_t_p_t_r_2_n_o_d_e_p_t_r$'(A__questionmark_v0)) ) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$ ((fun_app$ci(known_ptrs$, ?v0) ∧ fmember$a(?v1, fun_app$bl(object_ptr_kinds$, ?v0))) ⇒ known_ptr$(?v1))
+tff(axiom585,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$'] :
+      ( ( 'fun_app$ci'('known_ptrs$',A__questionmark_v0)
+        & 'fmember$a'(A__questionmark_v1,'fun_app$bl'('object_ptr_kinds$',A__questionmark_v0)) )
+     => 'known_ptr$'(A__questionmark_v1) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ ((fun_app$bl(object_ptr_kinds$, ?v0) = fun_app$bl(object_ptr_kinds$, ?v1)) ⇒ (fun_app$ci(known_ptrs$, ?v0) = fun_app$ci(known_ptrs$, ?v1)))
+tff(axiom586,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$'] :
+      ( ( 'fun_app$bl'('object_ptr_kinds$',A__questionmark_v0) = 'fun_app$bl'('object_ptr_kinds$',A__questionmark_v1) )
+     => ( 'fun_app$ci'('known_ptrs$',A__questionmark_v0)
+      <=> 'fun_app$ci'('known_ptrs$',A__questionmark_v1) ) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ (fun_app$ci(known_ptrs$, ?v0) = ∀ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$ (member$d(?v1, fset$d(fun_app$bl(object_ptr_kinds$, ?v0))) ⇒ known_ptr$(?v1)))
+tff(axiom587,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$'] :
+      ( 'fun_app$ci'('known_ptrs$',A__questionmark_v0)
+    <=> ! [A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$'] :
+          ( 'member$d'(A__questionmark_v1,'fset$d'('fun_app$bl'('object_ptr_kinds$',A__questionmark_v0)))
+         => 'known_ptr$'(A__questionmark_v1) ) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ ((fmember$a(?v0, fun_app$bl(object_ptr_kinds$, ?v1)) ∧ fun_app$ci(known_ptrs$a, ?v1)) ⇒ known_ptr$a(?v0))
+tff(axiom588,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$'] :
+      ( ( 'fmember$a'(A__questionmark_v0,'fun_app$bl'('object_ptr_kinds$',A__questionmark_v1))
+        & 'fun_app$ci'('known_ptrs$a',A__questionmark_v1) )
+     => 'known_ptr$a'(A__questionmark_v0) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ (fun_app$(is_character_data_ptr_kind_n_o_d_e_p_t_r$, ?v0) ⇒ (cast_c_h_a_r_a_c_t_e_r_d_a_t_a_p_t_r_2_n_o_d_e_p_t_r$(the$h(fun_app$ct(cast_n_o_d_e_p_t_r_2_c_h_a_r_a_c_t_e_r_d_a_t_a_p_t_r$, ?v0))) = ?v0))
+tff(axiom589,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$'] :
+      ( 'fun_app$'('is_character_data_ptr_kind_n_o_d_e_p_t_r$',A__questionmark_v0)
+     => ( 'cast_c_h_a_r_a_c_t_e_r_d_a_t_a_p_t_r_2_n_o_d_e_p_t_r$'('the$h'('fun_app$ct'('cast_n_o_d_e_p_t_r_2_c_h_a_r_a_c_t_e_r_d_a_t_a_p_t_r$',A__questionmark_v0))) = A__questionmark_v0 ) ) ).
+
+%% ∀ ?v0:D_document_ptr$ (cast_o_b_j_e_c_t_p_t_r_2_d_o_c_u_m_e_n_t_p_t_r$(cast_d_o_c_u_m_e_n_t_p_t_r_2_o_b_j_e_c_t_p_t_r$(?v0)) = some$h(?v0))
+tff(axiom590,axiom,
+    ! [A__questionmark_v0: 'D_document_ptr$'] : ( 'cast_o_b_j_e_c_t_p_t_r_2_d_o_c_u_m_e_n_t_p_t_r$'('cast_d_o_c_u_m_e_n_t_p_t_r_2_o_b_j_e_c_t_p_t_r$'(A__questionmark_v0)) = 'some$h'(A__questionmark_v0) ) ).
+
+%% ∀ ?v0:B_character_data_ptr$ (fun_app$ct(cast_n_o_d_e_p_t_r_2_c_h_a_r_a_c_t_e_r_d_a_t_a_p_t_r$, cast_c_h_a_r_a_c_t_e_r_d_a_t_a_p_t_r_2_n_o_d_e_p_t_r$(?v0)) = some$i(?v0))
+tff(axiom591,axiom,
+    ! [A__questionmark_v0: 'B_character_data_ptr$'] : ( 'fun_app$ct'('cast_n_o_d_e_p_t_r_2_c_h_a_r_a_c_t_e_r_d_a_t_a_p_t_r$','cast_c_h_a_r_a_c_t_e_r_d_a_t_a_p_t_r_2_n_o_d_e_p_t_r$'(A__questionmark_v0)) = 'some$i'(A__questionmark_v0) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ ?v1:B_character_data_ptr$ ((fun_app$ct(cast_n_o_d_e_p_t_r_2_c_h_a_r_a_c_t_e_r_d_a_t_a_p_t_r$, ?v0) = some$i(?v1)) = (cast_c_h_a_r_a_c_t_e_r_d_a_t_a_p_t_r_2_n_o_d_e_p_t_r$(?v1) = ?v0))
+tff(axiom592,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$',A__questionmark_v1: 'B_character_data_ptr$'] :
+      ( ( 'fun_app$ct'('cast_n_o_d_e_p_t_r_2_c_h_a_r_a_c_t_e_r_d_a_t_a_p_t_r$',A__questionmark_v0) = 'some$i'(A__questionmark_v1) )
+    <=> ( 'cast_c_h_a_r_a_c_t_e_r_d_a_t_a_p_t_r_2_n_o_d_e_p_t_r$'(A__questionmark_v1) = A__questionmark_v0 ) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_fun_fun$ ?v1:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$ ?v2:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$ (combine_options$(?v0, ?v1, ?v2) = case_option$d(?v2, uvm$(?v0, ?v2), ?v1))
+tff(axiom593,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_fun_fun$',A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$',A__questionmark_v2: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$'] : ( 'combine_options$'(A__questionmark_v0,A__questionmark_v1,A__questionmark_v2) = 'case_option$d'(A__questionmark_v2,'uvm$'(A__questionmark_v0,A__questionmark_v2),A__questionmark_v1) ) ).
+
+%% ∀ ?v0:H_option_RCharacterData_ext_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_fun_fun$ ?v1:H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$ ?v2:H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$ (combine_options$a(?v0, ?v1, ?v2) = case_option$c(?v2, uvo$(?v0, ?v2), ?v1))
+tff(axiom594,axiom,
+    ! [A__questionmark_v0: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_fun_fun$',A__questionmark_v1: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$',A__questionmark_v2: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$'] : ( 'combine_options$a'(A__questionmark_v0,A__questionmark_v1,A__questionmark_v2) = 'case_option$c'(A__questionmark_v2,'uvo$'(A__questionmark_v0,A__questionmark_v2),A__questionmark_v1) ) ).
+
+%% ∀ ?v0:C_a_b_j_option_RDocument_ext_RObject_ext_c_a_b_j_option_RDocument_ext_RObject_ext_c_a_b_j_option_RDocument_ext_RObject_ext_fun_fun$ ?v1:C_a_b_j_option_RDocument_ext_RObject_ext_option$ ?v2:C_a_b_j_option_RDocument_ext_RObject_ext_option$ (combine_options$b(?v0, ?v1, ?v2) = case_option$b(?v2, uvq$(?v0, ?v2), ?v1))
+tff(axiom595,axiom,
+    ! [A__questionmark_v0: 'C_a_b_j_option_RDocument_ext_RObject_ext_c_a_b_j_option_RDocument_ext_RObject_ext_c_a_b_j_option_RDocument_ext_RObject_ext_fun_fun$',A__questionmark_v1: 'C_a_b_j_option_RDocument_ext_RObject_ext_option$',A__questionmark_v2: 'C_a_b_j_option_RDocument_ext_RObject_ext_option$'] : ( 'combine_options$b'(A__questionmark_v0,A__questionmark_v1,A__questionmark_v2) = 'case_option$b'(A__questionmark_v2,'uvq$'(A__questionmark_v0,A__questionmark_v2),A__questionmark_v1) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_fun_fun$ ?v1:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$ ?v2:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$ (combine_options$c(?v0, ?v1, ?v2) = case_option$a(?v2, uvs$(?v0, ?v2), ?v1))
+tff(axiom596,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_fun_fun$',A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$',A__questionmark_v2: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$'] : ( 'combine_options$c'(A__questionmark_v0,A__questionmark_v1,A__questionmark_v2) = 'case_option$a'(A__questionmark_v2,'uvs$'(A__questionmark_v0,A__questionmark_v2),A__questionmark_v1) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_fun_fun$ ?v1:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$ ?v2:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$ (combine_options$(?v0, fun_app$g(some$, ?v1), fun_app$g(some$, ?v2)) = fun_app$g(some$, fun_app$ae(fun_app$af(?v0, ?v1), ?v2)))
+tff(axiom597,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_fun_fun$',A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$',A__questionmark_v2: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$'] : ( 'combine_options$'(A__questionmark_v0,'fun_app$g'('some$',A__questionmark_v1),'fun_app$g'('some$',A__questionmark_v2)) = 'fun_app$g'('some$','fun_app$ae'('fun_app$af'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2)) ) ).
+
+%% ∀ ?v0:H_option_RCharacterData_ext_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_fun_fun$ ?v1:H_option_RCharacterData_ext_RNode_ext_RObject_ext$ ?v2:H_option_RCharacterData_ext_RNode_ext_RObject_ext$ (combine_options$a(?v0, fun_app$k(some$c, ?v1), fun_app$k(some$c, ?v2)) = fun_app$k(some$c, fun_app$aa(fun_app$ab(?v0, ?v1), ?v2)))
+tff(axiom598,axiom,
+    ! [A__questionmark_v0: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_h_option_RCharacterData_ext_RNode_ext_RObject_ext_fun_fun$',A__questionmark_v1: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext$',A__questionmark_v2: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext$'] : ( 'combine_options$a'(A__questionmark_v0,'fun_app$k'('some$c',A__questionmark_v1),'fun_app$k'('some$c',A__questionmark_v2)) = 'fun_app$k'('some$c','fun_app$aa'('fun_app$ab'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2)) ) ).
+
+%% ∀ ?v0:C_a_b_j_option_RDocument_ext_RObject_ext_c_a_b_j_option_RDocument_ext_RObject_ext_c_a_b_j_option_RDocument_ext_RObject_ext_fun_fun$ ?v1:C_a_b_j_option_RDocument_ext_RObject_ext$ ?v2:C_a_b_j_option_RDocument_ext_RObject_ext$ (combine_options$b(?v0, fun_app$j(some$b, ?v1), fun_app$j(some$b, ?v2)) = fun_app$j(some$b, fun_app$y(fun_app$z(?v0, ?v1), ?v2)))
+tff(axiom599,axiom,
+    ! [A__questionmark_v0: 'C_a_b_j_option_RDocument_ext_RObject_ext_c_a_b_j_option_RDocument_ext_RObject_ext_c_a_b_j_option_RDocument_ext_RObject_ext_fun_fun$',A__questionmark_v1: 'C_a_b_j_option_RDocument_ext_RObject_ext$',A__questionmark_v2: 'C_a_b_j_option_RDocument_ext_RObject_ext$'] : ( 'combine_options$b'(A__questionmark_v0,'fun_app$j'('some$b',A__questionmark_v1),'fun_app$j'('some$b',A__questionmark_v2)) = 'fun_app$j'('some$b','fun_app$y'('fun_app$z'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2)) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_fun_fun$ ?v1:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$ ?v2:C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$ (combine_options$c(?v0, fun_app$i(some$a, ?v1), fun_app$i(some$a, ?v2)) = fun_app$i(some$a, fun_app$ac(fun_app$ad(?v0, ?v1), ?v2)))
+tff(axiom600,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_c_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_fun_fun$',A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$',A__questionmark_v2: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$'] : ( 'combine_options$c'(A__questionmark_v0,'fun_app$i'('some$a',A__questionmark_v1),'fun_app$i'('some$a',A__questionmark_v2)) = 'fun_app$i'('some$a','fun_app$ac'('fun_app$ad'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2)) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$ ?v1:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ (fun_app$av(element_ptr_kinds$, fun_app$at(put_O_b_j_e_c_t$(?v0, ?v1), ?v2)) = sup$(fun_app$av(element_ptr_kinds$, ?v2), (if fun_app$bq(case_option$j(false, is_element_ptr_kind_n_o_d_e_p_t_r$), cast_o_b_j_e_c_t_p_t_r_2_n_o_d_e_p_t_r$(?v0)) finsert$(the$b(case_option$m(none$d, cast_n_o_d_e_p_t_r_2_e_l_e_m_e_n_t_p_t_r$, cast_o_b_j_e_c_t_p_t_r_2_n_o_d_e_p_t_r$(?v0))), bot$) else bot$)))
+tff(axiom601,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$',A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$'] :
+      ( ( 'fun_app$bq'('case_option$j'(tlfalse,'is_element_ptr_kind_n_o_d_e_p_t_r$'),'cast_o_b_j_e_c_t_p_t_r_2_n_o_d_e_p_t_r$'(A__questionmark_v0))
+       => ( 'fun_app$av'('element_ptr_kinds$','fun_app$at'('put_O_b_j_e_c_t$'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2)) = 'sup$'('fun_app$av'('element_ptr_kinds$',A__questionmark_v2),'finsert$'('the$b'('case_option$m'('none$d','cast_n_o_d_e_p_t_r_2_e_l_e_m_e_n_t_p_t_r$','cast_o_b_j_e_c_t_p_t_r_2_n_o_d_e_p_t_r$'(A__questionmark_v0))),'bot$')) ) )
+      & ( ~ 'fun_app$bq'('case_option$j'(tlfalse,'is_element_ptr_kind_n_o_d_e_p_t_r$'),'cast_o_b_j_e_c_t_p_t_r_2_n_o_d_e_p_t_r$'(A__questionmark_v0))
+       => ( 'fun_app$av'('element_ptr_kinds$','fun_app$at'('put_O_b_j_e_c_t$'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2)) = 'sup$'('fun_app$av'('element_ptr_kinds$',A__questionmark_v2),'bot$') ) ) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$ ?v1:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ (fun_app$al(character_data_ptr_kinds$, fun_app$at(put_O_b_j_e_c_t$(?v0, ?v1), ?v2)) = sup$a(fun_app$al(character_data_ptr_kinds$, ?v2), (if fun_app$bq(case_option$j(false, is_character_data_ptr_kind_n_o_d_e_p_t_r$), cast_o_b_j_e_c_t_p_t_r_2_n_o_d_e_p_t_r$(?v0)) finsert$a(the$h(case_option$n(none$i, cast_n_o_d_e_p_t_r_2_c_h_a_r_a_c_t_e_r_d_a_t_a_p_t_r$, cast_o_b_j_e_c_t_p_t_r_2_n_o_d_e_p_t_r$(?v0))), bot$a) else bot$a)))
+tff(axiom602,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$',A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$'] :
+      ( ( 'fun_app$bq'('case_option$j'(tlfalse,'is_character_data_ptr_kind_n_o_d_e_p_t_r$'),'cast_o_b_j_e_c_t_p_t_r_2_n_o_d_e_p_t_r$'(A__questionmark_v0))
+       => ( 'fun_app$al'('character_data_ptr_kinds$','fun_app$at'('put_O_b_j_e_c_t$'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2)) = 'sup$a'('fun_app$al'('character_data_ptr_kinds$',A__questionmark_v2),'finsert$a'('the$h'('case_option$n'('none$i','cast_n_o_d_e_p_t_r_2_c_h_a_r_a_c_t_e_r_d_a_t_a_p_t_r$','cast_o_b_j_e_c_t_p_t_r_2_n_o_d_e_p_t_r$'(A__questionmark_v0))),'bot$a')) ) )
+      & ( ~ 'fun_app$bq'('case_option$j'(tlfalse,'is_character_data_ptr_kind_n_o_d_e_p_t_r$'),'cast_o_b_j_e_c_t_p_t_r_2_n_o_d_e_p_t_r$'(A__questionmark_v0))
+       => ( 'fun_app$al'('character_data_ptr_kinds$','fun_app$at'('put_O_b_j_e_c_t$'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2)) = 'sup$a'('fun_app$al'('character_data_ptr_kinds$',A__questionmark_v2),'bot$a') ) ) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$ (fun_app$aw(fmember$(?v0), finsert$b(?v1, ?v2)) = ((?v0 = ?v1) ∨ fun_app$aw(fmember$(?v0), ?v2)))
+tff(axiom603,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$'] :
+      ( 'fun_app$aw'('fmember$'(A__questionmark_v0),'finsert$b'(A__questionmark_v1,A__questionmark_v2))
+    <=> ( ( A__questionmark_v0 = A__questionmark_v1 )
+        | 'fun_app$aw'('fmember$'(A__questionmark_v0),A__questionmark_v2) ) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ ((¬fun_app$aw(fmember$(?v0), ?v1) ⇒ (?v0 = ?v2)) ⇒ fun_app$aw(fmember$(?v0), finsert$b(?v2, ?v1)))
+tff(axiom604,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$'] :
+      ( ( ~ 'fun_app$aw'('fmember$'(A__questionmark_v0),A__questionmark_v1)
+       => ( A__questionmark_v0 = A__questionmark_v2 ) )
+     => 'fun_app$aw'('fmember$'(A__questionmark_v0),'finsert$b'(A__questionmark_v2,A__questionmark_v1)) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$ (∀ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ ¬fun_app$aw(fmember$(?v1), ?v0) = (?v0 = bot$b))
+tff(axiom605,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$'] :
+      ( ! [A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$'] : ~ 'fun_app$aw'('fmember$'(A__questionmark_v1),A__questionmark_v0)
+    <=> ( A__questionmark_v0 = 'bot$b' ) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ (fun_app$aw(fmember$(?v0), bot$b) = false)
+tff(axiom606,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$'] :
+      ( 'fun_app$aw'('fmember$'(A__questionmark_v0),'bot$b')
+    <=> $false ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$ (fun_app$aw(fmember$(?v0), sup$b(?v1, ?v2)) = (fun_app$aw(fmember$(?v0), ?v1) ∨ fun_app$aw(fmember$(?v0), ?v2)))
+tff(axiom607,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$'] :
+      ( 'fun_app$aw'('fmember$'(A__questionmark_v0),'sup$b'(A__questionmark_v1,A__questionmark_v2))
+    <=> ( 'fun_app$aw'('fmember$'(A__questionmark_v0),A__questionmark_v1)
+        | 'fun_app$aw'('fmember$'(A__questionmark_v0),A__questionmark_v2) ) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$ ((¬fun_app$aw(fmember$(?v0), ?v1) ⇒ fun_app$aw(fmember$(?v0), ?v2)) ⇒ fun_app$aw(fmember$(?v0), sup$b(?v2, ?v1)))
+tff(axiom608,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$'] :
+      ( ( ~ 'fun_app$aw'('fmember$'(A__questionmark_v0),A__questionmark_v1)
+       => 'fun_app$aw'('fmember$'(A__questionmark_v0),A__questionmark_v2) )
+     => 'fun_app$aw'('fmember$'(A__questionmark_v0),'sup$b'(A__questionmark_v2,A__questionmark_v1)) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$ (fun_app$aw(fmember$(?v0), ?v1) ⇒ ∃ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$ ((?v1 = finsert$b(?v0, ?v2)) ∧ ¬fun_app$aw(fmember$(?v0), ?v2)))
+tff(axiom609,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$'] :
+      ( 'fun_app$aw'('fmember$'(A__questionmark_v0),A__questionmark_v1)
+     => ? [A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$'] :
+          ( ( A__questionmark_v1 = 'finsert$b'(A__questionmark_v0,A__questionmark_v2) )
+          & ~ 'fun_app$aw'('fmember$'(A__questionmark_v0),A__questionmark_v2) ) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ ?v3:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$ ((¬fun_app$aw(fmember$(?v0), ?v1) ∧ ¬fun_app$aw(fmember$(?v2), ?v3)) ⇒ ((finsert$b(?v0, ?v1) = finsert$b(?v2, ?v3)) = (if (?v0 = ?v2) (?v1 = ?v3) else ∃ ?v4:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$ ((?v1 = finsert$b(?v2, ?v4)) ∧ (¬fun_app$aw(fmember$(?v2), ?v4) ∧ ((?v3 = finsert$b(?v0, ?v4)) ∧ ¬fun_app$aw(fmember$(?v0), ?v4)))))))
+tff(axiom610,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$',A__questionmark_v3: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$'] :
+      ( ( ~ 'fun_app$aw'('fmember$'(A__questionmark_v0),A__questionmark_v1)
+        & ~ 'fun_app$aw'('fmember$'(A__questionmark_v2),A__questionmark_v3) )
+     => ( ( 'finsert$b'(A__questionmark_v0,A__questionmark_v1) = 'finsert$b'(A__questionmark_v2,A__questionmark_v3) )
+      <=> ( ( ( A__questionmark_v0 = A__questionmark_v2 )
+           => ( A__questionmark_v1 = A__questionmark_v3 ) )
+          & ( ( A__questionmark_v0 != A__questionmark_v2 )
+           => ? [A__questionmark_v4: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$'] :
+                ( ( A__questionmark_v1 = 'finsert$b'(A__questionmark_v2,A__questionmark_v4) )
+                & ~ 'fun_app$aw'('fmember$'(A__questionmark_v2),A__questionmark_v4)
+                & ( A__questionmark_v3 = 'finsert$b'(A__questionmark_v0,A__questionmark_v4) )
+                & ~ 'fun_app$aw'('fmember$'(A__questionmark_v0),A__questionmark_v4) ) ) ) ) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$ (fun_app$aw(fmember$(?v0), ?v1) ⇒ (finsert$b(?v0, ?v1) = ?v1))
+tff(axiom611,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$'] :
+      ( 'fun_app$aw'('fmember$'(A__questionmark_v0),A__questionmark_v1)
+     => ( 'finsert$b'(A__questionmark_v0,A__questionmark_v1) = A__questionmark_v1 ) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$ ((¬fun_app$aw(fmember$(?v0), ?v1) ∧ ¬fun_app$aw(fmember$(?v0), ?v2)) ⇒ ((finsert$b(?v0, ?v1) = finsert$b(?v0, ?v2)) = (?v1 = ?v2)))
+tff(axiom612,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$'] :
+      ( ( ~ 'fun_app$aw'('fmember$'(A__questionmark_v0),A__questionmark_v1)
+        & ~ 'fun_app$aw'('fmember$'(A__questionmark_v0),A__questionmark_v2) )
+     => ( ( 'finsert$b'(A__questionmark_v0,A__questionmark_v1) = 'finsert$b'(A__questionmark_v0,A__questionmark_v2) )
+      <=> ( A__questionmark_v1 = A__questionmark_v2 ) ) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$ ((fun_app$aw(fmember$(?v0), ?v1) ∧ ∀ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$ (((?v1 = finsert$b(?v0, ?v2)) ∧ ¬fun_app$aw(fmember$(?v0), ?v2)) ⇒ false)) ⇒ false)
+tff(axiom613,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$'] :
+      ( ( 'fun_app$aw'('fmember$'(A__questionmark_v0),A__questionmark_v1)
+        & ! [A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$'] :
+            ( ( ( A__questionmark_v1 = 'finsert$b'(A__questionmark_v0,A__questionmark_v2) )
+              & ~ 'fun_app$aw'('fmember$'(A__questionmark_v0),A__questionmark_v2) )
+           => $false ) )
+     => $false ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ (fun_app$aw(fmember$(?v0), ?v1) ⇒ fun_app$aw(fmember$(?v0), finsert$b(?v2, ?v1)))
+tff(axiom614,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$'] :
+      ( 'fun_app$aw'('fmember$'(A__questionmark_v0),A__questionmark_v1)
+     => 'fun_app$aw'('fmember$'(A__questionmark_v0),'finsert$b'(A__questionmark_v2,A__questionmark_v1)) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$ fun_app$aw(fmember$(?v0), finsert$b(?v0, ?v1))
+tff(axiom615,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$'] : 'fun_app$aw'('fmember$'(A__questionmark_v0),'finsert$b'(A__questionmark_v0,A__questionmark_v1)) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$ ((fun_app$aw(fmember$(?v0), finsert$b(?v1, ?v2)) ∧ (((?v0 = ?v1) ⇒ false) ∧ (fun_app$aw(fmember$(?v0), ?v2) ⇒ false))) ⇒ false)
+tff(axiom616,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$'] :
+      ( ( 'fun_app$aw'('fmember$'(A__questionmark_v0),'finsert$b'(A__questionmark_v1,A__questionmark_v2))
+        & ( ( A__questionmark_v0 = A__questionmark_v1 )
+         => $false )
+        & ( 'fun_app$aw'('fmember$'(A__questionmark_v0),A__questionmark_v2)
+         => $false ) )
+     => $false ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset_bool_fun$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$ ((fun_app$aw(?v0, bot$b) ∧ ∀ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ ?v3:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$ ((¬fun_app$aw(fmember$(?v2), ?v3) ∧ fun_app$aw(?v0, ?v3)) ⇒ fun_app$aw(?v0, finsert$b(?v2, ?v3)))) ⇒ fun_app$aw(?v0, ?v1))
+tff(axiom617,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset_bool_fun$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$'] :
+      ( ( 'fun_app$aw'(A__questionmark_v0,'bot$b')
+        & ! [A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$',A__questionmark_v3: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$'] :
+            ( ( ~ 'fun_app$aw'('fmember$'(A__questionmark_v2),A__questionmark_v3)
+              & 'fun_app$aw'(A__questionmark_v0,A__questionmark_v3) )
+           => 'fun_app$aw'(A__questionmark_v0,'finsert$b'(A__questionmark_v2,A__questionmark_v3)) ) )
+     => 'fun_app$aw'(A__questionmark_v0,A__questionmark_v1) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$ ((((?v0 = bot$b) ⇒ false) ∧ ∀ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ ((¬fun_app$aw(fmember$(?v2), ?v1) ∧ (?v0 = finsert$b(?v2, ?v1))) ⇒ false)) ⇒ false)
+tff(axiom618,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$'] :
+      ( ( ( ( A__questionmark_v0 = 'bot$b' )
+         => $false )
+        & ! [A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$'] :
+            ( ( ~ 'fun_app$aw'('fmember$'(A__questionmark_v2),A__questionmark_v1)
+              & ( A__questionmark_v0 = 'finsert$b'(A__questionmark_v2,A__questionmark_v1) ) )
+           => $false ) )
+     => $false ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ (fun_app$aw(fmember$(?v0), finsert$b(?v1, bot$b)) = (?v0 = ?v1))
+tff(axiom619,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$'] :
+      ( 'fun_app$aw'('fmember$'(A__questionmark_v0),'finsert$b'(A__questionmark_v1,'bot$b'))
+    <=> ( A__questionmark_v0 = A__questionmark_v1 ) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset_bool_fun_fun$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$ ((fun_app$aw(fun_app$cu(?v0, bot$b), bot$b) ∧ (∀ ?v3:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ ?v4:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$ (¬fun_app$aw(fmember$(?v3), ?v4) ⇒ fun_app$aw(fun_app$cu(?v0, finsert$b(?v3, ?v4)), bot$b)) ∧ (∀ ?v3:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ ?v4:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$ (¬fun_app$aw(fmember$(?v3), ?v4) ⇒ fun_app$aw(fun_app$cu(?v0, bot$b), finsert$b(?v3, ?v4))) ∧ ∀ ?v3:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ ?v4:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$ ?v5:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ ?v6:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$ ((fun_app$aw(fun_app$cu(?v0, ?v4), ?v6) ∧ (¬fun_app$aw(fmember$(?v3), ?v4) ∧ ¬fun_app$aw(fmember$(?v5), ?v6))) ⇒ fun_app$aw(fun_app$cu(?v0, finsert$b(?v3, ?v4)), finsert$b(?v5, ?v6)))))) ⇒ fun_app$aw(fun_app$cu(?v0, ?v1), ?v2))
+tff(axiom620,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset_a_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset_bool_fun_fun$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$'] :
+      ( ( 'fun_app$aw'('fun_app$cu'(A__questionmark_v0,'bot$b'),'bot$b')
+        & ! [A__questionmark_v3: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$',A__questionmark_v4: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$'] :
+            ( ~ 'fun_app$aw'('fmember$'(A__questionmark_v3),A__questionmark_v4)
+           => 'fun_app$aw'('fun_app$cu'(A__questionmark_v0,'finsert$b'(A__questionmark_v3,A__questionmark_v4)),'bot$b') )
+        & ! [A__questionmark_v3: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$',A__questionmark_v4: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$'] :
+            ( ~ 'fun_app$aw'('fmember$'(A__questionmark_v3),A__questionmark_v4)
+           => 'fun_app$aw'('fun_app$cu'(A__questionmark_v0,'bot$b'),'finsert$b'(A__questionmark_v3,A__questionmark_v4)) )
+        & ! [A__questionmark_v3: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$',A__questionmark_v4: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$',A__questionmark_v5: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$',A__questionmark_v6: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$'] :
+            ( ( 'fun_app$aw'('fun_app$cu'(A__questionmark_v0,A__questionmark_v4),A__questionmark_v6)
+              & ~ 'fun_app$aw'('fmember$'(A__questionmark_v3),A__questionmark_v4)
+              & ~ 'fun_app$aw'('fmember$'(A__questionmark_v5),A__questionmark_v6) )
+           => 'fun_app$aw'('fun_app$cu'(A__questionmark_v0,'finsert$b'(A__questionmark_v3,A__questionmark_v4)),'finsert$b'(A__questionmark_v5,A__questionmark_v6)) ) )
+     => 'fun_app$aw'('fun_app$cu'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$ (∀ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ (fun_app$aw(fmember$(?v1), ?v0) ⇒ false) ⇒ (?v0 = bot$b))
+tff(axiom621,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$'] :
+      ( ! [A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$'] :
+          ( 'fun_app$aw'('fmember$'(A__questionmark_v1),A__questionmark_v0)
+         => $false )
+     => ( A__questionmark_v0 = 'bot$b' ) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ ((?v0 = bot$b) ⇒ ¬fun_app$aw(fmember$(?v1), ?v0))
+tff(axiom622,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$'] :
+      ( ( A__questionmark_v0 = 'bot$b' )
+     => ~ 'fun_app$aw'('fmember$'(A__questionmark_v1),A__questionmark_v0) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$ (∃ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ fun_app$aw(fmember$(?v1), ?v0) = ¬(?v0 = bot$b))
+tff(axiom623,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$'] :
+      ( ? [A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$'] : 'fun_app$aw'('fmember$'(A__questionmark_v1),A__questionmark_v0)
+    <=> ( A__questionmark_v0 != 'bot$b' ) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ (fun_app$aw(fmember$(?v0), bot$b) ⇒ false)
+tff(axiom624,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$'] :
+      ( 'fun_app$aw'('fmember$'(A__questionmark_v0),'bot$b')
+     => $false ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$ (fun_app$aw(fmember$(?v0), ?v1) ⇒ fun_app$aw(fmember$(?v0), sup$b(?v2, ?v1)))
+tff(axiom625,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$'] :
+      ( 'fun_app$aw'('fmember$'(A__questionmark_v0),A__questionmark_v1)
+     => 'fun_app$aw'('fmember$'(A__questionmark_v0),'sup$b'(A__questionmark_v2,A__questionmark_v1)) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$ (fun_app$aw(fmember$(?v0), ?v1) ⇒ fun_app$aw(fmember$(?v0), sup$b(?v1, ?v2)))
+tff(axiom626,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$'] :
+      ( 'fun_app$aw'('fmember$'(A__questionmark_v0),A__questionmark_v1)
+     => 'fun_app$aw'('fmember$'(A__questionmark_v0),'sup$b'(A__questionmark_v1,A__questionmark_v2)) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$ ((fun_app$aw(fmember$(?v0), sup$b(?v1, ?v2)) ∧ ((fun_app$aw(fmember$(?v0), ?v1) ⇒ false) ∧ (fun_app$aw(fmember$(?v0), ?v2) ⇒ false))) ⇒ false)
+tff(axiom627,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$'] :
+      ( ( 'fun_app$aw'('fmember$'(A__questionmark_v0),'sup$b'(A__questionmark_v1,A__questionmark_v2))
+        & ( 'fun_app$aw'('fmember$'(A__questionmark_v0),A__questionmark_v1)
+         => $false )
+        & ( 'fun_app$aw'('fmember$'(A__questionmark_v0),A__questionmark_v2)
+         => $false ) )
+     => $false ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$ ?v1:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ (fun_app$bl(object_ptr_kinds$, fun_app$at(put_O_b_j_e_c_t$(?v0, ?v1), ?v2)) = sup$c(fun_app$bl(object_ptr_kinds$, ?v2), finsert$c(?v0, bot$c)))
+tff(axiom628,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$',A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$'] : ( 'fun_app$bl'('object_ptr_kinds$','fun_app$at'('put_O_b_j_e_c_t$'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2)) = 'sup$c'('fun_app$bl'('object_ptr_kinds$',A__questionmark_v2),'finsert$c'(A__questionmark_v0,'bot$c')) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$ ?v1:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ (fun_app$ao(document_ptr_kinds$, fun_app$at(put_O_b_j_e_c_t$(?v0, ?v1), ?v2)) = sup$d(fun_app$ao(document_ptr_kinds$, ?v2), (if is_document_ptr_kind$(?v0) finsert$d(the$a(cast_o_b_j_e_c_t_p_t_r_2_d_o_c_u_m_e_n_t_p_t_r$(?v0)), bot$d) else bot$d)))
+tff(axiom629,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$',A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$'] :
+      ( ( 'is_document_ptr_kind$'(A__questionmark_v0)
+       => ( 'fun_app$ao'('document_ptr_kinds$','fun_app$at'('put_O_b_j_e_c_t$'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2)) = 'sup$d'('fun_app$ao'('document_ptr_kinds$',A__questionmark_v2),'finsert$d'('the$a'('cast_o_b_j_e_c_t_p_t_r_2_d_o_c_u_m_e_n_t_p_t_r$'(A__questionmark_v0)),'bot$d')) ) )
+      & ( ~ 'is_document_ptr_kind$'(A__questionmark_v0)
+       => ( 'fun_app$ao'('document_ptr_kinds$','fun_app$at'('put_O_b_j_e_c_t$'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2)) = 'sup$d'('fun_app$ao'('document_ptr_kinds$',A__questionmark_v2),'bot$d') ) ) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$ ?v1:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ (fun_app$au(node_ptr_kinds$, fun_app$at(put_O_b_j_e_c_t$(?v0, ?v1), ?v2)) = sup$b(fun_app$au(node_ptr_kinds$, ?v2), (if is_node_ptr_kind$(?v0) finsert$b(the$c(cast_o_b_j_e_c_t_p_t_r_2_n_o_d_e_p_t_r$(?v0)), bot$b) else bot$b)))
+tff(axiom630,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$',A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$'] :
+      ( ( 'is_node_ptr_kind$'(A__questionmark_v0)
+       => ( 'fun_app$au'('node_ptr_kinds$','fun_app$at'('put_O_b_j_e_c_t$'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2)) = 'sup$b'('fun_app$au'('node_ptr_kinds$',A__questionmark_v2),'finsert$b'('the$c'('cast_o_b_j_e_c_t_p_t_r_2_n_o_d_e_p_t_r$'(A__questionmark_v0)),'bot$b')) ) )
+      & ( ~ 'is_node_ptr_kind$'(A__questionmark_v0)
+       => ( 'fun_app$au'('node_ptr_kinds$','fun_app$at'('put_O_b_j_e_c_t$'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2)) = 'sup$b'('fun_app$au'('node_ptr_kinds$',A__questionmark_v2),'bot$b') ) ) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$ ?v1:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ ?v3:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ ((fun_app$at(put_O_b_j_e_c_t$(?v0, ?v1), ?v2) = ?v3) ⇒ (fun_app$bl(object_ptr_kinds$, ?v3) = sup$c(fun_app$bl(object_ptr_kinds$, ?v2), finsert$c(?v0, bot$c))))
+tff(axiom631,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$',A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$',A__questionmark_v3: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$'] :
+      ( ( 'fun_app$at'('put_O_b_j_e_c_t$'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2) = A__questionmark_v3 )
+     => ( 'fun_app$bl'('object_ptr_kinds$',A__questionmark_v3) = 'sup$c'('fun_app$bl'('object_ptr_kinds$',A__questionmark_v2),'finsert$c'(A__questionmark_v0,'bot$c')) ) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$ (fun_app$n(cast_N_o_d_e_2_E_l_e_m_e_n_t$, ?v0) = case_sum$(uvt$(?v0), uvu$, more$(?v0)))
+tff(axiom632,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$'] : ( 'fun_app$n'('cast_N_o_d_e_2_E_l_e_m_e_n_t$',A__questionmark_v0) = 'case_sum$'('uvt$'(A__questionmark_v0),'uvu$','more$'(A__questionmark_v0)) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$ (∀ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ (fun_app$aw(fmember$(?v2), ?v0) ⇒ fun_app$aw(fmember$(?v2), ?v1)) ⇒ fun_app$aw(fun_app$cu(less_eq$, ?v0), ?v1))
+tff(axiom633,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$'] :
+      ( ! [A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$'] :
+          ( 'fun_app$aw'('fmember$'(A__questionmark_v2),A__questionmark_v0)
+         => 'fun_app$aw'('fmember$'(A__questionmark_v2),A__questionmark_v1) )
+     => 'fun_app$aw'('fun_app$cu'('less_eq$',A__questionmark_v0),A__questionmark_v1) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$ (fun_app$aw(fun_app$cu(less_eq$, finsert$b(?v0, ?v1)), ?v2) = (fun_app$aw(fmember$(?v0), ?v2) ∧ fun_app$aw(fun_app$cu(less_eq$, ?v1), ?v2)))
+tff(axiom634,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$'] :
+      ( 'fun_app$aw'('fun_app$cu'('less_eq$','finsert$b'(A__questionmark_v0,A__questionmark_v1)),A__questionmark_v2)
+    <=> ( 'fun_app$aw'('fmember$'(A__questionmark_v0),A__questionmark_v2)
+        & 'fun_app$aw'('fun_app$cu'('less_eq$',A__questionmark_v1),A__questionmark_v2) ) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$ (¬fun_app$aw(fmember$(?v0), ?v1) ⇒ (fun_app$aw(fun_app$cu(less_eq$, ?v1), finsert$b(?v0, ?v2)) = fun_app$aw(fun_app$cu(less_eq$, ?v1), ?v2)))
+tff(axiom635,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$'] :
+      ( ~ 'fun_app$aw'('fmember$'(A__questionmark_v0),A__questionmark_v1)
+     => ( 'fun_app$aw'('fun_app$cu'('less_eq$',A__questionmark_v1),'finsert$b'(A__questionmark_v0,A__questionmark_v2))
+      <=> 'fun_app$aw'('fun_app$cu'('less_eq$',A__questionmark_v1),A__questionmark_v2) ) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ ((fun_app$aw(fun_app$cu(less_eq$, ?v0), ?v1) ∧ fun_app$aw(fmember$(?v2), ?v0)) ⇒ fun_app$aw(fmember$(?v2), ?v1))
+tff(axiom636,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$'] :
+      ( ( 'fun_app$aw'('fun_app$cu'('less_eq$',A__questionmark_v0),A__questionmark_v1)
+        & 'fun_app$aw'('fmember$'(A__questionmark_v2),A__questionmark_v0) )
+     => 'fun_app$aw'('fmember$'(A__questionmark_v2),A__questionmark_v1) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ ((fun_app$aw(fun_app$cu(less_eq$, ?v0), ?v1) ∧ fun_app$aw(fmember$(?v2), ?v0)) ⇒ fun_app$aw(fmember$(?v2), ?v1))
+tff(axiom637,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$'] :
+      ( ( 'fun_app$aw'('fun_app$cu'('less_eq$',A__questionmark_v0),A__questionmark_v1)
+        & 'fun_app$aw'('fmember$'(A__questionmark_v2),A__questionmark_v0) )
+     => 'fun_app$aw'('fmember$'(A__questionmark_v2),A__questionmark_v1) ) ).
+
+%% ∀ ?v0:B_character_data_ptr_fset$ ?v1:B_character_data_ptr_fset$ (less_eq$a(?v0, ?v1) = less_eq$b(fset$(?v0), fset$(?v1)))
+tff(axiom638,axiom,
+    ! [A__questionmark_v0: 'B_character_data_ptr_fset$',A__questionmark_v1: 'B_character_data_ptr_fset$'] :
+      ( 'less_eq$a'(A__questionmark_v0,A__questionmark_v1)
+    <=> 'less_eq$b'('fset$'(A__questionmark_v0),'fset$'(A__questionmark_v1)) ) ).
+
+%% ∀ ?v0:D_document_ptr_fset$ ?v1:D_document_ptr_fset$ (less_eq$c(?v0, ?v1) = less_eq$d(fset$a(?v0), fset$a(?v1)))
+tff(axiom639,axiom,
+    ! [A__questionmark_v0: 'D_document_ptr_fset$',A__questionmark_v1: 'D_document_ptr_fset$'] :
+      ( 'less_eq$c'(A__questionmark_v0,A__questionmark_v1)
+    <=> 'less_eq$d'('fset$a'(A__questionmark_v0),'fset$a'(A__questionmark_v1)) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$ (fun_app$aw(fun_app$cu(less_eq$, ?v0), ?v1) = less_eq$e(fset$b(?v0), fset$b(?v1)))
+tff(axiom640,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$'] :
+      ( 'fun_app$aw'('fun_app$cu'('less_eq$',A__questionmark_v0),A__questionmark_v1)
+    <=> 'less_eq$e'('fset$b'(A__questionmark_v0),'fset$b'(A__questionmark_v1)) ) ).
+
+%% ∀ ?v0:A_element_ptr_fset$ ?v1:A_element_ptr_fset$ (less_eq$f(?v0, ?v1) = less_eq$g(fset$c(?v0), fset$c(?v1)))
+tff(axiom641,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_fset$',A__questionmark_v1: 'A_element_ptr_fset$'] :
+      ( 'less_eq$f'(A__questionmark_v0,A__questionmark_v1)
+    <=> 'less_eq$g'('fset$c'(A__questionmark_v0),'fset$c'(A__questionmark_v1)) ) ).
+
+%% ∀ ?v0:B_character_data_ptr_fset$ (fthe_elem$(?v0) = the_elem$(fset$(?v0)))
+tff(axiom642,axiom,
+    ! [A__questionmark_v0: 'B_character_data_ptr_fset$'] : ( 'fthe_elem$'(A__questionmark_v0) = 'the_elem$'('fset$'(A__questionmark_v0)) ) ).
+
+%% ∀ ?v0:D_document_ptr_fset$ (fthe_elem$a(?v0) = the_elem$a(fset$a(?v0)))
+tff(axiom643,axiom,
+    ! [A__questionmark_v0: 'D_document_ptr_fset$'] : ( 'fthe_elem$a'(A__questionmark_v0) = 'the_elem$a'('fset$a'(A__questionmark_v0)) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$ (fthe_elem$b(?v0) = the_elem$b(fset$b(?v0)))
+tff(axiom644,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_fset$'] : ( 'fthe_elem$b'(A__questionmark_v0) = 'the_elem$b'('fset$b'(A__questionmark_v0)) ) ).
+
+%% ∀ ?v0:A_element_ptr_fset$ (fthe_elem$c(?v0) = the_elem$c(fset$c(?v0)))
+tff(axiom645,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_fset$'] : ( 'fthe_elem$c'(A__questionmark_v0) = 'the_elem$c'('fset$c'(A__questionmark_v0)) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ ?v1:A_element_ptr$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ ?v3:B_character_data_ptr$ ((new_E_l_e_m_e_n_t$(?v0) = pair$(?v1, ?v2)) ⇒ (fun_app$am(fun_app$an(get_C_h_a_r_a_c_t_e_r_D_a_t_a$, ?v3), ?v0) = fun_app$am(fun_app$an(get_C_h_a_r_a_c_t_e_r_D_a_t_a$, ?v3), ?v2)))
+tff(axiom646,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$',A__questionmark_v1: 'A_element_ptr$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$',A__questionmark_v3: 'B_character_data_ptr$'] :
+      ( ( 'new_E_l_e_m_e_n_t$'(A__questionmark_v0) = 'pair$'(A__questionmark_v1,A__questionmark_v2) )
+     => ( 'fun_app$am'('fun_app$an'('get_C_h_a_r_a_c_t_e_r_D_a_t_a$',A__questionmark_v3),A__questionmark_v0) = 'fun_app$am'('fun_app$an'('get_C_h_a_r_a_c_t_e_r_D_a_t_a$',A__questionmark_v3),A__questionmark_v2) ) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ ?v1:A_element_ptr$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ ?v3:D_document_ptr$ ((new_E_l_e_m_e_n_t$(?v0) = pair$(?v1, ?v2)) ⇒ (fun_app$ap(fun_app$aq(get_D_o_c_u_m_e_n_t$, ?v3), ?v0) = fun_app$ap(fun_app$aq(get_D_o_c_u_m_e_n_t$, ?v3), ?v2)))
+tff(axiom647,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$',A__questionmark_v1: 'A_element_ptr$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$',A__questionmark_v3: 'D_document_ptr$'] :
+      ( ( 'new_E_l_e_m_e_n_t$'(A__questionmark_v0) = 'pair$'(A__questionmark_v1,A__questionmark_v2) )
+     => ( 'fun_app$ap'('fun_app$aq'('get_D_o_c_u_m_e_n_t$',A__questionmark_v3),A__questionmark_v0) = 'fun_app$ap'('fun_app$aq'('get_D_o_c_u_m_e_n_t$',A__questionmark_v3),A__questionmark_v2) ) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ ?v1:A_element_ptr$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ ?v3:A_element_ptr$ (((new_E_l_e_m_e_n_t$(?v0) = pair$(?v1, ?v2)) ∧ ¬(?v3 = ?v1)) ⇒ (fun_app$ar(fun_app$as(get_E_l_e_m_e_n_t$, ?v3), ?v0) = fun_app$ar(fun_app$as(get_E_l_e_m_e_n_t$, ?v3), ?v2)))
+tff(axiom648,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$',A__questionmark_v1: 'A_element_ptr$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$',A__questionmark_v3: 'A_element_ptr$'] :
+      ( ( ( 'new_E_l_e_m_e_n_t$'(A__questionmark_v0) = 'pair$'(A__questionmark_v1,A__questionmark_v2) )
+        & ( A__questionmark_v3 != A__questionmark_v1 ) )
+     => ( 'fun_app$ar'('fun_app$as'('get_E_l_e_m_e_n_t$',A__questionmark_v3),A__questionmark_v0) = 'fun_app$ar'('fun_app$as'('get_E_l_e_m_e_n_t$',A__questionmark_v3),A__questionmark_v2) ) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ ?v1:A_element_ptr$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ ?v3:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ (((new_E_l_e_m_e_n_t$(?v0) = pair$(?v1, ?v2)) ∧ ¬(?v3 = cast_e_l_e_m_e_n_t_p_t_r_2_n_o_d_e_p_t_r$(?v1))) ⇒ (fun_app$aj(fun_app$ak(get_N_o_d_e$, ?v3), ?v0) = fun_app$aj(fun_app$ak(get_N_o_d_e$, ?v3), ?v2)))
+tff(axiom649,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$',A__questionmark_v1: 'A_element_ptr$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$',A__questionmark_v3: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$'] :
+      ( ( ( 'new_E_l_e_m_e_n_t$'(A__questionmark_v0) = 'pair$'(A__questionmark_v1,A__questionmark_v2) )
+        & ( A__questionmark_v3 != 'cast_e_l_e_m_e_n_t_p_t_r_2_n_o_d_e_p_t_r$'(A__questionmark_v1) ) )
+     => ( 'fun_app$aj'('fun_app$ak'('get_N_o_d_e$',A__questionmark_v3),A__questionmark_v0) = 'fun_app$aj'('fun_app$ak'('get_N_o_d_e$',A__questionmark_v3),A__questionmark_v2) ) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ ?v1:A_element_ptr$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ ((new_E_l_e_m_e_n_t$(?v0) = pair$(?v1, ?v2)) ⇒ ¬fmember$d(?v1, fun_app$av(element_ptr_kinds$, ?v0)))
+tff(axiom650,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$',A__questionmark_v1: 'A_element_ptr$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$'] :
+      ( ( 'new_E_l_e_m_e_n_t$'(A__questionmark_v0) = 'pair$'(A__questionmark_v1,A__questionmark_v2) )
+     => ~ 'fmember$d'(A__questionmark_v1,'fun_app$av'('element_ptr_kinds$',A__questionmark_v0)) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ ?v1:A_element_ptr$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ ((new_E_l_e_m_e_n_t$(?v0) = pair$(?v1, ?v2)) ⇒ fmember$d(?v1, fun_app$av(element_ptr_kinds$, ?v2)))
+tff(axiom651,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$',A__questionmark_v1: 'A_element_ptr$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$'] :
+      ( ( 'new_E_l_e_m_e_n_t$'(A__questionmark_v0) = 'pair$'(A__questionmark_v1,A__questionmark_v2) )
+     => 'fmember$d'(A__questionmark_v1,'fun_app$av'('element_ptr_kinds$',A__questionmark_v2)) ) ).
+
+%% ∀ ?v0:B_character_data_ptr_set$ ?v1:B_character_data_ptr_bool_fun$ less_eq$b(collect$(uvv$(?v0, ?v1)), ?v0)
+tff(axiom652,axiom,
+    ! [A__questionmark_v0: 'B_character_data_ptr_set$',A__questionmark_v1: 'B_character_data_ptr_bool_fun$'] : 'less_eq$b'('collect$'('uvv$'(A__questionmark_v0,A__questionmark_v1)),A__questionmark_v0) ).
+
+%% ∀ ?v0:D_document_ptr_set$ ?v1:D_document_ptr_bool_fun$ less_eq$d(collect$a(uvw$(?v0, ?v1)), ?v0)
+tff(axiom653,axiom,
+    ! [A__questionmark_v0: 'D_document_ptr_set$',A__questionmark_v1: 'D_document_ptr_bool_fun$'] : 'less_eq$d'('collect$a'('uvw$'(A__questionmark_v0,A__questionmark_v1)),A__questionmark_v0) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_set$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_bool_fun$ less_eq$e(collect$b(uvx$(?v0, ?v1)), ?v0)
+tff(axiom654,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_set$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_bool_fun$'] : 'less_eq$e'('collect$b'('uvx$'(A__questionmark_v0,A__questionmark_v1)),A__questionmark_v0) ).
+
+%% ∀ ?v0:A_element_ptr_set$ ?v1:A_element_ptr_bool_fun$ less_eq$g(collect$c(uvy$(?v0, ?v1)), ?v0)
+tff(axiom655,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_set$',A__questionmark_v1: 'A_element_ptr_bool_fun$'] : 'less_eq$g'('collect$c'('uvy$'(A__questionmark_v0,A__questionmark_v1)),A__questionmark_v0) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ ?v1:B_character_data_ptr$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ ?v3:D_document_ptr$ ((new_C_h_a_r_a_c_t_e_r_D_a_t_a$(?v0) = pair$a(?v1, ?v2)) ⇒ (fun_app$ap(fun_app$aq(get_D_o_c_u_m_e_n_t$, ?v3), ?v0) = fun_app$ap(fun_app$aq(get_D_o_c_u_m_e_n_t$, ?v3), ?v2)))
+tff(axiom656,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$',A__questionmark_v1: 'B_character_data_ptr$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$',A__questionmark_v3: 'D_document_ptr$'] :
+      ( ( 'new_C_h_a_r_a_c_t_e_r_D_a_t_a$'(A__questionmark_v0) = 'pair$a'(A__questionmark_v1,A__questionmark_v2) )
+     => ( 'fun_app$ap'('fun_app$aq'('get_D_o_c_u_m_e_n_t$',A__questionmark_v3),A__questionmark_v0) = 'fun_app$ap'('fun_app$aq'('get_D_o_c_u_m_e_n_t$',A__questionmark_v3),A__questionmark_v2) ) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ ?v1:B_character_data_ptr$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ ?v3:B_character_data_ptr$ (((new_C_h_a_r_a_c_t_e_r_D_a_t_a$(?v0) = pair$a(?v1, ?v2)) ∧ ¬(?v3 = ?v1)) ⇒ (fun_app$am(fun_app$an(get_C_h_a_r_a_c_t_e_r_D_a_t_a$, ?v3), ?v0) = fun_app$am(fun_app$an(get_C_h_a_r_a_c_t_e_r_D_a_t_a$, ?v3), ?v2)))
+tff(axiom657,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$',A__questionmark_v1: 'B_character_data_ptr$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$',A__questionmark_v3: 'B_character_data_ptr$'] :
+      ( ( ( 'new_C_h_a_r_a_c_t_e_r_D_a_t_a$'(A__questionmark_v0) = 'pair$a'(A__questionmark_v1,A__questionmark_v2) )
+        & ( A__questionmark_v3 != A__questionmark_v1 ) )
+     => ( 'fun_app$am'('fun_app$an'('get_C_h_a_r_a_c_t_e_r_D_a_t_a$',A__questionmark_v3),A__questionmark_v0) = 'fun_app$am'('fun_app$an'('get_C_h_a_r_a_c_t_e_r_D_a_t_a$',A__questionmark_v3),A__questionmark_v2) ) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ ?v1:B_character_data_ptr$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ ?v3:A_element_ptr$ ((new_C_h_a_r_a_c_t_e_r_D_a_t_a$(?v0) = pair$a(?v1, ?v2)) ⇒ (fun_app$ar(fun_app$as(get_E_l_e_m_e_n_t$, ?v3), ?v0) = fun_app$ar(fun_app$as(get_E_l_e_m_e_n_t$, ?v3), ?v2)))
+tff(axiom658,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$',A__questionmark_v1: 'B_character_data_ptr$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$',A__questionmark_v3: 'A_element_ptr$'] :
+      ( ( 'new_C_h_a_r_a_c_t_e_r_D_a_t_a$'(A__questionmark_v0) = 'pair$a'(A__questionmark_v1,A__questionmark_v2) )
+     => ( 'fun_app$ar'('fun_app$as'('get_E_l_e_m_e_n_t$',A__questionmark_v3),A__questionmark_v0) = 'fun_app$ar'('fun_app$as'('get_E_l_e_m_e_n_t$',A__questionmark_v3),A__questionmark_v2) ) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ ?v1:B_character_data_ptr$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ ?v3:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ (((new_C_h_a_r_a_c_t_e_r_D_a_t_a$(?v0) = pair$a(?v1, ?v2)) ∧ ¬(?v3 = cast_c_h_a_r_a_c_t_e_r_d_a_t_a_p_t_r_2_n_o_d_e_p_t_r$(?v1))) ⇒ (fun_app$aj(fun_app$ak(get_N_o_d_e$, ?v3), ?v0) = fun_app$aj(fun_app$ak(get_N_o_d_e$, ?v3), ?v2)))
+tff(axiom659,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$',A__questionmark_v1: 'B_character_data_ptr$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$',A__questionmark_v3: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$'] :
+      ( ( ( 'new_C_h_a_r_a_c_t_e_r_D_a_t_a$'(A__questionmark_v0) = 'pair$a'(A__questionmark_v1,A__questionmark_v2) )
+        & ( A__questionmark_v3 != 'cast_c_h_a_r_a_c_t_e_r_d_a_t_a_p_t_r_2_n_o_d_e_p_t_r$'(A__questionmark_v1) ) )
+     => ( 'fun_app$aj'('fun_app$ak'('get_N_o_d_e$',A__questionmark_v3),A__questionmark_v0) = 'fun_app$aj'('fun_app$ak'('get_N_o_d_e$',A__questionmark_v3),A__questionmark_v2) ) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ ?v1:B_character_data_ptr$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ ((new_C_h_a_r_a_c_t_e_r_D_a_t_a$(?v0) = pair$a(?v1, ?v2)) ⇒ ¬fmember$b(?v1, fun_app$al(character_data_ptr_kinds$, ?v0)))
+tff(axiom660,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$',A__questionmark_v1: 'B_character_data_ptr$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$'] :
+      ( ( 'new_C_h_a_r_a_c_t_e_r_D_a_t_a$'(A__questionmark_v0) = 'pair$a'(A__questionmark_v1,A__questionmark_v2) )
+     => ~ 'fmember$b'(A__questionmark_v1,'fun_app$al'('character_data_ptr_kinds$',A__questionmark_v0)) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ ?v1:B_character_data_ptr$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ ((new_C_h_a_r_a_c_t_e_r_D_a_t_a$(?v0) = pair$a(?v1, ?v2)) ⇒ fmember$b(?v1, fun_app$al(character_data_ptr_kinds$, ?v2)))
+tff(axiom661,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$',A__questionmark_v1: 'B_character_data_ptr$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$'] :
+      ( ( 'new_C_h_a_r_a_c_t_e_r_D_a_t_a$'(A__questionmark_v0) = 'pair$a'(A__questionmark_v1,A__questionmark_v2) )
+     => 'fmember$b'(A__questionmark_v1,'fun_app$al'('character_data_ptr_kinds$',A__questionmark_v2)) ) ).
+
+%% ∀ ?v0:B_character_data_ptr_set$ ?v1:B_character_data_ptr_set$ (less_eq$b(?v0, ?v1) = less_eq$h(uuk$(?v0), uuk$(?v1)))
+tff(axiom662,axiom,
+    ! [A__questionmark_v0: 'B_character_data_ptr_set$',A__questionmark_v1: 'B_character_data_ptr_set$'] :
+      ( 'less_eq$b'(A__questionmark_v0,A__questionmark_v1)
+    <=> 'less_eq$h'('uuk$'(A__questionmark_v0),'uuk$'(A__questionmark_v1)) ) ).
+
+%% ∀ ?v0:D_document_ptr_set$ ?v1:D_document_ptr_set$ (less_eq$d(?v0, ?v1) = less_eq$i(uul$(?v0), uul$(?v1)))
+tff(axiom663,axiom,
+    ! [A__questionmark_v0: 'D_document_ptr_set$',A__questionmark_v1: 'D_document_ptr_set$'] :
+      ( 'less_eq$d'(A__questionmark_v0,A__questionmark_v1)
+    <=> 'less_eq$i'('uul$'(A__questionmark_v0),'uul$'(A__questionmark_v1)) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_set$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_set$ (less_eq$e(?v0, ?v1) = less_eq$j(uum$(?v0), uum$(?v1)))
+tff(axiom664,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_set$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_set$'] :
+      ( 'less_eq$e'(A__questionmark_v0,A__questionmark_v1)
+    <=> 'less_eq$j'('uum$'(A__questionmark_v0),'uum$'(A__questionmark_v1)) ) ).
+
+%% ∀ ?v0:A_element_ptr_set$ ?v1:A_element_ptr_set$ (less_eq$g(?v0, ?v1) = less_eq$k(uun$(?v0), uun$(?v1)))
+tff(axiom665,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_set$',A__questionmark_v1: 'A_element_ptr_set$'] :
+      ( 'less_eq$g'(A__questionmark_v0,A__questionmark_v1)
+    <=> 'less_eq$k'('uun$'(A__questionmark_v0),'uun$'(A__questionmark_v1)) ) ).
+
+%% ∀ ?v0:B_character_data_ptr_set$ ?v1:B_character_data_ptr_set$ ?v2:B_character_data_ptr_bool_fun$ (less_eq$b(?v0, ?v1) ⇒ (less_eq$b(?v0, collect$(uvv$(?v1, ?v2))) = ∀ ?v3:B_character_data_ptr$ (member$(?v3, ?v0) ⇒ fun_app$c(?v2, ?v3))))
+tff(axiom666,axiom,
+    ! [A__questionmark_v0: 'B_character_data_ptr_set$',A__questionmark_v1: 'B_character_data_ptr_set$',A__questionmark_v2: 'B_character_data_ptr_bool_fun$'] :
+      ( 'less_eq$b'(A__questionmark_v0,A__questionmark_v1)
+     => ( 'less_eq$b'(A__questionmark_v0,'collect$'('uvv$'(A__questionmark_v1,A__questionmark_v2)))
+      <=> ! [A__questionmark_v3: 'B_character_data_ptr$'] :
+            ( 'member$'(A__questionmark_v3,A__questionmark_v0)
+           => 'fun_app$c'(A__questionmark_v2,A__questionmark_v3) ) ) ) ).
+
+%% ∀ ?v0:D_document_ptr_set$ ?v1:D_document_ptr_set$ ?v2:D_document_ptr_bool_fun$ (less_eq$d(?v0, ?v1) ⇒ (less_eq$d(?v0, collect$a(uvw$(?v1, ?v2))) = ∀ ?v3:D_document_ptr$ (member$a(?v3, ?v0) ⇒ fun_app$d(?v2, ?v3))))
+tff(axiom667,axiom,
+    ! [A__questionmark_v0: 'D_document_ptr_set$',A__questionmark_v1: 'D_document_ptr_set$',A__questionmark_v2: 'D_document_ptr_bool_fun$'] :
+      ( 'less_eq$d'(A__questionmark_v0,A__questionmark_v1)
+     => ( 'less_eq$d'(A__questionmark_v0,'collect$a'('uvw$'(A__questionmark_v1,A__questionmark_v2)))
+      <=> ! [A__questionmark_v3: 'D_document_ptr$'] :
+            ( 'member$a'(A__questionmark_v3,A__questionmark_v0)
+           => 'fun_app$d'(A__questionmark_v2,A__questionmark_v3) ) ) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_set$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_set$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_bool_fun$ (less_eq$e(?v0, ?v1) ⇒ (less_eq$e(?v0, collect$b(uvx$(?v1, ?v2))) = ∀ ?v3:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ (member$c(?v3, ?v0) ⇒ fun_app$(?v2, ?v3))))
+tff(axiom668,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_set$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_set$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_bool_fun$'] :
+      ( 'less_eq$e'(A__questionmark_v0,A__questionmark_v1)
+     => ( 'less_eq$e'(A__questionmark_v0,'collect$b'('uvx$'(A__questionmark_v1,A__questionmark_v2)))
+      <=> ! [A__questionmark_v3: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$'] :
+            ( 'member$c'(A__questionmark_v3,A__questionmark_v0)
+           => 'fun_app$'(A__questionmark_v2,A__questionmark_v3) ) ) ) ).
+
+%% ∀ ?v0:A_element_ptr_set$ ?v1:A_element_ptr_set$ ?v2:A_element_ptr_bool_fun$ (less_eq$g(?v0, ?v1) ⇒ (less_eq$g(?v0, collect$c(uvy$(?v1, ?v2))) = ∀ ?v3:A_element_ptr$ (member$b(?v3, ?v0) ⇒ fun_app$e(?v2, ?v3))))
+tff(axiom669,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_set$',A__questionmark_v1: 'A_element_ptr_set$',A__questionmark_v2: 'A_element_ptr_bool_fun$'] :
+      ( 'less_eq$g'(A__questionmark_v0,A__questionmark_v1)
+     => ( 'less_eq$g'(A__questionmark_v0,'collect$c'('uvy$'(A__questionmark_v1,A__questionmark_v2)))
+      <=> ! [A__questionmark_v3: 'A_element_ptr$'] :
+            ( 'member$b'(A__questionmark_v3,A__questionmark_v0)
+           => 'fun_app$e'(A__questionmark_v2,A__questionmark_v3) ) ) ) ).
+
+%% ∀ ?v0:B_character_data_ptr_set$ ?v1:B_character_data_ptr_set$ ?v2:B_character_data_ptr_bool_fun$ ?v3:B_character_data_ptr_bool_fun$ ((less_eq$b(?v0, ?v1) ∧ ∀ ?v4:B_character_data_ptr$ ((member$(?v4, ?v0) ∧ fun_app$c(?v2, ?v4)) ⇒ fun_app$c(?v3, ?v4))) ⇒ less_eq$b(collect$(uvv$(?v0, ?v2)), collect$(uvv$(?v1, ?v3))))
+tff(axiom670,axiom,
+    ! [A__questionmark_v0: 'B_character_data_ptr_set$',A__questionmark_v1: 'B_character_data_ptr_set$',A__questionmark_v2: 'B_character_data_ptr_bool_fun$',A__questionmark_v3: 'B_character_data_ptr_bool_fun$'] :
+      ( ( 'less_eq$b'(A__questionmark_v0,A__questionmark_v1)
+        & ! [A__questionmark_v4: 'B_character_data_ptr$'] :
+            ( ( 'member$'(A__questionmark_v4,A__questionmark_v0)
+              & 'fun_app$c'(A__questionmark_v2,A__questionmark_v4) )
+           => 'fun_app$c'(A__questionmark_v3,A__questionmark_v4) ) )
+     => 'less_eq$b'('collect$'('uvv$'(A__questionmark_v0,A__questionmark_v2)),'collect$'('uvv$'(A__questionmark_v1,A__questionmark_v3))) ) ).
+
+%% ∀ ?v0:D_document_ptr_set$ ?v1:D_document_ptr_set$ ?v2:D_document_ptr_bool_fun$ ?v3:D_document_ptr_bool_fun$ ((less_eq$d(?v0, ?v1) ∧ ∀ ?v4:D_document_ptr$ ((member$a(?v4, ?v0) ∧ fun_app$d(?v2, ?v4)) ⇒ fun_app$d(?v3, ?v4))) ⇒ less_eq$d(collect$a(uvw$(?v0, ?v2)), collect$a(uvw$(?v1, ?v3))))
+tff(axiom671,axiom,
+    ! [A__questionmark_v0: 'D_document_ptr_set$',A__questionmark_v1: 'D_document_ptr_set$',A__questionmark_v2: 'D_document_ptr_bool_fun$',A__questionmark_v3: 'D_document_ptr_bool_fun$'] :
+      ( ( 'less_eq$d'(A__questionmark_v0,A__questionmark_v1)
+        & ! [A__questionmark_v4: 'D_document_ptr$'] :
+            ( ( 'member$a'(A__questionmark_v4,A__questionmark_v0)
+              & 'fun_app$d'(A__questionmark_v2,A__questionmark_v4) )
+           => 'fun_app$d'(A__questionmark_v3,A__questionmark_v4) ) )
+     => 'less_eq$d'('collect$a'('uvw$'(A__questionmark_v0,A__questionmark_v2)),'collect$a'('uvw$'(A__questionmark_v1,A__questionmark_v3))) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_set$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_set$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_bool_fun$ ?v3:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_bool_fun$ ((less_eq$e(?v0, ?v1) ∧ ∀ ?v4:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ ((member$c(?v4, ?v0) ∧ fun_app$(?v2, ?v4)) ⇒ fun_app$(?v3, ?v4))) ⇒ less_eq$e(collect$b(uvx$(?v0, ?v2)), collect$b(uvx$(?v1, ?v3))))
+tff(axiom672,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_set$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_set$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_bool_fun$',A__questionmark_v3: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_bool_fun$'] :
+      ( ( 'less_eq$e'(A__questionmark_v0,A__questionmark_v1)
+        & ! [A__questionmark_v4: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$'] :
+            ( ( 'member$c'(A__questionmark_v4,A__questionmark_v0)
+              & 'fun_app$'(A__questionmark_v2,A__questionmark_v4) )
+           => 'fun_app$'(A__questionmark_v3,A__questionmark_v4) ) )
+     => 'less_eq$e'('collect$b'('uvx$'(A__questionmark_v0,A__questionmark_v2)),'collect$b'('uvx$'(A__questionmark_v1,A__questionmark_v3))) ) ).
+
+%% ∀ ?v0:A_element_ptr_set$ ?v1:A_element_ptr_set$ ?v2:A_element_ptr_bool_fun$ ?v3:A_element_ptr_bool_fun$ ((less_eq$g(?v0, ?v1) ∧ ∀ ?v4:A_element_ptr$ ((member$b(?v4, ?v0) ∧ fun_app$e(?v2, ?v4)) ⇒ fun_app$e(?v3, ?v4))) ⇒ less_eq$g(collect$c(uvy$(?v0, ?v2)), collect$c(uvy$(?v1, ?v3))))
+tff(axiom673,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_set$',A__questionmark_v1: 'A_element_ptr_set$',A__questionmark_v2: 'A_element_ptr_bool_fun$',A__questionmark_v3: 'A_element_ptr_bool_fun$'] :
+      ( ( 'less_eq$g'(A__questionmark_v0,A__questionmark_v1)
+        & ! [A__questionmark_v4: 'A_element_ptr$'] :
+            ( ( 'member$b'(A__questionmark_v4,A__questionmark_v0)
+              & 'fun_app$e'(A__questionmark_v2,A__questionmark_v4) )
+           => 'fun_app$e'(A__questionmark_v3,A__questionmark_v4) ) )
+     => 'less_eq$g'('collect$c'('uvy$'(A__questionmark_v0,A__questionmark_v2)),'collect$c'('uvy$'(A__questionmark_v1,A__questionmark_v3))) ) ).
+
+%% ∀ ?v0:B_character_data_ptr_set$ ?v1:B_character_data_ptr_set$ (less_eq$h(uuk$(?v0), uuk$(?v1)) = less_eq$b(?v0, ?v1))
+tff(axiom674,axiom,
+    ! [A__questionmark_v0: 'B_character_data_ptr_set$',A__questionmark_v1: 'B_character_data_ptr_set$'] :
+      ( 'less_eq$h'('uuk$'(A__questionmark_v0),'uuk$'(A__questionmark_v1))
+    <=> 'less_eq$b'(A__questionmark_v0,A__questionmark_v1) ) ).
+
+%% ∀ ?v0:D_document_ptr_set$ ?v1:D_document_ptr_set$ (less_eq$i(uul$(?v0), uul$(?v1)) = less_eq$d(?v0, ?v1))
+tff(axiom675,axiom,
+    ! [A__questionmark_v0: 'D_document_ptr_set$',A__questionmark_v1: 'D_document_ptr_set$'] :
+      ( 'less_eq$i'('uul$'(A__questionmark_v0),'uul$'(A__questionmark_v1))
+    <=> 'less_eq$d'(A__questionmark_v0,A__questionmark_v1) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_set$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_set$ (less_eq$j(uum$(?v0), uum$(?v1)) = less_eq$e(?v0, ?v1))
+tff(axiom676,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_set$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_set$'] :
+      ( 'less_eq$j'('uum$'(A__questionmark_v0),'uum$'(A__questionmark_v1))
+    <=> 'less_eq$e'(A__questionmark_v0,A__questionmark_v1) ) ).
+
+%% ∀ ?v0:A_element_ptr_set$ ?v1:A_element_ptr_set$ (less_eq$k(uun$(?v0), uun$(?v1)) = less_eq$g(?v0, ?v1))
+tff(axiom677,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_set$',A__questionmark_v1: 'A_element_ptr_set$'] :
+      ( 'less_eq$k'('uun$'(A__questionmark_v0),'uun$'(A__questionmark_v1))
+    <=> 'less_eq$g'(A__questionmark_v0,A__questionmark_v1) ) ).
+
+%% ∀ ?v0:B_character_data_ptr_set$ ?v1:B_character_data_ptr_bool_fun$ less_eq$b(collect$(uvv$(?v0, ?v1)), ?v0)
+tff(axiom678,axiom,
+    ! [A__questionmark_v0: 'B_character_data_ptr_set$',A__questionmark_v1: 'B_character_data_ptr_bool_fun$'] : 'less_eq$b'('collect$'('uvv$'(A__questionmark_v0,A__questionmark_v1)),A__questionmark_v0) ).
+
+%% ∀ ?v0:D_document_ptr_set$ ?v1:D_document_ptr_bool_fun$ less_eq$d(collect$a(uvw$(?v0, ?v1)), ?v0)
+tff(axiom679,axiom,
+    ! [A__questionmark_v0: 'D_document_ptr_set$',A__questionmark_v1: 'D_document_ptr_bool_fun$'] : 'less_eq$d'('collect$a'('uvw$'(A__questionmark_v0,A__questionmark_v1)),A__questionmark_v0) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_set$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_bool_fun$ less_eq$e(collect$b(uvx$(?v0, ?v1)), ?v0)
+tff(axiom680,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_set$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_bool_fun$'] : 'less_eq$e'('collect$b'('uvx$'(A__questionmark_v0,A__questionmark_v1)),A__questionmark_v0) ).
+
+%% ∀ ?v0:A_element_ptr_set$ ?v1:A_element_ptr_bool_fun$ less_eq$g(collect$c(uvy$(?v0, ?v1)), ?v0)
+tff(axiom681,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_set$',A__questionmark_v1: 'A_element_ptr_bool_fun$'] : 'less_eq$g'('collect$c'('uvy$'(A__questionmark_v0,A__questionmark_v1)),A__questionmark_v0) ).
+
+%% ∀ ?v0:B_character_data_ptr$ ?v1:B_character_data_ptr_set$ ?v2:B_character_data_ptr_set$ ?v3:B_character_data_ptr_bool_fun$ ((member$(?v0, ?v1) ∧ less_eq$b(?v1, collect$(uvv$(?v2, ?v3)))) ⇒ fun_app$c(?v3, ?v0))
+tff(axiom682,axiom,
+    ! [A__questionmark_v0: 'B_character_data_ptr$',A__questionmark_v1: 'B_character_data_ptr_set$',A__questionmark_v2: 'B_character_data_ptr_set$',A__questionmark_v3: 'B_character_data_ptr_bool_fun$'] :
+      ( ( 'member$'(A__questionmark_v0,A__questionmark_v1)
+        & 'less_eq$b'(A__questionmark_v1,'collect$'('uvv$'(A__questionmark_v2,A__questionmark_v3))) )
+     => 'fun_app$c'(A__questionmark_v3,A__questionmark_v0) ) ).
+
+%% ∀ ?v0:D_document_ptr$ ?v1:D_document_ptr_set$ ?v2:D_document_ptr_set$ ?v3:D_document_ptr_bool_fun$ ((member$a(?v0, ?v1) ∧ less_eq$d(?v1, collect$a(uvw$(?v2, ?v3)))) ⇒ fun_app$d(?v3, ?v0))
+tff(axiom683,axiom,
+    ! [A__questionmark_v0: 'D_document_ptr$',A__questionmark_v1: 'D_document_ptr_set$',A__questionmark_v2: 'D_document_ptr_set$',A__questionmark_v3: 'D_document_ptr_bool_fun$'] :
+      ( ( 'member$a'(A__questionmark_v0,A__questionmark_v1)
+        & 'less_eq$d'(A__questionmark_v1,'collect$a'('uvw$'(A__questionmark_v2,A__questionmark_v3))) )
+     => 'fun_app$d'(A__questionmark_v3,A__questionmark_v0) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ ?v1:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_set$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_set$ ?v3:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_bool_fun$ ((member$c(?v0, ?v1) ∧ less_eq$e(?v1, collect$b(uvx$(?v2, ?v3)))) ⇒ fun_app$(?v3, ?v0))
+tff(axiom684,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$',A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_set$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_set$',A__questionmark_v3: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_bool_fun$'] :
+      ( ( 'member$c'(A__questionmark_v0,A__questionmark_v1)
+        & 'less_eq$e'(A__questionmark_v1,'collect$b'('uvx$'(A__questionmark_v2,A__questionmark_v3))) )
+     => 'fun_app$'(A__questionmark_v3,A__questionmark_v0) ) ).
+
+%% ∀ ?v0:A_element_ptr$ ?v1:A_element_ptr_set$ ?v2:A_element_ptr_set$ ?v3:A_element_ptr_bool_fun$ ((member$b(?v0, ?v1) ∧ less_eq$g(?v1, collect$c(uvy$(?v2, ?v3)))) ⇒ fun_app$e(?v3, ?v0))
+tff(axiom685,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr$',A__questionmark_v1: 'A_element_ptr_set$',A__questionmark_v2: 'A_element_ptr_set$',A__questionmark_v3: 'A_element_ptr_bool_fun$'] :
+      ( ( 'member$b'(A__questionmark_v0,A__questionmark_v1)
+        & 'less_eq$g'(A__questionmark_v1,'collect$c'('uvy$'(A__questionmark_v2,A__questionmark_v3))) )
+     => 'fun_app$e'(A__questionmark_v3,A__questionmark_v0) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ ?v1:D_document_ptr$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ ?v3:D_document_ptr$ (((new_D_o_c_u_m_e_n_t$(?v0) = pair$b(?v1, ?v2)) ∧ ¬(?v3 = ?v1)) ⇒ (fun_app$ap(fun_app$aq(get_D_o_c_u_m_e_n_t$, ?v3), ?v0) = fun_app$ap(fun_app$aq(get_D_o_c_u_m_e_n_t$, ?v3), ?v2)))
+tff(axiom686,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$',A__questionmark_v1: 'D_document_ptr$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$',A__questionmark_v3: 'D_document_ptr$'] :
+      ( ( ( 'new_D_o_c_u_m_e_n_t$'(A__questionmark_v0) = 'pair$b'(A__questionmark_v1,A__questionmark_v2) )
+        & ( A__questionmark_v3 != A__questionmark_v1 ) )
+     => ( 'fun_app$ap'('fun_app$aq'('get_D_o_c_u_m_e_n_t$',A__questionmark_v3),A__questionmark_v0) = 'fun_app$ap'('fun_app$aq'('get_D_o_c_u_m_e_n_t$',A__questionmark_v3),A__questionmark_v2) ) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ ?v1:D_document_ptr$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ ?v3:A_element_ptr$ ((new_D_o_c_u_m_e_n_t$(?v0) = pair$b(?v1, ?v2)) ⇒ (fun_app$ar(fun_app$as(get_E_l_e_m_e_n_t$, ?v3), ?v0) = fun_app$ar(fun_app$as(get_E_l_e_m_e_n_t$, ?v3), ?v2)))
+tff(axiom687,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$',A__questionmark_v1: 'D_document_ptr$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$',A__questionmark_v3: 'A_element_ptr$'] :
+      ( ( 'new_D_o_c_u_m_e_n_t$'(A__questionmark_v0) = 'pair$b'(A__questionmark_v1,A__questionmark_v2) )
+     => ( 'fun_app$ar'('fun_app$as'('get_E_l_e_m_e_n_t$',A__questionmark_v3),A__questionmark_v0) = 'fun_app$ar'('fun_app$as'('get_E_l_e_m_e_n_t$',A__questionmark_v3),A__questionmark_v2) ) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ ?v1:D_document_ptr$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ ?v3:B_character_data_ptr$ ((new_D_o_c_u_m_e_n_t$(?v0) = pair$b(?v1, ?v2)) ⇒ (fun_app$am(fun_app$an(get_C_h_a_r_a_c_t_e_r_D_a_t_a$, ?v3), ?v0) = fun_app$am(fun_app$an(get_C_h_a_r_a_c_t_e_r_D_a_t_a$, ?v3), ?v2)))
+tff(axiom688,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$',A__questionmark_v1: 'D_document_ptr$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$',A__questionmark_v3: 'B_character_data_ptr$'] :
+      ( ( 'new_D_o_c_u_m_e_n_t$'(A__questionmark_v0) = 'pair$b'(A__questionmark_v1,A__questionmark_v2) )
+     => ( 'fun_app$am'('fun_app$an'('get_C_h_a_r_a_c_t_e_r_D_a_t_a$',A__questionmark_v3),A__questionmark_v0) = 'fun_app$am'('fun_app$an'('get_C_h_a_r_a_c_t_e_r_D_a_t_a$',A__questionmark_v3),A__questionmark_v2) ) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ ?v1:D_document_ptr$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ ?v3:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ ((new_D_o_c_u_m_e_n_t$(?v0) = pair$b(?v1, ?v2)) ⇒ (fun_app$aj(fun_app$ak(get_N_o_d_e$, ?v3), ?v0) = fun_app$aj(fun_app$ak(get_N_o_d_e$, ?v3), ?v2)))
+tff(axiom689,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$',A__questionmark_v1: 'D_document_ptr$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$',A__questionmark_v3: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$'] :
+      ( ( 'new_D_o_c_u_m_e_n_t$'(A__questionmark_v0) = 'pair$b'(A__questionmark_v1,A__questionmark_v2) )
+     => ( 'fun_app$aj'('fun_app$ak'('get_N_o_d_e$',A__questionmark_v3),A__questionmark_v0) = 'fun_app$aj'('fun_app$ak'('get_N_o_d_e$',A__questionmark_v3),A__questionmark_v2) ) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ ?v1:D_document_ptr$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ ((new_D_o_c_u_m_e_n_t$(?v0) = pair$b(?v1, ?v2)) ⇒ fmember$c(?v1, fun_app$ao(document_ptr_kinds$, ?v2)))
+tff(axiom690,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$',A__questionmark_v1: 'D_document_ptr$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$'] :
+      ( ( 'new_D_o_c_u_m_e_n_t$'(A__questionmark_v0) = 'pair$b'(A__questionmark_v1,A__questionmark_v2) )
+     => 'fmember$c'(A__questionmark_v1,'fun_app$ao'('document_ptr_kinds$',A__questionmark_v2)) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ ?v1:D_document_ptr$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ ((new_D_o_c_u_m_e_n_t$(?v0) = pair$b(?v1, ?v2)) ⇒ ¬fmember$c(?v1, fun_app$ao(document_ptr_kinds$, ?v0)))
+tff(axiom691,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$',A__questionmark_v1: 'D_document_ptr$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$'] :
+      ( ( 'new_D_o_c_u_m_e_n_t$'(A__questionmark_v0) = 'pair$b'(A__questionmark_v1,A__questionmark_v2) )
+     => ~ 'fmember$c'(A__questionmark_v1,'fun_app$ao'('document_ptr_kinds$',A__questionmark_v0)) ) ).
+
+%% ∀ ?v0:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$ (fun_app$s(cast_O_b_j_e_c_t_2_N_o_d_e$, ?v0) = case_sum$a(uvz$(?v0), uwa$, more$a(?v0)))
+tff(axiom692,axiom,
+    ! [A__questionmark_v0: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$'] : ( 'fun_app$s'('cast_O_b_j_e_c_t_2_N_o_d_e$',A__questionmark_v0) = 'case_sum$a'('uvz$'(A__questionmark_v0),'uwa$','more$a'(A__questionmark_v0)) ) ).
+
+%% ∀ ?v0:A_element_ptr$ ?v1:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ (fun_app$av(element_ptr_kinds$, heap$(fmupd$(cast_n_o_d_e_p_t_r_2_o_b_j_e_c_t_p_t_r$(cast_e_l_e_m_e_n_t_p_t_r_2_n_o_d_e_p_t_r$(?v0)), ?v1, the_heap$(?v2)))) = sup$(finsert$(?v0, bot$), fun_app$av(element_ptr_kinds$, ?v2)))
+tff(axiom693,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr$',A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$'] : ( 'fun_app$av'('element_ptr_kinds$','heap$'('fmupd$'('cast_n_o_d_e_p_t_r_2_o_b_j_e_c_t_p_t_r$'('cast_e_l_e_m_e_n_t_p_t_r_2_n_o_d_e_p_t_r$'(A__questionmark_v0)),A__questionmark_v1,'the_heap$'(A__questionmark_v2)))) = 'sup$'('finsert$'(A__questionmark_v0,'bot$'),'fun_app$av'('element_ptr_kinds$',A__questionmark_v2)) ) ).
+
+%% ∀ ?v0:D_document_ptr$ ?v1:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ (fun_app$ao(document_ptr_kinds$, heap$(fmupd$(cast_d_o_c_u_m_e_n_t_p_t_r_2_o_b_j_e_c_t_p_t_r$(?v0), ?v1, the_heap$(?v2)))) = sup$d(finsert$d(?v0, bot$d), fun_app$ao(document_ptr_kinds$, ?v2)))
+tff(axiom694,axiom,
+    ! [A__questionmark_v0: 'D_document_ptr$',A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$'] : ( 'fun_app$ao'('document_ptr_kinds$','heap$'('fmupd$'('cast_d_o_c_u_m_e_n_t_p_t_r_2_o_b_j_e_c_t_p_t_r$'(A__questionmark_v0),A__questionmark_v1,'the_heap$'(A__questionmark_v2)))) = 'sup$d'('finsert$d'(A__questionmark_v0,'bot$d'),'fun_app$ao'('document_ptr_kinds$',A__questionmark_v2)) ) ).
+
+%% ∀ ?v0:B_character_data_ptr$ ?v1:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ (fun_app$al(character_data_ptr_kinds$, heap$(fmupd$(cast_n_o_d_e_p_t_r_2_o_b_j_e_c_t_p_t_r$(cast_c_h_a_r_a_c_t_e_r_d_a_t_a_p_t_r_2_n_o_d_e_p_t_r$(?v0)), ?v1, the_heap$(?v2)))) = sup$a(finsert$a(?v0, bot$a), fun_app$al(character_data_ptr_kinds$, ?v2)))
+tff(axiom695,axiom,
+    ! [A__questionmark_v0: 'B_character_data_ptr$',A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$'] : ( 'fun_app$al'('character_data_ptr_kinds$','heap$'('fmupd$'('cast_n_o_d_e_p_t_r_2_o_b_j_e_c_t_p_t_r$'('cast_c_h_a_r_a_c_t_e_r_d_a_t_a_p_t_r_2_n_o_d_e_p_t_r$'(A__questionmark_v0)),A__questionmark_v1,'the_heap$'(A__questionmark_v2)))) = 'sup$a'('finsert$a'(A__questionmark_v0,'bot$a'),'fun_app$al'('character_data_ptr_kinds$',A__questionmark_v2)) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$ ?v1:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ (fun_app$au(node_ptr_kinds$, heap$(fmupd$(cast_n_o_d_e_p_t_r_2_o_b_j_e_c_t_p_t_r$(?v0), ?v1, the_heap$(?v2)))) = sup$b(finsert$b(?v0, bot$b), fun_app$au(node_ptr_kinds$, ?v2)))
+tff(axiom696,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$',A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$'] : ( 'fun_app$au'('node_ptr_kinds$','heap$'('fmupd$'('cast_n_o_d_e_p_t_r_2_o_b_j_e_c_t_p_t_r$'(A__questionmark_v0),A__questionmark_v1,'the_heap$'(A__questionmark_v2)))) = 'sup$b'('finsert$b'(A__questionmark_v0,'bot$b'),'fun_app$au'('node_ptr_kinds$',A__questionmark_v2)) ) ).
+
+%% ∀ ?v0:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$ ?v1:C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$ ?v2:A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$ (fun_app$at(put_O_b_j_e_c_t$(?v0, ?v1), ?v2) = heap$(fmupd$(?v0, ?v1, the_heap$(?v2))))
+tff(axiom697,axiom,
+    ! [A__questionmark_v0: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_object_ptr$',A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_RObject_ext$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_d_document_ptr_e_shadow_root_ptr_f_sum_sum_sum_c_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_c_a_b_j_option_RDocument_ext_k_sum_sum_heap$'] : ( 'fun_app$at'('put_O_b_j_e_c_t$'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2) = 'heap$'('fmupd$'(A__questionmark_v0,A__questionmark_v1,'the_heap$'(A__questionmark_v2))) ) ).
+
+%% fun_app$t(?v1, ?v2)
+tff(formula_699,axiom,
+    ! [A__questionmark_v1: 'C_a_b_j_option_RDocument_ext_RObject_ext_bool_fun$',A__questionmark_v2: 'C_a_b_j_option_RDocument_ext_RObject_ext$'] :
+      ( ( def_1(A__questionmark_v1,A__questionmark_v2) = tltrue )
+    <=> 'fun_app$t'(A__questionmark_v1,A__questionmark_v2) ) ).
+
+%% fun_app$v(?v1, ?v2)
+tff(formula_700,axiom,
+    ! [A__questionmark_v1: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_bool_fun$',A__questionmark_v2: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext$'] :
+      ( ( def_2(A__questionmark_v1,A__questionmark_v2) = tltrue )
+    <=> 'fun_app$v'(A__questionmark_v1,A__questionmark_v2) ) ).
+
+%% fun_app$w(?v1, ?v2)
+tff(formula_701,axiom,
+    ! [A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_bool_fun$',A__questionmark_v2: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext$'] :
+      ( ( def_3(A__questionmark_v1,A__questionmark_v2) = tltrue )
+    <=> 'fun_app$w'(A__questionmark_v1,A__questionmark_v2) ) ).
+
+%% fun_app$x(?v1, ?v2)
+tff(formula_702,axiom,
+    ! [A__questionmark_v1: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_bool_fun$',A__questionmark_v2: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext$'] :
+      ( ( def_4(A__questionmark_v1,A__questionmark_v2) = tltrue )
+    <=> 'fun_app$x'(A__questionmark_v1,A__questionmark_v2) ) ).
+
+%% fun_app$(?v1, ?v2)
+tff(formula_703,axiom,
+    ! [A__questionmark_v1: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_bool_fun$',A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr$'] :
+      ( ( def_5(A__questionmark_v1,A__questionmark_v2) = tltrue )
+    <=> 'fun_app$'(A__questionmark_v1,A__questionmark_v2) ) ).
+
+%% fun_app$bm(case_option$f(?v1, ?v2), ?v3)
+tff(formula_704,axiom,
+    ! [A__questionmark_v1: tlbool,A__questionmark_v2: 'C_a_b_j_option_RDocument_ext_RObject_ext_bool_fun$',A__questionmark_v3: 'C_a_b_j_option_RDocument_ext_RObject_ext_option$'] :
+      ( ( def_6(A__questionmark_v1,A__questionmark_v2,A__questionmark_v3) = tltrue )
+    <=> 'fun_app$bm'('case_option$f'(A__questionmark_v1,A__questionmark_v2),A__questionmark_v3) ) ).
+
+%% fun_app$u(?v0, ?v1)
+tff(formula_705,axiom,
+    ! [A__questionmark_v0: 'Bool_bool_fun$',A__questionmark_v1: tlbool] :
+      ( ( def_7(A__questionmark_v0,A__questionmark_v1) = tltrue )
+    <=> 'fun_app$u'(A__questionmark_v0,A__questionmark_v1) ) ).
+
+%% fun_app$bn(case_option$g(?v1, ?v2), ?v3)
+tff(formula_706,axiom,
+    ! [A__questionmark_v1: tlbool,A__questionmark_v2: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_bool_fun$',A__questionmark_v3: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$'] :
+      ( ( def_8(A__questionmark_v1,A__questionmark_v2,A__questionmark_v3) = tltrue )
+    <=> 'fun_app$bn'('case_option$g'(A__questionmark_v1,A__questionmark_v2),A__questionmark_v3) ) ).
+
+%% fun_app$u(?v0, ?v1)
+tff(formula_707,axiom,
+    ! [A__questionmark_v0: 'Bool_bool_fun$',A__questionmark_v1: tlbool] :
+      ( ( def_9(A__questionmark_v0,A__questionmark_v1) = tltrue )
+    <=> 'fun_app$u'(A__questionmark_v0,A__questionmark_v1) ) ).
+
+%% fun_app$bo(case_option$h(?v1, ?v2), ?v3)
+tff(formula_708,axiom,
+    ! [A__questionmark_v1: tlbool,A__questionmark_v2: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_bool_fun$',A__questionmark_v3: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$'] :
+      ( ( def_10(A__questionmark_v1,A__questionmark_v2,A__questionmark_v3) = tltrue )
+    <=> 'fun_app$bo'('case_option$h'(A__questionmark_v1,A__questionmark_v2),A__questionmark_v3) ) ).
+
+%% fun_app$u(?v0, ?v1)
+tff(formula_709,axiom,
+    ! [A__questionmark_v0: 'Bool_bool_fun$',A__questionmark_v1: tlbool] :
+      ( ( def_11(A__questionmark_v0,A__questionmark_v1) = tltrue )
+    <=> 'fun_app$u'(A__questionmark_v0,A__questionmark_v1) ) ).
+
+%% fun_app$bp(case_option$i(?v1, ?v2), ?v3)
+tff(formula_710,axiom,
+    ! [A__questionmark_v1: tlbool,A__questionmark_v2: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_bool_fun$',A__questionmark_v3: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$'] :
+      ( ( def_12(A__questionmark_v1,A__questionmark_v2,A__questionmark_v3) = tltrue )
+    <=> 'fun_app$bp'('case_option$i'(A__questionmark_v1,A__questionmark_v2),A__questionmark_v3) ) ).
+
+%% fun_app$u(?v0, ?v1)
+tff(formula_711,axiom,
+    ! [A__questionmark_v0: 'Bool_bool_fun$',A__questionmark_v1: tlbool] :
+      ( ( def_13(A__questionmark_v0,A__questionmark_v1) = tltrue )
+    <=> 'fun_app$u'(A__questionmark_v0,A__questionmark_v1) ) ).
+
+%% fun_app$bq(case_option$j(?v1, ?v2), ?v3)
+tff(formula_712,axiom,
+    ! [A__questionmark_v1: tlbool,A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_bool_fun$',A__questionmark_v3: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_option$'] :
+      ( ( def_14(A__questionmark_v1,A__questionmark_v2,A__questionmark_v3) = tltrue )
+    <=> 'fun_app$bq'('case_option$j'(A__questionmark_v1,A__questionmark_v2),A__questionmark_v3) ) ).
+
+%% fun_app$u(?v0, ?v1)
+tff(formula_713,axiom,
+    ! [A__questionmark_v0: 'Bool_bool_fun$',A__questionmark_v1: tlbool] :
+      ( ( def_15(A__questionmark_v0,A__questionmark_v1) = tltrue )
+    <=> 'fun_app$u'(A__questionmark_v0,A__questionmark_v1) ) ).
+
+%% fun_app$bm(case_option$f(?v1, ?v2), ?v3)
+tff(formula_714,axiom,
+    ! [A__questionmark_v1: tlbool,A__questionmark_v2: 'C_a_b_j_option_RDocument_ext_RObject_ext_bool_fun$',A__questionmark_v3: 'C_a_b_j_option_RDocument_ext_RObject_ext_option$'] :
+      ( ( def_16(A__questionmark_v1,A__questionmark_v2,A__questionmark_v3) = tltrue )
+    <=> 'fun_app$bm'('case_option$f'(A__questionmark_v1,A__questionmark_v2),A__questionmark_v3) ) ).
+
+%% fun_app$t(?v2, the$f(?v3))
+tff(formula_715,axiom,
+    ! [A__questionmark_v2: 'C_a_b_j_option_RDocument_ext_RObject_ext_bool_fun$',A__questionmark_v3: 'C_a_b_j_option_RDocument_ext_RObject_ext_option$'] :
+      ( ( def_17(A__questionmark_v2,A__questionmark_v3) = tltrue )
+    <=> 'fun_app$t'(A__questionmark_v2,'the$f'(A__questionmark_v3)) ) ).
+
+%% fun_app$bn(case_option$g(?v1, ?v2), ?v3)
+tff(formula_716,axiom,
+    ! [A__questionmark_v1: tlbool,A__questionmark_v2: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_bool_fun$',A__questionmark_v3: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$'] :
+      ( ( def_18(A__questionmark_v1,A__questionmark_v2,A__questionmark_v3) = tltrue )
+    <=> 'fun_app$bn'('case_option$g'(A__questionmark_v1,A__questionmark_v2),A__questionmark_v3) ) ).
+
+%% fun_app$v(?v2, the$e(?v3))
+tff(formula_717,axiom,
+    ! [A__questionmark_v2: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_bool_fun$',A__questionmark_v3: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$'] :
+      ( ( def_19(A__questionmark_v2,A__questionmark_v3) = tltrue )
+    <=> 'fun_app$v'(A__questionmark_v2,'the$e'(A__questionmark_v3)) ) ).
+
+%% fun_app$bo(case_option$h(?v1, ?v2), ?v3)
+tff(formula_718,axiom,
+    ! [A__questionmark_v1: tlbool,A__questionmark_v2: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_bool_fun$',A__questionmark_v3: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$'] :
+      ( ( def_20(A__questionmark_v1,A__questionmark_v2,A__questionmark_v3) = tltrue )
+    <=> 'fun_app$bo'('case_option$h'(A__questionmark_v1,A__questionmark_v2),A__questionmark_v3) ) ).
+
+%% fun_app$w(?v2, the$g(?v3))
+tff(formula_719,axiom,
+    ! [A__questionmark_v2: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_bool_fun$',A__questionmark_v3: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$'] :
+      ( ( def_21(A__questionmark_v2,A__questionmark_v3) = tltrue )
+    <=> 'fun_app$w'(A__questionmark_v2,'the$g'(A__questionmark_v3)) ) ).
+
+%% fun_app$bp(case_option$i(?v1, ?v2), ?v3)
+tff(formula_720,axiom,
+    ! [A__questionmark_v1: tlbool,A__questionmark_v2: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_bool_fun$',A__questionmark_v3: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$'] :
+      ( ( def_22(A__questionmark_v1,A__questionmark_v2,A__questionmark_v3) = tltrue )
+    <=> 'fun_app$bp'('case_option$i'(A__questionmark_v1,A__questionmark_v2),A__questionmark_v3) ) ).
+
+%% fun_app$x(?v2, the$d(?v3))
+tff(formula_721,axiom,
+    ! [A__questionmark_v2: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_bool_fun$',A__questionmark_v3: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$'] :
+      ( ( def_23(A__questionmark_v2,A__questionmark_v3) = tltrue )
+    <=> 'fun_app$x'(A__questionmark_v2,'the$d'(A__questionmark_v3)) ) ).
+
+%% fun_app$bq(case_option$j(?v1, ?v2), ?v3)
+tff(formula_722,axiom,
+    ! [A__questionmark_v1: tlbool,A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_bool_fun$',A__questionmark_v3: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_option$'] :
+      ( ( def_24(A__questionmark_v1,A__questionmark_v2,A__questionmark_v3) = tltrue )
+    <=> 'fun_app$bq'('case_option$j'(A__questionmark_v1,A__questionmark_v2),A__questionmark_v3) ) ).
+
+%% fun_app$(?v2, the$c(?v3))
+tff(formula_723,axiom,
+    ! [A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_bool_fun$',A__questionmark_v3: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_option$'] :
+      ( ( def_25(A__questionmark_v2,A__questionmark_v3) = tltrue )
+    <=> 'fun_app$'(A__questionmark_v2,'the$c'(A__questionmark_v3)) ) ).
+
+%% fun_app$bm(case_option$f(?v1, ?v2), ?v3)
+tff(formula_724,axiom,
+    ! [A__questionmark_v1: tlbool,A__questionmark_v2: 'C_a_b_j_option_RDocument_ext_RObject_ext_bool_fun$',A__questionmark_v3: 'C_a_b_j_option_RDocument_ext_RObject_ext_option$'] :
+      ( ( def_26(A__questionmark_v1,A__questionmark_v2,A__questionmark_v3) = tltrue )
+    <=> 'fun_app$bm'('case_option$f'(A__questionmark_v1,A__questionmark_v2),A__questionmark_v3) ) ).
+
+%% fun_app$t(?v2, the$f(?v3))
+tff(formula_725,axiom,
+    ! [A__questionmark_v2: 'C_a_b_j_option_RDocument_ext_RObject_ext_bool_fun$',A__questionmark_v3: 'C_a_b_j_option_RDocument_ext_RObject_ext_option$'] :
+      ( ( def_27(A__questionmark_v2,A__questionmark_v3) = tltrue )
+    <=> 'fun_app$t'(A__questionmark_v2,'the$f'(A__questionmark_v3)) ) ).
+
+%% fun_app$bn(case_option$g(?v1, ?v2), ?v3)
+tff(formula_726,axiom,
+    ! [A__questionmark_v1: tlbool,A__questionmark_v2: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_bool_fun$',A__questionmark_v3: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$'] :
+      ( ( def_28(A__questionmark_v1,A__questionmark_v2,A__questionmark_v3) = tltrue )
+    <=> 'fun_app$bn'('case_option$g'(A__questionmark_v1,A__questionmark_v2),A__questionmark_v3) ) ).
+
+%% fun_app$v(?v2, the$e(?v3))
+tff(formula_727,axiom,
+    ! [A__questionmark_v2: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_bool_fun$',A__questionmark_v3: 'H_option_RCharacterData_ext_RNode_ext_RObject_ext_option$'] :
+      ( ( def_29(A__questionmark_v2,A__questionmark_v3) = tltrue )
+    <=> 'fun_app$v'(A__questionmark_v2,'the$e'(A__questionmark_v3)) ) ).
+
+%% fun_app$bo(case_option$h(?v1, ?v2), ?v3)
+tff(formula_728,axiom,
+    ! [A__questionmark_v1: tlbool,A__questionmark_v2: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_bool_fun$',A__questionmark_v3: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$'] :
+      ( ( def_30(A__questionmark_v1,A__questionmark_v2,A__questionmark_v3) = tltrue )
+    <=> 'fun_app$bo'('case_option$h'(A__questionmark_v1,A__questionmark_v2),A__questionmark_v3) ) ).
+
+%% fun_app$w(?v2, the$g(?v3))
+tff(formula_729,axiom,
+    ! [A__questionmark_v2: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_bool_fun$',A__questionmark_v3: 'C_a_b_e_g_option_RElement_ext_RNode_ext_RObject_ext_option$'] :
+      ( ( def_31(A__questionmark_v2,A__questionmark_v3) = tltrue )
+    <=> 'fun_app$w'(A__questionmark_v2,'the$g'(A__questionmark_v3)) ) ).
+
+%% fun_app$bp(case_option$i(?v1, ?v2), ?v3)
+tff(formula_730,axiom,
+    ! [A__questionmark_v1: tlbool,A__questionmark_v2: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_bool_fun$',A__questionmark_v3: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$'] :
+      ( ( def_32(A__questionmark_v1,A__questionmark_v2,A__questionmark_v3) = tltrue )
+    <=> 'fun_app$bp'('case_option$i'(A__questionmark_v1,A__questionmark_v2),A__questionmark_v3) ) ).
+
+%% fun_app$x(?v2, the$d(?v3))
+tff(formula_731,axiom,
+    ! [A__questionmark_v2: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_bool_fun$',A__questionmark_v3: 'C_a_b_e_g_option_RElement_ext_h_option_RCharacterData_ext_i_sum_sum_RNode_ext_RObject_ext_option$'] :
+      ( ( def_33(A__questionmark_v2,A__questionmark_v3) = tltrue )
+    <=> 'fun_app$x'(A__questionmark_v2,'the$d'(A__questionmark_v3)) ) ).
+
+%% fun_app$bq(case_option$j(?v1, ?v2), ?v3)
+tff(formula_732,axiom,
+    ! [A__questionmark_v1: tlbool,A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_bool_fun$',A__questionmark_v3: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_option$'] :
+      ( ( def_34(A__questionmark_v1,A__questionmark_v2,A__questionmark_v3) = tltrue )
+    <=> 'fun_app$bq'('case_option$j'(A__questionmark_v1,A__questionmark_v2),A__questionmark_v3) ) ).
+
+%% fun_app$(?v2, the$c(?v3))
+tff(formula_733,axiom,
+    ! [A__questionmark_v2: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_bool_fun$',A__questionmark_v3: 'A_element_ptr_b_character_data_ptr_c_sum_sum_node_ptr_option$'] :
+      ( ( def_35(A__questionmark_v2,A__questionmark_v3) = tltrue )
+    <=> 'fun_app$'(A__questionmark_v2,'the$c'(A__questionmark_v3)) ) ).
+
+%% ∀ b:tlbool ((b = tltrue) ∨ (b = tlfalse))
+tff(formula_734,axiom,
+    ! [B: tlbool] :
+      ( ( B = tltrue )
+      | ( B = tlfalse ) ) ).
+
+%% ¬(tltrue = tlfalse)
+tff(formula_735,axiom,
+    tltrue != tlfalse ).
+
+%------------------------------------------------------------------------------

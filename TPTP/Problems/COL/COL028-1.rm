@@ -1,0 +1,23 @@
+%--------------------------------------------------------------------------
+% File     : COL028-1 : TPTP v9.2.1. Bugfixed v2.3.0.
+% Domain   : Combinatory Logic
+% Problem  : Weak fixed point for B and N
+% Version  : [WM88] (equality) axioms.
+% English  : The weak fixed point property holds for the set P consisting
+%            of the combinators B and N, where ((Bx)y)z = x(yz), ((Nx)y)z
+%            = ((xz)y)z.
+
+% Refs     : [Smu85] Smullyan (1978), To Mock a Mocking Bird and Other Logi
+%          : [MW87]  McCune & Wos (1987), A Case Study in Automated Theorem
+%          : [WM88]  Wos & McCune (1988), Challenge Problems Focusing on Eq
+%          : [MW88]  McCune & Wos (1988), Some Fixed Point Problems in Comb
+% Source   : [MW88]
+% Names    : - [MW88]
+
+% Status   : Unsatisfiable
+% Rating   : 0.00 v2.0.0
+% Syntax   :
+
+% Comments :
+% Bugfixes : v2.3.0 - Removed. Duplicate of COL023-1.
+%--------------------------------------------------------------------------

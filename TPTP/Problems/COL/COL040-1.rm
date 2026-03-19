@@ -1,0 +1,27 @@
+%--------------------------------------------------------------------------
+% File     : COL040-1 : TPTP v9.2.1. Released v1.0.0.
+% Domain   : Combinatory Logic
+% Problem  : Strong fixed point for B and N
+% Version  : [WM88] (equality) axioms.
+% English  : The strong fixed point property holds for the set
+%            P consisting of the combinators B and N, where ((Bx)y)z
+%            = x(yz), ((Nx)y)z = ((xz)y)z.
+
+% Refs     : [Smu85] Smullyan (1978), To Mock a Mocking Bird and Other Logi
+%          : [MW87]  McCune & Wos (1987), A Case Study in Automated Theorem
+%          : [WM88]  Wos & McCune (1988), Challenge Problems Focusing on Eq
+%          : [MW88]  McCune & Wos (1988), Some Fixed Point Problems in Comb
+%          : [LW92]  Lusk & Wos (1992), Benchmark Problems in Which Equalit
+%          : [Wos93] Wos (1993), The Kernel Strategy and Its Use for the St
+% Source   : [MW88]
+% Names    : - [MW88]
+%          : CL3 [LW92]
+%          : Question 5 [Wos93]
+
+% Status   : Unsatisfiable
+% Rating   : ? v2.0.0
+% Syntax   :
+
+% Comments :
+% Bugfixes : v2.0.0 - Removed. Same as COL044-1.
+%--------------------------------------------------------------------------

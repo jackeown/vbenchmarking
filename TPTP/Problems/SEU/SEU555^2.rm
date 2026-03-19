@@ -1,0 +1,28 @@
+%------------------------------------------------------------------------------
+% File     : SEU555^2 : TPTP v9.2.1. Removed v4.0.0.
+% Domain   : Set Theory
+% Problem  : A simple congruence property of omega
+% Version  : Especial > Reduced > Especial.
+% English  :
+
+% Refs     : [Bro08] Brown (2008), Email to G. Sutcliffe
+% Source   : [Bro08]
+% Names    : ZFC057l [Bro08]
+
+% Status   : Theorem
+% Rating   : 0.33 v3.7.0
+% Syntax   : Number of formulae    :    1 (   0 unit;   0 type;   0 defn)
+%            Number of atoms       :    3 (   1 equality;   0 variable)
+%            Maximal formula depth :    2 (   2 average)
+%            Number of connectives :    0 (   0   ~;   0   |;   0   &;   0   @)
+%                                         (   0 <=>;   0  =>;   0  <=;   0 <~>)
+%                                         (   0  ~|;   0  ~&;   0  !!;   0  ??)
+%            Number of type conns  :    0 (   0   >;   0   *;   0   +)
+%            Number of symbols     :    1 (   0   :;   0  :=)
+%            Number of variables   :    0 (   0 sgn;   0   !;   0   ?;   0   ^)
+%                                         (   0   :;   0  :=;   0  !>;   0  ?*)
+
+% Comments : http://mathgate.info/detsetitem.php?id=36
+%          : THF0 syntax
+% Bugfixes : v4.0.0 - Removed because it's SEU551^2.
+%------------------------------------------------------------------------------

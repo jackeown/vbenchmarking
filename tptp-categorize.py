@@ -8,13 +8,18 @@ if __name__ == "__main__":
   parser = argparse.ArgumentParser()
   parser.add_argument('tptp_dir')
   parser.add_argument('output_dir')
+  parser.add_argument(
+    '--exclude-family',
+    action='append',
+    default=['CSR', 'HWV'],
+    help='TPTP problem family directories to skip when generating benchmark sets')
   args = parser.parse_args()
 
   if not os.path.isdir(args.tptp_dir):
     print(f'TPTP dir {args.tptp_dir} is not a directory')
     exit(1)
 
-  if not os.path.isdir(args.tptp_dir):
+  if not os.path.isdir(args.output_dir):
     print(f'Output dir {args.output_dir} is not a directory')
     exit(1)
 
@@ -25,12 +30,17 @@ if __name__ == "__main__":
     exit(1)
 
   result = dict()
+  excluded_families = set(args.exclude_family)
 
   for cat in os.listdir(problems_dir):
     cat_dir = os.path.join(problems_dir, cat)
 
     if not os.path.isdir(cat_dir):
       print(f'Found file in root of Problems/ directory')
+      continue
+
+    if cat in excluded_families:
+      print(f'Skipping excluded family {cat}')
       continue
 
     print(f'Parsing category {cat}')
@@ -59,5 +69,5 @@ if __name__ == "__main__":
     print(f'Category {k} has {len(v)} values')
     with open(os.path.join(args.output_dir, f'tptp_{k}.set'), 'w') as output_file:
       for e in sorted(v):
-        full_e = os.path.join('/data/benchmarks/TPTP/Problems', e)
+        full_e = os.path.relpath(os.path.join(problems_dir, e), args.output_dir)
         output_file.write(full_e + os.linesep)

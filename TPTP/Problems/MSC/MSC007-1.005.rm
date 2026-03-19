@@ -1,0 +1,28 @@
+%--------------------------------------------------------------------------
+% File     : MSC007-1.005 : TPTP v9.2.1. Bugfixed v2.1.0.
+% Domain   : Miscellaneous
+% Problem  : Cook pigeon-hole problem
+% Version  : [Pel86] axioms : Especial.
+%            Theorem formulation : Propositional.
+% English  : Suppose there are N holes and N+1 pigeons to put in the
+%            holes. Every pigeon is in a hole and no hole contains more
+%            than one pigeon. Prove that this is impossible. The size is
+%            the number of pigeons.
+
+% Refs     : [CR79]  Cook & Reckhow (1979), The Relative Efficiency of Prop
+%          : [Pel86] Pelletier (1986), Seventy-five Problems for Testing Au
+% Source   : [Pel86]
+% Names    : Pelletier 72 (Size 4) [Pel86]
+%          : pigeon.in (Size 4) [OTTER]
+
+% Status   : Unsatisfiable
+% Rating   : 0.00 v2.0.0
+% Syntax   :
+
+% Comments : For an N hole problem, the number of propositions is N^2 + N
+%            and the number of clauses is (N^3 + N^2)/2 + N+1. Thus the
+%            number of propositions increases quadratically and the number
+%            of clauses increases cubically.
+%          : tptp2X: -ftptp -s5 MSC007-1.g
+% Bugfixes : v2.1.0 - Replaced by a new SOTA size.
+%--------------------------------------------------------------------------

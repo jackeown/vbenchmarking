@@ -1,0 +1,28 @@
+%------------------------------------------------------------------------------
+% File     : SEU520^2 : TPTP v9.2.1. Removed v4.0.0.
+% Domain   : Set Theory
+% Problem  : Preliminary Notions - Power Sets and Unions
+% Version  : Especial > Reduced > Especial.
+% English  : (! A:i.in emptyset (powerset A))
+
+% Refs     : [Bro08] Brown (2008), Email to G. Sutcliffe
+% Source   : [Bro08]
+% Names    : ZFC022l [Bro08]
+
+% Status   : Theorem
+% Rating   : 0.00 v3.7.0
+% Syntax   : Number of formulae    :    8 (   3 unit;   5 type;   2 defn)
+%            Number of atoms       :   38 (   2 equality;   9 variable)
+%            Maximal formula depth :    9 (   4 average)
+%            Number of connectives :   17 (   0   ~;   0   |;   0   &;  12   @)
+%                                         (   0 <=>;   5  =>;   0  <=;   0 <~>)
+%                                         (   0  ~|;   0  ~&;   0  !!;   0  ??)
+%            Number of type conns  :    3 (   3   >;   0   *;   0   +)
+%            Number of symbols     :    7 (   5   :;   0  :=)
+%            Number of variables   :    6 (   0 sgn;   6   !;   0   ?;   0   ^)
+%                                         (   6   :;   0  :=;   0  !>;   0  ?*)
+
+% Comments : http://mathgate.info/detsetitem.php?id=388
+%          : THF0 syntax
+% Bugfixes : v4.0.0 - Removed because it's SEU519^2.
+%------------------------------------------------------------------------------

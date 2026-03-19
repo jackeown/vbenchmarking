@@ -1,0 +1,22 @@
+%------------------------------------------------------------------------------
+% File     : ALG264^2 : TPTP v9.2.1. Bugfixed v5.1.0.
+% Domain   : Algebra
+% Problem  : HOAS induction lemma 2
+% Version  : [Bro09] axioms.
+% English  :
+
+% Refs     : [DHK95] Dowek et al. (1995), Higher-order Unification via Expl
+%          : [Zha08] Zhang (2008), Using LEO-II to Prove Properties of an E
+%          : [Ben09] Benzmueller (2009), Email to Geoff Sutcliffe
+%          : [Bro09] Brown (2009), M-Set Models
+% Source   : [Ben09]
+% Names    : hoasinduction_lem2_lthm [Ben09]
+
+% Status   : Theorem
+% Rating   : 0.80 v5.0.0, 0.60 v4.1.0, 0.67 v3.7.0
+% Syntax   : WARNING: No formulae parsed from ALG264^2.rm
+% SPC      : THF_THM_EQU
+
+% Comments : THF0 syntax
+% Bugfixes : v5.1.0 - Removed - duplicate of ALG264^1
+%------------------------------------------------------------------------------

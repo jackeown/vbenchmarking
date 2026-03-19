@@ -1,0 +1,7482 @@
+%------------------------------------------------------------------------------
+% File     : ITP399_10 : TPTP v9.2.1. Released v8.2.0.
+% Domain   : Interactive Theorem Proving
+% Problem  : SMT-LIB Registers Pure_States 00178_007709
+% Version  : ITP399_1 with the conjecture removed
+% English  :
+
+% Refs     : [Des21] Desharnais (2021), Email to Geoff Sutcliffe
+% Source   : [TPTP]
+% Names    : 
+
+% Status   : Satisfiable
+% Rating   : 0.00 v8.2.0
+% Syntax   : Number of formulae    : 1678 (  80 unt;1039 typ;   0 def)
+%            Number of atoms       : 1753 ( 459 equ)
+%            Maximal formula atoms :    7 (   2 avg)
+%            Number of connectives : 1114 (   0   ~;   0   |; 475   &)
+%                                         (  88 <=>; 551  =>;   0  <=;   0 <~>)
+%            Maximal formula depth :   10 (   5 avg)
+%            Maximal term depth    :    7 (   1 avg)
+%            Number of types       :  282 ( 281 usr)
+%            Number of type conns  : 1294 ( 686   >; 608   *;   0   +;   0  <<)
+%            Number of predicates  :  283 ( 280 usr;   2 prp; 0-3 aty)
+%            Number of functors    :  478 ( 478 usr;  72 con; 0-3 aty)
+%            Number of variables   : 1522 (1466   !;  56   ?;1522   :)
+% SPC      : TF0_SAT_EQU_NAR
+
+% Comments : Translated from SMT format using smttotptp 0.9.10. See
+%            https://bitbucket.org/peba123/smttotptp/src/master/
+%          : SMT-LIB AUFLIA logic
+%------------------------------------------------------------------------------
+%% Types:
+tff('A_ell2_a_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$',type,
+    'A_ell2_a_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$': $tType ).
+
+tff('C_c_prod_ell2_c_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',type,
+    'C_c_prod_ell2_c_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$': $tType ).
+
+tff('A_b_complement_domain_a_a_b_complement_domain_prod_b_complement_domain_prod_ell2_a_b_complement_domain_a_a_b_complement_domain_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',type,
+    'A_b_complement_domain_a_a_b_complement_domain_prod_b_complement_domain_prod_ell2_a_b_complement_domain_a_a_b_complement_domain_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$': $tType ).
+
+tff('C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$',type,
+    'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('A_a_c_prod_b_complement_domain_prod_b_complement_domain_ell2_a_a_c_prod_b_complement_domain_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',type,
+    'A_a_c_prod_b_complement_domain_prod_b_complement_domain_ell2_a_a_c_prod_b_complement_domain_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$': $tType ).
+
+tff('C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',type,
+    'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$': $tType ).
+
+tff('A_ell2_a_ell2_cblinfun$',type,
+    'A_ell2_a_ell2_cblinfun$': $tType ).
+
+tff('A_a_prod_c_prod_ell2_a_a_prod_c_prod_ell2_cblinfun_a_a_c_prod_prod_ell2_a_a_c_prod_prod_ell2_cblinfun_fun$',type,
+    'A_a_prod_c_prod_ell2_a_a_prod_c_prod_ell2_cblinfun_a_a_c_prod_prod_ell2_a_a_c_prod_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_a_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_fun$',type,
+    'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_a_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_fun$': $tType ).
+
+tff('C_a_prod_a_c_prod_b_complement_domain_prod_ell2_c_a_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',type,
+    'C_a_prod_a_c_prod_b_complement_domain_prod_ell2_c_a_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$': $tType ).
+
+tff('C_a_prod_ell2_c_a_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',type,
+    'C_a_prod_ell2_c_a_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$': $tType ).
+
+tff('A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_c_b_complement_domain_ell2_c_b_complement_domain_ell2_cblinfun_fun$',type,
+    'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_c_b_complement_domain_ell2_c_b_complement_domain_ell2_cblinfun_fun$': $tType ).
+
+tff('A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$',type,
+    'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$': $tType ).
+
+tff('C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',type,
+    'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$': $tType ).
+
+tff('A_b_complement_domain_a_a_b_complement_domain_prod_prod_ell2_a_b_complement_domain_a_a_b_complement_domain_prod_prod_ell2_cblinfun_b_a_c_a_c_prod_b_complement_domain_prod_prod_prod_ell2_b_a_c_a_c_prod_b_complement_domain_prod_prod_prod_ell2_cblinfun_fun$',type,
+    'A_b_complement_domain_a_a_b_complement_domain_prod_prod_ell2_a_b_complement_domain_a_a_b_complement_domain_prod_prod_ell2_cblinfun_b_a_c_a_c_prod_b_complement_domain_prod_prod_prod_ell2_b_a_c_a_c_prod_b_complement_domain_prod_prod_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('A_ell2_a_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$',type,
+    'A_ell2_a_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$',type,
+    'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$': $tType ).
+
+tff('A_a_c_prod_b_complement_domain_prod_c_prod_ell2_a_a_c_prod_b_complement_domain_prod_c_prod_ell2_cblinfun_a_a_c_prod_b_complement_domain_c_prod_prod_ell2_a_a_c_prod_b_complement_domain_c_prod_prod_ell2_cblinfun_fun$',type,
+    'A_a_c_prod_b_complement_domain_prod_c_prod_ell2_a_a_c_prod_b_complement_domain_prod_c_prod_ell2_cblinfun_a_a_c_prod_b_complement_domain_c_prod_prod_ell2_a_a_c_prod_b_complement_domain_c_prod_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('A_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$',type,
+    'A_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$': $tType ).
+
+tff('A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$',type,
+    'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$': $tType ).
+
+tff('C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',type,
+    'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$': $tType ).
+
+tff('A_ell2_a_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$',type,
+    'A_ell2_a_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('B_ell2_b_ell2_cblinfun$',type,
+    'B_ell2_b_ell2_cblinfun$': $tType ).
+
+tff('A_c_prod_ell2_a_c_prod_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$',type,
+    'A_c_prod_ell2_a_c_prod_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$': $tType ).
+
+tff('A_a_complement_domain_ell2_a_a_complement_domain_ell2_cblinfun$',type,
+    'A_a_complement_domain_ell2_a_a_complement_domain_ell2_cblinfun$': $tType ).
+
+tff('A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_c_a_c_prod_b_complement_domain_prod_prod_ell2_b_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$',type,
+    'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_c_a_c_prod_b_complement_domain_prod_prod_ell2_b_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_a_c_prod_b_complement_domain_prod_c_prod_ell2_a_a_c_prod_b_complement_domain_prod_c_prod_ell2_cblinfun_fun$',type,
+    'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_a_c_prod_b_complement_domain_prod_c_prod_ell2_a_a_c_prod_b_complement_domain_prod_c_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('A_c_a_a_c_prod_b_complement_domain_prod_prod_prod_ell2_a_c_a_a_c_prod_b_complement_domain_prod_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',type,
+    'A_c_a_a_c_prod_b_complement_domain_prod_prod_prod_ell2_a_c_a_a_c_prod_b_complement_domain_prod_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$': $tType ).
+
+tff('A_b_complement_domain_c_prod_ell2_a_b_complement_domain_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',type,
+    'A_b_complement_domain_c_prod_ell2_a_b_complement_domain_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$': $tType ).
+
+tff('B_c_a_c_prod_b_complement_domain_prod_prod_ell2_b_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_a_b_complement_domain_prod_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_a_b_complement_domain_prod_ell2_cblinfun_fun$',type,
+    'B_c_a_c_prod_b_complement_domain_prod_prod_ell2_b_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_a_b_complement_domain_prod_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_a_b_complement_domain_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('A_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$',type,
+    'A_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$': $tType ).
+
+tff('C_a_c_prod_b_complement_domain_prod_b_prod_ell2_c_a_c_prod_b_complement_domain_prod_b_prod_ell2_cblinfun_a_b_complement_domain_a_a_b_complement_domain_prod_prod_ell2_a_b_complement_domain_a_a_b_complement_domain_prod_prod_ell2_cblinfun_fun$',type,
+    'C_a_c_prod_b_complement_domain_prod_b_prod_ell2_c_a_c_prod_b_complement_domain_prod_b_prod_ell2_cblinfun_a_b_complement_domain_a_a_b_complement_domain_prod_prod_ell2_a_b_complement_domain_a_a_b_complement_domain_prod_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('A_c_prod_ell2_a_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',type,
+    'A_c_prod_ell2_a_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$': $tType ).
+
+tff('A_a_b_complement_domain_prod_a_c_a_c_prod_b_complement_domain_prod_prod_complement_domain_b_a_a_b_complement_domain_prod_complement_domain_prod_ell2_a_a_b_complement_domain_prod_a_c_a_c_prod_b_complement_domain_prod_prod_complement_domain_b_a_a_b_complement_domain_prod_complement_domain_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$',type,
+    'A_a_b_complement_domain_prod_a_c_a_c_prod_b_complement_domain_prod_prod_complement_domain_b_a_a_b_complement_domain_prod_complement_domain_prod_ell2_a_a_b_complement_domain_prod_a_c_a_c_prod_b_complement_domain_prod_prod_complement_domain_b_a_a_b_complement_domain_prod_complement_domain_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('A_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',type,
+    'A_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$': $tType ).
+
+tff('A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_set$',type,
+    'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_set$': $tType ).
+
+tff('A_a_prod_ell2_a_a_prod_ell2_cblinfun_a_a_prod_ell2_a_a_prod_ell2_cblinfun_fun$',type,
+    'A_a_prod_ell2_a_a_prod_ell2_cblinfun_a_a_prod_ell2_a_a_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('C_c_b_complement_domain_prod_c_a_a_c_prod_b_complement_domain_prod_prod_prod_ell2_c_c_b_complement_domain_prod_c_a_a_c_prod_b_complement_domain_prod_prod_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$',type,
+    'C_c_b_complement_domain_prod_c_a_a_c_prod_b_complement_domain_prod_prod_prod_ell2_c_c_b_complement_domain_prod_c_a_a_c_prod_b_complement_domain_prod_prod_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('B_b_prod_ell2_b_b_prod_ell2_cblinfun_a_a_b_complement_domain_prod_c_c_b_complement_domain_prod_prod_ell2_a_a_b_complement_domain_prod_c_c_b_complement_domain_prod_prod_ell2_cblinfun_fun$',type,
+    'B_b_prod_ell2_b_b_prod_ell2_cblinfun_a_a_b_complement_domain_prod_c_c_b_complement_domain_prod_prod_ell2_a_a_b_complement_domain_prod_c_c_b_complement_domain_prod_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun$',type,
+    'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun$': $tType ).
+
+tff('C_c_b_complement_domain_prod_c_c_b_complement_domain_prod_prod_ell2_c_c_b_complement_domain_prod_c_c_b_complement_domain_prod_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$',type,
+    'C_c_b_complement_domain_prod_c_c_b_complement_domain_prod_prod_ell2_c_c_b_complement_domain_prod_c_c_b_complement_domain_prod_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun$',type,
+    'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun$': $tType ).
+
+tff('B_ell2_b_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$',type,
+    'B_ell2_b_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$',type,
+    'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('A_a_prod_ell2_a_a_prod_ell2_cblinfun$',type,
+    'A_a_prod_ell2_a_a_prod_ell2_cblinfun$': $tType ).
+
+tff('A_c_prod_ell2$',type,
+    'A_c_prod_ell2$': $tType ).
+
+tff('C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$',type,
+    'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$': $tType ).
+
+tff('C_a_a_c_prod_b_complement_domain_prod_prod_a_a_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_a_a_b_complement_domain_prod_prod_ell2_cblinfun_set$',type,
+    'C_a_a_c_prod_b_complement_domain_prod_prod_a_a_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_a_a_b_complement_domain_prod_prod_ell2_cblinfun_set$': $tType ).
+
+tff('A_a_c_prod_b_complement_domain_prod_c_prod_ell2_a_a_c_prod_b_complement_domain_prod_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',type,
+    'A_a_c_prod_b_complement_domain_prod_c_prod_ell2_a_a_c_prod_b_complement_domain_prod_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$': $tType ).
+
+tff('A_b_complement_domain_a_prod_ell2_a_b_complement_domain_a_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',type,
+    'A_b_complement_domain_a_prod_ell2_a_b_complement_domain_a_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$': $tType ).
+
+tff('A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$',type,
+    'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('B_c_a_c_prod_b_complement_domain_prod_prod_ell2_b_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$',type,
+    'B_c_a_c_prod_b_complement_domain_prod_prod_ell2_b_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('C_a_c_prod_b_complement_domain_prod_a_prod_ell2_c_a_c_prod_b_complement_domain_prod_a_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$',type,
+    'C_a_c_prod_b_complement_domain_prod_a_prod_ell2_c_a_c_prod_b_complement_domain_prod_a_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('A_a_prod_c_prod_ell2_a_a_prod_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',type,
+    'A_a_prod_c_prod_ell2_a_a_prod_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$': $tType ).
+
+tff('C_b_complement_domain_a_b_complement_domain_prod_ell2_c_b_complement_domain_a_b_complement_domain_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$',type,
+    'C_b_complement_domain_a_b_complement_domain_prod_ell2_c_b_complement_domain_a_b_complement_domain_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('C_ell2_c_ell2_cblinfun$',type,
+    'C_ell2_c_ell2_cblinfun$': $tType ).
+
+tff('B_b_prod_ell2_b_b_prod_ell2_cblinfun_c_a_a_c_prod_b_complement_domain_prod_prod_a_a_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_a_a_b_complement_domain_prod_prod_ell2_cblinfun_fun$',type,
+    'B_b_prod_ell2_b_b_prod_ell2_cblinfun_c_a_a_c_prod_b_complement_domain_prod_prod_a_a_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_a_a_b_complement_domain_prod_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('A_c_prod_c_prod_ell2_a_c_prod_c_prod_ell2_cblinfun_a_c_c_prod_prod_ell2_a_c_c_prod_prod_ell2_cblinfun_fun$',type,
+    'A_c_prod_c_prod_ell2_a_c_prod_c_prod_ell2_cblinfun_a_c_c_prod_prod_ell2_a_c_c_prod_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('A_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun$',type,
+    'A_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun$': $tType ).
+
+tff('C_c_b_complement_domain_prod_c_c_b_complement_domain_prod_prod_ell2_c_c_b_complement_domain_prod_c_c_b_complement_domain_prod_prod_ell2_cblinfun_set$',type,
+    'C_c_b_complement_domain_prod_c_c_b_complement_domain_prod_prod_ell2_c_c_b_complement_domain_prod_c_c_b_complement_domain_prod_prod_ell2_cblinfun_set$': $tType ).
+
+tff('A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$',type,
+    'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('C_c_b_complement_domain_prod_a_c_a_c_prod_b_complement_domain_prod_prod_prod_ell2_c_c_b_complement_domain_prod_a_c_a_c_prod_b_complement_domain_prod_prod_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$',type,
+    'C_c_b_complement_domain_prod_a_c_a_c_prod_b_complement_domain_prod_prod_prod_ell2_c_c_b_complement_domain_prod_a_c_a_c_prod_b_complement_domain_prod_prod_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('B_b_prod_ell2_b_b_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',type,
+    'B_b_prod_ell2_b_b_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$': $tType ).
+
+tff('C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_bool_fun$',type,
+    'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_bool_fun$': $tType ).
+
+tff('A_b_complement_domain_a_prod_ell2_a_b_complement_domain_a_prod_ell2_cblinfun$',type,
+    'A_b_complement_domain_a_prod_ell2_a_b_complement_domain_a_prod_ell2_cblinfun$': $tType ).
+
+tff('C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_set$',type,
+    'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_set$': $tType ).
+
+tff('A_a_c_prod_b_complement_domain_c_prod_prod_ell2_a_a_c_prod_b_complement_domain_c_prod_prod_ell2_cblinfun_a_a_c_prod_b_complement_domain_prod_c_prod_ell2_a_a_c_prod_b_complement_domain_prod_c_prod_ell2_cblinfun_fun$',type,
+    'A_a_c_prod_b_complement_domain_c_prod_prod_ell2_a_a_c_prod_b_complement_domain_c_prod_prod_ell2_cblinfun_a_a_c_prod_b_complement_domain_prod_c_prod_ell2_a_a_c_prod_b_complement_domain_prod_c_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('A_c_prod_b_complement_domain_a_b_complement_domain_prod_ell2_a_c_prod_b_complement_domain_a_b_complement_domain_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$',type,
+    'A_c_prod_b_complement_domain_a_b_complement_domain_prod_ell2_a_c_prod_b_complement_domain_a_b_complement_domain_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('C_c_a_c_prod_b_complement_domain_prod_prod_ell2_c_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_a_b_complement_domain_prod_ell2_b_a_b_complement_domain_prod_ell2_cblinfun_fun$',type,
+    'C_c_a_c_prod_b_complement_domain_prod_prod_ell2_c_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_a_b_complement_domain_prod_ell2_b_a_b_complement_domain_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('B_ell2_b_ell2_cblinfun_c_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$',type,
+    'B_ell2_b_ell2_cblinfun_c_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_set$',type,
+    'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_set$': $tType ).
+
+tff('C_a_complement_domain_ell2_c_a_complement_domain_ell2_cblinfun$',type,
+    'C_a_complement_domain_ell2_c_a_complement_domain_ell2_cblinfun$': $tType ).
+
+tff('C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_c_a_prod_a_c_prod_b_complement_domain_prod_ell2_c_a_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$',type,
+    'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_c_a_prod_a_c_prod_b_complement_domain_prod_ell2_c_a_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('B_b_c_complement_domain_prod_ell2_b_b_c_complement_domain_prod_ell2_cblinfun$',type,
+    'B_b_c_complement_domain_prod_ell2_b_b_c_complement_domain_prod_ell2_cblinfun$': $tType ).
+
+tff('A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun$',type,
+    'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun$': $tType ).
+
+tff('C_a_prod_ell2_c_a_prod_ell2_cblinfun_a_c_prod_ell2_a_c_prod_ell2_cblinfun_fun$',type,
+    'C_a_prod_ell2_c_a_prod_ell2_cblinfun_a_c_prod_ell2_a_c_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun$',type,
+    'A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun$': $tType ).
+
+tff('C_a_c_prod_b_complement_domain_prod_c_prod_ell2_c_a_c_prod_b_complement_domain_prod_c_prod_ell2_cblinfun_a_b_complement_domain_b_prod_ell2_a_b_complement_domain_b_prod_ell2_cblinfun_fun$',type,
+    'C_a_c_prod_b_complement_domain_prod_c_prod_ell2_c_a_c_prod_b_complement_domain_prod_c_prod_ell2_cblinfun_a_b_complement_domain_b_prod_ell2_a_b_complement_domain_b_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('B_b_prod_ell2_b_b_prod_ell2_cblinfun_c_c_b_complement_domain_prod_a_c_a_c_prod_b_complement_domain_prod_prod_prod_ell2_c_c_b_complement_domain_prod_a_c_a_c_prod_b_complement_domain_prod_prod_prod_ell2_cblinfun_fun$',type,
+    'B_b_prod_ell2_b_b_prod_ell2_cblinfun_c_c_b_complement_domain_prod_a_c_a_c_prod_b_complement_domain_prod_prod_prod_ell2_c_c_b_complement_domain_prod_a_c_a_c_prod_b_complement_domain_prod_prod_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('C_c_a_c_prod_b_complement_domain_prod_prod_ell2_c_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun$',type,
+    'C_c_a_c_prod_b_complement_domain_prod_prod_ell2_c_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun$': $tType ).
+
+tff('C_c_b_complement_domain_prod_c_a_a_c_prod_b_complement_domain_prod_prod_prod_ell2_c_c_b_complement_domain_prod_c_a_a_c_prod_b_complement_domain_prod_prod_prod_ell2_cblinfun_set$',type,
+    'C_c_b_complement_domain_prod_c_a_a_c_prod_b_complement_domain_prod_prod_prod_ell2_c_c_b_complement_domain_prod_c_a_a_c_prod_b_complement_domain_prod_prod_prod_ell2_cblinfun_set$': $tType ).
+
+tff('C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$',type,
+    'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$': $tType ).
+
+tff('C_c_complement_domain_ell2_c_c_complement_domain_ell2_cblinfun$',type,
+    'C_c_complement_domain_ell2_c_c_complement_domain_ell2_cblinfun$': $tType ).
+
+tff('A_a_c_prod_prod_ell2_a_a_c_prod_prod_ell2_cblinfun_a_a_prod_c_prod_ell2_a_a_prod_c_prod_ell2_cblinfun_fun$',type,
+    'A_a_c_prod_prod_ell2_a_a_c_prod_prod_ell2_cblinfun_a_a_prod_c_prod_ell2_a_a_prod_c_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('B$',type,
+    'B$': $tType ).
+
+tff('A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$',type,
+    'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('B_a_complement_domain_ell2_b_a_complement_domain_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$',type,
+    'B_a_complement_domain_ell2_b_a_complement_domain_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$': $tType ).
+
+tff('A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_set$',type,
+    'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_set$': $tType ).
+
+tff('C_a_c_prod_b_complement_domain_prod_b_complement_domain_ell2_c_a_c_prod_b_complement_domain_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',type,
+    'C_a_c_prod_b_complement_domain_prod_b_complement_domain_ell2_c_a_c_prod_b_complement_domain_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$': $tType ).
+
+tff('A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_bool_fun$',type,
+    'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_bool_fun$': $tType ).
+
+tff('B_c_complement_domain_ell2_b_c_complement_domain_ell2_cblinfun$',type,
+    'B_c_complement_domain_ell2_b_c_complement_domain_ell2_cblinfun$': $tType ).
+
+tff('A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$',type,
+    'A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('C_c_complement_domain_ell2_c_c_complement_domain_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$',type,
+    'C_c_complement_domain_ell2_c_c_complement_domain_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$': $tType ).
+
+tff('C_b_complement_domain_ell2_c_b_complement_domain_ell2_cblinfun_c_b_complement_domain_ell2_c_b_complement_domain_ell2_cblinfun_fun$',type,
+    'C_b_complement_domain_ell2_c_b_complement_domain_ell2_cblinfun_c_b_complement_domain_ell2_c_b_complement_domain_ell2_cblinfun_fun$': $tType ).
+
+tff('B_c_a_c_prod_b_complement_domain_prod_prod_ell2_b_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_b_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_b_prod_ell2_cblinfun_fun$',type,
+    'B_c_a_c_prod_b_complement_domain_prod_prod_ell2_b_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_b_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_b_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$',type,
+    'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$': $tType ).
+
+tff('C_b_complement_domain_c_prod_ell2_c_b_complement_domain_c_prod_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$',type,
+    'C_b_complement_domain_c_prod_ell2_c_b_complement_domain_c_prod_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('C_b_complement_domain_ell2_c_b_complement_domain_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$',type,
+    'C_b_complement_domain_ell2_c_b_complement_domain_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$': $tType ).
+
+tff('A_a_b_complement_domain_prod_c_c_b_complement_domain_prod_prod_ell2_a_a_b_complement_domain_prod_c_c_b_complement_domain_prod_prod_ell2_cblinfun_set$',type,
+    'A_a_b_complement_domain_prod_c_c_b_complement_domain_prod_prod_ell2_a_a_b_complement_domain_prod_c_c_b_complement_domain_prod_prod_ell2_cblinfun_set$': $tType ).
+
+tff('A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',type,
+    'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$': $tType ).
+
+tff('A_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_c_prod_b_complement_domain_a_prod_ell2_a_c_prod_b_complement_domain_a_prod_ell2_cblinfun_fun$',type,
+    'A_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_c_prod_b_complement_domain_a_prod_ell2_a_c_prod_b_complement_domain_a_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('A_c_prod_b_complement_domain_a_prod_ell2_a_c_prod_b_complement_domain_a_prod_ell2_cblinfun_a_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$',type,
+    'A_c_prod_b_complement_domain_a_prod_ell2_a_c_prod_b_complement_domain_a_prod_ell2_cblinfun_a_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',type,
+    'B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$': $tType ).
+
+tff('A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$',type,
+    'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('B_b_prod_ell2_b_b_prod_ell2_cblinfun_a_a_b_complement_domain_prod_a_a_b_complement_domain_prod_prod_ell2_a_a_b_complement_domain_prod_a_a_b_complement_domain_prod_prod_ell2_cblinfun_fun$',type,
+    'B_b_prod_ell2_b_b_prod_ell2_cblinfun_a_a_b_complement_domain_prod_a_a_b_complement_domain_prod_prod_ell2_a_a_b_complement_domain_prod_a_a_b_complement_domain_prod_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('C$',type,
+    'C$': $tType ).
+
+tff('A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',type,
+    'A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$': $tType ).
+
+tff('C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',type,
+    'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$': $tType ).
+
+tff('C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_bool_fun$',type,
+    'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_bool_fun$': $tType ).
+
+tff('A_a_a_b_complement_domain_prod_b_complement_domain_prod_ell2_a_a_a_b_complement_domain_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',type,
+    'A_a_a_b_complement_domain_prod_b_complement_domain_prod_ell2_a_a_a_b_complement_domain_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$': $tType ).
+
+tff('C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$',type,
+    'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('A_a_b_complement_domain_prod_c_c_b_complement_domain_prod_prod_ell2_a_a_b_complement_domain_prod_c_c_b_complement_domain_prod_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$',type,
+    'A_a_b_complement_domain_prod_c_c_b_complement_domain_prod_prod_ell2_a_a_b_complement_domain_prod_c_c_b_complement_domain_prod_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('C_b_complement_domain_a_c_prod_b_complement_domain_prod_ell2_c_b_complement_domain_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$',type,
+    'C_b_complement_domain_a_c_prod_b_complement_domain_prod_ell2_c_b_complement_domain_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('C_a_c_prod_b_complement_domain_prod_a_prod_ell2_c_a_c_prod_b_complement_domain_prod_a_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',type,
+    'C_a_c_prod_b_complement_domain_prod_a_prod_ell2_c_a_c_prod_b_complement_domain_prod_a_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$': $tType ).
+
+tff('C_ell2$',type,
+    'C_ell2$': $tType ).
+
+tff('A_a_complement_domain_c_a_c_prod_b_complement_domain_prod_a_b_complement_domain_complement_domain_prod_ell2_a_a_complement_domain_c_a_c_prod_b_complement_domain_prod_a_b_complement_domain_complement_domain_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$',type,
+    'A_a_complement_domain_c_a_c_prod_b_complement_domain_prod_a_b_complement_domain_complement_domain_prod_ell2_a_a_complement_domain_c_a_c_prod_b_complement_domain_prod_a_b_complement_domain_complement_domain_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('C_a_c_prod_b_complement_domain_prod_a_c_a_c_prod_b_complement_domain_prod_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_a_c_a_c_prod_b_complement_domain_prod_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',type,
+    'C_a_c_prod_b_complement_domain_prod_a_c_a_c_prod_b_complement_domain_prod_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_a_c_a_c_prod_b_complement_domain_prod_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$': $tType ).
+
+tff('C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_c_b_complement_domain_c_prod_ell2_c_b_complement_domain_c_prod_ell2_cblinfun_fun$',type,
+    'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_c_b_complement_domain_c_prod_ell2_c_b_complement_domain_c_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('A_c_prod_ell2_a_c_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$',type,
+    'A_c_prod_ell2_a_c_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('A_b_complement_domain_b_complement_domain_ell2_a_b_complement_domain_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',type,
+    'A_b_complement_domain_b_complement_domain_ell2_a_b_complement_domain_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$': $tType ).
+
+tff('C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$',type,
+    'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('A_a_b_complement_domain_c_prod_prod_ell2_a_a_b_complement_domain_c_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',type,
+    'A_a_b_complement_domain_c_prod_prod_ell2_a_a_b_complement_domain_c_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$': $tType ).
+
+tff('C_a_c_prod_b_complement_domain_prod_a_prod_ell2_c_a_c_prod_b_complement_domain_prod_a_prod_ell2_cblinfun_a_b_complement_domain_b_prod_ell2_a_b_complement_domain_b_prod_ell2_cblinfun_fun$',type,
+    'C_a_c_prod_b_complement_domain_prod_a_prod_ell2_c_a_c_prod_b_complement_domain_prod_a_prod_ell2_cblinfun_a_b_complement_domain_b_prod_ell2_a_b_complement_domain_b_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('C_c_b_complement_domain_prod_a_c_a_c_prod_b_complement_domain_prod_prod_prod_ell2_c_c_b_complement_domain_prod_a_c_a_c_prod_b_complement_domain_prod_prod_prod_ell2_cblinfun_set$',type,
+    'C_c_b_complement_domain_prod_a_c_a_c_prod_b_complement_domain_prod_prod_prod_ell2_c_c_b_complement_domain_prod_a_c_a_c_prod_b_complement_domain_prod_prod_prod_ell2_cblinfun_set$': $tType ).
+
+tff('C_b_complement_domain_ell2_c_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',type,
+    'C_b_complement_domain_ell2_c_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$': $tType ).
+
+tff('A_c_prod_c_prod_ell2_a_c_prod_c_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$',type,
+    'A_c_prod_c_prod_ell2_a_c_prod_c_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('B_ell2_b_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$',type,
+    'B_ell2_b_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('A_a_complement_domain_ell2_a_a_complement_domain_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$',type,
+    'A_a_complement_domain_ell2_a_a_complement_domain_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$': $tType ).
+
+tff('B_a_b_complement_domain_prod_ell2_b_a_b_complement_domain_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$',type,
+    'B_a_b_complement_domain_prod_ell2_b_a_b_complement_domain_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$',type,
+    'B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('C_c_a_complement_domain_prod_ell2_c_c_a_complement_domain_prod_ell2_cblinfun$',type,
+    'C_c_a_complement_domain_prod_ell2_c_c_a_complement_domain_prod_ell2_cblinfun$': $tType ).
+
+tff('B_a_complement_domain_ell2_b_a_complement_domain_ell2_cblinfun$',type,
+    'B_a_complement_domain_ell2_b_a_complement_domain_ell2_cblinfun$': $tType ).
+
+tff('A_b_complement_domain_a_c_prod_b_complement_domain_prod_ell2_a_b_complement_domain_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$',type,
+    'A_b_complement_domain_a_c_prod_b_complement_domain_prod_ell2_a_b_complement_domain_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$',type,
+    'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$': $tType ).
+
+tff('A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',type,
+    'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$': $tType ).
+
+tff('B_b_a_complement_domain_prod_ell2_b_b_a_complement_domain_prod_ell2_cblinfun$',type,
+    'B_b_a_complement_domain_prod_ell2_b_b_a_complement_domain_prod_ell2_cblinfun$': $tType ).
+
+tff('A_b_complement_domain_a_b_complement_domain_prod_ell2_a_b_complement_domain_a_b_complement_domain_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$',type,
+    'A_b_complement_domain_a_b_complement_domain_prod_ell2_a_b_complement_domain_a_b_complement_domain_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('A_ell2_a_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$',type,
+    'A_ell2_a_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('B_b_prod_ell2_b_b_prod_ell2_cblinfun_c_c_b_complement_domain_prod_a_a_b_complement_domain_prod_prod_ell2_c_c_b_complement_domain_prod_a_a_b_complement_domain_prod_prod_ell2_cblinfun_fun$',type,
+    'B_b_prod_ell2_b_b_prod_ell2_cblinfun_c_c_b_complement_domain_prod_a_a_b_complement_domain_prod_prod_ell2_c_c_b_complement_domain_prod_a_a_b_complement_domain_prod_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('C_a_prod_ell2_c_a_prod_ell2_cblinfun$',type,
+    'C_a_prod_ell2_c_a_prod_ell2_cblinfun$': $tType ).
+
+tff('A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$',type,
+    'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('C_a_c_prod_prod_ell2_c_a_c_prod_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$',type,
+    'C_a_c_prod_prod_ell2_c_a_c_prod_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('B_b_prod_ell2_b_b_prod_ell2_cblinfun_c_c_b_complement_domain_prod_c_a_a_c_prod_b_complement_domain_prod_prod_prod_ell2_c_c_b_complement_domain_prod_c_a_a_c_prod_b_complement_domain_prod_prod_prod_ell2_cblinfun_fun$',type,
+    'B_b_prod_ell2_b_b_prod_ell2_cblinfun_c_c_b_complement_domain_prod_c_a_a_c_prod_b_complement_domain_prod_prod_prod_ell2_c_c_b_complement_domain_prod_c_a_a_c_prod_b_complement_domain_prod_prod_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('C_ell2_c_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$',type,
+    'C_ell2_c_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$': $tType ).
+
+tff('C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$',type,
+    'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$': $tType ).
+
+tff('C_a_a_c_prod_b_complement_domain_prod_prod_c_c_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_c_c_b_complement_domain_prod_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$',type,
+    'C_a_a_c_prod_b_complement_domain_prod_prod_c_c_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_c_c_b_complement_domain_prod_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('A_c_prod_a_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_prod_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_c_a_a_c_prod_b_complement_domain_prod_prod_prod_ell2_a_c_a_a_c_prod_b_complement_domain_prod_prod_prod_ell2_cblinfun_fun$',type,
+    'A_c_prod_a_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_prod_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_c_a_a_c_prod_b_complement_domain_prod_prod_prod_ell2_a_c_a_a_c_prod_b_complement_domain_prod_prod_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('C_a_a_c_prod_b_complement_domain_prod_prod_a_a_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_a_a_b_complement_domain_prod_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$',type,
+    'C_a_a_c_prod_b_complement_domain_prod_prod_a_a_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_a_a_b_complement_domain_prod_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('A_a_b_complement_domain_prod_a_a_b_complement_domain_prod_prod_ell2_a_a_b_complement_domain_prod_a_a_b_complement_domain_prod_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_a_c_a_c_prod_b_complement_domain_prod_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_a_c_a_c_prod_b_complement_domain_prod_prod_prod_ell2_cblinfun_fun$',type,
+    'A_a_b_complement_domain_prod_a_a_b_complement_domain_prod_prod_ell2_a_a_b_complement_domain_prod_a_a_b_complement_domain_prod_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_a_c_a_c_prod_b_complement_domain_prod_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_a_c_a_c_prod_b_complement_domain_prod_prod_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('A_a_c_prod_b_complement_domain_prod_c_a_a_c_prod_b_complement_domain_prod_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_c_a_a_c_prod_b_complement_domain_prod_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',type,
+    'A_a_c_prod_b_complement_domain_prod_c_a_a_c_prod_b_complement_domain_prod_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_c_a_a_c_prod_b_complement_domain_prod_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$': $tType ).
+
+tff('A_c_prod_b_complement_domain_c_prod_ell2_a_c_prod_b_complement_domain_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',type,
+    'A_c_prod_b_complement_domain_c_prod_ell2_a_c_prod_b_complement_domain_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$': $tType ).
+
+tff('C_a_c_prod_b_complement_domain_prod_b_prod_ell2_c_a_c_prod_b_complement_domain_prod_b_prod_ell2_cblinfun_b_a_c_a_c_prod_b_complement_domain_prod_prod_prod_ell2_b_a_c_a_c_prod_b_complement_domain_prod_prod_prod_ell2_cblinfun_fun$',type,
+    'C_a_c_prod_b_complement_domain_prod_b_prod_ell2_c_a_c_prod_b_complement_domain_prod_b_prod_ell2_cblinfun_b_a_c_a_c_prod_b_complement_domain_prod_prod_prod_ell2_b_a_c_a_c_prod_b_complement_domain_prod_prod_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('A_a_c_prod_prod_ell2_a_a_c_prod_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$',type,
+    'A_a_c_prod_prod_ell2_a_a_c_prod_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$',type,
+    'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('C_ell2_c_ell2_cblinfun_a_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$',type,
+    'C_ell2_c_ell2_cblinfun_a_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('A_a_a_complement_domain_prod_ell2_a_a_a_complement_domain_prod_ell2_cblinfun$',type,
+    'A_a_a_complement_domain_prod_ell2_a_a_a_complement_domain_prod_ell2_cblinfun$': $tType ).
+
+tff('B_ell2_b_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$',type,
+    'B_ell2_b_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$': $tType ).
+
+tff('B_ell2_b_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$',type,
+    'B_ell2_b_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$': $tType ).
+
+tff('C_a_c_prod_b_complement_domain_prod_c_prod_ell2_c_a_c_prod_b_complement_domain_prod_c_prod_ell2_cblinfun$',type,
+    'C_a_c_prod_b_complement_domain_prod_c_prod_ell2_c_a_c_prod_b_complement_domain_prod_c_prod_ell2_cblinfun$': $tType ).
+
+tff('B_ell2_b_ell2_cblinfun_set$',type,
+    'B_ell2_b_ell2_cblinfun_set$': $tType ).
+
+tff('C_a_c_prod_b_complement_domain_prod_c_prod_ell2_c_a_c_prod_b_complement_domain_prod_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',type,
+    'C_a_c_prod_b_complement_domain_prod_c_prod_ell2_c_a_c_prod_b_complement_domain_prod_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$': $tType ).
+
+tff('A_c_prod_c_prod_ell2_a_c_prod_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',type,
+    'A_c_prod_c_prod_ell2_a_c_prod_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$': $tType ).
+
+tff('C_c_prod_ell2_c_c_prod_ell2_cblinfun$',type,
+    'C_c_prod_ell2_c_c_prod_ell2_cblinfun$': $tType ).
+
+tff('A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$',type,
+    'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$': $tType ).
+
+tff('A_a_c_complement_domain_prod_ell2_a_a_c_complement_domain_prod_ell2_cblinfun$',type,
+    'A_a_c_complement_domain_prod_ell2_a_a_c_complement_domain_prod_ell2_cblinfun$': $tType ).
+
+tff('A_ell2_a_ell2_cblinfun_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$',type,
+    'A_ell2_a_ell2_cblinfun_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('A_ell2_a_ell2_cblinfun_set$',type,
+    'A_ell2_a_ell2_cblinfun_set$': $tType ).
+
+tff('A_c_prod_a_prod_ell2_a_c_prod_a_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$',type,
+    'A_c_prod_a_prod_ell2_a_c_prod_a_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('A_c_a_c_prod_b_complement_domain_prod_c_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_c_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',type,
+    'A_c_a_c_prod_b_complement_domain_prod_c_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_c_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$': $tType ).
+
+tff('A_c_complement_domain_ell2_a_c_complement_domain_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$',type,
+    'A_c_complement_domain_ell2_a_c_complement_domain_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$': $tType ).
+
+tff('A_c_prod_ell2_a_c_prod_ell2_cblinfun_a_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$',type,
+    'A_c_prod_ell2_a_c_prod_ell2_cblinfun_a_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('A_a_c_a_c_prod_b_complement_domain_prod_prod_b_complement_domain_prod_ell2_a_a_c_a_c_prod_b_complement_domain_prod_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',type,
+    'A_a_c_a_c_prod_b_complement_domain_prod_prod_b_complement_domain_prod_ell2_a_a_c_a_c_prod_b_complement_domain_prod_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$': $tType ).
+
+tff('A_c_prod_ell2_a_c_prod_ell2_cblinfun_a_c_prod_ell2_a_c_prod_ell2_cblinfun_fun$',type,
+    'A_c_prod_ell2_a_c_prod_ell2_cblinfun_a_c_prod_ell2_a_c_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_set$',type,
+    'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_set$': $tType ).
+
+tff('A_a_c_prod_b_complement_domain_prod_c_prod_ell2_a_a_c_prod_b_complement_domain_prod_c_prod_ell2_cblinfun_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$',type,
+    'A_a_c_prod_b_complement_domain_prod_c_prod_ell2_a_a_c_prod_b_complement_domain_prod_c_prod_ell2_cblinfun_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('C_a_c_prod_b_complement_domain_prod_a_b_complement_domain_complement_domain_ell2_c_a_c_prod_b_complement_domain_prod_a_b_complement_domain_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',type,
+    'C_a_c_prod_b_complement_domain_prod_a_b_complement_domain_complement_domain_ell2_c_a_c_prod_b_complement_domain_prod_a_b_complement_domain_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$': $tType ).
+
+tff('A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun$',type,
+    'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun$': $tType ).
+
+tff('A_c_prod_b_complement_domain_c_b_complement_domain_prod_ell2_a_c_prod_b_complement_domain_c_b_complement_domain_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$',type,
+    'A_c_prod_b_complement_domain_c_b_complement_domain_prod_ell2_a_c_prod_b_complement_domain_c_b_complement_domain_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('C_c_a_a_c_prod_b_complement_domain_prod_prod_b_complement_domain_prod_ell2_c_c_a_a_c_prod_b_complement_domain_prod_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',type,
+    'C_c_a_a_c_prod_b_complement_domain_prod_prod_b_complement_domain_prod_ell2_c_c_a_a_c_prod_b_complement_domain_prod_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$': $tType ).
+
+tff('A_ell2$',type,
+    'A_ell2$': $tType ).
+
+tff('B_b_prod_ell2_b_b_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_a_c_a_c_prod_b_complement_domain_prod_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_a_c_a_c_prod_b_complement_domain_prod_prod_prod_ell2_cblinfun_fun$',type,
+    'B_b_prod_ell2_b_b_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_a_c_a_c_prod_b_complement_domain_prod_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_a_c_a_c_prod_b_complement_domain_prod_prod_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('A_a_prod_ell2_a_a_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$',type,
+    'A_a_prod_ell2_a_a_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('A_c_a_c_prod_b_complement_domain_prod_prod_c_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_c_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_c_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_c_prod_prod_ell2_cblinfun_fun$',type,
+    'A_c_a_c_prod_b_complement_domain_prod_prod_c_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_c_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_c_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_c_prod_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('C_b_complement_domain_ell2_c_b_complement_domain_ell2_cblinfun$',type,
+    'C_b_complement_domain_ell2_c_b_complement_domain_ell2_cblinfun$': $tType ).
+
+tff('A_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_c_prod_ell2_a_c_prod_ell2_cblinfun_fun$',type,
+    'A_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_c_prod_ell2_a_c_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('A_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$',type,
+    'A_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('A_c_prod_a_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_prod_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',type,
+    'A_c_prod_a_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_prod_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$': $tType ).
+
+tff('A$',type,
+    'A$': $tType ).
+
+tff('C_a_c_prod_b_complement_domain_prod_c_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_c_prod_b_complement_domain_prod_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_b_complement_domain_a_b_complement_domain_prod_ell2_a_b_complement_domain_a_b_complement_domain_prod_ell2_cblinfun_fun$',type,
+    'C_a_c_prod_b_complement_domain_prod_c_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_c_prod_b_complement_domain_prod_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_b_complement_domain_a_b_complement_domain_prod_ell2_a_b_complement_domain_a_b_complement_domain_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('C_b_complement_domain_c_b_complement_domain_prod_ell2_c_b_complement_domain_c_b_complement_domain_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$',type,
+    'C_b_complement_domain_c_b_complement_domain_prod_ell2_c_b_complement_domain_c_b_complement_domain_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('C_a_complement_domain_ell2_c_a_complement_domain_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$',type,
+    'C_a_complement_domain_ell2_c_a_complement_domain_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$': $tType ).
+
+tff('A_c_prod$',type,
+    'A_c_prod$': $tType ).
+
+tff('B_ell2_b_ell2_cblinfun_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$',type,
+    'B_ell2_b_ell2_cblinfun_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('B_a_b_complement_domain_prod_ell2_b_a_b_complement_domain_prod_ell2_cblinfun$',type,
+    'B_a_b_complement_domain_prod_ell2_b_a_b_complement_domain_prod_ell2_cblinfun$': $tType ).
+
+tff('A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',type,
+    'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$': $tType ).
+
+tff('C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$',type,
+    'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$': $tType ).
+
+tff('C_a_c_prod_b_complement_domain_prod_a_b_complement_domain_complement_domain_ell2_c_a_c_prod_b_complement_domain_prod_a_b_complement_domain_complement_domain_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$',type,
+    'C_a_c_prod_b_complement_domain_prod_a_b_complement_domain_complement_domain_ell2_c_a_c_prod_b_complement_domain_prod_a_b_complement_domain_complement_domain_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$': $tType ).
+
+tff('A_c_c_prod_prod_ell2_a_c_c_prod_prod_ell2_cblinfun_a_c_prod_c_prod_ell2_a_c_prod_c_prod_ell2_cblinfun_fun$',type,
+    'A_c_c_prod_prod_ell2_a_c_c_prod_prod_ell2_cblinfun_a_c_prod_c_prod_ell2_a_c_prod_c_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('C_c_c_complement_domain_prod_ell2_c_c_c_complement_domain_prod_ell2_cblinfun$',type,
+    'C_c_c_complement_domain_prod_ell2_c_c_c_complement_domain_prod_ell2_cblinfun$': $tType ).
+
+tff('A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$',type,
+    'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('A_c_a_c_prod_b_complement_domain_prod_prod_c_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',type,
+    'A_c_a_c_prod_b_complement_domain_prod_prod_c_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$': $tType ).
+
+tff('A_a_b_complement_domain_prod_a_a_b_complement_domain_prod_prod_ell2_a_a_b_complement_domain_prod_a_a_b_complement_domain_prod_prod_ell2_cblinfun_set$',type,
+    'A_a_b_complement_domain_prod_a_a_b_complement_domain_prod_prod_ell2_a_a_b_complement_domain_prod_a_a_b_complement_domain_prod_prod_ell2_cblinfun_set$': $tType ).
+
+tff('B_b_prod_ell2_b_b_prod_ell2_cblinfun$',type,
+    'B_b_prod_ell2_b_b_prod_ell2_cblinfun$': $tType ).
+
+tff('A_b_complement_domain_b_prod_ell2_a_b_complement_domain_b_prod_ell2_cblinfun$',type,
+    'A_b_complement_domain_b_prod_ell2_a_b_complement_domain_b_prod_ell2_cblinfun$': $tType ).
+
+tff('B_ell2_b_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$',type,
+    'B_ell2_b_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$': $tType ).
+
+tff('C_c_prod_ell2_c_c_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$',type,
+    'C_c_prod_ell2_c_c_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('A_b_complement_domain_c_b_complement_domain_prod_ell2_a_b_complement_domain_c_b_complement_domain_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$',type,
+    'A_b_complement_domain_c_b_complement_domain_prod_ell2_a_b_complement_domain_c_b_complement_domain_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('A_a_c_prod_b_complement_domain_c_prod_prod_ell2_a_a_c_prod_b_complement_domain_c_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',type,
+    'A_a_c_prod_b_complement_domain_c_prod_prod_ell2_a_a_c_prod_b_complement_domain_c_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$': $tType ).
+
+tff('C_a_c_prod_b_complement_domain_prod_a_prod_ell2_c_a_c_prod_b_complement_domain_prod_a_prod_ell2_cblinfun$',type,
+    'C_a_c_prod_b_complement_domain_prod_a_prod_ell2_c_a_c_prod_b_complement_domain_prod_a_prod_ell2_cblinfun$': $tType ).
+
+tff('B_ell2_b_ell2_cblinfun_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$',type,
+    'B_ell2_b_ell2_cblinfun_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('A_c_a_c_prod_b_complement_domain_prod_c_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_c_prod_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_c_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_c_prod_ell2_cblinfun_fun$',type,
+    'A_c_a_c_prod_b_complement_domain_prod_c_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_c_prod_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_c_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_c_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('A_c_prod_b_complement_domain_a_prod_ell2_a_c_prod_b_complement_domain_a_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',type,
+    'A_c_prod_b_complement_domain_a_prod_ell2_a_c_prod_b_complement_domain_a_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$': $tType ).
+
+tff('A_c_a_c_prod_b_complement_domain_prod_prod_b_complement_domain_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',type,
+    'A_c_a_c_prod_b_complement_domain_prod_prod_b_complement_domain_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$': $tType ).
+
+tff('C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_set$',type,
+    'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_set$': $tType ).
+
+tff('C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$',type,
+    'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$': $tType ).
+
+tff('A_a_b_complement_domain_prod_a_a_b_complement_domain_prod_prod_ell2_a_a_b_complement_domain_prod_a_a_b_complement_domain_prod_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$',type,
+    'A_a_b_complement_domain_prod_a_a_b_complement_domain_prod_prod_ell2_a_a_b_complement_domain_prod_a_a_b_complement_domain_prod_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('A_a_b_complement_domain_prod_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_a_b_complement_domain_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_b_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_b_prod_ell2_cblinfun_fun$',type,
+    'A_a_b_complement_domain_prod_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_a_b_complement_domain_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_b_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_b_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('A_b_complement_domain_b_complement_domain_c_a_c_prod_b_complement_domain_prod_a_b_complement_domain_complement_domain_prod_ell2_a_b_complement_domain_b_complement_domain_c_a_c_prod_b_complement_domain_prod_a_b_complement_domain_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',type,
+    'A_b_complement_domain_b_complement_domain_c_a_c_prod_b_complement_domain_prod_a_b_complement_domain_complement_domain_prod_ell2_a_b_complement_domain_b_complement_domain_c_a_c_prod_b_complement_domain_prod_a_b_complement_domain_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$': $tType ).
+
+tff('C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun$',type,
+    'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun$': $tType ).
+
+tff('B_b_prod_ell2_b_b_prod_ell2_cblinfun_c_c_b_complement_domain_prod_c_c_b_complement_domain_prod_prod_ell2_c_c_b_complement_domain_prod_c_c_b_complement_domain_prod_prod_ell2_cblinfun_fun$',type,
+    'B_b_prod_ell2_b_b_prod_ell2_cblinfun_c_c_b_complement_domain_prod_c_c_b_complement_domain_prod_prod_ell2_c_c_b_complement_domain_prod_c_c_b_complement_domain_prod_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_set$',type,
+    'A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_set$': $tType ).
+
+tff('A_a_prod_ell2_a_a_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',type,
+    'A_a_prod_ell2_a_a_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$': $tType ).
+
+tff('B_b_prod_ell2_b_b_prod_ell2_cblinfun_c_a_a_c_prod_b_complement_domain_prod_prod_c_c_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_c_c_b_complement_domain_prod_prod_ell2_cblinfun_fun$',type,
+    'B_b_prod_ell2_b_b_prod_ell2_cblinfun_c_a_a_c_prod_b_complement_domain_prod_prod_c_c_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_c_c_b_complement_domain_prod_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_a_prod_ell2_a_b_complement_domain_a_prod_ell2_cblinfun_fun$',type,
+    'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_a_prod_ell2_a_b_complement_domain_a_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('A_c_prod_ell2_a_c_prod_ell2_cblinfun_c_a_prod_ell2_c_a_prod_ell2_cblinfun_fun$',type,
+    'A_c_prod_ell2_a_c_prod_ell2_cblinfun_c_a_prod_ell2_c_a_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('A_c_prod_ell2_a_c_prod_ell2_cblinfun_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$',type,
+    'A_c_prod_ell2_a_c_prod_ell2_cblinfun_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_c_a_c_prod_b_complement_domain_prod_a_prod_ell2_c_a_c_prod_b_complement_domain_prod_a_prod_ell2_cblinfun_fun$',type,
+    'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_c_a_c_prod_b_complement_domain_prod_a_prod_ell2_c_a_c_prod_b_complement_domain_prod_a_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_c_prod_ell2_a_c_prod_ell2_cblinfun_fun$',type,
+    'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_c_prod_ell2_a_c_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',type,
+    'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$': $tType ).
+
+tff('A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$',type,
+    'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$',type,
+    'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$': $tType ).
+
+tff('C_a_a_c_prod_b_complement_domain_prod_prod_b_complement_domain_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',type,
+    'C_a_a_c_prod_b_complement_domain_prod_prod_b_complement_domain_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$': $tType ).
+
+tff('C_a_prod_ell2_c_a_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$',type,
+    'C_a_prod_ell2_c_a_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('A_a_a_c_prod_b_complement_domain_prod_b_complement_domain_prod_ell2_a_a_a_c_prod_b_complement_domain_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',type,
+    'A_a_a_c_prod_b_complement_domain_prod_b_complement_domain_prod_ell2_a_a_a_c_prod_b_complement_domain_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$': $tType ).
+
+tff('A_a_b_complement_domain_prod_c_prod_ell2_a_a_b_complement_domain_prod_c_prod_ell2_cblinfun_a_a_b_complement_domain_c_prod_prod_ell2_a_a_b_complement_domain_c_prod_prod_ell2_cblinfun_fun$',type,
+    'A_a_b_complement_domain_prod_c_prod_ell2_a_a_b_complement_domain_prod_c_prod_ell2_cblinfun_a_a_b_complement_domain_c_prod_prod_ell2_a_a_b_complement_domain_c_prod_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_a_b_complement_domain_prod_ell2_b_a_b_complement_domain_prod_ell2_cblinfun_fun$',type,
+    'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_a_b_complement_domain_prod_ell2_b_a_b_complement_domain_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_bool_fun$',type,
+    'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_bool_fun$': $tType ).
+
+tff('A_a_b_complement_domain_c_prod_prod_ell2_a_a_b_complement_domain_c_prod_prod_ell2_cblinfun_a_a_b_complement_domain_prod_c_prod_ell2_a_a_b_complement_domain_prod_c_prod_ell2_cblinfun_fun$',type,
+    'A_a_b_complement_domain_c_prod_prod_ell2_a_a_b_complement_domain_c_prod_prod_ell2_cblinfun_a_a_b_complement_domain_prod_c_prod_ell2_a_a_b_complement_domain_prod_c_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('A_a_b_complement_domain_prod_a_c_a_c_prod_b_complement_domain_prod_prod_complement_domain_ell2_a_a_b_complement_domain_prod_a_c_a_c_prod_b_complement_domain_prod_prod_complement_domain_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$',type,
+    'A_a_b_complement_domain_prod_a_c_a_c_prod_b_complement_domain_prod_prod_complement_domain_ell2_a_a_b_complement_domain_prod_a_c_a_c_prod_b_complement_domain_prod_prod_complement_domain_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('A_c_prod_b_complement_domain_a_a_c_prod_b_complement_domain_prod_b_complement_domain_prod_ell2_a_c_prod_b_complement_domain_a_a_c_prod_b_complement_domain_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',type,
+    'A_c_prod_b_complement_domain_a_a_c_prod_b_complement_domain_prod_b_complement_domain_prod_ell2_a_c_prod_b_complement_domain_a_a_c_prod_b_complement_domain_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$': $tType ).
+
+tff('B_b_b_complement_domain_prod_ell2_b_b_b_complement_domain_prod_ell2_cblinfun$',type,
+    'B_b_b_complement_domain_prod_ell2_b_b_b_complement_domain_prod_ell2_cblinfun$': $tType ).
+
+tff('A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$',type,
+    'A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$': $tType ).
+
+tff('A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_c_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$',type,
+    'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_c_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('A_c_prod_ell2_a_c_prod_ell2_cblinfun$',type,
+    'A_c_prod_ell2_a_c_prod_ell2_cblinfun$': $tType ).
+
+tff('C_a_c_prod_b_complement_domain_prod_c_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_c_prod_b_complement_domain_prod_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$',type,
+    'C_a_c_prod_b_complement_domain_prod_c_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_c_prod_b_complement_domain_prod_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$',type,
+    'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',type,
+    'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$': $tType ).
+
+tff('C_c_b_complement_domain_prod_a_a_b_complement_domain_prod_prod_ell2_c_c_b_complement_domain_prod_a_a_b_complement_domain_prod_prod_ell2_cblinfun_set$',type,
+    'C_c_b_complement_domain_prod_a_a_b_complement_domain_prod_prod_ell2_c_c_b_complement_domain_prod_a_a_b_complement_domain_prod_prod_ell2_cblinfun_set$': $tType ).
+
+tff('A_c_prod_a_c_prod_prod_ell2_a_c_prod_a_c_prod_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$',type,
+    'A_c_prod_a_c_prod_prod_ell2_a_c_prod_a_c_prod_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('C_b_complement_domain_ell2_c_b_complement_domain_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$',type,
+    'C_b_complement_domain_ell2_c_b_complement_domain_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$': $tType ).
+
+tff('A_a_c_prod_prod_ell2_a_a_c_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',type,
+    'A_a_c_prod_prod_ell2_a_a_c_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$': $tType ).
+
+tff('A_c_complement_domain_ell2_a_c_complement_domain_ell2_cblinfun$',type,
+    'A_c_complement_domain_ell2_a_c_complement_domain_ell2_cblinfun$': $tType ).
+
+tff('B_ell2_b_ell2_cblinfun_bool_fun$',type,
+    'B_ell2_b_ell2_cblinfun_bool_fun$': $tType ).
+
+tff('B_c_complement_domain_ell2_b_c_complement_domain_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$',type,
+    'B_c_complement_domain_ell2_b_c_complement_domain_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$': $tType ).
+
+tff('C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_c_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$',type,
+    'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_c_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('A_a_b_complement_domain_prod_c_prod_ell2_a_a_b_complement_domain_prod_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',type,
+    'A_a_b_complement_domain_prod_c_prod_ell2_a_a_b_complement_domain_prod_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$': $tType ).
+
+tff('A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$',type,
+    'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$': $tType ).
+
+tff('C_a_c_prod_b_complement_domain_prod_c_a_c_prod_b_complement_domain_prod_a_b_complement_domain_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_c_a_c_prod_b_complement_domain_prod_a_b_complement_domain_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$',type,
+    'C_a_c_prod_b_complement_domain_prod_c_a_c_prod_b_complement_domain_prod_a_b_complement_domain_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_c_a_c_prod_b_complement_domain_prod_a_b_complement_domain_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$': $tType ).
+
+tff('B_a_a_b_complement_domain_prod_complement_domain_ell2_b_a_a_b_complement_domain_prod_complement_domain_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$',type,
+    'B_a_a_b_complement_domain_prod_complement_domain_ell2_b_a_a_b_complement_domain_prod_complement_domain_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('B_b_complement_domain_ell2_b_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',type,
+    'B_b_complement_domain_ell2_b_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$': $tType ).
+
+tff('B_b_complement_domain_ell2_b_b_complement_domain_ell2_cblinfun$',type,
+    'B_b_complement_domain_ell2_b_b_complement_domain_ell2_cblinfun$': $tType ).
+
+tff('C_b_complement_domain_ell2_c_b_complement_domain_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$',type,
+    'C_b_complement_domain_ell2_c_b_complement_domain_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$': $tType ).
+
+tff('A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$',type,
+    'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$': $tType ).
+
+tff('C_a_a_c_prod_b_complement_domain_prod_prod_c_c_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_c_c_b_complement_domain_prod_prod_ell2_cblinfun_set$',type,
+    'C_a_a_c_prod_b_complement_domain_prod_prod_c_c_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_c_c_b_complement_domain_prod_prod_ell2_cblinfun_set$': $tType ).
+
+tff('C_ell2_c_ell2_cblinfun_a_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_fun$',type,
+    'C_ell2_c_ell2_cblinfun_a_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_fun$': $tType ).
+
+tff('C_ell2_c_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$',type,
+    'C_ell2_c_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$': $tType ).
+
+tff('A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$',type,
+    'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$': $tType ).
+
+tff('C_a_prod_a_c_prod_b_complement_domain_prod_ell2_c_a_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$',type,
+    'C_a_prod_a_c_prod_b_complement_domain_prod_ell2_c_a_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('B_ell2$',type,
+    'B_ell2$': $tType ).
+
+tff('A_c_prod_ell2_a_c_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$',type,
+    'A_c_prod_ell2_a_c_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('C_c_b_complement_domain_prod_a_a_b_complement_domain_prod_prod_ell2_c_c_b_complement_domain_prod_a_a_b_complement_domain_prod_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$',type,
+    'C_c_b_complement_domain_prod_a_a_b_complement_domain_prod_prod_ell2_c_c_b_complement_domain_prod_a_a_b_complement_domain_prod_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('B_a_a_b_complement_domain_prod_complement_domain_ell2_b_a_a_b_complement_domain_prod_complement_domain_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$',type,
+    'B_a_a_b_complement_domain_prod_complement_domain_ell2_b_a_a_b_complement_domain_prod_complement_domain_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun$',type,
+    'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun$': $tType ).
+
+tff('A_a_b_complement_domain_prod_b_complement_domain_ell2_a_a_b_complement_domain_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',type,
+    'A_a_b_complement_domain_prod_b_complement_domain_ell2_a_a_b_complement_domain_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$': $tType ).
+
+tff('A_c_prod_ell2_a_c_prod_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$',type,
+    'A_c_prod_ell2_a_c_prod_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$': $tType ).
+
+tff('A_b_complement_domain_a_prod_ell2_a_b_complement_domain_a_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$',type,
+    'A_b_complement_domain_a_prod_ell2_a_b_complement_domain_a_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('A_c_prod_b_complement_domain_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_b_complement_domain_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$',type,
+    'A_c_prod_b_complement_domain_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_b_complement_domain_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('C_b_complement_domain_c_prod_ell2_c_b_complement_domain_c_prod_ell2_cblinfun$',type,
+    'C_b_complement_domain_c_prod_ell2_c_b_complement_domain_c_prod_ell2_cblinfun$': $tType ).
+
+tff('C_ell2_c_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$',type,
+    'C_ell2_c_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$': $tType ).
+
+tff('A_c_a_a_c_prod_b_complement_domain_prod_prod_prod_ell2_a_c_a_a_c_prod_b_complement_domain_prod_prod_prod_ell2_cblinfun_a_c_prod_a_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_prod_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$',type,
+    'A_c_a_a_c_prod_b_complement_domain_prod_prod_prod_ell2_a_c_a_a_c_prod_b_complement_domain_prod_prod_prod_ell2_cblinfun_a_c_prod_a_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_prod_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$': $tType ).
+
+tff('A_c_c_prod_prod_ell2_a_c_c_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',type,
+    'A_c_c_prod_prod_ell2_a_c_c_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$': $tType ).
+
+%% Declarations:
+tff('comp$dd',type,
+    'comp$dd': ( 'B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$' * 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$' ).
+
+tff('equivalent_registers$q',type,
+    'equivalent_registers$q': ( 'C_b_complement_domain_ell2_c_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('register_pair$an',type,
+    'register_pair$an': ( 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_c_prod_ell2_a_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > 'A_a_c_prod_prod_ell2_a_a_c_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('comp$h',type,
+    'comp$h': ( 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'C_ell2_c_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' ) > 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('t3$',type,
+    't3$': 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun$' ).
+
+tff('complements$ad',type,
+    'complements$ad': ( 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$' * 'A_a_complement_domain_c_a_c_prod_b_complement_domain_prod_a_b_complement_domain_complement_domain_prod_ell2_a_a_complement_domain_c_a_c_prod_b_complement_domain_prod_a_b_complement_domain_complement_domain_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$' ) > $o ).
+
+tff('inv_into$aq',type,
+    'inv_into$aq': ( 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_set$' * 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' ) > 'A_ell2_a_ell2_cblinfun_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' ).
+
+tff('comp$v',type,
+    'comp$v': ( 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' ) > 'A_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('bij_betw$s',type,
+    'bij_betw$s': ( 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' * 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_set$' * 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_set$' ) > $o ).
+
+tff('bij_betw$l',type,
+    'bij_betw$l': ( 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$' * 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_set$' * 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_set$' ) > $o ).
+
+tff('comp$ae',type,
+    'comp$ae': ( 'B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('iso_register$a',type,
+    'iso_register$a': 'A_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' > $o ).
+
+tff('register$aq',type,
+    'register$aq': 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$' > $o ).
+
+tff('fun_app$ab',type,
+    'fun_app$ab': ( 'A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' * 'A_ell2_a_ell2_cblinfun$' ) > 'A_ell2_a_ell2_cblinfun$' ).
+
+tff('complements$y',type,
+    'complements$y': ( 'A_c_prod_a_prod_ell2_a_c_prod_a_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$' * 'A_c_prod_b_complement_domain_a_b_complement_domain_prod_ell2_a_c_prod_b_complement_domain_a_b_complement_domain_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$' ) > $o ).
+
+tff('register_tensor$am',type,
+    'register_tensor$am': ( 'C_b_complement_domain_ell2_c_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > 'C_b_complement_domain_a_c_prod_b_complement_domain_prod_ell2_c_b_complement_domain_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$' ).
+
+tff('register_tensor$az',type,
+    'register_tensor$az': ( 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$' * 'B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$' ) > 'C_a_c_prod_b_complement_domain_prod_b_prod_ell2_c_a_c_prod_b_complement_domain_prod_b_prod_ell2_cblinfun_a_b_complement_domain_a_a_b_complement_domain_prod_prod_ell2_a_b_complement_domain_a_a_b_complement_domain_prod_prod_ell2_cblinfun_fun$' ).
+
+tff('register_tensor$ad',type,
+    'register_tensor$ad': ( 'C_b_complement_domain_ell2_c_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > 'C_b_complement_domain_a_b_complement_domain_prod_ell2_c_b_complement_domain_a_b_complement_domain_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$' ).
+
+tff('complements$r',type,
+    'complements$r': ( 'C_ell2_c_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$' * 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$' ) > $o ).
+
+tff('register$o',type,
+    'register$o': 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' > $o ).
+
+tff('bij_betw$ab',type,
+    'bij_betw$ab': ( 'A_ell2_a_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$' * 'A_ell2_a_ell2_cblinfun_set$' * 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_set$' ) > $o ).
+
+tff('comp$',type,
+    'comp$': ( 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$' ) > 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('equivalent_registers$am',type,
+    'equivalent_registers$am': ( 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('comp$dp',type,
+    'comp$dp': ( 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$' * 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_c_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$' ) > 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$' ).
+
+tff('complements$ah',type,
+    'complements$ah': ( 'C_ell2_c_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$' * 'C_b_complement_domain_ell2_c_b_complement_domain_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$' ) > $o ).
+
+tff('iso_register$ad',type,
+    'iso_register$ad': 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' > $o ).
+
+tff('member$b',type,
+    'member$b': ( 'A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun$' * 'A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_set$' ) > $o ).
+
+tff('register_tensor$t',type,
+    'register_tensor$t': ( 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > 'A_c_prod_ell2_a_c_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$' ).
+
+tff('register_tensor$c',type,
+    'register_tensor$c': ( 'B_ell2_b_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$' * 'B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$' ) > 'B_b_prod_ell2_b_b_prod_ell2_cblinfun_c_c_b_complement_domain_prod_a_a_b_complement_domain_prod_prod_ell2_c_c_b_complement_domain_prod_a_a_b_complement_domain_prod_prod_ell2_cblinfun_fun$' ).
+
+tff('comp$dn',type,
+    'comp$dn': ( 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'B_ell2_b_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$' ) > 'B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('register_tensor$bf',type,
+    'register_tensor$bf': ( 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$' ).
+
+tff('comp$cp',type,
+    'comp$cp': ( 'A_b_complement_domain_a_prod_ell2_a_b_complement_domain_a_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_a_prod_ell2_a_b_complement_domain_a_prod_ell2_cblinfun_fun$' ) > 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('fun_app$av',type,
+    'fun_app$av': ( 'C_a_c_prod_b_complement_domain_prod_a_prod_ell2_c_a_c_prod_b_complement_domain_prod_a_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' * 'C_a_c_prod_b_complement_domain_prod_a_prod_ell2_c_a_c_prod_b_complement_domain_prod_a_prod_ell2_cblinfun$' ) > 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun$' ).
+
+tff('equivalent_registers$ba',type,
+    'equivalent_registers$ba': ( 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('complements$',type,
+    'complements$': ( 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('comp$q',type,
+    'comp$q': ( 'B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('comp$w',type,
+    'comp$w': ( 'B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('equivalent_registers$ar',type,
+    'equivalent_registers$ar': ( 'A_c_a_a_c_prod_b_complement_domain_prod_prod_prod_ell2_a_c_a_a_c_prod_b_complement_domain_prod_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_c_prod_a_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_prod_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('iso_register$ab',type,
+    'iso_register$ab': 'B_ell2_b_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$' > $o ).
+
+tff('equivalent_registers$d',type,
+    'equivalent_registers$d': ( 'A_c_prod_ell2_a_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_c_prod_ell2_a_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('equivalent_registers$ac',type,
+    'equivalent_registers$ac': ( 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('compatible$y',type,
+    'compatible$y': ( 'A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' * 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' ) > $o ).
+
+tff('inv_into$m',type,
+    'inv_into$m': ( 'B_ell2_b_ell2_cblinfun_set$' * 'B_ell2_b_ell2_cblinfun_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$' ) > 'A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('collect$b',type,
+    'collect$b': 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_bool_fun$' > 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_set$' ).
+
+tff('fun_app$i',type,
+    'fun_app$i': ( 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$' * 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun$' ) > 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun$' ).
+
+tff('bij_betw$q',type,
+    'bij_betw$q': ( 'B_ell2_b_ell2_cblinfun_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' * 'B_ell2_b_ell2_cblinfun_set$' * 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_set$' ) > $o ).
+
+tff('register_tensor$w',type,
+    'register_tensor$w': ( 'A_ell2_a_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$' * 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_c_b_complement_domain_ell2_c_b_complement_domain_ell2_cblinfun_fun$' ) > 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$' ).
+
+tff('register$ar',type,
+    'register$ar': 'B_ell2_b_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' > $o ).
+
+tff('register_tensor$f',type,
+    'register_tensor$f': ( 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > 'A_a_b_complement_domain_prod_a_a_b_complement_domain_prod_prod_ell2_a_a_b_complement_domain_prod_a_a_b_complement_domain_prod_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$' ).
+
+tff('tensor_op$x',type,
+    'tensor_op$x': ( 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun$' * 'A_ell2_a_ell2_cblinfun$' ) > 'C_a_c_prod_b_complement_domain_prod_a_prod_ell2_c_a_c_prod_b_complement_domain_prod_a_prod_ell2_cblinfun$' ).
+
+tff('register_tensor$aw',type,
+    'register_tensor$aw': ( 'B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$' * 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$' ) > 'B_c_a_c_prod_b_complement_domain_prod_prod_ell2_b_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_a_b_complement_domain_prod_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_a_b_complement_domain_prod_ell2_cblinfun_fun$' ).
+
+tff('equivalent_registers$ah',type,
+    'equivalent_registers$ah': ( 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$' * 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$' ) > $o ).
+
+tff('tensor_op$k',type,
+    'tensor_op$k': ( 'C_ell2_c_ell2_cblinfun$' * 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun$' ) > 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun$' ).
+
+tff('register_tensor$x',type,
+    'register_tensor$x': ( 'C_ell2_c_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' * 'C_b_complement_domain_ell2_c_b_complement_domain_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$' ) > 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$' ).
+
+tff('compatible$ar',type,
+    'compatible$ar': ( 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$' * 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$' ) > $o ).
+
+tff('butterfly$a',type,
+    'butterfly$a': ( 'A_ell2$' * 'A_ell2$' ) > 'A_ell2_a_ell2_cblinfun$' ).
+
+tff('register_tensor$z',type,
+    'register_tensor$z': ( 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$' ) > 'C_c_a_c_prod_b_complement_domain_prod_prod_ell2_c_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_a_b_complement_domain_prod_ell2_b_a_b_complement_domain_prod_ell2_cblinfun_fun$' ).
+
+tff('comp$z',type,
+    'comp$z': ( 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$' ) > 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('fun_app$e',type,
+    'fun_app$e': ( 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun$' ) > 'B_ell2_b_ell2_cblinfun$' ).
+
+tff('inv_into$o',type,
+    'inv_into$o': ( 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_set$' * 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > 'B_ell2_b_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' ).
+
+tff('regular_register$b',type,
+    'regular_register$b': 'B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' > $o ).
+
+tff('compatible$az',type,
+    'compatible$az': ( 'B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('complement$f',type,
+    'complement$f': 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' > 'C_b_complement_domain_ell2_c_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('comp$bu',type,
+    'comp$bu': ( 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$' * 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$' ) > 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$' ).
+
+tff('comp$bj',type,
+    'comp$bj': ( 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' * 'B_ell2_b_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' ) > 'B_ell2_b_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' ).
+
+tff('register_pair$g',type,
+    'register_pair$g': ( 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('complement$l',type,
+    'complement$l': 'B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' > 'B_b_complement_domain_ell2_b_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('register_tensor$e',type,
+    'register_tensor$e': ( 'B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$' * 'B_ell2_b_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$' ) > 'B_b_prod_ell2_b_b_prod_ell2_cblinfun_a_a_b_complement_domain_prod_c_c_b_complement_domain_prod_prod_ell2_a_a_b_complement_domain_prod_c_c_b_complement_domain_prod_prod_ell2_cblinfun_fun$' ).
+
+tff('top$m',type,
+    'top$m': 'C_c_b_complement_domain_prod_c_a_a_c_prod_b_complement_domain_prod_prod_prod_ell2_c_c_b_complement_domain_prod_c_a_a_c_prod_b_complement_domain_prod_prod_prod_ell2_cblinfun_set$' ).
+
+tff('register_tensor$ah',type,
+    'register_tensor$ah': ( 'A_c_prod_ell2_a_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > 'A_c_prod_c_prod_ell2_a_c_prod_c_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$' ).
+
+tff('fun_app$ae',type,
+    'fun_app$ae': ( 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_c_b_complement_domain_ell2_c_b_complement_domain_ell2_cblinfun_fun$' * 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun$' ) > 'C_b_complement_domain_ell2_c_b_complement_domain_ell2_cblinfun$' ).
+
+tff('compatible$av',type,
+    'compatible$av': ( 'B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('complement$o',type,
+    'complement$o': 'A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' > 'A_a_complement_domain_ell2_a_a_complement_domain_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' ).
+
+tff('compatible$l',type,
+    'compatible$l': ( 'A_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'C_a_a_c_prod_b_complement_domain_prod_prod_b_complement_domain_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('complements$w',type,
+    'complements$w': ( 'C_a_prod_ell2_c_a_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$' * 'C_b_complement_domain_a_b_complement_domain_prod_ell2_c_b_complement_domain_a_b_complement_domain_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$' ) > $o ).
+
+tff('compatible$m',type,
+    'compatible$m': ( 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_a_c_prod_b_complement_domain_prod_b_complement_domain_ell2_a_a_c_prod_b_complement_domain_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('register_pair$am',type,
+    'register_pair$am': ( 'A_c_prod_ell2_a_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > 'A_c_prod_a_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_prod_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('register_tensor$m',type,
+    'register_tensor$m': ( 'B_ell2_b_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$' * 'B_ell2_b_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' ) > 'B_b_prod_ell2_b_b_prod_ell2_cblinfun_c_c_b_complement_domain_prod_a_c_a_c_prod_b_complement_domain_prod_prod_prod_ell2_c_c_b_complement_domain_prod_a_c_a_c_prod_b_complement_domain_prod_prod_prod_ell2_cblinfun_fun$' ).
+
+tff('comp$ax',type,
+    'comp$ax': ( 'A_a_b_complement_domain_c_prod_prod_ell2_a_a_b_complement_domain_c_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_a_b_complement_domain_prod_c_prod_ell2_a_a_b_complement_domain_prod_c_prod_ell2_cblinfun_a_a_b_complement_domain_c_prod_prod_ell2_a_a_b_complement_domain_c_prod_prod_ell2_cblinfun_fun$' ) > 'A_a_b_complement_domain_prod_c_prod_ell2_a_a_b_complement_domain_prod_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('comp$dq',type,
+    'comp$dq': ( 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' * 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$' ) > 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' ).
+
+tff('comp$cb',type,
+    'comp$cb': ( 'A_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_c_prod_ell2_a_c_prod_ell2_cblinfun_a_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$' ) > 'A_c_prod_ell2_a_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('fun_app$y',type,
+    'fun_app$y': ( 'A_c_prod_ell2_a_c_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$' * 'A_c_prod_ell2_a_c_prod_ell2_cblinfun$' ) > 'B_b_prod_ell2_b_b_prod_ell2_cblinfun$' ).
+
+tff('comp$dh',type,
+    'comp$dh': ( 'B_ell2_b_ell2_cblinfun_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' * 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' ).
+
+tff('compatible$u',type,
+    'compatible$u': ( 'C_ell2_c_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$' * 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$' ) > $o ).
+
+tff('register_tensor$av',type,
+    'register_tensor$av': ( 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' * 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > 'A_a_b_complement_domain_prod_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_a_b_complement_domain_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_b_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_b_prod_ell2_cblinfun_fun$' ).
+
+tff('comp$c',type,
+    'comp$c': ( 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'C_a_c_prod_b_complement_domain_prod_a_b_complement_domain_complement_domain_ell2_c_a_c_prod_b_complement_domain_prod_a_b_complement_domain_complement_domain_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$' ) > 'C_a_c_prod_b_complement_domain_prod_a_b_complement_domain_complement_domain_ell2_c_a_c_prod_b_complement_domain_prod_a_b_complement_domain_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('compatible$aw',type,
+    'compatible$aw': ( 'A_a_prod_ell2_a_a_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$' * 'C_c_prod_ell2_c_c_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$' ) > $o ).
+
+tff('bij_betw$ad',type,
+    'bij_betw$ad': ( 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' * 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_set$' * 'A_ell2_a_ell2_cblinfun_set$' ) > $o ).
+
+tff('register$g',type,
+    'register$g': 'A_c_prod_ell2_a_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' > $o ).
+
+tff('fun_app$aw',type,
+    'fun_app$aw': ( 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_a_prod_ell2_a_b_complement_domain_a_prod_ell2_cblinfun_fun$' * 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun$' ) > 'A_b_complement_domain_a_prod_ell2_a_b_complement_domain_a_prod_ell2_cblinfun$' ).
+
+tff('id$a',type,
+    'id$a': 'A_a_prod_ell2_a_a_prod_ell2_cblinfun_a_a_prod_ell2_a_a_prod_ell2_cblinfun_fun$' ).
+
+tff('register_tensor$ac',type,
+    'register_tensor$ac': ( 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'C_b_complement_domain_ell2_c_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > 'A_b_complement_domain_c_b_complement_domain_prod_ell2_a_b_complement_domain_c_b_complement_domain_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$' ).
+
+tff('equivalent_registers$at',type,
+    'equivalent_registers$at': ( 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'C_a_prod_a_c_prod_b_complement_domain_prod_ell2_c_a_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('bij_betw$c',type,
+    'bij_betw$c': ( 'B_ell2_b_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$' * 'B_ell2_b_ell2_cblinfun_set$' * 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_set$' ) > $o ).
+
+tff('comp$b',type,
+    'comp$b': ( 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' * 'B_a_a_b_complement_domain_prod_complement_domain_ell2_b_a_a_b_complement_domain_prod_complement_domain_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$' ) > 'B_a_a_b_complement_domain_prod_complement_domain_ell2_b_a_a_b_complement_domain_prod_complement_domain_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' ).
+
+tff('compatible$f',type,
+    'compatible$f': ( 'A_c_prod_ell2_a_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('collect$c',type,
+    'collect$c': 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_bool_fun$' > 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_set$' ).
+
+tff('default$',type,
+    'default$': 'B$' ).
+
+tff('compatible$x',type,
+    'compatible$x': ( 'A_ell2_a_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$' * 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$' ) > $o ).
+
+tff('comp$cg',type,
+    'comp$cg': ( 'A_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'C_ell2_c_ell2_cblinfun_a_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$' ) > 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('register_pair$u',type,
+    'register_pair$u': ( 'A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' * 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' ) > 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' ).
+
+tff('assoc$b',type,
+    'assoc$b': 'A_a_c_prod_b_complement_domain_c_prod_prod_ell2_a_a_c_prod_b_complement_domain_c_prod_prod_ell2_cblinfun_a_a_c_prod_b_complement_domain_prod_c_prod_ell2_a_a_c_prod_b_complement_domain_prod_c_prod_ell2_cblinfun_fun$' ).
+
+tff('register_pair$b',type,
+    'register_pair$b': ( 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('register$ad',type,
+    'register$ad': 'A_a_prod_ell2_a_a_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$' > $o ).
+
+tff('bij_betw$p',type,
+    'bij_betw$p': ( 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_set$' * 'B_ell2_b_ell2_cblinfun_set$' ) > $o ).
+
+tff('comp$cr',type,
+    'comp$cr': ( 'C_a_prod_ell2_c_a_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_c_prod_ell2_a_c_prod_ell2_cblinfun_c_a_prod_ell2_c_a_prod_ell2_cblinfun_fun$' ) > 'A_c_prod_ell2_a_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('iso_register$j',type,
+    'iso_register$j': 'B_ell2_b_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$' > $o ).
+
+tff('comp$at',type,
+    'comp$at': ( 'A_c_prod_c_prod_ell2_a_c_prod_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_c_c_prod_prod_ell2_a_c_c_prod_prod_ell2_cblinfun_a_c_prod_c_prod_ell2_a_c_prod_c_prod_ell2_cblinfun_fun$' ) > 'A_c_c_prod_prod_ell2_a_c_c_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('tensor_op$d',type,
+    'tensor_op$d': ( 'A_ell2_a_ell2_cblinfun$' * 'A_a_complement_domain_ell2_a_a_complement_domain_ell2_cblinfun$' ) > 'A_a_a_complement_domain_prod_ell2_a_a_a_complement_domain_prod_ell2_cblinfun$' ).
+
+tff('tensor_op$t',type,
+    'tensor_op$t': ( 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun$' * 'B_ell2_b_ell2_cblinfun$' ) > 'A_b_complement_domain_b_prod_ell2_a_b_complement_domain_b_prod_ell2_cblinfun$' ).
+
+tff('fun_app$am',type,
+    'fun_app$am': ( 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' * 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun$' ) > 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun$' ).
+
+tff('comp$j',type,
+    'comp$j': ( 'B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('comp$bw',type,
+    'comp$bw': ( 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$' * 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' ) > 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$' ).
+
+tff('register_pair$t',type,
+    'register_pair$t': ( 'A_ell2_a_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$' * 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$' ) > 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$' ).
+
+tff('comp$ce',type,
+    'comp$ce': ( 'A_c_prod_ell2_a_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_c_prod_ell2_a_c_prod_ell2_cblinfun_fun$' ) > 'A_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('register_pair$ba',type,
+    'register_pair$ba': ( 'C_ell2_c_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' * 'C_b_complement_domain_ell2_c_b_complement_domain_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' ) > 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' ).
+
+tff('ket$',type,
+    'ket$': 'B$' > 'B_ell2$' ).
+
+tff('register_pair$be',type,
+    'register_pair$be': ( 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > 'A_b_complement_domain_a_prod_ell2_a_b_complement_domain_a_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('inv_into$g',type,
+    'inv_into$g': ( 'B_ell2_b_ell2_cblinfun_set$' * 'B_ell2_b_ell2_cblinfun_c_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$' ) > 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('complements$z',type,
+    'complements$z': ( 'A_c_prod_c_prod_ell2_a_c_prod_c_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$' * 'A_c_prod_b_complement_domain_c_b_complement_domain_prod_ell2_a_c_prod_b_complement_domain_c_b_complement_domain_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$' ) > $o ).
+
+tff('regular_register$h',type,
+    'regular_register$h': 'C_ell2_c_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$' > $o ).
+
+tff('comp$df',type,
+    'comp$df': ( 'A_ell2_a_ell2_cblinfun_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' * 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' ) > 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' ).
+
+tff('complement$q',type,
+    'complement$q': 'C_ell2_c_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' > 'C_a_complement_domain_ell2_c_a_complement_domain_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' ).
+
+tff('compatible$ay',type,
+    'compatible$ay': ( 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$' * 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$' ) > $o ).
+
+tff('bij_betw$t',type,
+    'bij_betw$t': ( 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_set$' * 'B_ell2_b_ell2_cblinfun_set$' ) > $o ).
+
+tff('bij_betw$ae',type,
+    'bij_betw$ae': ( 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' * 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_set$' * 'A_ell2_a_ell2_cblinfun_set$' ) > $o ).
+
+tff('compatible$o',type,
+    'compatible$o': ( 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_c_a_c_prod_b_complement_domain_prod_prod_b_complement_domain_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('register_tensor$bj',type,
+    'register_tensor$bj': ( 'A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' * 'C_ell2_c_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$' ) > 'A_c_prod_ell2_a_c_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$' ).
+
+tff('bij_betw$f',type,
+    'bij_betw$f': ( 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_c_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$' * 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_set$' * 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_set$' ) > $o ).
+
+tff('comp$ct',type,
+    'comp$ct': ( 'A_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_c_prod_b_complement_domain_a_prod_ell2_a_c_prod_b_complement_domain_a_prod_ell2_cblinfun_a_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$' ) > 'A_c_prod_b_complement_domain_a_prod_ell2_a_c_prod_b_complement_domain_a_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('comp$e',type,
+    'comp$e': ( 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'C_ell2_c_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$' ) > 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('tensor_op$p',type,
+    'tensor_op$p': ( 'A_ell2_a_ell2_cblinfun$' * 'A_ell2_a_ell2_cblinfun$' ) > 'A_a_prod_ell2_a_a_prod_ell2_cblinfun$' ).
+
+tff('fun_app$c',type,
+    'fun_app$c': ( 'B_ell2_b_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$' * 'B_ell2_b_ell2_cblinfun$' ) > 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$' ).
+
+tff('register$w',type,
+    'register$w': 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_c_b_complement_domain_ell2_c_b_complement_domain_ell2_cblinfun_fun$' > $o ).
+
+tff('comp$aw',type,
+    'comp$aw': ( 'A_a_c_prod_b_complement_domain_c_prod_prod_ell2_a_a_c_prod_b_complement_domain_c_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_a_c_prod_b_complement_domain_prod_c_prod_ell2_a_a_c_prod_b_complement_domain_prod_c_prod_ell2_cblinfun_a_a_c_prod_b_complement_domain_c_prod_prod_ell2_a_a_c_prod_b_complement_domain_c_prod_prod_ell2_cblinfun_fun$' ) > 'A_a_c_prod_b_complement_domain_prod_c_prod_ell2_a_a_c_prod_b_complement_domain_prod_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('complement$i',type,
+    'complement$i': 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' > 'A_b_complement_domain_b_complement_domain_ell2_a_b_complement_domain_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('register_pair$d',type,
+    'register_pair$d': ( 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('fun_app$z',type,
+    'fun_app$z': ( 'A_a_prod_ell2_a_a_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$' * 'A_a_prod_ell2_a_a_prod_ell2_cblinfun$' ) > 'B_b_prod_ell2_b_b_prod_ell2_cblinfun$' ).
+
+tff('comp$da',type,
+    'comp$da': ( 'B_ell2_b_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$' * 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$' ).
+
+tff('register_pair$av',type,
+    'register_pair$av': ( 'A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' * 'A_a_complement_domain_ell2_a_a_complement_domain_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' * 'A_a_a_complement_domain_prod_ell2_a_a_a_complement_domain_prod_ell2_cblinfun$' ) > 'A_ell2_a_ell2_cblinfun$' ).
+
+tff('comp$ag',type,
+    'comp$ag': ( 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_c_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$' * 'B_ell2_b_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$' ) > 'B_ell2_b_ell2_cblinfun_c_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$' ).
+
+tff('register_pair$ak',type,
+    'register_pair$ak': ( 'A_c_prod_ell2_a_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > 'A_c_prod_c_prod_ell2_a_c_prod_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('comp$cx',type,
+    'comp$cx': ( 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'B_ell2_b_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' ) > 'B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('comp$k',type,
+    'comp$k': ( 'B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('register$d',type,
+    'register$d': 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' > $o ).
+
+tff('regular_register$g',type,
+    'regular_register$g': 'C_ell2_c_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' > $o ).
+
+tff('id$c',type,
+    'id$c': 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' ).
+
+tff('inv_into$ah',type,
+    'inv_into$ah': ( 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_set$' * 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$' ) > 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$' ).
+
+tff('compatible$ag',type,
+    'compatible$ag': ( 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('equivalent_registers$c',type,
+    'equivalent_registers$c': ( 'A_b_complement_domain_b_complement_domain_ell2_a_b_complement_domain_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'C_a_c_prod_b_complement_domain_prod_b_complement_domain_ell2_c_a_c_prod_b_complement_domain_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('swap$j',type,
+    'swap$j': 'C_b_complement_domain_c_prod_ell2_c_b_complement_domain_c_prod_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$' ).
+
+tff('register_tensor$g',type,
+    'register_tensor$g': ( 'B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$' * 'B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$' ) > 'B_b_prod_ell2_b_b_prod_ell2_cblinfun_a_a_b_complement_domain_prod_a_a_b_complement_domain_prod_prod_ell2_a_a_b_complement_domain_prod_a_a_b_complement_domain_prod_prod_ell2_cblinfun_fun$' ).
+
+tff('tensor_op$q',type,
+    'tensor_op$q': ( 'C_ell2_c_ell2_cblinfun$' * 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun$' ) > 'C_c_a_c_prod_b_complement_domain_prod_prod_ell2_c_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun$' ).
+
+tff('assoc$d',type,
+    'assoc$d': 'A_c_a_c_prod_b_complement_domain_prod_c_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_c_prod_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_c_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_c_prod_ell2_cblinfun_fun$' ).
+
+tff('member$c',type,
+    'member$c': ( 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$' * 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_set$' ) > $o ).
+
+tff('tensor_op$s',type,
+    'tensor_op$s': ( 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun$' * 'C_ell2_c_ell2_cblinfun$' ) > 'C_a_c_prod_b_complement_domain_prod_c_prod_ell2_c_a_c_prod_b_complement_domain_prod_c_prod_ell2_cblinfun$' ).
+
+tff('comp$cy',type,
+    'comp$cy': ( 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' * 'A_ell2_a_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$' ) > 'A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' ).
+
+tff('inv_into$z',type,
+    'inv_into$z': ( 'A_ell2_a_ell2_cblinfun_set$' * 'A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' ) > 'A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' ).
+
+tff('register_pair$aq',type,
+    'register_pair$aq': ( 'C_a_prod_ell2_c_a_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > 'C_a_prod_a_c_prod_b_complement_domain_prod_ell2_c_a_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('compatible$ac',type,
+    'compatible$ac': ( 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('complements$x',type,
+    'complements$x': ( 'C_c_prod_ell2_c_c_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$' * 'C_b_complement_domain_c_b_complement_domain_prod_ell2_c_b_complement_domain_c_b_complement_domain_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$' ) > $o ).
+
+tff('register_tensor$ao',type,
+    'register_tensor$ao': ( 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > 'A_c_prod_b_complement_domain_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_b_complement_domain_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$' ).
+
+tff('comp$ch',type,
+    'comp$ch': ( 'A_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$' ) > 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('register_tensor$v',type,
+    'register_tensor$v': ( 'A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' * 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$' ) > 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$' ).
+
+tff('compatible$as',type,
+    'compatible$as': ( 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('fun_app$ah',type,
+    'fun_app$ah': ( 'C_ell2_c_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$' * 'C_ell2_c_ell2_cblinfun$' ) > 'C_ell2_c_ell2_cblinfun$' ).
+
+tff('compatible$ae',type,
+    'compatible$ae': ( 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('complements$m',type,
+    'complements$m': ( 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_b_complement_domain_b_complement_domain_c_a_c_prod_b_complement_domain_prod_a_b_complement_domain_complement_domain_prod_ell2_a_b_complement_domain_b_complement_domain_c_a_c_prod_b_complement_domain_prod_a_b_complement_domain_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('tensor_op$u',type,
+    'tensor_op$u': ( 'A_ell2_a_ell2_cblinfun$' * 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun$' ) > 'A_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun$' ).
+
+tff('tensor_op$e',type,
+    'tensor_op$e': ( 'A_ell2_a_ell2_cblinfun$' * 'A_c_complement_domain_ell2_a_c_complement_domain_ell2_cblinfun$' ) > 'A_a_c_complement_domain_prod_ell2_a_a_c_complement_domain_prod_ell2_cblinfun$' ).
+
+tff('comp$bp',type,
+    'comp$bp': ( 'A_b_complement_domain_a_b_complement_domain_prod_ell2_a_b_complement_domain_a_b_complement_domain_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$' * 'C_a_c_prod_b_complement_domain_prod_c_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_c_prod_b_complement_domain_prod_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_b_complement_domain_a_b_complement_domain_prod_ell2_a_b_complement_domain_a_b_complement_domain_prod_ell2_cblinfun_fun$' ) > 'C_a_c_prod_b_complement_domain_prod_c_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_c_prod_b_complement_domain_prod_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$' ).
+
+tff('iso_register$z',type,
+    'iso_register$z': 'A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' > $o ).
+
+tff('f$',type,
+    'f$': 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('comp$cq',type,
+    'comp$cq': ( 'C_a_c_prod_b_complement_domain_prod_a_prod_ell2_c_a_c_prod_b_complement_domain_prod_a_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_c_a_c_prod_b_complement_domain_prod_a_prod_ell2_c_a_c_prod_b_complement_domain_prod_a_prod_ell2_cblinfun_fun$' ) > 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('top$f',type,
+    'top$f': 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_set$' ).
+
+tff('register_pair$bb',type,
+    'register_pair$bb': ( 'C_ell2_c_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$' * 'C_b_complement_domain_ell2_c_b_complement_domain_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$' * 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$' ) > 'C_ell2_c_ell2_cblinfun$' ).
+
+tff('equivalent_registers$j',type,
+    'equivalent_registers$j': ( 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_c_prod_ell2_a_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('swap$d',type,
+    'swap$d': 'A_c_prod_ell2_a_c_prod_ell2_cblinfun_c_a_prod_ell2_c_a_prod_ell2_cblinfun_fun$' ).
+
+tff('register$ae',type,
+    'register$ae': 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_a_b_complement_domain_prod_ell2_b_a_b_complement_domain_prod_ell2_cblinfun_fun$' > $o ).
+
+tff('equivalent_registers$ad',type,
+    'equivalent_registers$ad': ( 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' * 'B_ell2_b_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' ) > $o ).
+
+tff('comp$do',type,
+    'comp$do': ( 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_c_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$' * 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$' ) > 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_c_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$' ).
+
+tff('equivalent_registers$an',type,
+    'equivalent_registers$an': ( 'A_a_c_prod_b_complement_domain_c_prod_prod_ell2_a_a_c_prod_b_complement_domain_c_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_a_c_prod_b_complement_domain_prod_c_prod_ell2_a_a_c_prod_b_complement_domain_prod_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('iso_register$q',type,
+    'iso_register$q': 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' > $o ).
+
+tff('regular_register$f',type,
+    'regular_register$f': 'A_ell2_a_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$' > $o ).
+
+tff('tensor_op$v',type,
+    'tensor_op$v': ( 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun$' * 'A_ell2_a_ell2_cblinfun$' ) > 'A_b_complement_domain_a_prod_ell2_a_b_complement_domain_a_prod_ell2_cblinfun$' ).
+
+tff('top$n',type,
+    'top$n': 'C_c_b_complement_domain_prod_a_c_a_c_prod_b_complement_domain_prod_prod_prod_ell2_c_c_b_complement_domain_prod_a_c_a_c_prod_b_complement_domain_prod_prod_prod_ell2_cblinfun_set$' ).
+
+tff('register_tensor$u',type,
+    'register_tensor$u': ( 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > 'A_a_prod_ell2_a_a_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$' ).
+
+tff('assoc$i',type,
+    'assoc$i': 'A_a_b_complement_domain_prod_c_prod_ell2_a_a_b_complement_domain_prod_c_prod_ell2_cblinfun_a_a_b_complement_domain_c_prod_prod_ell2_a_a_b_complement_domain_c_prod_prod_ell2_cblinfun_fun$' ).
+
+tff('comp$co',type,
+    'comp$co': ( 'A_c_prod_b_complement_domain_a_prod_ell2_a_c_prod_b_complement_domain_a_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_c_prod_b_complement_domain_a_prod_ell2_a_c_prod_b_complement_domain_a_prod_ell2_cblinfun_fun$' ) > 'A_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('bij_betw$aa',type,
+    'bij_betw$aa': ( 'B_ell2_b_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' * 'B_ell2_b_ell2_cblinfun_set$' * 'A_ell2_a_ell2_cblinfun_set$' ) > $o ).
+
+tff('fun_app$ar',type,
+    'fun_app$ar': ( 'A_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun$' ) > 'B_ell2_b_ell2_cblinfun$' ).
+
+tff('fun_app$be',type,
+    'fun_app$be': ( 'B_ell2_b_ell2_cblinfun_bool_fun$' * 'B_ell2_b_ell2_cblinfun$' ) > $o ).
+
+tff('tensor_op$c',type,
+    'tensor_op$c': ( 'A_ell2_a_ell2_cblinfun$' * 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun$' ) > 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun$' ).
+
+tff('register_tensor$p',type,
+    'register_tensor$p': ( 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > 'C_a_a_c_prod_b_complement_domain_prod_prod_a_a_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_a_a_b_complement_domain_prod_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$' ).
+
+tff('swap$f',type,
+    'swap$f': 'A_c_prod_b_complement_domain_a_prod_ell2_a_c_prod_b_complement_domain_a_prod_ell2_cblinfun_a_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$' ).
+
+tff('equivalent_registers$',type,
+    'equivalent_registers$': ( 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('compatible$b',type,
+    'compatible$b': ( 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('ket$c',type,
+    'ket$c': 'A_c_prod$' > 'A_c_prod_ell2$' ).
+
+tff('bij_betw$ac',type,
+    'bij_betw$ac': ( 'A_ell2_a_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$' * 'A_ell2_a_ell2_cblinfun_set$' * 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_set$' ) > $o ).
+
+tff('register_pair$at',type,
+    'register_pair$at': ( 'B_ell2_b_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' * 'B_a_complement_domain_ell2_b_a_complement_domain_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' * 'B_b_a_complement_domain_prod_ell2_b_b_a_complement_domain_prod_ell2_cblinfun$' ) > 'A_ell2_a_ell2_cblinfun$' ).
+
+tff('inv_into$c',type,
+    'inv_into$c': ( 'B_ell2_b_ell2_cblinfun_set$' * 'B_ell2_b_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$' ) > 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('comp$ca',type,
+    'comp$ca': ( 'A_c_prod_ell2_a_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_c_prod_ell2_a_c_prod_ell2_cblinfun_fun$' ) > 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('register_pair$aw',type,
+    'register_pair$aw': ( 'A_ell2_a_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$' * 'A_c_complement_domain_ell2_a_c_complement_domain_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$' * 'A_a_c_complement_domain_prod_ell2_a_a_c_complement_domain_prod_ell2_cblinfun$' ) > 'C_ell2_c_ell2_cblinfun$' ).
+
+tff('swap$c',type,
+    'swap$c': 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_c_a_c_prod_b_complement_domain_prod_a_prod_ell2_c_a_c_prod_b_complement_domain_prod_a_prod_ell2_cblinfun_fun$' ).
+
+tff('inv_into$aj',type,
+    'inv_into$aj': ( 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_set$' * 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_c_b_complement_domain_c_prod_ell2_c_b_complement_domain_c_prod_ell2_cblinfun_fun$' ) > 'C_b_complement_domain_c_prod_ell2_c_b_complement_domain_c_prod_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$' ).
+
+tff('compatible$j',type,
+    'compatible$j': ( 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('comp$ar',type,
+    'comp$ar': ( 'A_a_b_complement_domain_prod_c_prod_ell2_a_a_b_complement_domain_prod_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_a_b_complement_domain_c_prod_prod_ell2_a_a_b_complement_domain_c_prod_prod_ell2_cblinfun_a_a_b_complement_domain_prod_c_prod_ell2_a_a_b_complement_domain_prod_c_prod_ell2_cblinfun_fun$' ) > 'A_a_b_complement_domain_c_prod_prod_ell2_a_a_b_complement_domain_c_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('assoc$g',type,
+    'assoc$g': 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$' ).
+
+tff('comp$l',type,
+    'comp$l': ( 'B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_c_prod_ell2_a_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > 'A_c_prod_ell2_a_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('complements$ae',type,
+    'complements$ae': ( 'A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' * 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' ) > $o ).
+
+tff('register$ak',type,
+    'register$ak': 'C_ell2_c_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$' > $o ).
+
+tff('register_pair$aj',type,
+    'register_pair$aj': ( 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > 'C_c_prod_ell2_c_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('comp$ad',type,
+    'comp$ad': ( 'B_ell2_b_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$' * 'B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > 'B_ell2_b_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$' ).
+
+tff('fun_app$r',type,
+    'fun_app$r': ( 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$' * 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun$' ) > 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun$' ).
+
+tff('register_tensor$bk',type,
+    'register_tensor$bk': ( 'A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' * 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$' ) > 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_c_prod_ell2_a_c_prod_ell2_cblinfun_fun$' ).
+
+tff('comp$cd',type,
+    'comp$cd': ( 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$' ) > 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('complements$o',type,
+    'complements$o': ( 'A_c_prod_ell2_a_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('equivalent_registers$af',type,
+    'equivalent_registers$af': ( 'B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$' * 'B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$' ) > $o ).
+
+tff('iso_register$w',type,
+    'iso_register$w': 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' > $o ).
+
+tff('equivalent_registers$p',type,
+    'equivalent_registers$p': ( 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_c_prod_ell2_a_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('comp$i',type,
+    'comp$i': ( 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_c_prod_ell2_a_c_prod_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' ) > 'A_c_prod_ell2_a_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('register$r',type,
+    'register$r': 'B_ell2_b_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' > $o ).
+
+tff('fun_app$k',type,
+    'fun_app$k': ( 'A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun$' ) > 'B_ell2_b_ell2_cblinfun$' ).
+
+tff('fun_app$',type,
+    'fun_app$': ( 'B_ell2_b_ell2_cblinfun_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' * 'B_ell2_b_ell2_cblinfun$' ) > 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun$' ).
+
+tff('comp$bh',type,
+    'comp$bh': ( 'B_ell2_b_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' * 'B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > 'B_ell2_b_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' ).
+
+tff('equivalent_registers$m',type,
+    'equivalent_registers$m': ( 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('fun_app$x',type,
+    'fun_app$x': ( 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_ell2_a_ell2_cblinfun$' ) > 'B_ell2_b_ell2_cblinfun$' ).
+
+tff('complements$l',type,
+    'complements$l': ( 'B_ell2_b_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' * 'A_a_b_complement_domain_prod_a_c_a_c_prod_b_complement_domain_prod_prod_complement_domain_b_a_a_b_complement_domain_prod_complement_domain_prod_ell2_a_a_b_complement_domain_prod_a_c_a_c_prod_b_complement_domain_prod_prod_complement_domain_b_a_a_b_complement_domain_prod_complement_domain_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' ) > $o ).
+
+tff('top$d',type,
+    'top$d': 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_set$' ).
+
+tff('fun_app$ap',type,
+    'fun_app$ap': ( 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$' * 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun$' ) > 'C_ell2_c_ell2_cblinfun$' ).
+
+tff('register_tensor$ar',type,
+    'register_tensor$ar': ( 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$' * 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > 'C_a_c_prod_b_complement_domain_prod_a_prod_ell2_c_a_c_prod_b_complement_domain_prod_a_prod_ell2_cblinfun_a_b_complement_domain_b_prod_ell2_a_b_complement_domain_b_prod_ell2_cblinfun_fun$' ).
+
+tff('comp$ap',type,
+    'comp$ap': ( 'C_a_prod_a_c_prod_b_complement_domain_prod_ell2_c_a_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_c_a_prod_a_c_prod_b_complement_domain_prod_ell2_c_a_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$' ) > 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('assoc$a',type,
+    'assoc$a': 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_c_a_prod_a_c_prod_b_complement_domain_prod_ell2_c_a_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$' ).
+
+tff('fun_app$o',type,
+    'fun_app$o': ( 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$' * 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$' ) > 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun$' ).
+
+tff('comp$bc',type,
+    'comp$bc': ( 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'C_a_prod_a_c_prod_b_complement_domain_prod_ell2_c_a_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' ) > 'C_a_prod_a_c_prod_b_complement_domain_prod_ell2_c_a_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('register$e',type,
+    'register$e': 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$' > $o ).
+
+tff('g$',type,
+    'g$': 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('comp$bd',type,
+    'comp$bd': ( 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' ) > 'A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('comp$cv',type,
+    'comp$cv': ( 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'C_a_c_prod_b_complement_domain_prod_a_prod_ell2_c_a_c_prod_b_complement_domain_prod_a_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' ) > 'C_a_c_prod_b_complement_domain_prod_a_prod_ell2_c_a_c_prod_b_complement_domain_prod_a_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('equivalent_registers$ay',type,
+    'equivalent_registers$ay': ( 'A_c_prod_ell2_a_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('comp$aj',type,
+    'comp$aj': ( 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$' ) > 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('register$ac',type,
+    'register$ac': 'A_c_prod_ell2_a_c_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$' > $o ).
+
+tff('iso_register$b',type,
+    'iso_register$b': 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' > $o ).
+
+tff('register$al',type,
+    'register$al': 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$' > $o ).
+
+tff('fun_app$ak',type,
+    'fun_app$ak': ( 'C_a_c_prod_b_complement_domain_prod_c_prod_ell2_c_a_c_prod_b_complement_domain_prod_c_prod_ell2_cblinfun_a_b_complement_domain_b_prod_ell2_a_b_complement_domain_b_prod_ell2_cblinfun_fun$' * 'C_a_c_prod_b_complement_domain_prod_c_prod_ell2_c_a_c_prod_b_complement_domain_prod_c_prod_ell2_cblinfun$' ) > 'A_b_complement_domain_b_prod_ell2_a_b_complement_domain_b_prod_ell2_cblinfun$' ).
+
+tff('register_tensor$s',type,
+    'register_tensor$s': ( 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > 'C_a_prod_ell2_c_a_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$' ).
+
+tff('iso_register$',type,
+    'iso_register$': 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$' > $o ).
+
+tff('register_tensor$aj',type,
+    'register_tensor$aj': ( 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_c_prod_ell2_a_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > 'A_a_c_prod_prod_ell2_a_a_c_prod_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$' ).
+
+tff('top$r',type,
+    'top$r': 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_bool_fun$' ).
+
+tff('compatible$a',type,
+    'compatible$a': ( 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('compatible$ah',type,
+    'compatible$ah': ( 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('register_tensor$ba',type,
+    'register_tensor$ba': ( 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'B_ell2_b_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' ) > 'C_a_c_prod_b_complement_domain_prod_b_prod_ell2_c_a_c_prod_b_complement_domain_prod_b_prod_ell2_cblinfun_b_a_c_a_c_prod_b_complement_domain_prod_prod_prod_ell2_b_a_c_a_c_prod_b_complement_domain_prod_prod_prod_ell2_cblinfun_fun$' ).
+
+tff('compatible$ba',type,
+    'compatible$ba': ( 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('bij_betw$z',type,
+    'bij_betw$z': ( 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_ell2_a_ell2_cblinfun_set$' * 'B_ell2_b_ell2_cblinfun_set$' ) > $o ).
+
+tff('bij_betw$r',type,
+    'bij_betw$r': ( 'B_ell2_b_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' * 'B_ell2_b_ell2_cblinfun_set$' * 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_set$' ) > $o ).
+
+tff('assoc$',type,
+    'assoc$': 'A_a_c_prod_prod_ell2_a_a_c_prod_prod_ell2_cblinfun_a_a_prod_c_prod_ell2_a_a_prod_c_prod_ell2_cblinfun_fun$' ).
+
+tff('inv_into$ag',type,
+    'inv_into$ag': ( 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_set$' * 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' ) > 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' ).
+
+tff('top$q',type,
+    'top$q': 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_bool_fun$' ).
+
+tff('comp$di',type,
+    'comp$di': ( 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' * 'A_ell2_a_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' ) > 'A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' ).
+
+tff('fun_app$ao',type,
+    'fun_app$ao': ( 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' * 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun$' ) > 'A_ell2_a_ell2_cblinfun$' ).
+
+tff('register_tensor$l',type,
+    'register_tensor$l': ( 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > 'C_c_b_complement_domain_prod_a_c_a_c_prod_b_complement_domain_prod_prod_prod_ell2_c_c_b_complement_domain_prod_a_c_a_c_prod_b_complement_domain_prod_prod_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$' ).
+
+tff('register$ao',type,
+    'register$ao': 'C_ell2_c_ell2_cblinfun_a_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$' > $o ).
+
+tff('id$g',type,
+    'id$g': 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$' ).
+
+tff('inv_into$k',type,
+    'inv_into$k': ( 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_set$' * 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$' ) > 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_c_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$' ).
+
+tff('bij_betw$i',type,
+    'bij_betw$i': ( 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$' * 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_set$' * 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_set$' ) > $o ).
+
+tff('id$d',type,
+    'id$d': 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$' ).
+
+tff('register$ah',type,
+    'register$ah': 'C_a_c_prod_b_complement_domain_prod_c_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_c_prod_b_complement_domain_prod_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_b_complement_domain_a_b_complement_domain_prod_ell2_a_b_complement_domain_a_b_complement_domain_prod_ell2_cblinfun_fun$' > $o ).
+
+tff('register_tensor$o',type,
+    'register_tensor$o': ( 'B_ell2_b_ell2_cblinfun_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' * 'B_ell2_b_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$' ) > 'B_b_prod_ell2_b_b_prod_ell2_cblinfun_c_a_a_c_prod_b_complement_domain_prod_prod_c_c_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_c_c_b_complement_domain_prod_prod_ell2_cblinfun_fun$' ).
+
+tff('complement$d',type,
+    'complement$d': 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' > 'A_c_a_c_prod_b_complement_domain_prod_prod_b_complement_domain_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('tensor_op$w',type,
+    'tensor_op$w': ( 'C_b_complement_domain_ell2_c_b_complement_domain_ell2_cblinfun$' * 'C_ell2_c_ell2_cblinfun$' ) > 'C_b_complement_domain_c_prod_ell2_c_b_complement_domain_c_prod_ell2_cblinfun$' ).
+
+tff('comp$aq',type,
+    'comp$aq': ( 'A_a_c_prod_b_complement_domain_prod_c_prod_ell2_a_a_c_prod_b_complement_domain_prod_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_a_c_prod_b_complement_domain_c_prod_prod_ell2_a_a_c_prod_b_complement_domain_c_prod_prod_ell2_cblinfun_a_a_c_prod_b_complement_domain_prod_c_prod_ell2_a_a_c_prod_b_complement_domain_prod_c_prod_ell2_cblinfun_fun$' ) > 'A_a_c_prod_b_complement_domain_c_prod_prod_ell2_a_a_c_prod_b_complement_domain_c_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('register_pair$z',type,
+    'register_pair$z': ( 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_c_prod_b_complement_domain_c_prod_ell2_a_c_prod_b_complement_domain_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > 'A_a_c_prod_b_complement_domain_c_prod_prod_ell2_a_a_c_prod_b_complement_domain_c_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('register$b',type,
+    'register$b': 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' > $o ).
+
+tff('aG$',type,
+    'aG$': 'C_b_complement_domain_ell2_c_b_complement_domain_ell2_cblinfun$' ).
+
+tff('equivalent_registers$au',type,
+    'equivalent_registers$au': ( 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('comp$bm',type,
+    'comp$bm': ( 'A_a_b_complement_domain_prod_a_a_b_complement_domain_prod_prod_ell2_a_a_b_complement_domain_prod_a_a_b_complement_domain_prod_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_a_c_a_c_prod_b_complement_domain_prod_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_a_c_a_c_prod_b_complement_domain_prod_prod_prod_ell2_cblinfun_fun$' * 'B_b_prod_ell2_b_b_prod_ell2_cblinfun_a_a_b_complement_domain_prod_a_a_b_complement_domain_prod_prod_ell2_a_a_b_complement_domain_prod_a_a_b_complement_domain_prod_prod_ell2_cblinfun_fun$' ) > 'B_b_prod_ell2_b_b_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_a_c_a_c_prod_b_complement_domain_prod_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_a_c_a_c_prod_b_complement_domain_prod_prod_prod_ell2_cblinfun_fun$' ).
+
+tff('register_tensor$as',type,
+    'register_tensor$as': ( 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$' * 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$' ) > 'C_a_c_prod_b_complement_domain_prod_c_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_c_prod_b_complement_domain_prod_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_b_complement_domain_a_b_complement_domain_prod_ell2_a_b_complement_domain_a_b_complement_domain_prod_ell2_cblinfun_fun$' ).
+
+tff('compatible$ab',type,
+    'compatible$ab': ( 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('complements$g',type,
+    'complements$g': ( 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'C_a_c_prod_b_complement_domain_prod_a_c_a_c_prod_b_complement_domain_prod_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_a_c_a_c_prod_b_complement_domain_prod_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('equivalent_registers$aq',type,
+    'equivalent_registers$aq': ( 'A_c_c_prod_prod_ell2_a_c_c_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_c_prod_c_prod_ell2_a_c_prod_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('id$b',type,
+    'id$b': 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$' ).
+
+tff('register_pair$aa',type,
+    'register_pair$aa': ( 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > 'A_c_prod_b_complement_domain_c_prod_ell2_a_c_prod_b_complement_domain_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('fun_app$ba',type,
+    'fun_app$ba': ( 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_bool_fun$' * 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$' ) > $o ).
+
+tff('collect$',type,
+    'collect$': 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_bool_fun$' > 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_set$' ).
+
+tff('comp$bv',type,
+    'comp$bv': ( 'A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' * 'A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' ) > 'A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' ).
+
+tff('register_tensor$',type,
+    'register_tensor$': ( 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > 'C_c_b_complement_domain_prod_c_c_b_complement_domain_prod_prod_ell2_c_c_b_complement_domain_prod_c_c_b_complement_domain_prod_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$' ).
+
+tff('complements$v',type,
+    'complements$v': ( 'A_c_prod_ell2_a_c_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$' * 'A_b_complement_domain_c_b_complement_domain_prod_ell2_a_b_complement_domain_c_b_complement_domain_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$' ) > $o ).
+
+tff('iso_register$ac',type,
+    'iso_register$ac': 'B_ell2_b_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' > $o ).
+
+tff('compatible$',type,
+    'compatible$': ( 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('register_pair$au',type,
+    'register_pair$au': ( 'B_ell2_b_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$' * 'B_c_complement_domain_ell2_b_c_complement_domain_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$' * 'B_b_c_complement_domain_prod_ell2_b_b_c_complement_domain_prod_ell2_cblinfun$' ) > 'C_ell2_c_ell2_cblinfun$' ).
+
+tff('register_tensor$bl',type,
+    'register_tensor$bl': ( 'A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' * 'C_ell2_c_ell2_cblinfun_a_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_fun$' ) > 'A_c_prod_ell2_a_c_prod_ell2_cblinfun_a_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$' ).
+
+tff('complements$f',type,
+    'complements$f': ( 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_b_complement_domain_a_a_b_complement_domain_prod_b_complement_domain_prod_ell2_a_b_complement_domain_a_a_b_complement_domain_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('top$a',type,
+    'top$a': 'B_ell2_b_ell2_cblinfun_set$' ).
+
+tff('complement$m',type,
+    'complement$m': 'B_ell2_b_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' > 'B_a_complement_domain_ell2_b_a_complement_domain_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' ).
+
+tff('register$ai',type,
+    'register$ai': 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$' > $o ).
+
+tff('inv_into$i',type,
+    'inv_into$i': ( 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_set$' * 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_c_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$' ) > 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$' ).
+
+tff('bij_betw$e',type,
+    'bij_betw$e': ( 'B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$' * 'B_ell2_b_ell2_cblinfun_set$' * 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_set$' ) > $o ).
+
+tff('top$e',type,
+    'top$e': 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_set$' ).
+
+tff('compatible$ai',type,
+    'compatible$ai': ( 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'C_c_prod_ell2_c_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('fun_app$ad',type,
+    'fun_app$ad': ( 'A_ell2_a_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$' * 'A_ell2_a_ell2_cblinfun$' ) > 'C_ell2_c_ell2_cblinfun$' ).
+
+tff('register_pair$w',type,
+    'register_pair$w': ( 'A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' * 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' ) > 'A_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' ).
+
+tff('register$c',type,
+    'register$c': 'B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$' > $o ).
+
+tff('comp$bq',type,
+    'comp$bq': ( 'B_a_b_complement_domain_prod_ell2_b_a_b_complement_domain_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$' * 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_a_b_complement_domain_prod_ell2_b_a_b_complement_domain_prod_ell2_cblinfun_fun$' ) > 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$' ).
+
+tff('register_pair$ae',type,
+    'register_pair$ae': ( 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > 'A_a_b_complement_domain_prod_c_prod_ell2_a_a_b_complement_domain_prod_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('register_tensor$af',type,
+    'register_tensor$af': ( 'A_c_prod_ell2_a_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > 'A_c_prod_a_prod_ell2_a_c_prod_a_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$' ).
+
+tff('complements$af',type,
+    'complements$af': ( 'A_ell2_a_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$' * 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$' ) > $o ).
+
+tff('register_tensor$an',type,
+    'register_tensor$an': ( 'A_c_prod_ell2_a_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_c_prod_ell2_a_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > 'A_c_prod_a_c_prod_prod_ell2_a_c_prod_a_c_prod_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$' ).
+
+tff('iso_register$h',type,
+    'iso_register$h': 'C_a_c_prod_b_complement_domain_prod_c_a_c_prod_b_complement_domain_prod_a_b_complement_domain_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_c_a_c_prod_b_complement_domain_prod_a_b_complement_domain_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$' > $o ).
+
+tff('comp$ah',type,
+    'comp$ah': ( 'A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'B_ell2_b_ell2_cblinfun_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$' ) > 'B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('comp$br',type,
+    'comp$br': ( 'B_ell2_b_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' * 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > 'A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' ).
+
+tff('complements$aa',type,
+    'complements$aa': ( 'A_a_c_prod_prod_ell2_a_a_c_prod_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$' * 'A_b_complement_domain_a_c_prod_b_complement_domain_prod_ell2_a_b_complement_domain_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$' ) > $o ).
+
+tff('register_pair$p',type,
+    'register_pair$p': ( 'A_b_complement_domain_b_complement_domain_ell2_a_b_complement_domain_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'C_a_c_prod_b_complement_domain_prod_a_b_complement_domain_complement_domain_ell2_c_a_c_prod_b_complement_domain_prod_a_b_complement_domain_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > 'A_b_complement_domain_b_complement_domain_c_a_c_prod_b_complement_domain_prod_a_b_complement_domain_complement_domain_prod_ell2_a_b_complement_domain_b_complement_domain_c_a_c_prod_b_complement_domain_prod_a_b_complement_domain_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('comp$n',type,
+    'comp$n': ( 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$' ) > 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('inv_into$an',type,
+    'inv_into$an': ( 'B_ell2_b_ell2_cblinfun_set$' * 'B_ell2_b_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' ) > 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('comp$d',type,
+    'comp$d': ( 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_ell2_a_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$' ) > 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('register$j',type,
+    'register$j': 'B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' > $o ).
+
+tff('comp$t',type,
+    'comp$t': ( 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$' ) > 'A_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('fun_app$az',type,
+    'fun_app$az': ( 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_c_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$' * 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun$' ) > 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun$' ).
+
+tff('comp$bg',type,
+    'comp$bg': ( 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_c_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$' ) > 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('register_tensor$r',type,
+    'register_tensor$r': ( 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > 'C_c_prod_ell2_c_c_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$' ).
+
+tff('compatible$d',type,
+    'compatible$d': ( 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('complements$ai',type,
+    'complements$ai': ( 'A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' * 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' ) > $o ).
+
+tff('register$k',type,
+    'register$k': 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' > $o ).
+
+tff('equivalent_registers$o',type,
+    'equivalent_registers$o': ( 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'C_b_complement_domain_ell2_c_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('comp$cw',type,
+    'comp$cw': ( 'A_c_prod_ell2_a_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'C_a_prod_ell2_c_a_prod_ell2_cblinfun_a_c_prod_ell2_a_c_prod_ell2_cblinfun_fun$' ) > 'C_a_prod_ell2_c_a_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('register_tensor$bd',type,
+    'register_tensor$bd': ( 'B_ell2_b_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' * 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$' ) > 'B_c_a_c_prod_b_complement_domain_prod_prod_ell2_b_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$' ).
+
+tff('swap$k',type,
+    'swap$k': 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_c_b_complement_domain_c_prod_ell2_c_b_complement_domain_c_prod_ell2_cblinfun_fun$' ).
+
+tff('comp$x',type,
+    'comp$x': ( 'B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > 'A_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('compatible$ap',type,
+    'compatible$ap': ( 'A_c_prod_ell2_a_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('fun_app$bb',type,
+    'fun_app$bb': ( 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_bool_fun$' * 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun$' ) > $o ).
+
+tff('top$p',type,
+    'top$p': 'C_a_a_c_prod_b_complement_domain_prod_prod_a_a_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_a_a_b_complement_domain_prod_prod_ell2_cblinfun_set$' ).
+
+tff('fun_app$ay',type,
+    'fun_app$ay': ( 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_c_a_c_prod_b_complement_domain_prod_a_prod_ell2_c_a_c_prod_b_complement_domain_prod_a_prod_ell2_cblinfun_fun$' * 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun$' ) > 'C_a_c_prod_b_complement_domain_prod_a_prod_ell2_c_a_c_prod_b_complement_domain_prod_a_prod_ell2_cblinfun$' ).
+
+tff('register_tensor$b',type,
+    'register_tensor$b': ( 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > 'C_c_b_complement_domain_prod_a_a_b_complement_domain_prod_prod_ell2_c_c_b_complement_domain_prod_a_a_b_complement_domain_prod_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$' ).
+
+tff('bij_betw$',type,
+    'bij_betw$': ( 'A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_set$' * 'B_ell2_b_ell2_cblinfun_set$' ) > $o ).
+
+tff('register$am',type,
+    'register$am': 'C_ell2_c_ell2_cblinfun_a_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_fun$' > $o ).
+
+tff('complements$j',type,
+    'complements$j': ( 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_a_a_b_complement_domain_prod_b_complement_domain_prod_ell2_a_a_a_b_complement_domain_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('inv_into$q',type,
+    'inv_into$q': ( 'B_ell2_b_ell2_cblinfun_set$' * 'B_ell2_b_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' ) > 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('register_pair$y',type,
+    'register_pair$y': ( 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$' * 'C_a_c_prod_b_complement_domain_prod_a_b_complement_domain_complement_domain_ell2_c_a_c_prod_b_complement_domain_prod_a_b_complement_domain_complement_domain_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$' ) > 'C_a_c_prod_b_complement_domain_prod_c_a_c_prod_b_complement_domain_prod_a_b_complement_domain_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_c_a_c_prod_b_complement_domain_prod_a_b_complement_domain_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$' ).
+
+tff('comp$bl',type,
+    'comp$bl': ( 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$' * 'B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$' ) > 'B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$' ).
+
+tff('fun_app$ac',type,
+    'fun_app$ac': ( 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$' * 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun$' ) > 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun$' ).
+
+tff('iso_register$g',type,
+    'iso_register$g': 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' > $o ).
+
+tff('assoc$h',type,
+    'assoc$h': 'A_a_c_prod_b_complement_domain_prod_c_prod_ell2_a_a_c_prod_b_complement_domain_prod_c_prod_ell2_cblinfun_a_a_c_prod_b_complement_domain_c_prod_prod_ell2_a_a_c_prod_b_complement_domain_c_prod_prod_ell2_cblinfun_fun$' ).
+
+tff('register_tensor$bi',type,
+    'register_tensor$bi': ( 'A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' * 'C_ell2_c_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$' ) > 'A_c_prod_ell2_a_c_prod_ell2_cblinfun_a_c_prod_ell2_a_c_prod_ell2_cblinfun_fun$' ).
+
+tff('comp$aa',type,
+    'comp$aa': ( 'B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > 'B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('equivalent_registers$ag',type,
+    'equivalent_registers$ag': ( 'B_ell2_b_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' * 'B_ell2_b_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' ) > $o ).
+
+tff('compatible$al',type,
+    'compatible$al': ( 'A_a_prod_ell2_a_a_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('tensor_op$',type,
+    'tensor_op$': ( 'B_ell2_b_ell2_cblinfun$' * 'B_b_complement_domain_ell2_b_b_complement_domain_ell2_cblinfun$' ) > 'B_b_b_complement_domain_prod_ell2_b_b_b_complement_domain_prod_ell2_cblinfun$' ).
+
+tff('comp$bi',type,
+    'comp$bi': ( 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' * 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' ) > 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' ).
+
+tff('compatible$an',type,
+    'compatible$an': ( 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('register_pair$bd',type,
+    'register_pair$bd': ( 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > 'A_c_prod_b_complement_domain_a_prod_ell2_a_c_prod_b_complement_domain_a_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('complement$g',type,
+    'complement$g': 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' > 'A_a_b_complement_domain_prod_a_c_a_c_prod_b_complement_domain_prod_prod_complement_domain_ell2_a_a_b_complement_domain_prod_a_c_a_c_prod_b_complement_domain_prod_prod_complement_domain_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' ).
+
+tff('top$c',type,
+    'top$c': 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_set$' ).
+
+tff('comp$de',type,
+    'comp$de': ( 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' * 'A_ell2_a_ell2_cblinfun_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' ) > 'A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' ).
+
+tff('comp$ab',type,
+    'comp$ab': ( 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'B_ell2_b_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$' ) > 'B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('register_pair$ag',type,
+    'register_pair$ag': ( 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > 'C_a_c_prod_b_complement_domain_prod_c_prod_ell2_c_a_c_prod_b_complement_domain_prod_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('inv_into$ab',type,
+    'inv_into$ab': ( 'C_c_b_complement_domain_prod_a_c_a_c_prod_b_complement_domain_prod_prod_prod_ell2_c_c_b_complement_domain_prod_a_c_a_c_prod_b_complement_domain_prod_prod_prod_ell2_cblinfun_set$' * 'C_c_b_complement_domain_prod_a_c_a_c_prod_b_complement_domain_prod_prod_prod_ell2_c_c_b_complement_domain_prod_a_c_a_c_prod_b_complement_domain_prod_prod_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$' ) > 'B_b_prod_ell2_b_b_prod_ell2_cblinfun_c_c_b_complement_domain_prod_a_c_a_c_prod_b_complement_domain_prod_prod_prod_ell2_c_c_b_complement_domain_prod_a_c_a_c_prod_b_complement_domain_prod_prod_prod_ell2_cblinfun_fun$' ).
+
+tff('register_pair$x',type,
+    'register_pair$x': ( 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'C_b_complement_domain_ell2_c_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('bij_betw$x',type,
+    'bij_betw$x': ( 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$' * 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_set$' * 'A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_set$' ) > $o ).
+
+tff('swap$g',type,
+    'swap$g': 'A_b_complement_domain_a_prod_ell2_a_b_complement_domain_a_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$' ).
+
+tff('equivalent_registers$w',type,
+    'equivalent_registers$w': ( 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('inv_into$f',type,
+    'inv_into$f': ( 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_set$' * 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > 'B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$' ).
+
+tff('inv_into$y',type,
+    'inv_into$y': ( 'A_a_b_complement_domain_prod_a_a_b_complement_domain_prod_prod_ell2_a_a_b_complement_domain_prod_a_a_b_complement_domain_prod_prod_ell2_cblinfun_set$' * 'A_a_b_complement_domain_prod_a_a_b_complement_domain_prod_prod_ell2_a_a_b_complement_domain_prod_a_a_b_complement_domain_prod_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$' ) > 'B_b_prod_ell2_b_b_prod_ell2_cblinfun_a_a_b_complement_domain_prod_a_a_b_complement_domain_prod_prod_ell2_a_a_b_complement_domain_prod_a_a_b_complement_domain_prod_prod_ell2_cblinfun_fun$' ).
+
+tff('iso_register$ag',type,
+    'iso_register$ag': 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' > $o ).
+
+tff('id$i',type,
+    'id$i': 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_c_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$' ).
+
+tff('tensor_op$n',type,
+    'tensor_op$n': ( 'B_ell2_b_ell2_cblinfun$' * 'B_ell2_b_ell2_cblinfun$' ) > 'B_b_prod_ell2_b_b_prod_ell2_cblinfun$' ).
+
+tff('iso_register$ae',type,
+    'iso_register$ae': 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' > $o ).
+
+tff('complements$ac',type,
+    'complements$ac': ( 'A_c_prod_a_c_prod_prod_ell2_a_c_prod_a_c_prod_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$' * 'A_c_prod_b_complement_domain_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_b_complement_domain_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$' ) > $o ).
+
+tff('fun_app$f',type,
+    'fun_app$f': ( 'B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$' * 'B_ell2_b_ell2_cblinfun$' ) > 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun$' ).
+
+tff('complements$d',type,
+    'complements$d': ( 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_a_c_prod_b_complement_domain_prod_c_a_a_c_prod_b_complement_domain_prod_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_c_a_a_c_prod_b_complement_domain_prod_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('equivalent_registers$v',type,
+    'equivalent_registers$v': ( 'A_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('complements$e',type,
+    'complements$e': ( 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_c_prod_b_complement_domain_a_a_c_prod_b_complement_domain_prod_b_complement_domain_prod_ell2_a_c_prod_b_complement_domain_a_a_c_prod_b_complement_domain_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('complements$b',type,
+    'complements$b': ( 'A_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('bij_betw$w',type,
+    'bij_betw$w': ( 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' * 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_set$' * 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_set$' ) > $o ).
+
+tff('compatible$e',type,
+    'compatible$e': ( 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$' * 'C_a_c_prod_b_complement_domain_prod_a_b_complement_domain_complement_domain_ell2_c_a_c_prod_b_complement_domain_prod_a_b_complement_domain_complement_domain_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$' ) > $o ).
+
+tff('comp$dc',type,
+    'comp$dc': ( 'A_ell2_a_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$' * 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' ) > 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$' ).
+
+tff('register$af',type,
+    'register$af': 'C_a_c_prod_b_complement_domain_prod_c_prod_ell2_c_a_c_prod_b_complement_domain_prod_c_prod_ell2_cblinfun_a_b_complement_domain_b_prod_ell2_a_b_complement_domain_b_prod_ell2_cblinfun_fun$' > $o ).
+
+tff('complements$t',type,
+    'complements$t': ( 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('complement$c',type,
+    'complement$c': 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' > 'A_a_b_complement_domain_prod_b_complement_domain_ell2_a_a_b_complement_domain_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('bij_betw$n',type,
+    'bij_betw$n': ( 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$' * 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_set$' * 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_set$' ) > $o ).
+
+tff('fun_app$as',type,
+    'fun_app$as': ( 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' * 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun$' ) > 'A_ell2_a_ell2_cblinfun$' ).
+
+tff('equivalent_registers$e',type,
+    'equivalent_registers$e': ( 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('comp$af',type,
+    'comp$af': ( 'B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$' * 'B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > 'B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$' ).
+
+tff('top$l',type,
+    'top$l': 'A_ell2_a_ell2_cblinfun_set$' ).
+
+tff('id$f',type,
+    'id$f': 'B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('bij_betw$v',type,
+    'bij_betw$v': ( 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$' * 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_set$' * 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_set$' ) > $o ).
+
+tff('compatible$au',type,
+    'compatible$au': ( 'B_ell2_b_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' * 'B_ell2_b_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' ) > $o ).
+
+tff('complements$i',type,
+    'complements$i': ( 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_a_a_c_prod_b_complement_domain_prod_b_complement_domain_prod_ell2_a_a_a_c_prod_b_complement_domain_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('register_tensor$ap',type,
+    'register_tensor$ap': ( 'A_a_complement_domain_ell2_a_a_complement_domain_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' * 'C_a_c_prod_b_complement_domain_prod_a_b_complement_domain_complement_domain_ell2_c_a_c_prod_b_complement_domain_prod_a_b_complement_domain_complement_domain_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$' ) > 'A_a_complement_domain_c_a_c_prod_b_complement_domain_prod_a_b_complement_domain_complement_domain_prod_ell2_a_a_complement_domain_c_a_c_prod_b_complement_domain_prod_a_b_complement_domain_complement_domain_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$' ).
+
+tff('comp$cj',type,
+    'comp$cj': ( 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$' ) > 'A_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('regular_register$d',type,
+    'regular_register$d': 'B_ell2_b_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$' > $o ).
+
+tff('register_tensor$h',type,
+    'register_tensor$h': ( 'A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' * 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_c_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$' ) > 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' ).
+
+tff('top$g',type,
+    'top$g': 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_set$' ).
+
+tff('register$u',type,
+    'register$u': 'C_ell2_c_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' > $o ).
+
+tff('comp$cm',type,
+    'comp$cm': ( 'A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$' ) > 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('fun_app$s',type,
+    'fun_app$s': ( 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$' * 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun$' ) > 'A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun$' ).
+
+tff('register$m',type,
+    'register$m': 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' > $o ).
+
+tff('fun_app$l',type,
+    'fun_app$l': ( 'B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'B_ell2_b_ell2_cblinfun$' ) > 'B_ell2_b_ell2_cblinfun$' ).
+
+tff('register_tensor$q',type,
+    'register_tensor$q': ( 'B_ell2_b_ell2_cblinfun_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' * 'B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$' ) > 'B_b_prod_ell2_b_b_prod_ell2_cblinfun_c_a_a_c_prod_b_complement_domain_prod_prod_a_a_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_a_a_b_complement_domain_prod_prod_ell2_cblinfun_fun$' ).
+
+tff('compatible$v',type,
+    'compatible$v': ( 'A_ell2_a_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$' * 'C_ell2_c_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$' ) > $o ).
+
+tff('default$b',type,
+    'default$b': 'C$' ).
+
+tff('swap$i',type,
+    'swap$i': 'C_a_prod_ell2_c_a_prod_ell2_cblinfun_a_c_prod_ell2_a_c_prod_ell2_cblinfun_fun$' ).
+
+tff('register$t',type,
+    'register$t': 'A_ell2_a_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$' > $o ).
+
+tff('register_tensor$ax',type,
+    'register_tensor$ax': ( 'B_ell2_b_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' * 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > 'B_c_a_c_prod_b_complement_domain_prod_prod_ell2_b_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_b_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_b_prod_ell2_cblinfun_fun$' ).
+
+tff('register$a',type,
+    'register$a': 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' > $o ).
+
+tff('register_pair$s',type,
+    'register_pair$s': ( 'A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' * 'C_ell2_c_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' ) > 'A_c_prod_ell2_a_c_prod_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' ).
+
+tff('fun_app$t',type,
+    'fun_app$t': ( 'A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' * 'A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun$' ) > 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun$' ).
+
+tff('top$s',type,
+    'top$s': 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_bool_fun$' ).
+
+tff('top$i',type,
+    'top$i': 'C_c_b_complement_domain_prod_a_a_b_complement_domain_prod_prod_ell2_c_c_b_complement_domain_prod_a_a_b_complement_domain_prod_prod_ell2_cblinfun_set$' ).
+
+tff('register_tensor$bp',type,
+    'register_tensor$bp': ( 'A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' * 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$' ) > 'A_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$' ).
+
+tff('register$aa',type,
+    'register$aa': 'C_a_prod_ell2_c_a_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$' > $o ).
+
+tff('swap$',type,
+    'swap$': 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_a_c_prod_b_complement_domain_prod_c_prod_ell2_a_a_c_prod_b_complement_domain_prod_c_prod_ell2_cblinfun_fun$' ).
+
+tff('equivalent_registers$k',type,
+    'equivalent_registers$k': ( 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('register_pair$az',type,
+    'register_pair$az': ( 'B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > 'B_b_prod_ell2_b_b_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('equivalent_registers$ai',type,
+    'equivalent_registers$ai': ( 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$' * 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$' ) > $o ).
+
+tff('compatible$aq',type,
+    'compatible$aq': ( 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('inv_into$ae',type,
+    'inv_into$ae': ( 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_set$' * 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_c_a_prod_a_c_prod_b_complement_domain_prod_ell2_c_a_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$' ) > 'C_a_prod_a_c_prod_b_complement_domain_prod_ell2_c_a_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' ).
+
+tff('butterfly$b',type,
+    'butterfly$b': ( 'C_ell2$' * 'C_ell2$' ) > 'C_ell2_c_ell2_cblinfun$' ).
+
+tff('complements$ab',type,
+    'complements$ab': ( 'C_a_c_prod_prod_ell2_c_a_c_prod_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$' * 'C_b_complement_domain_a_c_prod_b_complement_domain_prod_ell2_c_b_complement_domain_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$' ) > $o ).
+
+tff('equivalent_registers$y',type,
+    'equivalent_registers$y': ( 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('equivalent_registers$aj',type,
+    'equivalent_registers$aj': ( 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' * 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' ) > $o ).
+
+tff('inv_into$ad',type,
+    'inv_into$ad': ( 'C_a_a_c_prod_b_complement_domain_prod_prod_a_a_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_a_a_b_complement_domain_prod_prod_ell2_cblinfun_set$' * 'C_a_a_c_prod_b_complement_domain_prod_prod_a_a_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_a_a_b_complement_domain_prod_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$' ) > 'B_b_prod_ell2_b_b_prod_ell2_cblinfun_c_a_a_c_prod_b_complement_domain_prod_prod_a_a_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_a_a_b_complement_domain_prod_prod_ell2_cblinfun_fun$' ).
+
+tff('register_pair$v',type,
+    'register_pair$v': ( 'A_ell2_a_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$' * 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$' ) > 'A_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$' ).
+
+tff('inv_into$t',type,
+    'inv_into$t': ( 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_set$' * 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$' ) > 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$' ).
+
+tff('comp$y',type,
+    'comp$y': ( 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'C_ell2_c_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$' ) > 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('comp$ac',type,
+    'comp$ac': ( 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$' ) > 'B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('compatible$k',type,
+    'compatible$k': ( 'C_b_complement_domain_ell2_c_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('comp$bo',type,
+    'comp$bo': ( 'A_b_complement_domain_a_a_b_complement_domain_prod_prod_ell2_a_b_complement_domain_a_a_b_complement_domain_prod_prod_ell2_cblinfun_b_a_c_a_c_prod_b_complement_domain_prod_prod_prod_ell2_b_a_c_a_c_prod_b_complement_domain_prod_prod_prod_ell2_cblinfun_fun$' * 'C_a_c_prod_b_complement_domain_prod_b_prod_ell2_c_a_c_prod_b_complement_domain_prod_b_prod_ell2_cblinfun_a_b_complement_domain_a_a_b_complement_domain_prod_prod_ell2_a_b_complement_domain_a_a_b_complement_domain_prod_prod_ell2_cblinfun_fun$' ) > 'C_a_c_prod_b_complement_domain_prod_b_prod_ell2_c_a_c_prod_b_complement_domain_prod_b_prod_ell2_cblinfun_b_a_c_a_c_prod_b_complement_domain_prod_prod_prod_ell2_b_a_c_a_c_prod_b_complement_domain_prod_prod_prod_ell2_cblinfun_fun$' ).
+
+tff('equivalent_registers$i',type,
+    'equivalent_registers$i': ( 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'C_b_complement_domain_ell2_c_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('register_pair$f',type,
+    'register_pair$f': ( 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_a_b_complement_domain_prod_b_complement_domain_ell2_a_a_b_complement_domain_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > 'A_b_complement_domain_a_a_b_complement_domain_prod_b_complement_domain_prod_ell2_a_b_complement_domain_a_a_b_complement_domain_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('assoc$e',type,
+    'assoc$e': 'A_c_c_prod_prod_ell2_a_c_c_prod_prod_ell2_cblinfun_a_c_prod_c_prod_ell2_a_c_prod_c_prod_ell2_cblinfun_fun$' ).
+
+tff('id$h',type,
+    'id$h': 'C_ell2_c_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$' ).
+
+tff('compatible$bb',type,
+    'compatible$bb': ( 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('comp$r',type,
+    'comp$r': ( 'B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('iso_register$e',type,
+    'iso_register$e': 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' > $o ).
+
+tff('register_tensor$bc',type,
+    'register_tensor$bc': ( 'B_ell2_b_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' * 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$' ) > 'B_a_b_complement_domain_prod_ell2_b_a_b_complement_domain_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$' ).
+
+tff('inv_into$ar',type,
+    'inv_into$ar': ( 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_set$' * 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' ) > 'A_ell2_a_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' ).
+
+tff('compatible$af',type,
+    'compatible$af': ( 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('register_tensor$n',type,
+    'register_tensor$n': ( 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > 'C_a_a_c_prod_b_complement_domain_prod_prod_c_c_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_c_c_b_complement_domain_prod_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$' ).
+
+tff('register_tensor$ai',type,
+    'register_tensor$ai': ( 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'C_b_complement_domain_ell2_c_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > 'A_c_prod_b_complement_domain_c_b_complement_domain_prod_ell2_a_c_prod_b_complement_domain_c_b_complement_domain_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$' ).
+
+tff('register$z',type,
+    'register$z': 'C_c_prod_ell2_c_c_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$' > $o ).
+
+tff('iso_register$af',type,
+    'iso_register$af': 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' > $o ).
+
+tff('compatible$c',type,
+    'compatible$c': ( 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('register_pair$l',type,
+    'register_pair$l': ( 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_a_b_complement_domain_prod_b_complement_domain_ell2_a_a_b_complement_domain_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > 'A_a_a_b_complement_domain_prod_b_complement_domain_prod_ell2_a_a_a_b_complement_domain_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('equivalent_registers$b',type,
+    'equivalent_registers$b': ( 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('complement$n',type,
+    'complement$n': 'B_ell2_b_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$' > 'B_c_complement_domain_ell2_b_c_complement_domain_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$' ).
+
+tff('bij_betw$a',type,
+    'bij_betw$a': ( 'B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'B_ell2_b_ell2_cblinfun_set$' * 'B_ell2_b_ell2_cblinfun_set$' ) > $o ).
+
+tff('inv_into$ai',type,
+    'inv_into$ai': ( 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_set$' * 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' ) > 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' ).
+
+tff('complement$e',type,
+    'complement$e': 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' > 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('inv_into$h',type,
+    'inv_into$h': ( 'B_ell2_b_ell2_cblinfun_set$' * 'B_ell2_b_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$' ) > 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('fun_app$aq',type,
+    'fun_app$aq': ( 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' * 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$' ) > 'A_ell2_a_ell2_cblinfun$' ).
+
+tff('equivalent_registers$n',type,
+    'equivalent_registers$n': ( 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('assoc$n',type,
+    'assoc$n': 'C_a_prod_a_c_prod_b_complement_domain_prod_ell2_c_a_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' ).
+
+tff('iso_register$m',type,
+    'iso_register$m': 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$' > $o ).
+
+tff('complement$a',type,
+    'complement$a': 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' > 'C_a_a_c_prod_b_complement_domain_prod_prod_b_complement_domain_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('fun_app$ai',type,
+    'fun_app$ai': ( 'C_b_complement_domain_ell2_c_b_complement_domain_ell2_cblinfun_c_b_complement_domain_ell2_c_b_complement_domain_ell2_cblinfun_fun$' * 'C_b_complement_domain_ell2_c_b_complement_domain_ell2_cblinfun$' ) > 'C_b_complement_domain_ell2_c_b_complement_domain_ell2_cblinfun$' ).
+
+tff('assoc$k',type,
+    'assoc$k': 'A_c_prod_c_prod_ell2_a_c_prod_c_prod_ell2_cblinfun_a_c_c_prod_prod_ell2_a_c_c_prod_prod_ell2_cblinfun_fun$' ).
+
+tff('compatible$n',type,
+    'compatible$n': ( 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_a_b_complement_domain_prod_b_complement_domain_ell2_a_a_b_complement_domain_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('compatible$i',type,
+    'compatible$i': ( 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_c_prod_ell2_a_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('iso_register$k',type,
+    'iso_register$k': 'A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' > $o ).
+
+tff('aF$',type,
+    'aF$': 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun$' ).
+
+tff('comp$db',type,
+    'comp$db': ( 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' * 'A_ell2_a_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$' ) > 'A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' ).
+
+tff('comp$s',type,
+    'comp$s': ( 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$' ) > 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('compatible$ao',type,
+    'compatible$ao': ( 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('register$s',type,
+    'register$s': 'B_ell2_b_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$' > $o ).
+
+tff('compatible$z',type,
+    'compatible$z': ( 'A_ell2_a_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$' * 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$' ) > $o ).
+
+tff('bij_betw$m',type,
+    'bij_betw$m': ( 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_set$' * 'B_ell2_b_ell2_cblinfun_set$' ) > $o ).
+
+tff('iso_register$s',type,
+    'iso_register$s': 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_c_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$' > $o ).
+
+tff('register_pair$bc',type,
+    'register_pair$bc': ( 'A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' * 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' ) > 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' ).
+
+tff('fun_app$al',type,
+    'fun_app$al': ( 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' * 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun$' ) > 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun$' ).
+
+tff('inv_into$ao',type,
+    'inv_into$ao': ( 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_set$' * 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' ) > 'A_ell2_a_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$' ).
+
+tff('register_tensor$ag',type,
+    'register_tensor$ag': ( 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > 'A_c_prod_b_complement_domain_a_b_complement_domain_prod_ell2_a_c_prod_b_complement_domain_a_b_complement_domain_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$' ).
+
+tff('register_pair$ax',type,
+    'register_pair$ax': ( 'C_ell2_c_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' * 'C_a_complement_domain_ell2_c_a_complement_domain_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' * 'C_c_a_complement_domain_prod_ell2_c_c_a_complement_domain_prod_ell2_cblinfun$' ) > 'A_ell2_a_ell2_cblinfun$' ).
+
+tff('comp$dk',type,
+    'comp$dk': ( 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'B_ell2_b_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' ) > 'B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('default$c',type,
+    'default$c': 'A_c_prod$' ).
+
+tff('register_tensor$ak',type,
+    'register_tensor$ak': ( 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > 'A_b_complement_domain_a_c_prod_b_complement_domain_prod_ell2_a_b_complement_domain_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$' ).
+
+tff('t2$',type,
+    't2$': 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun$' ).
+
+tff('fun_app$h',type,
+    'fun_app$h': ( 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' * 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun$' ) > 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun$' ).
+
+tff('id$e',type,
+    'id$e': 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' ).
+
+tff('comp$bx',type,
+    'comp$bx': ( 'B_b_prod_ell2_b_b_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_c_prod_ell2_a_c_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$' ) > 'A_c_prod_ell2_a_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('compatible$ad',type,
+    'compatible$ad': ( 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('equivalent_registers$ab',type,
+    'equivalent_registers$ab': ( 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('comp$ci',type,
+    'comp$ci': ( 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_a_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_fun$' ) > 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('comp$by',type,
+    'comp$by': ( 'A_c_prod_ell2_a_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_c_prod_ell2_a_c_prod_ell2_cblinfun_a_c_prod_ell2_a_c_prod_ell2_cblinfun_fun$' ) > 'A_c_prod_ell2_a_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('equivalent_registers$a',type,
+    'equivalent_registers$a': ( 'A_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'C_b_complement_domain_ell2_c_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('iso_register$l',type,
+    'iso_register$l': 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$' > $o ).
+
+tff('register_pair$ai',type,
+    'register_pair$ai': ( 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'C_c_prod_ell2_c_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > 'A_c_c_prod_prod_ell2_a_c_c_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('inv_into$e',type,
+    'inv_into$e': ( 'B_ell2_b_ell2_cblinfun_set$' * 'B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$' ) > 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('register_tensor$bo',type,
+    'register_tensor$bo': ( 'A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' * 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_a_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_fun$' ) > 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$' ).
+
+tff('equivalent_registers$bb',type,
+    'equivalent_registers$bb': ( 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_c_prod_ell2_a_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('comp$bn',type,
+    'comp$bn': ( 'A_a_b_complement_domain_prod_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_a_b_complement_domain_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_b_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_b_prod_ell2_cblinfun_fun$' * 'B_c_a_c_prod_b_complement_domain_prod_prod_ell2_b_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_a_b_complement_domain_prod_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_a_b_complement_domain_prod_ell2_cblinfun_fun$' ) > 'B_c_a_c_prod_b_complement_domain_prod_prod_ell2_b_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_b_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_b_prod_ell2_cblinfun_fun$' ).
+
+tff('top$b',type,
+    'top$b': 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_set$' ).
+
+tff('equivalent_registers$u',type,
+    'equivalent_registers$u': ( 'C_b_complement_domain_ell2_c_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'C_b_complement_domain_ell2_c_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('iso_register$x',type,
+    'iso_register$x': 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$' > $o ).
+
+tff('register_pair$ao',type,
+    'register_pair$ao': ( 'A_a_prod_ell2_a_a_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > 'A_a_prod_c_prod_ell2_a_a_prod_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('inv_into$x',type,
+    'inv_into$x': ( 'A_a_b_complement_domain_prod_c_c_b_complement_domain_prod_prod_ell2_a_a_b_complement_domain_prod_c_c_b_complement_domain_prod_prod_ell2_cblinfun_set$' * 'A_a_b_complement_domain_prod_c_c_b_complement_domain_prod_prod_ell2_a_a_b_complement_domain_prod_c_c_b_complement_domain_prod_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$' ) > 'B_b_prod_ell2_b_b_prod_ell2_cblinfun_a_a_b_complement_domain_prod_c_c_b_complement_domain_prod_prod_ell2_a_a_b_complement_domain_prod_c_c_b_complement_domain_prod_prod_ell2_cblinfun_fun$' ).
+
+tff('register_pair$i',type,
+    'register_pair$i': ( 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('compatible$ax',type,
+    'compatible$ax': ( 'A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' * 'A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' ) > $o ).
+
+tff('swap$e',type,
+    'swap$e': 'A_a_c_prod_b_complement_domain_prod_c_prod_ell2_a_a_c_prod_b_complement_domain_prod_c_prod_ell2_cblinfun_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' ).
+
+tff('iso_register$f',type,
+    'iso_register$f': 'B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$' > $o ).
+
+tff('tensor_op$o',type,
+    'tensor_op$o': ( 'C_ell2_c_ell2_cblinfun$' * 'A_ell2_a_ell2_cblinfun$' ) > 'C_a_prod_ell2_c_a_prod_ell2_cblinfun$' ).
+
+tff('compatible$at',type,
+    'compatible$at': ( 'B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$' * 'B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$' ) > $o ).
+
+tff('tensor_op$m',type,
+    'tensor_op$m': ( 'C_ell2_c_ell2_cblinfun$' * 'C_ell2_c_ell2_cblinfun$' ) > 'C_c_prod_ell2_c_c_prod_ell2_cblinfun$' ).
+
+tff('inv_into$am',type,
+    'inv_into$am': ( 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_set$' * 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_c_a_c_prod_b_complement_domain_prod_a_prod_ell2_c_a_c_prod_b_complement_domain_prod_a_prod_ell2_cblinfun_fun$' ) > 'C_a_c_prod_b_complement_domain_prod_a_prod_ell2_c_a_c_prod_b_complement_domain_prod_a_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' ).
+
+tff('register_tensor$au',type,
+    'register_tensor$au': ( 'B_ell2_b_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' * 'B_ell2_b_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' ) > 'B_b_prod_ell2_b_b_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_a_c_a_c_prod_b_complement_domain_prod_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_a_c_a_c_prod_b_complement_domain_prod_prod_prod_ell2_cblinfun_fun$' ).
+
+tff('complement$r',type,
+    'complement$r': 'C_ell2_c_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$' > 'C_c_complement_domain_ell2_c_c_complement_domain_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$' ).
+
+tff('top$j',type,
+    'top$j': 'A_a_b_complement_domain_prod_c_c_b_complement_domain_prod_prod_ell2_a_a_b_complement_domain_prod_c_c_b_complement_domain_prod_prod_ell2_cblinfun_set$' ).
+
+tff('fun_app$an',type,
+    'fun_app$an': ( 'A_c_prod_ell2_a_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_c_prod_ell2_a_c_prod_ell2_cblinfun$' ) > 'B_ell2_b_ell2_cblinfun$' ).
+
+tff('comp$dg',type,
+    'comp$dg': ( 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'B_ell2_b_ell2_cblinfun_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' ) > 'B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('regular_register$a',type,
+    'regular_register$a': 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' > $o ).
+
+tff('register_pair$bf',type,
+    'register_pair$bf': ( 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > 'C_a_c_prod_b_complement_domain_prod_a_prod_ell2_c_a_c_prod_b_complement_domain_prod_a_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('fun_app$ag',type,
+    'fun_app$ag': ( 'C_b_complement_domain_ell2_c_b_complement_domain_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$' * 'C_b_complement_domain_ell2_c_b_complement_domain_ell2_cblinfun$' ) > 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun$' ).
+
+tff('ket$a',type,
+    'ket$a': 'A$' > 'A_ell2$' ).
+
+tff('comp$u',type,
+    'comp$u': ( 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' ) > 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('bij_betw$h',type,
+    'bij_betw$h': ( 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_set$' * 'B_ell2_b_ell2_cblinfun_set$' ) > $o ).
+
+tff('register_pair$ap',type,
+    'register_pair$ap': ( 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > 'A_a_prod_ell2_a_a_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('compatible$g',type,
+    'compatible$g': ( 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'C_b_complement_domain_ell2_c_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('register_pair$o',type,
+    'register_pair$o': ( 'A_a_b_complement_domain_prod_a_c_a_c_prod_b_complement_domain_prod_prod_complement_domain_ell2_a_a_b_complement_domain_prod_a_c_a_c_prod_b_complement_domain_prod_prod_complement_domain_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' * 'B_a_a_b_complement_domain_prod_complement_domain_ell2_b_a_a_b_complement_domain_prod_complement_domain_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' ) > 'A_a_b_complement_domain_prod_a_c_a_c_prod_b_complement_domain_prod_prod_complement_domain_b_a_a_b_complement_domain_prod_complement_domain_prod_ell2_a_a_b_complement_domain_prod_a_c_a_c_prod_b_complement_domain_prod_prod_complement_domain_b_a_a_b_complement_domain_prod_complement_domain_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' ).
+
+tff('fun_app$j',type,
+    'fun_app$j': ( 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun$' ) > 'B_ell2_b_ell2_cblinfun$' ).
+
+tff('iso_register$v',type,
+    'iso_register$v': 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' > $o ).
+
+tff('top$h',type,
+    'top$h': 'C_c_b_complement_domain_prod_c_c_b_complement_domain_prod_prod_ell2_c_c_b_complement_domain_prod_c_c_b_complement_domain_prod_prod_ell2_cblinfun_set$' ).
+
+tff('register$',type,
+    'register$': 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' > $o ).
+
+tff('register_tensor$bh',type,
+    'register_tensor$bh': ( 'A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' * 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_c_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$' ) > 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' ).
+
+tff('comp$as',type,
+    'comp$as': ( 'A_c_a_c_prod_b_complement_domain_prod_prod_c_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_c_a_c_prod_b_complement_domain_prod_c_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_c_prod_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_c_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_c_prod_ell2_cblinfun_fun$' ) > 'A_c_a_c_prod_b_complement_domain_prod_c_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_c_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('tensor_op$b',type,
+    'tensor_op$b': ( 'B_ell2_b_ell2_cblinfun$' * 'B_c_complement_domain_ell2_b_c_complement_domain_ell2_cblinfun$' ) > 'B_b_c_complement_domain_prod_ell2_b_b_c_complement_domain_prod_ell2_cblinfun$' ).
+
+tff('inv_into$s',type,
+    'inv_into$s': ( 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_set$' * 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$' ) > 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$' ).
+
+tff('member$d',type,
+    'member$d': ( 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun$' * 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_set$' ) > $o ).
+
+tff('register_tensor$aq',type,
+    'register_tensor$aq': ( 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$' ) > 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_a_b_complement_domain_prod_ell2_b_a_b_complement_domain_prod_ell2_cblinfun_fun$' ).
+
+tff('bij_betw$g',type,
+    'bij_betw$g': ( 'B_ell2_b_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$' * 'B_ell2_b_ell2_cblinfun_set$' * 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_set$' ) > $o ).
+
+tff('complements$h',type,
+    'complements$h': ( 'A_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'C_c_a_a_c_prod_b_complement_domain_prod_prod_b_complement_domain_prod_ell2_c_c_a_a_c_prod_b_complement_domain_prod_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('compatible$ak',type,
+    'compatible$ak': ( 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_c_prod_ell2_a_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('bij_betw$y',type,
+    'bij_betw$y': ( 'A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' * 'A_ell2_a_ell2_cblinfun_set$' * 'A_ell2_a_ell2_cblinfun_set$' ) > $o ).
+
+tff('equivalent_registers$r',type,
+    'equivalent_registers$r': ( 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('register_tensor$bb',type,
+    'register_tensor$bb': ( 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > 'C_a_c_prod_b_complement_domain_prod_c_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_c_prod_b_complement_domain_prod_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$' ).
+
+tff('equivalent_registers$g',type,
+    'equivalent_registers$g': ( 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('butterfly$',type,
+    'butterfly$': ( 'B_ell2$' * 'B_ell2$' ) > 'B_ell2_b_ell2_cblinfun$' ).
+
+tff('equivalent_registers$ao',type,
+    'equivalent_registers$ao': ( 'A_a_b_complement_domain_c_prod_prod_ell2_a_a_b_complement_domain_c_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_a_b_complement_domain_prod_c_prod_ell2_a_a_b_complement_domain_prod_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('member$e',type,
+    'member$e': ( 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun$' * 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_set$' ) > $o ).
+
+tff('inv_into$b',type,
+    'inv_into$b': ( 'B_ell2_b_ell2_cblinfun_set$' * 'B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > 'B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('comp$ak',type,
+    'comp$ak': ( 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' ) > 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('complement$p',type,
+    'complement$p': 'A_ell2_a_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$' > 'A_c_complement_domain_ell2_a_c_complement_domain_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$' ).
+
+tff('bij_betw$o',type,
+    'bij_betw$o': ( 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$' * 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_set$' * 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_set$' ) > $o ).
+
+tff('fun_app$at',type,
+    'fun_app$at': ( 'A_b_complement_domain_a_prod_ell2_a_b_complement_domain_a_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$' * 'A_b_complement_domain_a_prod_ell2_a_b_complement_domain_a_prod_ell2_cblinfun$' ) > 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun$' ).
+
+tff('equivalent_registers$f',type,
+    'equivalent_registers$f': ( 'A_c_prod_ell2_a_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('complement$h',type,
+    'complement$h': 'B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$' > 'B_a_a_b_complement_domain_prod_complement_domain_ell2_b_a_a_b_complement_domain_prod_complement_domain_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$' ).
+
+tff('register_tensor$bn',type,
+    'register_tensor$bn': ( 'A_ell2_a_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$' * 'C_ell2_c_ell2_cblinfun_a_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$' ) > 'A_c_prod_ell2_a_c_prod_ell2_cblinfun_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' ).
+
+tff('register_tensor$d',type,
+    'register_tensor$d': ( 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > 'A_a_b_complement_domain_prod_c_c_b_complement_domain_prod_prod_ell2_a_a_b_complement_domain_prod_c_c_b_complement_domain_prod_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$' ).
+
+tff('register_pair$c',type,
+    'register_pair$c': ( 'A_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'C_a_a_c_prod_b_complement_domain_prod_prod_b_complement_domain_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > 'A_a_c_prod_b_complement_domain_prod_c_a_a_c_prod_b_complement_domain_prod_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_c_a_a_c_prod_b_complement_domain_prod_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('iso_register$r',type,
+    'iso_register$r': 'B_ell2_b_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' > $o ).
+
+tff('register$f',type,
+    'register$f': 'C_a_c_prod_b_complement_domain_prod_a_b_complement_domain_complement_domain_ell2_c_a_c_prod_b_complement_domain_prod_a_b_complement_domain_complement_domain_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$' > $o ).
+
+tff('register_tensor$a',type,
+    'register_tensor$a': ( 'B_ell2_b_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$' * 'B_ell2_b_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$' ) > 'B_b_prod_ell2_b_b_prod_ell2_cblinfun_c_c_b_complement_domain_prod_c_c_b_complement_domain_prod_prod_ell2_c_c_b_complement_domain_prod_c_c_b_complement_domain_prod_prod_ell2_cblinfun_fun$' ).
+
+tff('complement$k',type,
+    'complement$k': 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' > 'C_a_c_prod_b_complement_domain_prod_b_complement_domain_ell2_c_a_c_prod_b_complement_domain_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('inv_into$af',type,
+    'inv_into$af': ( 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_set$' * 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$' ) > 'A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' ).
+
+tff('register_pair$ad',type,
+    'register_pair$ad': ( 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > 'A_b_complement_domain_c_prod_ell2_a_b_complement_domain_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('tensor_op$a',type,
+    'tensor_op$a': ( 'B_ell2_b_ell2_cblinfun$' * 'B_a_complement_domain_ell2_b_a_complement_domain_ell2_cblinfun$' ) > 'B_b_a_complement_domain_prod_ell2_b_b_a_complement_domain_prod_ell2_cblinfun$' ).
+
+tff('assoc$o',type,
+    'assoc$o': 'A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' ).
+
+tff('comp$au',type,
+    'comp$au': ( 'A_c_prod_a_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_prod_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_c_a_a_c_prod_b_complement_domain_prod_prod_prod_ell2_a_c_a_a_c_prod_b_complement_domain_prod_prod_prod_ell2_cblinfun_a_c_prod_a_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_prod_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' ) > 'A_c_a_a_c_prod_b_complement_domain_prod_prod_prod_ell2_a_c_a_a_c_prod_b_complement_domain_prod_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('swap$b',type,
+    'swap$b': 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_a_prod_ell2_a_b_complement_domain_a_prod_ell2_cblinfun_fun$' ).
+
+tff('comp$cf',type,
+    'comp$cf': ( 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_c_prod_ell2_a_c_prod_ell2_cblinfun_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' ) > 'A_c_prod_ell2_a_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('bij_betw$d',type,
+    'bij_betw$d': ( 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_set$' * 'B_ell2_b_ell2_cblinfun_set$' ) > $o ).
+
+tff('register_tensor$j',type,
+    'register_tensor$j': ( 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > 'C_c_b_complement_domain_prod_c_a_a_c_prod_b_complement_domain_prod_prod_prod_ell2_c_c_b_complement_domain_prod_c_a_a_c_prod_b_complement_domain_prod_prod_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$' ).
+
+tff('register$ag',type,
+    'register$ag': 'C_a_c_prod_b_complement_domain_prod_a_prod_ell2_c_a_c_prod_b_complement_domain_prod_a_prod_ell2_cblinfun_a_b_complement_domain_b_prod_ell2_a_b_complement_domain_b_prod_ell2_cblinfun_fun$' > $o ).
+
+tff('bij_betw$b',type,
+    'bij_betw$b': ( 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_set$' * 'B_ell2_b_ell2_cblinfun_set$' ) > $o ).
+
+tff('compatible$s',type,
+    'compatible$s': ( 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_a_b_complement_domain_prod_b_complement_domain_ell2_a_a_b_complement_domain_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('fun_app$bc',type,
+    'fun_app$bc': ( 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_bool_fun$' * 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun$' ) > $o ).
+
+tff('register_tensor$k',type,
+    'register_tensor$k': ( 'B_ell2_b_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$' * 'B_ell2_b_ell2_cblinfun_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' ) > 'B_b_prod_ell2_b_b_prod_ell2_cblinfun_c_c_b_complement_domain_prod_c_a_a_c_prod_b_complement_domain_prod_prod_prod_ell2_c_c_b_complement_domain_prod_c_a_a_c_prod_b_complement_domain_prod_prod_prod_ell2_cblinfun_fun$' ).
+
+tff('iso_register$u',type,
+    'iso_register$u': 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' > $o ).
+
+tff('fun_app$b',type,
+    'fun_app$b': ( 'B_ell2_b_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' * 'B_ell2_b_ell2_cblinfun$' ) > 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun$' ).
+
+tff('collect$a',type,
+    'collect$a': 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_bool_fun$' > 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_set$' ).
+
+tff('register$aj',type,
+    'register$aj': 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_c_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$' > $o ).
+
+tff('swap$a',type,
+    'swap$a': 'A_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_c_prod_b_complement_domain_a_prod_ell2_a_c_prod_b_complement_domain_a_prod_ell2_cblinfun_fun$' ).
+
+tff('regular_register$i',type,
+    'regular_register$i': 'A_c_prod_ell2_a_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' > $o ).
+
+tff('inv_into$l',type,
+    'inv_into$l': ( 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_set$' * 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > 'B_ell2_b_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$' ).
+
+tff('assoc$j',type,
+    'assoc$j': 'A_c_a_c_prod_b_complement_domain_prod_prod_c_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_c_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_c_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_c_prod_prod_ell2_cblinfun_fun$' ).
+
+tff('comp$ai',type,
+    'comp$ai': ( 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$' ) > 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('compatible$h',type,
+    'compatible$h': ( 'C_a_c_prod_b_complement_domain_prod_a_b_complement_domain_complement_domain_ell2_c_a_c_prod_b_complement_domain_prod_a_b_complement_domain_complement_domain_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$' * 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$' ) > $o ).
+
+tff('register_pair$ac',type,
+    'register_pair$ac': ( 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_b_complement_domain_c_prod_ell2_a_b_complement_domain_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > 'A_a_b_complement_domain_c_prod_prod_ell2_a_a_b_complement_domain_c_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('inv_into$ac',type,
+    'inv_into$ac': ( 'C_a_a_c_prod_b_complement_domain_prod_prod_c_c_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_c_c_b_complement_domain_prod_prod_ell2_cblinfun_set$' * 'C_a_a_c_prod_b_complement_domain_prod_prod_c_c_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_c_c_b_complement_domain_prod_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$' ) > 'B_b_prod_ell2_b_b_prod_ell2_cblinfun_c_a_a_c_prod_b_complement_domain_prod_prod_c_c_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_c_c_b_complement_domain_prod_prod_ell2_cblinfun_fun$' ).
+
+tff('register_pair$ab',type,
+    'register_pair$ab': ( 'A_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > 'A_a_c_prod_b_complement_domain_prod_c_prod_ell2_a_a_c_prod_b_complement_domain_prod_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('register$v',type,
+    'register$v': 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$' > $o ).
+
+tff('inv_into$n',type,
+    'inv_into$n': ( 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_set$' * 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$' ) > 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' ).
+
+tff('comp$bz',type,
+    'comp$bz': ( 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_c_prod_ell2_a_c_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$' ) > 'A_c_prod_ell2_a_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('fun_app$v',type,
+    'fun_app$v': ( 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'C_ell2_c_ell2_cblinfun$' ) > 'B_ell2_b_ell2_cblinfun$' ).
+
+tff('register_pair$ay',type,
+    'register_pair$ay': ( 'C_ell2_c_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$' * 'C_c_complement_domain_ell2_c_c_complement_domain_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$' * 'C_c_c_complement_domain_prod_ell2_c_c_c_complement_domain_prod_ell2_cblinfun$' ) > 'C_ell2_c_ell2_cblinfun$' ).
+
+tff('register_pair$e',type,
+    'register_pair$e': ( 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_a_c_prod_b_complement_domain_prod_b_complement_domain_ell2_a_a_c_prod_b_complement_domain_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > 'A_c_prod_b_complement_domain_a_a_c_prod_b_complement_domain_prod_b_complement_domain_prod_ell2_a_c_prod_b_complement_domain_a_a_c_prod_b_complement_domain_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('iso_register$c',type,
+    'iso_register$c': 'A_c_prod_ell2_a_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' > $o ).
+
+tff('comp$m',type,
+    'comp$m': ( 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$' ) > 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('inv_into$ak',type,
+    'inv_into$ak': ( 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_set$' * 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_a_c_prod_b_complement_domain_prod_c_prod_ell2_a_a_c_prod_b_complement_domain_prod_c_prod_ell2_cblinfun_fun$' ) > 'A_a_c_prod_b_complement_domain_prod_c_prod_ell2_a_a_c_prod_b_complement_domain_prod_c_prod_ell2_cblinfun_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' ).
+
+tff('register_pair$as',type,
+    'register_pair$as': ( 'B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'B_b_complement_domain_ell2_b_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'B_b_b_complement_domain_prod_ell2_b_b_b_complement_domain_prod_ell2_cblinfun$' ) > 'B_ell2_b_ell2_cblinfun$' ).
+
+tff('equivalent_registers$ap',type,
+    'equivalent_registers$ap': ( 'A_c_a_c_prod_b_complement_domain_prod_c_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_c_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_c_a_c_prod_b_complement_domain_prod_prod_c_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('compatible$r',type,
+    'compatible$r': ( 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_a_c_prod_b_complement_domain_prod_b_complement_domain_ell2_a_a_c_prod_b_complement_domain_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('comp$cs',type,
+    'comp$cs': ( 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_a_c_prod_b_complement_domain_prod_c_prod_ell2_a_a_c_prod_b_complement_domain_prod_c_prod_ell2_cblinfun_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' ) > 'A_a_c_prod_b_complement_domain_prod_c_prod_ell2_a_a_c_prod_b_complement_domain_prod_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('compatible$p',type,
+    'compatible$p': ( 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('tensor_op$j',type,
+    'tensor_op$j': ( 'A_ell2_a_ell2_cblinfun$' * 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun$' ) > 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun$' ).
+
+tff('assoc$m',type,
+    'assoc$m': 'A_a_prod_c_prod_ell2_a_a_prod_c_prod_ell2_cblinfun_a_a_c_prod_prod_ell2_a_a_c_prod_prod_ell2_cblinfun_fun$' ).
+
+tff('inv_into$w',type,
+    'inv_into$w': ( 'C_c_b_complement_domain_prod_a_a_b_complement_domain_prod_prod_ell2_c_c_b_complement_domain_prod_a_a_b_complement_domain_prod_prod_ell2_cblinfun_set$' * 'C_c_b_complement_domain_prod_a_a_b_complement_domain_prod_prod_ell2_c_c_b_complement_domain_prod_a_a_b_complement_domain_prod_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$' ) > 'B_b_prod_ell2_b_b_prod_ell2_cblinfun_c_c_b_complement_domain_prod_a_a_b_complement_domain_prod_prod_ell2_c_c_b_complement_domain_prod_a_a_b_complement_domain_prod_prod_ell2_cblinfun_fun$' ).
+
+tff('collect$d',type,
+    'collect$d': 'B_ell2_b_ell2_cblinfun_bool_fun$' > 'B_ell2_b_ell2_cblinfun_set$' ).
+
+tff('register$y',type,
+    'register$y': 'C_b_complement_domain_ell2_c_b_complement_domain_ell2_cblinfun_c_b_complement_domain_ell2_c_b_complement_domain_ell2_cblinfun_fun$' > $o ).
+
+tff('equivalent_registers$bc',type,
+    'equivalent_registers$bc': ( 'A_c_prod_ell2_a_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('register_pair$',type,
+    'register_pair$': ( 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > 'A_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('top$t',type,
+    'top$t': 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_bool_fun$' ).
+
+tff('register$ap',type,
+    'register$ap': 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_a_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_fun$' > $o ).
+
+tff('default$a',type,
+    'default$a': 'A$' ).
+
+tff('comp$cl',type,
+    'comp$cl': ( 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$' ) > 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('equivalent_registers$l',type,
+    'equivalent_registers$l': ( 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('comp$dj',type,
+    'comp$dj': ( 'A_ell2_a_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' * 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' ) > 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' ).
+
+tff('equivalent_registers$h',type,
+    'equivalent_registers$h': ( 'A_c_prod_ell2_a_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('iso_register$t',type,
+    'iso_register$t': 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' > $o ).
+
+tff('equivalent_registers$x',type,
+    'equivalent_registers$x': ( 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('equivalent_registers$ak',type,
+    'equivalent_registers$ak': ( 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('compatible$aj',type,
+    'compatible$aj': ( 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('compatible$w',type,
+    'compatible$w': ( 'A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' * 'C_ell2_c_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' ) > $o ).
+
+tff('complements$u',type,
+    'complements$u': ( 'A_a_prod_ell2_a_a_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$' * 'A_b_complement_domain_a_b_complement_domain_prod_ell2_a_b_complement_domain_a_b_complement_domain_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$' ) > $o ).
+
+tff('comp$f',type,
+    'comp$f': ( 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_c_prod_ell2_a_c_prod_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$' ) > 'A_c_prod_ell2_a_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('regular_register$',type,
+    'regular_register$': 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' > $o ).
+
+tff('top$u',type,
+    'top$u': 'B_ell2_b_ell2_cblinfun_bool_fun$' ).
+
+tff('swap$h',type,
+    'swap$h': 'C_a_c_prod_b_complement_domain_prod_a_prod_ell2_c_a_c_prod_b_complement_domain_prod_a_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' ).
+
+tff('fun_app$d',type,
+    'fun_app$d': ( 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$' ) > 'B_ell2_b_ell2_cblinfun$' ).
+
+tff('inv_into$',type,
+    'inv_into$': ( 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_set$' * 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > 'B_ell2_b_ell2_cblinfun_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' ).
+
+tff('equivalent_registers$t',type,
+    'equivalent_registers$t': ( 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('iso_register$p',type,
+    'iso_register$p': 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$' > $o ).
+
+tff('complements$n',type,
+    'complements$n': ( 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$' * 'C_a_c_prod_b_complement_domain_prod_a_b_complement_domain_complement_domain_ell2_c_a_c_prod_b_complement_domain_prod_a_b_complement_domain_complement_domain_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$' ) > $o ).
+
+tff('comp$dm',type,
+    'comp$dm': ( 'B_ell2_b_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$' * 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > 'C_ell2_c_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$' ).
+
+tff('ket$b',type,
+    'ket$b': 'C$' > 'C_ell2$' ).
+
+tff('compatible$q',type,
+    'compatible$q': ( 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'C_a_a_c_prod_b_complement_domain_prod_prod_b_complement_domain_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('fun_app$g',type,
+    'fun_app$g': ( 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun$' ) > 'B_ell2_b_ell2_cblinfun$' ).
+
+tff('compatible$aa',type,
+    'compatible$aa': ( 'A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' * 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' ) > $o ).
+
+tff('equivalent_registers$av',type,
+    'equivalent_registers$av': ( 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_c_prod_ell2_a_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('top$',type,
+    'top$': 'A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_set$' ).
+
+tff('register_tensor$at',type,
+    'register_tensor$at': ( 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' * 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' ) > 'A_a_b_complement_domain_prod_a_a_b_complement_domain_prod_prod_ell2_a_a_b_complement_domain_prod_a_a_b_complement_domain_prod_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_a_c_a_c_prod_b_complement_domain_prod_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_a_c_a_c_prod_b_complement_domain_prod_prod_prod_ell2_cblinfun_fun$' ).
+
+tff('comp$az',type,
+    'comp$az': ( 'A_c_c_prod_prod_ell2_a_c_c_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_c_prod_c_prod_ell2_a_c_prod_c_prod_ell2_cblinfun_a_c_c_prod_prod_ell2_a_c_c_prod_prod_ell2_cblinfun_fun$' ) > 'A_c_prod_c_prod_ell2_a_c_prod_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('fun_app$m',type,
+    'fun_app$m': ( 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$' * 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$' ) > 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$' ).
+
+tff('bij_betw$u',type,
+    'bij_betw$u': ( 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' * 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_set$' * 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_set$' ) > $o ).
+
+tff('iso_register$n',type,
+    'iso_register$n': 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$' > $o ).
+
+tff('register_pair$j',type,
+    'register_pair$j': ( 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'C_a_a_c_prod_b_complement_domain_prod_prod_b_complement_domain_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > 'C_c_a_a_c_prod_b_complement_domain_prod_prod_b_complement_domain_prod_ell2_c_c_a_a_c_prod_b_complement_domain_prod_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('inv_into$j',type,
+    'inv_into$j': ( 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_set$' * 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > 'B_ell2_b_ell2_cblinfun_c_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$' ).
+
+tff('register_pair$a',type,
+    'register_pair$a': ( 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > 'A_c_prod_ell2_a_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('comp$be',type,
+    'comp$be': ( 'B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > 'A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('register_pair$q',type,
+    'register_pair$q': ( 'C_ell2_c_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$' * 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$' ) > 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$' ).
+
+tff('fun_app$w',type,
+    'fun_app$w': ( 'C_a_prod_ell2_c_a_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$' * 'C_a_prod_ell2_c_a_prod_ell2_cblinfun$' ) > 'B_b_prod_ell2_b_b_prod_ell2_cblinfun$' ).
+
+tff('compatible$am',type,
+    'compatible$am': ( 'A_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('equivalent_registers$az',type,
+    'equivalent_registers$az': ( 'A_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('tensor_op$f',type,
+    'tensor_op$f': ( 'C_ell2_c_ell2_cblinfun$' * 'C_b_complement_domain_ell2_c_b_complement_domain_ell2_cblinfun$' ) > 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$' ).
+
+tff('register_pair$n',type,
+    'register_pair$n': ( 'A_c_prod_ell2_a_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > 'A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('inv_into$a',type,
+    'inv_into$a': ( 'A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_set$' * 'A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > 'B_ell2_b_ell2_cblinfun_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$' ).
+
+tff('t1$',type,
+    't1$': 'A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun$' ).
+
+tff('butterfly$c',type,
+    'butterfly$c': ( 'A_c_prod_ell2$' * 'A_c_prod_ell2$' ) > 'A_c_prod_ell2_a_c_prod_ell2_cblinfun$' ).
+
+tff('equivalent_registers$ax',type,
+    'equivalent_registers$ax': ( 'A_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_c_prod_ell2_a_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('tensor_op$i',type,
+    'tensor_op$i': ( 'A_c_prod_ell2_a_c_prod_ell2_cblinfun$' * 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun$' ) > 'A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun$' ).
+
+tff('register_pair$ah',type,
+    'register_pair$ah': ( 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > 'A_c_a_c_prod_b_complement_domain_prod_prod_c_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('complements$a',type,
+    'complements$a': ( 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('fun_app$p',type,
+    'fun_app$p': ( 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun$' ) > 'B_ell2_b_ell2_cblinfun$' ).
+
+tff('register$as',type,
+    'register$as': 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_c_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$' > $o ).
+
+tff('equivalent_registers$al',type,
+    'equivalent_registers$al': ( 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('inv_into$v',type,
+    'inv_into$v': ( 'C_c_b_complement_domain_prod_c_c_b_complement_domain_prod_prod_ell2_c_c_b_complement_domain_prod_c_c_b_complement_domain_prod_prod_ell2_cblinfun_set$' * 'C_c_b_complement_domain_prod_c_c_b_complement_domain_prod_prod_ell2_c_c_b_complement_domain_prod_c_c_b_complement_domain_prod_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$' ) > 'B_b_prod_ell2_b_b_prod_ell2_cblinfun_c_c_b_complement_domain_prod_c_c_b_complement_domain_prod_prod_ell2_c_c_b_complement_domain_prod_c_c_b_complement_domain_prod_prod_ell2_cblinfun_fun$' ).
+
+tff('comp$al',type,
+    'comp$al': ( 'B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('register$an',type,
+    'register$an': 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$' > $o ).
+
+tff('top$k',type,
+    'top$k': 'A_a_b_complement_domain_prod_a_a_b_complement_domain_prod_prod_ell2_a_a_b_complement_domain_prod_a_a_b_complement_domain_prod_prod_ell2_cblinfun_set$' ).
+
+tff('register_tensor$ay',type,
+    'register_tensor$ay': ( 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' ) > 'A_b_complement_domain_a_a_b_complement_domain_prod_prod_ell2_a_b_complement_domain_a_a_b_complement_domain_prod_prod_ell2_cblinfun_b_a_c_a_c_prod_b_complement_domain_prod_prod_prod_ell2_b_a_c_a_c_prod_b_complement_domain_prod_prod_prod_ell2_cblinfun_fun$' ).
+
+tff('bij_betw$k',type,
+    'bij_betw$k': ( 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$' * 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_set$' * 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_set$' ) > $o ).
+
+tff('fun_app$ax',type,
+    'fun_app$ax': ( 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_c_b_complement_domain_c_prod_ell2_c_b_complement_domain_c_prod_ell2_cblinfun_fun$' * 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$' ) > 'C_b_complement_domain_c_prod_ell2_c_b_complement_domain_c_prod_ell2_cblinfun$' ).
+
+tff('iso_register$y',type,
+    'iso_register$y': 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_c_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$' > $o ).
+
+tff('iso_register$i',type,
+    'iso_register$i': 'B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' > $o ).
+
+tff('fun_app$af',type,
+    'fun_app$af': ( 'C_ell2_c_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' * 'C_ell2_c_ell2_cblinfun$' ) > 'A_ell2_a_ell2_cblinfun$' ).
+
+tff('complements$c',type,
+    'complements$c': ( 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('register_pair$r',type,
+    'register_pair$r': ( 'A_ell2_a_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$' * 'C_ell2_c_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$' ) > 'A_c_prod_ell2_a_c_prod_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$' ).
+
+tff('comp$cc',type,
+    'comp$cc': ( 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'C_ell2_c_ell2_cblinfun_a_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_fun$' ) > 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('register_tensor$ab',type,
+    'register_tensor$ab': ( 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > 'A_b_complement_domain_a_b_complement_domain_prod_ell2_a_b_complement_domain_a_b_complement_domain_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$' ).
+
+tff('complement$j',type,
+    'complement$j': 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$' > 'C_a_c_prod_b_complement_domain_prod_a_b_complement_domain_complement_domain_ell2_c_a_c_prod_b_complement_domain_prod_a_b_complement_domain_complement_domain_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$' ).
+
+tff('comp$cz',type,
+    'comp$cz': ( 'A_ell2_a_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$' * 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' ) > 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$' ).
+
+tff('comp$bf',type,
+    'comp$bf': ( 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$' ) > 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('fun_app$au',type,
+    'fun_app$au': ( 'C_b_complement_domain_c_prod_ell2_c_b_complement_domain_c_prod_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$' * 'C_b_complement_domain_c_prod_ell2_c_b_complement_domain_c_prod_ell2_cblinfun$' ) > 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$' ).
+
+tff('register_pair$al',type,
+    'register_pair$al': ( 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > 'A_c_a_a_c_prod_b_complement_domain_prod_prod_prod_ell2_a_c_a_a_c_prod_b_complement_domain_prod_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('comp$ay',type,
+    'comp$ay': ( 'A_c_a_c_prod_b_complement_domain_prod_c_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_c_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_c_a_c_prod_b_complement_domain_prod_prod_c_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_c_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_c_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_c_prod_prod_ell2_cblinfun_fun$' ) > 'A_c_a_c_prod_b_complement_domain_prod_prod_c_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('register$i',type,
+    'register$i': 'C_b_complement_domain_ell2_c_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' > $o ).
+
+tff('register_tensor$y',type,
+    'register_tensor$y': ( 'C_ell2_c_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$' * 'C_b_complement_domain_ell2_c_b_complement_domain_ell2_cblinfun_c_b_complement_domain_ell2_c_b_complement_domain_ell2_cblinfun_fun$' ) > 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$' ).
+
+tff('fun_app$a',type,
+    'fun_app$a': ( 'B_ell2_b_ell2_cblinfun_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$' * 'B_ell2_b_ell2_cblinfun$' ) > 'A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun$' ).
+
+tff('assoc$f',type,
+    'assoc$f': 'A_c_a_a_c_prod_b_complement_domain_prod_prod_prod_ell2_a_c_a_a_c_prod_b_complement_domain_prod_prod_prod_ell2_cblinfun_a_c_prod_a_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_prod_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' ).
+
+tff('tensor_op$r',type,
+    'tensor_op$r': ( 'B_ell2_b_ell2_cblinfun$' * 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun$' ) > 'B_a_b_complement_domain_prod_ell2_b_a_b_complement_domain_prod_ell2_cblinfun$' ).
+
+tff('register_pair$ar',type,
+    'register_pair$ar': ( 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > 'C_a_prod_ell2_c_a_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('fun_app$u',type,
+    'fun_app$u': ( 'C_c_prod_ell2_c_c_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$' * 'C_c_prod_ell2_c_c_prod_ell2_cblinfun$' ) > 'B_b_prod_ell2_b_b_prod_ell2_cblinfun$' ).
+
+tff('comp$p',type,
+    'comp$p': ( 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' ) > 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('id$',type,
+    'id$': 'A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' ).
+
+tff('complement$b',type,
+    'complement$b': 'A_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' > 'A_a_c_prod_b_complement_domain_prod_b_complement_domain_ell2_a_a_c_prod_b_complement_domain_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('tensor_op$l',type,
+    'tensor_op$l': ( 'A_ell2_a_ell2_cblinfun$' * 'C_ell2_c_ell2_cblinfun$' ) > 'A_c_prod_ell2_a_c_prod_ell2_cblinfun$' ).
+
+tff('comp$bs',type,
+    'comp$bs': ( 'B_c_a_c_prod_b_complement_domain_prod_prod_ell2_b_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$' * 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_c_a_c_prod_b_complement_domain_prod_prod_ell2_b_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' ) > 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$' ).
+
+tff('tensor_op$h',type,
+    'tensor_op$h': ( 'C_ell2_c_ell2_cblinfun$' * 'C_c_complement_domain_ell2_c_c_complement_domain_ell2_cblinfun$' ) > 'C_c_c_complement_domain_prod_ell2_c_c_c_complement_domain_prod_ell2_cblinfun$' ).
+
+tff('fun_app$n',type,
+    'fun_app$n': ( 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$' * 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun$' ) > 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$' ).
+
+tff('comp$o',type,
+    'comp$o': ( 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' ) > 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('comp$bb',type,
+    'comp$bb': ( 'A_a_c_prod_prod_ell2_a_a_c_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_a_prod_c_prod_ell2_a_a_prod_c_prod_ell2_cblinfun_a_a_c_prod_prod_ell2_a_a_c_prod_prod_ell2_cblinfun_fun$' ) > 'A_a_prod_c_prod_ell2_a_a_prod_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('comp$a',type,
+    'comp$a': ( 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' * 'B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$' ) > 'B_ell2_b_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' ).
+
+tff('equivalent_registers$as',type,
+    'equivalent_registers$as': ( 'A_a_c_prod_prod_ell2_a_a_c_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_a_prod_c_prod_ell2_a_a_prod_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('iso_register$aa',type,
+    'iso_register$aa': 'C_a_c_prod_b_complement_domain_prod_c_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_c_prod_b_complement_domain_prod_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_b_complement_domain_a_b_complement_domain_prod_ell2_a_b_complement_domain_a_b_complement_domain_prod_ell2_cblinfun_fun$' > $o ).
+
+tff('regular_register$c',type,
+    'regular_register$c': 'B_ell2_b_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' > $o ).
+
+tff('comp$bt',type,
+    'comp$bt': ( 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$' * 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$' ) > 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$' ).
+
+tff('complements$s',type,
+    'complements$s': ( 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('register_tensor$be',type,
+    'register_tensor$be': ( 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_c_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$' ) > 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_c_a_c_prod_b_complement_domain_prod_prod_ell2_b_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' ).
+
+tff('register_tensor$i',type,
+    'register_tensor$i': ( 'A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' * 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$' ) > 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$' ).
+
+tff('comp$dl',type,
+    'comp$dl': ( 'B_ell2_b_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' * 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' ).
+
+tff('comp$am',type,
+    'comp$am': ( 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$' * 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$' ) > 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$' ).
+
+tff('complement$',type,
+    'complement$': 'A_c_prod_ell2_a_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' > 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('equivalent_registers$s',type,
+    'equivalent_registers$s': ( 'C_b_complement_domain_ell2_c_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('register$l',type,
+    'register$l': 'A_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' > $o ).
+
+tff('inv_into$al',type,
+    'inv_into$al': ( 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_set$' * 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_a_prod_ell2_a_b_complement_domain_a_prod_ell2_cblinfun_fun$' ) > 'A_b_complement_domain_a_prod_ell2_a_b_complement_domain_a_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$' ).
+
+tff('register$h',type,
+    'register$h': 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' > $o ).
+
+tff('register$q',type,
+    'register$q': 'A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' > $o ).
+
+tff('assoc$l',type,
+    'assoc$l': 'A_c_prod_a_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_prod_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_c_a_a_c_prod_b_complement_domain_prod_prod_prod_ell2_a_c_a_a_c_prod_b_complement_domain_prod_prod_prod_ell2_cblinfun_fun$' ).
+
+tff('member$a',type,
+    'member$a': ( 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun$' * 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_set$' ) > $o ).
+
+tff('inv_into$aa',type,
+    'inv_into$aa': ( 'C_c_b_complement_domain_prod_c_a_a_c_prod_b_complement_domain_prod_prod_prod_ell2_c_c_b_complement_domain_prod_c_a_a_c_prod_b_complement_domain_prod_prod_prod_ell2_cblinfun_set$' * 'C_c_b_complement_domain_prod_c_a_a_c_prod_b_complement_domain_prod_prod_prod_ell2_c_c_b_complement_domain_prod_c_a_a_c_prod_b_complement_domain_prod_prod_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$' ) > 'B_b_prod_ell2_b_b_prod_ell2_cblinfun_c_c_b_complement_domain_prod_c_a_a_c_prod_b_complement_domain_prod_prod_prod_ell2_c_c_b_complement_domain_prod_c_a_a_c_prod_b_complement_domain_prod_prod_prod_ell2_cblinfun_fun$' ).
+
+tff('register_tensor$al',type,
+    'register_tensor$al': ( 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_c_prod_ell2_a_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > 'C_a_c_prod_prod_ell2_c_a_c_prod_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$' ).
+
+tff('equivalent_registers$z',type,
+    'equivalent_registers$z': ( 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('inv_into$u',type,
+    'inv_into$u': ( 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_set$' * 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$' ) > 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$' ).
+
+tff('equivalent_registers$aw',type,
+    'equivalent_registers$aw': ( 'A_c_prod_ell2_a_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('register_tensor$bm',type,
+    'register_tensor$bm': ( 'A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' * 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$' ) > 'A_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_c_prod_ell2_a_c_prod_ell2_cblinfun_fun$' ).
+
+tff('register_pair$af',type,
+    'register_pair$af': ( 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'C_a_c_prod_b_complement_domain_prod_c_prod_ell2_c_a_c_prod_b_complement_domain_prod_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > 'A_c_a_c_prod_b_complement_domain_prod_c_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_c_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('iso_register$o',type,
+    'iso_register$o': 'B_ell2_b_ell2_cblinfun_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' > $o ).
+
+tff('top$o',type,
+    'top$o': 'C_a_a_c_prod_b_complement_domain_prod_prod_c_c_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_c_c_b_complement_domain_prod_prod_ell2_cblinfun_set$' ).
+
+tff('register_tensor$bq',type,
+    'register_tensor$bq': ( 'A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' * 'A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' ) > 'A_a_prod_ell2_a_a_prod_ell2_cblinfun_a_a_prod_ell2_a_a_prod_ell2_cblinfun_fun$' ).
+
+tff('assoc$c',type,
+    'assoc$c': 'A_a_b_complement_domain_c_prod_prod_ell2_a_a_b_complement_domain_c_prod_prod_ell2_cblinfun_a_a_b_complement_domain_prod_c_prod_ell2_a_a_b_complement_domain_prod_c_prod_ell2_cblinfun_fun$' ).
+
+tff('register$x',type,
+    'register$x': 'C_b_complement_domain_ell2_c_b_complement_domain_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$' > $o ).
+
+tff('equivalent_registers$aa',type,
+    'equivalent_registers$aa': ( 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('comp$ba',type,
+    'comp$ba': ( 'A_c_a_a_c_prod_b_complement_domain_prod_prod_prod_ell2_a_c_a_a_c_prod_b_complement_domain_prod_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_c_prod_a_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_prod_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_c_a_a_c_prod_b_complement_domain_prod_prod_prod_ell2_a_c_a_a_c_prod_b_complement_domain_prod_prod_prod_ell2_cblinfun_fun$' ) > 'A_c_prod_a_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_prod_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('iso_register$d',type,
+    'iso_register$d': 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' > $o ).
+
+tff('fun_app$q',type,
+    'fun_app$q': ( 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun$' ) > 'B_ell2_b_ell2_cblinfun$' ).
+
+tff('comp$cn',type,
+    'comp$cn': ( 'A_a_c_prod_b_complement_domain_prod_c_prod_ell2_a_a_c_prod_b_complement_domain_prod_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_a_c_prod_b_complement_domain_prod_c_prod_ell2_a_a_c_prod_b_complement_domain_prod_c_prod_ell2_cblinfun_fun$' ) > 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('compatible$t',type,
+    'compatible$t': ( 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_c_a_c_prod_b_complement_domain_prod_prod_b_complement_domain_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('register_pair$m',type,
+    'register_pair$m': ( 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_c_a_c_prod_b_complement_domain_prod_prod_b_complement_domain_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > 'A_a_c_a_c_prod_b_complement_domain_prod_prod_b_complement_domain_prod_ell2_a_a_c_a_c_prod_b_complement_domain_prod_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('inv_into$p',type,
+    'inv_into$p': ( 'B_ell2_b_ell2_cblinfun_set$' * 'B_ell2_b_ell2_cblinfun_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' ) > 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('register$n',type,
+    'register$n': 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' > $o ).
+
+tff('complements$p',type,
+    'complements$p': ( 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('register_tensor$bg',type,
+    'register_tensor$bg': ( 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$' ).
+
+tff('comp$ck',type,
+    'comp$ck': ( 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$' ) > 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('comp$ao',type,
+    'comp$ao': ( 'A_a_prod_c_prod_ell2_a_a_prod_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_a_c_prod_prod_ell2_a_a_c_prod_prod_ell2_cblinfun_a_a_prod_c_prod_ell2_a_a_prod_c_prod_ell2_cblinfun_fun$' ) > 'A_a_c_prod_prod_ell2_a_a_c_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('tensor_op$g',type,
+    'tensor_op$g': ( 'C_ell2_c_ell2_cblinfun$' * 'C_a_complement_domain_ell2_c_a_complement_domain_ell2_cblinfun$' ) > 'C_c_a_complement_domain_prod_ell2_c_c_a_complement_domain_prod_ell2_cblinfun$' ).
+
+tff('bij_betw$j',type,
+    'bij_betw$j': ( 'B_ell2_b_ell2_cblinfun_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$' * 'B_ell2_b_ell2_cblinfun_set$' * 'A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_set$' ) > $o ).
+
+tff('inv_into$r',type,
+    'inv_into$r': ( 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_set$' * 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' ) > 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$' ).
+
+tff('comp$g',type,
+    'comp$g': ( 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' ) > 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('register_pair$k',type,
+    'register_pair$k': ( 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_a_c_prod_b_complement_domain_prod_b_complement_domain_ell2_a_a_c_prod_b_complement_domain_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > 'A_a_a_c_prod_b_complement_domain_prod_b_complement_domain_prod_ell2_a_a_a_c_prod_b_complement_domain_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('i$',type,
+    'i$': 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$' ).
+
+tff('comp$cu',type,
+    'comp$cu': ( 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_b_complement_domain_a_prod_ell2_a_b_complement_domain_a_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$' ) > 'A_b_complement_domain_a_prod_ell2_a_b_complement_domain_a_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('equivalent_registers$ae',type,
+    'equivalent_registers$ae': ( 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$' * 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$' ) > $o ).
+
+tff('register$ab',type,
+    'register$ab': 'C_c_a_c_prod_b_complement_domain_prod_prod_ell2_c_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_a_b_complement_domain_prod_ell2_b_a_b_complement_domain_prod_ell2_cblinfun_fun$' > $o ).
+
+tff('register$p',type,
+    'register$p': 'C_ell2_c_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$' > $o ).
+
+tff('comp$av',type,
+    'comp$av': ( 'A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$' ) > 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('regular_register$e',type,
+    'regular_register$e': 'A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' > $o ).
+
+tff('complements$q',type,
+    'complements$q': ( 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'C_b_complement_domain_ell2_c_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('inv_into$ap',type,
+    'inv_into$ap': ( 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_set$' * 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' ) > 'A_ell2_a_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$' ).
+
+tff('register_pair$h',type,
+    'register_pair$h': ( 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_c_a_c_prod_b_complement_domain_prod_prod_b_complement_domain_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > 'C_a_c_prod_b_complement_domain_prod_a_c_a_c_prod_b_complement_domain_prod_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_a_c_a_c_prod_b_complement_domain_prod_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ).
+
+tff('comp$an',type,
+    'comp$an': ( 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$' * 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_c_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$' ) > 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$' ).
+
+tff('comp$bk',type,
+    'comp$bk': ( 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' * 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$' ) > 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$' ).
+
+tff('register_tensor$ae',type,
+    'register_tensor$ae': ( 'C_b_complement_domain_ell2_c_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'C_b_complement_domain_ell2_c_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > 'C_b_complement_domain_c_b_complement_domain_prod_ell2_c_b_complement_domain_c_b_complement_domain_prod_ell2_cblinfun_b_b_prod_ell2_b_b_prod_ell2_cblinfun_fun$' ).
+
+tff('member$',type,
+    'member$': ( 'B_ell2_b_ell2_cblinfun$' * 'B_ell2_b_ell2_cblinfun_set$' ) > $o ).
+
+tff('fun_app$aj',type,
+    'fun_app$aj': ( 'C_c_a_c_prod_b_complement_domain_prod_prod_ell2_c_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_a_b_complement_domain_prod_ell2_b_a_b_complement_domain_prod_ell2_cblinfun_fun$' * 'C_c_a_c_prod_b_complement_domain_prod_prod_ell2_c_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun$' ) > 'B_a_b_complement_domain_prod_ell2_b_a_b_complement_domain_prod_ell2_cblinfun$' ).
+
+tff('register_tensor$aa',type,
+    'register_tensor$aa': ( 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$' * 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > 'C_a_c_prod_b_complement_domain_prod_c_prod_ell2_c_a_c_prod_b_complement_domain_prod_c_prod_ell2_cblinfun_a_b_complement_domain_b_prod_ell2_a_b_complement_domain_b_prod_ell2_cblinfun_fun$' ).
+
+tff('complements$k',type,
+    'complements$k': ( 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' * 'A_a_c_a_c_prod_b_complement_domain_prod_prod_b_complement_domain_prod_ell2_a_a_c_a_c_prod_b_complement_domain_prod_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > $o ).
+
+tff('inv_into$d',type,
+    'inv_into$d': ( 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_set$' * 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$' ) > 'B_ell2_b_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$' ).
+
+tff('fun_app$aa',type,
+    'fun_app$aa': ( 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$' * 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun$' ) > 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun$' ).
+
+tff('complements$ag',type,
+    'complements$ag': ( 'C_ell2_c_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' * 'C_b_complement_domain_ell2_c_b_complement_domain_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$' ) > $o ).
+
+tff('fun_app$bd',type,
+    'fun_app$bd': ( 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_bool_fun$' * 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun$' ) > $o ).
+
+%% Assertions:
+%% ¬complements$(g$, register_pair$(f$, complement$(register_pair$a(f$, g$))))
+% tff(conjecture0,conjecture,
+%     'complements$'('g$','register_pair$'('f$','complement$'('register_pair$a'('f$','g$')))) ).
+
+%% regular_register$(f$)
+tff(axiom1,axiom,
+    'regular_register$'('f$') ).
+
+%% regular_register$a(g$)
+tff(axiom2,axiom,
+    'regular_register$a'('g$') ).
+
+%% compatible$(f$, g$)
+tff(axiom3,axiom,
+    'compatible$'('f$','g$') ).
+
+%% complements$a(f$, register_pair$b(g$, complement$(register_pair$a(f$, g$))))
+tff(axiom4,axiom,
+    'complements$a'('f$','register_pair$b'('g$','complement$'('register_pair$a'('f$','g$')))) ).
+
+%% ∀ ?v0:A_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (complements$b(?v0, ?v1) ⇒ complements$(?v1, ?v0))
+tff(axiom5,axiom,
+    ! [A__questionmark_v0: 'A_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'complements$b'(A__questionmark_v0,A__questionmark_v1)
+     => 'complements$'(A__questionmark_v1,A__questionmark_v0) ) ).
+
+%% ∀ ?v0:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (complements$c(?v0, ?v1) ⇒ complements$a(?v1, ?v0))
+tff(axiom6,axiom,
+    ! [A__questionmark_v0: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'complements$c'(A__questionmark_v0,A__questionmark_v1)
+     => 'complements$a'(A__questionmark_v1,A__questionmark_v0) ) ).
+
+%% ∀ ?v0:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (complements$(?v0, ?v1) ⇒ complements$b(?v1, ?v0))
+tff(axiom7,axiom,
+    ! [A__questionmark_v0: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'complements$'(A__questionmark_v0,A__questionmark_v1)
+     => 'complements$b'(A__questionmark_v1,A__questionmark_v0) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (complements$a(?v0, ?v1) ⇒ complements$c(?v1, ?v0))
+tff(axiom8,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'complements$a'(A__questionmark_v0,A__questionmark_v1)
+     => 'complements$c'(A__questionmark_v1,A__questionmark_v0) ) ).
+
+%% ∀ ?v0:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (compatible$a(?v0, ?v1) ⇒ complements$d(?v0, register_pair$c(?v1, complement$a(register_pair$d(?v0, ?v1)))))
+tff(axiom9,axiom,
+    ! [A__questionmark_v0: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'compatible$a'(A__questionmark_v0,A__questionmark_v1)
+     => 'complements$d'(A__questionmark_v0,'register_pair$c'(A__questionmark_v1,'complement$a'('register_pair$d'(A__questionmark_v0,A__questionmark_v1)))) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (compatible$b(?v0, ?v1) ⇒ complements$e(?v0, register_pair$e(?v1, complement$b(register_pair$(?v0, ?v1)))))
+tff(axiom10,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'compatible$b'(A__questionmark_v0,A__questionmark_v1)
+     => 'complements$e'(A__questionmark_v0,'register_pair$e'(A__questionmark_v1,'complement$b'('register_pair$'(A__questionmark_v0,A__questionmark_v1)))) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (compatible$c(?v0, ?v1) ⇒ complements$f(?v0, register_pair$f(?v1, complement$c(register_pair$g(?v0, ?v1)))))
+tff(axiom11,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'compatible$c'(A__questionmark_v0,A__questionmark_v1)
+     => 'complements$f'(A__questionmark_v0,'register_pair$f'(A__questionmark_v1,'complement$c'('register_pair$g'(A__questionmark_v0,A__questionmark_v1)))) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (compatible$d(?v0, ?v1) ⇒ complements$g(?v0, register_pair$h(?v1, complement$d(register_pair$i(?v0, ?v1)))))
+tff(axiom12,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'compatible$d'(A__questionmark_v0,A__questionmark_v1)
+     => 'complements$g'(A__questionmark_v0,'register_pair$h'(A__questionmark_v1,'complement$d'('register_pair$i'(A__questionmark_v0,A__questionmark_v1)))) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (compatible$(?v0, ?v1) ⇒ complements$a(?v0, register_pair$b(?v1, complement$(register_pair$a(?v0, ?v1)))))
+tff(axiom13,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'compatible$'(A__questionmark_v0,A__questionmark_v1)
+     => 'complements$a'(A__questionmark_v0,'register_pair$b'(A__questionmark_v1,'complement$'('register_pair$a'(A__questionmark_v0,A__questionmark_v1)))) ) ).
+
+%% ∀ ?v0:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (compatible$a(?v0, ?v1) ⇒ complements$h(?v1, register_pair$j(?v0, complement$a(register_pair$d(?v0, ?v1)))))
+tff(axiom14,axiom,
+    ! [A__questionmark_v0: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'compatible$a'(A__questionmark_v0,A__questionmark_v1)
+     => 'complements$h'(A__questionmark_v1,'register_pair$j'(A__questionmark_v0,'complement$a'('register_pair$d'(A__questionmark_v0,A__questionmark_v1)))) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (compatible$b(?v0, ?v1) ⇒ complements$i(?v1, register_pair$k(?v0, complement$b(register_pair$(?v0, ?v1)))))
+tff(axiom15,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'compatible$b'(A__questionmark_v0,A__questionmark_v1)
+     => 'complements$i'(A__questionmark_v1,'register_pair$k'(A__questionmark_v0,'complement$b'('register_pair$'(A__questionmark_v0,A__questionmark_v1)))) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (compatible$c(?v0, ?v1) ⇒ complements$j(?v1, register_pair$l(?v0, complement$c(register_pair$g(?v0, ?v1)))))
+tff(axiom16,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'compatible$c'(A__questionmark_v0,A__questionmark_v1)
+     => 'complements$j'(A__questionmark_v1,'register_pair$l'(A__questionmark_v0,'complement$c'('register_pair$g'(A__questionmark_v0,A__questionmark_v1)))) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (compatible$d(?v0, ?v1) ⇒ complements$k(?v1, register_pair$m(?v0, complement$d(register_pair$i(?v0, ?v1)))))
+tff(axiom17,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'compatible$d'(A__questionmark_v0,A__questionmark_v1)
+     => 'complements$k'(A__questionmark_v1,'register_pair$m'(A__questionmark_v0,'complement$d'('register_pair$i'(A__questionmark_v0,A__questionmark_v1)))) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (compatible$(?v0, ?v1) ⇒ complements$(?v1, register_pair$(?v0, complement$(register_pair$a(?v0, ?v1)))))
+tff(axiom18,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'compatible$'(A__questionmark_v0,A__questionmark_v1)
+     => 'complements$'(A__questionmark_v1,'register_pair$'(A__questionmark_v0,'complement$'('register_pair$a'(A__questionmark_v0,A__questionmark_v1)))) ) ).
+
+%% register$(g$)
+tff(axiom19,axiom,
+    'register$'('g$') ).
+
+%% register$a(f$)
+tff(axiom20,axiom,
+    'register$a'('f$') ).
+
+%% equivalent_registers$(complement$e(f$), register_pair$b(g$, complement$(register_pair$a(f$, g$))))
+tff(axiom21,axiom,
+    'equivalent_registers$'('complement$e'('f$'),'register_pair$b'('g$','complement$'('register_pair$a'('f$','g$')))) ).
+
+%% (register_pair$b(g$, complement$(register_pair$a(f$, g$))) = comp$(complement$e(f$), i$))
+tff(axiom22,axiom,
+    'register_pair$b'('g$','complement$'('register_pair$a'('f$','g$'))) = 'comp$'('complement$e'('f$'),'i$') ).
+
+%% ∀ ?v0:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (complements$(?v0, ?v1) ⇒ equivalent_registers$a(?v1, complement$f(?v0)))
+tff(axiom23,axiom,
+    ! [A__questionmark_v0: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'complements$'(A__questionmark_v0,A__questionmark_v1)
+     => 'equivalent_registers$a'(A__questionmark_v1,'complement$f'(A__questionmark_v0)) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (complements$a(?v0, ?v1) ⇒ equivalent_registers$b(?v1, complement$e(?v0)))
+tff(axiom24,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'complements$a'(A__questionmark_v0,A__questionmark_v1)
+     => 'equivalent_registers$b'(A__questionmark_v1,'complement$e'(A__questionmark_v0)) ) ).
+
+%% (∀ ?v0:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$ ((iso_register$(?v0) ∧ (register_pair$b(g$, complement$(register_pair$a(f$, g$))) = comp$(complement$e(f$), ?v0))) ⇒ false) ⇒ false)
+tff(axiom25,axiom,
+    ( ! [A__questionmark_v0: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$'] :
+        ( ( 'iso_register$'(A__questionmark_v0)
+          & ( 'register_pair$b'('g$','complement$'('register_pair$a'('f$','g$'))) = 'comp$'('complement$e'('f$'),A__questionmark_v0) ) )
+       => $false )
+   => $false ) ).
+
+%% bij_betw$(register_pair$n(register_pair$a(f$, g$), complement$(register_pair$a(f$, g$))), top$, top$a)
+tff(axiom26,axiom,
+    'bij_betw$'('register_pair$n'('register_pair$a'('f$','g$'),'complement$'('register_pair$a'('f$','g$'))),'top$','top$a') ).
+
+%% (t3$ = fun_app$(inv_into$(top$b, register_pair$d(g$, register_pair$(f$, complement$(register_pair$a(f$, g$))))), butterfly$(ket$(default$), ket$(default$))))
+tff(axiom27,axiom,
+    't3$' = 'fun_app$'('inv_into$'('top$b','register_pair$d'('g$','register_pair$'('f$','complement$'('register_pair$a'('f$','g$'))))),'butterfly$'('ket$'('default$'),'ket$'('default$'))) ).
+
+%% iso_register$(i$)
+tff(axiom28,axiom,
+    'iso_register$'('i$') ).
+
+%% ∀ ?v0:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$ ?v1:B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$ ((register$b(?v0) ∧ register$c(?v1)) ⇒ complements$l(comp$a(?v0, ?v1), register_pair$o(complement$g(?v0), comp$b(?v0, complement$h(?v1)))))
+tff(axiom29,axiom,
+    ! [A__questionmark_v0: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$',A__questionmark_v1: 'B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$'] :
+      ( ( 'register$b'(A__questionmark_v0)
+        & 'register$c'(A__questionmark_v1) )
+     => 'complements$l'('comp$a'(A__questionmark_v0,A__questionmark_v1),'register_pair$o'('complement$g'(A__questionmark_v0),'comp$b'(A__questionmark_v0,'complement$h'(A__questionmark_v1)))) ) ).
+
+%% ∀ ?v0:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$ ((register$d(?v0) ∧ register$e(?v1)) ⇒ complements$m(comp$(?v0, ?v1), register_pair$p(complement$i(?v0), comp$c(?v0, complement$j(?v1)))))
+tff(axiom30,axiom,
+    ! [A__questionmark_v0: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$'] :
+      ( ( 'register$d'(A__questionmark_v0)
+        & 'register$e'(A__questionmark_v1) )
+     => 'complements$m'('comp$'(A__questionmark_v0,A__questionmark_v1),'register_pair$p'('complement$i'(A__questionmark_v0),'comp$c'(A__questionmark_v0,'complement$j'(A__questionmark_v1)))) ) ).
+
+%% ∀ ?v0:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$ (register$e(?v0) ⇒ register$f(complement$j(?v0)))
+tff(axiom31,axiom,
+    ! [A__questionmark_v0: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$'] :
+      ( 'register$e'(A__questionmark_v0)
+     => 'register$f'('complement$j'(A__questionmark_v0)) ) ).
+
+%% ∀ ?v0:A_c_prod_ell2_a_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (register$g(?v0) ⇒ register$h(complement$(?v0)))
+tff(axiom32,axiom,
+    ! [A__questionmark_v0: 'A_c_prod_ell2_a_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'register$g'(A__questionmark_v0)
+     => 'register$h'('complement$'(A__questionmark_v0)) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (register$a(?v0) ⇒ register$d(complement$e(?v0)))
+tff(axiom33,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'register$a'(A__questionmark_v0)
+     => 'register$d'('complement$e'(A__questionmark_v0)) ) ).
+
+%% ∀ ?v0:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (register$(?v0) ⇒ register$i(complement$f(?v0)))
+tff(axiom34,axiom,
+    ! [A__questionmark_v0: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'register$'(A__questionmark_v0)
+     => 'register$i'('complement$f'(A__questionmark_v0)) ) ).
+
+%% ∀ ?v0:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$ (register$e(?v0) ⇒ compatible$e(?v0, complement$j(?v0)))
+tff(axiom35,axiom,
+    ! [A__questionmark_v0: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$'] :
+      ( 'register$e'(A__questionmark_v0)
+     => 'compatible$e'(A__questionmark_v0,'complement$j'(A__questionmark_v0)) ) ).
+
+%% ∀ ?v0:A_c_prod_ell2_a_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (register$g(?v0) ⇒ compatible$f(?v0, complement$(?v0)))
+tff(axiom36,axiom,
+    ! [A__questionmark_v0: 'A_c_prod_ell2_a_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'register$g'(A__questionmark_v0)
+     => 'compatible$f'(A__questionmark_v0,'complement$'(A__questionmark_v0)) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (register$a(?v0) ⇒ compatible$c(?v0, complement$e(?v0)))
+tff(axiom37,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'register$a'(A__questionmark_v0)
+     => 'compatible$c'(A__questionmark_v0,'complement$e'(A__questionmark_v0)) ) ).
+
+%% ∀ ?v0:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (register$(?v0) ⇒ compatible$g(?v0, complement$f(?v0)))
+tff(axiom38,axiom,
+    ! [A__questionmark_v0: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'register$'(A__questionmark_v0)
+     => 'compatible$g'(A__questionmark_v0,'complement$f'(A__questionmark_v0)) ) ).
+
+%% ∀ ?v0:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$ (register$e(?v0) ⇒ compatible$h(complement$j(?v0), ?v0))
+tff(axiom39,axiom,
+    ! [A__questionmark_v0: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$'] :
+      ( 'register$e'(A__questionmark_v0)
+     => 'compatible$h'('complement$j'(A__questionmark_v0),A__questionmark_v0) ) ).
+
+%% ∀ ?v0:A_c_prod_ell2_a_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (register$g(?v0) ⇒ compatible$i(complement$(?v0), ?v0))
+tff(axiom40,axiom,
+    ! [A__questionmark_v0: 'A_c_prod_ell2_a_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'register$g'(A__questionmark_v0)
+     => 'compatible$i'('complement$'(A__questionmark_v0),A__questionmark_v0) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (register$a(?v0) ⇒ compatible$j(complement$e(?v0), ?v0))
+tff(axiom41,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'register$a'(A__questionmark_v0)
+     => 'compatible$j'('complement$e'(A__questionmark_v0),A__questionmark_v0) ) ).
+
+%% ∀ ?v0:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (register$(?v0) ⇒ compatible$k(complement$f(?v0), ?v0))
+tff(axiom42,axiom,
+    ! [A__questionmark_v0: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'register$'(A__questionmark_v0)
+     => 'compatible$k'('complement$f'(A__questionmark_v0),A__questionmark_v0) ) ).
+
+%% ∀ ?v0:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$ (register$e(?v0) ⇒ compatible$e(?v0, complement$j(?v0)))
+tff(axiom43,axiom,
+    ! [A__questionmark_v0: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$'] :
+      ( 'register$e'(A__questionmark_v0)
+     => 'compatible$e'(A__questionmark_v0,'complement$j'(A__questionmark_v0)) ) ).
+
+%% ∀ ?v0:A_c_prod_ell2_a_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (register$g(?v0) ⇒ compatible$f(?v0, complement$(?v0)))
+tff(axiom44,axiom,
+    ! [A__questionmark_v0: 'A_c_prod_ell2_a_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'register$g'(A__questionmark_v0)
+     => 'compatible$f'(A__questionmark_v0,'complement$'(A__questionmark_v0)) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (register$a(?v0) ⇒ compatible$c(?v0, complement$e(?v0)))
+tff(axiom45,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'register$a'(A__questionmark_v0)
+     => 'compatible$c'(A__questionmark_v0,'complement$e'(A__questionmark_v0)) ) ).
+
+%% ∀ ?v0:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (register$(?v0) ⇒ compatible$g(?v0, complement$f(?v0)))
+tff(axiom46,axiom,
+    ! [A__questionmark_v0: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'register$'(A__questionmark_v0)
+     => 'compatible$g'(A__questionmark_v0,'complement$f'(A__questionmark_v0)) ) ).
+
+%% ∀ ?v0:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$ (register$e(?v0) ⇒ complements$n(?v0, complement$j(?v0)))
+tff(axiom47,axiom,
+    ! [A__questionmark_v0: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$'] :
+      ( 'register$e'(A__questionmark_v0)
+     => 'complements$n'(A__questionmark_v0,'complement$j'(A__questionmark_v0)) ) ).
+
+%% ∀ ?v0:A_c_prod_ell2_a_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (register$g(?v0) ⇒ complements$o(?v0, complement$(?v0)))
+tff(axiom48,axiom,
+    ! [A__questionmark_v0: 'A_c_prod_ell2_a_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'register$g'(A__questionmark_v0)
+     => 'complements$o'(A__questionmark_v0,'complement$'(A__questionmark_v0)) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (register$a(?v0) ⇒ complements$p(?v0, complement$e(?v0)))
+tff(axiom49,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'register$a'(A__questionmark_v0)
+     => 'complements$p'(A__questionmark_v0,'complement$e'(A__questionmark_v0)) ) ).
+
+%% ∀ ?v0:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (register$(?v0) ⇒ complements$q(?v0, complement$f(?v0)))
+tff(axiom50,axiom,
+    ! [A__questionmark_v0: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'register$'(A__questionmark_v0)
+     => 'complements$q'(A__questionmark_v0,'complement$f'(A__questionmark_v0)) ) ).
+
+%% ∀ ?v0:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (equivalent_registers$(?v0, ?v1) ⇒ equivalent_registers$c(complement$i(?v0), complement$k(?v1)))
+tff(axiom51,axiom,
+    ! [A__questionmark_v0: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'equivalent_registers$'(A__questionmark_v0,A__questionmark_v1)
+     => 'equivalent_registers$c'('complement$i'(A__questionmark_v0),'complement$k'(A__questionmark_v1)) ) ).
+
+%% ∀ ?v0:A_c_prod_ell2_a_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_c_prod_ell2_a_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (equivalent_registers$d(?v0, ?v1) ⇒ equivalent_registers$e(complement$(?v0), complement$(?v1)))
+tff(axiom52,axiom,
+    ! [A__questionmark_v0: 'A_c_prod_ell2_a_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_c_prod_ell2_a_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'equivalent_registers$d'(A__questionmark_v0,A__questionmark_v1)
+     => 'equivalent_registers$e'('complement$'(A__questionmark_v0),'complement$'(A__questionmark_v1)) ) ).
+
+%% ∀ ?v0:A_c_prod_ell2_a_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (equivalent_registers$f(?v0, ?v1) ⇒ equivalent_registers$g(complement$(?v0), complement$e(?v1)))
+tff(axiom53,axiom,
+    ! [A__questionmark_v0: 'A_c_prod_ell2_a_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'equivalent_registers$f'(A__questionmark_v0,A__questionmark_v1)
+     => 'equivalent_registers$g'('complement$'(A__questionmark_v0),'complement$e'(A__questionmark_v1)) ) ).
+
+%% ∀ ?v0:A_c_prod_ell2_a_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (equivalent_registers$h(?v0, ?v1) ⇒ equivalent_registers$i(complement$(?v0), complement$f(?v1)))
+tff(axiom54,axiom,
+    ! [A__questionmark_v0: 'A_c_prod_ell2_a_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'equivalent_registers$h'(A__questionmark_v0,A__questionmark_v1)
+     => 'equivalent_registers$i'('complement$'(A__questionmark_v0),'complement$f'(A__questionmark_v1)) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_c_prod_ell2_a_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (equivalent_registers$j(?v0, ?v1) ⇒ equivalent_registers$k(complement$e(?v0), complement$(?v1)))
+tff(axiom55,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_c_prod_ell2_a_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'equivalent_registers$j'(A__questionmark_v0,A__questionmark_v1)
+     => 'equivalent_registers$k'('complement$e'(A__questionmark_v0),'complement$'(A__questionmark_v1)) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (equivalent_registers$l(?v0, ?v1) ⇒ equivalent_registers$m(complement$e(?v0), complement$e(?v1)))
+tff(axiom56,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'equivalent_registers$l'(A__questionmark_v0,A__questionmark_v1)
+     => 'equivalent_registers$m'('complement$e'(A__questionmark_v0),'complement$e'(A__questionmark_v1)) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (equivalent_registers$n(?v0, ?v1) ⇒ equivalent_registers$o(complement$e(?v0), complement$f(?v1)))
+tff(axiom57,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'equivalent_registers$n'(A__questionmark_v0,A__questionmark_v1)
+     => 'equivalent_registers$o'('complement$e'(A__questionmark_v0),'complement$f'(A__questionmark_v1)) ) ).
+
+%% ∀ ?v0:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_c_prod_ell2_a_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (equivalent_registers$p(?v0, ?v1) ⇒ equivalent_registers$q(complement$f(?v0), complement$(?v1)))
+tff(axiom58,axiom,
+    ! [A__questionmark_v0: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_c_prod_ell2_a_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'equivalent_registers$p'(A__questionmark_v0,A__questionmark_v1)
+     => 'equivalent_registers$q'('complement$f'(A__questionmark_v0),'complement$'(A__questionmark_v1)) ) ).
+
+%% ∀ ?v0:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (equivalent_registers$r(?v0, ?v1) ⇒ equivalent_registers$s(complement$f(?v0), complement$e(?v1)))
+tff(axiom59,axiom,
+    ! [A__questionmark_v0: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'equivalent_registers$r'(A__questionmark_v0,A__questionmark_v1)
+     => 'equivalent_registers$s'('complement$f'(A__questionmark_v0),'complement$e'(A__questionmark_v1)) ) ).
+
+%% ∀ ?v0:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (equivalent_registers$t(?v0, ?v1) ⇒ equivalent_registers$u(complement$f(?v0), complement$f(?v1)))
+tff(axiom60,axiom,
+    ! [A__questionmark_v0: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'equivalent_registers$t'(A__questionmark_v0,A__questionmark_v1)
+     => 'equivalent_registers$u'('complement$f'(A__questionmark_v0),'complement$f'(A__questionmark_v1)) ) ).
+
+%% ∀ ?v0:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (compatible$a(?v0, ?v1) ⇒ compatible$l(?v1, complement$a(register_pair$d(?v0, ?v1))))
+tff(axiom61,axiom,
+    ! [A__questionmark_v0: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'compatible$a'(A__questionmark_v0,A__questionmark_v1)
+     => 'compatible$l'(A__questionmark_v1,'complement$a'('register_pair$d'(A__questionmark_v0,A__questionmark_v1))) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (compatible$b(?v0, ?v1) ⇒ compatible$m(?v1, complement$b(register_pair$(?v0, ?v1))))
+tff(axiom62,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'compatible$b'(A__questionmark_v0,A__questionmark_v1)
+     => 'compatible$m'(A__questionmark_v1,'complement$b'('register_pair$'(A__questionmark_v0,A__questionmark_v1))) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (compatible$c(?v0, ?v1) ⇒ compatible$n(?v1, complement$c(register_pair$g(?v0, ?v1))))
+tff(axiom63,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'compatible$c'(A__questionmark_v0,A__questionmark_v1)
+     => 'compatible$n'(A__questionmark_v1,'complement$c'('register_pair$g'(A__questionmark_v0,A__questionmark_v1))) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (compatible$d(?v0, ?v1) ⇒ compatible$o(?v1, complement$d(register_pair$i(?v0, ?v1))))
+tff(axiom64,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'compatible$d'(A__questionmark_v0,A__questionmark_v1)
+     => 'compatible$o'(A__questionmark_v1,'complement$d'('register_pair$i'(A__questionmark_v0,A__questionmark_v1))) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (compatible$(?v0, ?v1) ⇒ compatible$p(?v1, complement$(register_pair$a(?v0, ?v1))))
+tff(axiom65,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'compatible$'(A__questionmark_v0,A__questionmark_v1)
+     => 'compatible$p'(A__questionmark_v1,'complement$'('register_pair$a'(A__questionmark_v0,A__questionmark_v1))) ) ).
+
+%% ∀ ?v0:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (compatible$a(?v0, ?v1) ⇒ compatible$q(?v0, complement$a(register_pair$d(?v0, ?v1))))
+tff(axiom66,axiom,
+    ! [A__questionmark_v0: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'compatible$a'(A__questionmark_v0,A__questionmark_v1)
+     => 'compatible$q'(A__questionmark_v0,'complement$a'('register_pair$d'(A__questionmark_v0,A__questionmark_v1))) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (compatible$b(?v0, ?v1) ⇒ compatible$r(?v0, complement$b(register_pair$(?v0, ?v1))))
+tff(axiom67,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'compatible$b'(A__questionmark_v0,A__questionmark_v1)
+     => 'compatible$r'(A__questionmark_v0,'complement$b'('register_pair$'(A__questionmark_v0,A__questionmark_v1))) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (compatible$c(?v0, ?v1) ⇒ compatible$s(?v0, complement$c(register_pair$g(?v0, ?v1))))
+tff(axiom68,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'compatible$c'(A__questionmark_v0,A__questionmark_v1)
+     => 'compatible$s'(A__questionmark_v0,'complement$c'('register_pair$g'(A__questionmark_v0,A__questionmark_v1))) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (compatible$d(?v0, ?v1) ⇒ compatible$t(?v0, complement$d(register_pair$i(?v0, ?v1))))
+tff(axiom69,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'compatible$d'(A__questionmark_v0,A__questionmark_v1)
+     => 'compatible$t'(A__questionmark_v0,'complement$d'('register_pair$i'(A__questionmark_v0,A__questionmark_v1))) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (compatible$(?v0, ?v1) ⇒ compatible$b(?v0, complement$(register_pair$a(?v0, ?v1))))
+tff(axiom70,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'compatible$'(A__questionmark_v0,A__questionmark_v1)
+     => 'compatible$b'(A__questionmark_v0,'complement$'('register_pair$a'(A__questionmark_v0,A__questionmark_v1))) ) ).
+
+%% ∀ ?v0:C_ell2_c_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$ ?v1:A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$ (complements$r(?v0, ?v1) = (compatible$u(?v0, ?v1) ∧ iso_register$(register_pair$q(?v0, ?v1))))
+tff(axiom71,axiom,
+    ! [A__questionmark_v0: 'C_ell2_c_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$',A__questionmark_v1: 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$'] :
+      ( 'complements$r'(A__questionmark_v0,A__questionmark_v1)
+    <=> ( 'compatible$u'(A__questionmark_v0,A__questionmark_v1)
+        & 'iso_register$'('register_pair$q'(A__questionmark_v0,A__questionmark_v1)) ) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (complements$s(?v0, ?v1) = (compatible$b(?v0, ?v1) ∧ iso_register$a(register_pair$(?v0, ?v1))))
+tff(axiom72,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'complements$s'(A__questionmark_v0,A__questionmark_v1)
+    <=> ( 'compatible$b'(A__questionmark_v0,A__questionmark_v1)
+        & 'iso_register$a'('register_pair$'(A__questionmark_v0,A__questionmark_v1)) ) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (complements$p(?v0, ?v1) = (compatible$c(?v0, ?v1) ∧ iso_register$b(register_pair$g(?v0, ?v1))))
+tff(axiom73,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'complements$p'(A__questionmark_v0,A__questionmark_v1)
+    <=> ( 'compatible$c'(A__questionmark_v0,A__questionmark_v1)
+        & 'iso_register$b'('register_pair$g'(A__questionmark_v0,A__questionmark_v1)) ) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (complements$t(?v0, ?v1) = (compatible$(?v0, ?v1) ∧ iso_register$c(register_pair$a(?v0, ?v1))))
+tff(axiom74,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'complements$t'(A__questionmark_v0,A__questionmark_v1)
+    <=> ( 'compatible$'(A__questionmark_v0,A__questionmark_v1)
+        & 'iso_register$c'('register_pair$a'(A__questionmark_v0,A__questionmark_v1)) ) ) ).
+
+%% ∀ ?v0:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (complements$(?v0, ?v1) = (compatible$a(?v0, ?v1) ∧ iso_register$d(register_pair$d(?v0, ?v1))))
+tff(axiom75,axiom,
+    ! [A__questionmark_v0: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'complements$'(A__questionmark_v0,A__questionmark_v1)
+    <=> ( 'compatible$a'(A__questionmark_v0,A__questionmark_v1)
+        & 'iso_register$d'('register_pair$d'(A__questionmark_v0,A__questionmark_v1)) ) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (complements$a(?v0, ?v1) = (compatible$d(?v0, ?v1) ∧ iso_register$e(register_pair$i(?v0, ?v1))))
+tff(axiom76,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'complements$a'(A__questionmark_v0,A__questionmark_v1)
+    <=> ( 'compatible$d'(A__questionmark_v0,A__questionmark_v1)
+        & 'iso_register$e'('register_pair$i'(A__questionmark_v0,A__questionmark_v1)) ) ) ).
+
+%% ∀ ?v0:C_ell2_c_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$ ?v1:A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$ ((compatible$u(?v0, ?v1) ∧ iso_register$(register_pair$q(?v0, ?v1))) ⇒ complements$r(?v0, ?v1))
+tff(axiom77,axiom,
+    ! [A__questionmark_v0: 'C_ell2_c_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$',A__questionmark_v1: 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$'] :
+      ( ( 'compatible$u'(A__questionmark_v0,A__questionmark_v1)
+        & 'iso_register$'('register_pair$q'(A__questionmark_v0,A__questionmark_v1)) )
+     => 'complements$r'(A__questionmark_v0,A__questionmark_v1) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((compatible$b(?v0, ?v1) ∧ iso_register$a(register_pair$(?v0, ?v1))) ⇒ complements$s(?v0, ?v1))
+tff(axiom78,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'compatible$b'(A__questionmark_v0,A__questionmark_v1)
+        & 'iso_register$a'('register_pair$'(A__questionmark_v0,A__questionmark_v1)) )
+     => 'complements$s'(A__questionmark_v0,A__questionmark_v1) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((compatible$c(?v0, ?v1) ∧ iso_register$b(register_pair$g(?v0, ?v1))) ⇒ complements$p(?v0, ?v1))
+tff(axiom79,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'compatible$c'(A__questionmark_v0,A__questionmark_v1)
+        & 'iso_register$b'('register_pair$g'(A__questionmark_v0,A__questionmark_v1)) )
+     => 'complements$p'(A__questionmark_v0,A__questionmark_v1) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((compatible$(?v0, ?v1) ∧ iso_register$c(register_pair$a(?v0, ?v1))) ⇒ complements$t(?v0, ?v1))
+tff(axiom80,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'compatible$'(A__questionmark_v0,A__questionmark_v1)
+        & 'iso_register$c'('register_pair$a'(A__questionmark_v0,A__questionmark_v1)) )
+     => 'complements$t'(A__questionmark_v0,A__questionmark_v1) ) ).
+
+%% ∀ ?v0:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((compatible$a(?v0, ?v1) ∧ iso_register$d(register_pair$d(?v0, ?v1))) ⇒ complements$(?v0, ?v1))
+tff(axiom81,axiom,
+    ! [A__questionmark_v0: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'compatible$a'(A__questionmark_v0,A__questionmark_v1)
+        & 'iso_register$d'('register_pair$d'(A__questionmark_v0,A__questionmark_v1)) )
+     => 'complements$'(A__questionmark_v0,A__questionmark_v1) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((compatible$d(?v0, ?v1) ∧ iso_register$e(register_pair$i(?v0, ?v1))) ⇒ complements$a(?v0, ?v1))
+tff(axiom82,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'compatible$d'(A__questionmark_v0,A__questionmark_v1)
+        & 'iso_register$e'('register_pair$i'(A__questionmark_v0,A__questionmark_v1)) )
+     => 'complements$a'(A__questionmark_v0,A__questionmark_v1) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v2:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((complements$p(?v0, ?v1) ∧ equivalent_registers$(?v1, ?v2)) ⇒ complements$a(?v0, ?v2))
+tff(axiom83,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v2: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'complements$p'(A__questionmark_v0,A__questionmark_v1)
+        & 'equivalent_registers$'(A__questionmark_v1,A__questionmark_v2) )
+     => 'complements$a'(A__questionmark_v0,A__questionmark_v2) ) ).
+
+%% ∀ ?v0:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v2:A_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((complements$(?v0, ?v1) ∧ equivalent_registers$v(?v1, ?v2)) ⇒ complements$(?v0, ?v2))
+tff(axiom84,axiom,
+    ! [A__questionmark_v0: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v2: 'A_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'complements$'(A__questionmark_v0,A__questionmark_v1)
+        & 'equivalent_registers$v'(A__questionmark_v1,A__questionmark_v2) )
+     => 'complements$'(A__questionmark_v0,A__questionmark_v2) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v2:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((complements$a(?v0, ?v1) ∧ equivalent_registers$w(?v1, ?v2)) ⇒ complements$a(?v0, ?v2))
+tff(axiom85,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v2: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'complements$a'(A__questionmark_v0,A__questionmark_v1)
+        & 'equivalent_registers$w'(A__questionmark_v1,A__questionmark_v2) )
+     => 'complements$a'(A__questionmark_v0,A__questionmark_v2) ) ).
+
+%% ∀ ?v0:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_ell2_a_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$ ?v2:C_ell2_c_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$ ((register$(?v0) ∧ compatible$v(?v1, ?v2)) ⇒ (register_pair$a(comp$d(?v0, ?v1), comp$e(?v0, ?v2)) = comp$f(?v0, register_pair$r(?v1, ?v2))))
+tff(axiom86,axiom,
+    ! [A__questionmark_v0: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_ell2_a_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$',A__questionmark_v2: 'C_ell2_c_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$'] :
+      ( ( 'register$'(A__questionmark_v0)
+        & 'compatible$v'(A__questionmark_v1,A__questionmark_v2) )
+     => ( 'register_pair$a'('comp$d'(A__questionmark_v0,A__questionmark_v1),'comp$e'(A__questionmark_v0,A__questionmark_v2)) = 'comp$f'(A__questionmark_v0,'register_pair$r'(A__questionmark_v1,A__questionmark_v2)) ) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$ ?v2:C_ell2_c_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$ ((register$a(?v0) ∧ compatible$w(?v1, ?v2)) ⇒ (register_pair$a(comp$g(?v0, ?v1), comp$h(?v0, ?v2)) = comp$i(?v0, register_pair$s(?v1, ?v2))))
+tff(axiom87,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$',A__questionmark_v2: 'C_ell2_c_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$'] :
+      ( ( 'register$a'(A__questionmark_v0)
+        & 'compatible$w'(A__questionmark_v1,A__questionmark_v2) )
+     => ( 'register_pair$a'('comp$g'(A__questionmark_v0,A__questionmark_v1),'comp$h'(A__questionmark_v0,A__questionmark_v2)) = 'comp$i'(A__questionmark_v0,'register_pair$s'(A__questionmark_v1,A__questionmark_v2)) ) ) ).
+
+%% ∀ ?v0:B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v2:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((register$j(?v0) ∧ compatible$(?v1, ?v2)) ⇒ (register_pair$a(comp$j(?v0, ?v1), comp$k(?v0, ?v2)) = comp$l(?v0, register_pair$a(?v1, ?v2))))
+tff(axiom88,axiom,
+    ! [A__questionmark_v0: 'B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v2: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'register$j'(A__questionmark_v0)
+        & 'compatible$'(A__questionmark_v1,A__questionmark_v2) )
+     => ( 'register_pair$a'('comp$j'(A__questionmark_v0,A__questionmark_v1),'comp$k'(A__questionmark_v0,A__questionmark_v2)) = 'comp$l'(A__questionmark_v0,'register_pair$a'(A__questionmark_v1,A__questionmark_v2)) ) ) ).
+
+%% ∀ ?v0:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_ell2_a_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$ ?v2:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$ ((register$(?v0) ∧ compatible$x(?v1, ?v2)) ⇒ (register_pair$g(comp$d(?v0, ?v1), comp$m(?v0, ?v2)) = comp$n(?v0, register_pair$t(?v1, ?v2))))
+tff(axiom89,axiom,
+    ! [A__questionmark_v0: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_ell2_a_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$',A__questionmark_v2: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$'] :
+      ( ( 'register$'(A__questionmark_v0)
+        & 'compatible$x'(A__questionmark_v1,A__questionmark_v2) )
+     => ( 'register_pair$g'('comp$d'(A__questionmark_v0,A__questionmark_v1),'comp$m'(A__questionmark_v0,A__questionmark_v2)) = 'comp$n'(A__questionmark_v0,'register_pair$t'(A__questionmark_v1,A__questionmark_v2)) ) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$ ?v2:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$ ((register$a(?v0) ∧ compatible$y(?v1, ?v2)) ⇒ (register_pair$g(comp$g(?v0, ?v1), comp$o(?v0, ?v2)) = comp$p(?v0, register_pair$u(?v1, ?v2))))
+tff(axiom90,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$',A__questionmark_v2: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$'] :
+      ( ( 'register$a'(A__questionmark_v0)
+        & 'compatible$y'(A__questionmark_v1,A__questionmark_v2) )
+     => ( 'register_pair$g'('comp$g'(A__questionmark_v0,A__questionmark_v1),'comp$o'(A__questionmark_v0,A__questionmark_v2)) = 'comp$p'(A__questionmark_v0,'register_pair$u'(A__questionmark_v1,A__questionmark_v2)) ) ) ).
+
+%% ∀ ?v0:B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v2:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((register$j(?v0) ∧ compatible$c(?v1, ?v2)) ⇒ (register_pair$g(comp$j(?v0, ?v1), comp$q(?v0, ?v2)) = comp$r(?v0, register_pair$g(?v1, ?v2))))
+tff(axiom91,axiom,
+    ! [A__questionmark_v0: 'B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v2: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'register$j'(A__questionmark_v0)
+        & 'compatible$c'(A__questionmark_v1,A__questionmark_v2) )
+     => ( 'register_pair$g'('comp$j'(A__questionmark_v0,A__questionmark_v1),'comp$q'(A__questionmark_v0,A__questionmark_v2)) = 'comp$r'(A__questionmark_v0,'register_pair$g'(A__questionmark_v1,A__questionmark_v2)) ) ) ).
+
+%% ∀ ?v0:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_ell2_a_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$ ?v2:A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$ ((register$(?v0) ∧ compatible$z(?v1, ?v2)) ⇒ (register_pair$(comp$d(?v0, ?v1), comp$s(?v0, ?v2)) = comp$t(?v0, register_pair$v(?v1, ?v2))))
+tff(axiom92,axiom,
+    ! [A__questionmark_v0: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_ell2_a_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$',A__questionmark_v2: 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$'] :
+      ( ( 'register$'(A__questionmark_v0)
+        & 'compatible$z'(A__questionmark_v1,A__questionmark_v2) )
+     => ( 'register_pair$'('comp$d'(A__questionmark_v0,A__questionmark_v1),'comp$s'(A__questionmark_v0,A__questionmark_v2)) = 'comp$t'(A__questionmark_v0,'register_pair$v'(A__questionmark_v1,A__questionmark_v2)) ) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$ ?v2:A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$ ((register$a(?v0) ∧ compatible$aa(?v1, ?v2)) ⇒ (register_pair$(comp$g(?v0, ?v1), comp$u(?v0, ?v2)) = comp$v(?v0, register_pair$w(?v1, ?v2))))
+tff(axiom93,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$',A__questionmark_v2: 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$'] :
+      ( ( 'register$a'(A__questionmark_v0)
+        & 'compatible$aa'(A__questionmark_v1,A__questionmark_v2) )
+     => ( 'register_pair$'('comp$g'(A__questionmark_v0,A__questionmark_v1),'comp$u'(A__questionmark_v0,A__questionmark_v2)) = 'comp$v'(A__questionmark_v0,'register_pair$w'(A__questionmark_v1,A__questionmark_v2)) ) ) ).
+
+%% ∀ ?v0:B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v2:A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((register$j(?v0) ∧ compatible$b(?v1, ?v2)) ⇒ (register_pair$(comp$j(?v0, ?v1), comp$w(?v0, ?v2)) = comp$x(?v0, register_pair$(?v1, ?v2))))
+tff(axiom94,axiom,
+    ! [A__questionmark_v0: 'B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v2: 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'register$j'(A__questionmark_v0)
+        & 'compatible$b'(A__questionmark_v1,A__questionmark_v2) )
+     => ( 'register_pair$'('comp$j'(A__questionmark_v0,A__questionmark_v1),'comp$w'(A__questionmark_v0,A__questionmark_v2)) = 'comp$x'(A__questionmark_v0,'register_pair$'(A__questionmark_v1,A__questionmark_v2)) ) ) ).
+
+%% ∀ ?v0:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_ell2_c_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$ ?v2:A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$ ((register$d(?v0) ∧ compatible$u(?v1, ?v2)) ⇒ (register_pair$b(comp$y(?v0, ?v1), comp$z(?v0, ?v2)) = comp$(?v0, register_pair$q(?v1, ?v2))))
+tff(axiom95,axiom,
+    ! [A__questionmark_v0: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_ell2_c_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$',A__questionmark_v2: 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$'] :
+      ( ( 'register$d'(A__questionmark_v0)
+        & 'compatible$u'(A__questionmark_v1,A__questionmark_v2) )
+     => ( 'register_pair$b'('comp$y'(A__questionmark_v0,A__questionmark_v1),'comp$z'(A__questionmark_v0,A__questionmark_v2)) = 'comp$'(A__questionmark_v0,'register_pair$q'(A__questionmark_v1,A__questionmark_v2)) ) ) ).
+
+%% (t1$ = fun_app$a(inv_into$a(top$, register_pair$n(register_pair$a(f$, g$), complement$(register_pair$a(f$, g$)))), butterfly$(ket$(default$), ket$(default$))))
+tff(axiom96,axiom,
+    't1$' = 'fun_app$a'('inv_into$a'('top$','register_pair$n'('register_pair$a'('f$','g$'),'complement$'('register_pair$a'('f$','g$')))),'butterfly$'('ket$'('default$'),'ket$'('default$'))) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v2:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((compatible$(?v0, ?v1) ∧ (iso_register$c(register_pair$a(?v0, ?v1)) ∧ (compatible$(?v0, ?v2) ∧ iso_register$c(register_pair$a(?v0, ?v2))))) ⇒ equivalent_registers$t(?v1, ?v2))
+tff(axiom97,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v2: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'compatible$'(A__questionmark_v0,A__questionmark_v1)
+        & 'iso_register$c'('register_pair$a'(A__questionmark_v0,A__questionmark_v1))
+        & 'compatible$'(A__questionmark_v0,A__questionmark_v2)
+        & 'iso_register$c'('register_pair$a'(A__questionmark_v0,A__questionmark_v2)) )
+     => 'equivalent_registers$t'(A__questionmark_v1,A__questionmark_v2) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v2:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((compatible$c(?v0, ?v1) ∧ (iso_register$b(register_pair$g(?v0, ?v1)) ∧ (compatible$(?v0, ?v2) ∧ iso_register$c(register_pair$a(?v0, ?v2))))) ⇒ equivalent_registers$x(?v1, ?v2))
+tff(axiom98,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v2: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'compatible$c'(A__questionmark_v0,A__questionmark_v1)
+        & 'iso_register$b'('register_pair$g'(A__questionmark_v0,A__questionmark_v1))
+        & 'compatible$'(A__questionmark_v0,A__questionmark_v2)
+        & 'iso_register$c'('register_pair$a'(A__questionmark_v0,A__questionmark_v2)) )
+     => 'equivalent_registers$x'(A__questionmark_v1,A__questionmark_v2) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v2:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((compatible$(?v0, ?v1) ∧ (iso_register$c(register_pair$a(?v0, ?v1)) ∧ (compatible$c(?v0, ?v2) ∧ iso_register$b(register_pair$g(?v0, ?v2))))) ⇒ equivalent_registers$y(?v1, ?v2))
+tff(axiom99,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v2: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'compatible$'(A__questionmark_v0,A__questionmark_v1)
+        & 'iso_register$c'('register_pair$a'(A__questionmark_v0,A__questionmark_v1))
+        & 'compatible$c'(A__questionmark_v0,A__questionmark_v2)
+        & 'iso_register$b'('register_pair$g'(A__questionmark_v0,A__questionmark_v2)) )
+     => 'equivalent_registers$y'(A__questionmark_v1,A__questionmark_v2) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v2:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((compatible$b(?v0, ?v1) ∧ (iso_register$a(register_pair$(?v0, ?v1)) ∧ (compatible$(?v0, ?v2) ∧ iso_register$c(register_pair$a(?v0, ?v2))))) ⇒ equivalent_registers$z(?v1, ?v2))
+tff(axiom100,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v2: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'compatible$b'(A__questionmark_v0,A__questionmark_v1)
+        & 'iso_register$a'('register_pair$'(A__questionmark_v0,A__questionmark_v1))
+        & 'compatible$'(A__questionmark_v0,A__questionmark_v2)
+        & 'iso_register$c'('register_pair$a'(A__questionmark_v0,A__questionmark_v2)) )
+     => 'equivalent_registers$z'(A__questionmark_v1,A__questionmark_v2) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v2:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((compatible$c(?v0, ?v1) ∧ (iso_register$b(register_pair$g(?v0, ?v1)) ∧ (compatible$c(?v0, ?v2) ∧ iso_register$b(register_pair$g(?v0, ?v2))))) ⇒ equivalent_registers$m(?v1, ?v2))
+tff(axiom101,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v2: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'compatible$c'(A__questionmark_v0,A__questionmark_v1)
+        & 'iso_register$b'('register_pair$g'(A__questionmark_v0,A__questionmark_v1))
+        & 'compatible$c'(A__questionmark_v0,A__questionmark_v2)
+        & 'iso_register$b'('register_pair$g'(A__questionmark_v0,A__questionmark_v2)) )
+     => 'equivalent_registers$m'(A__questionmark_v1,A__questionmark_v2) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v2:A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((compatible$(?v0, ?v1) ∧ (iso_register$c(register_pair$a(?v0, ?v1)) ∧ (compatible$b(?v0, ?v2) ∧ iso_register$a(register_pair$(?v0, ?v2))))) ⇒ equivalent_registers$aa(?v1, ?v2))
+tff(axiom102,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v2: 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'compatible$'(A__questionmark_v0,A__questionmark_v1)
+        & 'iso_register$c'('register_pair$a'(A__questionmark_v0,A__questionmark_v1))
+        & 'compatible$b'(A__questionmark_v0,A__questionmark_v2)
+        & 'iso_register$a'('register_pair$'(A__questionmark_v0,A__questionmark_v2)) )
+     => 'equivalent_registers$aa'(A__questionmark_v1,A__questionmark_v2) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v2:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((compatible$b(?v0, ?v1) ∧ (iso_register$a(register_pair$(?v0, ?v1)) ∧ (compatible$c(?v0, ?v2) ∧ iso_register$b(register_pair$g(?v0, ?v2))))) ⇒ equivalent_registers$g(?v1, ?v2))
+tff(axiom103,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v2: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'compatible$b'(A__questionmark_v0,A__questionmark_v1)
+        & 'iso_register$a'('register_pair$'(A__questionmark_v0,A__questionmark_v1))
+        & 'compatible$c'(A__questionmark_v0,A__questionmark_v2)
+        & 'iso_register$b'('register_pair$g'(A__questionmark_v0,A__questionmark_v2)) )
+     => 'equivalent_registers$g'(A__questionmark_v1,A__questionmark_v2) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v2:A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((compatible$c(?v0, ?v1) ∧ (iso_register$b(register_pair$g(?v0, ?v1)) ∧ (compatible$b(?v0, ?v2) ∧ iso_register$a(register_pair$(?v0, ?v2))))) ⇒ equivalent_registers$k(?v1, ?v2))
+tff(axiom104,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v2: 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'compatible$c'(A__questionmark_v0,A__questionmark_v1)
+        & 'iso_register$b'('register_pair$g'(A__questionmark_v0,A__questionmark_v1))
+        & 'compatible$b'(A__questionmark_v0,A__questionmark_v2)
+        & 'iso_register$a'('register_pair$'(A__questionmark_v0,A__questionmark_v2)) )
+     => 'equivalent_registers$k'(A__questionmark_v1,A__questionmark_v2) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v2:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((compatible$d(?v0, ?v1) ∧ (iso_register$e(register_pair$i(?v0, ?v1)) ∧ (compatible$(?v0, ?v2) ∧ iso_register$c(register_pair$a(?v0, ?v2))))) ⇒ equivalent_registers$ab(?v1, ?v2))
+tff(axiom105,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v2: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'compatible$d'(A__questionmark_v0,A__questionmark_v1)
+        & 'iso_register$e'('register_pair$i'(A__questionmark_v0,A__questionmark_v1))
+        & 'compatible$'(A__questionmark_v0,A__questionmark_v2)
+        & 'iso_register$c'('register_pair$a'(A__questionmark_v0,A__questionmark_v2)) )
+     => 'equivalent_registers$ab'(A__questionmark_v1,A__questionmark_v2) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v2:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((compatible$(?v0, ?v1) ∧ (iso_register$c(register_pair$a(?v0, ?v1)) ∧ (compatible$d(?v0, ?v2) ∧ iso_register$e(register_pair$i(?v0, ?v2))))) ⇒ equivalent_registers$ac(?v1, ?v2))
+tff(axiom106,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v2: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'compatible$'(A__questionmark_v0,A__questionmark_v1)
+        & 'iso_register$c'('register_pair$a'(A__questionmark_v0,A__questionmark_v1))
+        & 'compatible$d'(A__questionmark_v0,A__questionmark_v2)
+        & 'iso_register$e'('register_pair$i'(A__questionmark_v0,A__questionmark_v2)) )
+     => 'equivalent_registers$ac'(A__questionmark_v1,A__questionmark_v2) ) ).
+
+%% ∀ ?v0:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$ ?v1:B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$ ?v2:B_ell2_b_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$ ((register$b(?v0) ∧ (iso_register$f(?v1) ∧ (comp$a(?v0, ?v1) = ?v2))) ⇒ equivalent_registers$ad(?v0, ?v2))
+tff(axiom107,axiom,
+    ! [A__questionmark_v0: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$',A__questionmark_v1: 'B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$',A__questionmark_v2: 'B_ell2_b_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$'] :
+      ( ( 'register$b'(A__questionmark_v0)
+        & 'iso_register$f'(A__questionmark_v1)
+        & ( 'comp$a'(A__questionmark_v0,A__questionmark_v1) = A__questionmark_v2 ) )
+     => 'equivalent_registers$ad'(A__questionmark_v0,A__questionmark_v2) ) ).
+
+%% ∀ ?v0:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$ ?v2:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((register$d(?v0) ∧ (iso_register$(?v1) ∧ (comp$(?v0, ?v1) = ?v2))) ⇒ equivalent_registers$(?v0, ?v2))
+tff(axiom108,axiom,
+    ! [A__questionmark_v0: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$',A__questionmark_v2: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'register$d'(A__questionmark_v0)
+        & 'iso_register$'(A__questionmark_v1)
+        & ( 'comp$'(A__questionmark_v0,A__questionmark_v1) = A__questionmark_v2 ) )
+     => 'equivalent_registers$'(A__questionmark_v0,A__questionmark_v2) ) ).
+
+%% ∀ ?v0:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$ ?v1:B_ell2_b_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$ (equivalent_registers$ad(?v0, ?v1) = (register$b(?v0) ∧ ∃ ?v2:B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$ (iso_register$f(?v2) ∧ (comp$a(?v0, ?v2) = ?v1))))
+tff(axiom109,axiom,
+    ! [A__questionmark_v0: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$',A__questionmark_v1: 'B_ell2_b_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$'] :
+      ( 'equivalent_registers$ad'(A__questionmark_v0,A__questionmark_v1)
+    <=> ( 'register$b'(A__questionmark_v0)
+        & ? [A__questionmark_v2: 'B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$'] :
+            ( 'iso_register$f'(A__questionmark_v2)
+            & ( 'comp$a'(A__questionmark_v0,A__questionmark_v2) = A__questionmark_v1 ) ) ) ) ).
+
+%% ∀ ?v0:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (equivalent_registers$(?v0, ?v1) = (register$d(?v0) ∧ ∃ ?v2:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$ (iso_register$(?v2) ∧ (comp$(?v0, ?v2) = ?v1))))
+tff(axiom110,axiom,
+    ! [A__questionmark_v0: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'equivalent_registers$'(A__questionmark_v0,A__questionmark_v1)
+    <=> ( 'register$d'(A__questionmark_v0)
+        & ? [A__questionmark_v2: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$'] :
+            ( 'iso_register$'(A__questionmark_v2)
+            & ( 'comp$'(A__questionmark_v0,A__questionmark_v2) = A__questionmark_v1 ) ) ) ) ).
+
+%% ∀ ?v0:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (register$(?v0) ⇒ ∃ ?v1:C_b_complement_domain_ell2_c_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (compatible$g(?v0, ?v1) ∧ iso_register$g(register_pair$x(?v0, ?v1))))
+tff(axiom111,axiom,
+    ! [A__questionmark_v0: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'register$'(A__questionmark_v0)
+     => ? [A__questionmark_v1: 'C_b_complement_domain_ell2_c_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+          ( 'compatible$g'(A__questionmark_v0,A__questionmark_v1)
+          & 'iso_register$g'('register_pair$x'(A__questionmark_v0,A__questionmark_v1)) ) ) ).
+
+%% ∀ ?v0:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$ (register$e(?v0) ⇒ ∃ ?v1:C_a_c_prod_b_complement_domain_prod_a_b_complement_domain_complement_domain_ell2_c_a_c_prod_b_complement_domain_prod_a_b_complement_domain_complement_domain_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$ (compatible$e(?v0, ?v1) ∧ iso_register$h(register_pair$y(?v0, ?v1))))
+tff(axiom112,axiom,
+    ! [A__questionmark_v0: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$'] :
+      ( 'register$e'(A__questionmark_v0)
+     => ? [A__questionmark_v1: 'C_a_c_prod_b_complement_domain_prod_a_b_complement_domain_complement_domain_ell2_c_a_c_prod_b_complement_domain_prod_a_b_complement_domain_complement_domain_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$'] :
+          ( 'compatible$e'(A__questionmark_v0,A__questionmark_v1)
+          & 'iso_register$h'('register_pair$y'(A__questionmark_v0,A__questionmark_v1)) ) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (register$a(?v0) ⇒ ∃ ?v1:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (compatible$c(?v0, ?v1) ∧ iso_register$b(register_pair$g(?v0, ?v1))))
+tff(axiom113,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'register$a'(A__questionmark_v0)
+     => ? [A__questionmark_v1: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+          ( 'compatible$c'(A__questionmark_v0,A__questionmark_v1)
+          & 'iso_register$b'('register_pair$g'(A__questionmark_v0,A__questionmark_v1)) ) ) ).
+
+%% ∀ ?v0:B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((bij_betw$a(?v0, top$a, top$a) ∧ bij_betw$a(?v1, top$a, top$a)) ⇒ (inv_into$b(top$a, comp$aa(?v0, ?v1)) = comp$aa(inv_into$b(top$a, ?v1), inv_into$b(top$a, ?v0))))
+tff(axiom114,axiom,
+    ! [A__questionmark_v0: 'B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'bij_betw$a'(A__questionmark_v0,'top$a','top$a')
+        & 'bij_betw$a'(A__questionmark_v1,'top$a','top$a') )
+     => ( 'inv_into$b'('top$a','comp$aa'(A__questionmark_v0,A__questionmark_v1)) = 'comp$aa'('inv_into$b'('top$a',A__questionmark_v1),'inv_into$b'('top$a',A__questionmark_v0)) ) ) ).
+
+%% ∀ ?v0:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:B_ell2_b_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$ ((bij_betw$b(?v0, top$c, top$a) ∧ bij_betw$c(?v1, top$a, top$c)) ⇒ (inv_into$b(top$a, comp$ab(?v0, ?v1)) = comp$ab(inv_into$c(top$a, ?v1), inv_into$d(top$c, ?v0))))
+tff(axiom115,axiom,
+    ! [A__questionmark_v0: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'B_ell2_b_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$'] :
+      ( ( 'bij_betw$b'(A__questionmark_v0,'top$c','top$a')
+        & 'bij_betw$c'(A__questionmark_v1,'top$a','top$c') )
+     => ( 'inv_into$b'('top$a','comp$ab'(A__questionmark_v0,A__questionmark_v1)) = 'comp$ab'('inv_into$c'('top$a',A__questionmark_v1),'inv_into$d'('top$c',A__questionmark_v0)) ) ) ).
+
+%% ∀ ?v0:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$ ((bij_betw$d(?v0, top$d, top$a) ∧ bij_betw$e(?v1, top$a, top$d)) ⇒ (inv_into$b(top$a, comp$ac(?v0, ?v1)) = comp$ac(inv_into$e(top$a, ?v1), inv_into$f(top$d, ?v0))))
+tff(axiom116,axiom,
+    ! [A__questionmark_v0: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$'] :
+      ( ( 'bij_betw$d'(A__questionmark_v0,'top$d','top$a')
+        & 'bij_betw$e'(A__questionmark_v1,'top$a','top$d') )
+     => ( 'inv_into$b'('top$a','comp$ac'(A__questionmark_v0,A__questionmark_v1)) = 'comp$ac'('inv_into$e'('top$a',A__questionmark_v1),'inv_into$f'('top$d',A__questionmark_v0)) ) ) ).
+
+%% ∀ ?v0:B_ell2_b_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$ ?v1:B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((bij_betw$c(?v0, top$a, top$c) ∧ bij_betw$a(?v1, top$a, top$a)) ⇒ (inv_into$c(top$a, comp$ad(?v0, ?v1)) = comp$ae(inv_into$b(top$a, ?v1), inv_into$c(top$a, ?v0))))
+tff(axiom117,axiom,
+    ! [A__questionmark_v0: 'B_ell2_b_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$',A__questionmark_v1: 'B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'bij_betw$c'(A__questionmark_v0,'top$a','top$c')
+        & 'bij_betw$a'(A__questionmark_v1,'top$a','top$a') )
+     => ( 'inv_into$c'('top$a','comp$ad'(A__questionmark_v0,A__questionmark_v1)) = 'comp$ae'('inv_into$b'('top$a',A__questionmark_v1),'inv_into$c'('top$a',A__questionmark_v0)) ) ) ).
+
+%% ∀ ?v0:B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$ ?v1:B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((bij_betw$e(?v0, top$a, top$d) ∧ bij_betw$a(?v1, top$a, top$a)) ⇒ (inv_into$e(top$a, comp$af(?v0, ?v1)) = comp$r(inv_into$b(top$a, ?v1), inv_into$e(top$a, ?v0))))
+tff(axiom118,axiom,
+    ! [A__questionmark_v0: 'B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$',A__questionmark_v1: 'B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'bij_betw$e'(A__questionmark_v0,'top$a','top$d')
+        & 'bij_betw$a'(A__questionmark_v1,'top$a','top$a') )
+     => ( 'inv_into$e'('top$a','comp$af'(A__questionmark_v0,A__questionmark_v1)) = 'comp$r'('inv_into$b'('top$a',A__questionmark_v1),'inv_into$e'('top$a',A__questionmark_v0)) ) ) ).
+
+%% ∀ ?v0:B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((bij_betw$a(?v0, top$a, top$a) ∧ bij_betw$b(?v1, top$c, top$a)) ⇒ (inv_into$d(top$c, comp$ae(?v0, ?v1)) = comp$ad(inv_into$d(top$c, ?v1), inv_into$b(top$a, ?v0))))
+tff(axiom119,axiom,
+    ! [A__questionmark_v0: 'B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'bij_betw$a'(A__questionmark_v0,'top$a','top$a')
+        & 'bij_betw$b'(A__questionmark_v1,'top$c','top$a') )
+     => ( 'inv_into$d'('top$c','comp$ae'(A__questionmark_v0,A__questionmark_v1)) = 'comp$ad'('inv_into$d'('top$c',A__questionmark_v1),'inv_into$b'('top$a',A__questionmark_v0)) ) ) ).
+
+%% ∀ ?v0:B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((bij_betw$a(?v0, top$a, top$a) ∧ bij_betw$d(?v1, top$d, top$a)) ⇒ (inv_into$f(top$d, comp$r(?v0, ?v1)) = comp$af(inv_into$f(top$d, ?v1), inv_into$b(top$a, ?v0))))
+tff(axiom120,axiom,
+    ! [A__questionmark_v0: 'B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'bij_betw$a'(A__questionmark_v0,'top$a','top$a')
+        & 'bij_betw$d'(A__questionmark_v1,'top$d','top$a') )
+     => ( 'inv_into$f'('top$d','comp$r'(A__questionmark_v0,A__questionmark_v1)) = 'comp$af'('inv_into$f'('top$d',A__questionmark_v1),'inv_into$b'('top$a',A__questionmark_v0)) ) ) ).
+
+%% ∀ ?v0:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_c_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$ ?v1:B_ell2_b_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$ ((bij_betw$f(?v0, top$e, top$f) ∧ bij_betw$g(?v1, top$a, top$e)) ⇒ (inv_into$g(top$a, comp$ag(?v0, ?v1)) = comp$(inv_into$h(top$a, ?v1), inv_into$i(top$e, ?v0))))
+tff(axiom121,axiom,
+    ! [A__questionmark_v0: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_c_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$',A__questionmark_v1: 'B_ell2_b_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$'] :
+      ( ( 'bij_betw$f'(A__questionmark_v0,'top$e','top$f')
+        & 'bij_betw$g'(A__questionmark_v1,'top$a','top$e') )
+     => ( 'inv_into$g'('top$a','comp$ag'(A__questionmark_v0,A__questionmark_v1)) = 'comp$'('inv_into$h'('top$a',A__questionmark_v1),'inv_into$i'('top$e',A__questionmark_v0)) ) ) ).
+
+%% ∀ ?v0:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$ ((bij_betw$h(?v0, top$e, top$a) ∧ bij_betw$i(?v1, top$f, top$e)) ⇒ (inv_into$j(top$f, comp$(?v0, ?v1)) = comp$ag(inv_into$k(top$f, ?v1), inv_into$l(top$e, ?v0))))
+tff(axiom122,axiom,
+    ! [A__questionmark_v0: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$'] :
+      ( ( 'bij_betw$h'(A__questionmark_v0,'top$e','top$a')
+        & 'bij_betw$i'(A__questionmark_v1,'top$f','top$e') )
+     => ( 'inv_into$j'('top$f','comp$'(A__questionmark_v0,A__questionmark_v1)) = 'comp$ag'('inv_into$k'('top$f',A__questionmark_v1),'inv_into$l'('top$e',A__questionmark_v0)) ) ) ).
+
+%% ∀ ?v0:A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:B_ell2_b_ell2_cblinfun_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$ ((bij_betw$(?v0, top$, top$a) ∧ bij_betw$j(?v1, top$a, top$)) ⇒ (inv_into$b(top$a, comp$ah(?v0, ?v1)) = comp$ah(inv_into$m(top$a, ?v1), inv_into$a(top$, ?v0))))
+tff(axiom123,axiom,
+    ! [A__questionmark_v0: 'A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'B_ell2_b_ell2_cblinfun_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$'] :
+      ( ( 'bij_betw$'(A__questionmark_v0,'top$','top$a')
+        & 'bij_betw$j'(A__questionmark_v1,'top$a','top$') )
+     => ( 'inv_into$b'('top$a','comp$ah'(A__questionmark_v0,A__questionmark_v1)) = 'comp$ah'('inv_into$m'('top$a',A__questionmark_v1),'inv_into$a'('top$',A__questionmark_v0)) ) ) ).
+
+%% ∀ ?v0:B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (iso_register$i(?v0) ⇒ bij_betw$a(?v0, top$a, top$a))
+tff(axiom124,axiom,
+    ! [A__questionmark_v0: 'B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'iso_register$i'(A__questionmark_v0)
+     => 'bij_betw$a'(A__questionmark_v0,'top$a','top$a') ) ).
+
+%% ∀ ?v0:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (iso_register$g(?v0) ⇒ bij_betw$b(?v0, top$c, top$a))
+tff(axiom125,axiom,
+    ! [A__questionmark_v0: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'iso_register$g'(A__questionmark_v0)
+     => 'bij_betw$b'(A__questionmark_v0,'top$c','top$a') ) ).
+
+%% ∀ ?v0:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (iso_register$b(?v0) ⇒ bij_betw$d(?v0, top$d, top$a))
+tff(axiom126,axiom,
+    ! [A__questionmark_v0: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'iso_register$b'(A__questionmark_v0)
+     => 'bij_betw$d'(A__questionmark_v0,'top$d','top$a') ) ).
+
+%% ∀ ?v0:B_ell2_b_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$ (iso_register$j(?v0) ⇒ bij_betw$c(?v0, top$a, top$c))
+tff(axiom127,axiom,
+    ! [A__questionmark_v0: 'B_ell2_b_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$'] :
+      ( 'iso_register$j'(A__questionmark_v0)
+     => 'bij_betw$c'(A__questionmark_v0,'top$a','top$c') ) ).
+
+%% ∀ ?v0:B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$ (iso_register$f(?v0) ⇒ bij_betw$e(?v0, top$a, top$d))
+tff(axiom128,axiom,
+    ! [A__questionmark_v0: 'B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$'] :
+      ( 'iso_register$f'(A__questionmark_v0)
+     => 'bij_betw$e'(A__questionmark_v0,'top$a','top$d') ) ).
+
+%% ∀ ?v0:A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (iso_register$k(?v0) ⇒ bij_betw$(?v0, top$, top$a))
+tff(axiom129,axiom,
+    ! [A__questionmark_v0: 'A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'iso_register$k'(A__questionmark_v0)
+     => 'bij_betw$'(A__questionmark_v0,'top$','top$a') ) ).
+
+%% ∀ ?v0:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$ (iso_register$l(?v0) ⇒ bij_betw$k(?v0, top$c, top$c))
+tff(axiom130,axiom,
+    ! [A__questionmark_v0: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$'] :
+      ( 'iso_register$l'(A__questionmark_v0)
+     => 'bij_betw$k'(A__questionmark_v0,'top$c','top$c') ) ).
+
+%% ∀ ?v0:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$ (iso_register$m(?v0) ⇒ bij_betw$l(?v0, top$c, top$d))
+tff(axiom131,axiom,
+    ! [A__questionmark_v0: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$'] :
+      ( 'iso_register$m'(A__questionmark_v0)
+     => 'bij_betw$l'(A__questionmark_v0,'top$c','top$d') ) ).
+
+%% ∀ ?v0:C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (iso_register$d(?v0) ⇒ bij_betw$m(?v0, top$b, top$a))
+tff(axiom132,axiom,
+    ! [A__questionmark_v0: 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'iso_register$d'(A__questionmark_v0)
+     => 'bij_betw$m'(A__questionmark_v0,'top$b','top$a') ) ).
+
+%% ∀ ?v0:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$ (iso_register$n(?v0) ⇒ bij_betw$n(?v0, top$d, top$c))
+tff(axiom133,axiom,
+    ! [A__questionmark_v0: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$'] :
+      ( 'iso_register$n'(A__questionmark_v0)
+     => 'bij_betw$n'(A__questionmark_v0,'top$d','top$c') ) ).
+
+%% ∀ ?v0:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (iso_register$g(?v0) ⇒ iso_register$j(inv_into$d(top$c, ?v0)))
+tff(axiom134,axiom,
+    ! [A__questionmark_v0: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'iso_register$g'(A__questionmark_v0)
+     => 'iso_register$j'('inv_into$d'('top$c',A__questionmark_v0)) ) ).
+
+%% ∀ ?v0:C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (iso_register$d(?v0) ⇒ iso_register$o(inv_into$(top$b, ?v0)))
+tff(axiom135,axiom,
+    ! [A__questionmark_v0: 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'iso_register$d'(A__questionmark_v0)
+     => 'iso_register$o'('inv_into$'('top$b',A__questionmark_v0)) ) ).
+
+%% ∀ ?v0:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (iso_register$b(?v0) ⇒ iso_register$f(inv_into$f(top$d, ?v0)))
+tff(axiom136,axiom,
+    ! [A__questionmark_v0: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'iso_register$b'(A__questionmark_v0)
+     => 'iso_register$f'('inv_into$f'('top$d',A__questionmark_v0)) ) ).
+
+%% ∀ ?v0:A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$ (iso_register$p(?v0) ⇒ iso_register$q(inv_into$n(top$g, ?v0)))
+tff(axiom137,axiom,
+    ! [A__questionmark_v0: 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$'] :
+      ( 'iso_register$p'(A__questionmark_v0)
+     => 'iso_register$q'('inv_into$n'('top$g',A__questionmark_v0)) ) ).
+
+%% ∀ ?v0:A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (iso_register$e(?v0) ⇒ iso_register$r(inv_into$o(top$g, ?v0)))
+tff(axiom138,axiom,
+    ! [A__questionmark_v0: 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'iso_register$e'(A__questionmark_v0)
+     => 'iso_register$r'('inv_into$o'('top$g',A__questionmark_v0)) ) ).
+
+%% ∀ ?v0:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_c_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$ (iso_register$s(?v0) ⇒ iso_register$(inv_into$i(top$e, ?v0)))
+tff(axiom139,axiom,
+    ! [A__questionmark_v0: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_c_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$'] :
+      ( 'iso_register$s'(A__questionmark_v0)
+     => 'iso_register$'('inv_into$i'('top$e',A__questionmark_v0)) ) ).
+
+%% ∀ ?v0:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$ (iso_register$(?v0) ⇒ iso_register$s(inv_into$k(top$f, ?v0)))
+tff(axiom140,axiom,
+    ! [A__questionmark_v0: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$'] :
+      ( 'iso_register$'(A__questionmark_v0)
+     => 'iso_register$s'('inv_into$k'('top$f',A__questionmark_v0)) ) ).
+
+%% ∀ ?v0:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$ ?v2:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$ ((register$d(?v0) ∧ equivalent_registers$ae(?v1, ?v2)) ⇒ equivalent_registers$w(comp$(?v0, ?v1), comp$(?v0, ?v2)))
+tff(axiom141,axiom,
+    ! [A__questionmark_v0: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$',A__questionmark_v2: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$'] :
+      ( ( 'register$d'(A__questionmark_v0)
+        & 'equivalent_registers$ae'(A__questionmark_v1,A__questionmark_v2) )
+     => 'equivalent_registers$w'('comp$'(A__questionmark_v0,A__questionmark_v1),'comp$'(A__questionmark_v0,A__questionmark_v2)) ) ).
+
+%% ∀ ?v0:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$ ?v1:B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$ ?v2:B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$ ((register$b(?v0) ∧ equivalent_registers$af(?v1, ?v2)) ⇒ equivalent_registers$ag(comp$a(?v0, ?v1), comp$a(?v0, ?v2)))
+tff(axiom142,axiom,
+    ! [A__questionmark_v0: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$',A__questionmark_v1: 'B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$',A__questionmark_v2: 'B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$'] :
+      ( ( 'register$b'(A__questionmark_v0)
+        & 'equivalent_registers$af'(A__questionmark_v1,A__questionmark_v2) )
+     => 'equivalent_registers$ag'('comp$a'(A__questionmark_v0,A__questionmark_v1),'comp$a'(A__questionmark_v0,A__questionmark_v2)) ) ).
+
+%% ∀ ?v0:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$ ?v2:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$ ((register$d(?v0) ∧ equivalent_registers$ah(?v1, ?v2)) ⇒ equivalent_registers$(comp$ai(?v0, ?v1), comp$(?v0, ?v2)))
+tff(axiom143,axiom,
+    ! [A__questionmark_v0: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$',A__questionmark_v2: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$'] :
+      ( ( 'register$d'(A__questionmark_v0)
+        & 'equivalent_registers$ah'(A__questionmark_v1,A__questionmark_v2) )
+     => 'equivalent_registers$'('comp$ai'(A__questionmark_v0,A__questionmark_v1),'comp$'(A__questionmark_v0,A__questionmark_v2)) ) ).
+
+%% ∀ ?v0:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$ ?v2:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$ ((register$(?v0) ∧ equivalent_registers$ai(?v1, ?v2)) ⇒ equivalent_registers$(comp$m(?v0, ?v1), comp$aj(?v0, ?v2)))
+tff(axiom144,axiom,
+    ! [A__questionmark_v0: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$',A__questionmark_v2: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$'] :
+      ( ( 'register$'(A__questionmark_v0)
+        & 'equivalent_registers$ai'(A__questionmark_v1,A__questionmark_v2) )
+     => 'equivalent_registers$'('comp$m'(A__questionmark_v0,A__questionmark_v1),'comp$aj'(A__questionmark_v0,A__questionmark_v2)) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$ ?v2:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$ ((register$a(?v0) ∧ equivalent_registers$aj(?v1, ?v2)) ⇒ equivalent_registers$(comp$o(?v0, ?v1), comp$ak(?v0, ?v2)))
+tff(axiom145,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$',A__questionmark_v2: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$'] :
+      ( ( 'register$a'(A__questionmark_v0)
+        & 'equivalent_registers$aj'(A__questionmark_v1,A__questionmark_v2) )
+     => 'equivalent_registers$'('comp$o'(A__questionmark_v0,A__questionmark_v1),'comp$ak'(A__questionmark_v0,A__questionmark_v2)) ) ).
+
+%% ∀ ?v0:B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v2:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((register$j(?v0) ∧ equivalent_registers$(?v1, ?v2)) ⇒ equivalent_registers$(comp$q(?v0, ?v1), comp$al(?v0, ?v2)))
+tff(axiom146,axiom,
+    ! [A__questionmark_v0: 'B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v2: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'register$j'(A__questionmark_v0)
+        & 'equivalent_registers$'(A__questionmark_v1,A__questionmark_v2) )
+     => 'equivalent_registers$'('comp$q'(A__questionmark_v0,A__questionmark_v1),'comp$al'(A__questionmark_v0,A__questionmark_v2)) ) ).
+
+%% ∀ ?v0:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v2:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((compatible$a(?v0, ?v1) ∧ equivalent_registers$t(?v0, ?v2)) ⇒ equivalent_registers$ak(register_pair$d(?v0, ?v1), register_pair$d(?v2, ?v1)))
+tff(axiom147,axiom,
+    ! [A__questionmark_v0: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v2: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'compatible$a'(A__questionmark_v0,A__questionmark_v1)
+        & 'equivalent_registers$t'(A__questionmark_v0,A__questionmark_v2) )
+     => 'equivalent_registers$ak'('register_pair$d'(A__questionmark_v0,A__questionmark_v1),'register_pair$d'(A__questionmark_v2,A__questionmark_v1)) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v2:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((compatible$b(?v0, ?v1) ∧ equivalent_registers$l(?v0, ?v2)) ⇒ equivalent_registers$v(register_pair$(?v0, ?v1), register_pair$(?v2, ?v1)))
+tff(axiom148,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v2: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'compatible$b'(A__questionmark_v0,A__questionmark_v1)
+        & 'equivalent_registers$l'(A__questionmark_v0,A__questionmark_v2) )
+     => 'equivalent_registers$v'('register_pair$'(A__questionmark_v0,A__questionmark_v1),'register_pair$'(A__questionmark_v2,A__questionmark_v1)) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v2:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((compatible$c(?v0, ?v1) ∧ equivalent_registers$l(?v0, ?v2)) ⇒ equivalent_registers$al(register_pair$g(?v0, ?v1), register_pair$g(?v2, ?v1)))
+tff(axiom149,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v2: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'compatible$c'(A__questionmark_v0,A__questionmark_v1)
+        & 'equivalent_registers$l'(A__questionmark_v0,A__questionmark_v2) )
+     => 'equivalent_registers$al'('register_pair$g'(A__questionmark_v0,A__questionmark_v1),'register_pair$g'(A__questionmark_v2,A__questionmark_v1)) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v2:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((compatible$d(?v0, ?v1) ∧ equivalent_registers$l(?v0, ?v2)) ⇒ equivalent_registers$am(register_pair$i(?v0, ?v1), register_pair$i(?v2, ?v1)))
+tff(axiom150,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v2: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'compatible$d'(A__questionmark_v0,A__questionmark_v1)
+        & 'equivalent_registers$l'(A__questionmark_v0,A__questionmark_v2) )
+     => 'equivalent_registers$am'('register_pair$i'(A__questionmark_v0,A__questionmark_v1),'register_pair$i'(A__questionmark_v2,A__questionmark_v1)) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v2:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((compatible$(?v0, ?v1) ∧ equivalent_registers$l(?v0, ?v2)) ⇒ equivalent_registers$d(register_pair$a(?v0, ?v1), register_pair$a(?v2, ?v1)))
+tff(axiom151,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v2: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'compatible$'(A__questionmark_v0,A__questionmark_v1)
+        & 'equivalent_registers$l'(A__questionmark_v0,A__questionmark_v2) )
+     => 'equivalent_registers$d'('register_pair$a'(A__questionmark_v0,A__questionmark_v1),'register_pair$a'(A__questionmark_v2,A__questionmark_v1)) ) ).
+
+%% register$e(i$)
+tff(axiom152,axiom,
+    'register$e'('i$') ).
+
+%% bij_betw$b(register_pair$x(g$, complement$f(g$)), top$c, top$a)
+tff(axiom153,axiom,
+    'bij_betw$b'('register_pair$x'('g$','complement$f'('g$')),'top$c','top$a') ).
+
+%% bij_betw$d(register_pair$g(f$, complement$e(f$)), top$d, top$a)
+tff(axiom154,axiom,
+    'bij_betw$d'('register_pair$g'('f$','complement$e'('f$')),'top$d','top$a') ).
+
+%% (t2$ = fun_app$b(inv_into$o(top$g, register_pair$i(f$, register_pair$b(g$, complement$(register_pair$a(f$, g$))))), butterfly$(ket$(default$), ket$(default$))))
+tff(axiom155,axiom,
+    't2$' = 'fun_app$b'('inv_into$o'('top$g','register_pair$i'('f$','register_pair$b'('g$','complement$'('register_pair$a'('f$','g$'))))),'butterfly$'('ket$'('default$'),'ket$'('default$'))) ).
+
+%% ∀ ?v0:C_ell2_c_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$ ?v1:A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$ (compatible$u(?v0, ?v1) ⇒ register$e(register_pair$q(?v0, ?v1)))
+tff(axiom156,axiom,
+    ! [A__questionmark_v0: 'C_ell2_c_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$',A__questionmark_v1: 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$'] :
+      ( 'compatible$u'(A__questionmark_v0,A__questionmark_v1)
+     => 'register$e'('register_pair$q'(A__questionmark_v0,A__questionmark_v1)) ) ).
+
+%% ∀ ?v0:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (compatible$a(?v0, ?v1) ⇒ register$k(register_pair$d(?v0, ?v1)))
+tff(axiom157,axiom,
+    ! [A__questionmark_v0: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'compatible$a'(A__questionmark_v0,A__questionmark_v1)
+     => 'register$k'('register_pair$d'(A__questionmark_v0,A__questionmark_v1)) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (compatible$b(?v0, ?v1) ⇒ register$l(register_pair$(?v0, ?v1)))
+tff(axiom158,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'compatible$b'(A__questionmark_v0,A__questionmark_v1)
+     => 'register$l'('register_pair$'(A__questionmark_v0,A__questionmark_v1)) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (compatible$c(?v0, ?v1) ⇒ register$m(register_pair$g(?v0, ?v1)))
+tff(axiom159,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'compatible$c'(A__questionmark_v0,A__questionmark_v1)
+     => 'register$m'('register_pair$g'(A__questionmark_v0,A__questionmark_v1)) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (compatible$d(?v0, ?v1) ⇒ register$n(register_pair$i(?v0, ?v1)))
+tff(axiom160,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'compatible$d'(A__questionmark_v0,A__questionmark_v1)
+     => 'register$n'('register_pair$i'(A__questionmark_v0,A__questionmark_v1)) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (compatible$(?v0, ?v1) ⇒ register$g(register_pair$a(?v0, ?v1)))
+tff(axiom161,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'compatible$'(A__questionmark_v0,A__questionmark_v1)
+     => 'register$g'('register_pair$a'(A__questionmark_v0,A__questionmark_v1)) ) ).
+
+%% ∀ ?v0:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (compatible$ab(?v0, ?v1) ⇒ compatible$(?v1, ?v0))
+tff(axiom162,axiom,
+    ! [A__questionmark_v0: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'compatible$ab'(A__questionmark_v0,A__questionmark_v1)
+     => 'compatible$'(A__questionmark_v1,A__questionmark_v0) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (compatible$(?v0, ?v1) ⇒ compatible$ab(?v1, ?v0))
+tff(axiom163,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'compatible$'(A__questionmark_v0,A__questionmark_v1)
+     => 'compatible$ab'(A__questionmark_v1,A__questionmark_v0) ) ).
+
+%% ∀ ?v0:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v2:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((equivalent_registers$m(?v0, ?v1) ∧ equivalent_registers$(?v1, ?v2)) ⇒ equivalent_registers$(?v0, ?v2))
+tff(axiom164,axiom,
+    ! [A__questionmark_v0: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v2: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'equivalent_registers$m'(A__questionmark_v0,A__questionmark_v1)
+        & 'equivalent_registers$'(A__questionmark_v1,A__questionmark_v2) )
+     => 'equivalent_registers$'(A__questionmark_v0,A__questionmark_v2) ) ).
+
+%% ∀ ?v0:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v2:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((equivalent_registers$(?v0, ?v1) ∧ equivalent_registers$w(?v1, ?v2)) ⇒ equivalent_registers$(?v0, ?v2))
+tff(axiom165,axiom,
+    ! [A__questionmark_v0: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v2: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'equivalent_registers$'(A__questionmark_v0,A__questionmark_v1)
+        & 'equivalent_registers$w'(A__questionmark_v1,A__questionmark_v2) )
+     => 'equivalent_registers$'(A__questionmark_v0,A__questionmark_v2) ) ).
+
+%% ∀ ?v0:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (equivalent_registers$b(?v0, ?v1) ⇒ equivalent_registers$(?v1, ?v0))
+tff(axiom166,axiom,
+    ! [A__questionmark_v0: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'equivalent_registers$b'(A__questionmark_v0,A__questionmark_v1)
+     => 'equivalent_registers$'(A__questionmark_v1,A__questionmark_v0) ) ).
+
+%% ∀ ?v0:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (equivalent_registers$(?v0, ?v1) ⇒ equivalent_registers$b(?v1, ?v0))
+tff(axiom167,axiom,
+    ! [A__questionmark_v0: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'equivalent_registers$'(A__questionmark_v0,A__questionmark_v1)
+     => 'equivalent_registers$b'(A__questionmark_v1,A__questionmark_v0) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v2:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((compatible$b(?v0, ?v1) ∧ (compatible$(?v0, ?v2) ∧ compatible$ac(?v1, ?v2))) ⇒ equivalent_registers$an(register_pair$z(?v0, register_pair$aa(?v1, ?v2)), register_pair$ab(register_pair$(?v0, ?v1), ?v2)))
+tff(axiom168,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v2: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'compatible$b'(A__questionmark_v0,A__questionmark_v1)
+        & 'compatible$'(A__questionmark_v0,A__questionmark_v2)
+        & 'compatible$ac'(A__questionmark_v1,A__questionmark_v2) )
+     => 'equivalent_registers$an'('register_pair$z'(A__questionmark_v0,'register_pair$aa'(A__questionmark_v1,A__questionmark_v2)),'register_pair$ab'('register_pair$'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2)) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v2:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((compatible$c(?v0, ?v1) ∧ (compatible$(?v0, ?v2) ∧ compatible$ad(?v1, ?v2))) ⇒ equivalent_registers$ao(register_pair$ac(?v0, register_pair$ad(?v1, ?v2)), register_pair$ae(register_pair$g(?v0, ?v1), ?v2)))
+tff(axiom169,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v2: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'compatible$c'(A__questionmark_v0,A__questionmark_v1)
+        & 'compatible$'(A__questionmark_v0,A__questionmark_v2)
+        & 'compatible$ad'(A__questionmark_v1,A__questionmark_v2) )
+     => 'equivalent_registers$ao'('register_pair$ac'(A__questionmark_v0,'register_pair$ad'(A__questionmark_v1,A__questionmark_v2)),'register_pair$ae'('register_pair$g'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2)) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v2:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((compatible$d(?v0, ?v1) ∧ (compatible$(?v0, ?v2) ∧ compatible$ae(?v1, ?v2))) ⇒ equivalent_registers$ap(register_pair$af(?v0, register_pair$ag(?v1, ?v2)), register_pair$ah(register_pair$i(?v0, ?v1), ?v2)))
+tff(axiom170,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v2: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'compatible$d'(A__questionmark_v0,A__questionmark_v1)
+        & 'compatible$'(A__questionmark_v0,A__questionmark_v2)
+        & 'compatible$ae'(A__questionmark_v1,A__questionmark_v2) )
+     => 'equivalent_registers$ap'('register_pair$af'(A__questionmark_v0,'register_pair$ag'(A__questionmark_v1,A__questionmark_v2)),'register_pair$ah'('register_pair$i'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2)) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v2:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((compatible$(?v0, ?v1) ∧ (compatible$(?v0, ?v2) ∧ compatible$af(?v1, ?v2))) ⇒ equivalent_registers$aq(register_pair$ai(?v0, register_pair$aj(?v1, ?v2)), register_pair$ak(register_pair$a(?v0, ?v1), ?v2)))
+tff(axiom171,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v2: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'compatible$'(A__questionmark_v0,A__questionmark_v1)
+        & 'compatible$'(A__questionmark_v0,A__questionmark_v2)
+        & 'compatible$af'(A__questionmark_v1,A__questionmark_v2) )
+     => 'equivalent_registers$aq'('register_pair$ai'(A__questionmark_v0,'register_pair$aj'(A__questionmark_v1,A__questionmark_v2)),'register_pair$ak'('register_pair$a'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2)) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v2:A_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((compatible$(?v0, ?v1) ∧ (compatible$ag(?v0, ?v2) ∧ compatible$a(?v1, ?v2))) ⇒ equivalent_registers$ar(register_pair$al(?v0, register_pair$d(?v1, ?v2)), register_pair$am(register_pair$a(?v0, ?v1), ?v2)))
+tff(axiom172,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v2: 'A_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'compatible$'(A__questionmark_v0,A__questionmark_v1)
+        & 'compatible$ag'(A__questionmark_v0,A__questionmark_v2)
+        & 'compatible$a'(A__questionmark_v1,A__questionmark_v2) )
+     => 'equivalent_registers$ar'('register_pair$al'(A__questionmark_v0,'register_pair$d'(A__questionmark_v1,A__questionmark_v2)),'register_pair$am'('register_pair$a'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2)) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v2:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((compatible$ah(?v0, ?v1) ∧ (compatible$(?v0, ?v2) ∧ compatible$(?v1, ?v2))) ⇒ equivalent_registers$as(register_pair$an(?v0, register_pair$a(?v1, ?v2)), register_pair$ao(register_pair$ap(?v0, ?v1), ?v2)))
+tff(axiom173,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v2: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'compatible$ah'(A__questionmark_v0,A__questionmark_v1)
+        & 'compatible$'(A__questionmark_v0,A__questionmark_v2)
+        & 'compatible$'(A__questionmark_v1,A__questionmark_v2) )
+     => 'equivalent_registers$as'('register_pair$an'(A__questionmark_v0,'register_pair$a'(A__questionmark_v1,A__questionmark_v2)),'register_pair$ao'('register_pair$ap'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2)) ) ).
+
+%% ∀ ?v0:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v2:A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((compatible$ab(?v0, ?v1) ∧ (compatible$p(?v0, ?v2) ∧ compatible$b(?v1, ?v2))) ⇒ equivalent_registers$at(register_pair$d(?v0, register_pair$(?v1, ?v2)), register_pair$aq(register_pair$ar(?v0, ?v1), ?v2)))
+tff(axiom174,axiom,
+    ! [A__questionmark_v0: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v2: 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'compatible$ab'(A__questionmark_v0,A__questionmark_v1)
+        & 'compatible$p'(A__questionmark_v0,A__questionmark_v2)
+        & 'compatible$b'(A__questionmark_v1,A__questionmark_v2) )
+     => 'equivalent_registers$at'('register_pair$d'(A__questionmark_v0,'register_pair$'(A__questionmark_v1,A__questionmark_v2)),'register_pair$aq'('register_pair$ar'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2)) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v2:A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((compatible$(?v0, ?v1) ∧ (compatible$b(?v0, ?v2) ∧ compatible$p(?v1, ?v2))) ⇒ equivalent_registers$au(register_pair$i(?v0, register_pair$b(?v1, ?v2)), register_pair$n(register_pair$a(?v0, ?v1), ?v2)))
+tff(axiom175,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v2: 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'compatible$'(A__questionmark_v0,A__questionmark_v1)
+        & 'compatible$b'(A__questionmark_v0,A__questionmark_v2)
+        & 'compatible$p'(A__questionmark_v1,A__questionmark_v2) )
+     => 'equivalent_registers$au'('register_pair$i'(A__questionmark_v0,'register_pair$b'(A__questionmark_v1,A__questionmark_v2)),'register_pair$n'('register_pair$a'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2)) ) ).
+
+%% ∀ ?v0:B_ell2_b_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$ ?v1:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((∀ ?v2:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$ (fun_app$c(?v0, fun_app$d(?v1, ?v2)) = ?v2) ∧ ∀ ?v2:B_ell2_b_ell2_cblinfun$ (fun_app$d(?v1, fun_app$c(?v0, ?v2)) = ?v2)) ⇒ (inv_into$d(top$c, ?v1) = ?v0))
+tff(axiom176,axiom,
+    ! [A__questionmark_v0: 'B_ell2_b_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$',A__questionmark_v1: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( ! [A__questionmark_v2: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$'] : ( 'fun_app$c'(A__questionmark_v0,'fun_app$d'(A__questionmark_v1,A__questionmark_v2)) = A__questionmark_v2 )
+        & ! [A__questionmark_v2: 'B_ell2_b_ell2_cblinfun$'] : ( 'fun_app$d'(A__questionmark_v1,'fun_app$c'(A__questionmark_v0,A__questionmark_v2)) = A__questionmark_v2 ) )
+     => ( 'inv_into$d'('top$c',A__questionmark_v1) = A__questionmark_v0 ) ) ).
+
+%% ∀ ?v0:B_ell2_b_ell2_cblinfun_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$ ?v1:C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((∀ ?v2:C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun$ (fun_app$(?v0, fun_app$e(?v1, ?v2)) = ?v2) ∧ ∀ ?v2:B_ell2_b_ell2_cblinfun$ (fun_app$e(?v1, fun_app$(?v0, ?v2)) = ?v2)) ⇒ (inv_into$(top$b, ?v1) = ?v0))
+tff(axiom177,axiom,
+    ! [A__questionmark_v0: 'B_ell2_b_ell2_cblinfun_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$',A__questionmark_v1: 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( ! [A__questionmark_v2: 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun$'] : ( 'fun_app$'(A__questionmark_v0,'fun_app$e'(A__questionmark_v1,A__questionmark_v2)) = A__questionmark_v2 )
+        & ! [A__questionmark_v2: 'B_ell2_b_ell2_cblinfun$'] : ( 'fun_app$e'(A__questionmark_v1,'fun_app$'(A__questionmark_v0,A__questionmark_v2)) = A__questionmark_v2 ) )
+     => ( 'inv_into$'('top$b',A__questionmark_v1) = A__questionmark_v0 ) ) ).
+
+%% ∀ ?v0:B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$ ?v1:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((∀ ?v2:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun$ (fun_app$f(?v0, fun_app$g(?v1, ?v2)) = ?v2) ∧ ∀ ?v2:B_ell2_b_ell2_cblinfun$ (fun_app$g(?v1, fun_app$f(?v0, ?v2)) = ?v2)) ⇒ (inv_into$f(top$d, ?v1) = ?v0))
+tff(axiom178,axiom,
+    ! [A__questionmark_v0: 'B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$',A__questionmark_v1: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( ! [A__questionmark_v2: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun$'] : ( 'fun_app$f'(A__questionmark_v0,'fun_app$g'(A__questionmark_v1,A__questionmark_v2)) = A__questionmark_v2 )
+        & ! [A__questionmark_v2: 'B_ell2_b_ell2_cblinfun$'] : ( 'fun_app$g'(A__questionmark_v1,'fun_app$f'(A__questionmark_v0,A__questionmark_v2)) = A__questionmark_v2 ) )
+     => ( 'inv_into$f'('top$d',A__questionmark_v1) = A__questionmark_v0 ) ) ).
+
+%% ∀ ?v0:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$ ?v1:A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$ ((∀ ?v2:A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun$ (fun_app$h(?v0, fun_app$i(?v1, ?v2)) = ?v2) ∧ ∀ ?v2:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun$ (fun_app$i(?v1, fun_app$h(?v0, ?v2)) = ?v2)) ⇒ (inv_into$n(top$g, ?v1) = ?v0))
+tff(axiom179,axiom,
+    ! [A__questionmark_v0: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$',A__questionmark_v1: 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$'] :
+      ( ( ! [A__questionmark_v2: 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun$'] : ( 'fun_app$h'(A__questionmark_v0,'fun_app$i'(A__questionmark_v1,A__questionmark_v2)) = A__questionmark_v2 )
+        & ! [A__questionmark_v2: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun$'] : ( 'fun_app$i'(A__questionmark_v1,'fun_app$h'(A__questionmark_v0,A__questionmark_v2)) = A__questionmark_v2 ) )
+     => ( 'inv_into$n'('top$g',A__questionmark_v1) = A__questionmark_v0 ) ) ).
+
+%% ∀ ?v0:B_ell2_b_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$ ?v1:A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((∀ ?v2:A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun$ (fun_app$b(?v0, fun_app$j(?v1, ?v2)) = ?v2) ∧ ∀ ?v2:B_ell2_b_ell2_cblinfun$ (fun_app$j(?v1, fun_app$b(?v0, ?v2)) = ?v2)) ⇒ (inv_into$o(top$g, ?v1) = ?v0))
+tff(axiom180,axiom,
+    ! [A__questionmark_v0: 'B_ell2_b_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$',A__questionmark_v1: 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( ! [A__questionmark_v2: 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun$'] : ( 'fun_app$b'(A__questionmark_v0,'fun_app$j'(A__questionmark_v1,A__questionmark_v2)) = A__questionmark_v2 )
+        & ! [A__questionmark_v2: 'B_ell2_b_ell2_cblinfun$'] : ( 'fun_app$j'(A__questionmark_v1,'fun_app$b'(A__questionmark_v0,A__questionmark_v2)) = A__questionmark_v2 ) )
+     => ( 'inv_into$o'('top$g',A__questionmark_v1) = A__questionmark_v0 ) ) ).
+
+%% ∀ ?v0:A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_set$ ?v2:B_ell2_b_ell2_cblinfun_set$ ?v3:B_ell2_b_ell2_cblinfun$ ((bij_betw$(?v0, ?v1, ?v2) ∧ member$(?v3, ?v2)) ⇒ (fun_app$k(?v0, fun_app$a(inv_into$a(?v1, ?v0), ?v3)) = ?v3))
+tff(axiom181,axiom,
+    ! [A__questionmark_v0: 'A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_set$',A__questionmark_v2: 'B_ell2_b_ell2_cblinfun_set$',A__questionmark_v3: 'B_ell2_b_ell2_cblinfun$'] :
+      ( ( 'bij_betw$'(A__questionmark_v0,A__questionmark_v1,A__questionmark_v2)
+        & 'member$'(A__questionmark_v3,A__questionmark_v2) )
+     => ( 'fun_app$k'(A__questionmark_v0,'fun_app$a'('inv_into$a'(A__questionmark_v1,A__questionmark_v0),A__questionmark_v3)) = A__questionmark_v3 ) ) ).
+
+%% ∀ ?v0:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_set$ ?v2:B_ell2_b_ell2_cblinfun_set$ ?v3:B_ell2_b_ell2_cblinfun$ ((bij_betw$b(?v0, ?v1, ?v2) ∧ member$(?v3, ?v2)) ⇒ (fun_app$d(?v0, fun_app$c(inv_into$d(?v1, ?v0), ?v3)) = ?v3))
+tff(axiom182,axiom,
+    ! [A__questionmark_v0: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_set$',A__questionmark_v2: 'B_ell2_b_ell2_cblinfun_set$',A__questionmark_v3: 'B_ell2_b_ell2_cblinfun$'] :
+      ( ( 'bij_betw$b'(A__questionmark_v0,A__questionmark_v1,A__questionmark_v2)
+        & 'member$'(A__questionmark_v3,A__questionmark_v2) )
+     => ( 'fun_app$d'(A__questionmark_v0,'fun_app$c'('inv_into$d'(A__questionmark_v1,A__questionmark_v0),A__questionmark_v3)) = A__questionmark_v3 ) ) ).
+
+%% ∀ ?v0:C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_set$ ?v2:B_ell2_b_ell2_cblinfun_set$ ?v3:B_ell2_b_ell2_cblinfun$ ((bij_betw$m(?v0, ?v1, ?v2) ∧ member$(?v3, ?v2)) ⇒ (fun_app$e(?v0, fun_app$(inv_into$(?v1, ?v0), ?v3)) = ?v3))
+tff(axiom183,axiom,
+    ! [A__questionmark_v0: 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_set$',A__questionmark_v2: 'B_ell2_b_ell2_cblinfun_set$',A__questionmark_v3: 'B_ell2_b_ell2_cblinfun$'] :
+      ( ( 'bij_betw$m'(A__questionmark_v0,A__questionmark_v1,A__questionmark_v2)
+        & 'member$'(A__questionmark_v3,A__questionmark_v2) )
+     => ( 'fun_app$e'(A__questionmark_v0,'fun_app$'('inv_into$'(A__questionmark_v1,A__questionmark_v0),A__questionmark_v3)) = A__questionmark_v3 ) ) ).
+
+%% ∀ ?v0:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_set$ ?v2:B_ell2_b_ell2_cblinfun_set$ ?v3:B_ell2_b_ell2_cblinfun$ ((bij_betw$d(?v0, ?v1, ?v2) ∧ member$(?v3, ?v2)) ⇒ (fun_app$g(?v0, fun_app$f(inv_into$f(?v1, ?v0), ?v3)) = ?v3))
+tff(axiom184,axiom,
+    ! [A__questionmark_v0: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_set$',A__questionmark_v2: 'B_ell2_b_ell2_cblinfun_set$',A__questionmark_v3: 'B_ell2_b_ell2_cblinfun$'] :
+      ( ( 'bij_betw$d'(A__questionmark_v0,A__questionmark_v1,A__questionmark_v2)
+        & 'member$'(A__questionmark_v3,A__questionmark_v2) )
+     => ( 'fun_app$g'(A__questionmark_v0,'fun_app$f'('inv_into$f'(A__questionmark_v1,A__questionmark_v0),A__questionmark_v3)) = A__questionmark_v3 ) ) ).
+
+%% ∀ ?v0:A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$ ?v1:A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_set$ ?v2:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_set$ ?v3:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun$ ((bij_betw$o(?v0, ?v1, ?v2) ∧ member$a(?v3, ?v2)) ⇒ (fun_app$i(?v0, fun_app$h(inv_into$n(?v1, ?v0), ?v3)) = ?v3))
+tff(axiom185,axiom,
+    ! [A__questionmark_v0: 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$',A__questionmark_v1: 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_set$',A__questionmark_v2: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_set$',A__questionmark_v3: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun$'] :
+      ( ( 'bij_betw$o'(A__questionmark_v0,A__questionmark_v1,A__questionmark_v2)
+        & 'member$a'(A__questionmark_v3,A__questionmark_v2) )
+     => ( 'fun_app$i'(A__questionmark_v0,'fun_app$h'('inv_into$n'(A__questionmark_v1,A__questionmark_v0),A__questionmark_v3)) = A__questionmark_v3 ) ) ).
+
+%% ∀ ?v0:A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_set$ ?v2:B_ell2_b_ell2_cblinfun_set$ ?v3:B_ell2_b_ell2_cblinfun$ ((bij_betw$p(?v0, ?v1, ?v2) ∧ member$(?v3, ?v2)) ⇒ (fun_app$j(?v0, fun_app$b(inv_into$o(?v1, ?v0), ?v3)) = ?v3))
+tff(axiom186,axiom,
+    ! [A__questionmark_v0: 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_set$',A__questionmark_v2: 'B_ell2_b_ell2_cblinfun_set$',A__questionmark_v3: 'B_ell2_b_ell2_cblinfun$'] :
+      ( ( 'bij_betw$p'(A__questionmark_v0,A__questionmark_v1,A__questionmark_v2)
+        & 'member$'(A__questionmark_v3,A__questionmark_v2) )
+     => ( 'fun_app$j'(A__questionmark_v0,'fun_app$b'('inv_into$o'(A__questionmark_v1,A__questionmark_v0),A__questionmark_v3)) = A__questionmark_v3 ) ) ).
+
+%% ∀ ?v0:A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_set$ ?v2:B_ell2_b_ell2_cblinfun_set$ ?v3:A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun$ ((bij_betw$(?v0, ?v1, ?v2) ∧ member$b(?v3, ?v1)) ⇒ (fun_app$a(inv_into$a(?v1, ?v0), fun_app$k(?v0, ?v3)) = ?v3))
+tff(axiom187,axiom,
+    ! [A__questionmark_v0: 'A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_set$',A__questionmark_v2: 'B_ell2_b_ell2_cblinfun_set$',A__questionmark_v3: 'A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun$'] :
+      ( ( 'bij_betw$'(A__questionmark_v0,A__questionmark_v1,A__questionmark_v2)
+        & 'member$b'(A__questionmark_v3,A__questionmark_v1) )
+     => ( 'fun_app$a'('inv_into$a'(A__questionmark_v1,A__questionmark_v0),'fun_app$k'(A__questionmark_v0,A__questionmark_v3)) = A__questionmark_v3 ) ) ).
+
+%% ∀ ?v0:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_set$ ?v2:B_ell2_b_ell2_cblinfun_set$ ?v3:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$ ((bij_betw$b(?v0, ?v1, ?v2) ∧ member$c(?v3, ?v1)) ⇒ (fun_app$c(inv_into$d(?v1, ?v0), fun_app$d(?v0, ?v3)) = ?v3))
+tff(axiom188,axiom,
+    ! [A__questionmark_v0: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_set$',A__questionmark_v2: 'B_ell2_b_ell2_cblinfun_set$',A__questionmark_v3: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$'] :
+      ( ( 'bij_betw$b'(A__questionmark_v0,A__questionmark_v1,A__questionmark_v2)
+        & 'member$c'(A__questionmark_v3,A__questionmark_v1) )
+     => ( 'fun_app$c'('inv_into$d'(A__questionmark_v1,A__questionmark_v0),'fun_app$d'(A__questionmark_v0,A__questionmark_v3)) = A__questionmark_v3 ) ) ).
+
+%% ∀ ?v0:C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_set$ ?v2:B_ell2_b_ell2_cblinfun_set$ ?v3:C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun$ ((bij_betw$m(?v0, ?v1, ?v2) ∧ member$d(?v3, ?v1)) ⇒ (fun_app$(inv_into$(?v1, ?v0), fun_app$e(?v0, ?v3)) = ?v3))
+tff(axiom189,axiom,
+    ! [A__questionmark_v0: 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_set$',A__questionmark_v2: 'B_ell2_b_ell2_cblinfun_set$',A__questionmark_v3: 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun$'] :
+      ( ( 'bij_betw$m'(A__questionmark_v0,A__questionmark_v1,A__questionmark_v2)
+        & 'member$d'(A__questionmark_v3,A__questionmark_v1) )
+     => ( 'fun_app$'('inv_into$'(A__questionmark_v1,A__questionmark_v0),'fun_app$e'(A__questionmark_v0,A__questionmark_v3)) = A__questionmark_v3 ) ) ).
+
+%% ∀ ?v0:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_set$ ?v2:B_ell2_b_ell2_cblinfun_set$ ?v3:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun$ ((bij_betw$d(?v0, ?v1, ?v2) ∧ member$a(?v3, ?v1)) ⇒ (fun_app$f(inv_into$f(?v1, ?v0), fun_app$g(?v0, ?v3)) = ?v3))
+tff(axiom190,axiom,
+    ! [A__questionmark_v0: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_set$',A__questionmark_v2: 'B_ell2_b_ell2_cblinfun_set$',A__questionmark_v3: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun$'] :
+      ( ( 'bij_betw$d'(A__questionmark_v0,A__questionmark_v1,A__questionmark_v2)
+        & 'member$a'(A__questionmark_v3,A__questionmark_v1) )
+     => ( 'fun_app$f'('inv_into$f'(A__questionmark_v1,A__questionmark_v0),'fun_app$g'(A__questionmark_v0,A__questionmark_v3)) = A__questionmark_v3 ) ) ).
+
+%% ∀ ?v0:A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$ ?v1:A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_set$ ?v2:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_set$ ?v3:A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun$ ((bij_betw$o(?v0, ?v1, ?v2) ∧ member$e(?v3, ?v1)) ⇒ (fun_app$h(inv_into$n(?v1, ?v0), fun_app$i(?v0, ?v3)) = ?v3))
+tff(axiom191,axiom,
+    ! [A__questionmark_v0: 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$',A__questionmark_v1: 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_set$',A__questionmark_v2: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_set$',A__questionmark_v3: 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun$'] :
+      ( ( 'bij_betw$o'(A__questionmark_v0,A__questionmark_v1,A__questionmark_v2)
+        & 'member$e'(A__questionmark_v3,A__questionmark_v1) )
+     => ( 'fun_app$h'('inv_into$n'(A__questionmark_v1,A__questionmark_v0),'fun_app$i'(A__questionmark_v0,A__questionmark_v3)) = A__questionmark_v3 ) ) ).
+
+%% ∀ ?v0:A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_set$ ?v2:B_ell2_b_ell2_cblinfun_set$ ?v3:A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun$ ((bij_betw$p(?v0, ?v1, ?v2) ∧ member$e(?v3, ?v1)) ⇒ (fun_app$b(inv_into$o(?v1, ?v0), fun_app$j(?v0, ?v3)) = ?v3))
+tff(axiom192,axiom,
+    ! [A__questionmark_v0: 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_set$',A__questionmark_v2: 'B_ell2_b_ell2_cblinfun_set$',A__questionmark_v3: 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun$'] :
+      ( ( 'bij_betw$p'(A__questionmark_v0,A__questionmark_v1,A__questionmark_v2)
+        & 'member$e'(A__questionmark_v3,A__questionmark_v1) )
+     => ( 'fun_app$b'('inv_into$o'(A__questionmark_v1,A__questionmark_v0),'fun_app$j'(A__questionmark_v0,A__questionmark_v3)) = A__questionmark_v3 ) ) ).
+
+%% ∀ ?v0:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_set$ ?v2:B_ell2_b_ell2_cblinfun_set$ ?v3:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$ ((bij_betw$b(?v0, ?v1, ?v2) ∧ member$c(?v3, ?v1)) ⇒ (fun_app$d(inv_into$c(?v2, inv_into$d(?v1, ?v0)), ?v3) = fun_app$d(?v0, ?v3)))
+tff(axiom193,axiom,
+    ! [A__questionmark_v0: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_set$',A__questionmark_v2: 'B_ell2_b_ell2_cblinfun_set$',A__questionmark_v3: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$'] :
+      ( ( 'bij_betw$b'(A__questionmark_v0,A__questionmark_v1,A__questionmark_v2)
+        & 'member$c'(A__questionmark_v3,A__questionmark_v1) )
+     => ( 'fun_app$d'('inv_into$c'(A__questionmark_v2,'inv_into$d'(A__questionmark_v1,A__questionmark_v0)),A__questionmark_v3) = 'fun_app$d'(A__questionmark_v0,A__questionmark_v3) ) ) ).
+
+%% ∀ ?v0:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_set$ ?v2:B_ell2_b_ell2_cblinfun_set$ ?v3:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun$ ((bij_betw$d(?v0, ?v1, ?v2) ∧ member$a(?v3, ?v1)) ⇒ (fun_app$g(inv_into$e(?v2, inv_into$f(?v1, ?v0)), ?v3) = fun_app$g(?v0, ?v3)))
+tff(axiom194,axiom,
+    ! [A__questionmark_v0: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_set$',A__questionmark_v2: 'B_ell2_b_ell2_cblinfun_set$',A__questionmark_v3: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun$'] :
+      ( ( 'bij_betw$d'(A__questionmark_v0,A__questionmark_v1,A__questionmark_v2)
+        & 'member$a'(A__questionmark_v3,A__questionmark_v1) )
+     => ( 'fun_app$g'('inv_into$e'(A__questionmark_v2,'inv_into$f'(A__questionmark_v1,A__questionmark_v0)),A__questionmark_v3) = 'fun_app$g'(A__questionmark_v0,A__questionmark_v3) ) ) ).
+
+%% ∀ ?v0:B_ell2_b_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$ ?v1:B_ell2_b_ell2_cblinfun_set$ ?v2:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_set$ ?v3:B_ell2_b_ell2_cblinfun$ ((bij_betw$c(?v0, ?v1, ?v2) ∧ member$(?v3, ?v1)) ⇒ (fun_app$c(inv_into$d(?v2, inv_into$c(?v1, ?v0)), ?v3) = fun_app$c(?v0, ?v3)))
+tff(axiom195,axiom,
+    ! [A__questionmark_v0: 'B_ell2_b_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$',A__questionmark_v1: 'B_ell2_b_ell2_cblinfun_set$',A__questionmark_v2: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_set$',A__questionmark_v3: 'B_ell2_b_ell2_cblinfun$'] :
+      ( ( 'bij_betw$c'(A__questionmark_v0,A__questionmark_v1,A__questionmark_v2)
+        & 'member$'(A__questionmark_v3,A__questionmark_v1) )
+     => ( 'fun_app$c'('inv_into$d'(A__questionmark_v2,'inv_into$c'(A__questionmark_v1,A__questionmark_v0)),A__questionmark_v3) = 'fun_app$c'(A__questionmark_v0,A__questionmark_v3) ) ) ).
+
+%% ∀ ?v0:B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$ ?v1:B_ell2_b_ell2_cblinfun_set$ ?v2:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_set$ ?v3:B_ell2_b_ell2_cblinfun$ ((bij_betw$e(?v0, ?v1, ?v2) ∧ member$(?v3, ?v1)) ⇒ (fun_app$f(inv_into$f(?v2, inv_into$e(?v1, ?v0)), ?v3) = fun_app$f(?v0, ?v3)))
+tff(axiom196,axiom,
+    ! [A__questionmark_v0: 'B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$',A__questionmark_v1: 'B_ell2_b_ell2_cblinfun_set$',A__questionmark_v2: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_set$',A__questionmark_v3: 'B_ell2_b_ell2_cblinfun$'] :
+      ( ( 'bij_betw$e'(A__questionmark_v0,A__questionmark_v1,A__questionmark_v2)
+        & 'member$'(A__questionmark_v3,A__questionmark_v1) )
+     => ( 'fun_app$f'('inv_into$f'(A__questionmark_v2,'inv_into$e'(A__questionmark_v1,A__questionmark_v0)),A__questionmark_v3) = 'fun_app$f'(A__questionmark_v0,A__questionmark_v3) ) ) ).
+
+%% ∀ ?v0:A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_set$ ?v2:B_ell2_b_ell2_cblinfun_set$ ?v3:A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun$ ((bij_betw$(?v0, ?v1, ?v2) ∧ member$b(?v3, ?v1)) ⇒ (fun_app$k(inv_into$m(?v2, inv_into$a(?v1, ?v0)), ?v3) = fun_app$k(?v0, ?v3)))
+tff(axiom197,axiom,
+    ! [A__questionmark_v0: 'A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_set$',A__questionmark_v2: 'B_ell2_b_ell2_cblinfun_set$',A__questionmark_v3: 'A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun$'] :
+      ( ( 'bij_betw$'(A__questionmark_v0,A__questionmark_v1,A__questionmark_v2)
+        & 'member$b'(A__questionmark_v3,A__questionmark_v1) )
+     => ( 'fun_app$k'('inv_into$m'(A__questionmark_v2,'inv_into$a'(A__questionmark_v1,A__questionmark_v0)),A__questionmark_v3) = 'fun_app$k'(A__questionmark_v0,A__questionmark_v3) ) ) ).
+
+%% ∀ ?v0:C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_set$ ?v2:B_ell2_b_ell2_cblinfun_set$ ?v3:C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun$ ((bij_betw$m(?v0, ?v1, ?v2) ∧ member$d(?v3, ?v1)) ⇒ (fun_app$e(inv_into$p(?v2, inv_into$(?v1, ?v0)), ?v3) = fun_app$e(?v0, ?v3)))
+tff(axiom198,axiom,
+    ! [A__questionmark_v0: 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_set$',A__questionmark_v2: 'B_ell2_b_ell2_cblinfun_set$',A__questionmark_v3: 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun$'] :
+      ( ( 'bij_betw$m'(A__questionmark_v0,A__questionmark_v1,A__questionmark_v2)
+        & 'member$d'(A__questionmark_v3,A__questionmark_v1) )
+     => ( 'fun_app$e'('inv_into$p'(A__questionmark_v2,'inv_into$'(A__questionmark_v1,A__questionmark_v0)),A__questionmark_v3) = 'fun_app$e'(A__questionmark_v0,A__questionmark_v3) ) ) ).
+
+%% ∀ ?v0:A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_set$ ?v2:B_ell2_b_ell2_cblinfun_set$ ?v3:A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun$ ((bij_betw$p(?v0, ?v1, ?v2) ∧ member$e(?v3, ?v1)) ⇒ (fun_app$j(inv_into$q(?v2, inv_into$o(?v1, ?v0)), ?v3) = fun_app$j(?v0, ?v3)))
+tff(axiom199,axiom,
+    ! [A__questionmark_v0: 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_set$',A__questionmark_v2: 'B_ell2_b_ell2_cblinfun_set$',A__questionmark_v3: 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun$'] :
+      ( ( 'bij_betw$p'(A__questionmark_v0,A__questionmark_v1,A__questionmark_v2)
+        & 'member$e'(A__questionmark_v3,A__questionmark_v1) )
+     => ( 'fun_app$j'('inv_into$q'(A__questionmark_v2,'inv_into$o'(A__questionmark_v1,A__questionmark_v0)),A__questionmark_v3) = 'fun_app$j'(A__questionmark_v0,A__questionmark_v3) ) ) ).
+
+%% ∀ ?v0:B_ell2_b_ell2_cblinfun_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$ ?v1:B_ell2_b_ell2_cblinfun_set$ ?v2:C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_set$ ?v3:B_ell2_b_ell2_cblinfun$ ((bij_betw$q(?v0, ?v1, ?v2) ∧ member$(?v3, ?v1)) ⇒ (fun_app$(inv_into$(?v2, inv_into$p(?v1, ?v0)), ?v3) = fun_app$(?v0, ?v3)))
+tff(axiom200,axiom,
+    ! [A__questionmark_v0: 'B_ell2_b_ell2_cblinfun_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$',A__questionmark_v1: 'B_ell2_b_ell2_cblinfun_set$',A__questionmark_v2: 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_set$',A__questionmark_v3: 'B_ell2_b_ell2_cblinfun$'] :
+      ( ( 'bij_betw$q'(A__questionmark_v0,A__questionmark_v1,A__questionmark_v2)
+        & 'member$'(A__questionmark_v3,A__questionmark_v1) )
+     => ( 'fun_app$'('inv_into$'(A__questionmark_v2,'inv_into$p'(A__questionmark_v1,A__questionmark_v0)),A__questionmark_v3) = 'fun_app$'(A__questionmark_v0,A__questionmark_v3) ) ) ).
+
+%% ∀ ?v0:B_ell2_b_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$ ?v1:B_ell2_b_ell2_cblinfun_set$ ?v2:A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_set$ ?v3:B_ell2_b_ell2_cblinfun$ ((bij_betw$r(?v0, ?v1, ?v2) ∧ member$(?v3, ?v1)) ⇒ (fun_app$b(inv_into$o(?v2, inv_into$q(?v1, ?v0)), ?v3) = fun_app$b(?v0, ?v3)))
+tff(axiom201,axiom,
+    ! [A__questionmark_v0: 'B_ell2_b_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$',A__questionmark_v1: 'B_ell2_b_ell2_cblinfun_set$',A__questionmark_v2: 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_set$',A__questionmark_v3: 'B_ell2_b_ell2_cblinfun$'] :
+      ( ( 'bij_betw$r'(A__questionmark_v0,A__questionmark_v1,A__questionmark_v2)
+        & 'member$'(A__questionmark_v3,A__questionmark_v1) )
+     => ( 'fun_app$b'('inv_into$o'(A__questionmark_v2,'inv_into$q'(A__questionmark_v1,A__questionmark_v0)),A__questionmark_v3) = 'fun_app$b'(A__questionmark_v0,A__questionmark_v3) ) ) ).
+
+%% ∀ ?v0:A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$ ?v1:A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_set$ ?v2:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_set$ ?v3:A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun$ ((bij_betw$o(?v0, ?v1, ?v2) ∧ member$e(?v3, ?v1)) ⇒ (fun_app$i(inv_into$r(?v2, inv_into$n(?v1, ?v0)), ?v3) = fun_app$i(?v0, ?v3)))
+tff(axiom202,axiom,
+    ! [A__questionmark_v0: 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$',A__questionmark_v1: 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_set$',A__questionmark_v2: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_set$',A__questionmark_v3: 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun$'] :
+      ( ( 'bij_betw$o'(A__questionmark_v0,A__questionmark_v1,A__questionmark_v2)
+        & 'member$e'(A__questionmark_v3,A__questionmark_v1) )
+     => ( 'fun_app$i'('inv_into$r'(A__questionmark_v2,'inv_into$n'(A__questionmark_v1,A__questionmark_v0)),A__questionmark_v3) = 'fun_app$i'(A__questionmark_v0,A__questionmark_v3) ) ) ).
+
+%% ∀ ?v0:B_ell2_b_ell2_cblinfun_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$ ?v1:B_ell2_b_ell2_cblinfun_set$ ?v2:A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_set$ (bij_betw$j(?v0, ?v1, ?v2) ⇒ bij_betw$(inv_into$m(?v1, ?v0), ?v2, ?v1))
+tff(axiom203,axiom,
+    ! [A__questionmark_v0: 'B_ell2_b_ell2_cblinfun_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$',A__questionmark_v1: 'B_ell2_b_ell2_cblinfun_set$',A__questionmark_v2: 'A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_set$'] :
+      ( 'bij_betw$j'(A__questionmark_v0,A__questionmark_v1,A__questionmark_v2)
+     => 'bij_betw$'('inv_into$m'(A__questionmark_v1,A__questionmark_v0),A__questionmark_v2,A__questionmark_v1) ) ).
+
+%% ∀ ?v0:B_ell2_b_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$ ?v1:B_ell2_b_ell2_cblinfun_set$ ?v2:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_set$ (bij_betw$c(?v0, ?v1, ?v2) ⇒ bij_betw$b(inv_into$c(?v1, ?v0), ?v2, ?v1))
+tff(axiom204,axiom,
+    ! [A__questionmark_v0: 'B_ell2_b_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$',A__questionmark_v1: 'B_ell2_b_ell2_cblinfun_set$',A__questionmark_v2: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_set$'] :
+      ( 'bij_betw$c'(A__questionmark_v0,A__questionmark_v1,A__questionmark_v2)
+     => 'bij_betw$b'('inv_into$c'(A__questionmark_v1,A__questionmark_v0),A__questionmark_v2,A__questionmark_v1) ) ).
+
+%% ∀ ?v0:B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$ ?v1:B_ell2_b_ell2_cblinfun_set$ ?v2:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_set$ (bij_betw$e(?v0, ?v1, ?v2) ⇒ bij_betw$d(inv_into$e(?v1, ?v0), ?v2, ?v1))
+tff(axiom205,axiom,
+    ! [A__questionmark_v0: 'B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$',A__questionmark_v1: 'B_ell2_b_ell2_cblinfun_set$',A__questionmark_v2: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_set$'] :
+      ( 'bij_betw$e'(A__questionmark_v0,A__questionmark_v1,A__questionmark_v2)
+     => 'bij_betw$d'('inv_into$e'(A__questionmark_v1,A__questionmark_v0),A__questionmark_v2,A__questionmark_v1) ) ).
+
+%% ∀ ?v0:A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_set$ ?v2:B_ell2_b_ell2_cblinfun_set$ (bij_betw$(?v0, ?v1, ?v2) ⇒ bij_betw$j(inv_into$a(?v1, ?v0), ?v2, ?v1))
+tff(axiom206,axiom,
+    ! [A__questionmark_v0: 'A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_set$',A__questionmark_v2: 'B_ell2_b_ell2_cblinfun_set$'] :
+      ( 'bij_betw$'(A__questionmark_v0,A__questionmark_v1,A__questionmark_v2)
+     => 'bij_betw$j'('inv_into$a'(A__questionmark_v1,A__questionmark_v0),A__questionmark_v2,A__questionmark_v1) ) ).
+
+%% ∀ ?v0:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_set$ ?v2:B_ell2_b_ell2_cblinfun_set$ (bij_betw$b(?v0, ?v1, ?v2) ⇒ bij_betw$c(inv_into$d(?v1, ?v0), ?v2, ?v1))
+tff(axiom207,axiom,
+    ! [A__questionmark_v0: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_set$',A__questionmark_v2: 'B_ell2_b_ell2_cblinfun_set$'] :
+      ( 'bij_betw$b'(A__questionmark_v0,A__questionmark_v1,A__questionmark_v2)
+     => 'bij_betw$c'('inv_into$d'(A__questionmark_v1,A__questionmark_v0),A__questionmark_v2,A__questionmark_v1) ) ).
+
+%% ∀ ?v0:C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_set$ ?v2:B_ell2_b_ell2_cblinfun_set$ (bij_betw$m(?v0, ?v1, ?v2) ⇒ bij_betw$q(inv_into$(?v1, ?v0), ?v2, ?v1))
+tff(axiom208,axiom,
+    ! [A__questionmark_v0: 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_set$',A__questionmark_v2: 'B_ell2_b_ell2_cblinfun_set$'] :
+      ( 'bij_betw$m'(A__questionmark_v0,A__questionmark_v1,A__questionmark_v2)
+     => 'bij_betw$q'('inv_into$'(A__questionmark_v1,A__questionmark_v0),A__questionmark_v2,A__questionmark_v1) ) ).
+
+%% ∀ ?v0:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_set$ ?v2:B_ell2_b_ell2_cblinfun_set$ (bij_betw$d(?v0, ?v1, ?v2) ⇒ bij_betw$e(inv_into$f(?v1, ?v0), ?v2, ?v1))
+tff(axiom209,axiom,
+    ! [A__questionmark_v0: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_set$',A__questionmark_v2: 'B_ell2_b_ell2_cblinfun_set$'] :
+      ( 'bij_betw$d'(A__questionmark_v0,A__questionmark_v1,A__questionmark_v2)
+     => 'bij_betw$e'('inv_into$f'(A__questionmark_v1,A__questionmark_v0),A__questionmark_v2,A__questionmark_v1) ) ).
+
+%% ∀ ?v0:A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$ ?v1:A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_set$ ?v2:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_set$ (bij_betw$o(?v0, ?v1, ?v2) ⇒ bij_betw$s(inv_into$n(?v1, ?v0), ?v2, ?v1))
+tff(axiom210,axiom,
+    ! [A__questionmark_v0: 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$',A__questionmark_v1: 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_set$',A__questionmark_v2: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_set$'] :
+      ( 'bij_betw$o'(A__questionmark_v0,A__questionmark_v1,A__questionmark_v2)
+     => 'bij_betw$s'('inv_into$n'(A__questionmark_v1,A__questionmark_v0),A__questionmark_v2,A__questionmark_v1) ) ).
+
+%% ∀ ?v0:A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_set$ ?v2:B_ell2_b_ell2_cblinfun_set$ (bij_betw$p(?v0, ?v1, ?v2) ⇒ bij_betw$r(inv_into$o(?v1, ?v0), ?v2, ?v1))
+tff(axiom211,axiom,
+    ! [A__questionmark_v0: 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_set$',A__questionmark_v2: 'B_ell2_b_ell2_cblinfun_set$'] :
+      ( 'bij_betw$p'(A__questionmark_v0,A__questionmark_v1,A__questionmark_v2)
+     => 'bij_betw$r'('inv_into$o'(A__questionmark_v1,A__questionmark_v0),A__questionmark_v2,A__questionmark_v1) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (compatible$(?v0, ?v1) ⇒ register$(?v1))
+tff(axiom212,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'compatible$'(A__questionmark_v0,A__questionmark_v1)
+     => 'register$'(A__questionmark_v1) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (compatible$(?v0, ?v1) ⇒ register$a(?v0))
+tff(axiom213,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'compatible$'(A__questionmark_v0,A__questionmark_v1)
+     => 'register$a'(A__questionmark_v0) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v2:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((compatible$(?v0, ?v1) ∧ (compatible$af(?v1, ?v2) ∧ compatible$(?v0, ?v2))) ⇒ compatible$ai(?v0, register_pair$aj(?v1, ?v2)))
+tff(axiom214,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v2: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'compatible$'(A__questionmark_v0,A__questionmark_v1)
+        & 'compatible$af'(A__questionmark_v1,A__questionmark_v2)
+        & 'compatible$'(A__questionmark_v0,A__questionmark_v2) )
+     => 'compatible$ai'(A__questionmark_v0,'register_pair$aj'(A__questionmark_v1,A__questionmark_v2)) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v2:A_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((compatible$(?v0, ?v1) ∧ (compatible$a(?v1, ?v2) ∧ compatible$ag(?v0, ?v2))) ⇒ compatible$aj(?v0, register_pair$d(?v1, ?v2)))
+tff(axiom215,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v2: 'A_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'compatible$'(A__questionmark_v0,A__questionmark_v1)
+        & 'compatible$a'(A__questionmark_v1,A__questionmark_v2)
+        & 'compatible$ag'(A__questionmark_v0,A__questionmark_v2) )
+     => 'compatible$aj'(A__questionmark_v0,'register_pair$d'(A__questionmark_v1,A__questionmark_v2)) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v2:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((compatible$ah(?v0, ?v1) ∧ (compatible$(?v1, ?v2) ∧ compatible$(?v0, ?v2))) ⇒ compatible$ak(?v0, register_pair$a(?v1, ?v2)))
+tff(axiom216,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v2: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'compatible$ah'(A__questionmark_v0,A__questionmark_v1)
+        & 'compatible$'(A__questionmark_v1,A__questionmark_v2)
+        & 'compatible$'(A__questionmark_v0,A__questionmark_v2) )
+     => 'compatible$ak'(A__questionmark_v0,'register_pair$a'(A__questionmark_v1,A__questionmark_v2)) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v2:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((compatible$ah(?v0, ?v1) ∧ (compatible$(?v1, ?v2) ∧ compatible$(?v0, ?v2))) ⇒ compatible$al(register_pair$ap(?v0, ?v1), ?v2))
+tff(axiom217,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v2: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'compatible$ah'(A__questionmark_v0,A__questionmark_v1)
+        & 'compatible$'(A__questionmark_v1,A__questionmark_v2)
+        & 'compatible$'(A__questionmark_v0,A__questionmark_v2) )
+     => 'compatible$al'('register_pair$ap'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v2:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((compatible$b(?v0, ?v1) ∧ (compatible$ac(?v1, ?v2) ∧ compatible$(?v0, ?v2))) ⇒ compatible$am(register_pair$(?v0, ?v1), ?v2))
+tff(axiom218,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v2: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'compatible$b'(A__questionmark_v0,A__questionmark_v1)
+        & 'compatible$ac'(A__questionmark_v1,A__questionmark_v2)
+        & 'compatible$'(A__questionmark_v0,A__questionmark_v2) )
+     => 'compatible$am'('register_pair$'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v2:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((compatible$c(?v0, ?v1) ∧ (compatible$ad(?v1, ?v2) ∧ compatible$(?v0, ?v2))) ⇒ compatible$an(register_pair$g(?v0, ?v1), ?v2))
+tff(axiom219,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v2: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'compatible$c'(A__questionmark_v0,A__questionmark_v1)
+        & 'compatible$ad'(A__questionmark_v1,A__questionmark_v2)
+        & 'compatible$'(A__questionmark_v0,A__questionmark_v2) )
+     => 'compatible$an'('register_pair$g'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v2:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((compatible$d(?v0, ?v1) ∧ (compatible$ae(?v1, ?v2) ∧ compatible$(?v0, ?v2))) ⇒ compatible$ao(register_pair$i(?v0, ?v1), ?v2))
+tff(axiom220,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v2: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'compatible$d'(A__questionmark_v0,A__questionmark_v1)
+        & 'compatible$ae'(A__questionmark_v1,A__questionmark_v2)
+        & 'compatible$'(A__questionmark_v0,A__questionmark_v2) )
+     => 'compatible$ao'('register_pair$i'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v2:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((compatible$(?v0, ?v1) ∧ (compatible$af(?v1, ?v2) ∧ compatible$(?v0, ?v2))) ⇒ compatible$ap(register_pair$a(?v0, ?v1), ?v2))
+tff(axiom221,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v2: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'compatible$'(A__questionmark_v0,A__questionmark_v1)
+        & 'compatible$af'(A__questionmark_v1,A__questionmark_v2)
+        & 'compatible$'(A__questionmark_v0,A__questionmark_v2) )
+     => 'compatible$ap'('register_pair$a'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2) ) ).
+
+%% ∀ ?v0:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (iso_register$t(?v0) ⇒ register$(?v0))
+tff(axiom222,axiom,
+    ! [A__questionmark_v0: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'iso_register$t'(A__questionmark_v0)
+     => 'register$'(A__questionmark_v0) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (iso_register$u(?v0) ⇒ register$a(?v0))
+tff(axiom223,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'iso_register$u'(A__questionmark_v0)
+     => 'register$a'(A__questionmark_v0) ) ).
+
+%% ∀ ?v0:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$ (iso_register$(?v0) ⇒ register$e(?v0))
+tff(axiom224,axiom,
+    ! [A__questionmark_v0: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$'] :
+      ( 'iso_register$'(A__questionmark_v0)
+     => 'register$e'(A__questionmark_v0) ) ).
+
+%% ∀ ?v0:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (equivalent_registers$(?v0, ?v1) ⇒ register$o(?v1))
+tff(axiom225,axiom,
+    ! [A__questionmark_v0: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'equivalent_registers$'(A__questionmark_v0,A__questionmark_v1)
+     => 'register$o'(A__questionmark_v1) ) ).
+
+%% ∀ ?v0:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (equivalent_registers$(?v0, ?v1) ⇒ register$d(?v0))
+tff(axiom226,axiom,
+    ! [A__questionmark_v0: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'equivalent_registers$'(A__questionmark_v0,A__questionmark_v1)
+     => 'register$d'(A__questionmark_v0) ) ).
+
+%% ∀ ?v0:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$ ?v1:B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$ ((iso_register$q(?v0) ∧ iso_register$f(?v1)) ⇒ iso_register$r(comp$a(?v0, ?v1)))
+tff(axiom227,axiom,
+    ! [A__questionmark_v0: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$',A__questionmark_v1: 'B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$'] :
+      ( ( 'iso_register$q'(A__questionmark_v0)
+        & 'iso_register$f'(A__questionmark_v1) )
+     => 'iso_register$r'('comp$a'(A__questionmark_v0,A__questionmark_v1)) ) ).
+
+%% ∀ ?v0:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$ ((iso_register$v(?v0) ∧ iso_register$(?v1)) ⇒ iso_register$w(comp$(?v0, ?v1)))
+tff(axiom228,axiom,
+    ! [A__questionmark_v0: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$'] :
+      ( ( 'iso_register$v'(A__questionmark_v0)
+        & 'iso_register$'(A__questionmark_v1) )
+     => 'iso_register$w'('comp$'(A__questionmark_v0,A__questionmark_v1)) ) ).
+
+%% ∀ ?v0:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$ ?v1:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$ ((iso_register$x(?v0) ∧ iso_register$(?v1)) ⇒ iso_register$(comp$am(?v0, ?v1)))
+tff(axiom229,axiom,
+    ! [A__questionmark_v0: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$',A__questionmark_v1: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$'] :
+      ( ( 'iso_register$x'(A__questionmark_v0)
+        & 'iso_register$'(A__questionmark_v1) )
+     => 'iso_register$'('comp$am'(A__questionmark_v0,A__questionmark_v1)) ) ).
+
+%% ∀ ?v0:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$ ?v1:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_c_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$ ((iso_register$(?v0) ∧ iso_register$y(?v1)) ⇒ iso_register$(comp$an(?v0, ?v1)))
+tff(axiom230,axiom,
+    ! [A__questionmark_v0: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$',A__questionmark_v1: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_c_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$'] :
+      ( ( 'iso_register$'(A__questionmark_v0)
+        & 'iso_register$y'(A__questionmark_v1) )
+     => 'iso_register$'('comp$an'(A__questionmark_v0,A__questionmark_v1)) ) ).
+
+%% ∀ ?v0:B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (bij_betw$a(?v0, top$a, top$a) ⇒ bij_betw$a(inv_into$b(top$a, ?v0), top$a, top$a))
+tff(axiom231,axiom,
+    ! [A__questionmark_v0: 'B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'bij_betw$a'(A__questionmark_v0,'top$a','top$a')
+     => 'bij_betw$a'('inv_into$b'('top$a',A__questionmark_v0),'top$a','top$a') ) ).
+
+%% ∀ ?v0:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (bij_betw$b(?v0, top$c, top$a) ⇒ bij_betw$c(inv_into$d(top$c, ?v0), top$a, top$c))
+tff(axiom232,axiom,
+    ! [A__questionmark_v0: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'bij_betw$b'(A__questionmark_v0,'top$c','top$a')
+     => 'bij_betw$c'('inv_into$d'('top$c',A__questionmark_v0),'top$a','top$c') ) ).
+
+%% ∀ ?v0:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (bij_betw$d(?v0, top$d, top$a) ⇒ bij_betw$e(inv_into$f(top$d, ?v0), top$a, top$d))
+tff(axiom233,axiom,
+    ! [A__questionmark_v0: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'bij_betw$d'(A__questionmark_v0,'top$d','top$a')
+     => 'bij_betw$e'('inv_into$f'('top$d',A__questionmark_v0),'top$a','top$d') ) ).
+
+%% ∀ ?v0:B_ell2_b_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$ (bij_betw$c(?v0, top$a, top$c) ⇒ bij_betw$b(inv_into$c(top$a, ?v0), top$c, top$a))
+tff(axiom234,axiom,
+    ! [A__questionmark_v0: 'B_ell2_b_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$'] :
+      ( 'bij_betw$c'(A__questionmark_v0,'top$a','top$c')
+     => 'bij_betw$b'('inv_into$c'('top$a',A__questionmark_v0),'top$c','top$a') ) ).
+
+%% ∀ ?v0:B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$ (bij_betw$e(?v0, top$a, top$d) ⇒ bij_betw$d(inv_into$e(top$a, ?v0), top$d, top$a))
+tff(axiom235,axiom,
+    ! [A__questionmark_v0: 'B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$'] :
+      ( 'bij_betw$e'(A__questionmark_v0,'top$a','top$d')
+     => 'bij_betw$d'('inv_into$e'('top$a',A__questionmark_v0),'top$d','top$a') ) ).
+
+%% ∀ ?v0:A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (bij_betw$(?v0, top$, top$a) ⇒ bij_betw$j(inv_into$a(top$, ?v0), top$a, top$))
+tff(axiom236,axiom,
+    ! [A__questionmark_v0: 'A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'bij_betw$'(A__questionmark_v0,'top$','top$a')
+     => 'bij_betw$j'('inv_into$a'('top$',A__questionmark_v0),'top$a','top$') ) ).
+
+%% ∀ ?v0:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$ (bij_betw$k(?v0, top$c, top$c) ⇒ bij_betw$k(inv_into$s(top$c, ?v0), top$c, top$c))
+tff(axiom237,axiom,
+    ! [A__questionmark_v0: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$'] :
+      ( 'bij_betw$k'(A__questionmark_v0,'top$c','top$c')
+     => 'bij_betw$k'('inv_into$s'('top$c',A__questionmark_v0),'top$c','top$c') ) ).
+
+%% ∀ ?v0:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$ (bij_betw$l(?v0, top$c, top$d) ⇒ bij_betw$n(inv_into$t(top$c, ?v0), top$d, top$c))
+tff(axiom238,axiom,
+    ! [A__questionmark_v0: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$'] :
+      ( 'bij_betw$l'(A__questionmark_v0,'top$c','top$d')
+     => 'bij_betw$n'('inv_into$t'('top$c',A__questionmark_v0),'top$d','top$c') ) ).
+
+%% ∀ ?v0:C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (bij_betw$m(?v0, top$b, top$a) ⇒ bij_betw$q(inv_into$(top$b, ?v0), top$a, top$b))
+tff(axiom239,axiom,
+    ! [A__questionmark_v0: 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'bij_betw$m'(A__questionmark_v0,'top$b','top$a')
+     => 'bij_betw$q'('inv_into$'('top$b',A__questionmark_v0),'top$a','top$b') ) ).
+
+%% ∀ ?v0:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$ (bij_betw$n(?v0, top$d, top$c) ⇒ bij_betw$l(inv_into$u(top$d, ?v0), top$c, top$d))
+tff(axiom240,axiom,
+    ! [A__questionmark_v0: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$'] :
+      ( 'bij_betw$n'(A__questionmark_v0,'top$d','top$c')
+     => 'bij_betw$l'('inv_into$u'('top$d',A__questionmark_v0),'top$c','top$d') ) ).
+
+%% ∀ ?v0:B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:B_ell2_b_ell2_cblinfun$ ?v2:B_ell2_b_ell2_cblinfun$ (bij_betw$a(?v0, top$a, top$a) ⇒ ((?v1 = fun_app$l(inv_into$b(top$a, ?v0), ?v2)) = (fun_app$l(?v0, ?v1) = ?v2)))
+tff(axiom241,axiom,
+    ! [A__questionmark_v0: 'B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'B_ell2_b_ell2_cblinfun$',A__questionmark_v2: 'B_ell2_b_ell2_cblinfun$'] :
+      ( 'bij_betw$a'(A__questionmark_v0,'top$a','top$a')
+     => ( ( A__questionmark_v1 = 'fun_app$l'('inv_into$b'('top$a',A__questionmark_v0),A__questionmark_v2) )
+      <=> ( 'fun_app$l'(A__questionmark_v0,A__questionmark_v1) = A__questionmark_v2 ) ) ) ).
+
+%% ∀ ?v0:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$ ?v2:B_ell2_b_ell2_cblinfun$ (bij_betw$b(?v0, top$c, top$a) ⇒ ((?v1 = fun_app$c(inv_into$d(top$c, ?v0), ?v2)) = (fun_app$d(?v0, ?v1) = ?v2)))
+tff(axiom242,axiom,
+    ! [A__questionmark_v0: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$',A__questionmark_v2: 'B_ell2_b_ell2_cblinfun$'] :
+      ( 'bij_betw$b'(A__questionmark_v0,'top$c','top$a')
+     => ( ( A__questionmark_v1 = 'fun_app$c'('inv_into$d'('top$c',A__questionmark_v0),A__questionmark_v2) )
+      <=> ( 'fun_app$d'(A__questionmark_v0,A__questionmark_v1) = A__questionmark_v2 ) ) ) ).
+
+%% ∀ ?v0:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun$ ?v2:B_ell2_b_ell2_cblinfun$ (bij_betw$d(?v0, top$d, top$a) ⇒ ((?v1 = fun_app$f(inv_into$f(top$d, ?v0), ?v2)) = (fun_app$g(?v0, ?v1) = ?v2)))
+tff(axiom243,axiom,
+    ! [A__questionmark_v0: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun$',A__questionmark_v2: 'B_ell2_b_ell2_cblinfun$'] :
+      ( 'bij_betw$d'(A__questionmark_v0,'top$d','top$a')
+     => ( ( A__questionmark_v1 = 'fun_app$f'('inv_into$f'('top$d',A__questionmark_v0),A__questionmark_v2) )
+      <=> ( 'fun_app$g'(A__questionmark_v0,A__questionmark_v1) = A__questionmark_v2 ) ) ) ).
+
+%% ∀ ?v0:B_ell2_b_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$ ?v1:B_ell2_b_ell2_cblinfun$ ?v2:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$ (bij_betw$c(?v0, top$a, top$c) ⇒ ((?v1 = fun_app$d(inv_into$c(top$a, ?v0), ?v2)) = (fun_app$c(?v0, ?v1) = ?v2)))
+tff(axiom244,axiom,
+    ! [A__questionmark_v0: 'B_ell2_b_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$',A__questionmark_v1: 'B_ell2_b_ell2_cblinfun$',A__questionmark_v2: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$'] :
+      ( 'bij_betw$c'(A__questionmark_v0,'top$a','top$c')
+     => ( ( A__questionmark_v1 = 'fun_app$d'('inv_into$c'('top$a',A__questionmark_v0),A__questionmark_v2) )
+      <=> ( 'fun_app$c'(A__questionmark_v0,A__questionmark_v1) = A__questionmark_v2 ) ) ) ).
+
+%% ∀ ?v0:B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$ ?v1:B_ell2_b_ell2_cblinfun$ ?v2:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun$ (bij_betw$e(?v0, top$a, top$d) ⇒ ((?v1 = fun_app$g(inv_into$e(top$a, ?v0), ?v2)) = (fun_app$f(?v0, ?v1) = ?v2)))
+tff(axiom245,axiom,
+    ! [A__questionmark_v0: 'B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$',A__questionmark_v1: 'B_ell2_b_ell2_cblinfun$',A__questionmark_v2: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun$'] :
+      ( 'bij_betw$e'(A__questionmark_v0,'top$a','top$d')
+     => ( ( A__questionmark_v1 = 'fun_app$g'('inv_into$e'('top$a',A__questionmark_v0),A__questionmark_v2) )
+      <=> ( 'fun_app$f'(A__questionmark_v0,A__questionmark_v1) = A__questionmark_v2 ) ) ) ).
+
+%% ∀ ?v0:A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun$ ?v2:B_ell2_b_ell2_cblinfun$ (bij_betw$(?v0, top$, top$a) ⇒ ((?v1 = fun_app$a(inv_into$a(top$, ?v0), ?v2)) = (fun_app$k(?v0, ?v1) = ?v2)))
+tff(axiom246,axiom,
+    ! [A__questionmark_v0: 'A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun$',A__questionmark_v2: 'B_ell2_b_ell2_cblinfun$'] :
+      ( 'bij_betw$'(A__questionmark_v0,'top$','top$a')
+     => ( ( A__questionmark_v1 = 'fun_app$a'('inv_into$a'('top$',A__questionmark_v0),A__questionmark_v2) )
+      <=> ( 'fun_app$k'(A__questionmark_v0,A__questionmark_v1) = A__questionmark_v2 ) ) ) ).
+
+%% ∀ ?v0:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$ ?v1:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$ ?v2:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$ (bij_betw$k(?v0, top$c, top$c) ⇒ ((?v1 = fun_app$m(inv_into$s(top$c, ?v0), ?v2)) = (fun_app$m(?v0, ?v1) = ?v2)))
+tff(axiom247,axiom,
+    ! [A__questionmark_v0: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$',A__questionmark_v1: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$',A__questionmark_v2: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$'] :
+      ( 'bij_betw$k'(A__questionmark_v0,'top$c','top$c')
+     => ( ( A__questionmark_v1 = 'fun_app$m'('inv_into$s'('top$c',A__questionmark_v0),A__questionmark_v2) )
+      <=> ( 'fun_app$m'(A__questionmark_v0,A__questionmark_v1) = A__questionmark_v2 ) ) ) ).
+
+%% ∀ ?v0:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$ ?v1:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$ ?v2:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun$ (bij_betw$l(?v0, top$c, top$d) ⇒ ((?v1 = fun_app$n(inv_into$t(top$c, ?v0), ?v2)) = (fun_app$o(?v0, ?v1) = ?v2)))
+tff(axiom248,axiom,
+    ! [A__questionmark_v0: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$',A__questionmark_v1: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$',A__questionmark_v2: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun$'] :
+      ( 'bij_betw$l'(A__questionmark_v0,'top$c','top$d')
+     => ( ( A__questionmark_v1 = 'fun_app$n'('inv_into$t'('top$c',A__questionmark_v0),A__questionmark_v2) )
+      <=> ( 'fun_app$o'(A__questionmark_v0,A__questionmark_v1) = A__questionmark_v2 ) ) ) ).
+
+%% ∀ ?v0:C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun$ ?v2:B_ell2_b_ell2_cblinfun$ (bij_betw$m(?v0, top$b, top$a) ⇒ ((?v1 = fun_app$(inv_into$(top$b, ?v0), ?v2)) = (fun_app$e(?v0, ?v1) = ?v2)))
+tff(axiom249,axiom,
+    ! [A__questionmark_v0: 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun$',A__questionmark_v2: 'B_ell2_b_ell2_cblinfun$'] :
+      ( 'bij_betw$m'(A__questionmark_v0,'top$b','top$a')
+     => ( ( A__questionmark_v1 = 'fun_app$'('inv_into$'('top$b',A__questionmark_v0),A__questionmark_v2) )
+      <=> ( 'fun_app$e'(A__questionmark_v0,A__questionmark_v1) = A__questionmark_v2 ) ) ) ).
+
+%% ∀ ?v0:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$ ?v1:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun$ ?v2:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$ (bij_betw$n(?v0, top$d, top$c) ⇒ ((?v1 = fun_app$o(inv_into$u(top$d, ?v0), ?v2)) = (fun_app$n(?v0, ?v1) = ?v2)))
+tff(axiom250,axiom,
+    ! [A__questionmark_v0: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$',A__questionmark_v1: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun$',A__questionmark_v2: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$'] :
+      ( 'bij_betw$n'(A__questionmark_v0,'top$d','top$c')
+     => ( ( A__questionmark_v1 = 'fun_app$o'('inv_into$u'('top$d',A__questionmark_v0),A__questionmark_v2) )
+      <=> ( 'fun_app$n'(A__questionmark_v0,A__questionmark_v1) = A__questionmark_v2 ) ) ) ).
+
+%% ∀ ?v0:B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (bij_betw$a(?v0, top$a, top$a) ⇒ (inv_into$b(top$a, inv_into$b(top$a, ?v0)) = ?v0))
+tff(axiom251,axiom,
+    ! [A__questionmark_v0: 'B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'bij_betw$a'(A__questionmark_v0,'top$a','top$a')
+     => ( 'inv_into$b'('top$a','inv_into$b'('top$a',A__questionmark_v0)) = A__questionmark_v0 ) ) ).
+
+%% ∀ ?v0:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (bij_betw$b(?v0, top$c, top$a) ⇒ (inv_into$c(top$a, inv_into$d(top$c, ?v0)) = ?v0))
+tff(axiom252,axiom,
+    ! [A__questionmark_v0: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'bij_betw$b'(A__questionmark_v0,'top$c','top$a')
+     => ( 'inv_into$c'('top$a','inv_into$d'('top$c',A__questionmark_v0)) = A__questionmark_v0 ) ) ).
+
+%% ∀ ?v0:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (bij_betw$d(?v0, top$d, top$a) ⇒ (inv_into$e(top$a, inv_into$f(top$d, ?v0)) = ?v0))
+tff(axiom253,axiom,
+    ! [A__questionmark_v0: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'bij_betw$d'(A__questionmark_v0,'top$d','top$a')
+     => ( 'inv_into$e'('top$a','inv_into$f'('top$d',A__questionmark_v0)) = A__questionmark_v0 ) ) ).
+
+%% ∀ ?v0:B_ell2_b_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$ (bij_betw$c(?v0, top$a, top$c) ⇒ (inv_into$d(top$c, inv_into$c(top$a, ?v0)) = ?v0))
+tff(axiom254,axiom,
+    ! [A__questionmark_v0: 'B_ell2_b_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$'] :
+      ( 'bij_betw$c'(A__questionmark_v0,'top$a','top$c')
+     => ( 'inv_into$d'('top$c','inv_into$c'('top$a',A__questionmark_v0)) = A__questionmark_v0 ) ) ).
+
+%% ∀ ?v0:B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$ (bij_betw$e(?v0, top$a, top$d) ⇒ (inv_into$f(top$d, inv_into$e(top$a, ?v0)) = ?v0))
+tff(axiom255,axiom,
+    ! [A__questionmark_v0: 'B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$'] :
+      ( 'bij_betw$e'(A__questionmark_v0,'top$a','top$d')
+     => ( 'inv_into$f'('top$d','inv_into$e'('top$a',A__questionmark_v0)) = A__questionmark_v0 ) ) ).
+
+%% ∀ ?v0:A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (bij_betw$(?v0, top$, top$a) ⇒ (inv_into$m(top$a, inv_into$a(top$, ?v0)) = ?v0))
+tff(axiom256,axiom,
+    ! [A__questionmark_v0: 'A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'bij_betw$'(A__questionmark_v0,'top$','top$a')
+     => ( 'inv_into$m'('top$a','inv_into$a'('top$',A__questionmark_v0)) = A__questionmark_v0 ) ) ).
+
+%% ∀ ?v0:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$ (bij_betw$k(?v0, top$c, top$c) ⇒ (inv_into$s(top$c, inv_into$s(top$c, ?v0)) = ?v0))
+tff(axiom257,axiom,
+    ! [A__questionmark_v0: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$'] :
+      ( 'bij_betw$k'(A__questionmark_v0,'top$c','top$c')
+     => ( 'inv_into$s'('top$c','inv_into$s'('top$c',A__questionmark_v0)) = A__questionmark_v0 ) ) ).
+
+%% ∀ ?v0:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$ (bij_betw$l(?v0, top$c, top$d) ⇒ (inv_into$u(top$d, inv_into$t(top$c, ?v0)) = ?v0))
+tff(axiom258,axiom,
+    ! [A__questionmark_v0: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$'] :
+      ( 'bij_betw$l'(A__questionmark_v0,'top$c','top$d')
+     => ( 'inv_into$u'('top$d','inv_into$t'('top$c',A__questionmark_v0)) = A__questionmark_v0 ) ) ).
+
+%% ∀ ?v0:C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (bij_betw$m(?v0, top$b, top$a) ⇒ (inv_into$p(top$a, inv_into$(top$b, ?v0)) = ?v0))
+tff(axiom259,axiom,
+    ! [A__questionmark_v0: 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'bij_betw$m'(A__questionmark_v0,'top$b','top$a')
+     => ( 'inv_into$p'('top$a','inv_into$'('top$b',A__questionmark_v0)) = A__questionmark_v0 ) ) ).
+
+%% ∀ ?v0:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$ (bij_betw$n(?v0, top$d, top$c) ⇒ (inv_into$t(top$c, inv_into$u(top$d, ?v0)) = ?v0))
+tff(axiom260,axiom,
+    ! [A__questionmark_v0: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$'] :
+      ( 'bij_betw$n'(A__questionmark_v0,'top$d','top$c')
+     => ( 'inv_into$t'('top$c','inv_into$u'('top$d',A__questionmark_v0)) = A__questionmark_v0 ) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v2:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((compatible$aq(?v0, ?v1) ∧ register$(?v2)) ⇒ compatible$(?v0, comp$k(?v1, ?v2)))
+tff(axiom261,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v2: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'compatible$aq'(A__questionmark_v0,A__questionmark_v1)
+        & 'register$'(A__questionmark_v2) )
+     => 'compatible$'(A__questionmark_v0,'comp$k'(A__questionmark_v1,A__questionmark_v2)) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v2:C_ell2_c_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$ ((compatible$(?v0, ?v1) ∧ register$p(?v2)) ⇒ compatible$(?v0, comp$e(?v1, ?v2)))
+tff(axiom262,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v2: 'C_ell2_c_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$'] :
+      ( ( 'compatible$'(A__questionmark_v0,A__questionmark_v1)
+        & 'register$p'(A__questionmark_v2) )
+     => 'compatible$'(A__questionmark_v0,'comp$e'(A__questionmark_v1,A__questionmark_v2)) ) ).
+
+%% ∀ ?v0:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$ ?v1:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$ ?v2:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((compatible$ar(?v0, ?v1) ∧ register$d(?v2)) ⇒ compatible$as(comp$(?v2, ?v0), comp$(?v2, ?v1)))
+tff(axiom263,axiom,
+    ! [A__questionmark_v0: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$',A__questionmark_v1: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$',A__questionmark_v2: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'compatible$ar'(A__questionmark_v0,A__questionmark_v1)
+        & 'register$d'(A__questionmark_v2) )
+     => 'compatible$as'('comp$'(A__questionmark_v2,A__questionmark_v0),'comp$'(A__questionmark_v2,A__questionmark_v1)) ) ).
+
+%% ∀ ?v0:B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$ ?v1:B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$ ?v2:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$ ((compatible$at(?v0, ?v1) ∧ register$b(?v2)) ⇒ compatible$au(comp$a(?v2, ?v0), comp$a(?v2, ?v1)))
+tff(axiom264,axiom,
+    ! [A__questionmark_v0: 'B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$',A__questionmark_v1: 'B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$',A__questionmark_v2: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$'] :
+      ( ( 'compatible$at'(A__questionmark_v0,A__questionmark_v1)
+        & 'register$b'(A__questionmark_v2) )
+     => 'compatible$au'('comp$a'(A__questionmark_v2,A__questionmark_v0),'comp$a'(A__questionmark_v2,A__questionmark_v1)) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$ ?v1:C_ell2_c_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$ ?v2:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((compatible$v(?v0, ?v1) ∧ register$(?v2)) ⇒ compatible$(comp$d(?v2, ?v0), comp$e(?v2, ?v1)))
+tff(axiom265,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$',A__questionmark_v1: 'C_ell2_c_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$',A__questionmark_v2: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'compatible$v'(A__questionmark_v0,A__questionmark_v1)
+        & 'register$'(A__questionmark_v2) )
+     => 'compatible$'('comp$d'(A__questionmark_v2,A__questionmark_v0),'comp$e'(A__questionmark_v2,A__questionmark_v1)) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$ ?v1:C_ell2_c_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$ ?v2:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((compatible$w(?v0, ?v1) ∧ register$a(?v2)) ⇒ compatible$(comp$g(?v2, ?v0), comp$h(?v2, ?v1)))
+tff(axiom266,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$',A__questionmark_v1: 'C_ell2_c_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$',A__questionmark_v2: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'compatible$w'(A__questionmark_v0,A__questionmark_v1)
+        & 'register$a'(A__questionmark_v2) )
+     => 'compatible$'('comp$g'(A__questionmark_v2,A__questionmark_v0),'comp$h'(A__questionmark_v2,A__questionmark_v1)) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v2:B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((compatible$(?v0, ?v1) ∧ register$j(?v2)) ⇒ compatible$(comp$j(?v2, ?v0), comp$k(?v2, ?v1)))
+tff(axiom267,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v2: 'B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'compatible$'(A__questionmark_v0,A__questionmark_v1)
+        & 'register$j'(A__questionmark_v2) )
+     => 'compatible$'('comp$j'(A__questionmark_v2,A__questionmark_v0),'comp$k'(A__questionmark_v2,A__questionmark_v1)) ) ).
+
+%% ∀ ?v0:B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v2:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((compatible$av(?v0, ?v1) ∧ register$a(?v2)) ⇒ compatible$(comp$j(?v0, ?v2), ?v1))
+tff(axiom268,axiom,
+    ! [A__questionmark_v0: 'B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v2: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'compatible$av'(A__questionmark_v0,A__questionmark_v1)
+        & 'register$a'(A__questionmark_v2) )
+     => 'compatible$'('comp$j'(A__questionmark_v0,A__questionmark_v2),A__questionmark_v1) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v2:A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$ ((compatible$(?v0, ?v1) ∧ register$q(?v2)) ⇒ compatible$(comp$g(?v0, ?v2), ?v1))
+tff(axiom269,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v2: 'A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$'] :
+      ( ( 'compatible$'(A__questionmark_v0,A__questionmark_v1)
+        & 'register$q'(A__questionmark_v2) )
+     => 'compatible$'('comp$g'(A__questionmark_v0,A__questionmark_v2),A__questionmark_v1) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v2:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((compatible$(?v0, ?v1) ∧ equivalent_registers$t(?v1, ?v2)) ⇒ equivalent_registers$d(register_pair$a(?v0, ?v1), register_pair$a(?v0, ?v2)))
+tff(axiom270,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v2: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'compatible$'(A__questionmark_v0,A__questionmark_v1)
+        & 'equivalent_registers$t'(A__questionmark_v1,A__questionmark_v2) )
+     => 'equivalent_registers$d'('register_pair$a'(A__questionmark_v0,A__questionmark_v1),'register_pair$a'(A__questionmark_v0,A__questionmark_v2)) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v2:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((compatible$c(?v0, ?v1) ∧ equivalent_registers$x(?v1, ?v2)) ⇒ equivalent_registers$av(register_pair$g(?v0, ?v1), register_pair$a(?v0, ?v2)))
+tff(axiom271,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v2: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'compatible$c'(A__questionmark_v0,A__questionmark_v1)
+        & 'equivalent_registers$x'(A__questionmark_v1,A__questionmark_v2) )
+     => 'equivalent_registers$av'('register_pair$g'(A__questionmark_v0,A__questionmark_v1),'register_pair$a'(A__questionmark_v0,A__questionmark_v2)) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v2:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((compatible$(?v0, ?v1) ∧ equivalent_registers$y(?v1, ?v2)) ⇒ equivalent_registers$aw(register_pair$a(?v0, ?v1), register_pair$g(?v0, ?v2)))
+tff(axiom272,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v2: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'compatible$'(A__questionmark_v0,A__questionmark_v1)
+        & 'equivalent_registers$y'(A__questionmark_v1,A__questionmark_v2) )
+     => 'equivalent_registers$aw'('register_pair$a'(A__questionmark_v0,A__questionmark_v1),'register_pair$g'(A__questionmark_v0,A__questionmark_v2)) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v2:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((compatible$b(?v0, ?v1) ∧ equivalent_registers$z(?v1, ?v2)) ⇒ equivalent_registers$ax(register_pair$(?v0, ?v1), register_pair$a(?v0, ?v2)))
+tff(axiom273,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v2: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'compatible$b'(A__questionmark_v0,A__questionmark_v1)
+        & 'equivalent_registers$z'(A__questionmark_v1,A__questionmark_v2) )
+     => 'equivalent_registers$ax'('register_pair$'(A__questionmark_v0,A__questionmark_v1),'register_pair$a'(A__questionmark_v0,A__questionmark_v2)) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v2:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((compatible$c(?v0, ?v1) ∧ equivalent_registers$m(?v1, ?v2)) ⇒ equivalent_registers$al(register_pair$g(?v0, ?v1), register_pair$g(?v0, ?v2)))
+tff(axiom274,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v2: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'compatible$c'(A__questionmark_v0,A__questionmark_v1)
+        & 'equivalent_registers$m'(A__questionmark_v1,A__questionmark_v2) )
+     => 'equivalent_registers$al'('register_pair$g'(A__questionmark_v0,A__questionmark_v1),'register_pair$g'(A__questionmark_v0,A__questionmark_v2)) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v2:A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((compatible$(?v0, ?v1) ∧ equivalent_registers$aa(?v1, ?v2)) ⇒ equivalent_registers$ay(register_pair$a(?v0, ?v1), register_pair$(?v0, ?v2)))
+tff(axiom275,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v2: 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'compatible$'(A__questionmark_v0,A__questionmark_v1)
+        & 'equivalent_registers$aa'(A__questionmark_v1,A__questionmark_v2) )
+     => 'equivalent_registers$ay'('register_pair$a'(A__questionmark_v0,A__questionmark_v1),'register_pair$'(A__questionmark_v0,A__questionmark_v2)) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v2:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((compatible$b(?v0, ?v1) ∧ equivalent_registers$g(?v1, ?v2)) ⇒ equivalent_registers$az(register_pair$(?v0, ?v1), register_pair$g(?v0, ?v2)))
+tff(axiom276,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v2: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'compatible$b'(A__questionmark_v0,A__questionmark_v1)
+        & 'equivalent_registers$g'(A__questionmark_v1,A__questionmark_v2) )
+     => 'equivalent_registers$az'('register_pair$'(A__questionmark_v0,A__questionmark_v1),'register_pair$g'(A__questionmark_v0,A__questionmark_v2)) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v2:A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((compatible$c(?v0, ?v1) ∧ equivalent_registers$k(?v1, ?v2)) ⇒ equivalent_registers$ba(register_pair$g(?v0, ?v1), register_pair$(?v0, ?v2)))
+tff(axiom277,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v2: 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'compatible$c'(A__questionmark_v0,A__questionmark_v1)
+        & 'equivalent_registers$k'(A__questionmark_v1,A__questionmark_v2) )
+     => 'equivalent_registers$ba'('register_pair$g'(A__questionmark_v0,A__questionmark_v1),'register_pair$'(A__questionmark_v0,A__questionmark_v2)) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v2:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((compatible$d(?v0, ?v1) ∧ equivalent_registers$ab(?v1, ?v2)) ⇒ equivalent_registers$bb(register_pair$i(?v0, ?v1), register_pair$a(?v0, ?v2)))
+tff(axiom278,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v2: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'compatible$d'(A__questionmark_v0,A__questionmark_v1)
+        & 'equivalent_registers$ab'(A__questionmark_v1,A__questionmark_v2) )
+     => 'equivalent_registers$bb'('register_pair$i'(A__questionmark_v0,A__questionmark_v1),'register_pair$a'(A__questionmark_v0,A__questionmark_v2)) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v2:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((compatible$(?v0, ?v1) ∧ equivalent_registers$ac(?v1, ?v2)) ⇒ equivalent_registers$bc(register_pair$a(?v0, ?v1), register_pair$i(?v0, ?v2)))
+tff(axiom279,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v2: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'compatible$'(A__questionmark_v0,A__questionmark_v1)
+        & 'equivalent_registers$ac'(A__questionmark_v1,A__questionmark_v2) )
+     => 'equivalent_registers$bc'('register_pair$a'(A__questionmark_v0,A__questionmark_v1),'register_pair$i'(A__questionmark_v0,A__questionmark_v2)) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v2:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((compatible$ah(?v0, ?v1) ∧ (compatible$(?v1, ?v2) ∧ compatible$(?v0, ?v2))) ⇒ (comp$ao(register_pair$ao(register_pair$ap(?v0, ?v1), ?v2), assoc$) = register_pair$an(?v0, register_pair$a(?v1, ?v2))))
+tff(axiom280,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v2: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'compatible$ah'(A__questionmark_v0,A__questionmark_v1)
+        & 'compatible$'(A__questionmark_v1,A__questionmark_v2)
+        & 'compatible$'(A__questionmark_v0,A__questionmark_v2) )
+     => ( 'comp$ao'('register_pair$ao'('register_pair$ap'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2),'assoc$') = 'register_pair$an'(A__questionmark_v0,'register_pair$a'(A__questionmark_v1,A__questionmark_v2)) ) ) ).
+
+%% ∀ ?v0:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v2:A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((compatible$ab(?v0, ?v1) ∧ (compatible$b(?v1, ?v2) ∧ compatible$p(?v0, ?v2))) ⇒ (comp$ap(register_pair$aq(register_pair$ar(?v0, ?v1), ?v2), assoc$a) = register_pair$d(?v0, register_pair$(?v1, ?v2))))
+tff(axiom281,axiom,
+    ! [A__questionmark_v0: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v2: 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'compatible$ab'(A__questionmark_v0,A__questionmark_v1)
+        & 'compatible$b'(A__questionmark_v1,A__questionmark_v2)
+        & 'compatible$p'(A__questionmark_v0,A__questionmark_v2) )
+     => ( 'comp$ap'('register_pair$aq'('register_pair$ar'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2),'assoc$a') = 'register_pair$d'(A__questionmark_v0,'register_pair$'(A__questionmark_v1,A__questionmark_v2)) ) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v2:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((compatible$b(?v0, ?v1) ∧ (compatible$ac(?v1, ?v2) ∧ compatible$(?v0, ?v2))) ⇒ (comp$aq(register_pair$ab(register_pair$(?v0, ?v1), ?v2), assoc$b) = register_pair$z(?v0, register_pair$aa(?v1, ?v2))))
+tff(axiom282,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v2: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'compatible$b'(A__questionmark_v0,A__questionmark_v1)
+        & 'compatible$ac'(A__questionmark_v1,A__questionmark_v2)
+        & 'compatible$'(A__questionmark_v0,A__questionmark_v2) )
+     => ( 'comp$aq'('register_pair$ab'('register_pair$'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2),'assoc$b') = 'register_pair$z'(A__questionmark_v0,'register_pair$aa'(A__questionmark_v1,A__questionmark_v2)) ) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v2:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((compatible$c(?v0, ?v1) ∧ (compatible$ad(?v1, ?v2) ∧ compatible$(?v0, ?v2))) ⇒ (comp$ar(register_pair$ae(register_pair$g(?v0, ?v1), ?v2), assoc$c) = register_pair$ac(?v0, register_pair$ad(?v1, ?v2))))
+tff(axiom283,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v2: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'compatible$c'(A__questionmark_v0,A__questionmark_v1)
+        & 'compatible$ad'(A__questionmark_v1,A__questionmark_v2)
+        & 'compatible$'(A__questionmark_v0,A__questionmark_v2) )
+     => ( 'comp$ar'('register_pair$ae'('register_pair$g'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2),'assoc$c') = 'register_pair$ac'(A__questionmark_v0,'register_pair$ad'(A__questionmark_v1,A__questionmark_v2)) ) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v2:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((compatible$d(?v0, ?v1) ∧ (compatible$ae(?v1, ?v2) ∧ compatible$(?v0, ?v2))) ⇒ (comp$as(register_pair$ah(register_pair$i(?v0, ?v1), ?v2), assoc$d) = register_pair$af(?v0, register_pair$ag(?v1, ?v2))))
+tff(axiom284,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v2: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'compatible$d'(A__questionmark_v0,A__questionmark_v1)
+        & 'compatible$ae'(A__questionmark_v1,A__questionmark_v2)
+        & 'compatible$'(A__questionmark_v0,A__questionmark_v2) )
+     => ( 'comp$as'('register_pair$ah'('register_pair$i'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2),'assoc$d') = 'register_pair$af'(A__questionmark_v0,'register_pair$ag'(A__questionmark_v1,A__questionmark_v2)) ) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v2:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((compatible$(?v0, ?v1) ∧ (compatible$af(?v1, ?v2) ∧ compatible$(?v0, ?v2))) ⇒ (comp$at(register_pair$ak(register_pair$a(?v0, ?v1), ?v2), assoc$e) = register_pair$ai(?v0, register_pair$aj(?v1, ?v2))))
+tff(axiom285,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v2: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'compatible$'(A__questionmark_v0,A__questionmark_v1)
+        & 'compatible$af'(A__questionmark_v1,A__questionmark_v2)
+        & 'compatible$'(A__questionmark_v0,A__questionmark_v2) )
+     => ( 'comp$at'('register_pair$ak'('register_pair$a'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2),'assoc$e') = 'register_pair$ai'(A__questionmark_v0,'register_pair$aj'(A__questionmark_v1,A__questionmark_v2)) ) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v2:A_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((compatible$(?v0, ?v1) ∧ (compatible$a(?v1, ?v2) ∧ compatible$ag(?v0, ?v2))) ⇒ (comp$au(register_pair$am(register_pair$a(?v0, ?v1), ?v2), assoc$f) = register_pair$al(?v0, register_pair$d(?v1, ?v2))))
+tff(axiom286,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v2: 'A_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'compatible$'(A__questionmark_v0,A__questionmark_v1)
+        & 'compatible$a'(A__questionmark_v1,A__questionmark_v2)
+        & 'compatible$ag'(A__questionmark_v0,A__questionmark_v2) )
+     => ( 'comp$au'('register_pair$am'('register_pair$a'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2),'assoc$f') = 'register_pair$al'(A__questionmark_v0,'register_pair$d'(A__questionmark_v1,A__questionmark_v2)) ) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v2:A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((compatible$(?v0, ?v1) ∧ (compatible$p(?v1, ?v2) ∧ compatible$b(?v0, ?v2))) ⇒ (comp$av(register_pair$n(register_pair$a(?v0, ?v1), ?v2), assoc$g) = register_pair$i(?v0, register_pair$b(?v1, ?v2))))
+tff(axiom287,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v2: 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'compatible$'(A__questionmark_v0,A__questionmark_v1)
+        & 'compatible$p'(A__questionmark_v1,A__questionmark_v2)
+        & 'compatible$b'(A__questionmark_v0,A__questionmark_v2) )
+     => ( 'comp$av'('register_pair$n'('register_pair$a'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2),'assoc$g') = 'register_pair$i'(A__questionmark_v0,'register_pair$b'(A__questionmark_v1,A__questionmark_v2)) ) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v2:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((compatible$b(?v0, ?v1) ∧ (compatible$ac(?v1, ?v2) ∧ compatible$(?v0, ?v2))) ⇒ (comp$aw(register_pair$z(?v0, register_pair$aa(?v1, ?v2)), assoc$h) = register_pair$ab(register_pair$(?v0, ?v1), ?v2)))
+tff(axiom288,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v2: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'compatible$b'(A__questionmark_v0,A__questionmark_v1)
+        & 'compatible$ac'(A__questionmark_v1,A__questionmark_v2)
+        & 'compatible$'(A__questionmark_v0,A__questionmark_v2) )
+     => ( 'comp$aw'('register_pair$z'(A__questionmark_v0,'register_pair$aa'(A__questionmark_v1,A__questionmark_v2)),'assoc$h') = 'register_pair$ab'('register_pair$'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2) ) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v2:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((compatible$c(?v0, ?v1) ∧ (compatible$ad(?v1, ?v2) ∧ compatible$(?v0, ?v2))) ⇒ (comp$ax(register_pair$ac(?v0, register_pair$ad(?v1, ?v2)), assoc$i) = register_pair$ae(register_pair$g(?v0, ?v1), ?v2)))
+tff(axiom289,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v2: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'compatible$c'(A__questionmark_v0,A__questionmark_v1)
+        & 'compatible$ad'(A__questionmark_v1,A__questionmark_v2)
+        & 'compatible$'(A__questionmark_v0,A__questionmark_v2) )
+     => ( 'comp$ax'('register_pair$ac'(A__questionmark_v0,'register_pair$ad'(A__questionmark_v1,A__questionmark_v2)),'assoc$i') = 'register_pair$ae'('register_pair$g'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2) ) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v2:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((compatible$d(?v0, ?v1) ∧ (compatible$ae(?v1, ?v2) ∧ compatible$(?v0, ?v2))) ⇒ (comp$ay(register_pair$af(?v0, register_pair$ag(?v1, ?v2)), assoc$j) = register_pair$ah(register_pair$i(?v0, ?v1), ?v2)))
+tff(axiom290,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v2: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'compatible$d'(A__questionmark_v0,A__questionmark_v1)
+        & 'compatible$ae'(A__questionmark_v1,A__questionmark_v2)
+        & 'compatible$'(A__questionmark_v0,A__questionmark_v2) )
+     => ( 'comp$ay'('register_pair$af'(A__questionmark_v0,'register_pair$ag'(A__questionmark_v1,A__questionmark_v2)),'assoc$j') = 'register_pair$ah'('register_pair$i'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2) ) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v2:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((compatible$(?v0, ?v1) ∧ (compatible$af(?v1, ?v2) ∧ compatible$(?v0, ?v2))) ⇒ (comp$az(register_pair$ai(?v0, register_pair$aj(?v1, ?v2)), assoc$k) = register_pair$ak(register_pair$a(?v0, ?v1), ?v2)))
+tff(axiom291,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v2: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'compatible$'(A__questionmark_v0,A__questionmark_v1)
+        & 'compatible$af'(A__questionmark_v1,A__questionmark_v2)
+        & 'compatible$'(A__questionmark_v0,A__questionmark_v2) )
+     => ( 'comp$az'('register_pair$ai'(A__questionmark_v0,'register_pair$aj'(A__questionmark_v1,A__questionmark_v2)),'assoc$k') = 'register_pair$ak'('register_pair$a'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2) ) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v2:A_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((compatible$(?v0, ?v1) ∧ (compatible$a(?v1, ?v2) ∧ compatible$ag(?v0, ?v2))) ⇒ (comp$ba(register_pair$al(?v0, register_pair$d(?v1, ?v2)), assoc$l) = register_pair$am(register_pair$a(?v0, ?v1), ?v2)))
+tff(axiom292,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v2: 'A_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'compatible$'(A__questionmark_v0,A__questionmark_v1)
+        & 'compatible$a'(A__questionmark_v1,A__questionmark_v2)
+        & 'compatible$ag'(A__questionmark_v0,A__questionmark_v2) )
+     => ( 'comp$ba'('register_pair$al'(A__questionmark_v0,'register_pair$d'(A__questionmark_v1,A__questionmark_v2)),'assoc$l') = 'register_pair$am'('register_pair$a'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2) ) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v2:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((compatible$ah(?v0, ?v1) ∧ (compatible$(?v1, ?v2) ∧ compatible$(?v0, ?v2))) ⇒ (comp$bb(register_pair$an(?v0, register_pair$a(?v1, ?v2)), assoc$m) = register_pair$ao(register_pair$ap(?v0, ?v1), ?v2)))
+tff(axiom293,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v2: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'compatible$ah'(A__questionmark_v0,A__questionmark_v1)
+        & 'compatible$'(A__questionmark_v1,A__questionmark_v2)
+        & 'compatible$'(A__questionmark_v0,A__questionmark_v2) )
+     => ( 'comp$bb'('register_pair$an'(A__questionmark_v0,'register_pair$a'(A__questionmark_v1,A__questionmark_v2)),'assoc$m') = 'register_pair$ao'('register_pair$ap'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2) ) ) ).
+
+%% ∀ ?v0:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v2:A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((compatible$ab(?v0, ?v1) ∧ (compatible$b(?v1, ?v2) ∧ compatible$p(?v0, ?v2))) ⇒ (comp$bc(register_pair$d(?v0, register_pair$(?v1, ?v2)), assoc$n) = register_pair$aq(register_pair$ar(?v0, ?v1), ?v2)))
+tff(axiom294,axiom,
+    ! [A__questionmark_v0: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v2: 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'compatible$ab'(A__questionmark_v0,A__questionmark_v1)
+        & 'compatible$b'(A__questionmark_v1,A__questionmark_v2)
+        & 'compatible$p'(A__questionmark_v0,A__questionmark_v2) )
+     => ( 'comp$bc'('register_pair$d'(A__questionmark_v0,'register_pair$'(A__questionmark_v1,A__questionmark_v2)),'assoc$n') = 'register_pair$aq'('register_pair$ar'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2) ) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v2:A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((compatible$(?v0, ?v1) ∧ (compatible$p(?v1, ?v2) ∧ compatible$b(?v0, ?v2))) ⇒ (comp$bd(register_pair$i(?v0, register_pair$b(?v1, ?v2)), assoc$o) = register_pair$n(register_pair$a(?v0, ?v1), ?v2)))
+tff(axiom295,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v2: 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'compatible$'(A__questionmark_v0,A__questionmark_v1)
+        & 'compatible$p'(A__questionmark_v1,A__questionmark_v2)
+        & 'compatible$b'(A__questionmark_v0,A__questionmark_v2) )
+     => ( 'comp$bd'('register_pair$i'(A__questionmark_v0,'register_pair$b'(A__questionmark_v1,A__questionmark_v2)),'assoc$o') = 'register_pair$n'('register_pair$a'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2) ) ) ).
+
+%% ∀ ?v0:B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((bij_betw$a(?v0, top$a, top$a) ∧ bij_betw$a(?v1, top$a, top$a)) ⇒ bij_betw$a(comp$aa(?v1, ?v0), top$a, top$a))
+tff(axiom296,axiom,
+    ! [A__questionmark_v0: 'B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'bij_betw$a'(A__questionmark_v0,'top$a','top$a')
+        & 'bij_betw$a'(A__questionmark_v1,'top$a','top$a') )
+     => 'bij_betw$a'('comp$aa'(A__questionmark_v1,A__questionmark_v0),'top$a','top$a') ) ).
+
+%% ∀ ?v0:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((bij_betw$b(?v0, top$c, top$a) ∧ bij_betw$a(?v1, top$a, top$a)) ⇒ bij_betw$b(comp$ae(?v1, ?v0), top$c, top$a))
+tff(axiom297,axiom,
+    ! [A__questionmark_v0: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'bij_betw$b'(A__questionmark_v0,'top$c','top$a')
+        & 'bij_betw$a'(A__questionmark_v1,'top$a','top$a') )
+     => 'bij_betw$b'('comp$ae'(A__questionmark_v1,A__questionmark_v0),'top$c','top$a') ) ).
+
+%% ∀ ?v0:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((bij_betw$d(?v0, top$d, top$a) ∧ bij_betw$a(?v1, top$a, top$a)) ⇒ bij_betw$d(comp$r(?v1, ?v0), top$d, top$a))
+tff(axiom298,axiom,
+    ! [A__questionmark_v0: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'bij_betw$d'(A__questionmark_v0,'top$d','top$a')
+        & 'bij_betw$a'(A__questionmark_v1,'top$a','top$a') )
+     => 'bij_betw$d'('comp$r'(A__questionmark_v1,A__questionmark_v0),'top$d','top$a') ) ).
+
+%% ∀ ?v0:B_ell2_b_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$ ?v1:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((bij_betw$c(?v0, top$a, top$c) ∧ bij_betw$b(?v1, top$c, top$a)) ⇒ bij_betw$a(comp$ab(?v1, ?v0), top$a, top$a))
+tff(axiom299,axiom,
+    ! [A__questionmark_v0: 'B_ell2_b_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$',A__questionmark_v1: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'bij_betw$c'(A__questionmark_v0,'top$a','top$c')
+        & 'bij_betw$b'(A__questionmark_v1,'top$c','top$a') )
+     => 'bij_betw$a'('comp$ab'(A__questionmark_v1,A__questionmark_v0),'top$a','top$a') ) ).
+
+%% ∀ ?v0:B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$ ?v1:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((bij_betw$e(?v0, top$a, top$d) ∧ bij_betw$d(?v1, top$d, top$a)) ⇒ bij_betw$a(comp$ac(?v1, ?v0), top$a, top$a))
+tff(axiom300,axiom,
+    ! [A__questionmark_v0: 'B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$',A__questionmark_v1: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'bij_betw$e'(A__questionmark_v0,'top$a','top$d')
+        & 'bij_betw$d'(A__questionmark_v1,'top$d','top$a') )
+     => 'bij_betw$a'('comp$ac'(A__questionmark_v1,A__questionmark_v0),'top$a','top$a') ) ).
+
+%% ∀ ?v0:B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:B_ell2_b_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$ ((bij_betw$a(?v0, top$a, top$a) ∧ bij_betw$c(?v1, top$a, top$c)) ⇒ bij_betw$c(comp$ad(?v1, ?v0), top$a, top$c))
+tff(axiom301,axiom,
+    ! [A__questionmark_v0: 'B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'B_ell2_b_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$'] :
+      ( ( 'bij_betw$a'(A__questionmark_v0,'top$a','top$a')
+        & 'bij_betw$c'(A__questionmark_v1,'top$a','top$c') )
+     => 'bij_betw$c'('comp$ad'(A__questionmark_v1,A__questionmark_v0),'top$a','top$c') ) ).
+
+%% ∀ ?v0:B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$ ((bij_betw$a(?v0, top$a, top$a) ∧ bij_betw$e(?v1, top$a, top$d)) ⇒ bij_betw$e(comp$af(?v1, ?v0), top$a, top$d))
+tff(axiom302,axiom,
+    ! [A__questionmark_v0: 'B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$'] :
+      ( ( 'bij_betw$a'(A__questionmark_v0,'top$a','top$a')
+        & 'bij_betw$e'(A__questionmark_v1,'top$a','top$d') )
+     => 'bij_betw$e'('comp$af'(A__questionmark_v1,A__questionmark_v0),'top$a','top$d') ) ).
+
+%% ∀ ?v0:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$ ?v1:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((bij_betw$i(?v0, top$f, top$e) ∧ bij_betw$h(?v1, top$e, top$a)) ⇒ bij_betw$t(comp$(?v1, ?v0), top$f, top$a))
+tff(axiom303,axiom,
+    ! [A__questionmark_v0: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$',A__questionmark_v1: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'bij_betw$i'(A__questionmark_v0,'top$f','top$e')
+        & 'bij_betw$h'(A__questionmark_v1,'top$e','top$a') )
+     => 'bij_betw$t'('comp$'(A__questionmark_v1,A__questionmark_v0),'top$f','top$a') ) ).
+
+%% ∀ ?v0:A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((bij_betw$(?v0, top$, top$a) ∧ bij_betw$a(?v1, top$a, top$a)) ⇒ bij_betw$(comp$be(?v1, ?v0), top$, top$a))
+tff(axiom304,axiom,
+    ! [A__questionmark_v0: 'A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'bij_betw$'(A__questionmark_v0,'top$','top$a')
+        & 'bij_betw$a'(A__questionmark_v1,'top$a','top$a') )
+     => 'bij_betw$'('comp$be'(A__questionmark_v1,A__questionmark_v0),'top$','top$a') ) ).
+
+%% ∀ ?v0:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$ ?v1:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((bij_betw$k(?v0, top$c, top$c) ∧ bij_betw$b(?v1, top$c, top$a)) ⇒ bij_betw$b(comp$bf(?v1, ?v0), top$c, top$a))
+tff(axiom305,axiom,
+    ! [A__questionmark_v0: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$',A__questionmark_v1: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'bij_betw$k'(A__questionmark_v0,'top$c','top$c')
+        & 'bij_betw$b'(A__questionmark_v1,'top$c','top$a') )
+     => 'bij_betw$b'('comp$bf'(A__questionmark_v1,A__questionmark_v0),'top$c','top$a') ) ).
+
+%% ∀ ?v0:B$ ?v1:B$ ((ket$(?v0) = ket$(?v1)) = (?v0 = ?v1))
+tff(axiom306,axiom,
+    ! [A__questionmark_v0: 'B$',A__questionmark_v1: 'B$'] :
+      ( ( 'ket$'(A__questionmark_v0) = 'ket$'(A__questionmark_v1) )
+    <=> ( A__questionmark_v0 = A__questionmark_v1 ) ) ).
+
+%% ∀ ?v0:A$ ?v1:A$ ((ket$a(?v0) = ket$a(?v1)) = (?v0 = ?v1))
+tff(axiom307,axiom,
+    ! [A__questionmark_v0: 'A$',A__questionmark_v1: 'A$'] :
+      ( ( 'ket$a'(A__questionmark_v0) = 'ket$a'(A__questionmark_v1) )
+    <=> ( A__questionmark_v0 = A__questionmark_v1 ) ) ).
+
+%% ∀ ?v0:C$ ?v1:C$ ((ket$b(?v0) = ket$b(?v1)) = (?v0 = ?v1))
+tff(axiom308,axiom,
+    ! [A__questionmark_v0: 'C$',A__questionmark_v1: 'C$'] :
+      ( ( 'ket$b'(A__questionmark_v0) = 'ket$b'(A__questionmark_v1) )
+    <=> ( A__questionmark_v0 = A__questionmark_v1 ) ) ).
+
+%% ∀ ?v0:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((iso_register$g(?v0) ∧ iso_register$g(?v1)) ⇒ (inv_into$v(top$h, register_tensor$(?v0, ?v1)) = register_tensor$a(inv_into$d(top$c, ?v0), inv_into$d(top$c, ?v1))))
+tff(axiom309,axiom,
+    ! [A__questionmark_v0: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'iso_register$g'(A__questionmark_v0)
+        & 'iso_register$g'(A__questionmark_v1) )
+     => ( 'inv_into$v'('top$h','register_tensor$'(A__questionmark_v0,A__questionmark_v1)) = 'register_tensor$a'('inv_into$d'('top$c',A__questionmark_v0),'inv_into$d'('top$c',A__questionmark_v1)) ) ) ).
+
+%% ∀ ?v0:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((iso_register$g(?v0) ∧ iso_register$b(?v1)) ⇒ (inv_into$w(top$i, register_tensor$b(?v0, ?v1)) = register_tensor$c(inv_into$d(top$c, ?v0), inv_into$f(top$d, ?v1))))
+tff(axiom310,axiom,
+    ! [A__questionmark_v0: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'iso_register$g'(A__questionmark_v0)
+        & 'iso_register$b'(A__questionmark_v1) )
+     => ( 'inv_into$w'('top$i','register_tensor$b'(A__questionmark_v0,A__questionmark_v1)) = 'register_tensor$c'('inv_into$d'('top$c',A__questionmark_v0),'inv_into$f'('top$d',A__questionmark_v1)) ) ) ).
+
+%% ∀ ?v0:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((iso_register$b(?v0) ∧ iso_register$g(?v1)) ⇒ (inv_into$x(top$j, register_tensor$d(?v0, ?v1)) = register_tensor$e(inv_into$f(top$d, ?v0), inv_into$d(top$c, ?v1))))
+tff(axiom311,axiom,
+    ! [A__questionmark_v0: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'iso_register$b'(A__questionmark_v0)
+        & 'iso_register$g'(A__questionmark_v1) )
+     => ( 'inv_into$x'('top$j','register_tensor$d'(A__questionmark_v0,A__questionmark_v1)) = 'register_tensor$e'('inv_into$f'('top$d',A__questionmark_v0),'inv_into$d'('top$c',A__questionmark_v1)) ) ) ).
+
+%% ∀ ?v0:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((iso_register$b(?v0) ∧ iso_register$b(?v1)) ⇒ (inv_into$y(top$k, register_tensor$f(?v0, ?v1)) = register_tensor$g(inv_into$f(top$d, ?v0), inv_into$f(top$d, ?v1))))
+tff(axiom312,axiom,
+    ! [A__questionmark_v0: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'iso_register$b'(A__questionmark_v0)
+        & 'iso_register$b'(A__questionmark_v1) )
+     => ( 'inv_into$y'('top$k','register_tensor$f'(A__questionmark_v0,A__questionmark_v1)) = 'register_tensor$g'('inv_into$f'('top$d',A__questionmark_v0),'inv_into$f'('top$d',A__questionmark_v1)) ) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$ ?v1:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_c_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$ ((iso_register$z(?v0) ∧ iso_register$s(?v1)) ⇒ (inv_into$r(top$d, register_tensor$h(?v0, ?v1)) = register_tensor$i(inv_into$z(top$l, ?v0), inv_into$i(top$e, ?v1))))
+tff(axiom313,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$',A__questionmark_v1: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_c_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$'] :
+      ( ( 'iso_register$z'(A__questionmark_v0)
+        & 'iso_register$s'(A__questionmark_v1) )
+     => ( 'inv_into$r'('top$d','register_tensor$h'(A__questionmark_v0,A__questionmark_v1)) = 'register_tensor$i'('inv_into$z'('top$l',A__questionmark_v0),'inv_into$i'('top$e',A__questionmark_v1)) ) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$ ?v1:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$ ((iso_register$z(?v0) ∧ iso_register$(?v1)) ⇒ (inv_into$n(top$g, register_tensor$i(?v0, ?v1)) = register_tensor$h(inv_into$z(top$l, ?v0), inv_into$k(top$f, ?v1))))
+tff(axiom314,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$',A__questionmark_v1: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$'] :
+      ( ( 'iso_register$z'(A__questionmark_v0)
+        & 'iso_register$'(A__questionmark_v1) )
+     => ( 'inv_into$n'('top$g','register_tensor$i'(A__questionmark_v0,A__questionmark_v1)) = 'register_tensor$h'('inv_into$z'('top$l',A__questionmark_v0),'inv_into$k'('top$f',A__questionmark_v1)) ) ) ).
+
+%% ∀ ?v0:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((iso_register$g(?v0) ∧ iso_register$d(?v1)) ⇒ (inv_into$aa(top$m, register_tensor$j(?v0, ?v1)) = register_tensor$k(inv_into$d(top$c, ?v0), inv_into$(top$b, ?v1))))
+tff(axiom315,axiom,
+    ! [A__questionmark_v0: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'iso_register$g'(A__questionmark_v0)
+        & 'iso_register$d'(A__questionmark_v1) )
+     => ( 'inv_into$aa'('top$m','register_tensor$j'(A__questionmark_v0,A__questionmark_v1)) = 'register_tensor$k'('inv_into$d'('top$c',A__questionmark_v0),'inv_into$'('top$b',A__questionmark_v1)) ) ) ).
+
+%% ∀ ?v0:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((iso_register$g(?v0) ∧ iso_register$e(?v1)) ⇒ (inv_into$ab(top$n, register_tensor$l(?v0, ?v1)) = register_tensor$m(inv_into$d(top$c, ?v0), inv_into$o(top$g, ?v1))))
+tff(axiom316,axiom,
+    ! [A__questionmark_v0: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'iso_register$g'(A__questionmark_v0)
+        & 'iso_register$e'(A__questionmark_v1) )
+     => ( 'inv_into$ab'('top$n','register_tensor$l'(A__questionmark_v0,A__questionmark_v1)) = 'register_tensor$m'('inv_into$d'('top$c',A__questionmark_v0),'inv_into$o'('top$g',A__questionmark_v1)) ) ) ).
+
+%% ∀ ?v0:C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((iso_register$d(?v0) ∧ iso_register$g(?v1)) ⇒ (inv_into$ac(top$o, register_tensor$n(?v0, ?v1)) = register_tensor$o(inv_into$(top$b, ?v0), inv_into$d(top$c, ?v1))))
+tff(axiom317,axiom,
+    ! [A__questionmark_v0: 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'iso_register$d'(A__questionmark_v0)
+        & 'iso_register$g'(A__questionmark_v1) )
+     => ( 'inv_into$ac'('top$o','register_tensor$n'(A__questionmark_v0,A__questionmark_v1)) = 'register_tensor$o'('inv_into$'('top$b',A__questionmark_v0),'inv_into$d'('top$c',A__questionmark_v1)) ) ) ).
+
+%% ∀ ?v0:C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((iso_register$d(?v0) ∧ iso_register$b(?v1)) ⇒ (inv_into$ad(top$p, register_tensor$p(?v0, ?v1)) = register_tensor$q(inv_into$(top$b, ?v0), inv_into$f(top$d, ?v1))))
+tff(axiom318,axiom,
+    ! [A__questionmark_v0: 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'iso_register$d'(A__questionmark_v0)
+        & 'iso_register$b'(A__questionmark_v1) )
+     => ( 'inv_into$ad'('top$p','register_tensor$p'(A__questionmark_v0,A__questionmark_v1)) = 'register_tensor$q'('inv_into$'('top$b',A__questionmark_v0),'inv_into$f'('top$d',A__questionmark_v1)) ) ) ).
+
+%% ∀ ?v0:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$ ?v2:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun$ (fun_app$p(comp$(?v0, ?v1), ?v2) = fun_app$q(?v0, fun_app$r(?v1, ?v2)))
+tff(axiom319,axiom,
+    ! [A__questionmark_v0: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$',A__questionmark_v2: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun$'] : ( 'fun_app$p'('comp$'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2) = 'fun_app$q'(A__questionmark_v0,'fun_app$r'(A__questionmark_v1,A__questionmark_v2)) ) ).
+
+%% ∀ ?v0:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$ ?v1:B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$ ?v2:B_ell2_b_ell2_cblinfun$ (fun_app$b(comp$a(?v0, ?v1), ?v2) = fun_app$h(?v0, fun_app$f(?v1, ?v2)))
+tff(axiom320,axiom,
+    ! [A__questionmark_v0: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$',A__questionmark_v1: 'B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$',A__questionmark_v2: 'B_ell2_b_ell2_cblinfun$'] : ( 'fun_app$b'('comp$a'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2) = 'fun_app$h'(A__questionmark_v0,'fun_app$f'(A__questionmark_v1,A__questionmark_v2)) ) ).
+
+%% ∀ ?v0:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$ (member$c(?v0, top$c) = true)
+tff(axiom321,axiom,
+    ! [A__questionmark_v0: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$'] :
+      ( 'member$c'(A__questionmark_v0,'top$c')
+    <=> $true ) ).
+
+%% ∀ ?v0:C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun$ (member$d(?v0, top$b) = true)
+tff(axiom322,axiom,
+    ! [A__questionmark_v0: 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun$'] :
+      ( 'member$d'(A__questionmark_v0,'top$b')
+    <=> $true ) ).
+
+%% ∀ ?v0:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun$ (member$a(?v0, top$d) = true)
+tff(axiom323,axiom,
+    ! [A__questionmark_v0: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun$'] :
+      ( 'member$a'(A__questionmark_v0,'top$d')
+    <=> $true ) ).
+
+%% ∀ ?v0:A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun$ (member$e(?v0, top$g) = true)
+tff(axiom324,axiom,
+    ! [A__questionmark_v0: 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun$'] :
+      ( 'member$e'(A__questionmark_v0,'top$g')
+    <=> $true ) ).
+
+%% ∀ ?v0:B_ell2_b_ell2_cblinfun$ (member$(?v0, top$a) = true)
+tff(axiom325,axiom,
+    ! [A__questionmark_v0: 'B_ell2_b_ell2_cblinfun$'] :
+      ( 'member$'(A__questionmark_v0,'top$a')
+    <=> $true ) ).
+
+%% ∀ ?v0:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$ member$c(?v0, top$c)
+tff(axiom326,axiom,
+    ! [A__questionmark_v0: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$'] : 'member$c'(A__questionmark_v0,'top$c') ).
+
+%% ∀ ?v0:C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun$ member$d(?v0, top$b)
+tff(axiom327,axiom,
+    ! [A__questionmark_v0: 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun$'] : 'member$d'(A__questionmark_v0,'top$b') ).
+
+%% ∀ ?v0:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun$ member$a(?v0, top$d)
+tff(axiom328,axiom,
+    ! [A__questionmark_v0: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun$'] : 'member$a'(A__questionmark_v0,'top$d') ).
+
+%% ∀ ?v0:A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun$ member$e(?v0, top$g)
+tff(axiom329,axiom,
+    ! [A__questionmark_v0: 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun$'] : 'member$e'(A__questionmark_v0,'top$g') ).
+
+%% ∀ ?v0:B_ell2_b_ell2_cblinfun$ member$(?v0, top$a)
+tff(axiom330,axiom,
+    ! [A__questionmark_v0: 'B_ell2_b_ell2_cblinfun$'] : 'member$'(A__questionmark_v0,'top$a') ).
+
+%% ∀ ?v0:B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (regular_register$b(?v0) = (register$j(?v0) ∧ ∃ ?v1:B_b_complement_domain_ell2_b_b_complement_domain_ell2_cblinfun$ (register_pair$as(?v0, complement$l(?v0), tensor_op$(butterfly$(ket$(default$), ket$(default$)), ?v1)) = butterfly$(ket$(default$), ket$(default$)))))
+tff(axiom331,axiom,
+    ! [A__questionmark_v0: 'B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'regular_register$b'(A__questionmark_v0)
+    <=> ( 'register$j'(A__questionmark_v0)
+        & ? [A__questionmark_v1: 'B_b_complement_domain_ell2_b_b_complement_domain_ell2_cblinfun$'] : ( 'register_pair$as'(A__questionmark_v0,'complement$l'(A__questionmark_v0),'tensor_op$'('butterfly$'('ket$'('default$'),'ket$'('default$')),A__questionmark_v1)) = 'butterfly$'('ket$'('default$'),'ket$'('default$')) ) ) ) ).
+
+%% ∀ ?v0:B_ell2_b_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$ (regular_register$c(?v0) = (register$r(?v0) ∧ ∃ ?v1:B_a_complement_domain_ell2_b_a_complement_domain_ell2_cblinfun$ (register_pair$at(?v0, complement$m(?v0), tensor_op$a(butterfly$(ket$(default$), ket$(default$)), ?v1)) = butterfly$a(ket$a(default$a), ket$a(default$a)))))
+tff(axiom332,axiom,
+    ! [A__questionmark_v0: 'B_ell2_b_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$'] :
+      ( 'regular_register$c'(A__questionmark_v0)
+    <=> ( 'register$r'(A__questionmark_v0)
+        & ? [A__questionmark_v1: 'B_a_complement_domain_ell2_b_a_complement_domain_ell2_cblinfun$'] : ( 'register_pair$at'(A__questionmark_v0,'complement$m'(A__questionmark_v0),'tensor_op$a'('butterfly$'('ket$'('default$'),'ket$'('default$')),A__questionmark_v1)) = 'butterfly$a'('ket$a'('default$a'),'ket$a'('default$a')) ) ) ) ).
+
+%% ∀ ?v0:B_ell2_b_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$ (regular_register$d(?v0) = (register$s(?v0) ∧ ∃ ?v1:B_c_complement_domain_ell2_b_c_complement_domain_ell2_cblinfun$ (register_pair$au(?v0, complement$n(?v0), tensor_op$b(butterfly$(ket$(default$), ket$(default$)), ?v1)) = butterfly$b(ket$b(default$b), ket$b(default$b)))))
+tff(axiom333,axiom,
+    ! [A__questionmark_v0: 'B_ell2_b_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$'] :
+      ( 'regular_register$d'(A__questionmark_v0)
+    <=> ( 'register$s'(A__questionmark_v0)
+        & ? [A__questionmark_v1: 'B_c_complement_domain_ell2_b_c_complement_domain_ell2_cblinfun$'] : ( 'register_pair$au'(A__questionmark_v0,'complement$n'(A__questionmark_v0),'tensor_op$b'('butterfly$'('ket$'('default$'),'ket$'('default$')),A__questionmark_v1)) = 'butterfly$b'('ket$b'('default$b'),'ket$b'('default$b')) ) ) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (regular_register$(?v0) = (register$a(?v0) ∧ ∃ ?v1:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun$ (fun_app$g(register_pair$g(?v0, complement$e(?v0)), tensor_op$c(butterfly$a(ket$a(default$a), ket$a(default$a)), ?v1)) = butterfly$(ket$(default$), ket$(default$)))))
+tff(axiom334,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'regular_register$'(A__questionmark_v0)
+    <=> ( 'register$a'(A__questionmark_v0)
+        & ? [A__questionmark_v1: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun$'] : ( 'fun_app$g'('register_pair$g'(A__questionmark_v0,'complement$e'(A__questionmark_v0)),'tensor_op$c'('butterfly$a'('ket$a'('default$a'),'ket$a'('default$a')),A__questionmark_v1)) = 'butterfly$'('ket$'('default$'),'ket$'('default$')) ) ) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$ (regular_register$e(?v0) = (register$q(?v0) ∧ ∃ ?v1:A_a_complement_domain_ell2_a_a_complement_domain_ell2_cblinfun$ (register_pair$av(?v0, complement$o(?v0), tensor_op$d(butterfly$a(ket$a(default$a), ket$a(default$a)), ?v1)) = butterfly$a(ket$a(default$a), ket$a(default$a)))))
+tff(axiom335,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$'] :
+      ( 'regular_register$e'(A__questionmark_v0)
+    <=> ( 'register$q'(A__questionmark_v0)
+        & ? [A__questionmark_v1: 'A_a_complement_domain_ell2_a_a_complement_domain_ell2_cblinfun$'] : ( 'register_pair$av'(A__questionmark_v0,'complement$o'(A__questionmark_v0),'tensor_op$d'('butterfly$a'('ket$a'('default$a'),'ket$a'('default$a')),A__questionmark_v1)) = 'butterfly$a'('ket$a'('default$a'),'ket$a'('default$a')) ) ) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$ (regular_register$f(?v0) = (register$t(?v0) ∧ ∃ ?v1:A_c_complement_domain_ell2_a_c_complement_domain_ell2_cblinfun$ (register_pair$aw(?v0, complement$p(?v0), tensor_op$e(butterfly$a(ket$a(default$a), ket$a(default$a)), ?v1)) = butterfly$b(ket$b(default$b), ket$b(default$b)))))
+tff(axiom336,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$'] :
+      ( 'regular_register$f'(A__questionmark_v0)
+    <=> ( 'register$t'(A__questionmark_v0)
+        & ? [A__questionmark_v1: 'A_c_complement_domain_ell2_a_c_complement_domain_ell2_cblinfun$'] : ( 'register_pair$aw'(A__questionmark_v0,'complement$p'(A__questionmark_v0),'tensor_op$e'('butterfly$a'('ket$a'('default$a'),'ket$a'('default$a')),A__questionmark_v1)) = 'butterfly$b'('ket$b'('default$b'),'ket$b'('default$b')) ) ) ) ).
+
+%% ∀ ?v0:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (regular_register$a(?v0) = (register$(?v0) ∧ ∃ ?v1:C_b_complement_domain_ell2_c_b_complement_domain_ell2_cblinfun$ (fun_app$d(register_pair$x(?v0, complement$f(?v0)), tensor_op$f(butterfly$b(ket$b(default$b), ket$b(default$b)), ?v1)) = butterfly$(ket$(default$), ket$(default$)))))
+tff(axiom337,axiom,
+    ! [A__questionmark_v0: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'regular_register$a'(A__questionmark_v0)
+    <=> ( 'register$'(A__questionmark_v0)
+        & ? [A__questionmark_v1: 'C_b_complement_domain_ell2_c_b_complement_domain_ell2_cblinfun$'] : ( 'fun_app$d'('register_pair$x'(A__questionmark_v0,'complement$f'(A__questionmark_v0)),'tensor_op$f'('butterfly$b'('ket$b'('default$b'),'ket$b'('default$b')),A__questionmark_v1)) = 'butterfly$'('ket$'('default$'),'ket$'('default$')) ) ) ) ).
+
+%% ∀ ?v0:C_ell2_c_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$ (regular_register$g(?v0) = (register$u(?v0) ∧ ∃ ?v1:C_a_complement_domain_ell2_c_a_complement_domain_ell2_cblinfun$ (register_pair$ax(?v0, complement$q(?v0), tensor_op$g(butterfly$b(ket$b(default$b), ket$b(default$b)), ?v1)) = butterfly$a(ket$a(default$a), ket$a(default$a)))))
+tff(axiom338,axiom,
+    ! [A__questionmark_v0: 'C_ell2_c_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$'] :
+      ( 'regular_register$g'(A__questionmark_v0)
+    <=> ( 'register$u'(A__questionmark_v0)
+        & ? [A__questionmark_v1: 'C_a_complement_domain_ell2_c_a_complement_domain_ell2_cblinfun$'] : ( 'register_pair$ax'(A__questionmark_v0,'complement$q'(A__questionmark_v0),'tensor_op$g'('butterfly$b'('ket$b'('default$b'),'ket$b'('default$b')),A__questionmark_v1)) = 'butterfly$a'('ket$a'('default$a'),'ket$a'('default$a')) ) ) ) ).
+
+%% ∀ ?v0:C_ell2_c_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$ (regular_register$h(?v0) = (register$p(?v0) ∧ ∃ ?v1:C_c_complement_domain_ell2_c_c_complement_domain_ell2_cblinfun$ (register_pair$ay(?v0, complement$r(?v0), tensor_op$h(butterfly$b(ket$b(default$b), ket$b(default$b)), ?v1)) = butterfly$b(ket$b(default$b), ket$b(default$b)))))
+tff(axiom339,axiom,
+    ! [A__questionmark_v0: 'C_ell2_c_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$'] :
+      ( 'regular_register$h'(A__questionmark_v0)
+    <=> ( 'register$p'(A__questionmark_v0)
+        & ? [A__questionmark_v1: 'C_c_complement_domain_ell2_c_c_complement_domain_ell2_cblinfun$'] : ( 'register_pair$ay'(A__questionmark_v0,'complement$r'(A__questionmark_v0),'tensor_op$h'('butterfly$b'('ket$b'('default$b'),'ket$b'('default$b')),A__questionmark_v1)) = 'butterfly$b'('ket$b'('default$b'),'ket$b'('default$b')) ) ) ) ).
+
+%% ∀ ?v0:A_c_prod_ell2_a_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (regular_register$i(?v0) = (register$g(?v0) ∧ ∃ ?v1:A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun$ (fun_app$k(register_pair$n(?v0, complement$(?v0)), tensor_op$i(butterfly$c(ket$c(default$c), ket$c(default$c)), ?v1)) = butterfly$(ket$(default$), ket$(default$)))))
+tff(axiom340,axiom,
+    ! [A__questionmark_v0: 'A_c_prod_ell2_a_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'regular_register$i'(A__questionmark_v0)
+    <=> ( 'register$g'(A__questionmark_v0)
+        & ? [A__questionmark_v1: 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun$'] : ( 'fun_app$k'('register_pair$n'(A__questionmark_v0,'complement$'(A__questionmark_v0)),'tensor_op$i'('butterfly$c'('ket$c'('default$c'),'ket$c'('default$c')),A__questionmark_v1)) = 'butterfly$'('ket$'('default$'),'ket$'('default$')) ) ) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun$ ?v1:C_ell2_c_ell2_cblinfun$ ?v2:A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun$ (fun_app$s(assoc$g, tensor_op$j(?v0, tensor_op$k(?v1, ?v2))) = tensor_op$i(tensor_op$l(?v0, ?v1), ?v2))
+tff(axiom341,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun$',A__questionmark_v1: 'C_ell2_c_ell2_cblinfun$',A__questionmark_v2: 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun$'] : ( 'fun_app$s'('assoc$g','tensor_op$j'(A__questionmark_v0,'tensor_op$k'(A__questionmark_v1,A__questionmark_v2))) = 'tensor_op$i'('tensor_op$l'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun$ ?v1:C_ell2_c_ell2_cblinfun$ ?v2:A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun$ (fun_app$t(assoc$o, tensor_op$i(tensor_op$l(?v0, ?v1), ?v2)) = tensor_op$j(?v0, tensor_op$k(?v1, ?v2)))
+tff(axiom342,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun$',A__questionmark_v1: 'C_ell2_c_ell2_cblinfun$',A__questionmark_v2: 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun$'] : ( 'fun_app$t'('assoc$o','tensor_op$i'('tensor_op$l'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2)) = 'tensor_op$j'(A__questionmark_v0,'tensor_op$k'(A__questionmark_v1,A__questionmark_v2)) ) ).
+
+%% (∀ ?v0:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun$ ((fun_app$f(inv_into$f(top$d, register_pair$g(f$, complement$e(f$))), butterfly$(ket$(default$), ket$(default$))) = tensor_op$c(butterfly$a(ket$a(default$a), ket$a(default$a)), ?v0)) ⇒ false) ⇒ false)
+tff(axiom343,axiom,
+    ( ! [A__questionmark_v0: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun$'] :
+        ( ( 'fun_app$f'('inv_into$f'('top$d','register_pair$g'('f$','complement$e'('f$'))),'butterfly$'('ket$'('default$'),'ket$'('default$'))) = 'tensor_op$c'('butterfly$a'('ket$a'('default$a'),'ket$a'('default$a')),A__questionmark_v0) )
+       => $false )
+   => $false ) ).
+
+%% (∀ ?v0:C_b_complement_domain_ell2_c_b_complement_domain_ell2_cblinfun$ ((fun_app$c(inv_into$d(top$c, register_pair$x(g$, complement$f(g$))), butterfly$(ket$(default$), ket$(default$))) = tensor_op$f(butterfly$b(ket$b(default$b), ket$b(default$b)), ?v0)) ⇒ false) ⇒ false)
+tff(axiom344,axiom,
+    ( ! [A__questionmark_v0: 'C_b_complement_domain_ell2_c_b_complement_domain_ell2_cblinfun$'] :
+        ( ( 'fun_app$c'('inv_into$d'('top$c','register_pair$x'('g$','complement$f'('g$'))),'butterfly$'('ket$'('default$'),'ket$'('default$'))) = 'tensor_op$f'('butterfly$b'('ket$b'('default$b'),'ket$b'('default$b')),A__questionmark_v0) )
+       => $false )
+   => $false ) ).
+
+%% ∀ ?v0:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v2:C_ell2_c_ell2_cblinfun$ ?v3:C_ell2_c_ell2_cblinfun$ ((register$(?v0) ∧ register$(?v1)) ⇒ (fun_app$u(register_tensor$r(?v0, ?v1), tensor_op$m(?v2, ?v3)) = tensor_op$n(fun_app$v(?v0, ?v2), fun_app$v(?v1, ?v3))))
+tff(axiom345,axiom,
+    ! [A__questionmark_v0: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v2: 'C_ell2_c_ell2_cblinfun$',A__questionmark_v3: 'C_ell2_c_ell2_cblinfun$'] :
+      ( ( 'register$'(A__questionmark_v0)
+        & 'register$'(A__questionmark_v1) )
+     => ( 'fun_app$u'('register_tensor$r'(A__questionmark_v0,A__questionmark_v1),'tensor_op$m'(A__questionmark_v2,A__questionmark_v3)) = 'tensor_op$n'('fun_app$v'(A__questionmark_v0,A__questionmark_v2),'fun_app$v'(A__questionmark_v1,A__questionmark_v3)) ) ) ).
+
+%% ∀ ?v0:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v2:C_ell2_c_ell2_cblinfun$ ?v3:A_ell2_a_ell2_cblinfun$ ((register$(?v0) ∧ register$a(?v1)) ⇒ (fun_app$w(register_tensor$s(?v0, ?v1), tensor_op$o(?v2, ?v3)) = tensor_op$n(fun_app$v(?v0, ?v2), fun_app$x(?v1, ?v3))))
+tff(axiom346,axiom,
+    ! [A__questionmark_v0: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v2: 'C_ell2_c_ell2_cblinfun$',A__questionmark_v3: 'A_ell2_a_ell2_cblinfun$'] :
+      ( ( 'register$'(A__questionmark_v0)
+        & 'register$a'(A__questionmark_v1) )
+     => ( 'fun_app$w'('register_tensor$s'(A__questionmark_v0,A__questionmark_v1),'tensor_op$o'(A__questionmark_v2,A__questionmark_v3)) = 'tensor_op$n'('fun_app$v'(A__questionmark_v0,A__questionmark_v2),'fun_app$x'(A__questionmark_v1,A__questionmark_v3)) ) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v2:A_ell2_a_ell2_cblinfun$ ?v3:C_ell2_c_ell2_cblinfun$ ((register$a(?v0) ∧ register$(?v1)) ⇒ (fun_app$y(register_tensor$t(?v0, ?v1), tensor_op$l(?v2, ?v3)) = tensor_op$n(fun_app$x(?v0, ?v2), fun_app$v(?v1, ?v3))))
+tff(axiom347,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v2: 'A_ell2_a_ell2_cblinfun$',A__questionmark_v3: 'C_ell2_c_ell2_cblinfun$'] :
+      ( ( 'register$a'(A__questionmark_v0)
+        & 'register$'(A__questionmark_v1) )
+     => ( 'fun_app$y'('register_tensor$t'(A__questionmark_v0,A__questionmark_v1),'tensor_op$l'(A__questionmark_v2,A__questionmark_v3)) = 'tensor_op$n'('fun_app$x'(A__questionmark_v0,A__questionmark_v2),'fun_app$v'(A__questionmark_v1,A__questionmark_v3)) ) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v2:A_ell2_a_ell2_cblinfun$ ?v3:A_ell2_a_ell2_cblinfun$ ((register$a(?v0) ∧ register$a(?v1)) ⇒ (fun_app$z(register_tensor$u(?v0, ?v1), tensor_op$p(?v2, ?v3)) = tensor_op$n(fun_app$x(?v0, ?v2), fun_app$x(?v1, ?v3))))
+tff(axiom348,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v2: 'A_ell2_a_ell2_cblinfun$',A__questionmark_v3: 'A_ell2_a_ell2_cblinfun$'] :
+      ( ( 'register$a'(A__questionmark_v0)
+        & 'register$a'(A__questionmark_v1) )
+     => ( 'fun_app$z'('register_tensor$u'(A__questionmark_v0,A__questionmark_v1),'tensor_op$p'(A__questionmark_v2,A__questionmark_v3)) = 'tensor_op$n'('fun_app$x'(A__questionmark_v0,A__questionmark_v2),'fun_app$x'(A__questionmark_v1,A__questionmark_v3)) ) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$ ?v1:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$ ?v2:A_ell2_a_ell2_cblinfun$ ?v3:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun$ ((register$q(?v0) ∧ register$v(?v1)) ⇒ (fun_app$aa(register_tensor$v(?v0, ?v1), tensor_op$c(?v2, ?v3)) = tensor_op$c(fun_app$ab(?v0, ?v2), fun_app$ac(?v1, ?v3))))
+tff(axiom349,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$',A__questionmark_v1: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$',A__questionmark_v2: 'A_ell2_a_ell2_cblinfun$',A__questionmark_v3: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun$'] :
+      ( ( 'register$q'(A__questionmark_v0)
+        & 'register$v'(A__questionmark_v1) )
+     => ( 'fun_app$aa'('register_tensor$v'(A__questionmark_v0,A__questionmark_v1),'tensor_op$c'(A__questionmark_v2,A__questionmark_v3)) = 'tensor_op$c'('fun_app$ab'(A__questionmark_v0,A__questionmark_v2),'fun_app$ac'(A__questionmark_v1,A__questionmark_v3)) ) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$ ?v1:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_c_b_complement_domain_ell2_c_b_complement_domain_ell2_cblinfun_fun$ ?v2:A_ell2_a_ell2_cblinfun$ ?v3:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun$ ((register$t(?v0) ∧ register$w(?v1)) ⇒ (fun_app$n(register_tensor$w(?v0, ?v1), tensor_op$c(?v2, ?v3)) = tensor_op$f(fun_app$ad(?v0, ?v2), fun_app$ae(?v1, ?v3))))
+tff(axiom350,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$',A__questionmark_v1: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_c_b_complement_domain_ell2_c_b_complement_domain_ell2_cblinfun_fun$',A__questionmark_v2: 'A_ell2_a_ell2_cblinfun$',A__questionmark_v3: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun$'] :
+      ( ( 'register$t'(A__questionmark_v0)
+        & 'register$w'(A__questionmark_v1) )
+     => ( 'fun_app$n'('register_tensor$w'(A__questionmark_v0,A__questionmark_v1),'tensor_op$c'(A__questionmark_v2,A__questionmark_v3)) = 'tensor_op$f'('fun_app$ad'(A__questionmark_v0,A__questionmark_v2),'fun_app$ae'(A__questionmark_v1,A__questionmark_v3)) ) ) ).
+
+%% ∀ ?v0:C_ell2_c_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$ ?v1:C_b_complement_domain_ell2_c_b_complement_domain_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$ ?v2:C_ell2_c_ell2_cblinfun$ ?v3:C_b_complement_domain_ell2_c_b_complement_domain_ell2_cblinfun$ ((register$u(?v0) ∧ register$x(?v1)) ⇒ (fun_app$o(register_tensor$x(?v0, ?v1), tensor_op$f(?v2, ?v3)) = tensor_op$c(fun_app$af(?v0, ?v2), fun_app$ag(?v1, ?v3))))
+tff(axiom351,axiom,
+    ! [A__questionmark_v0: 'C_ell2_c_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$',A__questionmark_v1: 'C_b_complement_domain_ell2_c_b_complement_domain_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$',A__questionmark_v2: 'C_ell2_c_ell2_cblinfun$',A__questionmark_v3: 'C_b_complement_domain_ell2_c_b_complement_domain_ell2_cblinfun$'] :
+      ( ( 'register$u'(A__questionmark_v0)
+        & 'register$x'(A__questionmark_v1) )
+     => ( 'fun_app$o'('register_tensor$x'(A__questionmark_v0,A__questionmark_v1),'tensor_op$f'(A__questionmark_v2,A__questionmark_v3)) = 'tensor_op$c'('fun_app$af'(A__questionmark_v0,A__questionmark_v2),'fun_app$ag'(A__questionmark_v1,A__questionmark_v3)) ) ) ).
+
+%% ∀ ?v0:C_ell2_c_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$ ?v1:C_b_complement_domain_ell2_c_b_complement_domain_ell2_cblinfun_c_b_complement_domain_ell2_c_b_complement_domain_ell2_cblinfun_fun$ ?v2:C_ell2_c_ell2_cblinfun$ ?v3:C_b_complement_domain_ell2_c_b_complement_domain_ell2_cblinfun$ ((register$p(?v0) ∧ register$y(?v1)) ⇒ (fun_app$m(register_tensor$y(?v0, ?v1), tensor_op$f(?v2, ?v3)) = tensor_op$f(fun_app$ah(?v0, ?v2), fun_app$ai(?v1, ?v3))))
+tff(axiom352,axiom,
+    ! [A__questionmark_v0: 'C_ell2_c_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$',A__questionmark_v1: 'C_b_complement_domain_ell2_c_b_complement_domain_ell2_cblinfun_c_b_complement_domain_ell2_c_b_complement_domain_ell2_cblinfun_fun$',A__questionmark_v2: 'C_ell2_c_ell2_cblinfun$',A__questionmark_v3: 'C_b_complement_domain_ell2_c_b_complement_domain_ell2_cblinfun$'] :
+      ( ( 'register$p'(A__questionmark_v0)
+        & 'register$y'(A__questionmark_v1) )
+     => ( 'fun_app$m'('register_tensor$y'(A__questionmark_v0,A__questionmark_v1),'tensor_op$f'(A__questionmark_v2,A__questionmark_v3)) = 'tensor_op$f'('fun_app$ah'(A__questionmark_v0,A__questionmark_v2),'fun_app$ai'(A__questionmark_v1,A__questionmark_v3)) ) ) ).
+
+%% ∀ ?v0:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$ ?v2:C_ell2_c_ell2_cblinfun$ ?v3:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun$ ((register$(?v0) ∧ register$e(?v1)) ⇒ (fun_app$aj(register_tensor$z(?v0, ?v1), tensor_op$q(?v2, ?v3)) = tensor_op$r(fun_app$v(?v0, ?v2), fun_app$r(?v1, ?v3))))
+tff(axiom353,axiom,
+    ! [A__questionmark_v0: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$',A__questionmark_v2: 'C_ell2_c_ell2_cblinfun$',A__questionmark_v3: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun$'] :
+      ( ( 'register$'(A__questionmark_v0)
+        & 'register$e'(A__questionmark_v1) )
+     => ( 'fun_app$aj'('register_tensor$z'(A__questionmark_v0,A__questionmark_v1),'tensor_op$q'(A__questionmark_v2,A__questionmark_v3)) = 'tensor_op$r'('fun_app$v'(A__questionmark_v0,A__questionmark_v2),'fun_app$r'(A__questionmark_v1,A__questionmark_v3)) ) ) ).
+
+%% ∀ ?v0:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$ ?v1:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v2:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun$ ?v3:C_ell2_c_ell2_cblinfun$ ((register$e(?v0) ∧ register$(?v1)) ⇒ (fun_app$ak(register_tensor$aa(?v0, ?v1), tensor_op$s(?v2, ?v3)) = tensor_op$t(fun_app$r(?v0, ?v2), fun_app$v(?v1, ?v3))))
+tff(axiom354,axiom,
+    ! [A__questionmark_v0: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$',A__questionmark_v1: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v2: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun$',A__questionmark_v3: 'C_ell2_c_ell2_cblinfun$'] :
+      ( ( 'register$e'(A__questionmark_v0)
+        & 'register$'(A__questionmark_v1) )
+     => ( 'fun_app$ak'('register_tensor$aa'(A__questionmark_v0,A__questionmark_v1),'tensor_op$s'(A__questionmark_v2,A__questionmark_v3)) = 'tensor_op$t'('fun_app$r'(A__questionmark_v0,A__questionmark_v2),'fun_app$v'(A__questionmark_v1,A__questionmark_v3)) ) ) ).
+
+%% (inv_into$ae(top$b, assoc$a) = assoc$n)
+tff(axiom355,axiom,
+    'inv_into$ae'('top$b','assoc$a') = 'assoc$n' ).
+
+%% (inv_into$af(top$g, assoc$g) = assoc$o)
+tff(axiom356,axiom,
+    'inv_into$af'('top$g','assoc$g') = 'assoc$o' ).
+
+%% (top$c = collect$(top$q))
+tff(axiom357,axiom,
+    'top$c' = 'collect$'('top$q') ).
+
+%% (top$b = collect$a(top$r))
+tff(axiom358,axiom,
+    'top$b' = 'collect$a'('top$r') ).
+
+%% (top$d = collect$b(top$s))
+tff(axiom359,axiom,
+    'top$d' = 'collect$b'('top$s') ).
+
+%% (top$g = collect$c(top$t))
+tff(axiom360,axiom,
+    'top$g' = 'collect$c'('top$t') ).
+
+%% (top$a = collect$d(top$u))
+tff(axiom361,axiom,
+    'top$a' = 'collect$d'('top$u') ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((register$a(?v0) ∧ register$a(?v1)) ⇒ complements$u(register_tensor$u(?v0, ?v1), register_tensor$ab(complement$e(?v0), complement$e(?v1))))
+tff(axiom362,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'register$a'(A__questionmark_v0)
+        & 'register$a'(A__questionmark_v1) )
+     => 'complements$u'('register_tensor$u'(A__questionmark_v0,A__questionmark_v1),'register_tensor$ab'('complement$e'(A__questionmark_v0),'complement$e'(A__questionmark_v1))) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((register$a(?v0) ∧ register$(?v1)) ⇒ complements$v(register_tensor$t(?v0, ?v1), register_tensor$ac(complement$e(?v0), complement$f(?v1))))
+tff(axiom363,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'register$a'(A__questionmark_v0)
+        & 'register$'(A__questionmark_v1) )
+     => 'complements$v'('register_tensor$t'(A__questionmark_v0,A__questionmark_v1),'register_tensor$ac'('complement$e'(A__questionmark_v0),'complement$f'(A__questionmark_v1))) ) ).
+
+%% ∀ ?v0:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((register$(?v0) ∧ register$a(?v1)) ⇒ complements$w(register_tensor$s(?v0, ?v1), register_tensor$ad(complement$f(?v0), complement$e(?v1))))
+tff(axiom364,axiom,
+    ! [A__questionmark_v0: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'register$'(A__questionmark_v0)
+        & 'register$a'(A__questionmark_v1) )
+     => 'complements$w'('register_tensor$s'(A__questionmark_v0,A__questionmark_v1),'register_tensor$ad'('complement$f'(A__questionmark_v0),'complement$e'(A__questionmark_v1))) ) ).
+
+%% ∀ ?v0:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((register$(?v0) ∧ register$(?v1)) ⇒ complements$x(register_tensor$r(?v0, ?v1), register_tensor$ae(complement$f(?v0), complement$f(?v1))))
+tff(axiom365,axiom,
+    ! [A__questionmark_v0: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'register$'(A__questionmark_v0)
+        & 'register$'(A__questionmark_v1) )
+     => 'complements$x'('register_tensor$r'(A__questionmark_v0,A__questionmark_v1),'register_tensor$ae'('complement$f'(A__questionmark_v0),'complement$f'(A__questionmark_v1))) ) ).
+
+%% ∀ ?v0:A_c_prod_ell2_a_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((register$g(?v0) ∧ register$a(?v1)) ⇒ complements$y(register_tensor$af(?v0, ?v1), register_tensor$ag(complement$(?v0), complement$e(?v1))))
+tff(axiom366,axiom,
+    ! [A__questionmark_v0: 'A_c_prod_ell2_a_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'register$g'(A__questionmark_v0)
+        & 'register$a'(A__questionmark_v1) )
+     => 'complements$y'('register_tensor$af'(A__questionmark_v0,A__questionmark_v1),'register_tensor$ag'('complement$'(A__questionmark_v0),'complement$e'(A__questionmark_v1))) ) ).
+
+%% ∀ ?v0:A_c_prod_ell2_a_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((register$g(?v0) ∧ register$(?v1)) ⇒ complements$z(register_tensor$ah(?v0, ?v1), register_tensor$ai(complement$(?v0), complement$f(?v1))))
+tff(axiom367,axiom,
+    ! [A__questionmark_v0: 'A_c_prod_ell2_a_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'register$g'(A__questionmark_v0)
+        & 'register$'(A__questionmark_v1) )
+     => 'complements$z'('register_tensor$ah'(A__questionmark_v0,A__questionmark_v1),'register_tensor$ai'('complement$'(A__questionmark_v0),'complement$f'(A__questionmark_v1))) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_c_prod_ell2_a_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((register$a(?v0) ∧ register$g(?v1)) ⇒ complements$aa(register_tensor$aj(?v0, ?v1), register_tensor$ak(complement$e(?v0), complement$(?v1))))
+tff(axiom368,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_c_prod_ell2_a_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'register$a'(A__questionmark_v0)
+        & 'register$g'(A__questionmark_v1) )
+     => 'complements$aa'('register_tensor$aj'(A__questionmark_v0,A__questionmark_v1),'register_tensor$ak'('complement$e'(A__questionmark_v0),'complement$'(A__questionmark_v1))) ) ).
+
+%% ∀ ?v0:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_c_prod_ell2_a_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((register$(?v0) ∧ register$g(?v1)) ⇒ complements$ab(register_tensor$al(?v0, ?v1), register_tensor$am(complement$f(?v0), complement$(?v1))))
+tff(axiom369,axiom,
+    ! [A__questionmark_v0: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_c_prod_ell2_a_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'register$'(A__questionmark_v0)
+        & 'register$g'(A__questionmark_v1) )
+     => 'complements$ab'('register_tensor$al'(A__questionmark_v0,A__questionmark_v1),'register_tensor$am'('complement$f'(A__questionmark_v0),'complement$'(A__questionmark_v1))) ) ).
+
+%% ∀ ?v0:A_c_prod_ell2_a_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_c_prod_ell2_a_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((register$g(?v0) ∧ register$g(?v1)) ⇒ complements$ac(register_tensor$an(?v0, ?v1), register_tensor$ao(complement$(?v0), complement$(?v1))))
+tff(axiom370,axiom,
+    ! [A__questionmark_v0: 'A_c_prod_ell2_a_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_c_prod_ell2_a_c_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'register$g'(A__questionmark_v0)
+        & 'register$g'(A__questionmark_v1) )
+     => 'complements$ac'('register_tensor$an'(A__questionmark_v0,A__questionmark_v1),'register_tensor$ao'('complement$'(A__questionmark_v0),'complement$'(A__questionmark_v1))) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$ ?v1:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$ ((register$q(?v0) ∧ register$e(?v1)) ⇒ complements$ad(register_tensor$i(?v0, ?v1), register_tensor$ap(complement$o(?v0), complement$j(?v1))))
+tff(axiom371,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$',A__questionmark_v1: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$'] :
+      ( ( 'register$q'(A__questionmark_v0)
+        & 'register$e'(A__questionmark_v1) )
+     => 'complements$ad'('register_tensor$i'(A__questionmark_v0,A__questionmark_v1),'register_tensor$ap'('complement$o'(A__questionmark_v0),'complement$j'(A__questionmark_v1))) ) ).
+
+%% ∀ ?v0:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((register$(?v0) ∧ register$(?v1)) ⇒ register$z(register_tensor$r(?v0, ?v1)))
+tff(axiom372,axiom,
+    ! [A__questionmark_v0: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'register$'(A__questionmark_v0)
+        & 'register$'(A__questionmark_v1) )
+     => 'register$z'('register_tensor$r'(A__questionmark_v0,A__questionmark_v1)) ) ).
+
+%% ∀ ?v0:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((register$(?v0) ∧ register$a(?v1)) ⇒ register$aa(register_tensor$s(?v0, ?v1)))
+tff(axiom373,axiom,
+    ! [A__questionmark_v0: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'register$'(A__questionmark_v0)
+        & 'register$a'(A__questionmark_v1) )
+     => 'register$aa'('register_tensor$s'(A__questionmark_v0,A__questionmark_v1)) ) ).
+
+%% ∀ ?v0:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$ ((register$(?v0) ∧ register$e(?v1)) ⇒ register$ab(register_tensor$z(?v0, ?v1)))
+tff(axiom374,axiom,
+    ! [A__questionmark_v0: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$'] :
+      ( ( 'register$'(A__questionmark_v0)
+        & 'register$e'(A__questionmark_v1) )
+     => 'register$ab'('register_tensor$z'(A__questionmark_v0,A__questionmark_v1)) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((register$a(?v0) ∧ register$(?v1)) ⇒ register$ac(register_tensor$t(?v0, ?v1)))
+tff(axiom375,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'register$a'(A__questionmark_v0)
+        & 'register$'(A__questionmark_v1) )
+     => 'register$ac'('register_tensor$t'(A__questionmark_v0,A__questionmark_v1)) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((register$a(?v0) ∧ register$a(?v1)) ⇒ register$ad(register_tensor$u(?v0, ?v1)))
+tff(axiom376,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'register$a'(A__questionmark_v0)
+        & 'register$a'(A__questionmark_v1) )
+     => 'register$ad'('register_tensor$u'(A__questionmark_v0,A__questionmark_v1)) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$ ((register$a(?v0) ∧ register$e(?v1)) ⇒ register$ae(register_tensor$aq(?v0, ?v1)))
+tff(axiom377,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$'] :
+      ( ( 'register$a'(A__questionmark_v0)
+        & 'register$e'(A__questionmark_v1) )
+     => 'register$ae'('register_tensor$aq'(A__questionmark_v0,A__questionmark_v1)) ) ).
+
+%% ∀ ?v0:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$ ?v1:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((register$e(?v0) ∧ register$(?v1)) ⇒ register$af(register_tensor$aa(?v0, ?v1)))
+tff(axiom378,axiom,
+    ! [A__questionmark_v0: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$',A__questionmark_v1: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'register$e'(A__questionmark_v0)
+        & 'register$'(A__questionmark_v1) )
+     => 'register$af'('register_tensor$aa'(A__questionmark_v0,A__questionmark_v1)) ) ).
+
+%% ∀ ?v0:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$ ?v1:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((register$e(?v0) ∧ register$a(?v1)) ⇒ register$ag(register_tensor$ar(?v0, ?v1)))
+tff(axiom379,axiom,
+    ! [A__questionmark_v0: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$',A__questionmark_v1: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'register$e'(A__questionmark_v0)
+        & 'register$a'(A__questionmark_v1) )
+     => 'register$ag'('register_tensor$ar'(A__questionmark_v0,A__questionmark_v1)) ) ).
+
+%% ∀ ?v0:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$ ?v1:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$ ((register$e(?v0) ∧ register$e(?v1)) ⇒ register$ah(register_tensor$as(?v0, ?v1)))
+tff(axiom380,axiom,
+    ! [A__questionmark_v0: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$',A__questionmark_v1: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$'] :
+      ( ( 'register$e'(A__questionmark_v0)
+        & 'register$e'(A__questionmark_v1) )
+     => 'register$ah'('register_tensor$as'(A__questionmark_v0,A__questionmark_v1)) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$ ?v1:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$ ((register$q(?v0) ∧ register$e(?v1)) ⇒ register$ai(register_tensor$i(?v0, ?v1)))
+tff(axiom381,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$',A__questionmark_v1: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$'] :
+      ( ( 'register$q'(A__questionmark_v0)
+        & 'register$e'(A__questionmark_v1) )
+     => 'register$ai'('register_tensor$i'(A__questionmark_v0,A__questionmark_v1)) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v2:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v3:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((compatible$(?v0, ?v1) ∧ compatible$(?v2, ?v3)) ⇒ compatible$aw(register_tensor$u(?v0, ?v2), register_tensor$r(?v1, ?v3)))
+tff(axiom382,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v2: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v3: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'compatible$'(A__questionmark_v0,A__questionmark_v1)
+        & 'compatible$'(A__questionmark_v2,A__questionmark_v3) )
+     => 'compatible$aw'('register_tensor$u'(A__questionmark_v0,A__questionmark_v2),'register_tensor$r'(A__questionmark_v1,A__questionmark_v3)) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$ ?v1:A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$ ?v2:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$ ?v3:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$ ((compatible$ax(?v0, ?v1) ∧ compatible$ar(?v2, ?v3)) ⇒ compatible$ay(register_tensor$i(?v0, ?v2), register_tensor$i(?v1, ?v3)))
+tff(axiom383,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$',A__questionmark_v1: 'A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$',A__questionmark_v2: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$',A__questionmark_v3: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$'] :
+      ( ( 'compatible$ax'(A__questionmark_v0,A__questionmark_v1)
+        & 'compatible$ar'(A__questionmark_v2,A__questionmark_v3) )
+     => 'compatible$ay'('register_tensor$i'(A__questionmark_v0,A__questionmark_v2),'register_tensor$i'(A__questionmark_v1,A__questionmark_v3)) ) ).
+
+%% ∀ ?v0:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$ ?v1:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$ ((iso_register$(?v0) ∧ iso_register$(?v1)) ⇒ iso_register$aa(register_tensor$as(?v0, ?v1)))
+tff(axiom384,axiom,
+    ! [A__questionmark_v0: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$',A__questionmark_v1: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$'] :
+      ( ( 'iso_register$'(A__questionmark_v0)
+        & 'iso_register$'(A__questionmark_v1) )
+     => 'iso_register$aa'('register_tensor$as'(A__questionmark_v0,A__questionmark_v1)) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$ ?v1:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$ ((iso_register$z(?v0) ∧ iso_register$(?v1)) ⇒ iso_register$p(register_tensor$i(?v0, ?v1)))
+tff(axiom385,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$',A__questionmark_v1: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$'] :
+      ( ( 'iso_register$z'(A__questionmark_v0)
+        & 'iso_register$'(A__questionmark_v1) )
+     => 'iso_register$p'('register_tensor$i'(A__questionmark_v0,A__questionmark_v1)) ) ).
+
+%% ∀ ?v0:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_set$ (∀ ?v1:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$ member$c(?v1, ?v0) ⇒ (top$c = ?v0))
+tff(axiom386,axiom,
+    ! [A__questionmark_v0: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_set$'] :
+      ( ! [A__questionmark_v1: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$'] : 'member$c'(A__questionmark_v1,A__questionmark_v0)
+     => ( 'top$c' = A__questionmark_v0 ) ) ).
+
+%% ∀ ?v0:C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_set$ (∀ ?v1:C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun$ member$d(?v1, ?v0) ⇒ (top$b = ?v0))
+tff(axiom387,axiom,
+    ! [A__questionmark_v0: 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_set$'] :
+      ( ! [A__questionmark_v1: 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun$'] : 'member$d'(A__questionmark_v1,A__questionmark_v0)
+     => ( 'top$b' = A__questionmark_v0 ) ) ).
+
+%% ∀ ?v0:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_set$ (∀ ?v1:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun$ member$a(?v1, ?v0) ⇒ (top$d = ?v0))
+tff(axiom388,axiom,
+    ! [A__questionmark_v0: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_set$'] :
+      ( ! [A__questionmark_v1: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun$'] : 'member$a'(A__questionmark_v1,A__questionmark_v0)
+     => ( 'top$d' = A__questionmark_v0 ) ) ).
+
+%% ∀ ?v0:A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_set$ (∀ ?v1:A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun$ member$e(?v1, ?v0) ⇒ (top$g = ?v0))
+tff(axiom389,axiom,
+    ! [A__questionmark_v0: 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_set$'] :
+      ( ! [A__questionmark_v1: 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun$'] : 'member$e'(A__questionmark_v1,A__questionmark_v0)
+     => ( 'top$g' = A__questionmark_v0 ) ) ).
+
+%% ∀ ?v0:B_ell2_b_ell2_cblinfun_set$ (∀ ?v1:B_ell2_b_ell2_cblinfun$ member$(?v1, ?v0) ⇒ (top$a = ?v0))
+tff(axiom390,axiom,
+    ! [A__questionmark_v0: 'B_ell2_b_ell2_cblinfun_set$'] :
+      ( ! [A__questionmark_v1: 'B_ell2_b_ell2_cblinfun$'] : 'member$'(A__questionmark_v1,A__questionmark_v0)
+     => ( 'top$a' = A__questionmark_v0 ) ) ).
+
+%% ∃ ?v0:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$ member$c(?v0, top$c)
+tff(axiom391,axiom,
+    ? [A__questionmark_v0: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$'] : 'member$c'(A__questionmark_v0,'top$c') ).
+
+%% ∃ ?v0:C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun$ member$d(?v0, top$b)
+tff(axiom392,axiom,
+    ? [A__questionmark_v0: 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun$'] : 'member$d'(A__questionmark_v0,'top$b') ).
+
+%% ∃ ?v0:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun$ member$a(?v0, top$d)
+tff(axiom393,axiom,
+    ? [A__questionmark_v0: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun$'] : 'member$a'(A__questionmark_v0,'top$d') ).
+
+%% ∃ ?v0:A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun$ member$e(?v0, top$g)
+tff(axiom394,axiom,
+    ? [A__questionmark_v0: 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun$'] : 'member$e'(A__questionmark_v0,'top$g') ).
+
+%% ∃ ?v0:B_ell2_b_ell2_cblinfun$ member$(?v0, top$a)
+tff(axiom395,axiom,
+    ? [A__questionmark_v0: 'B_ell2_b_ell2_cblinfun$'] : 'member$'(A__questionmark_v0,'top$a') ).
+
+%% ∀ ?v0:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$ ?v2:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun$ (fun_app$p(comp$(?v0, ?v1), ?v2) = fun_app$q(?v0, fun_app$r(?v1, ?v2)))
+tff(axiom396,axiom,
+    ! [A__questionmark_v0: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$',A__questionmark_v2: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun$'] : ( 'fun_app$p'('comp$'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2) = 'fun_app$q'(A__questionmark_v0,'fun_app$r'(A__questionmark_v1,A__questionmark_v2)) ) ).
+
+%% ∀ ?v0:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$ ?v1:B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$ ?v2:B_ell2_b_ell2_cblinfun$ (fun_app$b(comp$a(?v0, ?v1), ?v2) = fun_app$h(?v0, fun_app$f(?v1, ?v2)))
+tff(axiom397,axiom,
+    ! [A__questionmark_v0: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$',A__questionmark_v1: 'B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$',A__questionmark_v2: 'B_ell2_b_ell2_cblinfun$'] : ( 'fun_app$b'('comp$a'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2) = 'fun_app$h'(A__questionmark_v0,'fun_app$f'(A__questionmark_v1,A__questionmark_v2)) ) ).
+
+%% ∀ ?v0:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$ ?v2:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_c_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$ (comp$bg(comp$(?v0, ?v1), ?v2) = comp$(?v0, comp$an(?v1, ?v2)))
+tff(axiom398,axiom,
+    ! [A__questionmark_v0: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$',A__questionmark_v2: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_c_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$'] : ( 'comp$bg'('comp$'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2) = 'comp$'(A__questionmark_v0,'comp$an'(A__questionmark_v1,A__questionmark_v2)) ) ).
+
+%% ∀ ?v0:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$ ?v1:B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$ ?v2:B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (comp$bh(comp$a(?v0, ?v1), ?v2) = comp$a(?v0, comp$af(?v1, ?v2)))
+tff(axiom399,axiom,
+    ! [A__questionmark_v0: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$',A__questionmark_v1: 'B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$',A__questionmark_v2: 'B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] : ( 'comp$bh'('comp$a'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2) = 'comp$a'(A__questionmark_v0,'comp$af'(A__questionmark_v1,A__questionmark_v2)) ) ).
+
+%% ∀ ?v0:B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v2:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$ (comp$(comp$q(?v0, ?v1), ?v2) = comp$al(?v0, comp$(?v1, ?v2)))
+tff(axiom400,axiom,
+    ! [A__questionmark_v0: 'B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v2: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$'] : ( 'comp$'('comp$q'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2) = 'comp$al'(A__questionmark_v0,'comp$'(A__questionmark_v1,A__questionmark_v2)) ) ).
+
+%% ∀ ?v0:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$ ?v2:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$ (comp$(comp$ai(?v0, ?v1), ?v2) = comp$(?v0, comp$am(?v1, ?v2)))
+tff(axiom401,axiom,
+    ! [A__questionmark_v0: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$',A__questionmark_v2: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$'] : ( 'comp$'('comp$ai'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2) = 'comp$'(A__questionmark_v0,'comp$am'(A__questionmark_v1,A__questionmark_v2)) ) ).
+
+%% ∀ ?v0:A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$ ?v1:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$ ?v2:B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$ (comp$a(comp$bi(?v0, ?v1), ?v2) = comp$bj(?v0, comp$a(?v1, ?v2)))
+tff(axiom402,axiom,
+    ! [A__questionmark_v0: 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$',A__questionmark_v1: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$',A__questionmark_v2: 'B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$'] : ( 'comp$a'('comp$bi'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2) = 'comp$bj'(A__questionmark_v0,'comp$a'(A__questionmark_v1,A__questionmark_v2)) ) ).
+
+%% ∀ ?v0:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$ ?v1:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$ ?v2:B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$ (comp$a(comp$bk(?v0, ?v1), ?v2) = comp$a(?v0, comp$bl(?v1, ?v2)))
+tff(axiom403,axiom,
+    ! [A__questionmark_v0: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$',A__questionmark_v1: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$',A__questionmark_v2: 'B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$'] : ( 'comp$a'('comp$bk'(A__questionmark_v0,A__questionmark_v1),A__questionmark_v2) = 'comp$a'(A__questionmark_v0,'comp$bl'(A__questionmark_v1,A__questionmark_v2)) ) ).
+
+%% ∀ ?v0:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$ ?v2:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v3:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$ ?v4:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun$ ((comp$(?v0, ?v1) = comp$(?v2, ?v3)) ⇒ (fun_app$q(?v0, fun_app$r(?v1, ?v4)) = fun_app$q(?v2, fun_app$r(?v3, ?v4))))
+tff(axiom404,axiom,
+    ! [A__questionmark_v0: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$',A__questionmark_v2: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v3: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$',A__questionmark_v4: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun$'] :
+      ( ( 'comp$'(A__questionmark_v0,A__questionmark_v1) = 'comp$'(A__questionmark_v2,A__questionmark_v3) )
+     => ( 'fun_app$q'(A__questionmark_v0,'fun_app$r'(A__questionmark_v1,A__questionmark_v4)) = 'fun_app$q'(A__questionmark_v2,'fun_app$r'(A__questionmark_v3,A__questionmark_v4)) ) ) ).
+
+%% ∀ ?v0:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$ ?v1:B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$ ?v2:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$ ?v3:B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$ ?v4:B_ell2_b_ell2_cblinfun$ ((comp$a(?v0, ?v1) = comp$a(?v2, ?v3)) ⇒ (fun_app$h(?v0, fun_app$f(?v1, ?v4)) = fun_app$h(?v2, fun_app$f(?v3, ?v4))))
+tff(axiom405,axiom,
+    ! [A__questionmark_v0: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$',A__questionmark_v1: 'B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$',A__questionmark_v2: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$',A__questionmark_v3: 'B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$',A__questionmark_v4: 'B_ell2_b_ell2_cblinfun$'] :
+      ( ( 'comp$a'(A__questionmark_v0,A__questionmark_v1) = 'comp$a'(A__questionmark_v2,A__questionmark_v3) )
+     => ( 'fun_app$h'(A__questionmark_v0,'fun_app$f'(A__questionmark_v1,A__questionmark_v4)) = 'fun_app$h'(A__questionmark_v2,'fun_app$f'(A__questionmark_v3,A__questionmark_v4)) ) ) ).
+
+%% ∀ ?v0:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$ ?v2:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v3:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$ (((comp$(?v0, ?v1) = comp$(?v2, ?v3)) ∧ (∀ ?v4:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun$ (fun_app$q(?v0, fun_app$r(?v1, ?v4)) = fun_app$q(?v2, fun_app$r(?v3, ?v4))) ⇒ false)) ⇒ false)
+tff(axiom406,axiom,
+    ! [A__questionmark_v0: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$',A__questionmark_v2: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v3: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$'] :
+      ( ( ( 'comp$'(A__questionmark_v0,A__questionmark_v1) = 'comp$'(A__questionmark_v2,A__questionmark_v3) )
+        & ( ! [A__questionmark_v4: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun$'] : ( 'fun_app$q'(A__questionmark_v0,'fun_app$r'(A__questionmark_v1,A__questionmark_v4)) = 'fun_app$q'(A__questionmark_v2,'fun_app$r'(A__questionmark_v3,A__questionmark_v4)) )
+         => $false ) )
+     => $false ) ).
+
+%% ∀ ?v0:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$ ?v1:B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$ ?v2:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$ ?v3:B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$ (((comp$a(?v0, ?v1) = comp$a(?v2, ?v3)) ∧ (∀ ?v4:B_ell2_b_ell2_cblinfun$ (fun_app$h(?v0, fun_app$f(?v1, ?v4)) = fun_app$h(?v2, fun_app$f(?v3, ?v4))) ⇒ false)) ⇒ false)
+tff(axiom407,axiom,
+    ! [A__questionmark_v0: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$',A__questionmark_v1: 'B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$',A__questionmark_v2: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$',A__questionmark_v3: 'B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$'] :
+      ( ( ( 'comp$a'(A__questionmark_v0,A__questionmark_v1) = 'comp$a'(A__questionmark_v2,A__questionmark_v3) )
+        & ( ! [A__questionmark_v4: 'B_ell2_b_ell2_cblinfun$'] : ( 'fun_app$h'(A__questionmark_v0,'fun_app$f'(A__questionmark_v1,A__questionmark_v4)) = 'fun_app$h'(A__questionmark_v2,'fun_app$f'(A__questionmark_v3,A__questionmark_v4)) )
+         => $false ) )
+     => $false ) ).
+
+%% ∀ ?v0:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$ ?v2:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v3:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun$ ((comp$(?v0, ?v1) = ?v2) ⇒ (fun_app$q(?v0, fun_app$r(?v1, ?v3)) = fun_app$p(?v2, ?v3)))
+tff(axiom408,axiom,
+    ! [A__questionmark_v0: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$',A__questionmark_v2: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v3: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun$'] :
+      ( ( 'comp$'(A__questionmark_v0,A__questionmark_v1) = A__questionmark_v2 )
+     => ( 'fun_app$q'(A__questionmark_v0,'fun_app$r'(A__questionmark_v1,A__questionmark_v3)) = 'fun_app$p'(A__questionmark_v2,A__questionmark_v3) ) ) ).
+
+%% ∀ ?v0:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$ ?v1:B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$ ?v2:B_ell2_b_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$ ?v3:B_ell2_b_ell2_cblinfun$ ((comp$a(?v0, ?v1) = ?v2) ⇒ (fun_app$h(?v0, fun_app$f(?v1, ?v3)) = fun_app$b(?v2, ?v3)))
+tff(axiom409,axiom,
+    ! [A__questionmark_v0: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$',A__questionmark_v1: 'B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$',A__questionmark_v2: 'B_ell2_b_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$',A__questionmark_v3: 'B_ell2_b_ell2_cblinfun$'] :
+      ( ( 'comp$a'(A__questionmark_v0,A__questionmark_v1) = A__questionmark_v2 )
+     => ( 'fun_app$h'(A__questionmark_v0,'fun_app$f'(A__questionmark_v1,A__questionmark_v3)) = 'fun_app$b'(A__questionmark_v2,A__questionmark_v3) ) ) ).
+
+%% ∀ ?v0:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$ ?v1:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$ ?v2:B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$ ?v3:B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$ ((register$b(?v0) ∧ (register$b(?v1) ∧ (register$c(?v2) ∧ register$c(?v3)))) ⇒ (comp$bm(register_tensor$at(?v0, ?v1), register_tensor$g(?v2, ?v3)) = register_tensor$au(comp$a(?v0, ?v2), comp$a(?v1, ?v3))))
+tff(axiom410,axiom,
+    ! [A__questionmark_v0: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$',A__questionmark_v1: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$',A__questionmark_v2: 'B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$',A__questionmark_v3: 'B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$'] :
+      ( ( 'register$b'(A__questionmark_v0)
+        & 'register$b'(A__questionmark_v1)
+        & 'register$c'(A__questionmark_v2)
+        & 'register$c'(A__questionmark_v3) )
+     => ( 'comp$bm'('register_tensor$at'(A__questionmark_v0,A__questionmark_v1),'register_tensor$g'(A__questionmark_v2,A__questionmark_v3)) = 'register_tensor$au'('comp$a'(A__questionmark_v0,A__questionmark_v2),'comp$a'(A__questionmark_v1,A__questionmark_v3)) ) ) ).
+
+%% ∀ ?v0:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$ ?v1:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v2:B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$ ?v3:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$ ((register$b(?v0) ∧ (register$d(?v1) ∧ (register$c(?v2) ∧ register$e(?v3)))) ⇒ (comp$bn(register_tensor$av(?v0, ?v1), register_tensor$aw(?v2, ?v3)) = register_tensor$ax(comp$a(?v0, ?v2), comp$(?v1, ?v3))))
+tff(axiom411,axiom,
+    ! [A__questionmark_v0: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$',A__questionmark_v1: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v2: 'B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$',A__questionmark_v3: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$'] :
+      ( ( 'register$b'(A__questionmark_v0)
+        & 'register$d'(A__questionmark_v1)
+        & 'register$c'(A__questionmark_v2)
+        & 'register$e'(A__questionmark_v3) )
+     => ( 'comp$bn'('register_tensor$av'(A__questionmark_v0,A__questionmark_v1),'register_tensor$aw'(A__questionmark_v2,A__questionmark_v3)) = 'register_tensor$ax'('comp$a'(A__questionmark_v0,A__questionmark_v2),'comp$'(A__questionmark_v1,A__questionmark_v3)) ) ) ).
+
+%% ∀ ?v0:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$ ?v2:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$ ?v3:B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$ ((register$d(?v0) ∧ (register$b(?v1) ∧ (register$e(?v2) ∧ register$c(?v3)))) ⇒ (comp$bo(register_tensor$ay(?v0, ?v1), register_tensor$az(?v2, ?v3)) = register_tensor$ba(comp$(?v0, ?v2), comp$a(?v1, ?v3))))
+tff(axiom412,axiom,
+    ! [A__questionmark_v0: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$',A__questionmark_v2: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$',A__questionmark_v3: 'B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$'] :
+      ( ( 'register$d'(A__questionmark_v0)
+        & 'register$b'(A__questionmark_v1)
+        & 'register$e'(A__questionmark_v2)
+        & 'register$c'(A__questionmark_v3) )
+     => ( 'comp$bo'('register_tensor$ay'(A__questionmark_v0,A__questionmark_v1),'register_tensor$az'(A__questionmark_v2,A__questionmark_v3)) = 'register_tensor$ba'('comp$'(A__questionmark_v0,A__questionmark_v2),'comp$a'(A__questionmark_v1,A__questionmark_v3)) ) ) ).
+
+%% ∀ ?v0:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v2:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$ ?v3:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$ ((register$d(?v0) ∧ (register$d(?v1) ∧ (register$e(?v2) ∧ register$e(?v3)))) ⇒ (comp$bp(register_tensor$ab(?v0, ?v1), register_tensor$as(?v2, ?v3)) = register_tensor$bb(comp$(?v0, ?v2), comp$(?v1, ?v3))))
+tff(axiom413,axiom,
+    ! [A__questionmark_v0: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v2: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$',A__questionmark_v3: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$'] :
+      ( ( 'register$d'(A__questionmark_v0)
+        & 'register$d'(A__questionmark_v1)
+        & 'register$e'(A__questionmark_v2)
+        & 'register$e'(A__questionmark_v3) )
+     => ( 'comp$bp'('register_tensor$ab'(A__questionmark_v0,A__questionmark_v1),'register_tensor$as'(A__questionmark_v2,A__questionmark_v3)) = 'register_tensor$bb'('comp$'(A__questionmark_v0,A__questionmark_v2),'comp$'(A__questionmark_v1,A__questionmark_v3)) ) ) ).
+
+%% ∀ ?v0:B_ell2_b_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$ ?v1:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$ ?v2:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v3:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$ ((register$r(?v0) ∧ (register$v(?v1) ∧ (register$a(?v2) ∧ register$e(?v3)))) ⇒ (comp$bq(register_tensor$bc(?v0, ?v1), register_tensor$aq(?v2, ?v3)) = register_tensor$i(comp$br(?v0, ?v2), comp$am(?v1, ?v3))))
+tff(axiom414,axiom,
+    ! [A__questionmark_v0: 'B_ell2_b_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$',A__questionmark_v1: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$',A__questionmark_v2: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v3: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$'] :
+      ( ( 'register$r'(A__questionmark_v0)
+        & 'register$v'(A__questionmark_v1)
+        & 'register$a'(A__questionmark_v2)
+        & 'register$e'(A__questionmark_v3) )
+     => ( 'comp$bq'('register_tensor$bc'(A__questionmark_v0,A__questionmark_v1),'register_tensor$aq'(A__questionmark_v2,A__questionmark_v3)) = 'register_tensor$i'('comp$br'(A__questionmark_v0,A__questionmark_v2),'comp$am'(A__questionmark_v1,A__questionmark_v3)) ) ) ).
+
+%% ∀ ?v0:B_ell2_b_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$ ?v1:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$ ?v2:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v3:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_c_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$ ((register$r(?v0) ∧ (register$e(?v1) ∧ (register$a(?v2) ∧ register$aj(?v3)))) ⇒ (comp$bs(register_tensor$bd(?v0, ?v1), register_tensor$be(?v2, ?v3)) = register_tensor$i(comp$br(?v0, ?v2), comp$an(?v1, ?v3))))
+tff(axiom415,axiom,
+    ! [A__questionmark_v0: 'B_ell2_b_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$',A__questionmark_v1: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$',A__questionmark_v2: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v3: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_c_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$'] :
+      ( ( 'register$r'(A__questionmark_v0)
+        & 'register$e'(A__questionmark_v1)
+        & 'register$a'(A__questionmark_v2)
+        & 'register$aj'(A__questionmark_v3) )
+     => ( 'comp$bs'('register_tensor$bd'(A__questionmark_v0,A__questionmark_v1),'register_tensor$be'(A__questionmark_v2,A__questionmark_v3)) = 'register_tensor$i'('comp$br'(A__questionmark_v0,A__questionmark_v2),'comp$an'(A__questionmark_v1,A__questionmark_v3)) ) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v2:A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$ ?v3:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$ ((register$a(?v0) ∧ (register$d(?v1) ∧ (register$q(?v2) ∧ register$e(?v3)))) ⇒ (comp$bt(register_tensor$bf(?v0, ?v1), register_tensor$i(?v2, ?v3)) = register_tensor$bg(comp$g(?v0, ?v2), comp$(?v1, ?v3))))
+tff(axiom416,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v2: 'A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$',A__questionmark_v3: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$'] :
+      ( ( 'register$a'(A__questionmark_v0)
+        & 'register$d'(A__questionmark_v1)
+        & 'register$q'(A__questionmark_v2)
+        & 'register$e'(A__questionmark_v3) )
+     => ( 'comp$bt'('register_tensor$bf'(A__questionmark_v0,A__questionmark_v1),'register_tensor$i'(A__questionmark_v2,A__questionmark_v3)) = 'register_tensor$bg'('comp$g'(A__questionmark_v0,A__questionmark_v2),'comp$'(A__questionmark_v1,A__questionmark_v3)) ) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$ ?v1:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$ ?v2:A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$ ?v3:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$ ((register$q(?v0) ∧ (register$v(?v1) ∧ (register$q(?v2) ∧ register$e(?v3)))) ⇒ (comp$bu(register_tensor$v(?v0, ?v1), register_tensor$i(?v2, ?v3)) = register_tensor$i(comp$bv(?v0, ?v2), comp$am(?v1, ?v3))))
+tff(axiom417,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$',A__questionmark_v1: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$',A__questionmark_v2: 'A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$',A__questionmark_v3: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$'] :
+      ( ( 'register$q'(A__questionmark_v0)
+        & 'register$v'(A__questionmark_v1)
+        & 'register$q'(A__questionmark_v2)
+        & 'register$e'(A__questionmark_v3) )
+     => ( 'comp$bu'('register_tensor$v'(A__questionmark_v0,A__questionmark_v1),'register_tensor$i'(A__questionmark_v2,A__questionmark_v3)) = 'register_tensor$i'('comp$bv'(A__questionmark_v0,A__questionmark_v2),'comp$am'(A__questionmark_v1,A__questionmark_v3)) ) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$ ?v1:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$ ?v2:A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$ ?v3:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_c_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$ ((register$q(?v0) ∧ (register$e(?v1) ∧ (register$q(?v2) ∧ register$aj(?v3)))) ⇒ (comp$bw(register_tensor$i(?v0, ?v1), register_tensor$bh(?v2, ?v3)) = register_tensor$i(comp$bv(?v0, ?v2), comp$an(?v1, ?v3))))
+tff(axiom418,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$',A__questionmark_v1: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$',A__questionmark_v2: 'A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$',A__questionmark_v3: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_c_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$'] :
+      ( ( 'register$q'(A__questionmark_v0)
+        & 'register$e'(A__questionmark_v1)
+        & 'register$q'(A__questionmark_v2)
+        & 'register$aj'(A__questionmark_v3) )
+     => ( 'comp$bw'('register_tensor$i'(A__questionmark_v0,A__questionmark_v1),'register_tensor$bh'(A__questionmark_v2,A__questionmark_v3)) = 'register_tensor$i'('comp$bv'(A__questionmark_v0,A__questionmark_v2),'comp$an'(A__questionmark_v1,A__questionmark_v3)) ) ) ).
+
+%% ∀ ?v0:A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_set$ ?v2:B_ell2_b_ell2_cblinfun_set$ (bij_betw$(?v0, ?v1, ?v2) ⇒ ∀ ?v3:A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun$ (member$b(?v3, ?v1) ⇒ member$(fun_app$k(?v0, ?v3), ?v2)))
+tff(axiom419,axiom,
+    ! [A__questionmark_v0: 'A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_set$',A__questionmark_v2: 'B_ell2_b_ell2_cblinfun_set$'] :
+      ( 'bij_betw$'(A__questionmark_v0,A__questionmark_v1,A__questionmark_v2)
+     => ! [A__questionmark_v3: 'A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun$'] :
+          ( 'member$b'(A__questionmark_v3,A__questionmark_v1)
+         => 'member$'('fun_app$k'(A__questionmark_v0,A__questionmark_v3),A__questionmark_v2) ) ) ).
+
+%% ∀ ?v0:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_set$ ?v2:B_ell2_b_ell2_cblinfun_set$ (bij_betw$b(?v0, ?v1, ?v2) ⇒ ∀ ?v3:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$ (member$c(?v3, ?v1) ⇒ member$(fun_app$d(?v0, ?v3), ?v2)))
+tff(axiom420,axiom,
+    ! [A__questionmark_v0: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_set$',A__questionmark_v2: 'B_ell2_b_ell2_cblinfun_set$'] :
+      ( 'bij_betw$b'(A__questionmark_v0,A__questionmark_v1,A__questionmark_v2)
+     => ! [A__questionmark_v3: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$'] :
+          ( 'member$c'(A__questionmark_v3,A__questionmark_v1)
+         => 'member$'('fun_app$d'(A__questionmark_v0,A__questionmark_v3),A__questionmark_v2) ) ) ).
+
+%% ∀ ?v0:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_set$ ?v2:B_ell2_b_ell2_cblinfun_set$ (bij_betw$d(?v0, ?v1, ?v2) ⇒ ∀ ?v3:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun$ (member$a(?v3, ?v1) ⇒ member$(fun_app$g(?v0, ?v3), ?v2)))
+tff(axiom421,axiom,
+    ! [A__questionmark_v0: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_set$',A__questionmark_v2: 'B_ell2_b_ell2_cblinfun_set$'] :
+      ( 'bij_betw$d'(A__questionmark_v0,A__questionmark_v1,A__questionmark_v2)
+     => ! [A__questionmark_v3: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun$'] :
+          ( 'member$a'(A__questionmark_v3,A__questionmark_v1)
+         => 'member$'('fun_app$g'(A__questionmark_v0,A__questionmark_v3),A__questionmark_v2) ) ) ).
+
+%% ∀ ?v0:B_ell2_b_ell2_cblinfun_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$ ?v1:B_ell2_b_ell2_cblinfun_set$ ?v2:A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_set$ (bij_betw$j(?v0, ?v1, ?v2) ⇒ ∃ ?v3:A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ bij_betw$(?v3, ?v2, ?v1))
+tff(axiom422,axiom,
+    ! [A__questionmark_v0: 'B_ell2_b_ell2_cblinfun_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$',A__questionmark_v1: 'B_ell2_b_ell2_cblinfun_set$',A__questionmark_v2: 'A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_set$'] :
+      ( 'bij_betw$j'(A__questionmark_v0,A__questionmark_v1,A__questionmark_v2)
+     => ? [A__questionmark_v3: 'A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] : 'bij_betw$'(A__questionmark_v3,A__questionmark_v2,A__questionmark_v1) ) ).
+
+%% ∀ ?v0:B_ell2_b_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$ ?v1:B_ell2_b_ell2_cblinfun_set$ ?v2:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_set$ (bij_betw$c(?v0, ?v1, ?v2) ⇒ ∃ ?v3:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ bij_betw$b(?v3, ?v2, ?v1))
+tff(axiom423,axiom,
+    ! [A__questionmark_v0: 'B_ell2_b_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$',A__questionmark_v1: 'B_ell2_b_ell2_cblinfun_set$',A__questionmark_v2: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_set$'] :
+      ( 'bij_betw$c'(A__questionmark_v0,A__questionmark_v1,A__questionmark_v2)
+     => ? [A__questionmark_v3: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] : 'bij_betw$b'(A__questionmark_v3,A__questionmark_v2,A__questionmark_v1) ) ).
+
+%% ∀ ?v0:B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$ ?v1:B_ell2_b_ell2_cblinfun_set$ ?v2:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_set$ (bij_betw$e(?v0, ?v1, ?v2) ⇒ ∃ ?v3:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ bij_betw$d(?v3, ?v2, ?v1))
+tff(axiom424,axiom,
+    ! [A__questionmark_v0: 'B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$',A__questionmark_v1: 'B_ell2_b_ell2_cblinfun_set$',A__questionmark_v2: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_set$'] :
+      ( 'bij_betw$e'(A__questionmark_v0,A__questionmark_v1,A__questionmark_v2)
+     => ? [A__questionmark_v3: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] : 'bij_betw$d'(A__questionmark_v3,A__questionmark_v2,A__questionmark_v1) ) ).
+
+%% ∀ ?v0:A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_set$ ?v2:B_ell2_b_ell2_cblinfun_set$ (bij_betw$(?v0, ?v1, ?v2) ⇒ ∃ ?v3:B_ell2_b_ell2_cblinfun_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$ bij_betw$j(?v3, ?v2, ?v1))
+tff(axiom425,axiom,
+    ! [A__questionmark_v0: 'A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_set$',A__questionmark_v2: 'B_ell2_b_ell2_cblinfun_set$'] :
+      ( 'bij_betw$'(A__questionmark_v0,A__questionmark_v1,A__questionmark_v2)
+     => ? [A__questionmark_v3: 'B_ell2_b_ell2_cblinfun_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$'] : 'bij_betw$j'(A__questionmark_v3,A__questionmark_v2,A__questionmark_v1) ) ).
+
+%% ∀ ?v0:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_set$ ?v2:B_ell2_b_ell2_cblinfun_set$ (bij_betw$b(?v0, ?v1, ?v2) ⇒ ∃ ?v3:B_ell2_b_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$ bij_betw$c(?v3, ?v2, ?v1))
+tff(axiom426,axiom,
+    ! [A__questionmark_v0: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_set$',A__questionmark_v2: 'B_ell2_b_ell2_cblinfun_set$'] :
+      ( 'bij_betw$b'(A__questionmark_v0,A__questionmark_v1,A__questionmark_v2)
+     => ? [A__questionmark_v3: 'B_ell2_b_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$'] : 'bij_betw$c'(A__questionmark_v3,A__questionmark_v2,A__questionmark_v1) ) ).
+
+%% ∀ ?v0:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_set$ ?v2:B_ell2_b_ell2_cblinfun_set$ (bij_betw$d(?v0, ?v1, ?v2) ⇒ ∃ ?v3:B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$ bij_betw$e(?v3, ?v2, ?v1))
+tff(axiom427,axiom,
+    ! [A__questionmark_v0: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_set$',A__questionmark_v2: 'B_ell2_b_ell2_cblinfun_set$'] :
+      ( 'bij_betw$d'(A__questionmark_v0,A__questionmark_v1,A__questionmark_v2)
+     => ? [A__questionmark_v3: 'B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$'] : 'bij_betw$e'(A__questionmark_v3,A__questionmark_v2,A__questionmark_v1) ) ).
+
+%% ∀ ?v0:A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_set$ ?v1:A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v2:A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v3:B_ell2_b_ell2_cblinfun_set$ (∀ ?v4:A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun$ (member$b(?v4, ?v0) ⇒ (fun_app$k(?v1, ?v4) = fun_app$k(?v2, ?v4))) ⇒ (bij_betw$(?v1, ?v0, ?v3) = bij_betw$(?v2, ?v0, ?v3)))
+tff(axiom428,axiom,
+    ! [A__questionmark_v0: 'A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_set$',A__questionmark_v1: 'A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v2: 'A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v3: 'B_ell2_b_ell2_cblinfun_set$'] :
+      ( ! [A__questionmark_v4: 'A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun$'] :
+          ( 'member$b'(A__questionmark_v4,A__questionmark_v0)
+         => ( 'fun_app$k'(A__questionmark_v1,A__questionmark_v4) = 'fun_app$k'(A__questionmark_v2,A__questionmark_v4) ) )
+     => ( 'bij_betw$'(A__questionmark_v1,A__questionmark_v0,A__questionmark_v3)
+      <=> 'bij_betw$'(A__questionmark_v2,A__questionmark_v0,A__questionmark_v3) ) ) ).
+
+%% ∀ ?v0:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_set$ ?v1:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v2:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v3:B_ell2_b_ell2_cblinfun_set$ (∀ ?v4:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$ (member$c(?v4, ?v0) ⇒ (fun_app$d(?v1, ?v4) = fun_app$d(?v2, ?v4))) ⇒ (bij_betw$b(?v1, ?v0, ?v3) = bij_betw$b(?v2, ?v0, ?v3)))
+tff(axiom429,axiom,
+    ! [A__questionmark_v0: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_set$',A__questionmark_v1: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v2: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v3: 'B_ell2_b_ell2_cblinfun_set$'] :
+      ( ! [A__questionmark_v4: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$'] :
+          ( 'member$c'(A__questionmark_v4,A__questionmark_v0)
+         => ( 'fun_app$d'(A__questionmark_v1,A__questionmark_v4) = 'fun_app$d'(A__questionmark_v2,A__questionmark_v4) ) )
+     => ( 'bij_betw$b'(A__questionmark_v1,A__questionmark_v0,A__questionmark_v3)
+      <=> 'bij_betw$b'(A__questionmark_v2,A__questionmark_v0,A__questionmark_v3) ) ) ).
+
+%% ∀ ?v0:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_set$ ?v1:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v2:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v3:B_ell2_b_ell2_cblinfun_set$ (∀ ?v4:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun$ (member$a(?v4, ?v0) ⇒ (fun_app$g(?v1, ?v4) = fun_app$g(?v2, ?v4))) ⇒ (bij_betw$d(?v1, ?v0, ?v3) = bij_betw$d(?v2, ?v0, ?v3)))
+tff(axiom430,axiom,
+    ! [A__questionmark_v0: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_set$',A__questionmark_v1: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v2: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v3: 'B_ell2_b_ell2_cblinfun_set$'] :
+      ( ! [A__questionmark_v4: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun$'] :
+          ( 'member$a'(A__questionmark_v4,A__questionmark_v0)
+         => ( 'fun_app$g'(A__questionmark_v1,A__questionmark_v4) = 'fun_app$g'(A__questionmark_v2,A__questionmark_v4) ) )
+     => ( 'bij_betw$d'(A__questionmark_v1,A__questionmark_v0,A__questionmark_v3)
+      <=> 'bij_betw$d'(A__questionmark_v2,A__questionmark_v0,A__questionmark_v3) ) ) ).
+
+%% ∀ ?v0:A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_set$ ?v2:B_ell2_b_ell2_cblinfun_set$ ?v3:A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun$ ((bij_betw$(?v0, ?v1, ?v2) ∧ member$b(?v3, ?v1)) ⇒ member$(fun_app$k(?v0, ?v3), ?v2))
+tff(axiom431,axiom,
+    ! [A__questionmark_v0: 'A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_set$',A__questionmark_v2: 'B_ell2_b_ell2_cblinfun_set$',A__questionmark_v3: 'A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun$'] :
+      ( ( 'bij_betw$'(A__questionmark_v0,A__questionmark_v1,A__questionmark_v2)
+        & 'member$b'(A__questionmark_v3,A__questionmark_v1) )
+     => 'member$'('fun_app$k'(A__questionmark_v0,A__questionmark_v3),A__questionmark_v2) ) ).
+
+%% ∀ ?v0:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_set$ ?v2:B_ell2_b_ell2_cblinfun_set$ ?v3:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$ ((bij_betw$b(?v0, ?v1, ?v2) ∧ member$c(?v3, ?v1)) ⇒ member$(fun_app$d(?v0, ?v3), ?v2))
+tff(axiom432,axiom,
+    ! [A__questionmark_v0: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_set$',A__questionmark_v2: 'B_ell2_b_ell2_cblinfun_set$',A__questionmark_v3: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$'] :
+      ( ( 'bij_betw$b'(A__questionmark_v0,A__questionmark_v1,A__questionmark_v2)
+        & 'member$c'(A__questionmark_v3,A__questionmark_v1) )
+     => 'member$'('fun_app$d'(A__questionmark_v0,A__questionmark_v3),A__questionmark_v2) ) ).
+
+%% ∀ ?v0:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_set$ ?v2:B_ell2_b_ell2_cblinfun_set$ ?v3:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun$ ((bij_betw$d(?v0, ?v1, ?v2) ∧ member$a(?v3, ?v1)) ⇒ member$(fun_app$g(?v0, ?v3), ?v2))
+tff(axiom433,axiom,
+    ! [A__questionmark_v0: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_set$',A__questionmark_v2: 'B_ell2_b_ell2_cblinfun_set$',A__questionmark_v3: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun$'] :
+      ( ( 'bij_betw$d'(A__questionmark_v0,A__questionmark_v1,A__questionmark_v2)
+        & 'member$a'(A__questionmark_v3,A__questionmark_v1) )
+     => 'member$'('fun_app$g'(A__questionmark_v0,A__questionmark_v3),A__questionmark_v2) ) ).
+
+%% ∀ ?v0:A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_set$ ?v2:B_ell2_b_ell2_cblinfun_set$ (bij_betw$(?v0, ?v1, ?v2) = ∃ ?v3:B_ell2_b_ell2_cblinfun_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$ (∀ ?v4:A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun$ (member$b(?v4, ?v1) ⇒ (member$(fun_app$k(?v0, ?v4), ?v2) ∧ (fun_app$a(?v3, fun_app$k(?v0, ?v4)) = ?v4))) ∧ ∀ ?v4:B_ell2_b_ell2_cblinfun$ (member$(?v4, ?v2) ⇒ (member$b(fun_app$a(?v3, ?v4), ?v1) ∧ (fun_app$k(?v0, fun_app$a(?v3, ?v4)) = ?v4)))))
+tff(axiom434,axiom,
+    ! [A__questionmark_v0: 'A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_set$',A__questionmark_v2: 'B_ell2_b_ell2_cblinfun_set$'] :
+      ( 'bij_betw$'(A__questionmark_v0,A__questionmark_v1,A__questionmark_v2)
+    <=> ? [A__questionmark_v3: 'B_ell2_b_ell2_cblinfun_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$'] :
+          ( ! [A__questionmark_v4: 'A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun$'] :
+              ( 'member$b'(A__questionmark_v4,A__questionmark_v1)
+             => ( 'member$'('fun_app$k'(A__questionmark_v0,A__questionmark_v4),A__questionmark_v2)
+                & ( 'fun_app$a'(A__questionmark_v3,'fun_app$k'(A__questionmark_v0,A__questionmark_v4)) = A__questionmark_v4 ) ) )
+          & ! [A__questionmark_v4: 'B_ell2_b_ell2_cblinfun$'] :
+              ( 'member$'(A__questionmark_v4,A__questionmark_v2)
+             => ( 'member$b'('fun_app$a'(A__questionmark_v3,A__questionmark_v4),A__questionmark_v1)
+                & ( 'fun_app$k'(A__questionmark_v0,'fun_app$a'(A__questionmark_v3,A__questionmark_v4)) = A__questionmark_v4 ) ) ) ) ) ).
+
+%% ∀ ?v0:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_set$ ?v2:B_ell2_b_ell2_cblinfun_set$ (bij_betw$b(?v0, ?v1, ?v2) = ∃ ?v3:B_ell2_b_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$ (∀ ?v4:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$ (member$c(?v4, ?v1) ⇒ (member$(fun_app$d(?v0, ?v4), ?v2) ∧ (fun_app$c(?v3, fun_app$d(?v0, ?v4)) = ?v4))) ∧ ∀ ?v4:B_ell2_b_ell2_cblinfun$ (member$(?v4, ?v2) ⇒ (member$c(fun_app$c(?v3, ?v4), ?v1) ∧ (fun_app$d(?v0, fun_app$c(?v3, ?v4)) = ?v4)))))
+tff(axiom435,axiom,
+    ! [A__questionmark_v0: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_set$',A__questionmark_v2: 'B_ell2_b_ell2_cblinfun_set$'] :
+      ( 'bij_betw$b'(A__questionmark_v0,A__questionmark_v1,A__questionmark_v2)
+    <=> ? [A__questionmark_v3: 'B_ell2_b_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$'] :
+          ( ! [A__questionmark_v4: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$'] :
+              ( 'member$c'(A__questionmark_v4,A__questionmark_v1)
+             => ( 'member$'('fun_app$d'(A__questionmark_v0,A__questionmark_v4),A__questionmark_v2)
+                & ( 'fun_app$c'(A__questionmark_v3,'fun_app$d'(A__questionmark_v0,A__questionmark_v4)) = A__questionmark_v4 ) ) )
+          & ! [A__questionmark_v4: 'B_ell2_b_ell2_cblinfun$'] :
+              ( 'member$'(A__questionmark_v4,A__questionmark_v2)
+             => ( 'member$c'('fun_app$c'(A__questionmark_v3,A__questionmark_v4),A__questionmark_v1)
+                & ( 'fun_app$d'(A__questionmark_v0,'fun_app$c'(A__questionmark_v3,A__questionmark_v4)) = A__questionmark_v4 ) ) ) ) ) ).
+
+%% ∀ ?v0:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_set$ ?v2:B_ell2_b_ell2_cblinfun_set$ (bij_betw$d(?v0, ?v1, ?v2) = ∃ ?v3:B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$ (∀ ?v4:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun$ (member$a(?v4, ?v1) ⇒ (member$(fun_app$g(?v0, ?v4), ?v2) ∧ (fun_app$f(?v3, fun_app$g(?v0, ?v4)) = ?v4))) ∧ ∀ ?v4:B_ell2_b_ell2_cblinfun$ (member$(?v4, ?v2) ⇒ (member$a(fun_app$f(?v3, ?v4), ?v1) ∧ (fun_app$g(?v0, fun_app$f(?v3, ?v4)) = ?v4)))))
+tff(axiom436,axiom,
+    ! [A__questionmark_v0: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_set$',A__questionmark_v2: 'B_ell2_b_ell2_cblinfun_set$'] :
+      ( 'bij_betw$d'(A__questionmark_v0,A__questionmark_v1,A__questionmark_v2)
+    <=> ? [A__questionmark_v3: 'B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$'] :
+          ( ! [A__questionmark_v4: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun$'] :
+              ( 'member$a'(A__questionmark_v4,A__questionmark_v1)
+             => ( 'member$'('fun_app$g'(A__questionmark_v0,A__questionmark_v4),A__questionmark_v2)
+                & ( 'fun_app$f'(A__questionmark_v3,'fun_app$g'(A__questionmark_v0,A__questionmark_v4)) = A__questionmark_v4 ) ) )
+          & ! [A__questionmark_v4: 'B_ell2_b_ell2_cblinfun$'] :
+              ( 'member$'(A__questionmark_v4,A__questionmark_v2)
+             => ( 'member$a'('fun_app$f'(A__questionmark_v3,A__questionmark_v4),A__questionmark_v1)
+                & ( 'fun_app$g'(A__questionmark_v0,'fun_app$f'(A__questionmark_v3,A__questionmark_v4)) = A__questionmark_v4 ) ) ) ) ) ).
+
+%% ∀ ?v0:B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v2:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v3:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((compatible$az(?v0, ?v1) ∧ (register$a(?v2) ∧ register$(?v3))) ⇒ (comp$bx(register_pair$az(?v0, ?v1), register_tensor$t(?v2, ?v3)) = register_pair$a(comp$j(?v0, ?v2), comp$k(?v1, ?v3))))
+tff(axiom437,axiom,
+    ! [A__questionmark_v0: 'B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v2: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v3: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'compatible$az'(A__questionmark_v0,A__questionmark_v1)
+        & 'register$a'(A__questionmark_v2)
+        & 'register$'(A__questionmark_v3) )
+     => ( 'comp$bx'('register_pair$az'(A__questionmark_v0,A__questionmark_v1),'register_tensor$t'(A__questionmark_v2,A__questionmark_v3)) = 'register_pair$a'('comp$j'(A__questionmark_v0,A__questionmark_v2),'comp$k'(A__questionmark_v1,A__questionmark_v3)) ) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v2:A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$ ?v3:C_ell2_c_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$ ((compatible$(?v0, ?v1) ∧ (register$q(?v2) ∧ register$p(?v3))) ⇒ (comp$by(register_pair$a(?v0, ?v1), register_tensor$bi(?v2, ?v3)) = register_pair$a(comp$g(?v0, ?v2), comp$e(?v1, ?v3))))
+tff(axiom438,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v2: 'A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$',A__questionmark_v3: 'C_ell2_c_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$'] :
+      ( ( 'compatible$'(A__questionmark_v0,A__questionmark_v1)
+        & 'register$q'(A__questionmark_v2)
+        & 'register$p'(A__questionmark_v3) )
+     => ( 'comp$by'('register_pair$a'(A__questionmark_v0,A__questionmark_v1),'register_tensor$bi'(A__questionmark_v2,A__questionmark_v3)) = 'register_pair$a'('comp$g'(A__questionmark_v0,A__questionmark_v2),'comp$e'(A__questionmark_v1,A__questionmark_v3)) ) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v2:A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$ ?v3:C_ell2_c_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$ ((compatible$c(?v0, ?v1) ∧ (register$q(?v2) ∧ register$ak(?v3))) ⇒ (comp$bz(register_pair$g(?v0, ?v1), register_tensor$bj(?v2, ?v3)) = register_pair$a(comp$g(?v0, ?v2), comp$y(?v1, ?v3))))
+tff(axiom439,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v2: 'A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$',A__questionmark_v3: 'C_ell2_c_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$'] :
+      ( ( 'compatible$c'(A__questionmark_v0,A__questionmark_v1)
+        & 'register$q'(A__questionmark_v2)
+        & 'register$ak'(A__questionmark_v3) )
+     => ( 'comp$bz'('register_pair$g'(A__questionmark_v0,A__questionmark_v1),'register_tensor$bj'(A__questionmark_v2,A__questionmark_v3)) = 'register_pair$a'('comp$g'(A__questionmark_v0,A__questionmark_v2),'comp$y'(A__questionmark_v1,A__questionmark_v3)) ) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v2:A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$ ?v3:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$ ((compatible$(?v0, ?v1) ∧ (register$q(?v2) ∧ register$al(?v3))) ⇒ (comp$ca(register_pair$a(?v0, ?v1), register_tensor$bk(?v2, ?v3)) = register_pair$g(comp$g(?v0, ?v2), comp$m(?v1, ?v3))))
+tff(axiom440,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v2: 'A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$',A__questionmark_v3: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$'] :
+      ( ( 'compatible$'(A__questionmark_v0,A__questionmark_v1)
+        & 'register$q'(A__questionmark_v2)
+        & 'register$al'(A__questionmark_v3) )
+     => ( 'comp$ca'('register_pair$a'(A__questionmark_v0,A__questionmark_v1),'register_tensor$bk'(A__questionmark_v2,A__questionmark_v3)) = 'register_pair$g'('comp$g'(A__questionmark_v0,A__questionmark_v2),'comp$m'(A__questionmark_v1,A__questionmark_v3)) ) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v2:A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$ ?v3:C_ell2_c_ell2_cblinfun_a_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_fun$ ((compatible$b(?v0, ?v1) ∧ (register$q(?v2) ∧ register$am(?v3))) ⇒ (comp$cb(register_pair$(?v0, ?v1), register_tensor$bl(?v2, ?v3)) = register_pair$a(comp$g(?v0, ?v2), comp$cc(?v1, ?v3))))
+tff(axiom441,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v2: 'A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$',A__questionmark_v3: 'C_ell2_c_ell2_cblinfun_a_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_fun$'] :
+      ( ( 'compatible$b'(A__questionmark_v0,A__questionmark_v1)
+        & 'register$q'(A__questionmark_v2)
+        & 'register$am'(A__questionmark_v3) )
+     => ( 'comp$cb'('register_pair$'(A__questionmark_v0,A__questionmark_v1),'register_tensor$bl'(A__questionmark_v2,A__questionmark_v3)) = 'register_pair$a'('comp$g'(A__questionmark_v0,A__questionmark_v2),'comp$cc'(A__questionmark_v1,A__questionmark_v3)) ) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v2:A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$ ?v3:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$ ((compatible$c(?v0, ?v1) ∧ (register$q(?v2) ∧ register$v(?v3))) ⇒ (comp$cd(register_pair$g(?v0, ?v1), register_tensor$v(?v2, ?v3)) = register_pair$g(comp$g(?v0, ?v2), comp$ai(?v1, ?v3))))
+tff(axiom442,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v2: 'A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$',A__questionmark_v3: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$'] :
+      ( ( 'compatible$c'(A__questionmark_v0,A__questionmark_v1)
+        & 'register$q'(A__questionmark_v2)
+        & 'register$v'(A__questionmark_v3) )
+     => ( 'comp$cd'('register_pair$g'(A__questionmark_v0,A__questionmark_v1),'register_tensor$v'(A__questionmark_v2,A__questionmark_v3)) = 'register_pair$g'('comp$g'(A__questionmark_v0,A__questionmark_v2),'comp$ai'(A__questionmark_v1,A__questionmark_v3)) ) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v2:A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$ ?v3:A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$ ((compatible$(?v0, ?v1) ∧ (register$q(?v2) ∧ register$an(?v3))) ⇒ (comp$ce(register_pair$a(?v0, ?v1), register_tensor$bm(?v2, ?v3)) = register_pair$(comp$g(?v0, ?v2), comp$s(?v1, ?v3))))
+tff(axiom443,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v2: 'A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$',A__questionmark_v3: 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$'] :
+      ( ( 'compatible$'(A__questionmark_v0,A__questionmark_v1)
+        & 'register$q'(A__questionmark_v2)
+        & 'register$an'(A__questionmark_v3) )
+     => ( 'comp$ce'('register_pair$a'(A__questionmark_v0,A__questionmark_v1),'register_tensor$bm'(A__questionmark_v2,A__questionmark_v3)) = 'register_pair$'('comp$g'(A__questionmark_v0,A__questionmark_v2),'comp$s'(A__questionmark_v1,A__questionmark_v3)) ) ) ).
+
+%% ∀ ?v0:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v2:A_ell2_a_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$ ?v3:C_ell2_c_ell2_cblinfun_a_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$ ((compatible$a(?v0, ?v1) ∧ (register$t(?v2) ∧ register$ao(?v3))) ⇒ (comp$cf(register_pair$d(?v0, ?v1), register_tensor$bn(?v2, ?v3)) = register_pair$a(comp$d(?v0, ?v2), comp$cg(?v1, ?v3))))
+tff(axiom444,axiom,
+    ! [A__questionmark_v0: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v2: 'A_ell2_a_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$',A__questionmark_v3: 'C_ell2_c_ell2_cblinfun_a_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$'] :
+      ( ( 'compatible$a'(A__questionmark_v0,A__questionmark_v1)
+        & 'register$t'(A__questionmark_v2)
+        & 'register$ao'(A__questionmark_v3) )
+     => ( 'comp$cf'('register_pair$d'(A__questionmark_v0,A__questionmark_v1),'register_tensor$bn'(A__questionmark_v2,A__questionmark_v3)) = 'register_pair$a'('comp$d'(A__questionmark_v0,A__questionmark_v2),'comp$cg'(A__questionmark_v1,A__questionmark_v3)) ) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v2:A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$ ?v3:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_a_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_fun$ ((compatible$b(?v0, ?v1) ∧ (register$q(?v2) ∧ register$ap(?v3))) ⇒ (comp$ch(register_pair$(?v0, ?v1), register_tensor$bo(?v2, ?v3)) = register_pair$g(comp$g(?v0, ?v2), comp$ci(?v1, ?v3))))
+tff(axiom445,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v2: 'A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$',A__questionmark_v3: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_a_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_fun$'] :
+      ( ( 'compatible$b'(A__questionmark_v0,A__questionmark_v1)
+        & 'register$q'(A__questionmark_v2)
+        & 'register$ap'(A__questionmark_v3) )
+     => ( 'comp$ch'('register_pair$'(A__questionmark_v0,A__questionmark_v1),'register_tensor$bo'(A__questionmark_v2,A__questionmark_v3)) = 'register_pair$g'('comp$g'(A__questionmark_v0,A__questionmark_v2),'comp$ci'(A__questionmark_v1,A__questionmark_v3)) ) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v2:A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$ ?v3:A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$ ((compatible$c(?v0, ?v1) ∧ (register$q(?v2) ∧ register$aq(?v3))) ⇒ (comp$cj(register_pair$g(?v0, ?v1), register_tensor$bp(?v2, ?v3)) = register_pair$(comp$g(?v0, ?v2), comp$z(?v1, ?v3))))
+tff(axiom446,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v2: 'A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$',A__questionmark_v3: 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$'] :
+      ( ( 'compatible$c'(A__questionmark_v0,A__questionmark_v1)
+        & 'register$q'(A__questionmark_v2)
+        & 'register$aq'(A__questionmark_v3) )
+     => ( 'comp$cj'('register_pair$g'(A__questionmark_v0,A__questionmark_v1),'register_tensor$bp'(A__questionmark_v2,A__questionmark_v3)) = 'register_pair$'('comp$g'(A__questionmark_v0,A__questionmark_v2),'comp$z'(A__questionmark_v1,A__questionmark_v3)) ) ) ).
+
+%% ∀ ?v0:B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (bij_betw$a(?v0, top$a, top$a) = ∀ ?v1:B_ell2_b_ell2_cblinfun$ ∃ ?v2:B_ell2_b_ell2_cblinfun$ ((fun_app$l(?v0, ?v2) = ?v1) ∧ ∀ ?v3:B_ell2_b_ell2_cblinfun$ ((fun_app$l(?v0, ?v3) = ?v1) ⇒ (?v3 = ?v2))))
+tff(axiom447,axiom,
+    ! [A__questionmark_v0: 'B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'bij_betw$a'(A__questionmark_v0,'top$a','top$a')
+    <=> ! [A__questionmark_v1: 'B_ell2_b_ell2_cblinfun$'] :
+        ? [A__questionmark_v2: 'B_ell2_b_ell2_cblinfun$'] :
+          ( ( 'fun_app$l'(A__questionmark_v0,A__questionmark_v2) = A__questionmark_v1 )
+          & ! [A__questionmark_v3: 'B_ell2_b_ell2_cblinfun$'] :
+              ( ( 'fun_app$l'(A__questionmark_v0,A__questionmark_v3) = A__questionmark_v1 )
+             => ( A__questionmark_v3 = A__questionmark_v2 ) ) ) ) ).
+
+%% ∀ ?v0:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (bij_betw$b(?v0, top$c, top$a) = ∀ ?v1:B_ell2_b_ell2_cblinfun$ ∃ ?v2:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$ ((fun_app$d(?v0, ?v2) = ?v1) ∧ ∀ ?v3:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$ ((fun_app$d(?v0, ?v3) = ?v1) ⇒ (?v3 = ?v2))))
+tff(axiom448,axiom,
+    ! [A__questionmark_v0: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'bij_betw$b'(A__questionmark_v0,'top$c','top$a')
+    <=> ! [A__questionmark_v1: 'B_ell2_b_ell2_cblinfun$'] :
+        ? [A__questionmark_v2: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$'] :
+          ( ( 'fun_app$d'(A__questionmark_v0,A__questionmark_v2) = A__questionmark_v1 )
+          & ! [A__questionmark_v3: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$'] :
+              ( ( 'fun_app$d'(A__questionmark_v0,A__questionmark_v3) = A__questionmark_v1 )
+             => ( A__questionmark_v3 = A__questionmark_v2 ) ) ) ) ).
+
+%% ∀ ?v0:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (bij_betw$d(?v0, top$d, top$a) = ∀ ?v1:B_ell2_b_ell2_cblinfun$ ∃ ?v2:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun$ ((fun_app$g(?v0, ?v2) = ?v1) ∧ ∀ ?v3:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun$ ((fun_app$g(?v0, ?v3) = ?v1) ⇒ (?v3 = ?v2))))
+tff(axiom449,axiom,
+    ! [A__questionmark_v0: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'bij_betw$d'(A__questionmark_v0,'top$d','top$a')
+    <=> ! [A__questionmark_v1: 'B_ell2_b_ell2_cblinfun$'] :
+        ? [A__questionmark_v2: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun$'] :
+          ( ( 'fun_app$g'(A__questionmark_v0,A__questionmark_v2) = A__questionmark_v1 )
+          & ! [A__questionmark_v3: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun$'] :
+              ( ( 'fun_app$g'(A__questionmark_v0,A__questionmark_v3) = A__questionmark_v1 )
+             => ( A__questionmark_v3 = A__questionmark_v2 ) ) ) ) ).
+
+%% ∀ ?v0:B_ell2_b_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$ (bij_betw$c(?v0, top$a, top$c) = ∀ ?v1:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$ ∃ ?v2:B_ell2_b_ell2_cblinfun$ ((fun_app$c(?v0, ?v2) = ?v1) ∧ ∀ ?v3:B_ell2_b_ell2_cblinfun$ ((fun_app$c(?v0, ?v3) = ?v1) ⇒ (?v3 = ?v2))))
+tff(axiom450,axiom,
+    ! [A__questionmark_v0: 'B_ell2_b_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$'] :
+      ( 'bij_betw$c'(A__questionmark_v0,'top$a','top$c')
+    <=> ! [A__questionmark_v1: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$'] :
+        ? [A__questionmark_v2: 'B_ell2_b_ell2_cblinfun$'] :
+          ( ( 'fun_app$c'(A__questionmark_v0,A__questionmark_v2) = A__questionmark_v1 )
+          & ! [A__questionmark_v3: 'B_ell2_b_ell2_cblinfun$'] :
+              ( ( 'fun_app$c'(A__questionmark_v0,A__questionmark_v3) = A__questionmark_v1 )
+             => ( A__questionmark_v3 = A__questionmark_v2 ) ) ) ) ).
+
+%% ∀ ?v0:B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$ (bij_betw$e(?v0, top$a, top$d) = ∀ ?v1:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun$ ∃ ?v2:B_ell2_b_ell2_cblinfun$ ((fun_app$f(?v0, ?v2) = ?v1) ∧ ∀ ?v3:B_ell2_b_ell2_cblinfun$ ((fun_app$f(?v0, ?v3) = ?v1) ⇒ (?v3 = ?v2))))
+tff(axiom451,axiom,
+    ! [A__questionmark_v0: 'B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$'] :
+      ( 'bij_betw$e'(A__questionmark_v0,'top$a','top$d')
+    <=> ! [A__questionmark_v1: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun$'] :
+        ? [A__questionmark_v2: 'B_ell2_b_ell2_cblinfun$'] :
+          ( ( 'fun_app$f'(A__questionmark_v0,A__questionmark_v2) = A__questionmark_v1 )
+          & ! [A__questionmark_v3: 'B_ell2_b_ell2_cblinfun$'] :
+              ( ( 'fun_app$f'(A__questionmark_v0,A__questionmark_v3) = A__questionmark_v1 )
+             => ( A__questionmark_v3 = A__questionmark_v2 ) ) ) ) ).
+
+%% ∀ ?v0:A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (bij_betw$(?v0, top$, top$a) = ∀ ?v1:B_ell2_b_ell2_cblinfun$ ∃ ?v2:A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun$ ((fun_app$k(?v0, ?v2) = ?v1) ∧ ∀ ?v3:A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun$ ((fun_app$k(?v0, ?v3) = ?v1) ⇒ (?v3 = ?v2))))
+tff(axiom452,axiom,
+    ! [A__questionmark_v0: 'A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'bij_betw$'(A__questionmark_v0,'top$','top$a')
+    <=> ! [A__questionmark_v1: 'B_ell2_b_ell2_cblinfun$'] :
+        ? [A__questionmark_v2: 'A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun$'] :
+          ( ( 'fun_app$k'(A__questionmark_v0,A__questionmark_v2) = A__questionmark_v1 )
+          & ! [A__questionmark_v3: 'A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun$'] :
+              ( ( 'fun_app$k'(A__questionmark_v0,A__questionmark_v3) = A__questionmark_v1 )
+             => ( A__questionmark_v3 = A__questionmark_v2 ) ) ) ) ).
+
+%% ∀ ?v0:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$ (bij_betw$k(?v0, top$c, top$c) = ∀ ?v1:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$ ∃ ?v2:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$ ((fun_app$m(?v0, ?v2) = ?v1) ∧ ∀ ?v3:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$ ((fun_app$m(?v0, ?v3) = ?v1) ⇒ (?v3 = ?v2))))
+tff(axiom453,axiom,
+    ! [A__questionmark_v0: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$'] :
+      ( 'bij_betw$k'(A__questionmark_v0,'top$c','top$c')
+    <=> ! [A__questionmark_v1: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$'] :
+        ? [A__questionmark_v2: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$'] :
+          ( ( 'fun_app$m'(A__questionmark_v0,A__questionmark_v2) = A__questionmark_v1 )
+          & ! [A__questionmark_v3: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$'] :
+              ( ( 'fun_app$m'(A__questionmark_v0,A__questionmark_v3) = A__questionmark_v1 )
+             => ( A__questionmark_v3 = A__questionmark_v2 ) ) ) ) ).
+
+%% ∀ ?v0:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$ (bij_betw$l(?v0, top$c, top$d) = ∀ ?v1:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun$ ∃ ?v2:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$ ((fun_app$o(?v0, ?v2) = ?v1) ∧ ∀ ?v3:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$ ((fun_app$o(?v0, ?v3) = ?v1) ⇒ (?v3 = ?v2))))
+tff(axiom454,axiom,
+    ! [A__questionmark_v0: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$'] :
+      ( 'bij_betw$l'(A__questionmark_v0,'top$c','top$d')
+    <=> ! [A__questionmark_v1: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun$'] :
+        ? [A__questionmark_v2: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$'] :
+          ( ( 'fun_app$o'(A__questionmark_v0,A__questionmark_v2) = A__questionmark_v1 )
+          & ! [A__questionmark_v3: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$'] :
+              ( ( 'fun_app$o'(A__questionmark_v0,A__questionmark_v3) = A__questionmark_v1 )
+             => ( A__questionmark_v3 = A__questionmark_v2 ) ) ) ) ).
+
+%% ∀ ?v0:C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (bij_betw$m(?v0, top$b, top$a) = ∀ ?v1:B_ell2_b_ell2_cblinfun$ ∃ ?v2:C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun$ ((fun_app$e(?v0, ?v2) = ?v1) ∧ ∀ ?v3:C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun$ ((fun_app$e(?v0, ?v3) = ?v1) ⇒ (?v3 = ?v2))))
+tff(axiom455,axiom,
+    ! [A__questionmark_v0: 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'bij_betw$m'(A__questionmark_v0,'top$b','top$a')
+    <=> ! [A__questionmark_v1: 'B_ell2_b_ell2_cblinfun$'] :
+        ? [A__questionmark_v2: 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun$'] :
+          ( ( 'fun_app$e'(A__questionmark_v0,A__questionmark_v2) = A__questionmark_v1 )
+          & ! [A__questionmark_v3: 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun$'] :
+              ( ( 'fun_app$e'(A__questionmark_v0,A__questionmark_v3) = A__questionmark_v1 )
+             => ( A__questionmark_v3 = A__questionmark_v2 ) ) ) ) ).
+
+%% ∀ ?v0:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$ (bij_betw$n(?v0, top$d, top$c) = ∀ ?v1:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$ ∃ ?v2:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun$ ((fun_app$n(?v0, ?v2) = ?v1) ∧ ∀ ?v3:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun$ ((fun_app$n(?v0, ?v3) = ?v1) ⇒ (?v3 = ?v2))))
+tff(axiom456,axiom,
+    ! [A__questionmark_v0: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$'] :
+      ( 'bij_betw$n'(A__questionmark_v0,'top$d','top$c')
+    <=> ! [A__questionmark_v1: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$'] :
+        ? [A__questionmark_v2: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun$'] :
+          ( ( 'fun_app$n'(A__questionmark_v0,A__questionmark_v2) = A__questionmark_v1 )
+          & ! [A__questionmark_v3: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun$'] :
+              ( ( 'fun_app$n'(A__questionmark_v0,A__questionmark_v3) = A__questionmark_v1 )
+             => ( A__questionmark_v3 = A__questionmark_v2 ) ) ) ) ).
+
+%% ∀ ?v0:B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:B_ell2_b_ell2_cblinfun$ ((bij_betw$a(?v0, top$a, top$a) ∧ ∀ ?v2:B_ell2_b_ell2_cblinfun$ (((?v1 = fun_app$l(?v0, ?v2)) ∧ ∀ ?v3:B_ell2_b_ell2_cblinfun$ ((?v1 = fun_app$l(?v0, ?v3)) ⇒ (?v3 = ?v2))) ⇒ false)) ⇒ false)
+tff(axiom457,axiom,
+    ! [A__questionmark_v0: 'B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'B_ell2_b_ell2_cblinfun$'] :
+      ( ( 'bij_betw$a'(A__questionmark_v0,'top$a','top$a')
+        & ! [A__questionmark_v2: 'B_ell2_b_ell2_cblinfun$'] :
+            ( ( ( A__questionmark_v1 = 'fun_app$l'(A__questionmark_v0,A__questionmark_v2) )
+              & ! [A__questionmark_v3: 'B_ell2_b_ell2_cblinfun$'] :
+                  ( ( A__questionmark_v1 = 'fun_app$l'(A__questionmark_v0,A__questionmark_v3) )
+                 => ( A__questionmark_v3 = A__questionmark_v2 ) ) )
+           => $false ) )
+     => $false ) ).
+
+%% ∀ ?v0:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:B_ell2_b_ell2_cblinfun$ ((bij_betw$b(?v0, top$c, top$a) ∧ ∀ ?v2:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$ (((?v1 = fun_app$d(?v0, ?v2)) ∧ ∀ ?v3:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$ ((?v1 = fun_app$d(?v0, ?v3)) ⇒ (?v3 = ?v2))) ⇒ false)) ⇒ false)
+tff(axiom458,axiom,
+    ! [A__questionmark_v0: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'B_ell2_b_ell2_cblinfun$'] :
+      ( ( 'bij_betw$b'(A__questionmark_v0,'top$c','top$a')
+        & ! [A__questionmark_v2: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$'] :
+            ( ( ( A__questionmark_v1 = 'fun_app$d'(A__questionmark_v0,A__questionmark_v2) )
+              & ! [A__questionmark_v3: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$'] :
+                  ( ( A__questionmark_v1 = 'fun_app$d'(A__questionmark_v0,A__questionmark_v3) )
+                 => ( A__questionmark_v3 = A__questionmark_v2 ) ) )
+           => $false ) )
+     => $false ) ).
+
+%% ∀ ?v0:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:B_ell2_b_ell2_cblinfun$ ((bij_betw$d(?v0, top$d, top$a) ∧ ∀ ?v2:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun$ (((?v1 = fun_app$g(?v0, ?v2)) ∧ ∀ ?v3:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun$ ((?v1 = fun_app$g(?v0, ?v3)) ⇒ (?v3 = ?v2))) ⇒ false)) ⇒ false)
+tff(axiom459,axiom,
+    ! [A__questionmark_v0: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'B_ell2_b_ell2_cblinfun$'] :
+      ( ( 'bij_betw$d'(A__questionmark_v0,'top$d','top$a')
+        & ! [A__questionmark_v2: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun$'] :
+            ( ( ( A__questionmark_v1 = 'fun_app$g'(A__questionmark_v0,A__questionmark_v2) )
+              & ! [A__questionmark_v3: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun$'] :
+                  ( ( A__questionmark_v1 = 'fun_app$g'(A__questionmark_v0,A__questionmark_v3) )
+                 => ( A__questionmark_v3 = A__questionmark_v2 ) ) )
+           => $false ) )
+     => $false ) ).
+
+%% ∀ ?v0:B_ell2_b_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$ ?v1:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$ ((bij_betw$c(?v0, top$a, top$c) ∧ ∀ ?v2:B_ell2_b_ell2_cblinfun$ (((?v1 = fun_app$c(?v0, ?v2)) ∧ ∀ ?v3:B_ell2_b_ell2_cblinfun$ ((?v1 = fun_app$c(?v0, ?v3)) ⇒ (?v3 = ?v2))) ⇒ false)) ⇒ false)
+tff(axiom460,axiom,
+    ! [A__questionmark_v0: 'B_ell2_b_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$',A__questionmark_v1: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$'] :
+      ( ( 'bij_betw$c'(A__questionmark_v0,'top$a','top$c')
+        & ! [A__questionmark_v2: 'B_ell2_b_ell2_cblinfun$'] :
+            ( ( ( A__questionmark_v1 = 'fun_app$c'(A__questionmark_v0,A__questionmark_v2) )
+              & ! [A__questionmark_v3: 'B_ell2_b_ell2_cblinfun$'] :
+                  ( ( A__questionmark_v1 = 'fun_app$c'(A__questionmark_v0,A__questionmark_v3) )
+                 => ( A__questionmark_v3 = A__questionmark_v2 ) ) )
+           => $false ) )
+     => $false ) ).
+
+%% ∀ ?v0:B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$ ?v1:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun$ ((bij_betw$e(?v0, top$a, top$d) ∧ ∀ ?v2:B_ell2_b_ell2_cblinfun$ (((?v1 = fun_app$f(?v0, ?v2)) ∧ ∀ ?v3:B_ell2_b_ell2_cblinfun$ ((?v1 = fun_app$f(?v0, ?v3)) ⇒ (?v3 = ?v2))) ⇒ false)) ⇒ false)
+tff(axiom461,axiom,
+    ! [A__questionmark_v0: 'B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$',A__questionmark_v1: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun$'] :
+      ( ( 'bij_betw$e'(A__questionmark_v0,'top$a','top$d')
+        & ! [A__questionmark_v2: 'B_ell2_b_ell2_cblinfun$'] :
+            ( ( ( A__questionmark_v1 = 'fun_app$f'(A__questionmark_v0,A__questionmark_v2) )
+              & ! [A__questionmark_v3: 'B_ell2_b_ell2_cblinfun$'] :
+                  ( ( A__questionmark_v1 = 'fun_app$f'(A__questionmark_v0,A__questionmark_v3) )
+                 => ( A__questionmark_v3 = A__questionmark_v2 ) ) )
+           => $false ) )
+     => $false ) ).
+
+%% ∀ ?v0:A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:B_ell2_b_ell2_cblinfun$ ((bij_betw$(?v0, top$, top$a) ∧ ∀ ?v2:A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun$ (((?v1 = fun_app$k(?v0, ?v2)) ∧ ∀ ?v3:A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun$ ((?v1 = fun_app$k(?v0, ?v3)) ⇒ (?v3 = ?v2))) ⇒ false)) ⇒ false)
+tff(axiom462,axiom,
+    ! [A__questionmark_v0: 'A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'B_ell2_b_ell2_cblinfun$'] :
+      ( ( 'bij_betw$'(A__questionmark_v0,'top$','top$a')
+        & ! [A__questionmark_v2: 'A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun$'] :
+            ( ( ( A__questionmark_v1 = 'fun_app$k'(A__questionmark_v0,A__questionmark_v2) )
+              & ! [A__questionmark_v3: 'A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun$'] :
+                  ( ( A__questionmark_v1 = 'fun_app$k'(A__questionmark_v0,A__questionmark_v3) )
+                 => ( A__questionmark_v3 = A__questionmark_v2 ) ) )
+           => $false ) )
+     => $false ) ).
+
+%% ∀ ?v0:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$ ?v1:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$ ((bij_betw$k(?v0, top$c, top$c) ∧ ∀ ?v2:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$ (((?v1 = fun_app$m(?v0, ?v2)) ∧ ∀ ?v3:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$ ((?v1 = fun_app$m(?v0, ?v3)) ⇒ (?v3 = ?v2))) ⇒ false)) ⇒ false)
+tff(axiom463,axiom,
+    ! [A__questionmark_v0: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$',A__questionmark_v1: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$'] :
+      ( ( 'bij_betw$k'(A__questionmark_v0,'top$c','top$c')
+        & ! [A__questionmark_v2: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$'] :
+            ( ( ( A__questionmark_v1 = 'fun_app$m'(A__questionmark_v0,A__questionmark_v2) )
+              & ! [A__questionmark_v3: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$'] :
+                  ( ( A__questionmark_v1 = 'fun_app$m'(A__questionmark_v0,A__questionmark_v3) )
+                 => ( A__questionmark_v3 = A__questionmark_v2 ) ) )
+           => $false ) )
+     => $false ) ).
+
+%% ∀ ?v0:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$ ?v1:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun$ ((bij_betw$l(?v0, top$c, top$d) ∧ ∀ ?v2:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$ (((?v1 = fun_app$o(?v0, ?v2)) ∧ ∀ ?v3:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$ ((?v1 = fun_app$o(?v0, ?v3)) ⇒ (?v3 = ?v2))) ⇒ false)) ⇒ false)
+tff(axiom464,axiom,
+    ! [A__questionmark_v0: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$',A__questionmark_v1: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun$'] :
+      ( ( 'bij_betw$l'(A__questionmark_v0,'top$c','top$d')
+        & ! [A__questionmark_v2: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$'] :
+            ( ( ( A__questionmark_v1 = 'fun_app$o'(A__questionmark_v0,A__questionmark_v2) )
+              & ! [A__questionmark_v3: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$'] :
+                  ( ( A__questionmark_v1 = 'fun_app$o'(A__questionmark_v0,A__questionmark_v3) )
+                 => ( A__questionmark_v3 = A__questionmark_v2 ) ) )
+           => $false ) )
+     => $false ) ).
+
+%% ∀ ?v0:C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:B_ell2_b_ell2_cblinfun$ ((bij_betw$m(?v0, top$b, top$a) ∧ ∀ ?v2:C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun$ (((?v1 = fun_app$e(?v0, ?v2)) ∧ ∀ ?v3:C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun$ ((?v1 = fun_app$e(?v0, ?v3)) ⇒ (?v3 = ?v2))) ⇒ false)) ⇒ false)
+tff(axiom465,axiom,
+    ! [A__questionmark_v0: 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'B_ell2_b_ell2_cblinfun$'] :
+      ( ( 'bij_betw$m'(A__questionmark_v0,'top$b','top$a')
+        & ! [A__questionmark_v2: 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun$'] :
+            ( ( ( A__questionmark_v1 = 'fun_app$e'(A__questionmark_v0,A__questionmark_v2) )
+              & ! [A__questionmark_v3: 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun$'] :
+                  ( ( A__questionmark_v1 = 'fun_app$e'(A__questionmark_v0,A__questionmark_v3) )
+                 => ( A__questionmark_v3 = A__questionmark_v2 ) ) )
+           => $false ) )
+     => $false ) ).
+
+%% ∀ ?v0:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$ ?v1:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$ ((bij_betw$n(?v0, top$d, top$c) ∧ ∀ ?v2:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun$ (((?v1 = fun_app$n(?v0, ?v2)) ∧ ∀ ?v3:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun$ ((?v1 = fun_app$n(?v0, ?v3)) ⇒ (?v3 = ?v2))) ⇒ false)) ⇒ false)
+tff(axiom466,axiom,
+    ! [A__questionmark_v0: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$',A__questionmark_v1: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$'] :
+      ( ( 'bij_betw$n'(A__questionmark_v0,'top$d','top$c')
+        & ! [A__questionmark_v2: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun$'] :
+            ( ( ( A__questionmark_v1 = 'fun_app$n'(A__questionmark_v0,A__questionmark_v2) )
+              & ! [A__questionmark_v3: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun$'] :
+                  ( ( A__questionmark_v1 = 'fun_app$n'(A__questionmark_v0,A__questionmark_v3) )
+                 => ( A__questionmark_v3 = A__questionmark_v2 ) ) )
+           => $false ) )
+     => $false ) ).
+
+%% ∀ ?v0:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$ (∀ ?v1:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$ (fun_app$m(?v0, fun_app$m(?v0, ?v1)) = ?v1) ⇒ bij_betw$k(?v0, top$c, top$c))
+tff(axiom467,axiom,
+    ! [A__questionmark_v0: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$'] :
+      ( ! [A__questionmark_v1: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$'] : ( 'fun_app$m'(A__questionmark_v0,'fun_app$m'(A__questionmark_v0,A__questionmark_v1)) = A__questionmark_v1 )
+     => 'bij_betw$k'(A__questionmark_v0,'top$c','top$c') ) ).
+
+%% ∀ ?v0:C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$ (∀ ?v1:C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun$ (fun_app$al(?v0, fun_app$al(?v0, ?v1)) = ?v1) ⇒ bij_betw$u(?v0, top$b, top$b))
+tff(axiom468,axiom,
+    ! [A__questionmark_v0: 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$'] :
+      ( ! [A__questionmark_v1: 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun$'] : ( 'fun_app$al'(A__questionmark_v0,'fun_app$al'(A__questionmark_v0,A__questionmark_v1)) = A__questionmark_v1 )
+     => 'bij_betw$u'(A__questionmark_v0,'top$b','top$b') ) ).
+
+%% ∀ ?v0:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$ (∀ ?v1:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun$ (fun_app$aa(?v0, fun_app$aa(?v0, ?v1)) = ?v1) ⇒ bij_betw$v(?v0, top$d, top$d))
+tff(axiom469,axiom,
+    ! [A__questionmark_v0: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$'] :
+      ( ! [A__questionmark_v1: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun$'] : ( 'fun_app$aa'(A__questionmark_v0,'fun_app$aa'(A__questionmark_v0,A__questionmark_v1)) = A__questionmark_v1 )
+     => 'bij_betw$v'(A__questionmark_v0,'top$d','top$d') ) ).
+
+%% ∀ ?v0:A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$ (∀ ?v1:A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun$ (fun_app$am(?v0, fun_app$am(?v0, ?v1)) = ?v1) ⇒ bij_betw$w(?v0, top$g, top$g))
+tff(axiom470,axiom,
+    ! [A__questionmark_v0: 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$'] :
+      ( ! [A__questionmark_v1: 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun$'] : ( 'fun_app$am'(A__questionmark_v0,'fun_app$am'(A__questionmark_v0,A__questionmark_v1)) = A__questionmark_v1 )
+     => 'bij_betw$w'(A__questionmark_v0,'top$g','top$g') ) ).
+
+%% ∀ ?v0:B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (∀ ?v1:B_ell2_b_ell2_cblinfun$ (fun_app$l(?v0, fun_app$l(?v0, ?v1)) = ?v1) ⇒ bij_betw$a(?v0, top$a, top$a))
+tff(axiom471,axiom,
+    ! [A__questionmark_v0: 'B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ! [A__questionmark_v1: 'B_ell2_b_ell2_cblinfun$'] : ( 'fun_app$l'(A__questionmark_v0,'fun_app$l'(A__questionmark_v0,A__questionmark_v1)) = A__questionmark_v1 )
+     => 'bij_betw$a'(A__questionmark_v0,'top$a','top$a') ) ).
+
+%% ∀ ?v0:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_set$ ?v2:B_ell2_b_ell2_cblinfun_set$ ?v3:B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v4:B_ell2_b_ell2_cblinfun_set$ ((bij_betw$b(?v0, ?v1, ?v2) ∧ bij_betw$a(?v3, ?v2, ?v4)) ⇒ bij_betw$b(comp$ae(?v3, ?v0), ?v1, ?v4))
+tff(axiom472,axiom,
+    ! [A__questionmark_v0: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_set$',A__questionmark_v2: 'B_ell2_b_ell2_cblinfun_set$',A__questionmark_v3: 'B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v4: 'B_ell2_b_ell2_cblinfun_set$'] :
+      ( ( 'bij_betw$b'(A__questionmark_v0,A__questionmark_v1,A__questionmark_v2)
+        & 'bij_betw$a'(A__questionmark_v3,A__questionmark_v2,A__questionmark_v4) )
+     => 'bij_betw$b'('comp$ae'(A__questionmark_v3,A__questionmark_v0),A__questionmark_v1,A__questionmark_v4) ) ).
+
+%% ∀ ?v0:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_set$ ?v2:B_ell2_b_ell2_cblinfun_set$ ?v3:B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v4:B_ell2_b_ell2_cblinfun_set$ ((bij_betw$d(?v0, ?v1, ?v2) ∧ bij_betw$a(?v3, ?v2, ?v4)) ⇒ bij_betw$d(comp$r(?v3, ?v0), ?v1, ?v4))
+tff(axiom473,axiom,
+    ! [A__questionmark_v0: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_set$',A__questionmark_v2: 'B_ell2_b_ell2_cblinfun_set$',A__questionmark_v3: 'B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v4: 'B_ell2_b_ell2_cblinfun_set$'] :
+      ( ( 'bij_betw$d'(A__questionmark_v0,A__questionmark_v1,A__questionmark_v2)
+        & 'bij_betw$a'(A__questionmark_v3,A__questionmark_v2,A__questionmark_v4) )
+     => 'bij_betw$d'('comp$r'(A__questionmark_v3,A__questionmark_v0),A__questionmark_v1,A__questionmark_v4) ) ).
+
+%% ∀ ?v0:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$ ?v1:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_set$ ?v2:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_set$ ?v3:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v4:B_ell2_b_ell2_cblinfun_set$ ((bij_betw$i(?v0, ?v1, ?v2) ∧ bij_betw$h(?v3, ?v2, ?v4)) ⇒ bij_betw$t(comp$(?v3, ?v0), ?v1, ?v4))
+tff(axiom474,axiom,
+    ! [A__questionmark_v0: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$',A__questionmark_v1: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_set$',A__questionmark_v2: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_set$',A__questionmark_v3: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v4: 'B_ell2_b_ell2_cblinfun_set$'] :
+      ( ( 'bij_betw$i'(A__questionmark_v0,A__questionmark_v1,A__questionmark_v2)
+        & 'bij_betw$h'(A__questionmark_v3,A__questionmark_v2,A__questionmark_v4) )
+     => 'bij_betw$t'('comp$'(A__questionmark_v3,A__questionmark_v0),A__questionmark_v1,A__questionmark_v4) ) ).
+
+%% ∀ ?v0:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$ ?v1:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_set$ ?v2:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_set$ ?v3:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v4:B_ell2_b_ell2_cblinfun_set$ ((bij_betw$k(?v0, ?v1, ?v2) ∧ bij_betw$b(?v3, ?v2, ?v4)) ⇒ bij_betw$b(comp$bf(?v3, ?v0), ?v1, ?v4))
+tff(axiom475,axiom,
+    ! [A__questionmark_v0: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$',A__questionmark_v1: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_set$',A__questionmark_v2: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_set$',A__questionmark_v3: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v4: 'B_ell2_b_ell2_cblinfun_set$'] :
+      ( ( 'bij_betw$k'(A__questionmark_v0,A__questionmark_v1,A__questionmark_v2)
+        & 'bij_betw$b'(A__questionmark_v3,A__questionmark_v2,A__questionmark_v4) )
+     => 'bij_betw$b'('comp$bf'(A__questionmark_v3,A__questionmark_v0),A__questionmark_v1,A__questionmark_v4) ) ).
+
+%% ∀ ?v0:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$ ?v1:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_set$ ?v2:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_set$ ?v3:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v4:B_ell2_b_ell2_cblinfun_set$ ((bij_betw$n(?v0, ?v1, ?v2) ∧ bij_betw$b(?v3, ?v2, ?v4)) ⇒ bij_betw$d(comp$ck(?v3, ?v0), ?v1, ?v4))
+tff(axiom476,axiom,
+    ! [A__questionmark_v0: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$',A__questionmark_v1: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_set$',A__questionmark_v2: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_set$',A__questionmark_v3: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v4: 'B_ell2_b_ell2_cblinfun_set$'] :
+      ( ( 'bij_betw$n'(A__questionmark_v0,A__questionmark_v1,A__questionmark_v2)
+        & 'bij_betw$b'(A__questionmark_v3,A__questionmark_v2,A__questionmark_v4) )
+     => 'bij_betw$d'('comp$ck'(A__questionmark_v3,A__questionmark_v0),A__questionmark_v1,A__questionmark_v4) ) ).
+
+%% ∀ ?v0:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$ ?v1:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_set$ ?v2:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_set$ ?v3:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v4:B_ell2_b_ell2_cblinfun_set$ ((bij_betw$l(?v0, ?v1, ?v2) ∧ bij_betw$d(?v3, ?v2, ?v4)) ⇒ bij_betw$b(comp$cl(?v3, ?v0), ?v1, ?v4))
+tff(axiom477,axiom,
+    ! [A__questionmark_v0: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$',A__questionmark_v1: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_set$',A__questionmark_v2: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_set$',A__questionmark_v3: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v4: 'B_ell2_b_ell2_cblinfun_set$'] :
+      ( ( 'bij_betw$l'(A__questionmark_v0,A__questionmark_v1,A__questionmark_v2)
+        & 'bij_betw$d'(A__questionmark_v3,A__questionmark_v2,A__questionmark_v4) )
+     => 'bij_betw$b'('comp$cl'(A__questionmark_v3,A__questionmark_v0),A__questionmark_v1,A__questionmark_v4) ) ).
+
+%% ∀ ?v0:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$ ?v1:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_set$ ?v2:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_set$ ?v3:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v4:B_ell2_b_ell2_cblinfun_set$ ((bij_betw$v(?v0, ?v1, ?v2) ∧ bij_betw$d(?v3, ?v2, ?v4)) ⇒ bij_betw$d(comp$cd(?v3, ?v0), ?v1, ?v4))
+tff(axiom478,axiom,
+    ! [A__questionmark_v0: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$',A__questionmark_v1: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_set$',A__questionmark_v2: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_set$',A__questionmark_v3: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v4: 'B_ell2_b_ell2_cblinfun_set$'] :
+      ( ( 'bij_betw$v'(A__questionmark_v0,A__questionmark_v1,A__questionmark_v2)
+        & 'bij_betw$d'(A__questionmark_v3,A__questionmark_v2,A__questionmark_v4) )
+     => 'bij_betw$d'('comp$cd'(A__questionmark_v3,A__questionmark_v0),A__questionmark_v1,A__questionmark_v4) ) ).
+
+%% ∀ ?v0:A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_set$ ?v2:B_ell2_b_ell2_cblinfun_set$ ?v3:B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v4:B_ell2_b_ell2_cblinfun_set$ ((bij_betw$(?v0, ?v1, ?v2) ∧ bij_betw$a(?v3, ?v2, ?v4)) ⇒ bij_betw$(comp$be(?v3, ?v0), ?v1, ?v4))
+tff(axiom479,axiom,
+    ! [A__questionmark_v0: 'A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_set$',A__questionmark_v2: 'B_ell2_b_ell2_cblinfun_set$',A__questionmark_v3: 'B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v4: 'B_ell2_b_ell2_cblinfun_set$'] :
+      ( ( 'bij_betw$'(A__questionmark_v0,A__questionmark_v1,A__questionmark_v2)
+        & 'bij_betw$a'(A__questionmark_v3,A__questionmark_v2,A__questionmark_v4) )
+     => 'bij_betw$'('comp$be'(A__questionmark_v3,A__questionmark_v0),A__questionmark_v1,A__questionmark_v4) ) ).
+
+%% ∀ ?v0:B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$ ?v1:B_ell2_b_ell2_cblinfun_set$ ?v2:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_set$ ?v3:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$ ?v4:A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_set$ ((bij_betw$e(?v0, ?v1, ?v2) ∧ bij_betw$s(?v3, ?v2, ?v4)) ⇒ bij_betw$r(comp$a(?v3, ?v0), ?v1, ?v4))
+tff(axiom480,axiom,
+    ! [A__questionmark_v0: 'B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$',A__questionmark_v1: 'B_ell2_b_ell2_cblinfun_set$',A__questionmark_v2: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_set$',A__questionmark_v3: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$',A__questionmark_v4: 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_set$'] :
+      ( ( 'bij_betw$e'(A__questionmark_v0,A__questionmark_v1,A__questionmark_v2)
+        & 'bij_betw$s'(A__questionmark_v3,A__questionmark_v2,A__questionmark_v4) )
+     => 'bij_betw$r'('comp$a'(A__questionmark_v3,A__questionmark_v0),A__questionmark_v1,A__questionmark_v4) ) ).
+
+%% ∀ ?v0:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$ ?v1:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_set$ ?v2:A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_set$ ?v3:A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v4:B_ell2_b_ell2_cblinfun_set$ ((bij_betw$x(?v0, ?v1, ?v2) ∧ bij_betw$(?v3, ?v2, ?v4)) ⇒ bij_betw$b(comp$cm(?v3, ?v0), ?v1, ?v4))
+tff(axiom481,axiom,
+    ! [A__questionmark_v0: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$',A__questionmark_v1: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_set$',A__questionmark_v2: 'A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_set$',A__questionmark_v3: 'A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v4: 'B_ell2_b_ell2_cblinfun_set$'] :
+      ( ( 'bij_betw$x'(A__questionmark_v0,A__questionmark_v1,A__questionmark_v2)
+        & 'bij_betw$'(A__questionmark_v3,A__questionmark_v2,A__questionmark_v4) )
+     => 'bij_betw$b'('comp$cm'(A__questionmark_v3,A__questionmark_v0),A__questionmark_v1,A__questionmark_v4) ) ).
+
+%% ∀ ?v0:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_set$ ?v2:B_ell2_b_ell2_cblinfun_set$ ?v3:B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v4:B_ell2_b_ell2_cblinfun_set$ (bij_betw$b(?v0, ?v1, ?v2) ⇒ (bij_betw$a(?v3, ?v2, ?v4) = bij_betw$b(comp$ae(?v3, ?v0), ?v1, ?v4)))
+tff(axiom482,axiom,
+    ! [A__questionmark_v0: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_set$',A__questionmark_v2: 'B_ell2_b_ell2_cblinfun_set$',A__questionmark_v3: 'B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v4: 'B_ell2_b_ell2_cblinfun_set$'] :
+      ( 'bij_betw$b'(A__questionmark_v0,A__questionmark_v1,A__questionmark_v2)
+     => ( 'bij_betw$a'(A__questionmark_v3,A__questionmark_v2,A__questionmark_v4)
+      <=> 'bij_betw$b'('comp$ae'(A__questionmark_v3,A__questionmark_v0),A__questionmark_v1,A__questionmark_v4) ) ) ).
+
+%% ∀ ?v0:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_set$ ?v2:B_ell2_b_ell2_cblinfun_set$ ?v3:B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v4:B_ell2_b_ell2_cblinfun_set$ (bij_betw$d(?v0, ?v1, ?v2) ⇒ (bij_betw$a(?v3, ?v2, ?v4) = bij_betw$d(comp$r(?v3, ?v0), ?v1, ?v4)))
+tff(axiom483,axiom,
+    ! [A__questionmark_v0: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_set$',A__questionmark_v2: 'B_ell2_b_ell2_cblinfun_set$',A__questionmark_v3: 'B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v4: 'B_ell2_b_ell2_cblinfun_set$'] :
+      ( 'bij_betw$d'(A__questionmark_v0,A__questionmark_v1,A__questionmark_v2)
+     => ( 'bij_betw$a'(A__questionmark_v3,A__questionmark_v2,A__questionmark_v4)
+      <=> 'bij_betw$d'('comp$r'(A__questionmark_v3,A__questionmark_v0),A__questionmark_v1,A__questionmark_v4) ) ) ).
+
+%% ∀ ?v0:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$ ?v1:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_set$ ?v2:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_set$ ?v3:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v4:B_ell2_b_ell2_cblinfun_set$ (bij_betw$i(?v0, ?v1, ?v2) ⇒ (bij_betw$h(?v3, ?v2, ?v4) = bij_betw$t(comp$(?v3, ?v0), ?v1, ?v4)))
+tff(axiom484,axiom,
+    ! [A__questionmark_v0: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$',A__questionmark_v1: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_set$',A__questionmark_v2: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_set$',A__questionmark_v3: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v4: 'B_ell2_b_ell2_cblinfun_set$'] :
+      ( 'bij_betw$i'(A__questionmark_v0,A__questionmark_v1,A__questionmark_v2)
+     => ( 'bij_betw$h'(A__questionmark_v3,A__questionmark_v2,A__questionmark_v4)
+      <=> 'bij_betw$t'('comp$'(A__questionmark_v3,A__questionmark_v0),A__questionmark_v1,A__questionmark_v4) ) ) ).
+
+%% ∀ ?v0:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$ ?v1:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_set$ ?v2:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_set$ ?v3:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v4:B_ell2_b_ell2_cblinfun_set$ (bij_betw$k(?v0, ?v1, ?v2) ⇒ (bij_betw$b(?v3, ?v2, ?v4) = bij_betw$b(comp$bf(?v3, ?v0), ?v1, ?v4)))
+tff(axiom485,axiom,
+    ! [A__questionmark_v0: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$',A__questionmark_v1: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_set$',A__questionmark_v2: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_set$',A__questionmark_v3: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v4: 'B_ell2_b_ell2_cblinfun_set$'] :
+      ( 'bij_betw$k'(A__questionmark_v0,A__questionmark_v1,A__questionmark_v2)
+     => ( 'bij_betw$b'(A__questionmark_v3,A__questionmark_v2,A__questionmark_v4)
+      <=> 'bij_betw$b'('comp$bf'(A__questionmark_v3,A__questionmark_v0),A__questionmark_v1,A__questionmark_v4) ) ) ).
+
+%% ∀ ?v0:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$ ?v1:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_set$ ?v2:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_set$ ?v3:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v4:B_ell2_b_ell2_cblinfun_set$ (bij_betw$n(?v0, ?v1, ?v2) ⇒ (bij_betw$b(?v3, ?v2, ?v4) = bij_betw$d(comp$ck(?v3, ?v0), ?v1, ?v4)))
+tff(axiom486,axiom,
+    ! [A__questionmark_v0: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$',A__questionmark_v1: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_set$',A__questionmark_v2: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_set$',A__questionmark_v3: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v4: 'B_ell2_b_ell2_cblinfun_set$'] :
+      ( 'bij_betw$n'(A__questionmark_v0,A__questionmark_v1,A__questionmark_v2)
+     => ( 'bij_betw$b'(A__questionmark_v3,A__questionmark_v2,A__questionmark_v4)
+      <=> 'bij_betw$d'('comp$ck'(A__questionmark_v3,A__questionmark_v0),A__questionmark_v1,A__questionmark_v4) ) ) ).
+
+%% ∀ ?v0:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$ ?v1:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_set$ ?v2:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_set$ ?v3:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v4:B_ell2_b_ell2_cblinfun_set$ (bij_betw$l(?v0, ?v1, ?v2) ⇒ (bij_betw$d(?v3, ?v2, ?v4) = bij_betw$b(comp$cl(?v3, ?v0), ?v1, ?v4)))
+tff(axiom487,axiom,
+    ! [A__questionmark_v0: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$',A__questionmark_v1: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_set$',A__questionmark_v2: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_set$',A__questionmark_v3: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v4: 'B_ell2_b_ell2_cblinfun_set$'] :
+      ( 'bij_betw$l'(A__questionmark_v0,A__questionmark_v1,A__questionmark_v2)
+     => ( 'bij_betw$d'(A__questionmark_v3,A__questionmark_v2,A__questionmark_v4)
+      <=> 'bij_betw$b'('comp$cl'(A__questionmark_v3,A__questionmark_v0),A__questionmark_v1,A__questionmark_v4) ) ) ).
+
+%% ∀ ?v0:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$ ?v1:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_set$ ?v2:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_set$ ?v3:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v4:B_ell2_b_ell2_cblinfun_set$ (bij_betw$v(?v0, ?v1, ?v2) ⇒ (bij_betw$d(?v3, ?v2, ?v4) = bij_betw$d(comp$cd(?v3, ?v0), ?v1, ?v4)))
+tff(axiom488,axiom,
+    ! [A__questionmark_v0: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$',A__questionmark_v1: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_set$',A__questionmark_v2: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_set$',A__questionmark_v3: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v4: 'B_ell2_b_ell2_cblinfun_set$'] :
+      ( 'bij_betw$v'(A__questionmark_v0,A__questionmark_v1,A__questionmark_v2)
+     => ( 'bij_betw$d'(A__questionmark_v3,A__questionmark_v2,A__questionmark_v4)
+      <=> 'bij_betw$d'('comp$cd'(A__questionmark_v3,A__questionmark_v0),A__questionmark_v1,A__questionmark_v4) ) ) ).
+
+%% ∀ ?v0:A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_set$ ?v2:B_ell2_b_ell2_cblinfun_set$ ?v3:B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v4:B_ell2_b_ell2_cblinfun_set$ (bij_betw$(?v0, ?v1, ?v2) ⇒ (bij_betw$a(?v3, ?v2, ?v4) = bij_betw$(comp$be(?v3, ?v0), ?v1, ?v4)))
+tff(axiom489,axiom,
+    ! [A__questionmark_v0: 'A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_set$',A__questionmark_v2: 'B_ell2_b_ell2_cblinfun_set$',A__questionmark_v3: 'B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v4: 'B_ell2_b_ell2_cblinfun_set$'] :
+      ( 'bij_betw$'(A__questionmark_v0,A__questionmark_v1,A__questionmark_v2)
+     => ( 'bij_betw$a'(A__questionmark_v3,A__questionmark_v2,A__questionmark_v4)
+      <=> 'bij_betw$'('comp$be'(A__questionmark_v3,A__questionmark_v0),A__questionmark_v1,A__questionmark_v4) ) ) ).
+
+%% ∀ ?v0:B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$ ?v1:B_ell2_b_ell2_cblinfun_set$ ?v2:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_set$ ?v3:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$ ?v4:A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_set$ (bij_betw$e(?v0, ?v1, ?v2) ⇒ (bij_betw$s(?v3, ?v2, ?v4) = bij_betw$r(comp$a(?v3, ?v0), ?v1, ?v4)))
+tff(axiom490,axiom,
+    ! [A__questionmark_v0: 'B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$',A__questionmark_v1: 'B_ell2_b_ell2_cblinfun_set$',A__questionmark_v2: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_set$',A__questionmark_v3: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$',A__questionmark_v4: 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_set$'] :
+      ( 'bij_betw$e'(A__questionmark_v0,A__questionmark_v1,A__questionmark_v2)
+     => ( 'bij_betw$s'(A__questionmark_v3,A__questionmark_v2,A__questionmark_v4)
+      <=> 'bij_betw$r'('comp$a'(A__questionmark_v3,A__questionmark_v0),A__questionmark_v1,A__questionmark_v4) ) ) ).
+
+%% ∀ ?v0:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$ ?v1:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_set$ ?v2:A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_set$ ?v3:A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v4:B_ell2_b_ell2_cblinfun_set$ (bij_betw$x(?v0, ?v1, ?v2) ⇒ (bij_betw$(?v3, ?v2, ?v4) = bij_betw$b(comp$cm(?v3, ?v0), ?v1, ?v4)))
+tff(axiom491,axiom,
+    ! [A__questionmark_v0: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$',A__questionmark_v1: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_set$',A__questionmark_v2: 'A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_set$',A__questionmark_v3: 'A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v4: 'B_ell2_b_ell2_cblinfun_set$'] :
+      ( 'bij_betw$x'(A__questionmark_v0,A__questionmark_v1,A__questionmark_v2)
+     => ( 'bij_betw$'(A__questionmark_v3,A__questionmark_v2,A__questionmark_v4)
+      <=> 'bij_betw$b'('comp$cm'(A__questionmark_v3,A__questionmark_v0),A__questionmark_v1,A__questionmark_v4) ) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v2:C_ell2_c_ell2_cblinfun$ ((register$a(?v0) ∧ (complements$t(?v0, ?v1) ∧ (fun_app$an(register_pair$a(?v0, ?v1), tensor_op$l(butterfly$a(ket$a(default$a), ket$a(default$a)), ?v2)) = butterfly$(ket$(default$), ket$(default$))))) ⇒ regular_register$(?v0))
+tff(axiom492,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v2: 'C_ell2_c_ell2_cblinfun$'] :
+      ( ( 'register$a'(A__questionmark_v0)
+        & 'complements$t'(A__questionmark_v0,A__questionmark_v1)
+        & ( 'fun_app$an'('register_pair$a'(A__questionmark_v0,A__questionmark_v1),'tensor_op$l'('butterfly$a'('ket$a'('default$a'),'ket$a'('default$a')),A__questionmark_v2)) = 'butterfly$'('ket$'('default$'),'ket$'('default$')) ) )
+     => 'regular_register$'(A__questionmark_v0) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v2:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun$ ((register$a(?v0) ∧ (complements$p(?v0, ?v1) ∧ (fun_app$g(register_pair$g(?v0, ?v1), tensor_op$c(butterfly$a(ket$a(default$a), ket$a(default$a)), ?v2)) = butterfly$(ket$(default$), ket$(default$))))) ⇒ regular_register$(?v0))
+tff(axiom493,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v2: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun$'] :
+      ( ( 'register$a'(A__questionmark_v0)
+        & 'complements$p'(A__questionmark_v0,A__questionmark_v1)
+        & ( 'fun_app$g'('register_pair$g'(A__questionmark_v0,A__questionmark_v1),'tensor_op$c'('butterfly$a'('ket$a'('default$a'),'ket$a'('default$a')),A__questionmark_v2)) = 'butterfly$'('ket$'('default$'),'ket$'('default$')) ) )
+     => 'regular_register$'(A__questionmark_v0) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$ ?v1:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$ ?v2:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun$ ((register$q(?v0) ∧ (complements$ae(?v0, ?v1) ∧ (fun_app$ao(register_pair$u(?v0, ?v1), tensor_op$c(butterfly$a(ket$a(default$a), ket$a(default$a)), ?v2)) = butterfly$a(ket$a(default$a), ket$a(default$a))))) ⇒ regular_register$e(?v0))
+tff(axiom494,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$',A__questionmark_v1: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$',A__questionmark_v2: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun$'] :
+      ( ( 'register$q'(A__questionmark_v0)
+        & 'complements$ae'(A__questionmark_v0,A__questionmark_v1)
+        & ( 'fun_app$ao'('register_pair$u'(A__questionmark_v0,A__questionmark_v1),'tensor_op$c'('butterfly$a'('ket$a'('default$a'),'ket$a'('default$a')),A__questionmark_v2)) = 'butterfly$a'('ket$a'('default$a'),'ket$a'('default$a')) ) )
+     => 'regular_register$e'(A__questionmark_v0) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$ ?v1:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$ ?v2:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun$ ((register$t(?v0) ∧ (complements$af(?v0, ?v1) ∧ (fun_app$ap(register_pair$t(?v0, ?v1), tensor_op$c(butterfly$a(ket$a(default$a), ket$a(default$a)), ?v2)) = butterfly$b(ket$b(default$b), ket$b(default$b))))) ⇒ regular_register$f(?v0))
+tff(axiom495,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$',A__questionmark_v1: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$',A__questionmark_v2: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun$'] :
+      ( ( 'register$t'(A__questionmark_v0)
+        & 'complements$af'(A__questionmark_v0,A__questionmark_v1)
+        & ( 'fun_app$ap'('register_pair$t'(A__questionmark_v0,A__questionmark_v1),'tensor_op$c'('butterfly$a'('ket$a'('default$a'),'ket$a'('default$a')),A__questionmark_v2)) = 'butterfly$b'('ket$b'('default$b'),'ket$b'('default$b')) ) )
+     => 'regular_register$f'(A__questionmark_v0) ) ).
+
+%% ∀ ?v0:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_b_complement_domain_ell2_c_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v2:C_b_complement_domain_ell2_c_b_complement_domain_ell2_cblinfun$ ((register$(?v0) ∧ (complements$q(?v0, ?v1) ∧ (fun_app$d(register_pair$x(?v0, ?v1), tensor_op$f(butterfly$b(ket$b(default$b), ket$b(default$b)), ?v2)) = butterfly$(ket$(default$), ket$(default$))))) ⇒ regular_register$a(?v0))
+tff(axiom496,axiom,
+    ! [A__questionmark_v0: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_b_complement_domain_ell2_c_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v2: 'C_b_complement_domain_ell2_c_b_complement_domain_ell2_cblinfun$'] :
+      ( ( 'register$'(A__questionmark_v0)
+        & 'complements$q'(A__questionmark_v0,A__questionmark_v1)
+        & ( 'fun_app$d'('register_pair$x'(A__questionmark_v0,A__questionmark_v1),'tensor_op$f'('butterfly$b'('ket$b'('default$b'),'ket$b'('default$b')),A__questionmark_v2)) = 'butterfly$'('ket$'('default$'),'ket$'('default$')) ) )
+     => 'regular_register$a'(A__questionmark_v0) ) ).
+
+%% ∀ ?v0:C_ell2_c_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$ ?v1:C_b_complement_domain_ell2_c_b_complement_domain_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$ ?v2:C_b_complement_domain_ell2_c_b_complement_domain_ell2_cblinfun$ ((register$u(?v0) ∧ (complements$ag(?v0, ?v1) ∧ (fun_app$aq(register_pair$ba(?v0, ?v1), tensor_op$f(butterfly$b(ket$b(default$b), ket$b(default$b)), ?v2)) = butterfly$a(ket$a(default$a), ket$a(default$a))))) ⇒ regular_register$g(?v0))
+tff(axiom497,axiom,
+    ! [A__questionmark_v0: 'C_ell2_c_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$',A__questionmark_v1: 'C_b_complement_domain_ell2_c_b_complement_domain_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$',A__questionmark_v2: 'C_b_complement_domain_ell2_c_b_complement_domain_ell2_cblinfun$'] :
+      ( ( 'register$u'(A__questionmark_v0)
+        & 'complements$ag'(A__questionmark_v0,A__questionmark_v1)
+        & ( 'fun_app$aq'('register_pair$ba'(A__questionmark_v0,A__questionmark_v1),'tensor_op$f'('butterfly$b'('ket$b'('default$b'),'ket$b'('default$b')),A__questionmark_v2)) = 'butterfly$a'('ket$a'('default$a'),'ket$a'('default$a')) ) )
+     => 'regular_register$g'(A__questionmark_v0) ) ).
+
+%% ∀ ?v0:C_ell2_c_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$ ?v1:C_b_complement_domain_ell2_c_b_complement_domain_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$ ?v2:C_b_complement_domain_ell2_c_b_complement_domain_ell2_cblinfun$ ((register$p(?v0) ∧ (complements$ah(?v0, ?v1) ∧ (register_pair$bb(?v0, ?v1, tensor_op$f(butterfly$b(ket$b(default$b), ket$b(default$b)), ?v2)) = butterfly$b(ket$b(default$b), ket$b(default$b))))) ⇒ regular_register$h(?v0))
+tff(axiom498,axiom,
+    ! [A__questionmark_v0: 'C_ell2_c_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$',A__questionmark_v1: 'C_b_complement_domain_ell2_c_b_complement_domain_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$',A__questionmark_v2: 'C_b_complement_domain_ell2_c_b_complement_domain_ell2_cblinfun$'] :
+      ( ( 'register$p'(A__questionmark_v0)
+        & 'complements$ah'(A__questionmark_v0,A__questionmark_v1)
+        & ( 'register_pair$bb'(A__questionmark_v0,A__questionmark_v1,'tensor_op$f'('butterfly$b'('ket$b'('default$b'),'ket$b'('default$b')),A__questionmark_v2)) = 'butterfly$b'('ket$b'('default$b'),'ket$b'('default$b')) ) )
+     => 'regular_register$h'(A__questionmark_v0) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v2:A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun$ ((register$a(?v0) ∧ (complements$s(?v0, ?v1) ∧ (fun_app$ar(register_pair$(?v0, ?v1), tensor_op$u(butterfly$a(ket$a(default$a), ket$a(default$a)), ?v2)) = butterfly$(ket$(default$), ket$(default$))))) ⇒ regular_register$(?v0))
+tff(axiom499,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v2: 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun$'] :
+      ( ( 'register$a'(A__questionmark_v0)
+        & 'complements$s'(A__questionmark_v0,A__questionmark_v1)
+        & ( 'fun_app$ar'('register_pair$'(A__questionmark_v0,A__questionmark_v1),'tensor_op$u'('butterfly$a'('ket$a'('default$a'),'ket$a'('default$a')),A__questionmark_v2)) = 'butterfly$'('ket$'('default$'),'ket$'('default$')) ) )
+     => 'regular_register$'(A__questionmark_v0) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v2:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun$ ((register$a(?v0) ∧ (complements$a(?v0, ?v1) ∧ (fun_app$j(register_pair$i(?v0, ?v1), tensor_op$j(butterfly$a(ket$a(default$a), ket$a(default$a)), ?v2)) = butterfly$(ket$(default$), ket$(default$))))) ⇒ regular_register$(?v0))
+tff(axiom500,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v2: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun$'] :
+      ( ( 'register$a'(A__questionmark_v0)
+        & 'complements$a'(A__questionmark_v0,A__questionmark_v1)
+        & ( 'fun_app$j'('register_pair$i'(A__questionmark_v0,A__questionmark_v1),'tensor_op$j'('butterfly$a'('ket$a'('default$a'),'ket$a'('default$a')),A__questionmark_v2)) = 'butterfly$'('ket$'('default$'),'ket$'('default$')) ) )
+     => 'regular_register$'(A__questionmark_v0) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$ ?v1:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$ ?v2:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun$ ((register$q(?v0) ∧ (complements$ai(?v0, ?v1) ∧ (fun_app$as(register_pair$bc(?v0, ?v1), tensor_op$j(butterfly$a(ket$a(default$a), ket$a(default$a)), ?v2)) = butterfly$a(ket$a(default$a), ket$a(default$a))))) ⇒ regular_register$e(?v0))
+tff(axiom501,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$',A__questionmark_v1: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$',A__questionmark_v2: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun$'] :
+      ( ( 'register$q'(A__questionmark_v0)
+        & 'complements$ai'(A__questionmark_v0,A__questionmark_v1)
+        & ( 'fun_app$as'('register_pair$bc'(A__questionmark_v0,A__questionmark_v1),'tensor_op$j'('butterfly$a'('ket$a'('default$a'),'ket$a'('default$a')),A__questionmark_v2)) = 'butterfly$a'('ket$a'('default$a'),'ket$a'('default$a')) ) )
+     => 'regular_register$e'(A__questionmark_v0) ) ).
+
+%% (fun_app$c(inv_into$d(top$c, register_pair$x(g$, complement$f(g$))), butterfly$(ket$(default$), ket$(default$))) = tensor_op$f(butterfly$b(ket$b(default$b), ket$b(default$b)), aG$))
+tff(axiom502,axiom,
+    'fun_app$c'('inv_into$d'('top$c','register_pair$x'('g$','complement$f'('g$'))),'butterfly$'('ket$'('default$'),'ket$'('default$'))) = 'tensor_op$f'('butterfly$b'('ket$b'('default$b'),'ket$b'('default$b')),'aG$') ).
+
+%% (t2$ = fun_app$b(comp$a(inv_into$n(top$g, register_tensor$i(id$, i$)), inv_into$f(top$d, register_pair$g(f$, complement$e(f$)))), butterfly$(ket$(default$), ket$(default$))))
+tff(axiom503,axiom,
+    't2$' = 'fun_app$b'('comp$a'('inv_into$n'('top$g','register_tensor$i'('id$','i$')),'inv_into$f'('top$d','register_pair$g'('f$','complement$e'('f$')))),'butterfly$'('ket$'('default$'),'ket$'('default$'))) ).
+
+%% (fun_app$f(inv_into$f(top$d, register_pair$g(f$, complement$e(f$))), butterfly$(ket$(default$), ket$(default$))) = tensor_op$c(butterfly$a(ket$a(default$a), ket$a(default$a)), aF$))
+tff(axiom504,axiom,
+    'fun_app$f'('inv_into$f'('top$d','register_pair$g'('f$','complement$e'('f$'))),'butterfly$'('ket$'('default$'),'ket$'('default$'))) = 'tensor_op$c'('butterfly$a'('ket$a'('default$a'),'ket$a'('default$a')),'aF$') ).
+
+%% bij_betw$o(register_tensor$i(id$, i$), top$g, top$d)
+tff(axiom505,axiom,
+    'bij_betw$o'('register_tensor$i'('id$','i$'),'top$g','top$d') ).
+
+%% ∀ ?v0:C_ell2_c_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$ ?v1:A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$ (register$e(register_pair$q(?v0, ?v1)) ⇒ register$aq(?v1))
+tff(axiom506,axiom,
+    ! [A__questionmark_v0: 'C_ell2_c_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$',A__questionmark_v1: 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$'] :
+      ( 'register$e'('register_pair$q'(A__questionmark_v0,A__questionmark_v1))
+     => 'register$aq'(A__questionmark_v1) ) ).
+
+%% ∀ ?v0:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (register$k(register_pair$d(?v0, ?v1)) ⇒ register$l(?v1))
+tff(axiom507,axiom,
+    ! [A__questionmark_v0: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'register$k'('register_pair$d'(A__questionmark_v0,A__questionmark_v1))
+     => 'register$l'(A__questionmark_v1) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (register$l(register_pair$(?v0, ?v1)) ⇒ register$h(?v1))
+tff(axiom508,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'register$l'('register_pair$'(A__questionmark_v0,A__questionmark_v1))
+     => 'register$h'(A__questionmark_v1) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (register$m(register_pair$g(?v0, ?v1)) ⇒ register$d(?v1))
+tff(axiom509,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'register$m'('register_pair$g'(A__questionmark_v0,A__questionmark_v1))
+     => 'register$d'(A__questionmark_v1) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (register$n(register_pair$i(?v0, ?v1)) ⇒ register$o(?v1))
+tff(axiom510,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'register$n'('register_pair$i'(A__questionmark_v0,A__questionmark_v1))
+     => 'register$o'(A__questionmark_v1) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (register$g(register_pair$a(?v0, ?v1)) ⇒ register$(?v1))
+tff(axiom511,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'register$g'('register_pair$a'(A__questionmark_v0,A__questionmark_v1))
+     => 'register$'(A__questionmark_v1) ) ).
+
+%% ∀ ?v0:C_ell2_c_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$ ?v1:A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$ (register$e(register_pair$q(?v0, ?v1)) ⇒ register$ak(?v0))
+tff(axiom512,axiom,
+    ! [A__questionmark_v0: 'C_ell2_c_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$',A__questionmark_v1: 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$'] :
+      ( 'register$e'('register_pair$q'(A__questionmark_v0,A__questionmark_v1))
+     => 'register$ak'(A__questionmark_v0) ) ).
+
+%% ∀ ?v0:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (register$k(register_pair$d(?v0, ?v1)) ⇒ register$(?v0))
+tff(axiom513,axiom,
+    ! [A__questionmark_v0: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'register$k'('register_pair$d'(A__questionmark_v0,A__questionmark_v1))
+     => 'register$'(A__questionmark_v0) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (register$l(register_pair$(?v0, ?v1)) ⇒ register$a(?v0))
+tff(axiom514,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'register$l'('register_pair$'(A__questionmark_v0,A__questionmark_v1))
+     => 'register$a'(A__questionmark_v0) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (register$m(register_pair$g(?v0, ?v1)) ⇒ register$a(?v0))
+tff(axiom515,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'register$m'('register_pair$g'(A__questionmark_v0,A__questionmark_v1))
+     => 'register$a'(A__questionmark_v0) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (register$n(register_pair$i(?v0, ?v1)) ⇒ register$a(?v0))
+tff(axiom516,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'register$n'('register_pair$i'(A__questionmark_v0,A__questionmark_v1))
+     => 'register$a'(A__questionmark_v0) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (register$g(register_pair$a(?v0, ?v1)) ⇒ register$a(?v0))
+tff(axiom517,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'register$g'('register_pair$a'(A__questionmark_v0,A__questionmark_v1))
+     => 'register$a'(A__questionmark_v0) ) ).
+
+%% ∀ ?v0:A_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (compatible$am(?v0, ?v1) ⇒ (comp$cn(register_pair$ab(?v0, ?v1), swap$) = register_pair$d(?v1, ?v0)))
+tff(axiom518,axiom,
+    ! [A__questionmark_v0: 'A_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'compatible$am'(A__questionmark_v0,A__questionmark_v1)
+     => ( 'comp$cn'('register_pair$ab'(A__questionmark_v0,A__questionmark_v1),'swap$') = 'register_pair$d'(A__questionmark_v1,A__questionmark_v0) ) ) ).
+
+%% ∀ ?v0:A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (compatible$ba(?v0, ?v1) ⇒ (comp$co(register_pair$bd(?v0, ?v1), swap$a) = register_pair$(?v1, ?v0)))
+tff(axiom519,axiom,
+    ! [A__questionmark_v0: 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'compatible$ba'(A__questionmark_v0,A__questionmark_v1)
+     => ( 'comp$co'('register_pair$bd'(A__questionmark_v0,A__questionmark_v1),'swap$a') = 'register_pair$'(A__questionmark_v1,A__questionmark_v0) ) ) ).
+
+%% ∀ ?v0:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (compatible$j(?v0, ?v1) ⇒ (comp$cp(register_pair$be(?v0, ?v1), swap$b) = register_pair$g(?v1, ?v0)))
+tff(axiom520,axiom,
+    ! [A__questionmark_v0: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'compatible$j'(A__questionmark_v0,A__questionmark_v1)
+     => ( 'comp$cp'('register_pair$be'(A__questionmark_v0,A__questionmark_v1),'swap$b') = 'register_pair$g'(A__questionmark_v1,A__questionmark_v0) ) ) ).
+
+%% ∀ ?v0:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (compatible$bb(?v0, ?v1) ⇒ (comp$cq(register_pair$bf(?v0, ?v1), swap$c) = register_pair$i(?v1, ?v0)))
+tff(axiom521,axiom,
+    ! [A__questionmark_v0: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'compatible$bb'(A__questionmark_v0,A__questionmark_v1)
+     => ( 'comp$cq'('register_pair$bf'(A__questionmark_v0,A__questionmark_v1),'swap$c') = 'register_pair$i'(A__questionmark_v1,A__questionmark_v0) ) ) ).
+
+%% ∀ ?v0:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (compatible$ab(?v0, ?v1) ⇒ (comp$cr(register_pair$ar(?v0, ?v1), swap$d) = register_pair$a(?v1, ?v0)))
+tff(axiom522,axiom,
+    ! [A__questionmark_v0: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'compatible$ab'(A__questionmark_v0,A__questionmark_v1)
+     => ( 'comp$cr'('register_pair$ar'(A__questionmark_v0,A__questionmark_v1),'swap$d') = 'register_pair$a'(A__questionmark_v1,A__questionmark_v0) ) ) ).
+
+%% ∀ ?v0:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (compatible$a(?v0, ?v1) ⇒ (comp$cs(register_pair$d(?v0, ?v1), swap$e) = register_pair$ab(?v1, ?v0)))
+tff(axiom523,axiom,
+    ! [A__questionmark_v0: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_a_c_prod_b_complement_domain_prod_ell2_a_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'compatible$a'(A__questionmark_v0,A__questionmark_v1)
+     => ( 'comp$cs'('register_pair$d'(A__questionmark_v0,A__questionmark_v1),'swap$e') = 'register_pair$ab'(A__questionmark_v1,A__questionmark_v0) ) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (compatible$b(?v0, ?v1) ⇒ (comp$ct(register_pair$(?v0, ?v1), swap$f) = register_pair$bd(?v1, ?v0)))
+tff(axiom524,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_c_prod_b_complement_domain_ell2_a_c_prod_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'compatible$b'(A__questionmark_v0,A__questionmark_v1)
+     => ( 'comp$ct'('register_pair$'(A__questionmark_v0,A__questionmark_v1),'swap$f') = 'register_pair$bd'(A__questionmark_v1,A__questionmark_v0) ) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (compatible$c(?v0, ?v1) ⇒ (comp$cu(register_pair$g(?v0, ?v1), swap$g) = register_pair$be(?v1, ?v0)))
+tff(axiom525,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'compatible$c'(A__questionmark_v0,A__questionmark_v1)
+     => ( 'comp$cu'('register_pair$g'(A__questionmark_v0,A__questionmark_v1),'swap$g') = 'register_pair$be'(A__questionmark_v1,A__questionmark_v0) ) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (compatible$d(?v0, ?v1) ⇒ (comp$cv(register_pair$i(?v0, ?v1), swap$h) = register_pair$bf(?v1, ?v0)))
+tff(axiom526,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'compatible$d'(A__questionmark_v0,A__questionmark_v1)
+     => ( 'comp$cv'('register_pair$i'(A__questionmark_v0,A__questionmark_v1),'swap$h') = 'register_pair$bf'(A__questionmark_v1,A__questionmark_v0) ) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (compatible$(?v0, ?v1) ⇒ (comp$cw(register_pair$a(?v0, ?v1), swap$i) = register_pair$ar(?v1, ?v0)))
+tff(axiom527,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'compatible$'(A__questionmark_v0,A__questionmark_v1)
+     => ( 'comp$cw'('register_pair$a'(A__questionmark_v0,A__questionmark_v1),'swap$i') = 'register_pair$ar'(A__questionmark_v1,A__questionmark_v0) ) ) ).
+
+%% ∀ ?v0:B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$ ?v1:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$ ((register$c(?v0) ∧ register$b(?v1)) ⇒ register$ar(comp$a(?v1, ?v0)))
+tff(axiom528,axiom,
+    ! [A__questionmark_v0: 'B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$',A__questionmark_v1: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$'] :
+      ( ( 'register$c'(A__questionmark_v0)
+        & 'register$b'(A__questionmark_v1) )
+     => 'register$ar'('comp$a'(A__questionmark_v1,A__questionmark_v0)) ) ).
+
+%% ∀ ?v0:C_ell2_c_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$ ?v1:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((register$p(?v0) ∧ register$(?v1)) ⇒ register$(comp$e(?v1, ?v0)))
+tff(axiom529,axiom,
+    ! [A__questionmark_v0: 'C_ell2_c_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$',A__questionmark_v1: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'register$p'(A__questionmark_v0)
+        & 'register$'(A__questionmark_v1) )
+     => 'register$'('comp$e'(A__questionmark_v1,A__questionmark_v0)) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$ ?v1:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((register$t(?v0) ∧ register$(?v1)) ⇒ register$a(comp$d(?v1, ?v0)))
+tff(axiom530,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$',A__questionmark_v1: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'register$t'(A__questionmark_v0)
+        & 'register$'(A__questionmark_v1) )
+     => 'register$a'('comp$d'(A__questionmark_v1,A__questionmark_v0)) ) ).
+
+%% ∀ ?v0:C_ell2_c_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$ ?v1:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((register$u(?v0) ∧ register$a(?v1)) ⇒ register$(comp$h(?v1, ?v0)))
+tff(axiom531,axiom,
+    ! [A__questionmark_v0: 'C_ell2_c_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$',A__questionmark_v1: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'register$u'(A__questionmark_v0)
+        & 'register$a'(A__questionmark_v1) )
+     => 'register$'('comp$h'(A__questionmark_v1,A__questionmark_v0)) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$ ?v1:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((register$q(?v0) ∧ register$a(?v1)) ⇒ register$a(comp$g(?v1, ?v0)))
+tff(axiom532,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$',A__questionmark_v1: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'register$q'(A__questionmark_v0)
+        & 'register$a'(A__questionmark_v1) )
+     => 'register$a'('comp$g'(A__questionmark_v1,A__questionmark_v0)) ) ).
+
+%% ∀ ?v0:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_c_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$ ?v1:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$ ((register$aj(?v0) ∧ register$e(?v1)) ⇒ register$e(comp$an(?v1, ?v0)))
+tff(axiom533,axiom,
+    ! [A__questionmark_v0: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_c_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$',A__questionmark_v1: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$'] :
+      ( ( 'register$aj'(A__questionmark_v0)
+        & 'register$e'(A__questionmark_v1) )
+     => 'register$e'('comp$an'(A__questionmark_v1,A__questionmark_v0)) ) ).
+
+%% ∀ ?v0:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((register$(?v0) ∧ register$j(?v1)) ⇒ register$(comp$k(?v1, ?v0)))
+tff(axiom534,axiom,
+    ! [A__questionmark_v0: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'register$'(A__questionmark_v0)
+        & 'register$j'(A__questionmark_v1) )
+     => 'register$'('comp$k'(A__questionmark_v1,A__questionmark_v0)) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((register$a(?v0) ∧ register$j(?v1)) ⇒ register$a(comp$j(?v1, ?v0)))
+tff(axiom535,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'register$a'(A__questionmark_v0)
+        & 'register$j'(A__questionmark_v1) )
+     => 'register$a'('comp$j'(A__questionmark_v1,A__questionmark_v0)) ) ).
+
+%% ∀ ?v0:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$ ?v1:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((register$e(?v0) ∧ register$d(?v1)) ⇒ register$o(comp$(?v1, ?v0)))
+tff(axiom536,axiom,
+    ! [A__questionmark_v0: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$',A__questionmark_v1: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'register$e'(A__questionmark_v0)
+        & 'register$d'(A__questionmark_v1) )
+     => 'register$o'('comp$'(A__questionmark_v1,A__questionmark_v0)) ) ).
+
+%% ∀ ?v0:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$ ?v1:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$ ((register$e(?v0) ∧ register$v(?v1)) ⇒ register$e(comp$am(?v1, ?v0)))
+tff(axiom537,axiom,
+    ! [A__questionmark_v0: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$',A__questionmark_v1: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$'] :
+      ( ( 'register$e'(A__questionmark_v0)
+        & 'register$v'(A__questionmark_v1) )
+     => 'register$e'('comp$am'(A__questionmark_v1,A__questionmark_v0)) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun$ (fun_app$ab(id$, ?v0) = ?v0)
+tff(axiom538,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun$'] : ( 'fun_app$ab'('id$',A__questionmark_v0) = A__questionmark_v0 ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_set$ bij_betw$y(id$, ?v0, ?v0)
+tff(axiom539,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_set$'] : 'bij_betw$y'('id$',A__questionmark_v0,A__questionmark_v0) ).
+
+%% ∀ ?v0:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun$ ?v1:A_ell2_a_ell2_cblinfun$ (fun_app$at(swap$g, tensor_op$v(?v0, ?v1)) = tensor_op$c(?v1, ?v0))
+tff(axiom540,axiom,
+    ! [A__questionmark_v0: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun$',A__questionmark_v1: 'A_ell2_a_ell2_cblinfun$'] : ( 'fun_app$at'('swap$g','tensor_op$v'(A__questionmark_v0,A__questionmark_v1)) = 'tensor_op$c'(A__questionmark_v1,A__questionmark_v0) ) ).
+
+%% ∀ ?v0:C_b_complement_domain_ell2_c_b_complement_domain_ell2_cblinfun$ ?v1:C_ell2_c_ell2_cblinfun$ (fun_app$au(swap$j, tensor_op$w(?v0, ?v1)) = tensor_op$f(?v1, ?v0))
+tff(axiom541,axiom,
+    ! [A__questionmark_v0: 'C_b_complement_domain_ell2_c_b_complement_domain_ell2_cblinfun$',A__questionmark_v1: 'C_ell2_c_ell2_cblinfun$'] : ( 'fun_app$au'('swap$j','tensor_op$w'(A__questionmark_v0,A__questionmark_v1)) = 'tensor_op$f'(A__questionmark_v1,A__questionmark_v0) ) ).
+
+%% ∀ ?v0:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun$ ?v1:A_ell2_a_ell2_cblinfun$ (fun_app$av(swap$h, tensor_op$x(?v0, ?v1)) = tensor_op$j(?v1, ?v0))
+tff(axiom542,axiom,
+    ! [A__questionmark_v0: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun$',A__questionmark_v1: 'A_ell2_a_ell2_cblinfun$'] : ( 'fun_app$av'('swap$h','tensor_op$x'(A__questionmark_v0,A__questionmark_v1)) = 'tensor_op$j'(A__questionmark_v1,A__questionmark_v0) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun$ ?v1:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun$ (fun_app$aw(swap$b, tensor_op$c(?v0, ?v1)) = tensor_op$v(?v1, ?v0))
+tff(axiom543,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun$',A__questionmark_v1: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun$'] : ( 'fun_app$aw'('swap$b','tensor_op$c'(A__questionmark_v0,A__questionmark_v1)) = 'tensor_op$v'(A__questionmark_v1,A__questionmark_v0) ) ).
+
+%% ∀ ?v0:C_ell2_c_ell2_cblinfun$ ?v1:C_b_complement_domain_ell2_c_b_complement_domain_ell2_cblinfun$ (fun_app$ax(swap$k, tensor_op$f(?v0, ?v1)) = tensor_op$w(?v1, ?v0))
+tff(axiom544,axiom,
+    ! [A__questionmark_v0: 'C_ell2_c_ell2_cblinfun$',A__questionmark_v1: 'C_b_complement_domain_ell2_c_b_complement_domain_ell2_cblinfun$'] : ( 'fun_app$ax'('swap$k','tensor_op$f'(A__questionmark_v0,A__questionmark_v1)) = 'tensor_op$w'(A__questionmark_v1,A__questionmark_v0) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun$ ?v1:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun$ (fun_app$ay(swap$c, tensor_op$j(?v0, ?v1)) = tensor_op$x(?v1, ?v0))
+tff(axiom545,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun$',A__questionmark_v1: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun$'] : ( 'fun_app$ay'('swap$c','tensor_op$j'(A__questionmark_v0,A__questionmark_v1)) = 'tensor_op$x'(A__questionmark_v1,A__questionmark_v0) ) ).
+
+%% (register_tensor$bq(id$, id$) = id$a)
+tff(axiom546,axiom,
+    'register_tensor$bq'('id$','id$') = 'id$a' ).
+
+%% (inv_into$z(top$l, id$) = id$)
+tff(axiom547,axiom,
+    'inv_into$z'('top$l','id$') = 'id$' ).
+
+%% (inv_into$s(top$c, id$b) = id$b)
+tff(axiom548,axiom,
+    'inv_into$s'('top$c','id$b') = 'id$b' ).
+
+%% (inv_into$ag(top$b, id$c) = id$c)
+tff(axiom549,axiom,
+    'inv_into$ag'('top$b','id$c') = 'id$c' ).
+
+%% (inv_into$ah(top$d, id$d) = id$d)
+tff(axiom550,axiom,
+    'inv_into$ah'('top$d','id$d') = 'id$d' ).
+
+%% (inv_into$ai(top$g, id$e) = id$e)
+tff(axiom551,axiom,
+    'inv_into$ai'('top$g','id$e') = 'id$e' ).
+
+%% (inv_into$b(top$a, id$f) = id$f)
+tff(axiom552,axiom,
+    'inv_into$b'('top$a','id$f') = 'id$f' ).
+
+%% (t2$ = tensor_op$j(butterfly$a(ket$a(default$a), ket$a(default$a)), fun_app$az(inv_into$k(top$f, i$), aF$)))
+tff(axiom553,axiom,
+    't2$' = 'tensor_op$j'('butterfly$a'('ket$a'('default$a'),'ket$a'('default$a')),'fun_app$az'('inv_into$k'('top$f','i$'),'aF$')) ).
+
+%% ∀ ?v0:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$ (equivalent_registers$ah(id$g, ?v0) = iso_register$(?v0))
+tff(axiom554,axiom,
+    ! [A__questionmark_v0: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$'] :
+      ( 'equivalent_registers$ah'('id$g',A__questionmark_v0)
+    <=> 'iso_register$'(A__questionmark_v0) ) ).
+
+%% (inv_into$aj(top$c, swap$k) = swap$j)
+tff(axiom555,axiom,
+    'inv_into$aj'('top$c','swap$k') = 'swap$j' ).
+
+%% (inv_into$ak(top$b, swap$) = swap$e)
+tff(axiom556,axiom,
+    'inv_into$ak'('top$b','swap$') = 'swap$e' ).
+
+%% (inv_into$al(top$d, swap$b) = swap$g)
+tff(axiom557,axiom,
+    'inv_into$al'('top$d','swap$b') = 'swap$g' ).
+
+%% (inv_into$am(top$g, swap$c) = swap$h)
+tff(axiom558,axiom,
+    'inv_into$am'('top$g','swap$c') = 'swap$h' ).
+
+%% (fun_app$b(comp$a(inv_into$n(top$g, register_tensor$i(id$, i$)), inv_into$f(top$d, register_pair$g(f$, complement$e(f$)))), butterfly$(ket$(default$), ket$(default$))) = tensor_op$j(butterfly$a(ket$a(default$a), ket$a(default$a)), fun_app$az(inv_into$k(top$f, i$), aF$)))
+tff(axiom559,axiom,
+    'fun_app$b'('comp$a'('inv_into$n'('top$g','register_tensor$i'('id$','i$')),'inv_into$f'('top$d','register_pair$g'('f$','complement$e'('f$')))),'butterfly$'('ket$'('default$'),'ket$'('default$'))) = 'tensor_op$j'('butterfly$a'('ket$a'('default$a'),'ket$a'('default$a')),'fun_app$az'('inv_into$k'('top$f','i$'),'aF$')) ).
+
+%% (inv_into$n(top$g, register_tensor$i(id$, i$)) = register_tensor$h(id$, inv_into$k(top$f, i$)))
+tff(axiom560,axiom,
+    'inv_into$n'('top$g','register_tensor$i'('id$','i$')) = 'register_tensor$h'('id$','inv_into$k'('top$f','i$')) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun$ (fun_app$ab(id$, ?v0) = ?v0)
+tff(axiom561,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun$'] : ( 'fun_app$ab'('id$',A__questionmark_v0) = A__questionmark_v0 ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$ (∀ ?v1:A_ell2_a_ell2_cblinfun$ (fun_app$ab(?v0, ?v1) = ?v1) = (?v0 = id$))
+tff(axiom562,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$'] :
+      ( ! [A__questionmark_v1: 'A_ell2_a_ell2_cblinfun$'] : ( 'fun_app$ab'(A__questionmark_v0,A__questionmark_v1) = A__questionmark_v1 )
+    <=> ( A__questionmark_v0 = 'id$' ) ) ).
+
+%% register$q(id$)
+tff(axiom563,axiom,
+    'register$q'('id$') ).
+
+%% ∀ ?v0:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$ ?v2:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v3:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun$ ((comp$(?v0, ?v1) = comp$al(id$f, ?v2)) ⇒ (fun_app$q(?v0, fun_app$r(?v1, ?v3)) = fun_app$p(?v2, ?v3)))
+tff(axiom564,axiom,
+    ! [A__questionmark_v0: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$',A__questionmark_v2: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v3: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun$'] :
+      ( ( 'comp$'(A__questionmark_v0,A__questionmark_v1) = 'comp$al'('id$f',A__questionmark_v2) )
+     => ( 'fun_app$q'(A__questionmark_v0,'fun_app$r'(A__questionmark_v1,A__questionmark_v3)) = 'fun_app$p'(A__questionmark_v2,A__questionmark_v3) ) ) ).
+
+%% ∀ ?v0:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$ ?v1:B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$ ?v2:B_ell2_b_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$ ?v3:B_ell2_b_ell2_cblinfun$ ((comp$a(?v0, ?v1) = comp$bj(id$e, ?v2)) ⇒ (fun_app$h(?v0, fun_app$f(?v1, ?v3)) = fun_app$b(?v2, ?v3)))
+tff(axiom565,axiom,
+    ! [A__questionmark_v0: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$',A__questionmark_v1: 'B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$',A__questionmark_v2: 'B_ell2_b_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$',A__questionmark_v3: 'B_ell2_b_ell2_cblinfun$'] :
+      ( ( 'comp$a'(A__questionmark_v0,A__questionmark_v1) = 'comp$bj'('id$e',A__questionmark_v2) )
+     => ( 'fun_app$h'(A__questionmark_v0,'fun_app$f'(A__questionmark_v1,A__questionmark_v3)) = 'fun_app$b'(A__questionmark_v2,A__questionmark_v3) ) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_set$ ?v1:A_ell2_a_ell2_cblinfun_set$ (bij_betw$y(id$, ?v0, ?v1) = (?v0 = ?v1))
+tff(axiom566,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_set$',A__questionmark_v1: 'A_ell2_a_ell2_cblinfun_set$'] :
+      ( 'bij_betw$y'('id$',A__questionmark_v0,A__questionmark_v1)
+    <=> ( A__questionmark_v0 = A__questionmark_v1 ) ) ).
+
+%% iso_register$z(id$)
+tff(axiom567,axiom,
+    'iso_register$z'('id$') ).
+
+%% bij_betw$y(id$, top$l, top$l)
+tff(axiom568,axiom,
+    'bij_betw$y'('id$','top$l','top$l') ).
+
+%% bij_betw$k(id$b, top$c, top$c)
+tff(axiom569,axiom,
+    'bij_betw$k'('id$b','top$c','top$c') ).
+
+%% bij_betw$u(id$c, top$b, top$b)
+tff(axiom570,axiom,
+    'bij_betw$u'('id$c','top$b','top$b') ).
+
+%% bij_betw$v(id$d, top$d, top$d)
+tff(axiom571,axiom,
+    'bij_betw$v'('id$d','top$d','top$d') ).
+
+%% bij_betw$w(id$e, top$g, top$g)
+tff(axiom572,axiom,
+    'bij_betw$w'('id$e','top$g','top$g') ).
+
+%% bij_betw$a(id$f, top$a, top$a)
+tff(axiom573,axiom,
+    'bij_betw$a'('id$f','top$a','top$a') ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$ ?v1:A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$ (((comp$bv(?v0, ?v1) = id$) ∧ (comp$bv(?v1, ?v0) = id$)) ⇒ (inv_into$z(top$l, ?v0) = ?v1))
+tff(axiom574,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$',A__questionmark_v1: 'A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$'] :
+      ( ( ( 'comp$bv'(A__questionmark_v0,A__questionmark_v1) = 'id$' )
+        & ( 'comp$bv'(A__questionmark_v1,A__questionmark_v0) = 'id$' ) )
+     => ( 'inv_into$z'('top$l',A__questionmark_v0) = A__questionmark_v1 ) ) ).
+
+%% ∀ ?v0:B_ell2_b_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$ ?v1:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (((comp$br(?v0, ?v1) = id$) ∧ (comp$cx(?v1, ?v0) = id$f)) ⇒ (inv_into$an(top$a, ?v0) = ?v1))
+tff(axiom575,axiom,
+    ! [A__questionmark_v0: 'B_ell2_b_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$',A__questionmark_v1: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( ( 'comp$br'(A__questionmark_v0,A__questionmark_v1) = 'id$' )
+        & ( 'comp$cx'(A__questionmark_v1,A__questionmark_v0) = 'id$f' ) )
+     => ( 'inv_into$an'('top$a',A__questionmark_v0) = A__questionmark_v1 ) ) ).
+
+%% ∀ ?v0:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$ ?v1:A_ell2_a_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$ (((comp$cy(?v0, ?v1) = id$) ∧ (comp$cz(?v1, ?v0) = id$b)) ⇒ (inv_into$ao(top$c, ?v0) = ?v1))
+tff(axiom576,axiom,
+    ! [A__questionmark_v0: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$',A__questionmark_v1: 'A_ell2_a_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$'] :
+      ( ( ( 'comp$cy'(A__questionmark_v0,A__questionmark_v1) = 'id$' )
+        & ( 'comp$cz'(A__questionmark_v1,A__questionmark_v0) = 'id$b' ) )
+     => ( 'inv_into$ao'('top$c',A__questionmark_v0) = A__questionmark_v1 ) ) ).
+
+%% ∀ ?v0:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:B_ell2_b_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$ (((comp$ab(?v0, ?v1) = id$f) ∧ (comp$da(?v1, ?v0) = id$b)) ⇒ (inv_into$d(top$c, ?v0) = ?v1))
+tff(axiom577,axiom,
+    ! [A__questionmark_v0: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'B_ell2_b_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$'] :
+      ( ( ( 'comp$ab'(A__questionmark_v0,A__questionmark_v1) = 'id$f' )
+        & ( 'comp$da'(A__questionmark_v1,A__questionmark_v0) = 'id$b' ) )
+     => ( 'inv_into$d'('top$c',A__questionmark_v0) = A__questionmark_v1 ) ) ).
+
+%% ∀ ?v0:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$ ?v1:A_ell2_a_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$ (((comp$db(?v0, ?v1) = id$) ∧ (comp$dc(?v1, ?v0) = id$d)) ⇒ (inv_into$ap(top$d, ?v0) = ?v1))
+tff(axiom578,axiom,
+    ! [A__questionmark_v0: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$',A__questionmark_v1: 'A_ell2_a_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$'] :
+      ( ( ( 'comp$db'(A__questionmark_v0,A__questionmark_v1) = 'id$' )
+        & ( 'comp$dc'(A__questionmark_v1,A__questionmark_v0) = 'id$d' ) )
+     => ( 'inv_into$ap'('top$d',A__questionmark_v0) = A__questionmark_v1 ) ) ).
+
+%% ∀ ?v0:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$ (((comp$ac(?v0, ?v1) = id$f) ∧ (comp$dd(?v1, ?v0) = id$d)) ⇒ (inv_into$f(top$d, ?v0) = ?v1))
+tff(axiom579,axiom,
+    ! [A__questionmark_v0: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$'] :
+      ( ( ( 'comp$ac'(A__questionmark_v0,A__questionmark_v1) = 'id$f' )
+        & ( 'comp$dd'(A__questionmark_v1,A__questionmark_v0) = 'id$d' ) )
+     => ( 'inv_into$f'('top$d',A__questionmark_v0) = A__questionmark_v1 ) ) ).
+
+%% ∀ ?v0:C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$ ?v1:A_ell2_a_ell2_cblinfun_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$ (((comp$de(?v0, ?v1) = id$) ∧ (comp$df(?v1, ?v0) = id$c)) ⇒ (inv_into$aq(top$b, ?v0) = ?v1))
+tff(axiom580,axiom,
+    ! [A__questionmark_v0: 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$',A__questionmark_v1: 'A_ell2_a_ell2_cblinfun_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$'] :
+      ( ( ( 'comp$de'(A__questionmark_v0,A__questionmark_v1) = 'id$' )
+        & ( 'comp$df'(A__questionmark_v1,A__questionmark_v0) = 'id$c' ) )
+     => ( 'inv_into$aq'('top$b',A__questionmark_v0) = A__questionmark_v1 ) ) ).
+
+%% ∀ ?v0:C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:B_ell2_b_ell2_cblinfun_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$ (((comp$dg(?v0, ?v1) = id$f) ∧ (comp$dh(?v1, ?v0) = id$c)) ⇒ (inv_into$(top$b, ?v0) = ?v1))
+tff(axiom581,axiom,
+    ! [A__questionmark_v0: 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'B_ell2_b_ell2_cblinfun_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$'] :
+      ( ( ( 'comp$dg'(A__questionmark_v0,A__questionmark_v1) = 'id$f' )
+        & ( 'comp$dh'(A__questionmark_v1,A__questionmark_v0) = 'id$c' ) )
+     => ( 'inv_into$'('top$b',A__questionmark_v0) = A__questionmark_v1 ) ) ).
+
+%% ∀ ?v0:A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$ ?v1:A_ell2_a_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$ (((comp$di(?v0, ?v1) = id$) ∧ (comp$dj(?v1, ?v0) = id$e)) ⇒ (inv_into$ar(top$g, ?v0) = ?v1))
+tff(axiom582,axiom,
+    ! [A__questionmark_v0: 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$',A__questionmark_v1: 'A_ell2_a_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$'] :
+      ( ( ( 'comp$di'(A__questionmark_v0,A__questionmark_v1) = 'id$' )
+        & ( 'comp$dj'(A__questionmark_v1,A__questionmark_v0) = 'id$e' ) )
+     => ( 'inv_into$ar'('top$g',A__questionmark_v0) = A__questionmark_v1 ) ) ).
+
+%% ∀ ?v0:A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:B_ell2_b_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$ (((comp$dk(?v0, ?v1) = id$f) ∧ (comp$dl(?v1, ?v0) = id$e)) ⇒ (inv_into$o(top$g, ?v0) = ?v1))
+tff(axiom583,axiom,
+    ! [A__questionmark_v0: 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'B_ell2_b_ell2_cblinfun_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_fun$'] :
+      ( ( ( 'comp$dk'(A__questionmark_v0,A__questionmark_v1) = 'id$f' )
+        & ( 'comp$dl'(A__questionmark_v1,A__questionmark_v0) = 'id$e' ) )
+     => ( 'inv_into$o'('top$g',A__questionmark_v0) = A__questionmark_v1 ) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$ (iso_register$z(?v0) = (register$q(?v0) ∧ ∃ ?v1:A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$ (register$q(?v1) ∧ ((comp$bv(?v0, ?v1) = id$) ∧ (comp$bv(?v1, ?v0) = id$)))))
+tff(axiom584,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$'] :
+      ( 'iso_register$z'(A__questionmark_v0)
+    <=> ( 'register$q'(A__questionmark_v0)
+        & ? [A__questionmark_v1: 'A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$'] :
+            ( 'register$q'(A__questionmark_v1)
+            & ( 'comp$bv'(A__questionmark_v0,A__questionmark_v1) = 'id$' )
+            & ( 'comp$bv'(A__questionmark_v1,A__questionmark_v0) = 'id$' ) ) ) ) ).
+
+%% ∀ ?v0:B_ell2_b_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$ (iso_register$ab(?v0) = (register$s(?v0) ∧ ∃ ?v1:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (register$(?v1) ∧ ((comp$dm(?v0, ?v1) = id$h) ∧ (comp$dn(?v1, ?v0) = id$f)))))
+tff(axiom585,axiom,
+    ! [A__questionmark_v0: 'B_ell2_b_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$'] :
+      ( 'iso_register$ab'(A__questionmark_v0)
+    <=> ( 'register$s'(A__questionmark_v0)
+        & ? [A__questionmark_v1: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+            ( 'register$'(A__questionmark_v1)
+            & ( 'comp$dm'(A__questionmark_v0,A__questionmark_v1) = 'id$h' )
+            & ( 'comp$dn'(A__questionmark_v1,A__questionmark_v0) = 'id$f' ) ) ) ) ).
+
+%% ∀ ?v0:B_ell2_b_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$ (iso_register$ac(?v0) = (register$r(?v0) ∧ ∃ ?v1:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (register$a(?v1) ∧ ((comp$br(?v0, ?v1) = id$) ∧ (comp$cx(?v1, ?v0) = id$f)))))
+tff(axiom586,axiom,
+    ! [A__questionmark_v0: 'B_ell2_b_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$'] :
+      ( 'iso_register$ac'(A__questionmark_v0)
+    <=> ( 'register$r'(A__questionmark_v0)
+        & ? [A__questionmark_v1: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+            ( 'register$a'(A__questionmark_v1)
+            & ( 'comp$br'(A__questionmark_v0,A__questionmark_v1) = 'id$' )
+            & ( 'comp$cx'(A__questionmark_v1,A__questionmark_v0) = 'id$f' ) ) ) ) ).
+
+%% ∀ ?v0:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_c_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$ (iso_register$s(?v0) = (register$as(?v0) ∧ ∃ ?v1:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$ (register$e(?v1) ∧ ((comp$do(?v0, ?v1) = id$i) ∧ (comp$dp(?v1, ?v0) = id$g)))))
+tff(axiom587,axiom,
+    ! [A__questionmark_v0: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_c_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$'] :
+      ( 'iso_register$s'(A__questionmark_v0)
+    <=> ( 'register$as'(A__questionmark_v0)
+        & ? [A__questionmark_v1: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$'] :
+            ( 'register$e'(A__questionmark_v1)
+            & ( 'comp$do'(A__questionmark_v0,A__questionmark_v1) = 'id$i' )
+            & ( 'comp$dp'(A__questionmark_v1,A__questionmark_v0) = 'id$g' ) ) ) ) ).
+
+%% ∀ ?v0:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (iso_register$t(?v0) = (register$(?v0) ∧ ∃ ?v1:B_ell2_b_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$ (register$s(?v1) ∧ ((comp$dn(?v0, ?v1) = id$f) ∧ (comp$dm(?v1, ?v0) = id$h)))))
+tff(axiom588,axiom,
+    ! [A__questionmark_v0: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'iso_register$t'(A__questionmark_v0)
+    <=> ( 'register$'(A__questionmark_v0)
+        & ? [A__questionmark_v1: 'B_ell2_b_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$'] :
+            ( 'register$s'(A__questionmark_v1)
+            & ( 'comp$dn'(A__questionmark_v0,A__questionmark_v1) = 'id$f' )
+            & ( 'comp$dm'(A__questionmark_v1,A__questionmark_v0) = 'id$h' ) ) ) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (iso_register$u(?v0) = (register$a(?v0) ∧ ∃ ?v1:B_ell2_b_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$ (register$r(?v1) ∧ ((comp$cx(?v0, ?v1) = id$f) ∧ (comp$br(?v1, ?v0) = id$)))))
+tff(axiom589,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'iso_register$u'(A__questionmark_v0)
+    <=> ( 'register$a'(A__questionmark_v0)
+        & ? [A__questionmark_v1: 'B_ell2_b_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$'] :
+            ( 'register$r'(A__questionmark_v1)
+            & ( 'comp$cx'(A__questionmark_v0,A__questionmark_v1) = 'id$f' )
+            & ( 'comp$br'(A__questionmark_v1,A__questionmark_v0) = 'id$' ) ) ) ) ).
+
+%% ∀ ?v0:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$ (iso_register$(?v0) = (register$e(?v0) ∧ ∃ ?v1:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_c_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$ (register$as(?v1) ∧ ((comp$dp(?v0, ?v1) = id$g) ∧ (comp$do(?v1, ?v0) = id$i)))))
+tff(axiom590,axiom,
+    ! [A__questionmark_v0: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$'] :
+      ( 'iso_register$'(A__questionmark_v0)
+    <=> ( 'register$e'(A__questionmark_v0)
+        & ? [A__questionmark_v1: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_c_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$'] :
+            ( 'register$as'(A__questionmark_v1)
+            & ( 'comp$dp'(A__questionmark_v0,A__questionmark_v1) = 'id$g' )
+            & ( 'comp$do'(A__questionmark_v1,A__questionmark_v0) = 'id$i' ) ) ) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$ ?v1:A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$ ((register$q(?v0) ∧ (register$q(?v1) ∧ ((comp$bv(?v0, ?v1) = id$) ∧ (comp$bv(?v1, ?v0) = id$)))) ⇒ iso_register$z(?v0))
+tff(axiom591,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$',A__questionmark_v1: 'A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$'] :
+      ( ( 'register$q'(A__questionmark_v0)
+        & 'register$q'(A__questionmark_v1)
+        & ( 'comp$bv'(A__questionmark_v0,A__questionmark_v1) = 'id$' )
+        & ( 'comp$bv'(A__questionmark_v1,A__questionmark_v0) = 'id$' ) )
+     => 'iso_register$z'(A__questionmark_v0) ) ).
+
+%% ∀ ?v0:B_ell2_b_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$ ?v1:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((register$s(?v0) ∧ (register$(?v1) ∧ ((comp$dm(?v0, ?v1) = id$h) ∧ (comp$dn(?v1, ?v0) = id$f)))) ⇒ iso_register$ab(?v0))
+tff(axiom592,axiom,
+    ! [A__questionmark_v0: 'B_ell2_b_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$',A__questionmark_v1: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'register$s'(A__questionmark_v0)
+        & 'register$'(A__questionmark_v1)
+        & ( 'comp$dm'(A__questionmark_v0,A__questionmark_v1) = 'id$h' )
+        & ( 'comp$dn'(A__questionmark_v1,A__questionmark_v0) = 'id$f' ) )
+     => 'iso_register$ab'(A__questionmark_v0) ) ).
+
+%% ∀ ?v0:B_ell2_b_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$ ?v1:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((register$r(?v0) ∧ (register$a(?v1) ∧ ((comp$br(?v0, ?v1) = id$) ∧ (comp$cx(?v1, ?v0) = id$f)))) ⇒ iso_register$ac(?v0))
+tff(axiom593,axiom,
+    ! [A__questionmark_v0: 'B_ell2_b_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$',A__questionmark_v1: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( 'register$r'(A__questionmark_v0)
+        & 'register$a'(A__questionmark_v1)
+        & ( 'comp$br'(A__questionmark_v0,A__questionmark_v1) = 'id$' )
+        & ( 'comp$cx'(A__questionmark_v1,A__questionmark_v0) = 'id$f' ) )
+     => 'iso_register$ac'(A__questionmark_v0) ) ).
+
+%% ∀ ?v0:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_c_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$ ?v1:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$ ((register$as(?v0) ∧ (register$e(?v1) ∧ ((comp$do(?v0, ?v1) = id$i) ∧ (comp$dp(?v1, ?v0) = id$g)))) ⇒ iso_register$s(?v0))
+tff(axiom594,axiom,
+    ! [A__questionmark_v0: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_c_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$',A__questionmark_v1: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$'] :
+      ( ( 'register$as'(A__questionmark_v0)
+        & 'register$e'(A__questionmark_v1)
+        & ( 'comp$do'(A__questionmark_v0,A__questionmark_v1) = 'id$i' )
+        & ( 'comp$dp'(A__questionmark_v1,A__questionmark_v0) = 'id$g' ) )
+     => 'iso_register$s'(A__questionmark_v0) ) ).
+
+%% ∀ ?v0:C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:B_ell2_b_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$ ((register$(?v0) ∧ (register$s(?v1) ∧ ((comp$dn(?v0, ?v1) = id$f) ∧ (comp$dm(?v1, ?v0) = id$h)))) ⇒ iso_register$t(?v0))
+tff(axiom595,axiom,
+    ! [A__questionmark_v0: 'C_ell2_c_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'B_ell2_b_ell2_cblinfun_c_ell2_c_ell2_cblinfun_fun$'] :
+      ( ( 'register$'(A__questionmark_v0)
+        & 'register$s'(A__questionmark_v1)
+        & ( 'comp$dn'(A__questionmark_v0,A__questionmark_v1) = 'id$f' )
+        & ( 'comp$dm'(A__questionmark_v1,A__questionmark_v0) = 'id$h' ) )
+     => 'iso_register$t'(A__questionmark_v0) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:B_ell2_b_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$ ((register$a(?v0) ∧ (register$r(?v1) ∧ ((comp$cx(?v0, ?v1) = id$f) ∧ (comp$br(?v1, ?v0) = id$)))) ⇒ iso_register$u(?v0))
+tff(axiom596,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'B_ell2_b_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$'] :
+      ( ( 'register$a'(A__questionmark_v0)
+        & 'register$r'(A__questionmark_v1)
+        & ( 'comp$cx'(A__questionmark_v0,A__questionmark_v1) = 'id$f' )
+        & ( 'comp$br'(A__questionmark_v1,A__questionmark_v0) = 'id$' ) )
+     => 'iso_register$u'(A__questionmark_v0) ) ).
+
+%% ∀ ?v0:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$ ?v1:A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_c_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$ ((register$e(?v0) ∧ (register$as(?v1) ∧ ((comp$dp(?v0, ?v1) = id$g) ∧ (comp$do(?v1, ?v0) = id$i)))) ⇒ iso_register$(?v0))
+tff(axiom597,axiom,
+    ! [A__questionmark_v0: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$',A__questionmark_v1: 'A_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_c_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_fun$'] :
+      ( ( 'register$e'(A__questionmark_v0)
+        & 'register$as'(A__questionmark_v1)
+        & ( 'comp$dp'(A__questionmark_v0,A__questionmark_v1) = 'id$g' )
+        & ( 'comp$do'(A__questionmark_v1,A__questionmark_v0) = 'id$i' ) )
+     => 'iso_register$'(A__questionmark_v0) ) ).
+
+%% ∀ ?v0:B_ell2_b_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$ (iso_register$ac(?v0) ⇒ (comp$br(?v0, inv_into$an(top$a, ?v0)) = id$))
+tff(axiom598,axiom,
+    ! [A__questionmark_v0: 'B_ell2_b_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$'] :
+      ( 'iso_register$ac'(A__questionmark_v0)
+     => ( 'comp$br'(A__questionmark_v0,'inv_into$an'('top$a',A__questionmark_v0)) = 'id$' ) ) ).
+
+%% ∀ ?v0:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$ (iso_register$ad(?v0) ⇒ (comp$cy(?v0, inv_into$ao(top$c, ?v0)) = id$))
+tff(axiom599,axiom,
+    ! [A__questionmark_v0: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$'] :
+      ( 'iso_register$ad'(A__questionmark_v0)
+     => ( 'comp$cy'(A__questionmark_v0,'inv_into$ao'('top$c',A__questionmark_v0)) = 'id$' ) ) ).
+
+%% ∀ ?v0:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (iso_register$g(?v0) ⇒ (comp$ab(?v0, inv_into$d(top$c, ?v0)) = id$f))
+tff(axiom600,axiom,
+    ! [A__questionmark_v0: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'iso_register$g'(A__questionmark_v0)
+     => ( 'comp$ab'(A__questionmark_v0,'inv_into$d'('top$c',A__questionmark_v0)) = 'id$f' ) ) ).
+
+%% ∀ ?v0:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$ (iso_register$ae(?v0) ⇒ (comp$db(?v0, inv_into$ap(top$d, ?v0)) = id$))
+tff(axiom601,axiom,
+    ! [A__questionmark_v0: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$'] :
+      ( 'iso_register$ae'(A__questionmark_v0)
+     => ( 'comp$db'(A__questionmark_v0,'inv_into$ap'('top$d',A__questionmark_v0)) = 'id$' ) ) ).
+
+%% ∀ ?v0:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (iso_register$b(?v0) ⇒ (comp$ac(?v0, inv_into$f(top$d, ?v0)) = id$f))
+tff(axiom602,axiom,
+    ! [A__questionmark_v0: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'iso_register$b'(A__questionmark_v0)
+     => ( 'comp$ac'(A__questionmark_v0,'inv_into$f'('top$d',A__questionmark_v0)) = 'id$f' ) ) ).
+
+%% ∀ ?v0:C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$ (iso_register$af(?v0) ⇒ (comp$de(?v0, inv_into$aq(top$b, ?v0)) = id$))
+tff(axiom603,axiom,
+    ! [A__questionmark_v0: 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$'] :
+      ( 'iso_register$af'(A__questionmark_v0)
+     => ( 'comp$de'(A__questionmark_v0,'inv_into$aq'('top$b',A__questionmark_v0)) = 'id$' ) ) ).
+
+%% ∀ ?v0:C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (iso_register$d(?v0) ⇒ (comp$dg(?v0, inv_into$(top$b, ?v0)) = id$f))
+tff(axiom604,axiom,
+    ! [A__questionmark_v0: 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'iso_register$d'(A__questionmark_v0)
+     => ( 'comp$dg'(A__questionmark_v0,'inv_into$'('top$b',A__questionmark_v0)) = 'id$f' ) ) ).
+
+%% ∀ ?v0:A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$ (iso_register$ag(?v0) ⇒ (comp$di(?v0, inv_into$ar(top$g, ?v0)) = id$))
+tff(axiom605,axiom,
+    ! [A__questionmark_v0: 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$'] :
+      ( 'iso_register$ag'(A__questionmark_v0)
+     => ( 'comp$di'(A__questionmark_v0,'inv_into$ar'('top$g',A__questionmark_v0)) = 'id$' ) ) ).
+
+%% ∀ ?v0:A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (iso_register$e(?v0) ⇒ (comp$dk(?v0, inv_into$o(top$g, ?v0)) = id$f))
+tff(axiom606,axiom,
+    ! [A__questionmark_v0: 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'iso_register$e'(A__questionmark_v0)
+     => ( 'comp$dk'(A__questionmark_v0,'inv_into$o'('top$g',A__questionmark_v0)) = 'id$f' ) ) ).
+
+%% ∀ ?v0:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$ (iso_register$(?v0) ⇒ (comp$dp(?v0, inv_into$k(top$f, ?v0)) = id$g))
+tff(axiom607,axiom,
+    ! [A__questionmark_v0: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$'] :
+      ( 'iso_register$'(A__questionmark_v0)
+     => ( 'comp$dp'(A__questionmark_v0,'inv_into$k'('top$f',A__questionmark_v0)) = 'id$g' ) ) ).
+
+%% ∀ ?v0:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (iso_register$g(?v0) ⇒ (comp$da(inv_into$d(top$c, ?v0), ?v0) = id$b))
+tff(axiom608,axiom,
+    ! [A__questionmark_v0: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'iso_register$g'(A__questionmark_v0)
+     => ( 'comp$da'('inv_into$d'('top$c',A__questionmark_v0),A__questionmark_v0) = 'id$b' ) ) ).
+
+%% ∀ ?v0:C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (iso_register$d(?v0) ⇒ (comp$dh(inv_into$(top$b, ?v0), ?v0) = id$c))
+tff(axiom609,axiom,
+    ! [A__questionmark_v0: 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'iso_register$d'(A__questionmark_v0)
+     => ( 'comp$dh'('inv_into$'('top$b',A__questionmark_v0),A__questionmark_v0) = 'id$c' ) ) ).
+
+%% ∀ ?v0:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (iso_register$b(?v0) ⇒ (comp$dd(inv_into$f(top$d, ?v0), ?v0) = id$d))
+tff(axiom610,axiom,
+    ! [A__questionmark_v0: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'iso_register$b'(A__questionmark_v0)
+     => ( 'comp$dd'('inv_into$f'('top$d',A__questionmark_v0),A__questionmark_v0) = 'id$d' ) ) ).
+
+%% ∀ ?v0:A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$ (iso_register$p(?v0) ⇒ (comp$dq(inv_into$n(top$g, ?v0), ?v0) = id$e))
+tff(axiom611,axiom,
+    ! [A__questionmark_v0: 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$'] :
+      ( 'iso_register$p'(A__questionmark_v0)
+     => ( 'comp$dq'('inv_into$n'('top$g',A__questionmark_v0),A__questionmark_v0) = 'id$e' ) ) ).
+
+%% ∀ ?v0:A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (iso_register$e(?v0) ⇒ (comp$dl(inv_into$o(top$g, ?v0), ?v0) = id$e))
+tff(axiom612,axiom,
+    ! [A__questionmark_v0: 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( 'iso_register$e'(A__questionmark_v0)
+     => ( 'comp$dl'('inv_into$o'('top$g',A__questionmark_v0),A__questionmark_v0) = 'id$e' ) ) ).
+
+%% ∀ ?v0:C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$ (iso_register$(?v0) ⇒ (comp$do(inv_into$k(top$f, ?v0), ?v0) = id$i))
+tff(axiom613,axiom,
+    ! [A__questionmark_v0: 'C_a_c_prod_b_complement_domain_prod_ell2_c_a_c_prod_b_complement_domain_prod_ell2_cblinfun_a_b_complement_domain_ell2_a_b_complement_domain_ell2_cblinfun_fun$'] :
+      ( 'iso_register$'(A__questionmark_v0)
+     => ( 'comp$do'('inv_into$k'('top$f',A__questionmark_v0),A__questionmark_v0) = 'id$i' ) ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$ ?v1:A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$ (((comp$bv(?v0, ?v1) = id$) ∧ (comp$bv(?v1, ?v0) = id$)) ⇒ bij_betw$y(?v1, top$l, top$l))
+tff(axiom614,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$',A__questionmark_v1: 'A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$'] :
+      ( ( ( 'comp$bv'(A__questionmark_v0,A__questionmark_v1) = 'id$' )
+        & ( 'comp$bv'(A__questionmark_v1,A__questionmark_v0) = 'id$' ) )
+     => 'bij_betw$y'(A__questionmark_v1,'top$l','top$l') ) ).
+
+%% ∀ ?v0:B_ell2_b_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$ ?v1:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (((comp$br(?v0, ?v1) = id$) ∧ (comp$cx(?v1, ?v0) = id$f)) ⇒ bij_betw$z(?v1, top$l, top$a))
+tff(axiom615,axiom,
+    ! [A__questionmark_v0: 'B_ell2_b_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$',A__questionmark_v1: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( ( 'comp$br'(A__questionmark_v0,A__questionmark_v1) = 'id$' )
+        & ( 'comp$cx'(A__questionmark_v1,A__questionmark_v0) = 'id$f' ) )
+     => 'bij_betw$z'(A__questionmark_v1,'top$l','top$a') ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:B_ell2_b_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$ (((comp$cx(?v0, ?v1) = id$f) ∧ (comp$br(?v1, ?v0) = id$)) ⇒ bij_betw$aa(?v1, top$a, top$l))
+tff(axiom616,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'B_ell2_b_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$'] :
+      ( ( ( 'comp$cx'(A__questionmark_v0,A__questionmark_v1) = 'id$f' )
+        & ( 'comp$br'(A__questionmark_v1,A__questionmark_v0) = 'id$' ) )
+     => 'bij_betw$aa'(A__questionmark_v1,'top$a','top$l') ) ).
+
+%% ∀ ?v0:B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ?v1:B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (((comp$aa(?v0, ?v1) = id$f) ∧ (comp$aa(?v1, ?v0) = id$f)) ⇒ bij_betw$a(?v1, top$a, top$a))
+tff(axiom617,axiom,
+    ! [A__questionmark_v0: 'B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$',A__questionmark_v1: 'B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( ( 'comp$aa'(A__questionmark_v0,A__questionmark_v1) = 'id$f' )
+        & ( 'comp$aa'(A__questionmark_v1,A__questionmark_v0) = 'id$f' ) )
+     => 'bij_betw$a'(A__questionmark_v1,'top$a','top$a') ) ).
+
+%% ∀ ?v0:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$ ?v1:A_ell2_a_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$ (((comp$cy(?v0, ?v1) = id$) ∧ (comp$cz(?v1, ?v0) = id$b)) ⇒ bij_betw$ab(?v1, top$l, top$c))
+tff(axiom618,axiom,
+    ! [A__questionmark_v0: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$',A__questionmark_v1: 'A_ell2_a_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$'] :
+      ( ( ( 'comp$cy'(A__questionmark_v0,A__questionmark_v1) = 'id$' )
+        & ( 'comp$cz'(A__questionmark_v1,A__questionmark_v0) = 'id$b' ) )
+     => 'bij_betw$ab'(A__questionmark_v1,'top$l','top$c') ) ).
+
+%% ∀ ?v0:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$ ?v1:A_ell2_a_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$ (((comp$db(?v0, ?v1) = id$) ∧ (comp$dc(?v1, ?v0) = id$d)) ⇒ bij_betw$ac(?v1, top$l, top$d))
+tff(axiom619,axiom,
+    ! [A__questionmark_v0: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$',A__questionmark_v1: 'A_ell2_a_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$'] :
+      ( ( ( 'comp$db'(A__questionmark_v0,A__questionmark_v1) = 'id$' )
+        & ( 'comp$dc'(A__questionmark_v1,A__questionmark_v0) = 'id$d' ) )
+     => 'bij_betw$ac'(A__questionmark_v1,'top$l','top$d') ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$ ?v1:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$ (((comp$cz(?v0, ?v1) = id$b) ∧ (comp$cy(?v1, ?v0) = id$)) ⇒ bij_betw$ad(?v1, top$c, top$l))
+tff(axiom620,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$',A__questionmark_v1: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$'] :
+      ( ( ( 'comp$cz'(A__questionmark_v0,A__questionmark_v1) = 'id$b' )
+        & ( 'comp$cy'(A__questionmark_v1,A__questionmark_v0) = 'id$' ) )
+     => 'bij_betw$ad'(A__questionmark_v1,'top$c','top$l') ) ).
+
+%% ∀ ?v0:B_ell2_b_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$ ?v1:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (((comp$da(?v0, ?v1) = id$b) ∧ (comp$ab(?v1, ?v0) = id$f)) ⇒ bij_betw$b(?v1, top$c, top$a))
+tff(axiom621,axiom,
+    ! [A__questionmark_v0: 'B_ell2_b_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$',A__questionmark_v1: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( ( 'comp$da'(A__questionmark_v0,A__questionmark_v1) = 'id$b' )
+        & ( 'comp$ab'(A__questionmark_v1,A__questionmark_v0) = 'id$f' ) )
+     => 'bij_betw$b'(A__questionmark_v1,'top$c','top$a') ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$ ?v1:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$ (((comp$dc(?v0, ?v1) = id$d) ∧ (comp$db(?v1, ?v0) = id$)) ⇒ bij_betw$ae(?v1, top$d, top$l))
+tff(axiom622,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$',A__questionmark_v1: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$'] :
+      ( ( ( 'comp$dc'(A__questionmark_v0,A__questionmark_v1) = 'id$d' )
+        & ( 'comp$db'(A__questionmark_v1,A__questionmark_v0) = 'id$' ) )
+     => 'bij_betw$ae'(A__questionmark_v1,'top$d','top$l') ) ).
+
+%% ∀ ?v0:B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$ ?v1:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ (((comp$dd(?v0, ?v1) = id$d) ∧ (comp$ac(?v1, ?v0) = id$f)) ⇒ bij_betw$d(?v1, top$d, top$a))
+tff(axiom623,axiom,
+    ! [A__questionmark_v0: 'B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$',A__questionmark_v1: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( ( 'comp$dd'(A__questionmark_v0,A__questionmark_v1) = 'id$d' )
+        & ( 'comp$ac'(A__questionmark_v1,A__questionmark_v0) = 'id$f' ) )
+     => 'bij_betw$d'(A__questionmark_v1,'top$d','top$a') ) ).
+
+%% ∀ ?v0:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$ (fun_app$ba(top$q, ?v0) = member$c(?v0, top$c))
+tff(axiom624,axiom,
+    ! [A__questionmark_v0: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$'] :
+      ( 'fun_app$ba'('top$q',A__questionmark_v0)
+    <=> 'member$c'(A__questionmark_v0,'top$c') ) ).
+
+%% ∀ ?v0:C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun$ (fun_app$bb(top$r, ?v0) = member$d(?v0, top$b))
+tff(axiom625,axiom,
+    ! [A__questionmark_v0: 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun$'] :
+      ( 'fun_app$bb'('top$r',A__questionmark_v0)
+    <=> 'member$d'(A__questionmark_v0,'top$b') ) ).
+
+%% ∀ ?v0:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun$ (fun_app$bc(top$s, ?v0) = member$a(?v0, top$d))
+tff(axiom626,axiom,
+    ! [A__questionmark_v0: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun$'] :
+      ( 'fun_app$bc'('top$s',A__questionmark_v0)
+    <=> 'member$a'(A__questionmark_v0,'top$d') ) ).
+
+%% ∀ ?v0:A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun$ (fun_app$bd(top$t, ?v0) = member$e(?v0, top$g))
+tff(axiom627,axiom,
+    ! [A__questionmark_v0: 'A_c_a_c_prod_b_complement_domain_prod_prod_ell2_a_c_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun$'] :
+      ( 'fun_app$bd'('top$t',A__questionmark_v0)
+    <=> 'member$e'(A__questionmark_v0,'top$g') ) ).
+
+%% ∀ ?v0:B_ell2_b_ell2_cblinfun$ (fun_app$be(top$u, ?v0) = member$(?v0, top$a))
+tff(axiom628,axiom,
+    ! [A__questionmark_v0: 'B_ell2_b_ell2_cblinfun$'] :
+      ( 'fun_app$be'('top$u',A__questionmark_v0)
+    <=> 'member$'(A__questionmark_v0,'top$a') ) ).
+
+%% ∀ ?v0:B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((∀ ?v1:B_ell2_b_ell2_cblinfun$ ?v2:B_ell2_b_ell2_cblinfun$ ((fun_app$l(?v0, ?v1) = fun_app$l(?v0, ?v2)) = (?v1 = ?v2)) ∧ ∀ ?v1:B_ell2_b_ell2_cblinfun$ ∃ ?v2:B_ell2_b_ell2_cblinfun$ (?v1 = fun_app$l(?v0, ?v2))) ⇒ bij_betw$a(?v0, top$a, top$a))
+tff(axiom629,axiom,
+    ! [A__questionmark_v0: 'B_ell2_b_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( ! [A__questionmark_v1: 'B_ell2_b_ell2_cblinfun$',A__questionmark_v2: 'B_ell2_b_ell2_cblinfun$'] :
+            ( ( 'fun_app$l'(A__questionmark_v0,A__questionmark_v1) = 'fun_app$l'(A__questionmark_v0,A__questionmark_v2) )
+          <=> ( A__questionmark_v1 = A__questionmark_v2 ) )
+        & ! [A__questionmark_v1: 'B_ell2_b_ell2_cblinfun$'] :
+          ? [A__questionmark_v2: 'B_ell2_b_ell2_cblinfun$'] : ( A__questionmark_v1 = 'fun_app$l'(A__questionmark_v0,A__questionmark_v2) ) )
+     => 'bij_betw$a'(A__questionmark_v0,'top$a','top$a') ) ).
+
+%% ∀ ?v0:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((∀ ?v1:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$ ?v2:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$ ((fun_app$d(?v0, ?v1) = fun_app$d(?v0, ?v2)) = (?v1 = ?v2)) ∧ ∀ ?v1:B_ell2_b_ell2_cblinfun$ ∃ ?v2:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$ (?v1 = fun_app$d(?v0, ?v2))) ⇒ bij_betw$b(?v0, top$c, top$a))
+tff(axiom630,axiom,
+    ! [A__questionmark_v0: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( ! [A__questionmark_v1: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$',A__questionmark_v2: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$'] :
+            ( ( 'fun_app$d'(A__questionmark_v0,A__questionmark_v1) = 'fun_app$d'(A__questionmark_v0,A__questionmark_v2) )
+          <=> ( A__questionmark_v1 = A__questionmark_v2 ) )
+        & ! [A__questionmark_v1: 'B_ell2_b_ell2_cblinfun$'] :
+          ? [A__questionmark_v2: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$'] : ( A__questionmark_v1 = 'fun_app$d'(A__questionmark_v0,A__questionmark_v2) ) )
+     => 'bij_betw$b'(A__questionmark_v0,'top$c','top$a') ) ).
+
+%% ∀ ?v0:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((∀ ?v1:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun$ ?v2:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun$ ((fun_app$g(?v0, ?v1) = fun_app$g(?v0, ?v2)) = (?v1 = ?v2)) ∧ ∀ ?v1:B_ell2_b_ell2_cblinfun$ ∃ ?v2:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun$ (?v1 = fun_app$g(?v0, ?v2))) ⇒ bij_betw$d(?v0, top$d, top$a))
+tff(axiom631,axiom,
+    ! [A__questionmark_v0: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( ! [A__questionmark_v1: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun$',A__questionmark_v2: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun$'] :
+            ( ( 'fun_app$g'(A__questionmark_v0,A__questionmark_v1) = 'fun_app$g'(A__questionmark_v0,A__questionmark_v2) )
+          <=> ( A__questionmark_v1 = A__questionmark_v2 ) )
+        & ! [A__questionmark_v1: 'B_ell2_b_ell2_cblinfun$'] :
+          ? [A__questionmark_v2: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun$'] : ( A__questionmark_v1 = 'fun_app$g'(A__questionmark_v0,A__questionmark_v2) ) )
+     => 'bij_betw$d'(A__questionmark_v0,'top$d','top$a') ) ).
+
+%% ∀ ?v0:B_ell2_b_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$ ((∀ ?v1:B_ell2_b_ell2_cblinfun$ ?v2:B_ell2_b_ell2_cblinfun$ ((fun_app$c(?v0, ?v1) = fun_app$c(?v0, ?v2)) = (?v1 = ?v2)) ∧ ∀ ?v1:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$ ∃ ?v2:B_ell2_b_ell2_cblinfun$ (?v1 = fun_app$c(?v0, ?v2))) ⇒ bij_betw$c(?v0, top$a, top$c))
+tff(axiom632,axiom,
+    ! [A__questionmark_v0: 'B_ell2_b_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$'] :
+      ( ( ! [A__questionmark_v1: 'B_ell2_b_ell2_cblinfun$',A__questionmark_v2: 'B_ell2_b_ell2_cblinfun$'] :
+            ( ( 'fun_app$c'(A__questionmark_v0,A__questionmark_v1) = 'fun_app$c'(A__questionmark_v0,A__questionmark_v2) )
+          <=> ( A__questionmark_v1 = A__questionmark_v2 ) )
+        & ! [A__questionmark_v1: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$'] :
+          ? [A__questionmark_v2: 'B_ell2_b_ell2_cblinfun$'] : ( A__questionmark_v1 = 'fun_app$c'(A__questionmark_v0,A__questionmark_v2) ) )
+     => 'bij_betw$c'(A__questionmark_v0,'top$a','top$c') ) ).
+
+%% ∀ ?v0:B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$ ((∀ ?v1:B_ell2_b_ell2_cblinfun$ ?v2:B_ell2_b_ell2_cblinfun$ ((fun_app$f(?v0, ?v1) = fun_app$f(?v0, ?v2)) = (?v1 = ?v2)) ∧ ∀ ?v1:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun$ ∃ ?v2:B_ell2_b_ell2_cblinfun$ (?v1 = fun_app$f(?v0, ?v2))) ⇒ bij_betw$e(?v0, top$a, top$d))
+tff(axiom633,axiom,
+    ! [A__questionmark_v0: 'B_ell2_b_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$'] :
+      ( ( ! [A__questionmark_v1: 'B_ell2_b_ell2_cblinfun$',A__questionmark_v2: 'B_ell2_b_ell2_cblinfun$'] :
+            ( ( 'fun_app$f'(A__questionmark_v0,A__questionmark_v1) = 'fun_app$f'(A__questionmark_v0,A__questionmark_v2) )
+          <=> ( A__questionmark_v1 = A__questionmark_v2 ) )
+        & ! [A__questionmark_v1: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun$'] :
+          ? [A__questionmark_v2: 'B_ell2_b_ell2_cblinfun$'] : ( A__questionmark_v1 = 'fun_app$f'(A__questionmark_v0,A__questionmark_v2) ) )
+     => 'bij_betw$e'(A__questionmark_v0,'top$a','top$d') ) ).
+
+%% ∀ ?v0:A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((∀ ?v1:A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun$ ?v2:A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun$ ((fun_app$k(?v0, ?v1) = fun_app$k(?v0, ?v2)) = (?v1 = ?v2)) ∧ ∀ ?v1:B_ell2_b_ell2_cblinfun$ ∃ ?v2:A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun$ (?v1 = fun_app$k(?v0, ?v2))) ⇒ bij_betw$(?v0, top$, top$a))
+tff(axiom634,axiom,
+    ! [A__questionmark_v0: 'A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( ! [A__questionmark_v1: 'A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun$',A__questionmark_v2: 'A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun$'] :
+            ( ( 'fun_app$k'(A__questionmark_v0,A__questionmark_v1) = 'fun_app$k'(A__questionmark_v0,A__questionmark_v2) )
+          <=> ( A__questionmark_v1 = A__questionmark_v2 ) )
+        & ! [A__questionmark_v1: 'B_ell2_b_ell2_cblinfun$'] :
+          ? [A__questionmark_v2: 'A_c_prod_a_c_prod_b_complement_domain_prod_ell2_a_c_prod_a_c_prod_b_complement_domain_prod_ell2_cblinfun$'] : ( A__questionmark_v1 = 'fun_app$k'(A__questionmark_v0,A__questionmark_v2) ) )
+     => 'bij_betw$'(A__questionmark_v0,'top$','top$a') ) ).
+
+%% ∀ ?v0:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$ ((∀ ?v1:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$ ?v2:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$ ((fun_app$m(?v0, ?v1) = fun_app$m(?v0, ?v2)) = (?v1 = ?v2)) ∧ ∀ ?v1:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$ ∃ ?v2:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$ (?v1 = fun_app$m(?v0, ?v2))) ⇒ bij_betw$k(?v0, top$c, top$c))
+tff(axiom635,axiom,
+    ! [A__questionmark_v0: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$'] :
+      ( ( ! [A__questionmark_v1: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$',A__questionmark_v2: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$'] :
+            ( ( 'fun_app$m'(A__questionmark_v0,A__questionmark_v1) = 'fun_app$m'(A__questionmark_v0,A__questionmark_v2) )
+          <=> ( A__questionmark_v1 = A__questionmark_v2 ) )
+        & ! [A__questionmark_v1: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$'] :
+          ? [A__questionmark_v2: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$'] : ( A__questionmark_v1 = 'fun_app$m'(A__questionmark_v0,A__questionmark_v2) ) )
+     => 'bij_betw$k'(A__questionmark_v0,'top$c','top$c') ) ).
+
+%% ∀ ?v0:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$ ((∀ ?v1:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$ ?v2:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$ ((fun_app$o(?v0, ?v1) = fun_app$o(?v0, ?v2)) = (?v1 = ?v2)) ∧ ∀ ?v1:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun$ ∃ ?v2:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$ (?v1 = fun_app$o(?v0, ?v2))) ⇒ bij_betw$l(?v0, top$c, top$d))
+tff(axiom636,axiom,
+    ! [A__questionmark_v0: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_a_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_fun$'] :
+      ( ( ! [A__questionmark_v1: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$',A__questionmark_v2: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$'] :
+            ( ( 'fun_app$o'(A__questionmark_v0,A__questionmark_v1) = 'fun_app$o'(A__questionmark_v0,A__questionmark_v2) )
+          <=> ( A__questionmark_v1 = A__questionmark_v2 ) )
+        & ! [A__questionmark_v1: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun$'] :
+          ? [A__questionmark_v2: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$'] : ( A__questionmark_v1 = 'fun_app$o'(A__questionmark_v0,A__questionmark_v2) ) )
+     => 'bij_betw$l'(A__questionmark_v0,'top$c','top$d') ) ).
+
+%% ∀ ?v0:C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$ ((∀ ?v1:C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun$ ?v2:C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun$ ((fun_app$e(?v0, ?v1) = fun_app$e(?v0, ?v2)) = (?v1 = ?v2)) ∧ ∀ ?v1:B_ell2_b_ell2_cblinfun$ ∃ ?v2:C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun$ (?v1 = fun_app$e(?v0, ?v2))) ⇒ bij_betw$m(?v0, top$b, top$a))
+tff(axiom637,axiom,
+    ! [A__questionmark_v0: 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun_b_ell2_b_ell2_cblinfun_fun$'] :
+      ( ( ! [A__questionmark_v1: 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun$',A__questionmark_v2: 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun$'] :
+            ( ( 'fun_app$e'(A__questionmark_v0,A__questionmark_v1) = 'fun_app$e'(A__questionmark_v0,A__questionmark_v2) )
+          <=> ( A__questionmark_v1 = A__questionmark_v2 ) )
+        & ! [A__questionmark_v1: 'B_ell2_b_ell2_cblinfun$'] :
+          ? [A__questionmark_v2: 'C_a_a_c_prod_b_complement_domain_prod_prod_ell2_c_a_a_c_prod_b_complement_domain_prod_prod_ell2_cblinfun$'] : ( A__questionmark_v1 = 'fun_app$e'(A__questionmark_v0,A__questionmark_v2) ) )
+     => 'bij_betw$m'(A__questionmark_v0,'top$b','top$a') ) ).
+
+%% ∀ ?v0:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$ ((∀ ?v1:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun$ ?v2:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun$ ((fun_app$n(?v0, ?v1) = fun_app$n(?v0, ?v2)) = (?v1 = ?v2)) ∧ ∀ ?v1:C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$ ∃ ?v2:A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun$ (?v1 = fun_app$n(?v0, ?v2))) ⇒ bij_betw$n(?v0, top$d, top$c))
+tff(axiom638,axiom,
+    ! [A__questionmark_v0: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun_c_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun_fun$'] :
+      ( ( ! [A__questionmark_v1: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun$',A__questionmark_v2: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun$'] :
+            ( ( 'fun_app$n'(A__questionmark_v0,A__questionmark_v1) = 'fun_app$n'(A__questionmark_v0,A__questionmark_v2) )
+          <=> ( A__questionmark_v1 = A__questionmark_v2 ) )
+        & ! [A__questionmark_v1: 'C_c_b_complement_domain_prod_ell2_c_c_b_complement_domain_prod_ell2_cblinfun$'] :
+          ? [A__questionmark_v2: 'A_a_b_complement_domain_prod_ell2_a_a_b_complement_domain_prod_ell2_cblinfun$'] : ( A__questionmark_v1 = 'fun_app$n'(A__questionmark_v0,A__questionmark_v2) ) )
+     => 'bij_betw$n'(A__questionmark_v0,'top$d','top$c') ) ).
+
+%% ∀ ?v0:A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$ ?v1:A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$ (((comp$bv(?v0, ?v1) = id$) ∧ (comp$bv(?v1, ?v0) = id$)) = (∀ ?v2:A_ell2_a_ell2_cblinfun$ (fun_app$ab(?v0, fun_app$ab(?v1, ?v2)) = ?v2) ∧ ∀ ?v2:A_ell2_a_ell2_cblinfun$ (fun_app$ab(?v1, fun_app$ab(?v0, ?v2)) = ?v2)))
+tff(axiom639,axiom,
+    ! [A__questionmark_v0: 'A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$',A__questionmark_v1: 'A_ell2_a_ell2_cblinfun_a_ell2_a_ell2_cblinfun_fun$'] :
+      ( ( ( 'comp$bv'(A__questionmark_v0,A__questionmark_v1) = 'id$' )
+        & ( 'comp$bv'(A__questionmark_v1,A__questionmark_v0) = 'id$' ) )
+    <=> ( ! [A__questionmark_v2: 'A_ell2_a_ell2_cblinfun$'] : ( 'fun_app$ab'(A__questionmark_v0,'fun_app$ab'(A__questionmark_v1,A__questionmark_v2)) = A__questionmark_v2 )
+        & ! [A__questionmark_v2: 'A_ell2_a_ell2_cblinfun$'] : ( 'fun_app$ab'(A__questionmark_v1,'fun_app$ab'(A__questionmark_v0,A__questionmark_v2)) = A__questionmark_v2 ) ) ) ).
+
+%------------------------------------------------------------------------------

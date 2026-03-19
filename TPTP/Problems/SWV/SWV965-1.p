@@ -1,0 +1,1521 @@
+%------------------------------------------------------------------------------
+% File     : SWV965-1 : TPTP v9.2.1. Released v4.1.0.
+% Domain   : Software Verification
+% Problem  : Java type soundness 412_48
+% Version  : Especial.
+% English  :
+
+% Refs     : [vON99] von Oheimb & Nipkow (1999), Machine-Checking the Java
+%          : [Nip10] Nipkow (2010), Email to Geoff Sutcliffe
+%          : [BN10]  Boehme & Nipkow (2010), Sledgehammer: Judgement Day
+% Source   : [Nip10]
+% Names    : TypeSafe-412_48 [Nip10]
+
+% Status   : Unsatisfiable
+% Rating   : 1.00 v4.1.0
+% Syntax   : Number of clauses     :  285 (  76 unt; 121 nHn; 157 RR)
+%            Number of literals    :  924 ( 422 equ; 414 neg)
+%            Maximal clause size   :    6 (   3 avg)
+%            Maximal term depth    :    8 (   1 avg)
+%            Number of predicates  :   16 (  15 usr;   0 prp; 1-6 aty)
+%            Number of functors    :   53 (  53 usr;  16 con; 0-7 aty)
+%            Number of variables   : 1742 ( 678 sgn)
+% SPC      : CNF_UNS_RFO_SEQ_NHN
+
+% Comments :
+%------------------------------------------------------------------------------
+cnf(cls_WTCond_1,axiom,
+    ( ~ c_TypeRel_Owiden(V_P,V_x,V_x,tc_prod(tc_List_Olist(tc_List_Olist(tc_String_Ochar)),tc_Expr_Oexp(tc_List_Olist(tc_String_Ochar))))
+    | ~ c_WellType_OWT(V_P,V_E,V_e_092_060_094isub_0622,V_x)
+    | ~ c_WellType_OWT(V_P,V_E,V_e_092_060_094isub_0621,V_x)
+    | ~ c_WellType_OWT(V_P,V_E,V_e,c_Type_Oty_OBoolean)
+    | c_WellType_OWT(V_P,V_E,c_Expr_Oexp_OCond(V_e,V_e_092_060_094isub_0621,V_e_092_060_094isub_0622,tc_List_Olist(tc_String_Ochar)),V_x) ) ).
+
+cnf(cls_WTCond_0,axiom,
+    ( ~ c_TypeRel_Owiden(V_P,V_T_092_060_094isub_0621,V_x,tc_prod(tc_List_Olist(tc_List_Olist(tc_String_Ochar)),tc_Expr_Oexp(tc_List_Olist(tc_String_Ochar))))
+    | ~ c_WellType_OWT(V_P,V_E,V_e_092_060_094isub_0622,V_x)
+    | ~ c_WellType_OWT(V_P,V_E,V_e_092_060_094isub_0621,V_T_092_060_094isub_0621)
+    | ~ c_WellType_OWT(V_P,V_E,V_e,c_Type_Oty_OBoolean)
+    | c_WellType_OWT(V_P,V_E,c_Expr_Oexp_OCond(V_e,V_e_092_060_094isub_0621,V_e_092_060_094isub_0622,tc_List_Olist(tc_String_Ochar)),V_x)
+    | c_TypeRel_Owiden(V_P,V_x,V_T_092_060_094isub_0621,tc_prod(tc_List_Olist(tc_List_Olist(tc_String_Ochar)),tc_Expr_Oexp(tc_List_Olist(tc_String_Ochar)))) ) ).
+
+cnf(cls_WTCond_2,axiom,
+    ( c_TypeRel_Owiden(V_P,V_x,V_T_092_060_094isub_0622,tc_prod(tc_List_Olist(tc_List_Olist(tc_String_Ochar)),tc_Expr_Oexp(tc_List_Olist(tc_String_Ochar))))
+    | ~ c_TypeRel_Owiden(V_P,V_T_092_060_094isub_0622,V_x,tc_prod(tc_List_Olist(tc_List_Olist(tc_String_Ochar)),tc_Expr_Oexp(tc_List_Olist(tc_String_Ochar))))
+    | ~ c_WellType_OWT(V_P,V_E,V_e_092_060_094isub_0622,V_T_092_060_094isub_0622)
+    | ~ c_WellType_OWT(V_P,V_E,V_e_092_060_094isub_0621,V_x)
+    | ~ c_WellType_OWT(V_P,V_E,V_e,c_Type_Oty_OBoolean)
+    | c_WellType_OWT(V_P,V_E,c_Expr_Oexp_OCond(V_e,V_e_092_060_094isub_0621,V_e_092_060_094isub_0622,tc_List_Olist(tc_String_Ochar)),V_x) ) ).
+
+cnf(cls_WTrt__elim__cases_I8_J_2,axiom,
+    ( c_WellTypeRT_OWTrt(V_P,V_h,V_E,V_v,c_WellTypeRT_Osko__WellTypeRT__XWTrt__elim__cases__8__4(V_E,V_P,V_h,V_v))
+    | V_T = c_Type_Oty_OVoid
+    | ~ c_WellTypeRT_OWTrt(V_P,V_h,V_E,c_Expr_Oexp_OFAss(V_e,V_F,V_D,V_v,tc_List_Olist(tc_String_Ochar)),V_T) ) ).
+
+cnf(cls_WTrtCond_0,axiom,
+    ( ~ c_TypeRel_Owiden(V_P,V_T_092_060_094isub_0621,V_x,tc_prod(tc_List_Olist(tc_List_Olist(tc_String_Ochar)),tc_Expr_Oexp(tc_List_Olist(tc_String_Ochar))))
+    | ~ c_WellTypeRT_OWTrt(V_P,V_h,V_E,V_e_092_060_094isub_0622,V_x)
+    | ~ c_WellTypeRT_OWTrt(V_P,V_h,V_E,V_e_092_060_094isub_0621,V_T_092_060_094isub_0621)
+    | ~ c_WellTypeRT_OWTrt(V_P,V_h,V_E,V_e,c_Type_Oty_OBoolean)
+    | c_WellTypeRT_OWTrt(V_P,V_h,V_E,c_Expr_Oexp_OCond(V_e,V_e_092_060_094isub_0621,V_e_092_060_094isub_0622,tc_List_Olist(tc_String_Ochar)),V_x)
+    | c_TypeRel_Owiden(V_P,V_x,V_T_092_060_094isub_0621,tc_prod(tc_List_Olist(tc_List_Olist(tc_String_Ochar)),tc_Expr_Oexp(tc_List_Olist(tc_String_Ochar)))) ) ).
+
+cnf(cls_WTrtCond_2,axiom,
+    ( c_TypeRel_Owiden(V_P,V_x,V_T_092_060_094isub_0622,tc_prod(tc_List_Olist(tc_List_Olist(tc_String_Ochar)),tc_Expr_Oexp(tc_List_Olist(tc_String_Ochar))))
+    | ~ c_TypeRel_Owiden(V_P,V_T_092_060_094isub_0622,V_x,tc_prod(tc_List_Olist(tc_List_Olist(tc_String_Ochar)),tc_Expr_Oexp(tc_List_Olist(tc_String_Ochar))))
+    | ~ c_WellTypeRT_OWTrt(V_P,V_h,V_E,V_e_092_060_094isub_0622,V_T_092_060_094isub_0622)
+    | ~ c_WellTypeRT_OWTrt(V_P,V_h,V_E,V_e_092_060_094isub_0621,V_x)
+    | ~ c_WellTypeRT_OWTrt(V_P,V_h,V_E,V_e,c_Type_Oty_OBoolean)
+    | c_WellTypeRT_OWTrt(V_P,V_h,V_E,c_Expr_Oexp_OCond(V_e,V_e_092_060_094isub_0621,V_e_092_060_094isub_0622,tc_List_Olist(tc_String_Ochar)),V_x) ) ).
+
+cnf(cls_WTrtCond_1,axiom,
+    ( ~ c_TypeRel_Owiden(V_P,V_x,V_x,tc_prod(tc_List_Olist(tc_List_Olist(tc_String_Ochar)),tc_Expr_Oexp(tc_List_Olist(tc_String_Ochar))))
+    | ~ c_WellTypeRT_OWTrt(V_P,V_h,V_E,V_e_092_060_094isub_0622,V_x)
+    | ~ c_WellTypeRT_OWTrt(V_P,V_h,V_E,V_e_092_060_094isub_0621,V_x)
+    | ~ c_WellTypeRT_OWTrt(V_P,V_h,V_E,V_e,c_Type_Oty_OBoolean)
+    | c_WellTypeRT_OWTrt(V_P,V_h,V_E,c_Expr_Oexp_OCond(V_e,V_e_092_060_094isub_0621,V_e_092_060_094isub_0622,tc_List_Olist(tc_String_Ochar)),V_x) ) ).
+
+cnf(cls_WTWhile_0,axiom,
+    ( c_WellType_OWT(V_P,V_E,c_Expr_Oexp_OWhile(V_e,V_c,tc_List_Olist(tc_String_Ochar)),c_Type_Oty_OVoid)
+    | ~ c_WellType_OWT(V_P,V_E,V_c,V_T)
+    | ~ c_WellType_OWT(V_P,V_E,V_e,c_Type_Oty_OBoolean) ) ).
+
+cnf(cls_WTrtWhile_0,axiom,
+    ( c_WellTypeRT_OWTrt(V_P,V_h,V_E,c_Expr_Oexp_OWhile(V_e,V_c,tc_List_Olist(tc_String_Ochar)),c_Type_Oty_OVoid)
+    | ~ c_WellTypeRT_OWTrt(V_P,V_h,V_E,V_c,V_T)
+    | ~ c_WellTypeRT_OWTrt(V_P,V_h,V_E,V_e,c_Type_Oty_OBoolean) ) ).
+
+cnf(cls_sees__field__idemp_0,axiom,
+    ( c_TypeRel_Osees__field(V_P,V_D,V_F,V_T,V_D,T_a)
+    | ~ c_TypeRel_Osees__field(V_P,V_C,V_F,V_T,V_D,T_a) ) ).
+
+cnf(cls_WTrt__elim__cases_I8_J_6,axiom,
+    ( V_T = c_Type_Oty_OVoid
+    | c_TypeRel_Ohas__field(V_P,c_WellTypeRT_Osko__WellTypeRT__XWTrt__elim__cases__8__1(V_D,V_E,V_F,V_P,V_e,V_h,V_v),V_F,c_WellTypeRT_Osko__WellTypeRT__XWTrt__elim__cases__8__2(V_D,V_E,V_F,V_P,V_e,V_h,V_v),V_D,tc_prod(tc_List_Olist(tc_List_Olist(tc_String_Ochar)),tc_Expr_Oexp(tc_List_Olist(tc_String_Ochar))))
+    | ~ c_WellTypeRT_OWTrt(V_P,V_h,V_E,c_Expr_Oexp_OFAss(V_e,V_F,V_D,V_v,tc_List_Olist(tc_String_Ochar)),V_T) ) ).
+
+cnf(cls_exp_Osimps_I179_J_0,axiom,
+    c_Expr_Oexp_OWhile(V_exp1_H,V_exp2_H,T_a) != c_Expr_Oexp_OFAss(V_exp1,V_list1,V_list2,V_exp2,T_a) ).
+
+cnf(cls_exp_Osimps_I209_J_0,axiom,
+    c_Expr_Oexp_OWhile(V_exp1_H,V_exp2_H,T_a) != c_Expr_Oexp_OSeq(V_exp1,V_exp2,T_a) ).
+
+cnf(cls_exp_Osimps_I13_J_1,axiom,
+    ( c_Expr_Oexp_OWhile(V_exp1,V_exp2,T_a) != c_Expr_Oexp_OWhile(V_exp1_H,V_exp2_H,T_a)
+    | V_exp2 = V_exp2_H ) ).
+
+cnf(cls_exp_Osimps_I13_J_0,axiom,
+    ( c_Expr_Oexp_OWhile(V_exp1,V_exp2,T_a) != c_Expr_Oexp_OWhile(V_exp1_H,V_exp2_H,T_a)
+    | V_exp1 = V_exp1_H ) ).
+
+cnf(cls_exp_Osimps_I176_J_0,axiom,
+    c_Expr_Oexp_OFAss(V_exp1,V_list1,V_list2,V_exp2,T_a) != c_Expr_Oexp_OCond(V_exp1_H,V_exp2_H,V_exp3_H,T_a) ).
+
+cnf(cls_exp_Osimps_I190_J_0,axiom,
+    c_Expr_Oexp_OCall(V_exp,V_list1,V_list2,T_a) != c_Expr_Oexp_OWhile(V_exp1_H,V_exp2_H,T_a) ).
+
+cnf(cls_exp_Osimps_I162_J_0,axiom,
+    c_Expr_Oexp_OFAcc(V_exp,V_list1,V_list2,T_a) != c_Expr_Oexp_OCond(V_exp1_H,V_exp2_H,V_exp3_H,T_a) ).
+
+cnf(cls_WTrt__elim__cases_I8_J_14,axiom,
+    ( c_WellTypeRT_OWTrt(V_P,V_h,V_E,V_v,c_WellTypeRT_Osko__WellTypeRT__XWTrt__elim__cases__8__4(V_E,V_P,V_h,V_v))
+    | c_TypeRel_Owiden(V_P,c_WellTypeRT_Osko__WellTypeRT__XWTrt__elim__cases__8__3(V_D,V_E,V_F,V_P,V_e,V_h,V_v),c_WellTypeRT_Osko__WellTypeRT__XWTrt__elim__cases__8__2(V_D,V_E,V_F,V_P,V_e,V_h,V_v),tc_prod(tc_List_Olist(tc_List_Olist(tc_String_Ochar)),tc_Expr_Oexp(tc_List_Olist(tc_String_Ochar))))
+    | ~ c_WellTypeRT_OWTrt(V_P,V_h,V_E,c_Expr_Oexp_OFAss(V_e,V_F,V_D,V_v,tc_List_Olist(tc_String_Ochar)),V_T) ) ).
+
+cnf(cls_has__visible__field_0,axiom,
+    ( c_TypeRel_Ohas__field(V_P,V_C,V_F,V_T,V_D,T_a)
+    | ~ c_TypeRel_Osees__field(V_P,V_C,V_F,V_T,V_D,T_a) ) ).
+
+cnf(cls_wts_H__wts_0,axiom,
+    ( c_WellTypeRT_OWTrts(V_P,V_h,V_E,V_es,V_Ts)
+    | ~ c_Progress_OWTrts_H(V_P,V_h,V_E,V_es,V_Ts) ) ).
+
+cnf(cls_wts__wts_H_0,axiom,
+    ( c_Progress_OWTrts_H(V_P,V_h,V_E,V_es,V_Ts)
+    | ~ c_WellTypeRT_OWTrts(V_P,V_h,V_E,V_es,V_Ts) ) ).
+
+cnf(cls_WT__elim__cases_I7_J_1,axiom,
+    ( c_TypeRel_Osees__field(V_P,c_WellType_Osko__WellType__XWT__elim__cases__7__1(V_D,V_E,V_F,V_P,V_T,V_a),V_F,V_T,V_D,tc_prod(tc_List_Olist(tc_List_Olist(tc_String_Ochar)),tc_Expr_Oexp(tc_List_Olist(tc_String_Ochar))))
+    | ~ c_WellType_OWT(V_P,V_E,c_Expr_Oexp_OFAcc(V_a,V_F,V_D,tc_List_Olist(tc_String_Ochar)),V_T) ) ).
+
+cnf(cls_exp_Osimps_I214_J_0,axiom,
+    c_Expr_Oexp_OCond(V_exp1,V_exp2,V_exp3,T_a) != c_Expr_Oexp_OWhile(V_exp1_H,V_exp2_H,T_a) ).
+
+cnf(cls_exp_Osimps_I163_J_0,axiom,
+    c_Expr_Oexp_OCond(V_exp1_H,V_exp2_H,V_exp3_H,T_a) != c_Expr_Oexp_OFAcc(V_exp,V_list1,V_list2,T_a) ).
+
+cnf(cls_exp_Osimps_I189_J_0,axiom,
+    c_Expr_Oexp_OCond(V_exp1_H,V_exp2_H,V_exp3_H,T_a) != c_Expr_Oexp_OCall(V_exp,V_list1,V_list2,T_a) ).
+
+cnf(cls_exp_Osimps_I215_J_0,axiom,
+    c_Expr_Oexp_OWhile(V_exp1_H,V_exp2_H,T_a) != c_Expr_Oexp_OCond(V_exp1,V_exp2,V_exp3,T_a) ).
+
+cnf(cls_exp_Osimps_I206_J_0,axiom,
+    c_Expr_Oexp_OSeq(V_exp1,V_exp2,T_a) != c_Expr_Oexp_OCond(V_exp1_H,V_exp2_H,V_exp3_H,T_a) ).
+
+cnf(cls_exp_Osimps_I177_J_0,axiom,
+    c_Expr_Oexp_OCond(V_exp1_H,V_exp2_H,V_exp3_H,T_a) != c_Expr_Oexp_OFAss(V_exp1,V_list1,V_list2,V_exp2,T_a) ).
+
+cnf(cls_exp_Osimps_I188_J_0,axiom,
+    c_Expr_Oexp_OCall(V_exp,V_list1,V_list2,T_a) != c_Expr_Oexp_OCond(V_exp1_H,V_exp2_H,V_exp3_H,T_a) ).
+
+cnf(cls_WTrt__elim__cases_I8_J_8,axiom,
+    ( c_WellTypeRT_OWTrt(V_P,V_h,V_E,V_v,c_WellTypeRT_Osko__WellTypeRT__XWTrt__elim__cases__8__4(V_E,V_P,V_h,V_v))
+    | c_TypeRel_Ohas__field(V_P,c_WellTypeRT_Osko__WellTypeRT__XWTrt__elim__cases__8__1(V_D,V_E,V_F,V_P,V_e,V_h,V_v),V_F,c_WellTypeRT_Osko__WellTypeRT__XWTrt__elim__cases__8__2(V_D,V_E,V_F,V_P,V_e,V_h,V_v),V_D,tc_prod(tc_List_Olist(tc_List_Olist(tc_String_Ochar)),tc_Expr_Oexp(tc_List_Olist(tc_String_Ochar))))
+    | ~ c_WellTypeRT_OWTrt(V_P,V_h,V_E,c_Expr_Oexp_OFAss(V_e,V_F,V_D,V_v,tc_List_Olist(tc_String_Ochar)),V_T) ) ).
+
+cnf(cls_exp_Osimps_I208_J_0,axiom,
+    c_Expr_Oexp_OSeq(V_exp1,V_exp2,T_a) != c_Expr_Oexp_OWhile(V_exp1_H,V_exp2_H,T_a) ).
+
+cnf(cls_exp_Osimps_I207_J_0,axiom,
+    c_Expr_Oexp_OCond(V_exp1_H,V_exp2_H,V_exp3_H,T_a) != c_Expr_Oexp_OSeq(V_exp1,V_exp2,T_a) ).
+
+cnf(cls_sees__field__fun_0,axiom,
+    ( V_T_H = V_T
+    | ~ c_TypeRel_Osees__field(V_P,V_C,V_F,V_T_H,V_D_H,T_a)
+    | ~ c_TypeRel_Osees__field(V_P,V_C,V_F,V_T,V_D,T_a) ) ).
+
+cnf(cls_sees__field__fun_1,axiom,
+    ( V_D_H = V_D
+    | ~ c_TypeRel_Osees__field(V_P,V_C,V_F,V_T_H,V_D_H,T_a)
+    | ~ c_TypeRel_Osees__field(V_P,V_C,V_F,V_T,V_D,T_a) ) ).
+
+cnf(cls_exp_Osimps_I164_J_0,axiom,
+    c_Expr_Oexp_OFAcc(V_exp,V_list1,V_list2,T_a) != c_Expr_Oexp_OWhile(V_exp1_H,V_exp2_H,T_a) ).
+
+cnf(cls_exp_Osimps_I178_J_0,axiom,
+    c_Expr_Oexp_OFAss(V_exp1,V_list1,V_list2,V_exp2,T_a) != c_Expr_Oexp_OWhile(V_exp1_H,V_exp2_H,T_a) ).
+
+cnf(cls_exp_Osimps_I12_J_2,axiom,
+    ( c_Expr_Oexp_OCond(V_exp1,V_exp2,V_exp3,T_a) != c_Expr_Oexp_OCond(V_exp1_H,V_exp2_H,V_exp3_H,T_a)
+    | V_exp3 = V_exp3_H ) ).
+
+cnf(cls_exp_Osimps_I12_J_1,axiom,
+    ( c_Expr_Oexp_OCond(V_exp1,V_exp2,V_exp3,T_a) != c_Expr_Oexp_OCond(V_exp1_H,V_exp2_H,V_exp3_H,T_a)
+    | V_exp2 = V_exp2_H ) ).
+
+cnf(cls_exp_Osimps_I12_J_0,axiom,
+    ( c_Expr_Oexp_OCond(V_exp1,V_exp2,V_exp3,T_a) != c_Expr_Oexp_OCond(V_exp1_H,V_exp2_H,V_exp3_H,T_a)
+    | V_exp1 = V_exp1_H ) ).
+
+cnf(cls_WTrt__elim__cases_I8_J_7,axiom,
+    ( c_WellTypeRT_OWTrt(V_P,V_h,V_E,V_e,c_Type_Oty_ONT)
+    | c_TypeRel_Ohas__field(V_P,c_WellTypeRT_Osko__WellTypeRT__XWTrt__elim__cases__8__1(V_D,V_E,V_F,V_P,V_e,V_h,V_v),V_F,c_WellTypeRT_Osko__WellTypeRT__XWTrt__elim__cases__8__2(V_D,V_E,V_F,V_P,V_e,V_h,V_v),V_D,tc_prod(tc_List_Olist(tc_List_Olist(tc_String_Ochar)),tc_Expr_Oexp(tc_List_Olist(tc_String_Ochar))))
+    | ~ c_WellTypeRT_OWTrt(V_P,V_h,V_E,c_Expr_Oexp_OFAss(V_e,V_F,V_D,V_v,tc_List_Olist(tc_String_Ochar)),V_T) ) ).
+
+cnf(cls_exp_Osimps_I165_J_0,axiom,
+    c_Expr_Oexp_OWhile(V_exp1_H,V_exp2_H,T_a) != c_Expr_Oexp_OFAcc(V_exp,V_list1,V_list2,T_a) ).
+
+cnf(cls_exp_Osimps_I191_J_0,axiom,
+    c_Expr_Oexp_OWhile(V_exp1_H,V_exp2_H,T_a) != c_Expr_Oexp_OCall(V_exp,V_list1,V_list2,T_a) ).
+
+cnf(cls_WTrt__elim__cases_I8_J_5,axiom,
+    ( c_WellTypeRT_OWTrt(V_P,V_h,V_E,V_v,c_WellTypeRT_Osko__WellTypeRT__XWTrt__elim__cases__8__4(V_E,V_P,V_h,V_v))
+    | c_WellTypeRT_OWTrt(V_P,V_h,V_E,V_e,c_Type_Oty_OClass(c_WellTypeRT_Osko__WellTypeRT__XWTrt__elim__cases__8__1(V_D,V_E,V_F,V_P,V_e,V_h,V_v)))
+    | ~ c_WellTypeRT_OWTrt(V_P,V_h,V_E,c_Expr_Oexp_OFAss(V_e,V_F,V_D,V_v,tc_List_Olist(tc_String_Ochar)),V_T) ) ).
+
+cnf(cls_WTrt__elim__cases_I3_J_0,axiom,
+    ( V_T = c_Type_Oty_OVoid
+    | ~ c_WellTypeRT_OWTrt(V_P,V_h,V_E,c_Expr_Oexp_OWhile(V_e,V_c,tc_List_Olist(tc_String_Ochar)),V_T) ) ).
+
+cnf(cls_WTrt__elim__cases_I3_J_1,axiom,
+    ( c_WellTypeRT_OWTrt(V_P,V_h,V_E,V_e,c_Type_Oty_OBoolean)
+    | ~ c_WellTypeRT_OWTrt(V_P,V_h,V_E,c_Expr_Oexp_OWhile(V_e,V_c,tc_List_Olist(tc_String_Ochar)),V_T) ) ).
+
+cnf(cls_WTrt__elim__cases_I2_J_0,axiom,
+    ( c_WellTypeRT_OWTrt(V_P,V_h,V_E,V_e,c_Type_Oty_OBoolean)
+    | ~ c_WellTypeRT_OWTrt(V_P,V_h,V_E,c_Expr_Oexp_OCond(V_e,V_e_092_060_094isub_0621,V_e_092_060_094isub_0622,tc_List_Olist(tc_String_Ochar)),V_T) ) ).
+
+cnf(cls_WT__elim__cases_I3_J_1,axiom,
+    ( c_WellType_OWT(V_P,V_E,V_e,c_Type_Oty_OBoolean)
+    | ~ c_WellType_OWT(V_P,V_E,c_Expr_Oexp_OWhile(V_e,V_c,tc_List_Olist(tc_String_Ochar)),V_T) ) ).
+
+cnf(cls_WT__elim__cases_I2_J_0,axiom,
+    ( c_WellType_OWT(V_P,V_E,V_e,c_Type_Oty_OBoolean)
+    | ~ c_WellType_OWT(V_P,V_E,c_Expr_Oexp_OCond(V_e,V_e_092_060_094isub_0621,V_e_092_060_094isub_0622,tc_List_Olist(tc_String_Ochar)),V_T) ) ).
+
+cnf(cls_WT__elim__cases_I3_J_0,axiom,
+    ( V_T = c_Type_Oty_OVoid
+    | ~ c_WellType_OWT(V_P,V_E,c_Expr_Oexp_OWhile(V_e,V_c,tc_List_Olist(tc_String_Ochar)),V_T) ) ).
+
+cnf(cls_WTrt_H__WTrts_H_Ointros_I20_J_0,axiom,
+    ( c_Progress_OWTrt_H(V_P,V_h,V_E,c_Expr_Oexp_OWhile(V_e,V_c,tc_List_Olist(tc_String_Ochar)),c_Type_Oty_OVoid)
+    | ~ c_Progress_OWTrt_H(V_P,V_h,V_E,V_c,V_T)
+    | ~ c_Progress_OWTrt_H(V_P,V_h,V_E,V_e,c_Type_Oty_OBoolean) ) ).
+
+cnf(cls_WTrtFAcc_0,axiom,
+    ( c_WellTypeRT_OWTrt(V_P,V_h,V_E,c_Expr_Oexp_OFAcc(V_e,V_F,V_D,tc_List_Olist(tc_String_Ochar)),V_T)
+    | ~ c_TypeRel_Ohas__field(V_P,V_C,V_F,V_T,V_D,tc_prod(tc_List_Olist(tc_List_Olist(tc_String_Ochar)),tc_Expr_Oexp(tc_List_Olist(tc_String_Ochar))))
+    | ~ c_WellTypeRT_OWTrt(V_P,V_h,V_E,V_e,c_Type_Oty_OClass(V_C)) ) ).
+
+cnf(cls_WTFAcc_0,axiom,
+    ( c_WellType_OWT(V_P,V_E,c_Expr_Oexp_OFAcc(V_e,V_F,V_D,tc_List_Olist(tc_String_Ochar)),V_T)
+    | ~ c_TypeRel_Osees__field(V_P,V_C,V_F,V_T,V_D,tc_prod(tc_List_Olist(tc_List_Olist(tc_String_Ochar)),tc_Expr_Oexp(tc_List_Olist(tc_String_Ochar))))
+    | ~ c_WellType_OWT(V_P,V_E,V_e,c_Type_Oty_OClass(V_C)) ) ).
+
+cnf(cls_WT__elim__cases_I7_J_0,axiom,
+    ( c_WellType_OWT(V_P,V_E,V_a,c_Type_Oty_OClass(c_WellType_Osko__WellType__XWT__elim__cases__7__1(V_D,V_E,V_F,V_P,V_T,V_a)))
+    | ~ c_WellType_OWT(V_P,V_E,c_Expr_Oexp_OFAcc(V_a,V_F,V_D,tc_List_Olist(tc_String_Ochar)),V_T) ) ).
+
+cnf(cls_WTrt_H__WTrts_H_Ointros_I19_J_1,axiom,
+    ( ~ c_TypeRel_Owiden(V_P,V_x,V_x,tc_prod(tc_List_Olist(tc_List_Olist(tc_String_Ochar)),tc_Expr_Oexp(tc_List_Olist(tc_String_Ochar))))
+    | ~ c_Progress_OWTrt_H(V_P,V_h,V_E,V_e_092_060_094isub_0622,V_x)
+    | ~ c_Progress_OWTrt_H(V_P,V_h,V_E,V_e_092_060_094isub_0621,V_x)
+    | ~ c_Progress_OWTrt_H(V_P,V_h,V_E,V_e,c_Type_Oty_OBoolean)
+    | c_Progress_OWTrt_H(V_P,V_h,V_E,c_Expr_Oexp_OCond(V_e,V_e_092_060_094isub_0621,V_e_092_060_094isub_0622,tc_List_Olist(tc_String_Ochar)),V_x) ) ).
+
+cnf(cls_WTrt_H__WTrts_H_Ointros_I19_J_0,axiom,
+    ( ~ c_TypeRel_Owiden(V_P,V_T_092_060_094isub_0621,V_x,tc_prod(tc_List_Olist(tc_List_Olist(tc_String_Ochar)),tc_Expr_Oexp(tc_List_Olist(tc_String_Ochar))))
+    | ~ c_Progress_OWTrt_H(V_P,V_h,V_E,V_e_092_060_094isub_0622,V_x)
+    | ~ c_Progress_OWTrt_H(V_P,V_h,V_E,V_e_092_060_094isub_0621,V_T_092_060_094isub_0621)
+    | ~ c_Progress_OWTrt_H(V_P,V_h,V_E,V_e,c_Type_Oty_OBoolean)
+    | c_Progress_OWTrt_H(V_P,V_h,V_E,c_Expr_Oexp_OCond(V_e,V_e_092_060_094isub_0621,V_e_092_060_094isub_0622,tc_List_Olist(tc_String_Ochar)),V_x)
+    | c_TypeRel_Owiden(V_P,V_x,V_T_092_060_094isub_0621,tc_prod(tc_List_Olist(tc_List_Olist(tc_String_Ochar)),tc_Expr_Oexp(tc_List_Olist(tc_String_Ochar)))) ) ).
+
+cnf(cls_WTrt_H__WTrts_H_Ointros_I19_J_2,axiom,
+    ( c_TypeRel_Owiden(V_P,V_x,V_T_092_060_094isub_0622,tc_prod(tc_List_Olist(tc_List_Olist(tc_String_Ochar)),tc_Expr_Oexp(tc_List_Olist(tc_String_Ochar))))
+    | ~ c_TypeRel_Owiden(V_P,V_T_092_060_094isub_0622,V_x,tc_prod(tc_List_Olist(tc_List_Olist(tc_String_Ochar)),tc_Expr_Oexp(tc_List_Olist(tc_String_Ochar))))
+    | ~ c_Progress_OWTrt_H(V_P,V_h,V_E,V_e_092_060_094isub_0622,V_T_092_060_094isub_0622)
+    | ~ c_Progress_OWTrt_H(V_P,V_h,V_E,V_e_092_060_094isub_0621,V_x)
+    | ~ c_Progress_OWTrt_H(V_P,V_h,V_E,V_e,c_Type_Oty_OBoolean)
+    | c_Progress_OWTrt_H(V_P,V_h,V_E,c_Expr_Oexp_OCond(V_e,V_e_092_060_094isub_0621,V_e_092_060_094isub_0622,tc_List_Olist(tc_String_Ochar)),V_x) ) ).
+
+cnf(cls_WTrt_H__WTrts_H_Ointros_I13_J_0,axiom,
+    ( c_Progress_OWTrt_H(V_P,V_h,V_E,c_Expr_Oexp_OCall(V_e,V_M,V_es,tc_List_Olist(tc_String_Ochar)),V_T)
+    | ~ c_Progress_OWTrts_H(V_P,V_h,V_E,V_es,V_Ts)
+    | ~ c_Progress_OWTrt_H(V_P,V_h,V_E,V_e,c_Type_Oty_ONT) ) ).
+
+cnf(cls_WTrt_H__WTrts_H_Ointros_I8_J_0,axiom,
+    ( c_Progress_OWTrt_H(V_P,V_h,V_E,c_Expr_Oexp_OFAcc(V_e,V_F,V_D,tc_List_Olist(tc_String_Ochar)),V_T)
+    | ~ c_TypeRel_Ohas__field(V_P,V_C,V_F,V_T,V_D,tc_prod(tc_List_Olist(tc_List_Olist(tc_String_Ochar)),tc_Expr_Oexp(tc_List_Olist(tc_String_Ochar))))
+    | ~ c_Progress_OWTrt_H(V_P,V_h,V_E,V_e,c_Type_Oty_OClass(V_C)) ) ).
+
+cnf(cls_refTE_0,axiom,
+    ( V_T = c_Type_Oty_OClass(c_Type_Osko__Type__XrefTE__1__1(V_T))
+    | V_T = c_Type_Oty_ONT
+    | ~ c_Type_Ois__refT(V_T) ) ).
+
+cnf(cls_is__refT__def_0,axiom,
+    ( V_T = c_Type_Oty_OClass(c_Type_Osko__Type__Xis__refT__def__1__1(V_T))
+    | V_T = c_Type_Oty_ONT
+    | ~ c_Type_Ois__refT(V_T) ) ).
+
+cnf(cls_WTrt__elim__cases_I8_J_11,axiom,
+    ( c_WellTypeRT_OWTrt(V_P,V_h,V_E,V_v,c_WellTypeRT_Osko__WellTypeRT__XWTrt__elim__cases__8__4(V_E,V_P,V_h,V_v))
+    | c_WellTypeRT_OWTrt(V_P,V_h,V_E,V_v,c_WellTypeRT_Osko__WellTypeRT__XWTrt__elim__cases__8__3(V_D,V_E,V_F,V_P,V_e,V_h,V_v))
+    | ~ c_WellTypeRT_OWTrt(V_P,V_h,V_E,c_Expr_Oexp_OFAss(V_e,V_F,V_D,V_v,tc_List_Olist(tc_String_Ochar)),V_T) ) ).
+
+cnf(cls_WTrt__elim__cases_I8_J_4,axiom,
+    ( c_WellTypeRT_OWTrt(V_P,V_h,V_E,V_e,c_Type_Oty_ONT)
+    | c_WellTypeRT_OWTrt(V_P,V_h,V_E,V_e,c_Type_Oty_OClass(c_WellTypeRT_Osko__WellTypeRT__XWTrt__elim__cases__8__1(V_D,V_E,V_F,V_P,V_e,V_h,V_v)))
+    | ~ c_WellTypeRT_OWTrt(V_P,V_h,V_E,c_Expr_Oexp_OFAss(V_e,V_F,V_D,V_v,tc_List_Olist(tc_String_Ochar)),V_T) ) ).
+
+cnf(cls_WTrt__elim__cases_I8_J_3,axiom,
+    ( V_T = c_Type_Oty_OVoid
+    | c_WellTypeRT_OWTrt(V_P,V_h,V_E,V_e,c_Type_Oty_OClass(c_WellTypeRT_Osko__WellTypeRT__XWTrt__elim__cases__8__1(V_D,V_E,V_F,V_P,V_e,V_h,V_v)))
+    | ~ c_WellTypeRT_OWTrt(V_P,V_h,V_E,c_Expr_Oexp_OFAss(V_e,V_F,V_D,V_v,tc_List_Olist(tc_String_Ochar)),V_T) ) ).
+
+cnf(cls_WTrtFAss_0,axiom,
+    ( c_WellTypeRT_OWTrt(V_P,V_h,V_E,c_Expr_Oexp_OFAss(V_e_092_060_094isub_0621,V_F,V_D,V_e_092_060_094isub_0622,tc_List_Olist(tc_String_Ochar)),c_Type_Oty_OVoid)
+    | ~ c_TypeRel_Owiden(V_P,V_T_092_060_094isub_0622,V_T,tc_prod(tc_List_Olist(tc_List_Olist(tc_String_Ochar)),tc_Expr_Oexp(tc_List_Olist(tc_String_Ochar))))
+    | ~ c_WellTypeRT_OWTrt(V_P,V_h,V_E,V_e_092_060_094isub_0622,V_T_092_060_094isub_0622)
+    | ~ c_TypeRel_Ohas__field(V_P,V_C,V_F,V_T,V_D,tc_prod(tc_List_Olist(tc_List_Olist(tc_String_Ochar)),tc_Expr_Oexp(tc_List_Olist(tc_String_Ochar))))
+    | ~ c_WellTypeRT_OWTrt(V_P,V_h,V_E,V_e_092_060_094isub_0621,c_Type_Oty_OClass(V_C)) ) ).
+
+cnf(cls_WTFAss_0,axiom,
+    ( c_WellType_OWT(V_P,V_E,c_Expr_Oexp_OFAss(V_e_092_060_094isub_0621,V_F,V_D,V_e_092_060_094isub_0622,tc_List_Olist(tc_String_Ochar)),c_Type_Oty_OVoid)
+    | ~ c_TypeRel_Owiden(V_P,V_T_H,V_T,tc_prod(tc_List_Olist(tc_List_Olist(tc_String_Ochar)),tc_Expr_Oexp(tc_List_Olist(tc_String_Ochar))))
+    | ~ c_WellType_OWT(V_P,V_E,V_e_092_060_094isub_0622,V_T_H)
+    | ~ c_TypeRel_Osees__field(V_P,V_C,V_F,V_T,V_D,tc_prod(tc_List_Olist(tc_List_Olist(tc_String_Ochar)),tc_Expr_Oexp(tc_List_Olist(tc_String_Ochar))))
+    | ~ c_WellType_OWT(V_P,V_E,V_e_092_060_094isub_0621,c_Type_Oty_OClass(V_C)) ) ).
+
+cnf(cls_WTrt__elim__cases_I7_J_1,axiom,
+    ( c_WellTypeRT_OWTrt(V_P,V_h,V_E,V_e,c_Type_Oty_ONT)
+    | c_TypeRel_Ohas__field(V_P,c_WellTypeRT_Osko__WellTypeRT__XWTrt__elim__cases__7__1(V_D,V_E,V_F,V_P,V_T,V_e,V_h),V_F,V_T,V_D,tc_prod(tc_List_Olist(tc_List_Olist(tc_String_Ochar)),tc_Expr_Oexp(tc_List_Olist(tc_String_Ochar))))
+    | ~ c_WellTypeRT_OWTrt(V_P,V_h,V_E,c_Expr_Oexp_OFAcc(V_e,V_F,V_D,tc_List_Olist(tc_String_Ochar)),V_T) ) ).
+
+cnf(cls_WTrt_H__WTrts_H_Ointros_I10_J_0,axiom,
+    ( c_Progress_OWTrt_H(V_P,V_h,V_E,c_Expr_Oexp_OFAss(V_e_092_060_094isub_0621,V_F,V_D,V_e_092_060_094isub_0622,tc_List_Olist(tc_String_Ochar)),c_Type_Oty_OVoid)
+    | ~ c_TypeRel_Owiden(V_P,V_T_092_060_094isub_0622,V_T,tc_prod(tc_List_Olist(tc_List_Olist(tc_String_Ochar)),tc_Expr_Oexp(tc_List_Olist(tc_String_Ochar))))
+    | ~ c_Progress_OWTrt_H(V_P,V_h,V_E,V_e_092_060_094isub_0622,V_T_092_060_094isub_0622)
+    | ~ c_TypeRel_Ohas__field(V_P,V_C,V_F,V_T,V_D,tc_prod(tc_List_Olist(tc_List_Olist(tc_String_Ochar)),tc_Expr_Oexp(tc_List_Olist(tc_String_Ochar))))
+    | ~ c_Progress_OWTrt_H(V_P,V_h,V_E,V_e_092_060_094isub_0621,c_Type_Oty_OClass(V_C)) ) ).
+
+cnf(cls_WTrt__elim__cases_I8_J_13,axiom,
+    ( c_WellTypeRT_OWTrt(V_P,V_h,V_E,V_e,c_Type_Oty_ONT)
+    | c_TypeRel_Owiden(V_P,c_WellTypeRT_Osko__WellTypeRT__XWTrt__elim__cases__8__3(V_D,V_E,V_F,V_P,V_e,V_h,V_v),c_WellTypeRT_Osko__WellTypeRT__XWTrt__elim__cases__8__2(V_D,V_E,V_F,V_P,V_e,V_h,V_v),tc_prod(tc_List_Olist(tc_List_Olist(tc_String_Ochar)),tc_Expr_Oexp(tc_List_Olist(tc_String_Ochar))))
+    | ~ c_WellTypeRT_OWTrt(V_P,V_h,V_E,c_Expr_Oexp_OFAss(V_e,V_F,V_D,V_v,tc_List_Olist(tc_String_Ochar)),V_T) ) ).
+
+cnf(cls_WTrt__elim__cases_I8_J_12,axiom,
+    ( V_T = c_Type_Oty_OVoid
+    | c_TypeRel_Owiden(V_P,c_WellTypeRT_Osko__WellTypeRT__XWTrt__elim__cases__8__3(V_D,V_E,V_F,V_P,V_e,V_h,V_v),c_WellTypeRT_Osko__WellTypeRT__XWTrt__elim__cases__8__2(V_D,V_E,V_F,V_P,V_e,V_h,V_v),tc_prod(tc_List_Olist(tc_List_Olist(tc_String_Ochar)),tc_Expr_Oexp(tc_List_Olist(tc_String_Ochar))))
+    | ~ c_WellTypeRT_OWTrt(V_P,V_h,V_E,c_Expr_Oexp_OFAss(V_e,V_F,V_D,V_v,tc_List_Olist(tc_String_Ochar)),V_T) ) ).
+
+cnf(cls_ty_Osplit__asm_10,axiom,
+    ( hBOOL(hAPP(V_P,c_Type_Oty_Oty__case(V_f1,V_f2,V_f3,V_f4,V_f5,V_x,t_a)))
+    | ~ hBOOL(hAPP(V_P,hAPP(V_f5,v_sko__Type__Xty__Xsplit__asm__1(V_P,V_f5,V_x))))
+    | V_x = c_Type_Oty_ONT
+    | ~ hBOOL(hAPP(V_P,V_f3))
+    | V_x = c_Type_Oty_OBoolean
+    | V_x = c_Type_Oty_OVoid ) ).
+
+cnf(cls_ty_Osplit_10,axiom,
+    ( hBOOL(hAPP(V_P,c_Type_Oty_Oty__case(V_f1,V_f2,V_f3,V_f4,V_f5,V_x,t_a)))
+    | ~ hBOOL(hAPP(V_P,hAPP(V_f5,v_sko__Type__Xty__Xsplit__1(V_P,V_f5,V_x))))
+    | V_x = c_Type_Oty_ONT
+    | ~ hBOOL(hAPP(V_P,V_f3))
+    | V_x = c_Type_Oty_OBoolean
+    | V_x = c_Type_Oty_OVoid ) ).
+
+cnf(cls_ty_Osplit_8,axiom,
+    ( hBOOL(hAPP(V_P,c_Type_Oty_Oty__case(V_f1,V_f2,V_f3,V_f4,V_f5,V_x,t_a)))
+    | ~ hBOOL(hAPP(V_P,hAPP(V_f5,v_sko__Type__Xty__Xsplit__1(V_P,V_f5,V_x))))
+    | ~ hBOOL(hAPP(V_P,V_f4))
+    | V_x = c_Type_Oty_OInteger
+    | V_x = c_Type_Oty_OBoolean
+    | V_x = c_Type_Oty_OVoid ) ).
+
+cnf(cls_ty_Osplit__asm_8,axiom,
+    ( hBOOL(hAPP(V_P,c_Type_Oty_Oty__case(V_f1,V_f2,V_f3,V_f4,V_f5,V_x,t_a)))
+    | ~ hBOOL(hAPP(V_P,hAPP(V_f5,v_sko__Type__Xty__Xsplit__asm__1(V_P,V_f5,V_x))))
+    | ~ hBOOL(hAPP(V_P,V_f4))
+    | V_x = c_Type_Oty_OInteger
+    | V_x = c_Type_Oty_OBoolean
+    | V_x = c_Type_Oty_OVoid ) ).
+
+cnf(cls_ty_Ocase__cong_3,axiom,
+    ( hAPP(V_f5,c_Type_Osko__Type__Xty__Xcase__cong__1__1(V_xa,V_f5,V_g5,T_a)) != hAPP(V_g5,c_Type_Osko__Type__Xty__Xcase__cong__1__1(V_xa,V_f5,V_g5,T_a))
+    | V_xa = c_Type_Oty_OInteger
+    | V_xa = c_Type_Oty_OBoolean
+    | V_xa = c_Type_Oty_OVoid
+    | c_Type_Oty_Oty__case(V_f1,V_f2,V_f3,V_x,V_f5,V_xa,T_a) = c_Type_Oty_Oty__case(V_g1,V_g2,V_g3,V_x,V_g5,V_xa,T_a) ) ).
+
+cnf(cls_ty_Osplit_22,axiom,
+    ( hBOOL(hAPP(V_P,c_Type_Oty_Oty__case(V_f1,V_f2,V_f3,V_f4,V_f5,V_x,t_a)))
+    | ~ hBOOL(hAPP(V_P,hAPP(V_f5,v_sko__Type__Xty__Xsplit__1(V_P,V_f5,V_x))))
+    | V_x = c_Type_Oty_ONT
+    | V_x = c_Type_Oty_OInteger
+    | V_x = c_Type_Oty_OBoolean
+    | ~ hBOOL(hAPP(V_P,V_f1)) ) ).
+
+cnf(cls_ty_Ocase__cong_9,axiom,
+    ( hAPP(V_f5,c_Type_Osko__Type__Xty__Xcase__cong__1__1(V_xa,V_f5,V_g5,T_a)) != hAPP(V_g5,c_Type_Osko__Type__Xty__Xcase__cong__1__1(V_xa,V_f5,V_g5,T_a))
+    | V_xa = c_Type_Oty_ONT
+    | V_xa = c_Type_Oty_OInteger
+    | V_xa = c_Type_Oty_OVoid
+    | c_Type_Oty_Oty__case(V_f1,V_x,V_f3,V_f4,V_f5,V_xa,T_a) = c_Type_Oty_Oty__case(V_g1,V_x,V_g3,V_g4,V_g5,V_xa,T_a) ) ).
+
+cnf(cls_ty_Osplit__asm_22,axiom,
+    ( hBOOL(hAPP(V_P,c_Type_Oty_Oty__case(V_f1,V_f2,V_f3,V_f4,V_f5,V_x,t_a)))
+    | ~ hBOOL(hAPP(V_P,hAPP(V_f5,v_sko__Type__Xty__Xsplit__asm__1(V_P,V_f5,V_x))))
+    | V_x = c_Type_Oty_ONT
+    | V_x = c_Type_Oty_OInteger
+    | V_x = c_Type_Oty_OBoolean
+    | ~ hBOOL(hAPP(V_P,V_f1)) ) ).
+
+cnf(cls_ty_Osplit_14,axiom,
+    ( hBOOL(hAPP(V_P,c_Type_Oty_Oty__case(V_f1,V_f2,V_f3,V_f4,V_f5,V_x,t_a)))
+    | ~ hBOOL(hAPP(V_P,hAPP(V_f5,v_sko__Type__Xty__Xsplit__1(V_P,V_f5,V_x))))
+    | V_x = c_Type_Oty_ONT
+    | V_x = c_Type_Oty_OInteger
+    | ~ hBOOL(hAPP(V_P,V_f2))
+    | V_x = c_Type_Oty_OVoid ) ).
+
+cnf(cls_ty_Osplit__asm_14,axiom,
+    ( hBOOL(hAPP(V_P,c_Type_Oty_Oty__case(V_f1,V_f2,V_f3,V_f4,V_f5,V_x,t_a)))
+    | ~ hBOOL(hAPP(V_P,hAPP(V_f5,v_sko__Type__Xty__Xsplit__asm__1(V_P,V_f5,V_x))))
+    | V_x = c_Type_Oty_ONT
+    | V_x = c_Type_Oty_OInteger
+    | ~ hBOOL(hAPP(V_P,V_f2))
+    | V_x = c_Type_Oty_OVoid ) ).
+
+cnf(cls_ty_Ocase__cong_17,axiom,
+    ( hAPP(V_f5,c_Type_Osko__Type__Xty__Xcase__cong__1__1(V_xa,V_f5,V_g5,T_a)) != hAPP(V_g5,c_Type_Osko__Type__Xty__Xcase__cong__1__1(V_xa,V_f5,V_g5,T_a))
+    | V_xa = c_Type_Oty_ONT
+    | V_xa = c_Type_Oty_OInteger
+    | V_xa = c_Type_Oty_OBoolean
+    | c_Type_Oty_Oty__case(V_x,V_f2,V_f3,V_f4,V_f5,V_xa,T_a) = c_Type_Oty_Oty__case(V_x,V_g2,V_g3,V_g4,V_g5,V_xa,T_a) ) ).
+
+cnf(cls_ty_Ocase__cong_6,axiom,
+    ( V_xb = c_Type_Oty_OBoolean
+    | V_xb = c_Type_Oty_OVoid
+    | c_Type_Oty_Oty__case(V_f1,V_f2,V_xa,V_x,V_f5,V_xb,T_a) = c_Type_Oty_Oty__case(V_g1,V_g2,V_xa,V_x,V_g5,V_xb,T_a)
+    | V_xb = c_Type_Oty_OClass(c_Type_Osko__Type__Xty__Xcase__cong__1__1(V_xb,V_f5,V_g5,T_a)) ) ).
+
+cnf(cls_ty_Osplit_11,axiom,
+    ( hBOOL(hAPP(V_P,c_Type_Oty_Oty__case(V_f1,V_f2,V_f3,V_f4,V_f5,V_x,t_a)))
+    | V_x = c_Type_Oty_OClass(v_sko__Type__Xty__Xsplit__1(V_P,V_f5,V_x))
+    | ~ hBOOL(hAPP(V_P,V_f4))
+    | ~ hBOOL(hAPP(V_P,V_f3))
+    | V_x = c_Type_Oty_OBoolean
+    | V_x = c_Type_Oty_OVoid ) ).
+
+cnf(cls_ty_Osplit__asm_11,axiom,
+    ( hBOOL(hAPP(V_P,c_Type_Oty_Oty__case(V_f1,V_f2,V_f3,V_f4,V_f5,V_x,t_a)))
+    | V_x = c_Type_Oty_OClass(v_sko__Type__Xty__Xsplit__asm__1(V_P,V_f5,V_x))
+    | ~ hBOOL(hAPP(V_P,V_f4))
+    | ~ hBOOL(hAPP(V_P,V_f3))
+    | V_x = c_Type_Oty_OBoolean
+    | V_x = c_Type_Oty_OVoid ) ).
+
+cnf(cls_ty_Osplit_25,axiom,
+    ( hBOOL(hAPP(V_P,c_Type_Oty_Oty__case(V_f1,V_f2,V_f3,V_f4,V_f5,V_x,t_a)))
+    | V_x = c_Type_Oty_OClass(v_sko__Type__Xty__Xsplit__1(V_P,V_f5,V_x))
+    | V_x = c_Type_Oty_ONT
+    | ~ hBOOL(hAPP(V_P,V_f3))
+    | V_x = c_Type_Oty_OBoolean
+    | ~ hBOOL(hAPP(V_P,V_f1)) ) ).
+
+cnf(cls_ty_Ocase__cong_20,axiom,
+    ( V_xb = c_Type_Oty_OBoolean
+    | c_Type_Oty_Oty__case(V_xa,V_f2,V_x,V_f4,V_f5,V_xb,T_a) = c_Type_Oty_Oty__case(V_xa,V_g2,V_x,V_g4,V_g5,V_xb,T_a)
+    | V_xb = c_Type_Oty_OClass(c_Type_Osko__Type__Xty__Xcase__cong__1__1(V_xb,V_f5,V_g5,T_a))
+    | V_xb = c_Type_Oty_ONT ) ).
+
+cnf(cls_ty_Osplit__asm_17,axiom,
+    ( hBOOL(hAPP(V_P,c_Type_Oty_Oty__case(V_f1,V_f2,V_f3,V_f4,V_f5,V_x,t_a)))
+    | V_x = c_Type_Oty_OClass(v_sko__Type__Xty__Xsplit__asm__1(V_P,V_f5,V_x))
+    | V_x = c_Type_Oty_ONT
+    | ~ hBOOL(hAPP(V_P,V_f3))
+    | ~ hBOOL(hAPP(V_P,V_f2))
+    | V_x = c_Type_Oty_OVoid ) ).
+
+cnf(cls_ty_Osplit_17,axiom,
+    ( hBOOL(hAPP(V_P,c_Type_Oty_Oty__case(V_f1,V_f2,V_f3,V_f4,V_f5,V_x,t_a)))
+    | V_x = c_Type_Oty_OClass(v_sko__Type__Xty__Xsplit__1(V_P,V_f5,V_x))
+    | V_x = c_Type_Oty_ONT
+    | ~ hBOOL(hAPP(V_P,V_f3))
+    | ~ hBOOL(hAPP(V_P,V_f2))
+    | V_x = c_Type_Oty_OVoid ) ).
+
+cnf(cls_ty_Ocase__cong_12,axiom,
+    ( V_xb = c_Type_Oty_OVoid
+    | c_Type_Oty_Oty__case(V_f1,V_xa,V_x,V_f4,V_f5,V_xb,T_a) = c_Type_Oty_Oty__case(V_g1,V_xa,V_x,V_g4,V_g5,V_xb,T_a)
+    | V_xb = c_Type_Oty_OClass(c_Type_Osko__Type__Xty__Xcase__cong__1__1(V_xb,V_f5,V_g5,T_a))
+    | V_xb = c_Type_Oty_ONT ) ).
+
+cnf(cls_ty_Osplit__asm_25,axiom,
+    ( hBOOL(hAPP(V_P,c_Type_Oty_Oty__case(V_f1,V_f2,V_f3,V_f4,V_f5,V_x,t_a)))
+    | V_x = c_Type_Oty_OClass(v_sko__Type__Xty__Xsplit__asm__1(V_P,V_f5,V_x))
+    | V_x = c_Type_Oty_ONT
+    | ~ hBOOL(hAPP(V_P,V_f3))
+    | V_x = c_Type_Oty_OBoolean
+    | ~ hBOOL(hAPP(V_P,V_f1)) ) ).
+
+cnf(cls_ty_Osplit__asm_23,axiom,
+    ( hBOOL(hAPP(V_P,c_Type_Oty_Oty__case(V_f1,V_f2,V_f3,V_f4,V_f5,V_x,t_a)))
+    | V_x = c_Type_Oty_OClass(v_sko__Type__Xty__Xsplit__asm__1(V_P,V_f5,V_x))
+    | ~ hBOOL(hAPP(V_P,V_f4))
+    | V_x = c_Type_Oty_OInteger
+    | V_x = c_Type_Oty_OBoolean
+    | ~ hBOOL(hAPP(V_P,V_f1)) ) ).
+
+cnf(cls_ty_Ocase__cong_10,axiom,
+    ( V_xb = c_Type_Oty_OInteger
+    | V_xb = c_Type_Oty_OVoid
+    | c_Type_Oty_Oty__case(V_f1,V_xa,V_f3,V_x,V_f5,V_xb,T_a) = c_Type_Oty_Oty__case(V_g1,V_xa,V_g3,V_x,V_g5,V_xb,T_a)
+    | V_xb = c_Type_Oty_OClass(c_Type_Osko__Type__Xty__Xcase__cong__1__1(V_xb,V_f5,V_g5,T_a)) ) ).
+
+cnf(cls_ty_Osplit_15,axiom,
+    ( hBOOL(hAPP(V_P,c_Type_Oty_Oty__case(V_f1,V_f2,V_f3,V_f4,V_f5,V_x,t_a)))
+    | V_x = c_Type_Oty_OClass(v_sko__Type__Xty__Xsplit__1(V_P,V_f5,V_x))
+    | ~ hBOOL(hAPP(V_P,V_f4))
+    | V_x = c_Type_Oty_OInteger
+    | ~ hBOOL(hAPP(V_P,V_f2))
+    | V_x = c_Type_Oty_OVoid ) ).
+
+cnf(cls_ty_Osplit__asm_15,axiom,
+    ( hBOOL(hAPP(V_P,c_Type_Oty_Oty__case(V_f1,V_f2,V_f3,V_f4,V_f5,V_x,t_a)))
+    | V_x = c_Type_Oty_OClass(v_sko__Type__Xty__Xsplit__asm__1(V_P,V_f5,V_x))
+    | ~ hBOOL(hAPP(V_P,V_f4))
+    | V_x = c_Type_Oty_OInteger
+    | ~ hBOOL(hAPP(V_P,V_f2))
+    | V_x = c_Type_Oty_OVoid ) ).
+
+cnf(cls_ty_Ocase__cong_18,axiom,
+    ( V_xb = c_Type_Oty_OInteger
+    | V_xb = c_Type_Oty_OBoolean
+    | c_Type_Oty_Oty__case(V_xa,V_f2,V_f3,V_x,V_f5,V_xb,T_a) = c_Type_Oty_Oty__case(V_xa,V_g2,V_g3,V_x,V_g5,V_xb,T_a)
+    | V_xb = c_Type_Oty_OClass(c_Type_Osko__Type__Xty__Xcase__cong__1__1(V_xb,V_f5,V_g5,T_a)) ) ).
+
+cnf(cls_ty_Osplit_23,axiom,
+    ( hBOOL(hAPP(V_P,c_Type_Oty_Oty__case(V_f1,V_f2,V_f3,V_f4,V_f5,V_x,t_a)))
+    | V_x = c_Type_Oty_OClass(v_sko__Type__Xty__Xsplit__1(V_P,V_f5,V_x))
+    | ~ hBOOL(hAPP(V_P,V_f4))
+    | V_x = c_Type_Oty_OInteger
+    | V_x = c_Type_Oty_OBoolean
+    | ~ hBOOL(hAPP(V_P,V_f1)) ) ).
+
+cnf(cls_ty_Osplit_29,axiom,
+    ( hBOOL(hAPP(V_P,c_Type_Oty_Oty__case(V_f1,V_f2,V_f3,V_f4,V_f5,V_x,t_a)))
+    | V_x = c_Type_Oty_OClass(v_sko__Type__Xty__Xsplit__1(V_P,V_f5,V_x))
+    | V_x = c_Type_Oty_ONT
+    | V_x = c_Type_Oty_OInteger
+    | ~ hBOOL(hAPP(V_P,V_f2))
+    | ~ hBOOL(hAPP(V_P,V_f1)) ) ).
+
+cnf(cls_ty_Ocase__cong_24,axiom,
+    ( c_Type_Oty_Oty__case(V_xa,V_x,V_f3,V_f4,V_f5,V_xb,T_a) = c_Type_Oty_Oty__case(V_xa,V_x,V_g3,V_g4,V_g5,V_xb,T_a)
+    | V_xb = c_Type_Oty_OClass(c_Type_Osko__Type__Xty__Xcase__cong__1__1(V_xb,V_f5,V_g5,T_a))
+    | V_xb = c_Type_Oty_ONT
+    | V_xb = c_Type_Oty_OInteger ) ).
+
+cnf(cls_ty_Osplit__asm_29,axiom,
+    ( hBOOL(hAPP(V_P,c_Type_Oty_Oty__case(V_f1,V_f2,V_f3,V_f4,V_f5,V_x,t_a)))
+    | V_x = c_Type_Oty_OClass(v_sko__Type__Xty__Xsplit__asm__1(V_P,V_f5,V_x))
+    | V_x = c_Type_Oty_ONT
+    | V_x = c_Type_Oty_OInteger
+    | ~ hBOOL(hAPP(V_P,V_f2))
+    | ~ hBOOL(hAPP(V_P,V_f1)) ) ).
+
+cnf(cls_ty_Osplit__asm_12,axiom,
+    ( hBOOL(hAPP(V_P,c_Type_Oty_Oty__case(V_f1,V_f2,V_f3,V_f4,V_f5,V_x,t_a)))
+    | ~ hBOOL(hAPP(V_P,hAPP(V_f5,v_sko__Type__Xty__Xsplit__asm__1(V_P,V_f5,V_x))))
+    | ~ hBOOL(hAPP(V_P,V_f4))
+    | ~ hBOOL(hAPP(V_P,V_f3))
+    | V_x = c_Type_Oty_OBoolean
+    | V_x = c_Type_Oty_OVoid ) ).
+
+cnf(cls_ty_Osplit_12,axiom,
+    ( hBOOL(hAPP(V_P,c_Type_Oty_Oty__case(V_f1,V_f2,V_f3,V_f4,V_f5,V_x,t_a)))
+    | ~ hBOOL(hAPP(V_P,hAPP(V_f5,v_sko__Type__Xty__Xsplit__1(V_P,V_f5,V_x))))
+    | ~ hBOOL(hAPP(V_P,V_f4))
+    | ~ hBOOL(hAPP(V_P,V_f3))
+    | V_x = c_Type_Oty_OBoolean
+    | V_x = c_Type_Oty_OVoid ) ).
+
+cnf(cls_ty_Ocase__cong_7,axiom,
+    ( hAPP(V_f5,c_Type_Osko__Type__Xty__Xcase__cong__1__1(V_xb,V_f5,V_g5,T_a)) != hAPP(V_g5,c_Type_Osko__Type__Xty__Xcase__cong__1__1(V_xb,V_f5,V_g5,T_a))
+    | V_xb = c_Type_Oty_OBoolean
+    | V_xb = c_Type_Oty_OVoid
+    | c_Type_Oty_Oty__case(V_f1,V_f2,V_xa,V_x,V_f5,V_xb,T_a) = c_Type_Oty_Oty__case(V_g1,V_g2,V_xa,V_x,V_g5,V_xb,T_a) ) ).
+
+cnf(cls_ty_Osplit__asm_18,axiom,
+    ( hBOOL(hAPP(V_P,c_Type_Oty_Oty__case(V_f1,V_f2,V_f3,V_f4,V_f5,V_x,t_a)))
+    | ~ hBOOL(hAPP(V_P,hAPP(V_f5,v_sko__Type__Xty__Xsplit__asm__1(V_P,V_f5,V_x))))
+    | V_x = c_Type_Oty_ONT
+    | ~ hBOOL(hAPP(V_P,V_f3))
+    | ~ hBOOL(hAPP(V_P,V_f2))
+    | V_x = c_Type_Oty_OVoid ) ).
+
+cnf(cls_ty_Ocase__cong_13,axiom,
+    ( hAPP(V_f5,c_Type_Osko__Type__Xty__Xcase__cong__1__1(V_xb,V_f5,V_g5,T_a)) != hAPP(V_g5,c_Type_Osko__Type__Xty__Xcase__cong__1__1(V_xb,V_f5,V_g5,T_a))
+    | V_xb = c_Type_Oty_ONT
+    | V_xb = c_Type_Oty_OVoid
+    | c_Type_Oty_Oty__case(V_f1,V_xa,V_x,V_f4,V_f5,V_xb,T_a) = c_Type_Oty_Oty__case(V_g1,V_xa,V_x,V_g4,V_g5,V_xb,T_a) ) ).
+
+cnf(cls_ty_Osplit_18,axiom,
+    ( hBOOL(hAPP(V_P,c_Type_Oty_Oty__case(V_f1,V_f2,V_f3,V_f4,V_f5,V_x,t_a)))
+    | ~ hBOOL(hAPP(V_P,hAPP(V_f5,v_sko__Type__Xty__Xsplit__1(V_P,V_f5,V_x))))
+    | V_x = c_Type_Oty_ONT
+    | ~ hBOOL(hAPP(V_P,V_f3))
+    | ~ hBOOL(hAPP(V_P,V_f2))
+    | V_x = c_Type_Oty_OVoid ) ).
+
+cnf(cls_ty_Osplit__asm_26,axiom,
+    ( hBOOL(hAPP(V_P,c_Type_Oty_Oty__case(V_f1,V_f2,V_f3,V_f4,V_f5,V_x,t_a)))
+    | ~ hBOOL(hAPP(V_P,hAPP(V_f5,v_sko__Type__Xty__Xsplit__asm__1(V_P,V_f5,V_x))))
+    | V_x = c_Type_Oty_ONT
+    | ~ hBOOL(hAPP(V_P,V_f3))
+    | V_x = c_Type_Oty_OBoolean
+    | ~ hBOOL(hAPP(V_P,V_f1)) ) ).
+
+cnf(cls_ty_Ocase__cong_21,axiom,
+    ( hAPP(V_f5,c_Type_Osko__Type__Xty__Xcase__cong__1__1(V_xb,V_f5,V_g5,T_a)) != hAPP(V_g5,c_Type_Osko__Type__Xty__Xcase__cong__1__1(V_xb,V_f5,V_g5,T_a))
+    | V_xb = c_Type_Oty_ONT
+    | V_xb = c_Type_Oty_OBoolean
+    | c_Type_Oty_Oty__case(V_xa,V_f2,V_x,V_f4,V_f5,V_xb,T_a) = c_Type_Oty_Oty__case(V_xa,V_g2,V_x,V_g4,V_g5,V_xb,T_a) ) ).
+
+cnf(cls_ty_Osplit_26,axiom,
+    ( hBOOL(hAPP(V_P,c_Type_Oty_Oty__case(V_f1,V_f2,V_f3,V_f4,V_f5,V_x,t_a)))
+    | ~ hBOOL(hAPP(V_P,hAPP(V_f5,v_sko__Type__Xty__Xsplit__1(V_P,V_f5,V_x))))
+    | V_x = c_Type_Oty_ONT
+    | ~ hBOOL(hAPP(V_P,V_f3))
+    | V_x = c_Type_Oty_OBoolean
+    | ~ hBOOL(hAPP(V_P,V_f1)) ) ).
+
+cnf(cls_ty_Osplit_24,axiom,
+    ( hBOOL(hAPP(V_P,c_Type_Oty_Oty__case(V_f1,V_f2,V_f3,V_f4,V_f5,V_x,t_a)))
+    | ~ hBOOL(hAPP(V_P,hAPP(V_f5,v_sko__Type__Xty__Xsplit__1(V_P,V_f5,V_x))))
+    | ~ hBOOL(hAPP(V_P,V_f4))
+    | V_x = c_Type_Oty_OInteger
+    | V_x = c_Type_Oty_OBoolean
+    | ~ hBOOL(hAPP(V_P,V_f1)) ) ).
+
+cnf(cls_ty_Ocase__cong_19,axiom,
+    ( hAPP(V_f5,c_Type_Osko__Type__Xty__Xcase__cong__1__1(V_xb,V_f5,V_g5,T_a)) != hAPP(V_g5,c_Type_Osko__Type__Xty__Xcase__cong__1__1(V_xb,V_f5,V_g5,T_a))
+    | V_xb = c_Type_Oty_OInteger
+    | V_xb = c_Type_Oty_OBoolean
+    | c_Type_Oty_Oty__case(V_xa,V_f2,V_f3,V_x,V_f5,V_xb,T_a) = c_Type_Oty_Oty__case(V_xa,V_g2,V_g3,V_x,V_g5,V_xb,T_a) ) ).
+
+cnf(cls_ty_Osplit__asm_24,axiom,
+    ( hBOOL(hAPP(V_P,c_Type_Oty_Oty__case(V_f1,V_f2,V_f3,V_f4,V_f5,V_x,t_a)))
+    | ~ hBOOL(hAPP(V_P,hAPP(V_f5,v_sko__Type__Xty__Xsplit__asm__1(V_P,V_f5,V_x))))
+    | ~ hBOOL(hAPP(V_P,V_f4))
+    | V_x = c_Type_Oty_OInteger
+    | V_x = c_Type_Oty_OBoolean
+    | ~ hBOOL(hAPP(V_P,V_f1)) ) ).
+
+cnf(cls_ty_Osplit_16,axiom,
+    ( hBOOL(hAPP(V_P,c_Type_Oty_Oty__case(V_f1,V_f2,V_f3,V_f4,V_f5,V_x,t_a)))
+    | ~ hBOOL(hAPP(V_P,hAPP(V_f5,v_sko__Type__Xty__Xsplit__1(V_P,V_f5,V_x))))
+    | ~ hBOOL(hAPP(V_P,V_f4))
+    | V_x = c_Type_Oty_OInteger
+    | ~ hBOOL(hAPP(V_P,V_f2))
+    | V_x = c_Type_Oty_OVoid ) ).
+
+cnf(cls_ty_Ocase__cong_11,axiom,
+    ( hAPP(V_f5,c_Type_Osko__Type__Xty__Xcase__cong__1__1(V_xb,V_f5,V_g5,T_a)) != hAPP(V_g5,c_Type_Osko__Type__Xty__Xcase__cong__1__1(V_xb,V_f5,V_g5,T_a))
+    | V_xb = c_Type_Oty_OInteger
+    | V_xb = c_Type_Oty_OVoid
+    | c_Type_Oty_Oty__case(V_f1,V_xa,V_f3,V_x,V_f5,V_xb,T_a) = c_Type_Oty_Oty__case(V_g1,V_xa,V_g3,V_x,V_g5,V_xb,T_a) ) ).
+
+cnf(cls_ty_Osplit__asm_16,axiom,
+    ( hBOOL(hAPP(V_P,c_Type_Oty_Oty__case(V_f1,V_f2,V_f3,V_f4,V_f5,V_x,t_a)))
+    | ~ hBOOL(hAPP(V_P,hAPP(V_f5,v_sko__Type__Xty__Xsplit__asm__1(V_P,V_f5,V_x))))
+    | ~ hBOOL(hAPP(V_P,V_f4))
+    | V_x = c_Type_Oty_OInteger
+    | ~ hBOOL(hAPP(V_P,V_f2))
+    | V_x = c_Type_Oty_OVoid ) ).
+
+cnf(cls_ty_Ocase__cong_25,axiom,
+    ( hAPP(V_f5,c_Type_Osko__Type__Xty__Xcase__cong__1__1(V_xb,V_f5,V_g5,T_a)) != hAPP(V_g5,c_Type_Osko__Type__Xty__Xcase__cong__1__1(V_xb,V_f5,V_g5,T_a))
+    | V_xb = c_Type_Oty_ONT
+    | V_xb = c_Type_Oty_OInteger
+    | c_Type_Oty_Oty__case(V_xa,V_x,V_f3,V_f4,V_f5,V_xb,T_a) = c_Type_Oty_Oty__case(V_xa,V_x,V_g3,V_g4,V_g5,V_xb,T_a) ) ).
+
+cnf(cls_ty_Osplit_30,axiom,
+    ( hBOOL(hAPP(V_P,c_Type_Oty_Oty__case(V_f1,V_f2,V_f3,V_f4,V_f5,V_x,t_a)))
+    | ~ hBOOL(hAPP(V_P,hAPP(V_f5,v_sko__Type__Xty__Xsplit__1(V_P,V_f5,V_x))))
+    | V_x = c_Type_Oty_ONT
+    | V_x = c_Type_Oty_OInteger
+    | ~ hBOOL(hAPP(V_P,V_f2))
+    | ~ hBOOL(hAPP(V_P,V_f1)) ) ).
+
+cnf(cls_ty_Osplit__asm_30,axiom,
+    ( hBOOL(hAPP(V_P,c_Type_Oty_Oty__case(V_f1,V_f2,V_f3,V_f4,V_f5,V_x,t_a)))
+    | ~ hBOOL(hAPP(V_P,hAPP(V_f5,v_sko__Type__Xty__Xsplit__asm__1(V_P,V_f5,V_x))))
+    | V_x = c_Type_Oty_ONT
+    | V_x = c_Type_Oty_OInteger
+    | ~ hBOOL(hAPP(V_P,V_f2))
+    | ~ hBOOL(hAPP(V_P,V_f1)) ) ).
+
+cnf(cls_ty_Osplit_27,axiom,
+    ( hBOOL(hAPP(V_P,c_Type_Oty_Oty__case(V_f1,V_f2,V_f3,V_f4,V_f5,V_x,t_a)))
+    | V_x = c_Type_Oty_OClass(v_sko__Type__Xty__Xsplit__1(V_P,V_f5,V_x))
+    | ~ hBOOL(hAPP(V_P,V_f4))
+    | ~ hBOOL(hAPP(V_P,V_f3))
+    | V_x = c_Type_Oty_OBoolean
+    | ~ hBOOL(hAPP(V_P,V_f1)) ) ).
+
+cnf(cls_ty_Ocase__cong_14,axiom,
+    ( V_xc = c_Type_Oty_OVoid
+    | c_Type_Oty_Oty__case(V_f1,V_xb,V_xa,V_x,V_f5,V_xc,T_a) = c_Type_Oty_Oty__case(V_g1,V_xb,V_xa,V_x,V_g5,V_xc,T_a)
+    | V_xc = c_Type_Oty_OClass(c_Type_Osko__Type__Xty__Xcase__cong__1__1(V_xc,V_f5,V_g5,T_a)) ) ).
+
+cnf(cls_ty_Osplit__asm_19,axiom,
+    ( hBOOL(hAPP(V_P,c_Type_Oty_Oty__case(V_f1,V_f2,V_f3,V_f4,V_f5,V_x,t_a)))
+    | V_x = c_Type_Oty_OClass(v_sko__Type__Xty__Xsplit__asm__1(V_P,V_f5,V_x))
+    | ~ hBOOL(hAPP(V_P,V_f4))
+    | ~ hBOOL(hAPP(V_P,V_f3))
+    | ~ hBOOL(hAPP(V_P,V_f2))
+    | V_x = c_Type_Oty_OVoid ) ).
+
+cnf(cls_ty_Osplit_19,axiom,
+    ( hBOOL(hAPP(V_P,c_Type_Oty_Oty__case(V_f1,V_f2,V_f3,V_f4,V_f5,V_x,t_a)))
+    | V_x = c_Type_Oty_OClass(v_sko__Type__Xty__Xsplit__1(V_P,V_f5,V_x))
+    | ~ hBOOL(hAPP(V_P,V_f4))
+    | ~ hBOOL(hAPP(V_P,V_f3))
+    | ~ hBOOL(hAPP(V_P,V_f2))
+    | V_x = c_Type_Oty_OVoid ) ).
+
+cnf(cls_ty_Ocase__cong_22,axiom,
+    ( V_xc = c_Type_Oty_OBoolean
+    | c_Type_Oty_Oty__case(V_xb,V_f2,V_xa,V_x,V_f5,V_xc,T_a) = c_Type_Oty_Oty__case(V_xb,V_g2,V_xa,V_x,V_g5,V_xc,T_a)
+    | V_xc = c_Type_Oty_OClass(c_Type_Osko__Type__Xty__Xcase__cong__1__1(V_xc,V_f5,V_g5,T_a)) ) ).
+
+cnf(cls_ty_Osplit__asm_27,axiom,
+    ( hBOOL(hAPP(V_P,c_Type_Oty_Oty__case(V_f1,V_f2,V_f3,V_f4,V_f5,V_x,t_a)))
+    | V_x = c_Type_Oty_OClass(v_sko__Type__Xty__Xsplit__asm__1(V_P,V_f5,V_x))
+    | ~ hBOOL(hAPP(V_P,V_f4))
+    | ~ hBOOL(hAPP(V_P,V_f3))
+    | V_x = c_Type_Oty_OBoolean
+    | ~ hBOOL(hAPP(V_P,V_f1)) ) ).
+
+cnf(cls_ty_Osplit__asm_33,axiom,
+    ( hBOOL(hAPP(V_P,c_Type_Oty_Oty__case(V_f1,V_f2,V_f3,V_f4,V_f5,V_x,t_a)))
+    | V_x = c_Type_Oty_OClass(v_sko__Type__Xty__Xsplit__asm__1(V_P,V_f5,V_x))
+    | V_x = c_Type_Oty_ONT
+    | ~ hBOOL(hAPP(V_P,V_f3))
+    | ~ hBOOL(hAPP(V_P,V_f2))
+    | ~ hBOOL(hAPP(V_P,V_f1)) ) ).
+
+cnf(cls_ty_Ocase__cong_28,axiom,
+    ( c_Type_Oty_Oty__case(V_xb,V_xa,V_x,V_f4,V_f5,V_xc,T_a) = c_Type_Oty_Oty__case(V_xb,V_xa,V_x,V_g4,V_g5,V_xc,T_a)
+    | V_xc = c_Type_Oty_OClass(c_Type_Osko__Type__Xty__Xcase__cong__1__1(V_xc,V_f5,V_g5,T_a))
+    | V_xc = c_Type_Oty_ONT ) ).
+
+cnf(cls_ty_Osplit_33,axiom,
+    ( hBOOL(hAPP(V_P,c_Type_Oty_Oty__case(V_f1,V_f2,V_f3,V_f4,V_f5,V_x,t_a)))
+    | V_x = c_Type_Oty_OClass(v_sko__Type__Xty__Xsplit__1(V_P,V_f5,V_x))
+    | V_x = c_Type_Oty_ONT
+    | ~ hBOOL(hAPP(V_P,V_f3))
+    | ~ hBOOL(hAPP(V_P,V_f2))
+    | ~ hBOOL(hAPP(V_P,V_f1)) ) ).
+
+cnf(cls_ty_Osplit_31,axiom,
+    ( hBOOL(hAPP(V_P,c_Type_Oty_Oty__case(V_f1,V_f2,V_f3,V_f4,V_f5,V_x,t_a)))
+    | V_x = c_Type_Oty_OClass(v_sko__Type__Xty__Xsplit__1(V_P,V_f5,V_x))
+    | ~ hBOOL(hAPP(V_P,V_f4))
+    | V_x = c_Type_Oty_OInteger
+    | ~ hBOOL(hAPP(V_P,V_f2))
+    | ~ hBOOL(hAPP(V_P,V_f1)) ) ).
+
+cnf(cls_ty_Ocase__cong_26,axiom,
+    ( V_xc = c_Type_Oty_OInteger
+    | c_Type_Oty_Oty__case(V_xb,V_xa,V_f3,V_x,V_f5,V_xc,T_a) = c_Type_Oty_Oty__case(V_xb,V_xa,V_g3,V_x,V_g5,V_xc,T_a)
+    | V_xc = c_Type_Oty_OClass(c_Type_Osko__Type__Xty__Xcase__cong__1__1(V_xc,V_f5,V_g5,T_a)) ) ).
+
+cnf(cls_ty_Osplit__asm_31,axiom,
+    ( hBOOL(hAPP(V_P,c_Type_Oty_Oty__case(V_f1,V_f2,V_f3,V_f4,V_f5,V_x,t_a)))
+    | V_x = c_Type_Oty_OClass(v_sko__Type__Xty__Xsplit__asm__1(V_P,V_f5,V_x))
+    | ~ hBOOL(hAPP(V_P,V_f4))
+    | V_x = c_Type_Oty_OInteger
+    | ~ hBOOL(hAPP(V_P,V_f2))
+    | ~ hBOOL(hAPP(V_P,V_f1)) ) ).
+
+cnf(cls_ty_Ocase__cong_23,axiom,
+    ( hAPP(V_f5,c_Type_Osko__Type__Xty__Xcase__cong__1__1(V_xc,V_f5,V_g5,T_a)) != hAPP(V_g5,c_Type_Osko__Type__Xty__Xcase__cong__1__1(V_xc,V_f5,V_g5,T_a))
+    | V_xc = c_Type_Oty_OBoolean
+    | c_Type_Oty_Oty__case(V_xb,V_f2,V_xa,V_x,V_f5,V_xc,T_a) = c_Type_Oty_Oty__case(V_xb,V_g2,V_xa,V_x,V_g5,V_xc,T_a) ) ).
+
+cnf(cls_ty_Osplit__asm_20,axiom,
+    ( hBOOL(hAPP(V_P,c_Type_Oty_Oty__case(V_f1,V_f2,V_f3,V_f4,V_f5,V_x,t_a)))
+    | ~ hBOOL(hAPP(V_P,hAPP(V_f5,v_sko__Type__Xty__Xsplit__asm__1(V_P,V_f5,V_x))))
+    | ~ hBOOL(hAPP(V_P,V_f4))
+    | ~ hBOOL(hAPP(V_P,V_f3))
+    | ~ hBOOL(hAPP(V_P,V_f2))
+    | V_x = c_Type_Oty_OVoid ) ).
+
+cnf(cls_ty_Osplit_20,axiom,
+    ( hBOOL(hAPP(V_P,c_Type_Oty_Oty__case(V_f1,V_f2,V_f3,V_f4,V_f5,V_x,t_a)))
+    | ~ hBOOL(hAPP(V_P,hAPP(V_f5,v_sko__Type__Xty__Xsplit__1(V_P,V_f5,V_x))))
+    | ~ hBOOL(hAPP(V_P,V_f4))
+    | ~ hBOOL(hAPP(V_P,V_f3))
+    | ~ hBOOL(hAPP(V_P,V_f2))
+    | V_x = c_Type_Oty_OVoid ) ).
+
+cnf(cls_ty_Osplit__asm_28,axiom,
+    ( hBOOL(hAPP(V_P,c_Type_Oty_Oty__case(V_f1,V_f2,V_f3,V_f4,V_f5,V_x,t_a)))
+    | ~ hBOOL(hAPP(V_P,hAPP(V_f5,v_sko__Type__Xty__Xsplit__asm__1(V_P,V_f5,V_x))))
+    | ~ hBOOL(hAPP(V_P,V_f4))
+    | ~ hBOOL(hAPP(V_P,V_f3))
+    | V_x = c_Type_Oty_OBoolean
+    | ~ hBOOL(hAPP(V_P,V_f1)) ) ).
+
+cnf(cls_ty_Ocase__cong_15,axiom,
+    ( hAPP(V_f5,c_Type_Osko__Type__Xty__Xcase__cong__1__1(V_xc,V_f5,V_g5,T_a)) != hAPP(V_g5,c_Type_Osko__Type__Xty__Xcase__cong__1__1(V_xc,V_f5,V_g5,T_a))
+    | V_xc = c_Type_Oty_OVoid
+    | c_Type_Oty_Oty__case(V_f1,V_xb,V_xa,V_x,V_f5,V_xc,T_a) = c_Type_Oty_Oty__case(V_g1,V_xb,V_xa,V_x,V_g5,V_xc,T_a) ) ).
+
+cnf(cls_ty_Osplit_28,axiom,
+    ( hBOOL(hAPP(V_P,c_Type_Oty_Oty__case(V_f1,V_f2,V_f3,V_f4,V_f5,V_x,t_a)))
+    | ~ hBOOL(hAPP(V_P,hAPP(V_f5,v_sko__Type__Xty__Xsplit__1(V_P,V_f5,V_x))))
+    | ~ hBOOL(hAPP(V_P,V_f4))
+    | ~ hBOOL(hAPP(V_P,V_f3))
+    | V_x = c_Type_Oty_OBoolean
+    | ~ hBOOL(hAPP(V_P,V_f1)) ) ).
+
+cnf(cls_ty_Osplit__asm_34,axiom,
+    ( hBOOL(hAPP(V_P,c_Type_Oty_Oty__case(V_f1,V_f2,V_f3,V_f4,V_f5,V_x,t_a)))
+    | ~ hBOOL(hAPP(V_P,hAPP(V_f5,v_sko__Type__Xty__Xsplit__asm__1(V_P,V_f5,V_x))))
+    | V_x = c_Type_Oty_ONT
+    | ~ hBOOL(hAPP(V_P,V_f3))
+    | ~ hBOOL(hAPP(V_P,V_f2))
+    | ~ hBOOL(hAPP(V_P,V_f1)) ) ).
+
+cnf(cls_ty_Osplit_34,axiom,
+    ( hBOOL(hAPP(V_P,c_Type_Oty_Oty__case(V_f1,V_f2,V_f3,V_f4,V_f5,V_x,t_a)))
+    | ~ hBOOL(hAPP(V_P,hAPP(V_f5,v_sko__Type__Xty__Xsplit__1(V_P,V_f5,V_x))))
+    | V_x = c_Type_Oty_ONT
+    | ~ hBOOL(hAPP(V_P,V_f3))
+    | ~ hBOOL(hAPP(V_P,V_f2))
+    | ~ hBOOL(hAPP(V_P,V_f1)) ) ).
+
+cnf(cls_ty_Ocase__cong_29,axiom,
+    ( hAPP(V_f5,c_Type_Osko__Type__Xty__Xcase__cong__1__1(V_xc,V_f5,V_g5,T_a)) != hAPP(V_g5,c_Type_Osko__Type__Xty__Xcase__cong__1__1(V_xc,V_f5,V_g5,T_a))
+    | V_xc = c_Type_Oty_ONT
+    | c_Type_Oty_Oty__case(V_xb,V_xa,V_x,V_f4,V_f5,V_xc,T_a) = c_Type_Oty_Oty__case(V_xb,V_xa,V_x,V_g4,V_g5,V_xc,T_a) ) ).
+
+cnf(cls_ty_Ocase__cong_27,axiom,
+    ( hAPP(V_f5,c_Type_Osko__Type__Xty__Xcase__cong__1__1(V_xc,V_f5,V_g5,T_a)) != hAPP(V_g5,c_Type_Osko__Type__Xty__Xcase__cong__1__1(V_xc,V_f5,V_g5,T_a))
+    | V_xc = c_Type_Oty_OInteger
+    | c_Type_Oty_Oty__case(V_xb,V_xa,V_f3,V_x,V_f5,V_xc,T_a) = c_Type_Oty_Oty__case(V_xb,V_xa,V_g3,V_x,V_g5,V_xc,T_a) ) ).
+
+cnf(cls_ty_Osplit_32,axiom,
+    ( hBOOL(hAPP(V_P,c_Type_Oty_Oty__case(V_f1,V_f2,V_f3,V_f4,V_f5,V_x,t_a)))
+    | ~ hBOOL(hAPP(V_P,hAPP(V_f5,v_sko__Type__Xty__Xsplit__1(V_P,V_f5,V_x))))
+    | ~ hBOOL(hAPP(V_P,V_f4))
+    | V_x = c_Type_Oty_OInteger
+    | ~ hBOOL(hAPP(V_P,V_f2))
+    | ~ hBOOL(hAPP(V_P,V_f1)) ) ).
+
+cnf(cls_ty_Osplit__asm_32,axiom,
+    ( hBOOL(hAPP(V_P,c_Type_Oty_Oty__case(V_f1,V_f2,V_f3,V_f4,V_f5,V_x,t_a)))
+    | ~ hBOOL(hAPP(V_P,hAPP(V_f5,v_sko__Type__Xty__Xsplit__asm__1(V_P,V_f5,V_x))))
+    | ~ hBOOL(hAPP(V_P,V_f4))
+    | V_x = c_Type_Oty_OInteger
+    | ~ hBOOL(hAPP(V_P,V_f2))
+    | ~ hBOOL(hAPP(V_P,V_f1)) ) ).
+
+cnf(cls_widen__Class_2,axiom,
+    c_TypeRel_Owiden(V_P,c_Type_Oty_ONT,c_Type_Oty_OClass(V_C),T_a) ).
+
+cnf(cls_ty_Osplit__asm_35,axiom,
+    ( hBOOL(hAPP(V_P,c_Type_Oty_Oty__case(V_f1,V_f2,V_f3,V_f4,V_f5,V_x,t_a)))
+    | V_x = c_Type_Oty_OClass(v_sko__Type__Xty__Xsplit__asm__1(V_P,V_f5,V_x))
+    | ~ hBOOL(hAPP(V_P,V_f4))
+    | ~ hBOOL(hAPP(V_P,V_f3))
+    | ~ hBOOL(hAPP(V_P,V_f2))
+    | ~ hBOOL(hAPP(V_P,V_f1)) ) ).
+
+cnf(cls_ty_Ocase__cong_30,axiom,
+    ( c_Type_Oty_Oty__case(V_xc,V_xb,V_xa,V_x,V_f5,V_xd,T_a) = c_Type_Oty_Oty__case(V_xc,V_xb,V_xa,V_x,V_g5,V_xd,T_a)
+    | V_xd = c_Type_Oty_OClass(c_Type_Osko__Type__Xty__Xcase__cong__1__1(V_xd,V_f5,V_g5,T_a)) ) ).
+
+cnf(cls_ty_Osplit_35,axiom,
+    ( hBOOL(hAPP(V_P,c_Type_Oty_Oty__case(V_f1,V_f2,V_f3,V_f4,V_f5,V_x,t_a)))
+    | V_x = c_Type_Oty_OClass(v_sko__Type__Xty__Xsplit__1(V_P,V_f5,V_x))
+    | ~ hBOOL(hAPP(V_P,V_f4))
+    | ~ hBOOL(hAPP(V_P,V_f3))
+    | ~ hBOOL(hAPP(V_P,V_f2))
+    | ~ hBOOL(hAPP(V_P,V_f1)) ) ).
+
+cnf(cls_ty_Osplit__asm_36,axiom,
+    ( hBOOL(hAPP(V_P,c_Type_Oty_Oty__case(V_f1,V_f2,V_f3,V_f4,V_f5,V_x,t_a)))
+    | ~ hBOOL(hAPP(V_P,hAPP(V_f5,v_sko__Type__Xty__Xsplit__asm__1(V_P,V_f5,V_x))))
+    | ~ hBOOL(hAPP(V_P,V_f4))
+    | ~ hBOOL(hAPP(V_P,V_f3))
+    | ~ hBOOL(hAPP(V_P,V_f2))
+    | ~ hBOOL(hAPP(V_P,V_f1)) ) ).
+
+cnf(cls_ty_Osplit_36,axiom,
+    ( hBOOL(hAPP(V_P,c_Type_Oty_Oty__case(V_f1,V_f2,V_f3,V_f4,V_f5,V_x,t_a)))
+    | ~ hBOOL(hAPP(V_P,hAPP(V_f5,v_sko__Type__Xty__Xsplit__1(V_P,V_f5,V_x))))
+    | ~ hBOOL(hAPP(V_P,V_f4))
+    | ~ hBOOL(hAPP(V_P,V_f3))
+    | ~ hBOOL(hAPP(V_P,V_f2))
+    | ~ hBOOL(hAPP(V_P,V_f1)) ) ).
+
+cnf(cls_ty_Ocase__cong_31,axiom,
+    ( hAPP(V_f5,c_Type_Osko__Type__Xty__Xcase__cong__1__1(V_xd,V_f5,V_g5,T_a)) != hAPP(V_g5,c_Type_Osko__Type__Xty__Xcase__cong__1__1(V_xd,V_f5,V_g5,T_a))
+    | c_Type_Oty_Oty__case(V_xc,V_xb,V_xa,V_x,V_f5,V_xd,T_a) = c_Type_Oty_Oty__case(V_xc,V_xb,V_xa,V_x,V_g5,V_xd,T_a) ) ).
+
+cnf(cls_widen__refl_0,axiom,
+    c_TypeRel_Owiden(V_P,V_T,V_T,T_a) ).
+
+cnf(cls_widen__trans_0,axiom,
+    ( c_TypeRel_Owiden(V_P,V_S,V_T,T_a)
+    | ~ c_TypeRel_Owiden(V_P,V_U,V_T,T_a)
+    | ~ c_TypeRel_Owiden(V_P,V_S,V_U,T_a) ) ).
+
+cnf(cls_ty_Ocase__cong_5,axiom,
+    ( hAPP(V_f5,c_Type_Osko__Type__Xty__Xcase__cong__1__1(V_xa,V_f5,V_g5,T_a)) != hAPP(V_g5,c_Type_Osko__Type__Xty__Xcase__cong__1__1(V_xa,V_f5,V_g5,T_a))
+    | V_xa = c_Type_Oty_ONT
+    | V_xa = c_Type_Oty_OBoolean
+    | V_xa = c_Type_Oty_OVoid
+    | c_Type_Oty_Oty__case(V_f1,V_f2,V_x,V_f4,V_f5,V_xa,T_a) = c_Type_Oty_Oty__case(V_g1,V_g2,V_x,V_g4,V_g5,V_xa,T_a) ) ).
+
+cnf(cls_WTrt__elim__cases_I7_J_0,axiom,
+    ( c_WellTypeRT_OWTrt(V_P,V_h,V_E,V_e,c_Type_Oty_ONT)
+    | c_WellTypeRT_OWTrt(V_P,V_h,V_E,V_e,c_Type_Oty_OClass(c_WellTypeRT_Osko__WellTypeRT__XWTrt__elim__cases__7__1(V_D,V_E,V_F,V_P,V_T,V_e,V_h)))
+    | ~ c_WellTypeRT_OWTrt(V_P,V_h,V_E,c_Expr_Oexp_OFAcc(V_e,V_F,V_D,tc_List_Olist(tc_String_Ochar)),V_T) ) ).
+
+cnf(cls_ty_Osplit_21,axiom,
+    ( hBOOL(hAPP(V_P,c_Type_Oty_Oty__case(V_f1,V_f2,V_f3,V_f4,V_f5,V_x,t_a)))
+    | V_x = c_Type_Oty_OClass(v_sko__Type__Xty__Xsplit__1(V_P,V_f5,V_x))
+    | V_x = c_Type_Oty_ONT
+    | V_x = c_Type_Oty_OInteger
+    | V_x = c_Type_Oty_OBoolean
+    | ~ hBOOL(hAPP(V_P,V_f1)) ) ).
+
+cnf(cls_ty_Ocase__cong_8,axiom,
+    ( V_xa = c_Type_Oty_OVoid
+    | c_Type_Oty_Oty__case(V_f1,V_x,V_f3,V_f4,V_f5,V_xa,T_a) = c_Type_Oty_Oty__case(V_g1,V_x,V_g3,V_g4,V_g5,V_xa,T_a)
+    | V_xa = c_Type_Oty_OClass(c_Type_Osko__Type__Xty__Xcase__cong__1__1(V_xa,V_f5,V_g5,T_a))
+    | V_xa = c_Type_Oty_ONT
+    | V_xa = c_Type_Oty_OInteger ) ).
+
+cnf(cls_ty_Osplit__asm_13,axiom,
+    ( hBOOL(hAPP(V_P,c_Type_Oty_Oty__case(V_f1,V_f2,V_f3,V_f4,V_f5,V_x,t_a)))
+    | V_x = c_Type_Oty_OClass(v_sko__Type__Xty__Xsplit__asm__1(V_P,V_f5,V_x))
+    | V_x = c_Type_Oty_ONT
+    | V_x = c_Type_Oty_OInteger
+    | ~ hBOOL(hAPP(V_P,V_f2))
+    | V_x = c_Type_Oty_OVoid ) ).
+
+cnf(cls_ty_Osplit_13,axiom,
+    ( hBOOL(hAPP(V_P,c_Type_Oty_Oty__case(V_f1,V_f2,V_f3,V_f4,V_f5,V_x,t_a)))
+    | V_x = c_Type_Oty_OClass(v_sko__Type__Xty__Xsplit__1(V_P,V_f5,V_x))
+    | V_x = c_Type_Oty_ONT
+    | V_x = c_Type_Oty_OInteger
+    | ~ hBOOL(hAPP(V_P,V_f2))
+    | V_x = c_Type_Oty_OVoid ) ).
+
+cnf(cls_ty_Ocase__cong_16,axiom,
+    ( c_Type_Oty_Oty__case(V_x,V_f2,V_f3,V_f4,V_f5,V_xa,T_a) = c_Type_Oty_Oty__case(V_x,V_g2,V_g3,V_g4,V_g5,V_xa,T_a)
+    | V_xa = c_Type_Oty_OClass(c_Type_Osko__Type__Xty__Xcase__cong__1__1(V_xa,V_f5,V_g5,T_a))
+    | V_xa = c_Type_Oty_ONT
+    | V_xa = c_Type_Oty_OInteger
+    | V_xa = c_Type_Oty_OBoolean ) ).
+
+cnf(cls_ty_Osplit__asm_21,axiom,
+    ( hBOOL(hAPP(V_P,c_Type_Oty_Oty__case(V_f1,V_f2,V_f3,V_f4,V_f5,V_x,t_a)))
+    | V_x = c_Type_Oty_OClass(v_sko__Type__Xty__Xsplit__asm__1(V_P,V_f5,V_x))
+    | V_x = c_Type_Oty_ONT
+    | V_x = c_Type_Oty_OInteger
+    | V_x = c_Type_Oty_OBoolean
+    | ~ hBOOL(hAPP(V_P,V_f1)) ) ).
+
+cnf(cls_ty_Osplit_7,axiom,
+    ( hBOOL(hAPP(V_P,c_Type_Oty_Oty__case(V_f1,V_f2,V_f3,V_f4,V_f5,V_x,t_a)))
+    | V_x = c_Type_Oty_OClass(v_sko__Type__Xty__Xsplit__1(V_P,V_f5,V_x))
+    | ~ hBOOL(hAPP(V_P,V_f4))
+    | V_x = c_Type_Oty_OInteger
+    | V_x = c_Type_Oty_OBoolean
+    | V_x = c_Type_Oty_OVoid ) ).
+
+cnf(cls_ty_Osplit__asm_7,axiom,
+    ( hBOOL(hAPP(V_P,c_Type_Oty_Oty__case(V_f1,V_f2,V_f3,V_f4,V_f5,V_x,t_a)))
+    | V_x = c_Type_Oty_OClass(v_sko__Type__Xty__Xsplit__asm__1(V_P,V_f5,V_x))
+    | ~ hBOOL(hAPP(V_P,V_f4))
+    | V_x = c_Type_Oty_OInteger
+    | V_x = c_Type_Oty_OBoolean
+    | V_x = c_Type_Oty_OVoid ) ).
+
+cnf(cls_ty_Ocase__cong_2,axiom,
+    ( V_xa = c_Type_Oty_OInteger
+    | V_xa = c_Type_Oty_OBoolean
+    | V_xa = c_Type_Oty_OVoid
+    | c_Type_Oty_Oty__case(V_f1,V_f2,V_f3,V_x,V_f5,V_xa,T_a) = c_Type_Oty_Oty__case(V_g1,V_g2,V_g3,V_x,V_g5,V_xa,T_a)
+    | V_xa = c_Type_Oty_OClass(c_Type_Osko__Type__Xty__Xcase__cong__1__1(V_xa,V_f5,V_g5,T_a)) ) ).
+
+cnf(cls_ty_Ocase__cong_4,axiom,
+    ( V_xa = c_Type_Oty_OBoolean
+    | V_xa = c_Type_Oty_OVoid
+    | c_Type_Oty_Oty__case(V_f1,V_f2,V_x,V_f4,V_f5,V_xa,T_a) = c_Type_Oty_Oty__case(V_g1,V_g2,V_x,V_g4,V_g5,V_xa,T_a)
+    | V_xa = c_Type_Oty_OClass(c_Type_Osko__Type__Xty__Xcase__cong__1__1(V_xa,V_f5,V_g5,T_a))
+    | V_xa = c_Type_Oty_ONT ) ).
+
+cnf(cls_ty_Osplit__asm_9,axiom,
+    ( hBOOL(hAPP(V_P,c_Type_Oty_Oty__case(V_f1,V_f2,V_f3,V_f4,V_f5,V_x,t_a)))
+    | V_x = c_Type_Oty_OClass(v_sko__Type__Xty__Xsplit__asm__1(V_P,V_f5,V_x))
+    | V_x = c_Type_Oty_ONT
+    | ~ hBOOL(hAPP(V_P,V_f3))
+    | V_x = c_Type_Oty_OBoolean
+    | V_x = c_Type_Oty_OVoid ) ).
+
+cnf(cls_ty_Osplit_9,axiom,
+    ( hBOOL(hAPP(V_P,c_Type_Oty_Oty__case(V_f1,V_f2,V_f3,V_f4,V_f5,V_x,t_a)))
+    | V_x = c_Type_Oty_OClass(v_sko__Type__Xty__Xsplit__1(V_P,V_f5,V_x))
+    | V_x = c_Type_Oty_ONT
+    | ~ hBOOL(hAPP(V_P,V_f3))
+    | V_x = c_Type_Oty_OBoolean
+    | V_x = c_Type_Oty_OVoid ) ).
+
+cnf(cls_default__val_Oinduct_0,axiom,
+    ( hBOOL(hAPP(V_P,V_ty))
+    | ~ hBOOL(hAPP(V_P,c_Type_Oty_OClass(v_sko__Value__Xdefault__val__Xinduct__1(V_P))))
+    | ~ hBOOL(hAPP(V_P,c_Type_Oty_ONT))
+    | ~ hBOOL(hAPP(V_P,c_Type_Oty_OInteger))
+    | ~ hBOOL(hAPP(V_P,c_Type_Oty_OBoolean))
+    | ~ hBOOL(hAPP(V_P,c_Type_Oty_OVoid)) ) ).
+
+cnf(cls_ty_Onchotomy_0,axiom,
+    ( V_v = c_Type_Oty_OClass(c_Type_Osko__Type__Xty__Xnchotomy__1__1(V_v))
+    | V_v = c_Type_Oty_ONT
+    | V_v = c_Type_Oty_OInteger
+    | V_v = c_Type_Oty_OBoolean
+    | V_v = c_Type_Oty_OVoid ) ).
+
+cnf(cls_ty_Oinduct_0,axiom,
+    ( hBOOL(hAPP(V_P,V_ty))
+    | ~ hBOOL(hAPP(V_P,c_Type_Oty_OClass(v_sko__Type__Xty__Xinduct__1(V_P))))
+    | ~ hBOOL(hAPP(V_P,c_Type_Oty_ONT))
+    | ~ hBOOL(hAPP(V_P,c_Type_Oty_OInteger))
+    | ~ hBOOL(hAPP(V_P,c_Type_Oty_OBoolean))
+    | ~ hBOOL(hAPP(V_P,c_Type_Oty_OVoid)) ) ).
+
+cnf(cls_ty_Oexhaust_0,axiom,
+    ( V_y = c_Type_Oty_OClass(c_Type_Osko__Type__Xty__Xexhaust__1__1(V_y))
+    | V_y = c_Type_Oty_ONT
+    | V_y = c_Type_Oty_OInteger
+    | V_y = c_Type_Oty_OBoolean
+    | V_y = c_Type_Oty_OVoid ) ).
+
+cnf(cls_ty_Oinducts_0,axiom,
+    ( hBOOL(hAPP(V_P,V_ty))
+    | ~ hBOOL(hAPP(V_P,c_Type_Oty_OClass(v_sko__Type__Xty__Xinducts__1(V_P))))
+    | ~ hBOOL(hAPP(V_P,c_Type_Oty_ONT))
+    | ~ hBOOL(hAPP(V_P,c_Type_Oty_OInteger))
+    | ~ hBOOL(hAPP(V_P,c_Type_Oty_OBoolean))
+    | ~ hBOOL(hAPP(V_P,c_Type_Oty_OVoid)) ) ).
+
+cnf(cls_ty_Osplit__asm_6,axiom,
+    ( hBOOL(hAPP(V_P,c_Type_Oty_Oty__case(V_f1,V_f2,V_f3,V_f4,V_f5,V_x,t_a)))
+    | ~ hBOOL(hAPP(V_P,hAPP(V_f5,v_sko__Type__Xty__Xsplit__asm__1(V_P,V_f5,V_x))))
+    | V_x = c_Type_Oty_ONT
+    | V_x = c_Type_Oty_OInteger
+    | V_x = c_Type_Oty_OBoolean
+    | V_x = c_Type_Oty_OVoid ) ).
+
+cnf(cls_ty_Osplit_6,axiom,
+    ( hBOOL(hAPP(V_P,c_Type_Oty_Oty__case(V_f1,V_f2,V_f3,V_f4,V_f5,V_x,t_a)))
+    | ~ hBOOL(hAPP(V_P,hAPP(V_f5,v_sko__Type__Xty__Xsplit__1(V_P,V_f5,V_x))))
+    | V_x = c_Type_Oty_ONT
+    | V_x = c_Type_Oty_OInteger
+    | V_x = c_Type_Oty_OBoolean
+    | V_x = c_Type_Oty_OVoid ) ).
+
+cnf(cls_ty_Ocase__cong_1,axiom,
+    ( hAPP(V_f5,c_Type_Osko__Type__Xty__Xcase__cong__1__1(V_x,V_f5,V_g5,T_a)) != hAPP(V_g5,c_Type_Osko__Type__Xty__Xcase__cong__1__1(V_x,V_f5,V_g5,T_a))
+    | V_x = c_Type_Oty_ONT
+    | V_x = c_Type_Oty_OInteger
+    | V_x = c_Type_Oty_OBoolean
+    | V_x = c_Type_Oty_OVoid
+    | c_Type_Oty_Oty__case(V_f1,V_f2,V_f3,V_f4,V_f5,V_x,T_a) = c_Type_Oty_Oty__case(V_g1,V_g2,V_g3,V_g4,V_g5,V_x,T_a) ) ).
+
+cnf(cls_ty_Ocase__cong_0,axiom,
+    ( c_Type_Oty_Oty__case(V_f1,V_f2,V_f3,V_f4,V_f5,V_x,T_a) = c_Type_Oty_Oty__case(V_g1,V_g2,V_g3,V_g4,V_g5,V_x,T_a)
+    | V_x = c_Type_Oty_OClass(c_Type_Osko__Type__Xty__Xcase__cong__1__1(V_x,V_f5,V_g5,T_a))
+    | V_x = c_Type_Oty_ONT
+    | V_x = c_Type_Oty_OInteger
+    | V_x = c_Type_Oty_OBoolean
+    | V_x = c_Type_Oty_OVoid ) ).
+
+cnf(cls_ty_Osplit_5,axiom,
+    ( hBOOL(hAPP(V_P,c_Type_Oty_Oty__case(V_f1,V_f2,V_f3,V_f4,V_f5,V_x,t_a)))
+    | V_x = c_Type_Oty_OClass(v_sko__Type__Xty__Xsplit__1(V_P,V_f5,V_x))
+    | V_x = c_Type_Oty_ONT
+    | V_x = c_Type_Oty_OInteger
+    | V_x = c_Type_Oty_OBoolean
+    | V_x = c_Type_Oty_OVoid ) ).
+
+cnf(cls_ty_Osplit__asm_5,axiom,
+    ( hBOOL(hAPP(V_P,c_Type_Oty_Oty__case(V_f1,V_f2,V_f3,V_f4,V_f5,V_x,t_a)))
+    | V_x = c_Type_Oty_OClass(v_sko__Type__Xty__Xsplit__asm__1(V_P,V_f5,V_x))
+    | V_x = c_Type_Oty_ONT
+    | V_x = c_Type_Oty_OInteger
+    | V_x = c_Type_Oty_OBoolean
+    | V_x = c_Type_Oty_OVoid ) ).
+
+cnf(cls_IH_1,axiom,
+    ( c_TypeRel_Owiden(v_P,v_sko__local__XIH__1(V_Ea,v_P,V_Ta,v_e_Ha____,v_h_Ha____),V_Ta,tc_prod(tc_List_Olist(tc_List_Olist(tc_String_Ochar)),tc_Expr_Oexp(tc_List_Olist(tc_String_Ochar))))
+    | ~ c_WellTypeRT_OWTrt(v_P,v_ha____,V_Ea,v_ea____,V_Ta)
+    | ~ c_TypeSafe__Mirabelle_Osconf(v_P,V_Ea,c_Pair(v_ha____,v_la____,tc_fun(tc_nat,tc_Option_Ooption(tc_prod(tc_List_Olist(tc_String_Ochar),tc_fun(tc_prod(tc_List_Olist(tc_String_Ochar),tc_List_Olist(tc_String_Ochar)),tc_Option_Ooption(tc_Value_Oval))))),tc_fun(tc_List_Olist(tc_String_Ochar),tc_Option_Ooption(tc_Value_Oval)))) ) ).
+
+cnf(cls_CallObj_Ohyps_I2_J_1,axiom,
+    ( c_TypeRel_Owiden(v_P,v_sko__local__XCallObj__Xhyps__2__1(V_E,v_P,V_T,v_e_Ha____,v_h_Ha____),V_T,tc_prod(tc_List_Olist(tc_List_Olist(tc_String_Ochar)),tc_Expr_Oexp(tc_List_Olist(tc_String_Ochar))))
+    | ~ c_WellTypeRT_OWTrt(v_P,v_ha____,V_E,v_ea____,V_T)
+    | ~ c_TypeSafe__Mirabelle_Osconf(v_P,V_E,c_Pair(v_ha____,v_la____,tc_fun(tc_nat,tc_Option_Ooption(tc_prod(tc_List_Olist(tc_String_Ochar),tc_fun(tc_prod(tc_List_Olist(tc_String_Ochar),tc_List_Olist(tc_String_Ochar)),tc_Option_Ooption(tc_Value_Oval))))),tc_fun(tc_List_Olist(tc_String_Ochar),tc_Option_Ooption(tc_Value_Oval)))) ) ).
+
+cnf(cls_CallObj_I2_J_1,axiom,
+    ( c_TypeRel_Owiden(v_P,v_sko__local__XCallObj__2__1(V_E,v_P,V_T,v_e_Ha____,v_h_Ha____),V_T,tc_prod(tc_List_Olist(tc_List_Olist(tc_String_Ochar)),tc_Expr_Oexp(tc_List_Olist(tc_String_Ochar))))
+    | ~ c_WellTypeRT_OWTrt(v_P,v_ha____,V_E,v_ea____,V_T)
+    | ~ c_TypeSafe__Mirabelle_Osconf(v_P,V_E,c_Pair(v_ha____,v_la____,tc_fun(tc_nat,tc_Option_Ooption(tc_prod(tc_List_Olist(tc_String_Ochar),tc_fun(tc_prod(tc_List_Olist(tc_String_Ochar),tc_List_Olist(tc_String_Ochar)),tc_Option_Ooption(tc_Value_Oval))))),tc_fun(tc_List_Olist(tc_String_Ochar),tc_Option_Ooption(tc_Value_Oval)))) ) ).
+
+cnf(cls_not__refTE_0,axiom,
+    ( V_T = c_Type_Oty_OInteger
+    | V_T = c_Type_Oty_OBoolean
+    | V_T = c_Type_Oty_OVoid
+    | c_Type_Ois__refT(V_T) ) ).
+
+cnf(cls_exp_Osimps_I157_J_0,axiom,
+    c_Expr_Oexp_OCall(V_exp_H,V_list1_H,V_list2_H,T_a) != c_Expr_Oexp_OFAcc(V_exp,V_list1,V_list2,T_a) ).
+
+cnf(cls_is__refT__def_2,axiom,
+    c_Type_Ois__refT(c_Type_Oty_OClass(V_x)) ).
+
+cnf(cls_exp_Osimps_I175_J_0,axiom,
+    c_Expr_Oexp_OSeq(V_exp1_H,V_exp2_H,T_a) != c_Expr_Oexp_OFAss(V_exp1,V_list1,V_list2,V_exp2,T_a) ).
+
+cnf(cls_exp_Osimps_I11_J_1,axiom,
+    ( c_Expr_Oexp_OSeq(V_exp1,V_exp2,T_a) != c_Expr_Oexp_OSeq(V_exp1_H,V_exp2_H,T_a)
+    | V_exp2 = V_exp2_H ) ).
+
+cnf(cls_exp_Osimps_I11_J_0,axiom,
+    ( c_Expr_Oexp_OSeq(V_exp1,V_exp2,T_a) != c_Expr_Oexp_OSeq(V_exp1_H,V_exp2_H,T_a)
+    | V_exp1 = V_exp1_H ) ).
+
+cnf(cls_ty_Osplit_0,axiom,
+    ( ~ hBOOL(hAPP(V_P,c_Type_Oty_Oty__case(V_f1,V_f2,V_f3,V_f4,V_f5,c_Type_Oty_OVoid,t_a)))
+    | hBOOL(hAPP(V_P,V_f1)) ) ).
+
+cnf(cls_ty_Osplit_1,axiom,
+    ( ~ hBOOL(hAPP(V_P,c_Type_Oty_Oty__case(V_f1,V_f2,V_f3,V_f4,V_f5,c_Type_Oty_OBoolean,t_a)))
+    | hBOOL(hAPP(V_P,V_f2)) ) ).
+
+cnf(cls_exp_Osimps_I171_J_0,axiom,
+    c_Expr_Oexp_OCall(V_exp_H,V_list1_H,V_list2_H,T_a) != c_Expr_Oexp_OFAss(V_exp1,V_list1,V_list2,V_exp2,T_a) ).
+
+cnf(cls_ty_Osimps_I23_J_0,axiom,
+    c_Type_Oty_Oty__case(V_f1,V_f2,V_f3,V_f4,V_f5,c_Type_Oty_OBoolean,T_a) = V_f2 ).
+
+cnf(cls_WT__elim__cases_I8_J_0,axiom,
+    ( V_T = c_Type_Oty_OVoid
+    | ~ c_WellType_OWT(V_P,V_E,c_Expr_Oexp_OFAss(V_a,V_F,V_D,V_v,tc_List_Olist(tc_String_Ochar)),V_T) ) ).
+
+cnf(cls_ty_Osimps_I11_J_0,axiom,
+    c_Type_Oty_OInteger != c_Type_Oty_OBoolean ).
+
+cnf(cls_ty_Osimps_I4_J_0,axiom,
+    c_Type_Oty_OVoid != c_Type_Oty_OInteger ).
+
+cnf(cls_ty_Osplit_4,axiom,
+    ( ~ hBOOL(hAPP(V_P,c_Type_Oty_Oty__case(V_f1,V_f2,V_f3,V_f4,V_f5,c_Type_Oty_OClass(V_list),t_a)))
+    | hBOOL(hAPP(V_P,hAPP(V_f5,V_list))) ) ).
+
+cnf(cls_ty_Osplit__asm_4,axiom,
+    ( ~ hBOOL(hAPP(V_P,c_Type_Oty_Oty__case(V_f1,V_f2,V_f3,V_f4,V_f5,c_Type_Oty_OClass(V_xa),t_a)))
+    | hBOOL(hAPP(V_P,hAPP(V_f5,V_xa))) ) ).
+
+cnf(cls_hext__refl_0,axiom,
+    c_Objects_Ohext(V_h,V_h) ).
+
+cnf(cls_hext__trans_0,axiom,
+    ( c_Objects_Ohext(V_h,V_h_H_H)
+    | ~ c_Objects_Ohext(V_h_H,V_h_H_H)
+    | ~ c_Objects_Ohext(V_h,V_h_H) ) ).
+
+cnf(cls_WTrts__hext__mono_0,axiom,
+    ( c_WellTypeRT_OWTrts(V_P,V_h_H,V_E,V_es,V_Ts)
+    | ~ c_Objects_Ohext(V_h,V_h_H)
+    | ~ c_WellTypeRT_OWTrts(V_P,V_h,V_E,V_es,V_Ts) ) ).
+
+cnf(cls_ty_Orecs_I3_J_0,axiom,
+    c_Type_Oty_Oty__rec(V_f1,V_f2,V_f3,V_f4,V_f5,c_Type_Oty_OInteger,T_a) = V_f3 ).
+
+cnf(cls_exp_Osimps_I9_J_2,axiom,
+    ( c_Expr_Oexp_OCall(V_exp,V_list1,V_list2,T_a) != c_Expr_Oexp_OCall(V_exp_H,V_list1_H,V_list2_H,T_a)
+    | V_list2 = V_list2_H ) ).
+
+cnf(cls_exp_Osimps_I9_J_1,axiom,
+    ( c_Expr_Oexp_OCall(V_exp,V_list1,V_list2,T_a) != c_Expr_Oexp_OCall(V_exp_H,V_list1_H,V_list2_H,T_a)
+    | V_list1 = V_list1_H ) ).
+
+cnf(cls_exp_Osimps_I9_J_0,axiom,
+    ( c_Expr_Oexp_OCall(V_exp,V_list1,V_list2,T_a) != c_Expr_Oexp_OCall(V_exp_H,V_list1_H,V_list2_H,T_a)
+    | V_exp = V_exp_H ) ).
+
+cnf(cls_COMBI__def_0,axiom,
+    c_COMBI(V_P,T_a) = V_P ).
+
+cnf(cls_ty_Osimps_I14_J_0,axiom,
+    c_Type_Oty_OBoolean != c_Type_Oty_OClass(V_list_H) ).
+
+cnf(cls_ty_Osimps_I5_J_0,axiom,
+    c_Type_Oty_OInteger != c_Type_Oty_OVoid ).
+
+cnf(cls_exp_Osimps_I186_J_0,axiom,
+    c_Expr_Oexp_OCall(V_exp,V_list1,V_list2,T_a) != c_Expr_Oexp_OSeq(V_exp1_H,V_exp2_H,T_a) ).
+
+cnf(cls_is__type__simps_1,axiom,
+    c_Decl_Ois__type(V_P,c_Type_Oty_OBoolean,T_a) ).
+
+cnf(cls_ty_Osimps_I24_J_0,axiom,
+    c_Type_Oty_Oty__case(V_f1,V_f2,V_f3,V_f4,V_f5,c_Type_Oty_OInteger,T_a) = V_f3 ).
+
+cnf(cls_ty_Osimps_I19_J_0,axiom,
+    c_Type_Oty_OClass(V_list_H) != c_Type_Oty_OInteger ).
+
+cnf(cls_ty_Orecs_I5_J_0,axiom,
+    c_Type_Oty_Oty__rec(V_f1,V_f2,V_f3,V_f4,V_f5,c_Type_Oty_OClass(V_list),T_a) = hAPP(V_f5,V_list) ).
+
+cnf(cls_map__le__refl_0,axiom,
+    c_Map_Omap__le(V_f,V_f,T_a,T_b) ).
+
+cnf(cls_map__le__trans_0,axiom,
+    ( c_Map_Omap__le(V_m1,V_m3,T_a,T_b)
+    | ~ c_Map_Omap__le(V_m2,V_m3,T_a,T_b)
+    | ~ c_Map_Omap__le(V_m1,V_m2,T_a,T_b) ) ).
+
+cnf(cls_wt__env__mono_0,axiom,
+    ( c_WellType_OWT(V_P,V_E_H,V_e,V_T)
+    | ~ c_Map_Omap__le(V_E,V_E_H,tc_List_Olist(tc_String_Ochar),tc_Type_Oty)
+    | ~ c_WellType_OWT(V_P,V_E,V_e,V_T) ) ).
+
+cnf(cls_ty_Osimps_I2_J_0,axiom,
+    c_Type_Oty_OVoid != c_Type_Oty_OBoolean ).
+
+cnf(cls_ty_Oinject_0,axiom,
+    ( c_Type_Oty_OClass(V_list) != c_Type_Oty_OClass(V_list_H)
+    | V_list = V_list_H ) ).
+
+cnf(cls_ty_Osimps_I9_J_0,axiom,
+    c_Type_Oty_OClass(V_list_H) != c_Type_Oty_OVoid ).
+
+cnf(cls_exp_Osimps_I160_J_0,axiom,
+    c_Expr_Oexp_OFAcc(V_exp,V_list1,V_list2,T_a) != c_Expr_Oexp_OSeq(V_exp1_H,V_exp2_H,T_a) ).
+
+cnf(cls_exp_Osimps_I7_J_2,axiom,
+    ( c_Expr_Oexp_OFAcc(V_exp,V_list1,V_list2,T_a) != c_Expr_Oexp_OFAcc(V_exp_H,V_list1_H,V_list2_H,T_a)
+    | V_list2 = V_list2_H ) ).
+
+cnf(cls_exp_Osimps_I7_J_1,axiom,
+    ( c_Expr_Oexp_OFAcc(V_exp,V_list1,V_list2,T_a) != c_Expr_Oexp_OFAcc(V_exp_H,V_list1_H,V_list2_H,T_a)
+    | V_list1 = V_list1_H ) ).
+
+cnf(cls_exp_Osimps_I7_J_0,axiom,
+    ( c_Expr_Oexp_OFAcc(V_exp,V_list1,V_list2,T_a) != c_Expr_Oexp_OFAcc(V_exp_H,V_list1_H,V_list2_H,T_a)
+    | V_exp = V_exp_H ) ).
+
+cnf(cls_exp_Osimps_I8_J_3,axiom,
+    ( c_Expr_Oexp_OFAss(V_exp1,V_list1,V_list2,V_exp2,T_a) != c_Expr_Oexp_OFAss(V_exp1_H,V_list1_H,V_list2_H,V_exp2_H,T_a)
+    | V_exp2 = V_exp2_H ) ).
+
+cnf(cls_exp_Osimps_I8_J_2,axiom,
+    ( c_Expr_Oexp_OFAss(V_exp1,V_list1,V_list2,V_exp2,T_a) != c_Expr_Oexp_OFAss(V_exp1_H,V_list1_H,V_list2_H,V_exp2_H,T_a)
+    | V_list2 = V_list2_H ) ).
+
+cnf(cls_exp_Osimps_I8_J_1,axiom,
+    ( c_Expr_Oexp_OFAss(V_exp1,V_list1,V_list2,V_exp2,T_a) != c_Expr_Oexp_OFAss(V_exp1_H,V_list1_H,V_list2_H,V_exp2_H,T_a)
+    | V_list1 = V_list1_H ) ).
+
+cnf(cls_exp_Osimps_I8_J_0,axiom,
+    ( c_Expr_Oexp_OFAss(V_exp1,V_list1,V_list2,V_exp2,T_a) != c_Expr_Oexp_OFAss(V_exp1_H,V_list1_H,V_list2_H,V_exp2_H,T_a)
+    | V_exp1 = V_exp1_H ) ).
+
+cnf(cls_exp_Osimps_I174_J_0,axiom,
+    c_Expr_Oexp_OFAss(V_exp1,V_list1,V_list2,V_exp2,T_a) != c_Expr_Oexp_OSeq(V_exp1_H,V_exp2_H,T_a) ).
+
+cnf(cls_WTrt_H__WTrts_H_Ointros_I9_J_0,axiom,
+    ( c_Progress_OWTrt_H(V_P,V_h,V_E,c_Expr_Oexp_OFAcc(V_e,V_F,V_D,tc_List_Olist(tc_String_Ochar)),V_T)
+    | ~ c_Progress_OWTrt_H(V_P,V_h,V_E,V_e,c_Type_Oty_ONT) ) ).
+
+cnf(cls_ty_Osimps_I10_J_0,axiom,
+    c_Type_Oty_OBoolean != c_Type_Oty_OInteger ).
+
+cnf(cls_exp_Osimps_I155_J_0,axiom,
+    c_Expr_Oexp_OFAss(V_exp1_H,V_list1_H,V_list2_H,V_exp2_H,T_a) != c_Expr_Oexp_OFAcc(V_exp,V_list1,V_list2,T_a) ).
+
+cnf(cls_map__le__antisym_0,axiom,
+    ( V_f = V_g
+    | ~ c_Map_Omap__le(V_g,V_f,T_a,T_b)
+    | ~ c_Map_Omap__le(V_f,V_g,T_a,T_b) ) ).
+
+cnf(cls_exp_Osimps_I170_J_0,axiom,
+    c_Expr_Oexp_OFAss(V_exp1,V_list1,V_list2,V_exp2,T_a) != c_Expr_Oexp_OCall(V_exp_H,V_list1_H,V_list2_H,T_a) ).
+
+cnf(cls_WTrt__elim__cases_I8_J_0,axiom,
+    ( V_T = c_Type_Oty_OVoid
+    | V_T = c_Type_Oty_OVoid
+    | ~ c_WellTypeRT_OWTrt(V_P,V_h,V_E,c_Expr_Oexp_OFAss(V_e,V_F,V_D,V_v,tc_List_Olist(tc_String_Ochar)),V_T) ) ).
+
+cnf(cls_ty_Osplit_2,axiom,
+    ( ~ hBOOL(hAPP(V_P,c_Type_Oty_Oty__case(V_f1,V_f2,V_f3,V_f4,V_f5,c_Type_Oty_OInteger,t_a)))
+    | hBOOL(hAPP(V_P,V_f3)) ) ).
+
+cnf(cls_WTrt__elim__cases_I8_J_9,axiom,
+    ( V_T = c_Type_Oty_OVoid
+    | c_WellTypeRT_OWTrt(V_P,V_h,V_E,V_v,c_WellTypeRT_Osko__WellTypeRT__XWTrt__elim__cases__8__3(V_D,V_E,V_F,V_P,V_e,V_h,V_v))
+    | ~ c_WellTypeRT_OWTrt(V_P,V_h,V_E,c_Expr_Oexp_OFAss(V_e,V_F,V_D,V_v,tc_List_Olist(tc_String_Ochar)),V_T) ) ).
+
+cnf(cls_exp_Osimps_I156_J_0,axiom,
+    c_Expr_Oexp_OFAcc(V_exp,V_list1,V_list2,T_a) != c_Expr_Oexp_OCall(V_exp_H,V_list1_H,V_list2_H,T_a) ).
+
+cnf(cls_ty_Osimps_I3_J_0,axiom,
+    c_Type_Oty_OBoolean != c_Type_Oty_OVoid ).
+
+cnf(cls_WTrt_H__WTrts_H_Ointros_I11_J_0,axiom,
+    ( c_Progress_OWTrt_H(V_P,V_h,V_E,c_Expr_Oexp_OFAss(V_e_092_060_094isub_0621,V_F,V_D,V_e_092_060_094isub_0622,tc_List_Olist(tc_String_Ochar)),c_Type_Oty_OVoid)
+    | ~ c_Progress_OWTrt_H(V_P,V_h,V_E,V_e_092_060_094isub_0622,V_T_092_060_094isub_0622)
+    | ~ c_Progress_OWTrt_H(V_P,V_h,V_E,V_e_092_060_094isub_0621,c_Type_Oty_ONT) ) ).
+
+cnf(cls_WTrt_H__WTrts_H_Ointros_I18_J_0,axiom,
+    ( c_Progress_OWTrt_H(V_P,V_h,V_E,c_Expr_Oexp_OSeq(V_e_092_060_094isub_0621,V_e_092_060_094isub_0622,tc_List_Olist(tc_String_Ochar)),V_T_092_060_094isub_0622)
+    | ~ c_Progress_OWTrt_H(V_P,V_h,V_E,V_e_092_060_094isub_0622,V_T_092_060_094isub_0622)
+    | ~ c_Progress_OWTrt_H(V_P,V_h,V_E,V_e_092_060_094isub_0621,V_T_092_060_094isub_0621) ) ).
+
+cnf(cls_is__type__simps_2,axiom,
+    c_Decl_Ois__type(V_P,c_Type_Oty_OInteger,T_a) ).
+
+cnf(cls_ty_Osimps_I26_J_0,axiom,
+    c_Type_Oty_Oty__case(V_f1,V_f2,V_f3,V_f4,V_f5,c_Type_Oty_OClass(V_list),T_a) = hAPP(V_f5,V_list) ).
+
+cnf(cls_ty_Osimps_I22_J_0,axiom,
+    c_Type_Oty_Oty__case(V_f1,V_f2,V_f3,V_f4,V_f5,c_Type_Oty_OVoid,T_a) = V_f1 ).
+
+cnf(cls_ty_Osimps_I15_J_0,axiom,
+    c_Type_Oty_OClass(V_list_H) != c_Type_Oty_OBoolean ).
+
+cnf(cls_exp_Osimps_I154_J_0,axiom,
+    c_Expr_Oexp_OFAcc(V_exp,V_list1,V_list2,T_a) != c_Expr_Oexp_OFAss(V_exp1_H,V_list1_H,V_list2_H,V_exp2_H,T_a) ).
+
+cnf(cls_ty_Osimps_I18_J_0,axiom,
+    c_Type_Oty_OInteger != c_Type_Oty_OClass(V_list_H) ).
+
+cnf(cls_is__type__simps_0,axiom,
+    c_Decl_Ois__type(V_P,c_Type_Oty_OVoid,T_a) ).
+
+cnf(cls_Pair__eq_0,axiom,
+    ( c_Pair(V_a,V_b,T_a,T_b) != c_Pair(V_a_H,V_b_H,T_a,T_b)
+    | V_a = V_a_H ) ).
+
+cnf(cls_Pair__eq_1,axiom,
+    ( c_Pair(V_a,V_b,T_a,T_b) != c_Pair(V_a_H,V_b_H,T_a,T_b)
+    | V_b = V_b_H ) ).
+
+cnf(cls_ty_Orecs_I2_J_0,axiom,
+    c_Type_Oty_Oty__rec(V_f1,V_f2,V_f3,V_f4,V_f5,c_Type_Oty_OBoolean,T_a) = V_f2 ).
+
+cnf(cls_WTSeq_0,axiom,
+    ( c_WellType_OWT(V_P,V_E,c_Expr_Oexp_OSeq(V_e_092_060_094isub_0621,V_e_092_060_094isub_0622,tc_List_Olist(tc_String_Ochar)),V_T_092_060_094isub_0622)
+    | ~ c_WellType_OWT(V_P,V_E,V_e_092_060_094isub_0622,V_T_092_060_094isub_0622)
+    | ~ c_WellType_OWT(V_P,V_E,V_e_092_060_094isub_0621,V_T_092_060_094isub_0621) ) ).
+
+cnf(cls_ty_Orecs_I1_J_0,axiom,
+    c_Type_Oty_Oty__rec(V_f1,V_f2,V_f3,V_f4,V_f5,c_Type_Oty_OVoid,T_a) = V_f1 ).
+
+cnf(cls_ty_Osimps_I8_J_0,axiom,
+    c_Type_Oty_OVoid != c_Type_Oty_OClass(V_list_H) ).
+
+cnf(cls_exp_Osimps_I161_J_0,axiom,
+    c_Expr_Oexp_OSeq(V_exp1_H,V_exp2_H,T_a) != c_Expr_Oexp_OFAcc(V_exp,V_list1,V_list2,T_a) ).
+
+cnf(cls_exp_Osimps_I187_J_0,axiom,
+    c_Expr_Oexp_OSeq(V_exp1_H,V_exp2_H,T_a) != c_Expr_Oexp_OCall(V_exp,V_list1,V_list2,T_a) ).
+
+cnf(cls_WTrtFAssNT_0,axiom,
+    ( c_WellTypeRT_OWTrt(V_P,V_h,V_E,c_Expr_Oexp_OFAss(V_e_092_060_094isub_0621,V_F,V_D,V_e_092_060_094isub_0622,tc_List_Olist(tc_String_Ochar)),c_Type_Oty_OVoid)
+    | ~ c_WellTypeRT_OWTrt(V_P,V_h,V_E,V_e_092_060_094isub_0622,V_T_092_060_094isub_0622)
+    | ~ c_WellTypeRT_OWTrt(V_P,V_h,V_E,V_e_092_060_094isub_0621,c_Type_Oty_ONT) ) ).
+
+cnf(cls_ty_Osimps_I17_J_0,axiom,
+    c_Type_Oty_ONT != c_Type_Oty_OInteger ).
+
+cnf(cls_conf_0,axiom,
+    c_TypeSafe__Mirabelle_Osconf(v_P,v_E____,c_Pair(v_ha____,v_la____,tc_fun(tc_nat,tc_Option_Ooption(tc_prod(tc_List_Olist(tc_String_Ochar),tc_fun(tc_prod(tc_List_Olist(tc_String_Ochar),tc_List_Olist(tc_String_Ochar)),tc_Option_Ooption(tc_Value_Oval))))),tc_fun(tc_List_Olist(tc_String_Ochar),tc_Option_Ooption(tc_Value_Oval)))) ).
+
+cnf(cls_ty_Osimps_I20_J_0,axiom,
+    c_Type_Oty_ONT != c_Type_Oty_OClass(V_list_H) ).
+
+cnf(cls_CallObj_I2_J_0,axiom,
+    ( c_WellTypeRT_OWTrt(v_P,v_h_Ha____,V_E,v_e_Ha____,v_sko__local__XCallObj__2__1(V_E,v_P,V_T,v_e_Ha____,v_h_Ha____))
+    | ~ c_WellTypeRT_OWTrt(v_P,v_ha____,V_E,v_ea____,V_T)
+    | ~ c_TypeSafe__Mirabelle_Osconf(v_P,V_E,c_Pair(v_ha____,v_la____,tc_fun(tc_nat,tc_Option_Ooption(tc_prod(tc_List_Olist(tc_String_Ochar),tc_fun(tc_prod(tc_List_Olist(tc_String_Ochar),tc_List_Olist(tc_String_Ochar)),tc_Option_Ooption(tc_Value_Oval))))),tc_fun(tc_List_Olist(tc_String_Ochar),tc_Option_Ooption(tc_Value_Oval)))) ) ).
+
+cnf(cls_WTrtSeq_0,axiom,
+    ( c_WellTypeRT_OWTrt(V_P,V_h,V_E,c_Expr_Oexp_OSeq(V_e_092_060_094isub_0621,V_e_092_060_094isub_0622,tc_List_Olist(tc_String_Ochar)),V_T_092_060_094isub_0622)
+    | ~ c_WellTypeRT_OWTrt(V_P,V_h,V_E,V_e_092_060_094isub_0622,V_T_092_060_094isub_0622)
+    | ~ c_WellTypeRT_OWTrt(V_P,V_h,V_E,V_e_092_060_094isub_0621,V_T_092_060_094isub_0621) ) ).
+
+cnf(cls_ty_Orecs_I4_J_0,axiom,
+    c_Type_Oty_Oty__rec(V_f1,V_f2,V_f3,V_f4,V_f5,c_Type_Oty_ONT,T_a) = V_f4 ).
+
+cnf(cls_ty_Osimps_I7_J_0,axiom,
+    c_Type_Oty_ONT != c_Type_Oty_OVoid ).
+
+cnf(cls_WTrtCallNT_0,axiom,
+    ( c_WellTypeRT_OWTrt(V_P,V_h,V_E,c_Expr_Oexp_OCall(V_e,V_M,V_es,tc_List_Olist(tc_String_Ochar)),V_T)
+    | ~ c_WellTypeRT_OWTrts(V_P,V_h,V_E,V_es,V_Ts)
+    | ~ c_WellTypeRT_OWTrt(V_P,V_h,V_E,V_e,c_Type_Oty_ONT) ) ).
+
+cnf(cls_IH_0,axiom,
+    ( c_WellTypeRT_OWTrt(v_P,v_h_Ha____,V_Ea,v_e_Ha____,v_sko__local__XIH__1(V_Ea,v_P,V_Ta,v_e_Ha____,v_h_Ha____))
+    | ~ c_WellTypeRT_OWTrt(v_P,v_ha____,V_Ea,v_ea____,V_Ta)
+    | ~ c_TypeSafe__Mirabelle_Osconf(v_P,V_Ea,c_Pair(v_ha____,v_la____,tc_fun(tc_nat,tc_Option_Ooption(tc_prod(tc_List_Olist(tc_String_Ochar),tc_fun(tc_prod(tc_List_Olist(tc_String_Ochar),tc_List_Olist(tc_String_Ochar)),tc_Option_Ooption(tc_Value_Oval))))),tc_fun(tc_List_Olist(tc_String_Ochar),tc_Option_Ooption(tc_Value_Oval)))) ) ).
+
+cnf(cls_ty_Osplit_3,axiom,
+    ( ~ hBOOL(hAPP(V_P,c_Type_Oty_Oty__case(V_f1,V_f2,V_f3,V_f4,V_f5,c_Type_Oty_ONT,t_a)))
+    | hBOOL(hAPP(V_P,V_f4)) ) ).
+
+cnf(cls_WTrtFAccNT_0,axiom,
+    ( c_WellTypeRT_OWTrt(V_P,V_h,V_E,c_Expr_Oexp_OFAcc(V_e,V_F,V_D,tc_List_Olist(tc_String_Ochar)),V_T)
+    | ~ c_WellTypeRT_OWTrt(V_P,V_h,V_E,V_e,c_Type_Oty_ONT) ) ).
+
+cnf(cls_WTrt__env__mono_0,axiom,
+    ( c_WellTypeRT_OWTrt(V_P,V_h,V_E_H,V_e,V_T)
+    | ~ c_Map_Omap__le(V_E,V_E_H,tc_List_Olist(tc_String_Ochar),tc_Type_Oty)
+    | ~ c_WellTypeRT_OWTrt(V_P,V_h,V_E,V_e,V_T) ) ).
+
+cnf(cls_ty_Osimps_I25_J_0,axiom,
+    c_Type_Oty_Oty__case(V_f1,V_f2,V_f3,V_f4,V_f5,c_Type_Oty_ONT,T_a) = V_f4 ).
+
+cnf(cls_ty_Osimps_I16_J_0,axiom,
+    c_Type_Oty_OInteger != c_Type_Oty_ONT ).
+
+cnf(cls_wt__wt_H_0,axiom,
+    ( c_Progress_OWTrt_H(V_P,V_h,V_E,V_e,V_T)
+    | ~ c_WellTypeRT_OWTrt(V_P,V_h,V_E,V_e,V_T) ) ).
+
+cnf(cls_wt_H__wt_0,axiom,
+    ( c_WellTypeRT_OWTrt(V_P,V_h,V_E,V_e,V_T)
+    | ~ c_Progress_OWTrt_H(V_P,V_h,V_E,V_e,V_T) ) ).
+
+cnf(cls_WTrt__elim__cases_I8_J_1,axiom,
+    ( c_WellTypeRT_OWTrt(V_P,V_h,V_E,V_e,c_Type_Oty_ONT)
+    | V_T = c_Type_Oty_OVoid
+    | ~ c_WellTypeRT_OWTrt(V_P,V_h,V_E,c_Expr_Oexp_OFAss(V_e,V_F,V_D,V_v,tc_List_Olist(tc_String_Ochar)),V_T) ) ).
+
+cnf(cls_ty_Osimps_I13_J_0,axiom,
+    c_Type_Oty_ONT != c_Type_Oty_OBoolean ).
+
+cnf(cls_ty_Osimps_I21_J_0,axiom,
+    c_Type_Oty_OClass(V_list_H) != c_Type_Oty_ONT ).
+
+cnf(cls_WTrt__elim__cases_I8_J_10,axiom,
+    ( c_WellTypeRT_OWTrt(V_P,V_h,V_E,V_e,c_Type_Oty_ONT)
+    | c_WellTypeRT_OWTrt(V_P,V_h,V_E,V_v,c_WellTypeRT_Osko__WellTypeRT__XWTrt__elim__cases__8__3(V_D,V_E,V_F,V_P,V_e,V_h,V_v))
+    | ~ c_WellTypeRT_OWTrt(V_P,V_h,V_E,c_Expr_Oexp_OFAss(V_e,V_F,V_D,V_v,tc_List_Olist(tc_String_Ochar)),V_T) ) ).
+
+cnf(cls_WT__implies__WTrt_0,axiom,
+    ( c_WellTypeRT_OWTrt(V_P,V_h,V_E,V_e,V_T)
+    | ~ c_WellType_OWT(V_P,V_E,V_e,V_T) ) ).
+
+cnf(cls_WTrt__hext__mono_0,axiom,
+    ( c_WellTypeRT_OWTrt(V_P,V_h_H,V_E,V_e,V_T)
+    | ~ c_Objects_Ohext(V_h,V_h_H)
+    | ~ c_WellTypeRT_OWTrt(V_P,V_h,V_E,V_e,V_T) ) ).
+
+cnf(cls_is__type__simps_3,axiom,
+    c_Decl_Ois__type(V_P,c_Type_Oty_ONT,T_a) ).
+
+cnf(cls_COMBI__def__raw_0,axiom,
+    c_COMBI(v_P,t_a) = v_P ).
+
+cnf(cls_ty_Osimps_I12_J_0,axiom,
+    c_Type_Oty_OBoolean != c_Type_Oty_ONT ).
+
+cnf(cls_ty_Osimps_I6_J_0,axiom,
+    c_Type_Oty_OVoid != c_Type_Oty_ONT ).
+
+cnf(cls_is__refT__def_1,axiom,
+    c_Type_Ois__refT(c_Type_Oty_ONT) ).
+
+cnf(cls_CallObj_Ohyps_I2_J_0,axiom,
+    ( c_WellTypeRT_OWTrt(v_P,v_h_Ha____,V_E,v_e_Ha____,v_sko__local__XCallObj__Xhyps__2__1(V_E,v_P,V_T,v_e_Ha____,v_h_Ha____))
+    | ~ c_WellTypeRT_OWTrt(v_P,v_ha____,V_E,v_ea____,V_T)
+    | ~ c_TypeSafe__Mirabelle_Osconf(v_P,V_E,c_Pair(v_ha____,v_la____,tc_fun(tc_nat,tc_Option_Ooption(tc_prod(tc_List_Olist(tc_String_Ochar),tc_fun(tc_prod(tc_List_Olist(tc_String_Ochar),tc_List_Olist(tc_String_Ochar)),tc_Option_Ooption(tc_Value_Oval))))),tc_fun(tc_List_Olist(tc_String_Ochar),tc_Option_Ooption(tc_Value_Oval)))) ) ).
+
+cnf(cls_CHAINED_1,axiom,
+    ( c_TypeRel_Owiden(v_P,v_sko__CHAINED__1(v_E____,v_P,V_Ta,v_e_Ha____,v_h_Ha____),V_Ta,tc_prod(tc_List_Olist(tc_List_Olist(tc_String_Ochar)),tc_Expr_Oexp(tc_List_Olist(tc_String_Ochar))))
+    | ~ c_WellTypeRT_OWTrt(v_P,v_ha____,v_E____,v_ea____,V_Ta) ) ).
+
+cnf(cls_CHAINED_0,axiom,
+    ( c_WellTypeRT_OWTrt(v_P,v_h_Ha____,v_E____,v_e_Ha____,v_sko__CHAINED__1(v_E____,v_P,V_Ta,v_e_Ha____,v_h_Ha____))
+    | ~ c_WellTypeRT_OWTrt(v_P,v_ha____,v_E____,v_ea____,V_Ta) ) ).
+
+cnf(cls_CHAINED_0_01,axiom,
+    c_WellTypeRT_OWTrt(v_P,v_ha____,v_E____,v_ea____,c_Type_Oty_ONT) ).
+
+cnf(cls_conjecture_0,negated_conjecture,
+    ~ c_WellTypeRT_OWTrt(v_P,v_h_Ha____,v_E____,v_e_Ha____,c_Type_Oty_ONT) ).
+
+cnf(cls_ATP__Linkup_Oequal__imp__fequal_0,axiom,
+    c_fequal(V_x,V_x,T_a) ).
+
+cnf(cls_ATP__Linkup_Ofequal__imp__equal_0,axiom,
+    ( V_X = V_Y
+    | ~ c_fequal(V_X,V_Y,T_a) ) ).
+
+%------------------------------------------------------------------------------

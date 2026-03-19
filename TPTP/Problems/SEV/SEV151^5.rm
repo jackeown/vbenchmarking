@@ -1,0 +1,33 @@
+%------------------------------------------------------------------------------
+% File     : SEV151^5 : TPTP v9.2.1. Bugfixed v5.1.0.
+% Domain   : Set Theory (Relations)
+% Problem  : TPS problem from TRANSITIVE-CLOSURE
+% Version  : Especial.
+% English  :
+
+% Refs     : [Bro09] Brown (2009), Email to Geoff Sutcliffe
+% Source   : [Bro09]
+% Names    : tps_1189 [Bro09]
+
+% Status   : Unknown
+% Rating   : 1.00 v4.0.0
+% Syntax   : Number of formulae    :    2 (   1 unit;   1 type;   0 defn)
+%            Number of atoms       :  126 (   1 equality;  84 variable)
+%            Maximal formula depth :   23 (  12 average)
+%            Number of connectives :   82 (   0   ~;   4   |;  12   &;  48   @)
+%                                         (   0 <=>;  18  =>;   0  <=;   0 <~>)
+%                                         (   0  ~|;   0  ~&;   0  !!;   0  ??)
+%            Number of type conns  :   10 (  10   >;   0   *;   0   +;   0  <<)
+%            Number of symbols     :    3 (   1   :;   0  :=)
+%            Number of variables   :   30 (   0 sgn;  26   !;   0   ?;   4   ^)
+%                                         (  30   :;   0  :=;   0  !>;   0  ?*)
+%                                         (   0  @-;   0  @+)
+% SPC      : THF_UNK
+
+% Comments : This problem is from the TPS library. Copyright (c) 2009 The TPS
+%            project in the Department of Mathematical Sciences at Carnegie
+%            Mellon University. Distributed under the Creative Commons copyleft
+%            license: http://creativecommons.org/licenses/by-sa/3.0/
+%          : THF0 syntax
+% Bugfixes : v5.1.0 - Removed - duplicate of SEV150^5 
+%------------------------------------------------------------------------------

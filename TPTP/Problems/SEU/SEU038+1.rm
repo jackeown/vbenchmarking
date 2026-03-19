@@ -1,0 +1,29 @@
+%------------------------------------------------------------------------------
+% File     : SEU038+1 : TPTP v9.2.1. Released v3.2.0.
+% Domain   : Set theory
+% Problem  : Functions and their basic properties, theorem 72
+% Version  : [Urb06] axioms : Especial.
+% English  :
+
+% Refs     : [Byl90] Bylinski (1990), Functions and Their Basic Properties
+%          : [Urb06] Urban (2006), Email to G. Sutcliffe
+% Source   : [Urb06]
+% Names    : funct_1__t72_funct_1 [Urb06]
+
+% Status   : Theorem
+% Rating   : 0.42 v3.3.0, 0.57 v3.2.0
+% Syntax   : Number of formulae    :   46 (  14 unit)
+%            Number of atoms       :  114 (  14 equality)
+%            Maximal formula depth :   10 (   4 average)
+%            Number of connectives :   84 (  16 ~  ;   1  |;  38  &)
+%                                         (   5 <=>;  24 =>;   0 <=)
+%                                         (   0 <~>;   0 ~|;   0 ~&)
+%            Number of predicates  :    9 (   0 propositional; 1-2 arity)
+%            Number of functors    :    9 (   1 constant; 0-2 arity)
+%            Number of variables   :   76 (   2 singleton;  65 !;  11 ?)
+%            Maximal term depth    :    3 (   1 average)
+
+% Comments : Translated by MPTP 0.2 from the original problem in the Mizar
+%            library, www.mizar.org
+% Bugfixes : v3.4.0 - Renamed to SEU225+3
+%------------------------------------------------------------------------------

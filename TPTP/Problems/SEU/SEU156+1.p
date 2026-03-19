@@ -1,0 +1,87 @@
+%------------------------------------------------------------------------------
+% File     : SEU156+1 : TPTP v9.2.1. Released v3.3.0.
+% Domain   : Set theory
+% Problem  : MPTP bushy problem t33_zfmisc_1
+% Version  : [Urb07] axioms : Especial.
+% English  :
+
+% Refs     : [Ban01] Bancerek et al. (2001), On the Characterizations of Co
+%          : [Urb07] Urban (2006), Email to G. Sutcliffe
+% Source   : [Urb07]
+% Names    : bushy-t33_zfmisc_1 [Urb07]
+
+% Status   : Theorem
+% Rating   : 0.39 v9.1.0, 0.36 v9.0.0, 0.42 v8.2.0, 0.36 v7.5.0, 0.47 v7.4.0, 0.30 v7.3.0, 0.31 v7.2.0, 0.28 v7.1.0, 0.26 v7.0.0, 0.30 v6.4.0, 0.35 v6.3.0, 0.29 v6.2.0, 0.36 v6.1.0, 0.40 v6.0.0, 0.35 v5.5.0, 0.37 v5.4.0, 0.43 v5.3.0, 0.44 v5.2.0, 0.30 v5.1.0, 0.33 v5.0.0, 0.38 v4.1.0, 0.39 v4.0.0, 0.42 v3.7.0, 0.45 v3.5.0, 0.42 v3.4.0, 0.53 v3.3.0
+% Syntax   : Number of formulae    :   15 (  10 unt;   0 def)
+%            Number of atoms       :   22 (  14 equ)
+%            Maximal formula atoms :    3 (   1 avg)
+%            Number of connectives :   12 (   5   ~;   0   |;   3   &)
+%                                         (   0 <=>;   4  =>;   0  <=;   0 <~>)
+%            Maximal formula depth :    9 (   4 avg)
+%            Maximal term depth    :    3 (   1 avg)
+%            Number of predicates  :    4 (   2 usr;   1 prp; 0-2 aty)
+%            Number of functors    :    3 (   3 usr;   0 con; 1-2 aty)
+%            Number of variables   :   27 (  25   !;   2   ?)
+% SPC      : FOF_THM_RFO_SEQ
+
+% Comments : Translated by MPTP 0.2 from the original problem in the Mizar
+%            library, www.mizar.org
+%------------------------------------------------------------------------------
+fof(commutativity_k2_tarski,axiom,
+    ! [A,B] : unordered_pair(A,B) = unordered_pair(B,A) ).
+
+fof(d5_tarski,axiom,
+    ! [A,B] : ordered_pair(A,B) = unordered_pair(unordered_pair(A,B),singleton(A)) ).
+
+fof(dt_k1_tarski,axiom,
+    $true ).
+
+fof(dt_k2_tarski,axiom,
+    $true ).
+
+fof(dt_k4_tarski,axiom,
+    $true ).
+
+fof(fc1_zfmisc_1,axiom,
+    ! [A,B] : ~ empty(ordered_pair(A,B)) ).
+
+fof(rc1_xboole_0,axiom,
+    ? [A] : empty(A) ).
+
+fof(rc2_xboole_0,axiom,
+    ? [A] : ~ empty(A) ).
+
+fof(reflexivity_r1_tarski,axiom,
+    ! [A,B] : subset(A,A) ).
+
+fof(t10_zfmisc_1,axiom,
+    ! [A,B,C,D] :
+      ~ ( unordered_pair(A,B) = unordered_pair(C,D)
+        & A != C
+        & A != D ) ).
+
+fof(t33_zfmisc_1,conjecture,
+    ! [A,B,C,D] :
+      ( ordered_pair(A,B) = ordered_pair(C,D)
+     => ( A = C
+        & B = D ) ) ).
+
+fof(t69_enumset1,axiom,
+    ! [A] : unordered_pair(A,A) = singleton(A) ).
+
+fof(t6_zfmisc_1,axiom,
+    ! [A,B] :
+      ( subset(singleton(A),singleton(B))
+     => A = B ) ).
+
+fof(t8_zfmisc_1,axiom,
+    ! [A,B,C] :
+      ( singleton(A) = unordered_pair(B,C)
+     => A = B ) ).
+
+fof(t9_zfmisc_1,axiom,
+    ! [A,B,C] :
+      ( singleton(A) = unordered_pair(B,C)
+     => B = C ) ).
+
+%------------------------------------------------------------------------------

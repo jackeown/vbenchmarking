@@ -1,0 +1,35 @@
+%--------------------------------------------------------------------------
+% File     : BOO048-1 : TPTP v9.2.1. Released v2.5.0.
+% Domain   : Boolean Algebra
+% Problem  : Single axiom C9 for Boolean algebra in the Sheffer stroke
+% Version  : [EF+02] axioms.
+% English  :
+
+% Refs     : [EF+02] Ernst et al. (2002), More First-order Test Problems in
+%          : [MV+02] McCune et al. (2002), Short Single Axioms for Boolean
+% Source   : [EF+02]
+% Names    : sheffer-cstar [EF+02]
+
+% Status   : Satisfiable
+% Rating   : 1.00 v6.3.0, 0.88 v6.2.0, 0.90 v6.1.0, 1.00 v2.5.0
+% Syntax   : Number of clauses     :    2 (   1 unt;   0 nHn;   1 RR)
+%            Number of literals    :    3 (   3 equ;   2 neg)
+%            Maximal clause size   :    2 (   1 avg)
+%            Maximal term depth    :    5 (   2 avg)
+%            Number of predicates  :    1 (   0 usr;   0 prp; 2-2 aty)
+%            Number of functors    :    4 (   4 usr;   3 con; 0-2 aty)
+%            Number of variables   :    3 (   1 sgn)
+% SPC      : CNF_SAT_RFO_EQU_NUE
+
+% Comments :
+%--------------------------------------------------------------------------
+%----C9
+cnf(c9,axiom,
+    nand(nand(nand(A,nand(B,B)),A),nand(B,nand(C,A))) = B ).
+
+%----Denial of Meredith 2-basis
+cnf(prove_meredith_2_basis,negated_conjecture,
+    ( nand(nand(a,a),nand(b,a)) != a
+    | nand(a,nand(b,nand(a,c))) != nand(nand(nand(c,b),b),a) ) ).
+
+%--------------------------------------------------------------------------

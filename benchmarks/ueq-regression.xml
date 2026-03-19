@@ -17,7 +17,7 @@
 </rundefinition>
 
 <tasks>
-    <includesfile>/home/mhajdu/vbenchmarking/benchmarks/tptp-ueq.set</includesfile>
+    <includesfile>tptp-ueq.set</includesfile>
 </tasks>
 
 <columns>

@@ -1,0 +1,27 @@
+%--------------------------------------------------------------------------
+% File     : GRP129-1.002 : TPTP v9.2.1. Bugfixed v2.1.0.
+% Domain   : Group Theory (Quasigroups)
+% Problem  : a.(b.a) = (b.a).b
+% Version  : [Sla93] axioms.
+% English  : Generate the multiplication table for the specified quasi-
+%            group with 2 elements.
+
+% Refs     : [FSB93] Fujita et al. (1993), Automatic Generation of Some Res
+%          : [Sla93] Slaney (1993), Email to G. Sutcliffe
+%          : [SFS95] Slaney et al. (1995), Automated Reasoning and Exhausti
+% Source   : [Sla93]
+% Names    : QG7 [Sla93]
+%          : QG7 [FSB93]
+%          : QG7 [SFS95]
+%          : Bennett QG7 [TPTP]
+
+% Status   : Unsatisfiable
+% Rating   : ? v2.0.0
+% Syntax   :
+
+% Comments : [Sla93]'s axiomatization has been modified for this.
+%          : Substitution axioms are not needed, as any positive equality
+%            literals should resolve on negative ones directly.
+%          : tptp2X: -ftptp -s2 GRP129-1.g
+% Bugfixes : v2.1.0 - Replaced by a new SOTA size.
+%--------------------------------------------------------------------------

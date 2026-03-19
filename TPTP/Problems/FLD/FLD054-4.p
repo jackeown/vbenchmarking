@@ -1,0 +1,62 @@
+%--------------------------------------------------------------------------
+% File     : FLD054-4 : TPTP v9.2.1. Bugfixed v2.1.0.
+% Domain   : Field Theory (Ordered fields)
+% Problem  : Fraction calculation, part 8
+% Version  : [Dra93] axioms : Especial.
+%            Theorem formulation : Relational with re axiom set.
+% English  :
+
+% Refs     : [Dra93] Draeger (1993), Anwendung des Theorembeweisers SETHEO
+% Source   : [Dra93]
+% Names    :
+
+% Status   : Unsatisfiable
+% Rating   : 0.23 v9.1.0, 0.36 v9.0.0, 0.17 v8.2.0, 0.14 v7.5.0, 0.33 v7.2.0, 0.50 v7.1.0, 0.33 v7.0.0, 0.50 v6.3.0, 0.43 v6.2.0, 0.44 v6.1.0, 0.29 v5.5.0, 0.38 v5.4.0, 0.50 v5.2.0, 0.60 v5.1.0, 0.64 v5.0.0, 0.79 v4.1.0, 0.62 v4.0.1, 0.60 v4.0.0, 0.43 v3.4.0, 0.50 v3.3.0, 0.33 v2.7.0, 0.62 v2.6.0, 0.67 v2.5.0, 0.80 v2.4.0, 1.00 v2.1.0
+% Syntax   : Number of clauses     :   37 (  14 unt;   3 nHn;  37 RR)
+%            Number of literals    :   88 (   0 equ;  52 neg)
+%            Maximal clause size   :    5 (   2 avg)
+%            Maximal term depth    :    2 (   1 avg)
+%            Number of predicates  :    4 (   4 usr;   0 prp; 1-3 aty)
+%            Number of functors    :   11 (  11 usr;   7 con; 0-2 aty)
+%            Number of variables   :   73 (   0 sgn)
+% SPC      : CNF_UNS_RFO_NEQ_NHN
+
+% Comments :
+% Bugfixes : v2.1.0 - Bugfix in FLD002-0.ax
+%--------------------------------------------------------------------------
+include('Axioms/FLD002-0.ax').
+%--------------------------------------------------------------------------
+cnf(a_is_defined,hypothesis,
+    defined(a) ).
+
+cnf(b_is_defined,hypothesis,
+    defined(b) ).
+
+cnf(u_is_defined,hypothesis,
+    defined(u) ).
+
+cnf(k_is_defined,hypothesis,
+    defined(k) ).
+
+cnf(l_is_defined,hypothesis,
+    defined(l) ).
+
+cnf(not_sum_6,negated_conjecture,
+    ~ sum(additive_identity,a,additive_identity) ).
+
+cnf(not_sum_7,negated_conjecture,
+    ~ sum(additive_identity,b,additive_identity) ).
+
+cnf(sum_8,negated_conjecture,
+    sum(multiplicative_inverse(a),multiplicative_inverse(b),u) ).
+
+cnf(sum_9,negated_conjecture,
+    sum(a,b,k) ).
+
+cnf(product_10,negated_conjecture,
+    product(a,b,l) ).
+
+cnf(not_product_11,negated_conjecture,
+    ~ product(k,multiplicative_inverse(l),u) ).
+
+%--------------------------------------------------------------------------

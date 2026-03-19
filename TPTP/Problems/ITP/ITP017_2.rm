@@ -1,0 +1,33 @@
+%------------------------------------------------------------------------------
+% File     : ITP017_2 : TPTP v9.2.1. Removed v8.0.0.
+% Domain   : Interactive Theorem Proving
+% Problem  : HOL4 set theory export of thm_2Eseq_2EBOLZANO__LEMMA.p, bushy mode
+% Version  : [BG+19] axioms.
+% English  :
+
+% Refs     : [BG+19] Brown et al. (2019), GRUNGE: A Grand Unified ATP Chall
+%          : [Gau19] Gauthier (2019), Email to Geoff Sutcliffe
+% Source   : [BG+19]
+% Names    : thm_2Eseq_2EBOLZANO__LEMMA.p [Gau19]
+%          : HL408001_2.p [TPAP]
+
+% Status   : Theorem
+% Rating   : 1.00 v7.5.0
+% Syntax   : Number of formulae    :  298 ( 123 unit; 105 type)
+%            Number of atoms       :  470 ( 142 equality)
+%            Maximal formula depth :   37 (   3 average)
+%            Number of connectives :  316 (  39   ~;  14   |;  87   &)
+%                                         (  76 <=>; 100  =>;   0  <=;   0 <~>)
+%                                         (   0  ~|;   0  ~&)
+%            Number of type conns  :   82 (  55   >;  27   *;   0   +;   0  <<)
+%            Number of predicates  :   16 (  13 propositional; 0-2 arity)
+%            Number of functors    :  105 (  44 constant; 0-3 arity)
+%            Number of variables   :  321 (   0 sgn; 317   !;   4   ?)
+%                                         ( 321   :;   0  !>;   0  ?*)
+%            Maximal term depth    :    9 (   3 average)
+% SPC      : TF0_THM_EQU_NAR
+
+% Comments :
+% Bugfixes : v7.5.0 - Bugfixes in axioms and export.
+%          : v8.0.0 - Removed due to type errors.
+%------------------------------------------------------------------------------
