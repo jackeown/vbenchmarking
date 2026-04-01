@@ -4,10 +4,11 @@ SEPARATOR = '\t'
 STATUS = 'status'
 SZSSTATUS = 'szs-status'
 CPUTIME = 'cputime (s)'
+WALLTIME = 'walltime (s)'
 MEMORY = 'memory (MB)'
 INSTRUCTIONS = 'instruction-count'
 
-MEASUREMENTS = [STATUS, SZSSTATUS, CPUTIME, MEMORY, INSTRUCTIONS]
+MEASUREMENTS = [STATUS, SZSSTATUS, CPUTIME, WALLTIME, MEMORY, INSTRUCTIONS]
 
 def parse(filename):
   csv_file = open(filename).read().splitlines()

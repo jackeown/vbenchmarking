@@ -1,4 +1,5 @@
 __pycache__
+/results/
 /TPTP/*
 !/TPTP/Axioms/
 !/TPTP/Axioms/**
@@ -10,3 +11,4 @@ __pycache__
 /TPTP/Problems/CSR/**
 /TPTP/Problems/HWV/
 /TPTP/Problems/HWV/**
+/Axioms

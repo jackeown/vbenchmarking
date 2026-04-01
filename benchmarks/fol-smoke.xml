@@ -1,0 +1,26 @@
+<!DOCTYPE benchmark PUBLIC "+//IDN sosy-lab.org//DTD BenchExec benchmark 1.18//EN" "https://www.sosy-lab.org/benchexec/benchmark-1.18.dtd">
+<benchmark
+    tool="vampire"
+    memlimit="8 GB"
+    cpuCores="1">
+
+<rundefinition name="discount">
+    <option name="--input_syntax">tptp</option>
+    <option name="--newcnf">on</option>
+    <option name="-t">30s</option>
+    <option name="-i">5000</option>
+    <option name="-p">off</option>
+    <option name="-sa">discount</option>
+</rundefinition>
+
+<tasks>
+    <includesfile>fol-smoke.set</includesfile>
+</tasks>
+
+<columns>
+    <column title="szs-status">szs-status</column>
+    <column title="instruction-count">instruction-count</column>
+</columns>
+
+</benchmark>
+<!-- vim:fenc=utf-8 -->

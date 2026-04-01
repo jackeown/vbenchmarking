@@ -4,7 +4,7 @@ import argparse, json
 from collections import Counter
 from html import escape
 
-from resultparser import CPUTIME, INSTRUCTIONS, MEASUREMENTS, MEMORY, STATUS, parse
+from resultparser import CPUTIME, INSTRUCTIONS, MEASUREMENTS, MEMORY, STATUS, WALLTIME, parse
 
 
 def parse_float(value):
@@ -31,7 +31,7 @@ def load_run_labels(filename, header_len):
 
 
 def metric_value(run_values, metric):
-  if metric == CPUTIME or metric == MEMORY:
+  if metric == CPUTIME or metric == WALLTIME or metric == MEMORY:
     return parse_float(run_values.get(metric))
   if metric == INSTRUCTIONS:
     return parse_int(run_values.get(metric))
@@ -97,9 +97,42 @@ def build_scatter_rows(results, metric):
       'benchmark': benchmark,
       'x': left,
       'y': right,
+      'leftCpu': metric_value(row[0], CPUTIME),
+      'rightCpu': metric_value(row[1], CPUTIME),
+      'leftWall': metric_value(row[0], WALLTIME),
+      'rightWall': metric_value(row[1], WALLTIME),
       'statusPair': f'{row[0].get(STATUS, "")} -> {row[1].get(STATUS, "")}',
     })
   return points
+
+
+def build_axis_config(points):
+  values = [point['x'] for point in points] + [point['y'] for point in points]
+  if not values:
+    return None
+
+  positive = all(value > 0 for value in values)
+  lower = min(values)
+  upper = max(values)
+  if positive:
+    lower *= 0.95
+    upper *= 1.05
+    if lower == upper:
+      lower *= 0.9
+      upper *= 1.1
+    return {
+      'type': 'log',
+      'range': [lower, upper],
+    }
+
+  if lower == upper:
+    padding = abs(lower) * 0.1 or 1.0
+  else:
+    padding = (upper - lower) * 0.05
+  return {
+    'type': 'linear',
+    'range': [lower - padding, upper + padding],
+  }
 
 
 def build_diff_rows(results, metric, limit=20):
@@ -189,9 +222,13 @@ def build_report_html(title, labels, header, results):
   transition_payload = None
   if len(labels) == 2:
     transition_payload = build_transition_data(labels, results)
-    for metric in (CPUTIME, MEMORY, INSTRUCTIONS):
+    for metric in (CPUTIME, WALLTIME, MEMORY, INSTRUCTIONS):
       if metric in header:
-        scatter_payload[metric] = build_scatter_rows(results, metric)
+        points = build_scatter_rows(results, metric)
+        scatter_payload[metric] = {
+          'points': points,
+          'axis': build_axis_config(points),
+        }
         diff_payload[metric] = build_diff_rows(results, metric)
 
   payload = {
@@ -251,11 +288,11 @@ def build_report_html(title, labels, header, results):
       max-width: 55rem;
       font-size: 1.05rem;
     }}
-    .summary-grid {{
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    .stack {{
+      display: flex;
+      flex-direction: column;
       gap: 1rem;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1rem;
     }}
     .summary-card, .panel {{
       background: color-mix(in srgb, var(--card) 88%, white);
@@ -266,7 +303,9 @@ def build_report_html(title, labels, header, results):
     }}
     .summary-card {{
       padding: 1.15rem;
+      margin-bottom: 0.85rem;
     }}
+    .summary-card:last-child {{ margin-bottom: 0; }}
     .summary-card h3 {{
       margin: 0 0 0.9rem;
       font-size: 1.15rem;
@@ -287,26 +326,50 @@ def build_report_html(title, labels, header, results):
     }}
     .metric strong {{ font-size: 0.95rem; }}
     .panel {{
-      padding: 1rem;
-      margin-bottom: 1rem;
+      margin: 0;
     }}
-    .panel h2 {{
-      margin: 0 0 0.75rem;
-      font-size: 1.15rem;
-    }}
-    .chart-grid {{
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    .collapsible summary {{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       gap: 1rem;
-      margin-bottom: 1rem;
+      padding: 1rem 1.1rem;
+      cursor: pointer;
+      list-style: none;
+      font-size: 1.05rem;
+      font-weight: 600;
+    }}
+    .collapsible summary::-webkit-details-marker {{ display: none; }}
+    .collapsible summary::after {{
+      content: '+';
+      color: var(--accent);
+      font-size: 1.4rem;
+      line-height: 1;
+    }}
+    .collapsible[open] summary::after {{ content: '\2212'; }}
+    .panel-body {{
+      padding: 0 1rem 1rem;
+      border-top: 1px solid rgba(31, 42, 55, 0.08);
+    }}
+    .section-note {{
+      color: var(--muted);
+      font-size: 0.9rem;
+      font-weight: 400;
     }}
     .chart {{
       min-height: 360px;
     }}
-    .diff-grid {{
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 1rem;
+    .subsection {{
+      border: 1px solid rgba(31, 42, 55, 0.08);
+      border-radius: 16px;
+      padding: 0.9rem;
+      background: rgba(255, 255, 255, 0.55);
+      margin-bottom: 0.9rem;
+    }}
+    .subsection:last-child {{ margin-bottom: 0; }}
+    .subsection h3 {{
+      margin: 0 0 0.75rem;
+      font-size: 1rem;
     }}
     table {{
       width: 100%;
@@ -360,6 +423,26 @@ def build_report_html(title, labels, header, results):
       color: var(--muted);
       font-size: 0.9rem;
     }}
+    .toggle-group {{
+      display: inline-flex;
+      gap: 0.45rem;
+      margin-bottom: 0.9rem;
+      flex-wrap: wrap;
+    }}
+    .toggle-group button {{
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 0.5rem 0.85rem;
+      background: #fff;
+      color: var(--ink);
+      cursor: pointer;
+      font: inherit;
+    }}
+    .toggle-group button.is-active {{
+      background: var(--accent-2);
+      border-color: var(--accent-2);
+      color: white;
+    }}
     @media (max-width: 640px) {{
       main {{ padding-inline: 0.8rem; }}
       .panel, .summary-card {{ border-radius: 16px; }}
@@ -371,35 +454,44 @@ def build_report_html(title, labels, header, results):
   <main>
     <h1>{escape(title)}</h1>
     <p class="lede">Interactive summary generated from the BenchExec CSV table. The charts use Plotly from a public CDN; the table and summary remain readable even if the chart script is unavailable.</p>
-    <div class="summary-grid">{summary_cards}</div>
+    <div class="stack">
+      <details class="panel collapsible">
+        <summary><span>Run Summaries</span><span class="section-note">{len(run_summaries)} runs</span></summary>
+        <div class="panel-body">{summary_cards}</div>
+      </details>
 
-    <div class="chart-grid">
-      <section class="panel"><h2>Status Breakdown</h2><div class="chart" id="status-chart"></div></section>
-      <section class="panel"><h2>Solved vs Errors</h2><div class="chart" id="solved-chart"></div></section>
-    </div>
+      <details class="panel collapsible">
+        <summary><span>Status Breakdown</span><span class="section-note">stacked counts by run</span></summary>
+        <div class="panel-body"><div class="chart" id="status-chart"></div></div>
+      </details>
 
-    <div class="chart-grid" id="comparison-grid"></div>
+      <details class="panel collapsible">
+        <summary><span>Solved vs Errors</span><span class="section-note">solved and failed counts</span></summary>
+        <div class="panel-body"><div class="chart" id="solved-chart"></div></div>
+      </details>
 
-    <section class="panel" id="diff-section" hidden>
-      <h2>Top Metric Changes</h2>
-      <div class="diff-grid" id="diff-grid"></div>
-    </section>
+      <div id="comparison-stack" class="stack"></div>
 
-    <section class="panel">
-      <h2>Benchmarks</h2>
-      <div class="toolbar">
+      <div id="diff-stack" class="stack"></div>
+
+      <details class="panel collapsible">
+        <summary><span>Benchmarks</span><span class="section-note">{len(results)} rows before filtering</span></summary>
+        <div class="panel-body">
+          <div class="toolbar">
         <input id="table-filter" type="search" placeholder="Filter benchmarks, statuses, or SZS values">
         <button id="prev-page" class="secondary" type="button">Previous</button>
         <button id="next-page" type="button">Next</button>
         <span id="table-meta"></span>
-      </div>
-      <div class="table-wrap">
-        <table id="result-table">
-          <thead></thead>
-          <tbody></tbody>
-        </table>
-      </div>
-    </section>
+          </div>
+          <div class="table-wrap">
+            <table id="result-table">
+              <thead></thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+      </details>
+    </div>
   </main>
   <script>
     const reportData = {payload_json};
@@ -412,6 +504,87 @@ def build_report_html(title, labels, header, results):
         return;
       }}
       render();
+    }}
+
+    function comparisonColor(statusPair) {{
+      if (statusPair.includes('ERROR')) {{
+        return '#c2410c';
+      }}
+      if (statusPair.includes('TIMEOUT')) {{
+        return '#d97706';
+      }}
+      return '#15803d';
+    }}
+
+    function fmtSeconds(value) {{
+      return value == null ? 'n/a' : value.toFixed(2) + 's';
+    }}
+
+    function axisRange(axis) {{
+      if (!axis) {{
+        return undefined;
+      }}
+      return axis.type === 'log' ? axis.range.map(value => Math.log10(value)) : axis.range;
+    }}
+
+    function timeMetricLabel(mode) {{
+      return mode === 'wall' ? 'wall time (s)' : 'cpu time (s)';
+    }}
+
+    function renderComparisonPlot(chartId, scatter, xTitle, yTitle) {{
+      if (!scatter || !scatter.points || !scatter.points.length) {{
+        return;
+      }}
+      const points = scatter.points;
+      const axis = scatter.axis;
+      const range = axis ? axis.range : [0, 1];
+      Plotly.newPlot(chartId, [{{
+        type: 'scattergl',
+        mode: 'markers',
+        x: points.map(point => point.x),
+        y: points.map(point => point.y),
+        text: points.map(point =>
+          point.benchmark +
+          '<br>' + point.statusPair +
+          '<br>cpu: ' + fmtSeconds(point.leftCpu) + ' vs ' + fmtSeconds(point.rightCpu) +
+          '<br>wall: ' + fmtSeconds(point.leftWall) + ' vs ' + fmtSeconds(point.rightWall)
+        ),
+        hovertemplate: '%{{text}}<br>x=%{{x}}<br>y=%{{y}}<extra></extra>',
+        marker: {{
+          size: 7,
+          color: points.map(point => comparisonColor(point.statusPair)),
+        }},
+      }}, {{
+        type: 'scatter',
+        mode: 'lines',
+        x: range,
+        y: range,
+        hoverinfo: 'skip',
+        line: {{
+          color: '#6b7280',
+          dash: 'dash',
+          width: 2,
+        }},
+        showlegend: false,
+      }}], {{
+        margin: {{ t: 12, r: 12, b: 70, l: 70 }},
+        xaxis: {{
+          title: xTitle,
+          type: axis ? axis.type : 'linear',
+          range: axisRange(axis),
+          constrain: 'domain',
+        }},
+        yaxis: {{
+          title: yTitle,
+          type: axis ? axis.type : 'linear',
+          range: axisRange(axis),
+          scaleanchor: 'x',
+          scaleratio: 1,
+          constrain: 'domain',
+        }},
+        paper_bgcolor: 'rgba(0,0,0,0)',
+        plot_bgcolor: 'rgba(0,0,0,0)',
+      }}, {{ responsive: true }});
     }}
 
     function renderStatusCharts() {{
@@ -461,51 +634,68 @@ def build_report_html(title, labels, header, results):
       if (reportData.labels.length !== 2) {{
         return;
       }}
-      const grid = document.getElementById('comparison-grid');
-      const metricOrder = ['cputime (s)', 'memory (MB)', 'instruction-count'];
+      const stack = document.getElementById('comparison-stack');
+      const cpuScatter = reportData.scatter['cputime (s)'];
+      const wallScatter = reportData.scatter['walltime (s)'];
+      if ((cpuScatter && cpuScatter.points && cpuScatter.points.length) || (wallScatter && wallScatter.points && wallScatter.points.length)) {{
+        const section = document.createElement('details');
+        section.className = 'panel collapsible';
+        const chartId = 'chart-time-comparison';
+        section.innerHTML =
+          '<summary><span>Time Comparison</span><span class="section-note">switch x and y between cpu and wall time</span></summary>' +
+          '<div class="panel-body">' +
+          '<div class="toggle-group">' +
+          '<button id="time-mode-cpu" class="is-active" type="button">CPU Time</button>' +
+          '<button id="time-mode-wall" type="button">Wall Time</button>' +
+          '</div>' +
+          '<div class="chart" id="' + chartId + '"></div>' +
+          '</div>';
+        stack.appendChild(section);
+        withPlotly(() => {{
+          function updateTimeComparison(mode) {{
+            const scatter = mode === 'wall' ? wallScatter : cpuScatter;
+            renderComparisonPlot(
+              chartId,
+              scatter,
+              reportData.labels[0] + ' ' + timeMetricLabel(mode),
+              reportData.labels[1] + ' ' + timeMetricLabel(mode),
+            );
+            document.getElementById('time-mode-cpu').classList.toggle('is-active', mode === 'cpu');
+            document.getElementById('time-mode-wall').classList.toggle('is-active', mode === 'wall');
+          }}
+          document.getElementById('time-mode-cpu').addEventListener('click', () => updateTimeComparison('cpu'));
+          document.getElementById('time-mode-wall').addEventListener('click', () => updateTimeComparison('wall'));
+          updateTimeComparison(wallScatter && (!cpuScatter || !cpuScatter.points.length) ? 'wall' : 'cpu');
+        }});
+      }}
+
+      const metricOrder = ['memory (MB)', 'instruction-count'];
       for (const metric of metricOrder) {{
-        const points = reportData.scatter[metric];
-        if (!points || !points.length) {{
+        const scatter = reportData.scatter[metric];
+        if (!scatter || !scatter.points || !scatter.points.length) {{
           continue;
         }}
-        const section = document.createElement('section');
-        section.className = 'panel';
+        const points = scatter.points;
+        const axis = scatter.axis;
+        const section = document.createElement('details');
+        section.className = 'panel collapsible';
         const chartId = 'chart-' + metric.replace(/[^a-z0-9]+/gi, '-');
-        section.innerHTML = '<h2>' + metric + ' Comparison</h2><div class="chart" id="' + chartId + '"></div>';
-        grid.appendChild(section);
+        section.innerHTML =
+          '<summary><span>' + metric + ' Comparison</span><span class="section-note">linked axes with y = x</span></summary>' +
+          '<div class="panel-body"><div class="chart" id="' + chartId + '"></div></div>';
+        stack.appendChild(section);
         withPlotly(() => {{
-          Plotly.newPlot(chartId, [{{
-            type: 'scattergl',
-            mode: 'markers',
-            x: points.map(point => point.x),
-            y: points.map(point => point.y),
-            text: points.map(point => point.benchmark + '<br>' + point.statusPair),
-            hovertemplate: '%{{text}}<br>x=%{{x}}<br>y=%{{y}}<extra></extra>',
-            marker: {{
-              size: 7,
-              color: points.map(point => point.statusPair),
-            }},
-          }}], {{
-            margin: {{ t: 12, r: 12, b: 70, l: 70 }},
-            xaxis: {{
-              title: reportData.labels[0],
-              type: points.every(point => point.x > 0 && point.y > 0) ? 'log' : 'linear',
-            }},
-            yaxis: {{
-              title: reportData.labels[1],
-              type: points.every(point => point.x > 0 && point.y > 0) ? 'log' : 'linear',
-            }},
-            paper_bgcolor: 'rgba(0,0,0,0)',
-            plot_bgcolor: 'rgba(0,0,0,0)',
-          }}, {{ responsive: true }});
+          renderComparisonPlot(chartId, scatter, reportData.labels[0], reportData.labels[1]);
         }});
       }}
 
       if (reportData.transition) {{
-        const section = document.createElement('section');
-        section.className = 'panel';
-        section.innerHTML = '<h2>Status Transitions</h2><div class="chart" id="transition-chart"></div>';
-        grid.appendChild(section);
+        const section = document.createElement('details');
+        section.className = 'panel collapsible';
+        section.innerHTML =
+          '<summary><span>Status Transitions</span><span class="section-note">left run to right run</span></summary>' +
+          '<div class="panel-body"><div class="chart" id="transition-chart"></div></div>';
+        stack.appendChild(section);
         withPlotly(() => {{
           Plotly.newPlot('transition-chart', [{{
             type: 'heatmap',
@@ -526,16 +716,14 @@ def build_report_html(title, labels, header, results):
 
     function renderDiffTables() {{
       const metricOrder = ['cputime (s)', 'memory (MB)', 'instruction-count'];
-      const diffGrid = document.getElementById('diff-grid');
-      let rendered = false;
+      const diffStack = document.getElementById('diff-stack');
       for (const metric of metricOrder) {{
         const diff = reportData.diffs[metric];
         if (!diff) {{
           continue;
         }}
-        rendered = true;
-        const section = document.createElement('section');
-        section.className = 'panel';
+        const section = document.createElement('details');
+        section.className = 'panel collapsible';
         const improvementRows = diff.improvements.map(row =>
           '<tr><td>' + row.benchmark + '</td><td>' + row.left + '</td><td>' + row.right + '</td><td>' + row.delta + '</td></tr>'
         ).join('');
@@ -543,19 +731,22 @@ def build_report_html(title, labels, header, results):
           '<tr><td>' + row.benchmark + '</td><td>' + row.left + '</td><td>' + row.right + '</td><td>' + row.delta + '</td></tr>'
         ).join('');
         section.innerHTML =
-          '<h2>' + metric + '</h2>' +
+          '<summary><span>' + metric + ' Changes</span><span class="section-note">largest wins and losses</span></summary>' +
+          '<div class="panel-body">' +
+          '<div class="subsection">' +
           '<h3>Largest Improvements</h3>' +
           '<div class="table-wrap"><table><thead><tr><th>benchmark</th><th>' + reportData.labels[0] + '</th><th>' + reportData.labels[1] + '</th><th>delta</th></tr></thead><tbody>' +
           improvementRows +
           '</tbody></table></div>' +
+          '</div>' +
+          '<div class="subsection">' +
           '<h3>Largest Regressions</h3>' +
           '<div class="table-wrap"><table><thead><tr><th>benchmark</th><th>' + reportData.labels[0] + '</th><th>' + reportData.labels[1] + '</th><th>delta</th></tr></thead><tbody>' +
           regressionRows +
-          '</tbody></table></div>';
-        diffGrid.appendChild(section);
-      }}
-      if (rendered) {{
-        document.getElementById('diff-section').hidden = false;
+          '</tbody></table></div>' +
+          '</div>' +
+          '</div>';
+        diffStack.appendChild(section);
       }}
     }}
 

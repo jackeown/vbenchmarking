@@ -19,6 +19,8 @@ The main entry point is [`compare_branches.py`](/home/jack/Desktop/tuWien/vbench
 - writes a text summary with [`stat.py`](/home/jack/Desktop/tuWien/vbenchmarking/stat.py)
 - writes an interactive HTML report with [`benchmark_report.py`](/home/jack/Desktop/tuWien/vbenchmarking/benchmark_report.py)
 
+If you want a quick directional comparison before committing to a long regression run, start with [`benchmarks/fol-smoke.xml`](/home/jack/Desktop/tuWien/vbenchmarking/benchmarks/fol-smoke.xml). It uses a deterministic 32-problem mixed FOL sample and a lower instruction budget specifically so it finishes quickly.
+
 Example:
 
 ```bash
@@ -27,7 +29,7 @@ python3 compare_branches.py fol-regression \
   -branch2 your-branch \
   --vampire-dir /path/to/vampire \
   --build-dir /path/to/vampire/cmake-build \
-  --threads 16 \
+  --threads 3 \
   --make-jobs 16
 ```
 
@@ -44,7 +46,7 @@ Outputs:
 - a text summary in `results/*.txt`
 - an HTML report in `results/*.html`
 
-The HTML report uses Plotly loaded from a public CDN when you open it in a browser.
+The HTML report uses Plotly loaded from a public CDN when you open it in a browser. The checked-in `fol-smoke` and `fol-regression` benchmark definitions are configured with an `8 GB` memory limit, which is intended to make `--threads 3` practical on a typical workstation.
 
 ## Repository layout
 

@@ -1,0 +1,7 @@
+tool	Vampire 5.0.0	Vampire 5.0.0	Vampire 5.0.0	Vampire 5.0.0	Vampire 5.0.0	Vampire 5.0.0	Vampire 5.0.1	Vampire 5.0.1	Vampire 5.0.1	Vampire 5.0.1	Vampire 5.0.1	Vampire 5.0.1
+run set	fol-smoke.buffy.discount.0	fol-smoke.buffy.discount.0	fol-smoke.buffy.discount.0	fol-smoke.buffy.discount.0	fol-smoke.buffy.discount.0	fol-smoke.buffy.discount.0	fol-smoke.master.discount.0	fol-smoke.master.discount.0	fol-smoke.master.discount.0	fol-smoke.master.discount.0	fol-smoke.master.discount.0	fol-smoke.master.discount.0
+/home/jack/Desktop/tuWien/vbenchmarking/TPTP/Problems/	status	szs-status	cputime (s)	walltime (s)	memory (MB)	instruction-count	status	szs-status	cputime (s)	walltime (s)	memory (MB)	instruction-count
+FLD/FLD065-1.p	TIMEOUT		29.961273	30.043113241990795	65.454080	0	true	Unsatisfiable	0.928448	0.9384822319989325	42.758144	0
+GEO/GEO082+1.p	TIMEOUT		29.961817	30.048730620997958	51.564544	0	true	Theorem	4.611992	18.868750528999954	62.681088	0
+NUM/NUM621+1.p	TIMEOUT		30.022391	30.064521081993007	66.834432	0	true	Theorem	2.47079	2.482414277998032	96.722944	0
+SWW/SWW976_1.p	ERROR (4)		0.048011	0.05962735899083782	32.239616	0	OUT OF MEMORY		13.846453	13.986634848988615	8000.000000	0
